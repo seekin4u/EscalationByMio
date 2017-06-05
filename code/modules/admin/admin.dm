@@ -1108,74 +1108,182 @@ var/global/floorIsLava = 0
 	set desc = "Show the current round configuration."
 	set name = "Show Game Mode"
 
-	if(!ticker || !ticker.mode)
-		alert("Not before roundstart!", "Alert")
+	if(!ticker) return //we need the ticker!
+	if(!master_mode)
+		alert("There's no game mode selected!")
 		return
 
-	var/out = "<font size=3><b>Current mode: [ticker.mode.name] (<a href='?src=\ref[ticker.mode];debug_antag=self'>[ticker.mode.config_tag]</a>)</b></font><br/>"
+	if(!ticker.mode && master_mode)
+		ticker.mode = config.pick_mode(master_mode)
+
+	if(!ticker.mode) //Something fucked up.
+		to_chat(usr,"Something fucked up in the game mode selection!")
+		return
+
+	var/out = "<font size=3><b>Current mode: [ticker.mode.name]</b></font><br/>"
 	out += "<hr>"
 
-	if(ticker.mode.ert_disabled)
-		out += "<b>Emergency Response Teams:</b> <a href='?src=\ref[ticker.mode];toggle=ert'>disabled</a>"
-	else
-		out += "<b>Emergency Response Teams:</b> <a href='?src=\ref[ticker.mode];toggle=ert'>enabled</a>"
-	out += "<br/>"
+	if(ticker.mode.wargames)
+		if(!ticker.mode.admin_enabled_joining && ticker.current_state == GAME_STATE_PREGAME) //Editing teams stops the pregame counter
+			round_progressing = 0
 
-	if(ticker.mode.deny_respawn)
-		out += "<b>Respawning:</b> <a href='?src=\ref[ticker.mode];toggle=respawn'>disallowed</a>"
-	else
-		out += "<b>Respawning:</b> <a href='?src=\ref[ticker.mode];toggle=respawn'>allowed</a>"
-	out += "<br/>"
-
-	out += "<b>Shuttle delay multiplier:</b> <a href='?src=\ref[ticker.mode];set=shuttle_delay'>[ticker.mode.shuttle_delay]</a><br/>"
-
-	if(ticker.mode.auto_recall_shuttle)
-		out += "<b>Shuttle auto-recall:</b> <a href='?src=\ref[ticker.mode];toggle=shuttle_recall'>enabled</a>"
-	else
-		out += "<b>Shuttle auto-recall:</b> <a href='?src=\ref[ticker.mode];toggle=shuttle_recall'>disabled</a>"
-	out += "<br/><br/>"
-
-	if(ticker.mode.event_delay_mod_moderate)
-		out += "<b>Moderate event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_moderate'>[ticker.mode.event_delay_mod_moderate]</a><br/>"
-	else
-		out += "<b>Moderate event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_moderate'>unset</a><br/>"
-
-	if(ticker.mode.event_delay_mod_major)
-		out += "<b>Major event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_severe'>[ticker.mode.event_delay_mod_major]</a><br/>"
-	else
-		out += "<b>Major event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_severe'>unset</a><br/>"
-
-	out += "<hr>"
-
-	if(ticker.mode.antag_tags && ticker.mode.antag_tags.len)
-		out += "<b>Core antag templates:</b></br>"
-		for(var/antag_tag in ticker.mode.antag_tags)
-			out += "<a href='?src=\ref[ticker.mode];debug_antag=[antag_tag]'>[antag_tag]</a>.</br>"
-
-	if(ticker.mode.round_autoantag)
-		out += "<b>Autotraitor <a href='?src=\ref[ticker.mode];toggle=autotraitor'>enabled</a></b>."
-		if(ticker.mode.antag_scaling_coeff > 0)
-			out += " (scaling with <a href='?src=\ref[ticker.mode];set=antag_scaling'>[ticker.mode.antag_scaling_coeff]</a>)"
+		if(ticker.mode.campaign == 0)
+			out += "<B>Skirmish Mode </b><a href='?src=\ref[ticker.mode];set=campaign'>Change to Campaign</a><br/>"
 		else
-			out += " (not currently scaling, <a href='?src=\ref[ticker.mode];set=antag_scaling'>set a coefficient</a>)"
-		out += "<br/>"
-	else
-		out += "<b>Autotraitor <a href='?src=\ref[ticker.mode];toggle=autotraitor'>disabled</a></b>.<br/>"
+			out += "<B>Campaign Mode</b> ([ticker.mode.campaign]) <a href='?src=\ref[ticker.mode];set=campaign'>Change to Skirmish</a><br/>"
+		out += "<b>Minimum Teams:</b> <a href='?src=\ref[ticker.mode];set=min_teams'>[ticker.mode.minimum_teams]</a><br/>"
+		out += "<b>Minimum Neutral Teams:</b> <a href='?src=\ref[ticker.mode];set=min_neutrals'>[ticker.mode.minimum_neutrals]</a><br/>"
+		out += "<b>Round Desc:</b> [ticker.mode.round_description]<br/>"
 
-	out += "<b>All antag ids:</b>"
-	if(ticker.mode.antag_templates && ticker.mode.antag_templates.len).
-		for(var/datum/antagonist/antag in ticker.mode.antag_templates)
-			antag.update_current_antag_max()
-			out += " <a href='?src=\ref[ticker.mode];debug_antag=[antag.id]'>[antag.id]</a>"
-			out += " ([antag.get_antag_count()]/[antag.cur_max]) "
-			out += " <a href='?src=\ref[ticker.mode];remove_antag_type=[antag.id]'>\[-\]</a><br/>"
+		if(ticker.mode.deny_respawn)
+			out += "<b>Respawning:</b> <a href='?src=\ref[ticker.mode];toggle=respawn'>disallowed</a>"
+		else
+			out += "<b>Respawning:</b> <a href='?src=\ref[ticker.mode];toggle=respawn'>allowed</a>"
+		out += "<br/>"
+
+		if(!ticker.mode.allow_latejoins)
+			out += "<b>Latejoins:</b> <a href='?src=\ref[ticker.mode];toggle=latejoins'>disallowed</a>"
+		else
+			out += "<b>Latejoins:</b> <a href='?src=\ref[ticker.mode];toggle=latejoins'>allowed</a>"
+		out += "<br/>"
+		if(!ticker.mode.autobalance)
+			out += "<b>Autobalance:</b> <a href='?src=\ref[ticker.mode];toggle=autobalance'>OFF</a>"
+		else
+			out += "<b>Autobalance:</b> <a href='?src=\ref[ticker.mode];toggle=autobalance'>ON</a>"
+		out += "<br/><br/>"
+		out += "<a href='?src=\ref[ticker.mode];toggle=edit_teams'>Faction Editor</a><br/>"
+		out += "<b>Fighting Teams: </b> <a href='?src=\ref[ticker.mode];toggle=clear_teams'>(Clear)</a><br/>"
+		for(var/datum/army_faction/F in ticker.mode.teams)
+			out += "[F.name] <br/>"
+
+		out += "<a href='?src=\ref[ticker.mode];set=add_army'>(Add)</a><br/>"
+
+		out += "<br/><b>Neutral Teams:</b> <a href='?src=\ref[ticker.mode];toggle=clear_neutrals'>(Clear)</a><br/>"
+		for(var/datum/army_faction/N in ticker.mode.neutral_teams)
+			out += "[N.name] <br/>"
+
+		out += "<a href='?src=\ref[ticker.mode];set=add_neutral_army'>(Add)</a><br/>"
+
+		if(ticker.mode.teams.len < ticker.mode.minimum_teams || ticker.mode.neutral_teams.len < ticker.mode.minimum_neutrals)
+			out += "<br/>FINISH AND START (not enough teams)<BR/>"
+		else
+			out += "<br/><a href='?src=\ref[ticker.mode];toggle=finish_up'>FINISH</a><br/>"
 	else
-		out += " None."
-	out += " <a href='?src=\ref[ticker.mode];add_antag_type=1'>\[+\]</a><br/>"
+		if(ticker.mode.ert_disabled)
+			out += "<b>Emergency Response Teams:</b> <a href='?src=\ref[ticker.mode];toggle=ert'>disabled</a>"
+		else
+			out += "<b>Emergency Response Teams:</b> <a href='?src=\ref[ticker.mode];toggle=ert'>enabled</a>"
+		out += "<br/>"
+
+		if(ticker.mode.deny_respawn)
+			out += "<b>Respawning:</b> <a href='?src=\ref[ticker.mode];toggle=respawn'>disallowed</a>"
+		else
+			out += "<b>Respawning:</b> <a href='?src=\ref[ticker.mode];toggle=respawn'>allowed</a>"
+		out += "<br/>"
+
+		out += "<b>Shuttle delay multiplier:</b> <a href='?src=\ref[ticker.mode];set=shuttle_delay'>[ticker.mode.shuttle_delay]</a><br/>"
+
+		if(ticker.mode.auto_recall_shuttle)
+			out += "<b>Shuttle auto-recall:</b> <a href='?src=\ref[ticker.mode];toggle=shuttle_recall'>enabled</a>"
+		else
+			out += "<b>Shuttle auto-recall:</b> <a href='?src=\ref[ticker.mode];toggle=shuttle_recall'>disabled</a>"
+		out += "<br/><br/>"
+
+		if(ticker.mode.event_delay_mod_moderate)
+			out += "<b>Moderate event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_moderate'>[ticker.mode.event_delay_mod_moderate]</a><br/>"
+		else
+			out += "<b>Moderate event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_moderate'>unset</a><br/>"
+
+		if(ticker.mode.event_delay_mod_major)
+			out += "<b>Major event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_severe'>[ticker.mode.event_delay_mod_major]</a><br/>"
+		else
+			out += "<b>Major event time modifier:</b> <a href='?src=\ref[ticker.mode];set=event_modifier_severe'>unset</a><br/>"
+
+		out += "<hr>"
+
+		if(ticker.mode.antag_tags && ticker.mode.antag_tags.len)
+			out += "<b>Core antag templates:</b></br>"
+			for(var/antag_tag in ticker.mode.antag_tags)
+				out += "<a href='?src=\ref[ticker.mode];debug_antag=[antag_tag]'>[antag_tag]</a>.</br>"
+
+		if(ticker.mode.round_autoantag)
+			out += "<b>Autotraitor <a href='?src=\ref[ticker.mode];toggle=autotraitor'>enabled</a></b>."
+			if(ticker.mode.antag_scaling_coeff > 0)
+				out += " (scaling with <a href='?src=\ref[ticker.mode];set=antag_scaling'>[ticker.mode.antag_scaling_coeff]</a>)"
+			else
+				out += " (not currently scaling, <a href='?src=\ref[ticker.mode];set=antag_scaling'>set a coefficient</a>)"
+			out += "<br/>"
+		else
+			out += "<b>Autotraitor <a href='?src=\ref[ticker.mode];toggle=autotraitor'>disabled</a></b>.<br/>"
+
+		out += "<b>All antag ids:</b>"
+		if(ticker.mode.antag_templates && ticker.mode.antag_templates.len).
+			for(var/datum/antagonist/antag in ticker.mode.antag_templates)
+				antag.update_current_antag_max()
+				out += " <a href='?src=\ref[ticker.mode];debug_antag=[antag.id]'>[antag.id]</a>"
+				out += " ([antag.get_antag_count()]/[antag.cur_max]) "
+				out += " <a href='?src=\ref[ticker.mode];remove_antag_type=[antag.id]'>\[-\]</a><br/>"
+		else
+			out += " None."
+		out += " <a href='?src=\ref[ticker.mode];add_antag_type=1'>\[+\]</a><br/>"
 
 	usr << browse(out, "window=edit_mode[src]")
 	feedback_add_details("admin_verb","SGM")
 
+
+/datum/admins/proc/show_army_edit(var/datum/army_faction/F = null)
+	set category = "Admin"
+	set desc = "Edit an army."
+	set name = "Edit Army"
+
+	if(!all_factions.len)
+		to_chat(usr,"The factions didn't initialize!")
+		return
+
+	if(!F || isnull(F))
+		var/list/available_teams = list_armies_by_name()
+		var/choice = input("Choose a faction to edit") as null|anything in available_teams
+		if(!choice)
+			return
+
+		F = get_army(choice)
+		if(!F || !istype(F))
+			to_chat(usr,"Something fucked up!")
+			return //Didn't retrieve the army, weird
+
+	var/out = "<font size=3><b>Editing Army: [F.name] </b> <a href='?src=\ref[F];set=name'>(Change Name)</a></font><br/>"
+	out += "<hr>"
+	out += "<br/>"
+	if(F.enabled)
+		out += "<a href='?src=\ref[F];toggle=enabled'>Army is Enabled</a><br/>"
+	else
+		out += "<a href='?src=\ref[F];toggle=enabled'>Army is Disabled</a><br/>"
+	if(F.latejoin)
+		out += "<a href='?src=\ref[F];toggle=latejoin'>Army can be Latejoined</a><br/>"
+	else
+		out += "<a href='?src=\ref[F];toggle=latejoin'>Army cannot be Latejoined</a><br/>"
+	if(F.is_neutral)
+		out += "<a href='?src=\ref[F];toggle=neutral'>Army must be Neutral</a><br/>"
+	else
+		out += "<a href='?src=\ref[F];toggle=neutral'>Army can be Neutral or Non-Neutral</a><br/>"
+	out += "<B>Flag Icon State:</b> <a href='?src=\ref[F];set=flag'>[F.flag_state]</a><br/>"
+	out += "<B>Number of Fireteams:</b> <a href='?src=\ref[F];set=fireteams'>[F.num_fireteams]</a><br/>"
+	out += "<B>Current Win Points:</b> <a href='?src=\ref[F];set=win'>[F.win_points]</a><br/>"
+	out += "<B>Current Munitions:</b> <a href='?src=\ref[F];set=mun'>[F.munition_points]</a><br/>"
+	out += "<B>Current Reserves:</b> <a href='?src=\ref[F];set=res'>[F.reserve_points]</a><br/>"
+	out += "<B>Current Fuel:</b> <a href='?src=\ref[F];set=fuel'>[F.fuel_points]</a><br/><br/>"
+	out += "<br/><a href='?src=\ref[F];toggle=finish_up'>Save and Close</a><br/><br>"
+
+	out += "<BR/><a href='?src=\ref[F];toggle=job_editor'>Edit Jobs</a><br/>"
+	for(var/datum/army_job/J in all_army_jobs)
+		if(J.faction_tag == F.faction_tag)
+			if(J.position == "fireteam")
+				out += "[J.name] ([J.english_name]) - [J.rank_prefix] x[J.amount] per fireteam<br/>"
+			else if(J.position == "team")
+				out += "[J.name] ([J.english_name]) - [J.rank_prefix] x[J.amount]<br/>"
+
+	usr << browse(out, "window=edit_army[src];size=500x400")
+	feedback_add_details("admin_verb","SAE")
 
 /datum/admins/proc/toggletintedweldhelmets()
 	set category = "Debug"

@@ -31,10 +31,12 @@
 	pref.nanotrasen_relation = sanitize_inlist(pref.nanotrasen_relation, COMPANY_ALIGNMENTS, initial(pref.nanotrasen_relation))
 
 /datum/category_item/player_setup_item/general/background/content(var/mob/user)
-	. += "<b>Background Information</b><br>"
-	. += "[using_map.company_name] Relation: <a href='?src=\ref[src];nt_relation=1'>[pref.nanotrasen_relation]</a><br/>"
-	. += "Home System: <a href='?src=\ref[src];home_system=1'>[pref.home_system]</a><br/>"
+	. += "<b>Background Information </b><br>"
 	. += "Citizenship: <a href='?src=\ref[src];citizenship=1'>[pref.citizenship]</a><br/>"
+
+/*	. += "[using_map.company_name] Relation: <a href='?src=\ref[src];nt_relation=1'>[pref.nanotrasen_relation]</a><br/>"
+	. += "Home System: <a href='?src=\ref[src];home_system=1'>[pref.home_system]</a><br/>"
+
 	. += "Faction: <a href='?src=\ref[src];faction=1'>[pref.faction]</a><br/>"
 	. += "Religion: <a href='?src=\ref[src];religion=1'>[pref.religion]</a><br/>"
 
@@ -48,7 +50,7 @@
 		. += "<a href='?src=\ref[src];set_general_records=1'>[TextPreview(pref.gen_record,40)]</a><br><br>"
 		. += "Security Records:<br>"
 		. += "<a href='?src=\ref[src];set_security_records=1'>[TextPreview(pref.sec_record,40)]</a><br>"
-
+*/
 /datum/category_item/player_setup_item/general/background/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["nt_relation"])
 		var/new_relation = input(user, "Choose your relation to [using_map.company_name]. Note that this represents what others can find out about your character by researching your background, not what your character actually thinks.", "Character Preference", pref.nanotrasen_relation)  as null|anything in COMPANY_ALIGNMENTS

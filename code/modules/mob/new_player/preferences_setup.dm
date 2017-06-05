@@ -147,7 +147,7 @@ datum/preferences
 		var/green
 		var/blue
 
-		var/col = pick ("black", "grey", "brown", "chestnut", "blue", "lightblue", "green", "albino")
+		var/col = pick ("black", "grey", "brown", "chestnut", "albino")
 		switch(col)
 			if("black")
 				red = 0
@@ -163,18 +163,6 @@ datum/preferences
 				blue = 0
 			if("chestnut")
 				red = 153
-				green = 102
-				blue = 0
-			if("blue")
-				red = 51
-				green = 102
-				blue = 204
-			if("lightblue")
-				red = 102
-				green = 204
-				blue = 255
-			if("green")
-				red = 0
 				green = 102
 				blue = 0
 			if("albino")

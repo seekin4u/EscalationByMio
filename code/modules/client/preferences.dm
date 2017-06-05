@@ -109,11 +109,13 @@ datum/preferences
 	var/list/relations
 	var/list/relations_info
 
+	var/list/ooc_languages = list()
+
 
 /datum/preferences/New(client/C)
 	player_setup = new(src)
 	gender = pick(MALE, FEMALE)
-	real_name = random_name(gender,species)
+	real_name = "New Character"
 	b_type = RANDOM_BLOOD_TYPE
 
 	gear = list()
@@ -399,7 +401,7 @@ datum/preferences
 
 	character.skills = skills
 	character.used_skillpoints = used_skillpoints
-	
+
 	if(!character.isSynthetic())
 		character.nutrition = rand(140,360)
 
