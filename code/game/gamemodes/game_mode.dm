@@ -38,6 +38,20 @@ var/global/list/additional_antag_types = list()
 	var/waittime_l = 60 SECONDS				 // Lower bound on time before start of shift report
 	var/waittime_h = 180 SECONDS		     // Upper bounds on time before start of shift report
 
+//1983 stuff
+	var/minimum_teams = 2
+	var/minimum_neutrals = 0
+	var/list/datum/army_faction/teams = list()	//A list of the teams fighting
+	var/list/datum/army_faction/neutral_teams = list() //A list of the neutral teams in the game
+	var/admin_ended_round = 0
+	var/admin_enabled_joining = 1
+	var/allow_latejoins = 1
+	var/override_latejoins = 0
+	var/being_edited = 0
+	var/wargames = 0 //Set this to 1 to use our 1983 modes. Overrides certain panels
+	var/campaign = 0 //Skirmish vs. campaign, locks teams in. Uses a #
+	var/autobalance = 0
+
 /datum/game_mode/New()
 	..()
 	// Enforce some formatting.
@@ -64,7 +78,40 @@ var/global/list/additional_antag_types = list()
 				auto_recall_shuttle = !auto_recall_shuttle
 			if("autotraitor")
 				round_autoantag = !round_autoantag
+			if("latejoins")
+				allow_latejoins = !allow_latejoins
+			if("autobalance")
+				autobalance = !autobalance
+			if("clear_teams")
+				teams.Cut()
+			if("clear_neutrals")
+				neutral_teams.Cut()
+			if("edit_teams")
+				if(usr.client.holder)
+					usr.client.holder.show_army_edit()
+			if("finish_up")
+				if(teams.len >= minimum_teams && neutral_teams.len >= minimum_neutrals)
+					admin_enabled_joining = !admin_enabled_joining
+					if(admin_enabled_joining)
+						for(var/mob/new_player/mob in world)
+							mob.new_player_panel_proc() //Refresh their panel
+							to_chat(mob,"Round setup has started! Click Join Team to choose your side!")
+							playsound(mob, 'sound/machines/twobeep.ogg', 75, 1)
+					else
+						to_world("The game start has been canceled by admins and teams have been reset.")
+						for(var/mob/new_player/mob in world)
+							mob.ready = 0
+							mob.new_player_panel_proc() //Refresh their panel
+							if(mob.job)
+								mob.job.remove_mob(mob.fireteam_picked,mob.team_picked,mob)
+								mob.fireteam_view = 0
+								mob.team_view = 0
+								mob.fireteam_picked = null
+								mob.team_picked = null
+								onclose(mob,"Teams")
+
 		message_admins("Admin [key_name_admin(usr)] toggled game mode option '[href_list["toggle"]]'.")
+
 	else if(href_list["set"])
 		var/choice = ""
 		switch(href_list["set"])
@@ -90,7 +137,60 @@ var/global/list/additional_antag_types = list()
 					return
 				event_delay_mod_major = choice
 				refresh_event_modifiers()
+			if("min_teams")
+				choice = input("Enter the minimum fighting teams (1-4)") as num
+				if(isnull(choice) || choice < 1 || choice > 5)
+					return
+				minimum_teams = choice
+			if("min_neutrals")
+				choice = input("Enter the minimum neutral teams (0-4)") as num
+				if(isnull(choice) || choice < 0 || choice > 5)
+					return
+				minimum_neutrals = choice
+			if("campaign")
+				if(campaign == 0)
+					choice = input("Enter the campaign identifier (1-1000)") as num
+					if(isnull(choice) || choice < 1 || choice > 1000)
+						return
+					campaign = choice
+				else
+					campaign = 0
+//Add an army to the list. Some shenanigans involved to make it show army name rather than path
+			if("add_army")
+				var/list/available_teams = list()
+				for(var/datum/army_faction/A in all_factions)
+					if(!(A in teams) && !(A in neutral_teams) && A.enabled == 1)  //Don't add disabled armies
+						available_teams += A.name
+				choice = input("Choose a team to add to the fighting teams.") as null|anything in available_teams
+				if(!choice)
+					return
+				var/datum/army_faction/army_found
+				for(var/datum/army_faction/B in all_factions) //Loop back again and find the one we actually picked
+					if(B.name == choice)
+						army_found = B
+						break
+				if(army_found)
+					teams += army_found
+
+			if("add_neutral_army")
+				var/list/available_n_teams = list()
+				for(var/datum/army_faction/C in all_factions)
+					if(!(C in teams) && !(C in neutral_teams) && C.enabled == 1)
+						available_n_teams += C.name
+
+				choice = input("Choose a team to add to the neutral teams.") as null|anything in available_n_teams
+				if(!choice)
+					return
+				var/datum/army_faction/n_army_found
+				for(var/datum/army_faction/D in all_factions)
+					if(D.name == choice)
+						n_army_found = D
+						break
+				if(n_army_found)
+					neutral_teams += n_army_found
+
 		message_admins("Admin [key_name_admin(usr)] set game mode option '[href_list["set"]]' to [choice].")
+
 	else if(href_list["debug_antag"])
 		if(href_list["debug_antag"] == "self")
 			usr.client.debug_variables(src)
@@ -119,12 +219,19 @@ var/global/list/additional_antag_types = list()
 			ticker.mode.antag_templates |= antag
 			message_admins("Admin [key_name_admin(usr)] added [antag.role_text] template to game mode.")
 
+
+	if(usr.client.holder)
+		usr.client.holder.show_game_mode()
+
 	// I am very sure there's a better way to do this, but I'm not sure what it might be. ~Z
+/*
 	spawn(1)
 		for(var/datum/admins/admin in world)
 			if(usr.client == admin.owner)
 				admin.show_game_mode(usr)
 				return
+*/
+
 
 /datum/game_mode/proc/announce() //to be called when round starts
 	to_world("<B>The current game mode is [capitalize(name)]!</B>")

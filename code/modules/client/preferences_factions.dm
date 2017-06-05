@@ -13,41 +13,20 @@ var/global/list/seen_religions = list()
 	return
 
 var/global/list/citizenship_choices = list(
-	"Earth",
-	"Mars",
-	"Moghes",
-	"Ahdomai",
-	"Qerrbalak"
+	"Russia",
+	"United States",
+	"Germany",
+	"Czechoslovakia"
 	)
 
 var/global/list/home_system_choices = list(
 	"Sol",
-	"Nyx",
-	"Tau Ceti",
-	"Epsilon Ursae Minoris",
-	"S'randarr"
 	)
 
 var/global/list/faction_choices = list(
-	"Sol Central Government",
-	"Vey Med",
-	"Einstein Engines",
-	"Free Trade Union",
-	"NanoTrasen",
-	"Ward-Takahashi GMB",
-	"Gilthari Exports",
-	"Grayson Manufactories Ltd.",
-	"Aether Atmospherics",
-	"Zeng-Hu Pharmaceuticals",
-	"Hephaestus Industries"
+	"New World Order",
 	)
 
 var/global/list/religion_choices = list(
-	"Unitarianism",
-	"Hinduism",
-	"Buddhist",
-	"Islamic",
-	"Christian",
 	"Agnostic",
-	"Deist"
 	)

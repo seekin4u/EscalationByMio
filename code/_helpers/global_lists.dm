@@ -97,6 +97,9 @@ var/global/list/string_slot_flags = list(
 	"holster" = SLOT_HOLSTER
 )
 
+var/global/list/all_factions = list()
+var/global/list/all_army_jobs = list()
+
 //////////////////////////
 /////Initial Building/////
 //////////////////////////

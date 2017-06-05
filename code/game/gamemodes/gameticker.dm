@@ -38,7 +38,7 @@ var/global/datum/controller/gameticker/ticker
 /datum/controller/gameticker/proc/pregame()
 	do
 		if(!gamemode_voted)
-			pregame_timeleft = 180
+			pregame_timeleft = 240
 		else
 			pregame_timeleft = 15
 			if(!isnull(secondary_mode))
@@ -64,12 +64,11 @@ var/global/datum/controller/gameticker/ticker
 		to_world("<B><FONT color='blue'>Welcome to the pre-game lobby!</FONT></B>")
 
 		to_world("Please, setup your character and select ready. Game will start in [pregame_timeleft] seconds")
-
 		while(current_state == GAME_STATE_PREGAME)
 			for(var/i=0, i<10, i++)
 				sleep(1)
 				vote.process()
-			if(round_progressing)
+			if(round_progressing && (!ticker.mode || (ticker.mode && ticker.mode.admin_enabled_joining)))
 				pregame_timeleft--
 			if(pregame_timeleft == config.vote_autogamemode_timeleft && !gamemode_voted)
 				gamemode_voted = 1
@@ -104,7 +103,8 @@ var/global/datum/controller/gameticker/ticker
 				weighted_modes[GM.config_tag] = config.probabilities[GM.config_tag]
 			src.mode = gamemode_cache[pickweight(weighted_modes)]
 	else
-		src.mode = config.pick_mode(master_mode)
+		if(!src.mode) //Might be set up early (escalation)
+			src.mode = config.pick_mode(master_mode)
 
 	if(!src.mode)
 		current_state = GAME_STATE_PREGAME
@@ -112,10 +112,10 @@ var/global/datum/controller/gameticker/ticker
 
 		return 0
 
-	job_master.ResetOccupations()
-	src.mode.create_antagonists()
+//	job_master.ResetOccupations()
+//	src.mode.create_antagonists()
 	src.mode.pre_setup()
-	job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
+//	job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
 
 	var/t = src.mode.startRequirements()
 	if(t)
