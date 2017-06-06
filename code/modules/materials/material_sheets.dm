@@ -100,6 +100,10 @@
 	icon_state = "sheet-marble"
 	default_type = "marble"
 
+/obj/item/stack/material/concrete
+	name = "concrete brick"
+	icon_state = "iron"
+
 /obj/item/stack/material/diamond
 	name = "diamond"
 	icon_state = "sheet-diamond"
