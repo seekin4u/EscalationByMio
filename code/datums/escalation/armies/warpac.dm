@@ -9,7 +9,7 @@
 	faction_tag = "csla"
 	flag_state = "clsa"
 	language = "Czech"
-	base_color = "green"
+	base_color = "brown"
 
 /datum/army_faction/warpac/soviet
 	name = "Soviet Red Army"
