@@ -12,7 +12,7 @@
 	base_color = "brown"
 
 /datum/army_faction/warpac/soviet
-	name = "Soviet Red Army"
+	name = "Soviet Army"
 	enabled = 1
 	faction_tag = "cccp"
 	flag_state = "soviet"
