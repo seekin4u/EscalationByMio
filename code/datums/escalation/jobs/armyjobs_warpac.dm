@@ -19,7 +19,7 @@
 	amount = 1
 
 /datum/army_job/csla/sublieutenant
-	name = "Podporucik"
+	name = "Podporuchik"
 	english_name = "Sublieutenant"
 	enabled = 1
 	outfits = list("")
@@ -41,8 +41,8 @@
 	amount = 1
 
 /datum/army_job/csla/subsergeant
-	name = "Poddostojnik"
-	english_name = "Subsergeant"
+	name = "Subchetar"
+	english_name = "Sergeant deputy"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
@@ -103,7 +103,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Svobodnik" 
-	rank_number = 3
+	rank_number = 4
 	position = "team"
 	amount = 2
 
@@ -114,7 +114,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Desiatnik" 
-	rank_number = 5
+	rank_number = 3
 	position = "team"
 	amount = 4
 
@@ -256,7 +256,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Ryadovoy"
-	rank_number = 6
+	rank_number = 5
 	position = "team"
 	amount = 2
 
@@ -268,6 +268,6 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Ryadovoy"
-	rank_number = 6
+	rank_number = 5
 	position = "team"
 	amount = 3
