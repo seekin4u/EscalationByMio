@@ -52,7 +52,7 @@
 	amount = 1
 
 /datum/army_job/csla/gunner
-	name = "Delostrelec"
+	name = "Kulometnik"
 	english_name = "Machinegunner"
 	enabled = 1
 	outfits = list("")
