@@ -84,8 +84,19 @@
 	position = "fireteam"
 	amount = 1
 
+/datum/army_job/csla/squadradio
+	name = "Radista"
+	english_name = "Radioman"
+	enabled = 1
+	outfits = list("")
+	outfit_variant_chance = 0
+	rank_prefix = "Vojin" //"Private"
+	rank_number = 5
+	position = "fireteam"
+	amount = 1
+
 /datum/army_job/csla/rifleman
-	name = "Vojak"
+	name = "Strelec"
 	english_name = "Rifleman"
 	enabled = 1
 	outfits = list("")
@@ -93,7 +104,8 @@
 	rank_prefix = "Vojin" //"Private"
 	rank_number = 5
 	position = "fireteam"
-	amount = 2
+	amount = 3
+	
 
 //NOT in squads
 /datum/army_job/csla/marksman
@@ -129,7 +141,7 @@
 	faction_tag = "cccp"
 
 /datum/army_job/cccp/leader
-	name = "Leytenant"
+	name = "Komvzvoda"
 	english_name = "Platoon Leader"
 	enabled = 1
 	outfits = list("")
@@ -140,7 +152,7 @@
 	amount = 1
 
 /datum/army_job/cccp/subleader
-	name = "Starshina"
+	name = "Zamkomvzvoda"
 	english_name = "Platoon Deputy"
 	enabled = 1
 	outfits = list("")
@@ -151,7 +163,7 @@
 	amount = 1
 
 /datum/army_job/cccp/cwo //Quartermaster basically
-	name = "Starshiy praporsik"
+	name = "Starshiy kapter"
 	english_name = "Chief Warrant Officer"
 	enabled = 1
 	outfits = list("")
@@ -162,18 +174,18 @@
 	amount = 1
 
 /datum/army_job/cccp/radiomaster //QM's assistant, in charge of radios/communication
-	name = "Praporshik"
+	name = "Kapter"
 	english_name = "Warrant Officer"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Praoirshik"
+	rank_prefix = "Praporshik"
 	rank_number = 3
 	position = "team"
 	amount = 1
 
 /datum/army_job/cccp/squadleader
-	name = "Serzhant"  				//Sergeant
+	name = "Komandir Otdeleniya"  			
 	english_name = "Squad Leader"
 	enabled = 1
 	outfits = list("")
