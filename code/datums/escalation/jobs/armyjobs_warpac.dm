@@ -46,7 +46,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Desiatnik" 
+	rank_prefix = "Desiatnik"
 	rank_number = 3
 	position = "fireteam"
 	amount = 1
@@ -109,12 +109,12 @@
 
 //NOT in squads
 /datum/army_job/csla/marksman
-	name = "Nadstrelec" 
+	name = "Nadstrelec"
 	english_name = "Sharpshooter"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Svobodnik" 
+	rank_prefix = "Svobodnik"
 	rank_number = 4
 	position = "team"
 	amount = 2
@@ -125,7 +125,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Desiatnik" 
+	rank_prefix = "Desiatnik"
 	rank_number = 3
 	position = "team"
 	amount = 4
@@ -196,7 +196,7 @@
 	amount = 1
 
 /datum/army_job/cccp/squadvice
-	name = "Starshiy strelok"  				
+	name = "Starshiy strelok"
 	english_name = "Squad deputy"
 	enabled = 1
 	outfits = list("")
@@ -212,7 +212,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy" 
+	rank_prefix = "Ryadovoy"
 	rank_number = 6
 	position = "fireteam"
 	amount = 1
@@ -230,7 +230,7 @@
 
 /datum/army_job/cccp/grenass
 	name = "Pomoshnik granatometchika"
-	english_name = "Grenadier assistant" 
+	english_name = "Grenadier assistant"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
@@ -274,7 +274,7 @@
 
 //Not in squads
 /datum/army_job/cccp/medic
-	name = "Sanitar"				
+	name = "Sanitar"
 	english_name = "Field Medic"
 	enabled = 1
 	outfits = list("")

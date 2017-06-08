@@ -8,7 +8,7 @@
     oxygen = MOLES_O2STANDARD * 1.15
     nitrogen = MOLES_N2STANDARD * 1.15
 
-    temperature = T0C - 10
+    temperature = T0C - 10 //not 2 cold
     var/list/crossed_dirs = list()
 
 #define FOOTSTEP_SPRITE_AMT 2

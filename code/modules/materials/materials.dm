@@ -345,6 +345,16 @@ var/list/name_to_material
 	integrity = 201 //hack to stop kitchen benches being flippable, todo: refactor into weight system
 	stack_type = /obj/item/stack/material/marble
 
+/material/concrete
+	name = "concrete material"
+	icon_base = "stone"
+	icon_reinf = "reinf_stone"
+	icon_colour = "#D9C179"
+	weight = 20
+	hardness = 150
+	stack_type = /obj/item/stack/material/concrete
+	hitsound = 'sound/weapons/smash.ogg'
+
 /material/steel
 	name = DEFAULT_WALL_MATERIAL
 	stack_type = /obj/item/stack/material/steel

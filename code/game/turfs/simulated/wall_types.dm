@@ -1,9 +1,12 @@
 /turf/simulated/wall/r_wall
 	icon_state = "rgeneric"
+
 /turf/simulated/wall/r_wall/New(var/newloc)
 	..(newloc, "plasteel","plasteel") //3strong
+
 /turf/simulated/wall/ocp_wall
 	icon_state = "rgeneric"
+
 /turf/simulated/wall/ocp_wall/New(var/newloc)
 	..(newloc, "osmium-carbide plasteel", "osmium-carbide plasteel")
 
@@ -28,26 +31,37 @@
 
 /turf/simulated/wall/iron/New(var/newloc)
 	..(newloc,"iron")
+
 /turf/simulated/wall/uranium/New(var/newloc)
 	..(newloc,"uranium")
+
 /turf/simulated/wall/diamond/New(var/newloc)
 	..(newloc,"diamond")
+
 /turf/simulated/wall/gold/New(var/newloc)
 	..(newloc,"gold")
+
 /turf/simulated/wall/silver/New(var/newloc)
 	..(newloc,"silver")
+
 /turf/simulated/wall/phoron/New(var/newloc)
 	..(newloc,"phoron")
+
 /turf/simulated/wall/sandstone/New(var/newloc)
 	..(newloc,"sandstone")
+
 /turf/simulated/wall/wood/New(var/newloc)
 	..(newloc,"wood")
+
 /turf/simulated/wall/ironphoron/New(var/newloc)
 	..(newloc,"iron","phoron")
+
 /turf/simulated/wall/golddiamond/New(var/newloc)
 	..(newloc,"gold","diamond")
+
 /turf/simulated/wall/silvergold/New(var/newloc)
 	..(newloc,"silver","gold")
+
 /turf/simulated/wall/sandstonediamond/New(var/newloc)
 	..(newloc,"sandstone","diamond")
 
@@ -55,8 +69,10 @@
 // Kind of wondering if this is going to bite me in the butt.
 /turf/simulated/wall/voxshuttle/New(var/newloc)
 	..(newloc,"voxalloy")
+
 /turf/simulated/wall/voxshuttle/attackby()
 	return
+
 /turf/simulated/wall/titanium/New(var/newloc)
 	..(newloc,"titanium")
 
