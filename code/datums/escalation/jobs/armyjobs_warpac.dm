@@ -283,3 +283,14 @@
 	rank_number = 5
 	position = "team"
 	amount = 3
+
+/datum/army_job/cccp/headmedic
+	name = "Glavvrach"
+	english_name = "Head Medic"
+	enabled = 1
+	outfits = list("")
+	outfit_variant_chance = 0
+	rank_prefix = "Lieutenant"
+	rank_number = 2
+	position = "team"
+	amount = 1
