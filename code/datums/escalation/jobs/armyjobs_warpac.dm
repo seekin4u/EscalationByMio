@@ -73,7 +73,7 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/csla/grenadier assistant
+/datum/army_job/csla/grenass
 	name = "Pomocnik pancerovnika"
 	english_name = "Grenadier assistant"
 	enabled = 1
@@ -228,7 +228,7 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/cccp/grenadierass
+/datum/army_job/cccp/grenass
 	name = "Pomoshnik granatometchika"
 	english_name = "Grenadier assistant" 
 	enabled = 1
