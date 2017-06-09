@@ -43,8 +43,8 @@
 			//visible_message("<span class='warning'>[P] hits \the [src]!</span>") - old variant.
 			//like all in view range will see a message like "DA BULLET HITS SANDBAG NEAR THE VASIA PUPKIN"
 			//or we can delete "near [M]" i this thing will spams a lot
-			for(var/mob/living/carbon/human in view(8, src))
-				to_chat("<span class='warning'>[P] hits \the [src] near [M]!</span>")
+			for(var/mob/living/carbon/human/H in view(8, src))
+				to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
 			return 1
 	return 1
 
