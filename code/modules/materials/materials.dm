@@ -346,9 +346,9 @@ var/list/name_to_material
 	stack_type = /obj/item/stack/material/marble
 
 /material/concrete
-	name = "concrete material"
+	name = "concrete"
 	icon_base = "stone"
-	icon_reinf = "reinf_stone"
+	icon_reinf = "reinf_over"
 	icon_colour = "#D9C179"
 	weight = 20
 	hardness = 150
