@@ -105,7 +105,7 @@
 	rank_number = 5
 	position = "fireteam"
 	amount = 3
-	
+
 
 //NOT in squads
 /datum/army_job/csla/marksman
@@ -185,7 +185,7 @@
 	amount = 1
 
 /datum/army_job/cccp/squadleader
-	name = "Komandir Otdeleniya"  			
+	name = "Komandir Otdeleniya"
 	english_name = "Squad Leader"
 	enabled = 1
 	outfits = list("")
