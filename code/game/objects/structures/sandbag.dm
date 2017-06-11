@@ -2,10 +2,13 @@
 	name = "sandbag"
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "sandbag"
+	density = 1
+	throwpass = 1//we can throw granades despite it's density
 	layer = OBJ_LAYER
 	plane = OBJ_PLANE
 	anchored = 1
 	layer = 2.8
+	var/proj_pass_rate = 10//low means low chance to stop bullet in percents
 
 /obj/structure/sandbag/New()
 	flags |= ON_BORDER
@@ -14,39 +17,73 @@
 
 /obj/structure/sandbag/set_dir(direction)
 	dir = direction
-	if(dir == NORTH)
+	if(dir != NORTH)
 		layer = ABOVE_HUMAN_LAYER
 		plane = ABOVE_HUMAN_PLANE
 
 /obj/structure/sandbag/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
+		var/obj/item/projectile/proj = mover
+
+		if(proj.firer && Adjacent(proj.firer))
+			return 1
+
+		//past code to return 1 for AGS' projectiles
+		///
+		///
+
+		//if it is a bullet - it can be passivly stopped by the sand
+		if(prob(proj_pass_rate))
+			to_chat(world, "proj past rate прокнул.")
+			return 0
+
 		return check_cover(mover, target)//catches bullets
 
-	if(get_dir(get_turf(mover), target) == dir)
+	//to cross it
+	if(get_dir(get_turf(mover), target) != dir) //we move in the same dir as a sandbag
+		//to_chat(world, "!Density. DIR:[dir]:[mover.dir]")
+		return 1
+	else //move in front of it
+		//to_chat(world, "Density. DIR:[dir]:[mover.dir]")
 		return 0
 
-	return 1
+	return !density
 
+//checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/sandbag/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
+	var/S = "nothing"
+	var/chance = 30
+//нужно что бы мешок в любом случае останавливал пули, если в нем есть моб
+//и только 30% шанс словить пулю, если нет, например
+//А брутсвер просто имел пассивно 10-20% словить пулю
 	if(!cover)
 		return 1
-	if (get_dist(P.starting, loc) <= 1) //Tables won't help you if people are THIS close
+
+	if (get_dist(P.starting, loc) <= 1)
 		return 1
-	if (get_turf(P.original) == cover)
-		var/chance = 20
+
+	if (get_turf(P.original) == cover) //soon will delete/replace this
+		S = "get_turf(P.original) == cover"
 		if (ismob(P.original))
 			var/mob/M = P.original
 			if (M.lying)
-				chance += 40//Lying down lets you catch less bullets
-		if(get_dir(loc, from) == dir) //
+				chance += 30//Lying down lets you catch less bullets
+		if(get_dir(loc, from) == dir)//Если стрелять в лицо мешку - if you shoot in face of sandbgs
+			S = "get_dir(loc, from) == dir"
 			chance += 30
 		else
 			return 1//But only from one side
+
+	if(get_dir(loc, from) == dir)//
+		//TODO :
+		//если в мешке сидит моб, то + к шансу
 		if(prob(chance))
 			for(var/mob/living/carbon/human/H in view(8, src))
 				to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
 			return 0
+
+	to_chat(world, "[S]")
 	return 1
 
 /obj/structure/sandbag/ex_act(severity)
