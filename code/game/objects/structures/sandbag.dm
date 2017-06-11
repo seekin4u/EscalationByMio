@@ -2,7 +2,10 @@
 	name = "sandbag"
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "sandbag"
+	layer = OBJ_LAYER
+	plane = OBJ_PLANE
 	anchored = 1
+	layer = 2.8
 
 /obj/structure/sandbag/New()
 	flags |= ON_BORDER
@@ -12,15 +15,16 @@
 /obj/structure/sandbag/set_dir(direction)
 	dir = direction
 	if(dir == NORTH)
-		layer = FLY_LAYER
-	else
-		layer = OBJ_LAYER
+		layer = ABOVE_HUMAN_LAYER
+		plane = ABOVE_HUMAN_PLANE
 
 /obj/structure/sandbag/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
-		return check_cover(mover, target)
+		return check_cover(mover, target)//catches bullets
+
 	if(get_dir(get_turf(mover), target) == dir)
 		return 0
+
 	return 1
 
 /obj/structure/sandbag/proc/check_cover(obj/item/projectile/P, turf/from)
@@ -34,18 +38,15 @@
 		if (ismob(P.original))
 			var/mob/M = P.original
 			if (M.lying)
-				chance += 40				//Lying down lets you catch less bullets
-		if(get_dir(loc, from) == dir)	//Flipped tables catch more bullets
+				chance += 40//Lying down lets you catch less bullets
+		if(get_dir(loc, from) == dir) //
 			chance += 30
 		else
-			return 1					//But only from one side
+			return 1//But only from one side
 		if(prob(chance))
-			//visible_message("<span class='warning'>[P] hits \the [src]!</span>") - old variant.
-			//like all in view range will see a message like "DA BULLET HITS SANDBAG NEAR THE VASIA PUPKIN"
-			//or we can delete "near [M]" i this thing will spams a lot
 			for(var/mob/living/carbon/human/H in view(8, src))
 				to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
-			return 1
+			return 0
 	return 1
 
 /obj/structure/sandbag/ex_act(severity)
@@ -67,15 +68,15 @@
 /obj/item/weapon/sandbag
 	name = "sandbags"
 	//icon = 'icons/obj/weapons.dmi'
-	icon_state = "sandbag"
+	icon_state = "sandbag_empty"
 	w_class = 1
-	var/sand_amount = 0
+	var/sand_amount = 4
 
 /obj/item/weapon/sandbag/attack_self(mob/user as mob)
 	if(sand_amount < 4)
 		to_chat(user,  "\red You need more sand to make wall.")
 		return
-	if(!isturf(src.loc))
+	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
 	for(var/obj/structure/sandbag/baggy in src.loc)
@@ -83,7 +84,7 @@
 			to_chat(user, "\red There is no more space.")
 			return
 
-	var/obj/structure/sandbag/bag = new(src.loc)
+	var/obj/structure/sandbag/bag = new(user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()
 	qdel(src)
