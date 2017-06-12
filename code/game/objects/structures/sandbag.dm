@@ -48,27 +48,26 @@
 
 	return !density
 
+/obj/structure/sandbag/CheckExit(atom/movable/O as mob|obj, target as turf)
+	if(istype(O) && O.checkpass(PASSTABLE))
+		return 1
+	if (get_dir(loc, target) == dir) //straight stolen from flipped table movement check, removed if flipped though
+		return !density
+	else
+		return 1
+	return 1
+
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/sandbag/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
 	var/chance = 30 //basic chance for sandbag to catch bullet
-	var/S = "S"
+//	var/S = "S"
 	if(!cover)
 		return 1
 
 	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
 		to_chat(world, "You are more than one tile from sandbag. Returns 1")
 		return 1
-
-/*	if (get_turf(P.original) == cover) //soon will delete/replace this
-		if (ismob(P.original))
-			var/mob/M = P.original
-			if (M.lying)
-				chance += 30//Lying down lets you catch less bullets
-		if(get_dir(loc, from) == dir)//Если стрелять в лицо мешку - if you shoot in face of sandbgs
-			chance += 30
-		else
-			return 1//But only from one side*/
 
 	if(ismob(P.original))
 		chance += 30
