@@ -7,7 +7,7 @@
 	faction_tag = "bund" //The tag of the faction this job is a part of, for lookups
 
 /datum/army_job/bund/platoonleader
-	name = "Zugführer"
+	name = "ZugfÃ¼hrer"
 	english_name = "Platoon Leader"
 	enabled = 1
 	outfits = list("")
@@ -18,7 +18,7 @@
 	amount = 1
 
 /datum/army_job/bund/subleader
-	name = "Zugführer stellvertretender"
+	name = "ZugfÃ¼hrer stellvertretender"
 	english_name = "Vice Platoon Leader"
 	enabled = 1
 	outfits = list("")
@@ -29,68 +29,68 @@
 	amount = 1
 
 /datum/army_job/bund/squadleader
-	name = "Gruppenführer"
-	english_name = "Fireteam Leader"
+	name = "GruppenfÃ¼hrer"
+	english_name = "Squad Leader"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Hauptfeldwebel"  //What a mouthful, we should shrink these. "master sergeant"
+	rank_prefix = "Feldwebel"  
 	rank_number = 2
 	position = "fireteam"
 	amount = 1
 
 /datum/army_job/bund/subsergeant
-	name = "Gruppenführer stellvertreter"
-	english_name = "Vice Fireteam Leader"
+	name = "GruppenfÃ¼hrer stellvertreter"
+	english_name = "Fireteam Leader"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Unteroffizier"  //"sergeant"
 	rank_number = 3
 	position = "fireteam"
-	amount = 1
+	amount = 2
 
 /datum/army_job/bund/machinegunner
-	name = "Maschinengewehrschütze"
+	name = "MaschinengewehrschÃ¼tze"
 	english_name = "Machinegunner"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Oberstabsgefreiter" //Master Corporal/Specialist
+	rank_prefix = "Stabsgefreiter" 
 	rank_number = 4
 	position = "fireteam"
-	amount = 1
+	amount = 2
 
 /datum/army_job/bund/grunt
-	name = "Schütze"
+	name = "SchÃ¼tze"
 	english_name = "Soldier"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Schütze"
+	rank_prefix = "Soldat"
 	rank_number = 5
 	position = "fireteam"
-	amount = 3
+	amount = 5
 
 
 /datum/army_job/bund/fielddoctor
-	name = "Chef-Sanitäter"			//"chief paramedic"
+	name = "Chef-SanitÃ¤ter"			//"chief paramedic"
 	english_name = "Chief Doctor"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Feldwebel" //Staffsergeant
+	rank_prefix = "Feldwebel" 
 	rank_number = 3
 	position = "team"
 	amount = 1
 
 /datum/army_job/bund/fieldmedic
-	name = "Sanitäter"		//Lit. "paramedic"
+	name = "SanitÃ¤ter"		//Lit. "paramedic"
 	english_name = "Field Paramedic"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Stabsgefreiter" //Corporal
+	rank_prefix = "Stabsgefreiter" 
 	rank_number = 4
 	position = "team"
 	amount = 3
