@@ -35,7 +35,7 @@
 
 		return check_cover(mover, target)
 
-	if(get_dir(get_turf(mover), target) == dir)
+	if(get_dir(get_turf(mover), target) == !dir)//turned in front of sandbag
 		return !density
 	else
 		return 1
@@ -45,7 +45,7 @@
 /obj/structure/sandbag/CheckExit(atom/movable/O as mob|obj, target as turf)
 	if(istype(O) && O.checkpass(PASSTABLE))
 		return 1
-	if (get_dir(loc, target) == dir) //straight stolen from flipped table movement check, removed if flipped though
+	if (get_dir(loc, target) == dir)
 		return !density
 	else
 		return 1
@@ -77,7 +77,7 @@
 	if(prob(chance))
 		for(var/mob/living/carbon/human/H in view(8, src))
 			to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
-		chance = 30//restore it
+		chance = 30
 		return 0
 
 	chance = 30
@@ -116,7 +116,7 @@
 	//icon = 'icons/obj/weapons.dmi'
 	icon_state = "sandbag_empty"
 	w_class = 1
-	var/sand_amount = 4//set to 0 if you want to play
+	var/sand_amount = 4
 
 /obj/item/weapon/sandbag/attack_self(mob/user as mob)
 	if(sand_amount < 4)
@@ -125,18 +125,22 @@
 	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
-	for(var/obj/structure/sandbag/baggy in src.loc)//goes wrong, i still can do more that 1 sandbag on 1 dir, and this sandbag will be with 0 layer =|
-		if(baggy.dir == user.dir)
+
+	var/i = 0
+
+	for(var/obj/structure/sandbag/baggy in user.loc.contents)
+		i++
+		if((baggy.dir == user.dir) || i > 4)
 			to_chat(user, "\red There is no more space.")
 			return
 
-	var/obj/structure/sandbag/bag = new /obj/structure/sandbag/ (user.loc)
+	var/obj/structure/sandbag/bag = new /obj/structure/sandbag/ (user.loc)//DO-AFTER NEEDED
 	bag.set_dir(user.dir)
 	user.drop_item()
 	qdel(src)
 
 /obj/item/weapon/sandbag/attackby(obj/O as obj, mob/user as mob)
-	if(istype(O, /obj/item/weapon/ore/glass)) //fill sandbags with not melted sand. Replace obj to smth else.
+	if(istype(O, /obj/item/weapon/ore/glass))
 		if(sand_amount >= 4)
 			to_chat(user, "\red [name] is full!")
 			return

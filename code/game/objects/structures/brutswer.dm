@@ -92,10 +92,9 @@
 	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
-	for(var/obj/structure/brutswer/B in src.loc)
-		if(B)
-			to_chat(user, "\red There is no more space.")
-			return
+	if(locate(/obj/structure/brutswer, user.loc.contants) || locate(/obj/structure/sandbag, user.loc.contants))
+		to_chat(user, "\red There is no more space.")
+		return
 
 	var/obj/structure/brutswer/B = new(user.loc)
 	B.set_dir(user.dir)
