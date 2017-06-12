@@ -13,7 +13,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Porucik"
+	rank_prefix = "Poruchik"
 	rank_number = 0
 	position = "team"
 	amount = 1
@@ -24,8 +24,8 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Podporucik"
-	rank_number = 1 //Second in command
+	rank_prefix = "Podporuchik"
+	rank_number = 1 
 	position = "team"
 	amount = 1
 
@@ -153,34 +153,45 @@
 
 /datum/army_job/cccp/subleader
 	name = "Zamkomvzvoda"
-	english_name = "Platoon Deputy"
+	english_name = "Platoon Leader Deputy"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Starshina"
-	rank_number = 1 //Second in command
+	rank_number = 2 
 	position = "team"
 	amount = 1
 
-/datum/army_job/cccp/cwo //Quartermaster basically
+/datum/army_job/cccp/wo //Quartermaster basically
 	name = "Starshiy kapter"
-	english_name = "Chief Warrant Officer"
-	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
-	rank_prefix = "Strshiy prarorshik"
-	rank_number = 2
-	position = "team"
-	amount = 1
-
-/datum/army_job/cccp/radiomaster //QM's assistant, in charge of radios/communication
-	name = "Kapter"
 	english_name = "Warrant Officer"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Praporshik"
+	rank_prefix = "Prarorshik"
 	rank_number = 3
+	position = "team"
+	amount = 1
+
+/datum/army_job/cccp/awoo //QM assistant
+	name = "Pomoshnik Praporshika"
+	english_name = "WO assistant"
+	enabled = 1
+	outfits = list("")
+	outfit_variant_chance = 0
+	rank_prefix = "Ryadovoy"
+	rank_number = 7
+	position = "team"
+	amount = 1
+
+/datum/army_job/cccp/radiomaster //QM's assistant, in charge of radios/communication
+	name = "Shtabnoy radist"
+	english_name = "HQ Radioman"
+	enabled = 1
+	outfits = list("")
+	outfit_variant_chance = 0
+	rank_prefix = "Yefreytor"
+	rank_number = 6
 	position = "team"
 	amount = 1
 
@@ -191,18 +202,18 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Serzhant"
-	rank_number = 4
+	rank_number = 5
 	position = "fireteam"
 	amount = 1
 
 /datum/army_job/cccp/squadvice
 	name = "Starshiy strelok"
-	english_name = "Squad deputy"
+	english_name = "Squad Leader Deputy"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Yefreytor" //corporal
-	rank_number = 5
+	rank_number = 6
 	position = "fireteam"
 	amount = 1
 
@@ -213,7 +224,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Ryadovoy"
-	rank_number = 6
+	rank_number = 7
 	position = "fireteam"
 	amount = 1
 
@@ -224,7 +235,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Ryadovoy"
-	rank_number = 6
+	rank_number = 7
 	position = "fireteam"
 	amount = 1
 
@@ -235,7 +246,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Ryadovoy"
-	rank_number = 6
+	rank_number = 7
 	position = "fireteam"
 	amount = 1
 
@@ -246,7 +257,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Ryadovoy"
-	rank_number = 6
+	rank_number = 7
 	position = "fireteam"
 	amount = 1
 
@@ -257,7 +268,7 @@
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Ryadovoy"
-	rank_number = 6
+	rank_number = 7
 	position = "fireteam"
 	amount = 3
 
@@ -267,8 +278,8 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
-	rank_number = 5
+	rank_prefix = "Yefreytor"
+	rank_number = 6
 	position = "team"
 	amount = 2
 
@@ -279,8 +290,8 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
-	rank_number = 5
+	rank_prefix = "Yefreytor"
+	rank_number = 6
 	position = "team"
 	amount = 3
 
@@ -290,7 +301,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Lieutenant"
-	rank_number = 2
+	rank_prefix = "Mladshiy leytenant"
+	rank_number = 1
 	position = "team"
 	amount = 1
