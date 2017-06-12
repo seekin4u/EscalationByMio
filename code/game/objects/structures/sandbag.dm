@@ -8,11 +8,16 @@
 	plane = OBJ_PLANE
 	anchored = 1
 	layer = 2.8
-	var/proj_pass_rate = 10//lower means lower chance to stop bullet in percents
+	flags = OBJ_CLIMBABLE
+	var/chance = 30
 
 /obj/structure/sandbag/New()
 	flags |= ON_BORDER
 	set_dir(dir)
+	..()
+
+/obj/structure/window/Destroy()
+	//chance = null
 	..()
 
 /obj/structure/sandbag/set_dir(direction)
@@ -28,23 +33,12 @@
 		if(proj.firer && Adjacent(proj.firer))
 			return 1
 
-		//past code to return 1 for AGS' projectiles
-		///
-		///
+		return check_cover(mover, target)
 
-		if(prob(proj_pass_rate))
-			to_chat(world, "proj past rate прокнул.")
-			return 0
-
-		return check_cover(mover, target)//catches bullets
-
-	//to cross it
-	if(get_dir(get_turf(mover), target) != dir) //we move in the same dir as a sandbag
-		//to_chat(world, "!Density. DIR:[dir]:[mover.dir]")
+	if(get_dir(get_turf(mover), target) == dir)
+		return !density
+	else
 		return 1
-	else //move in front of it
-		//to_chat(world, "Density. DIR:[dir]:[mover.dir]")
-		return 0
 
 	return !density
 
@@ -60,8 +54,7 @@
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/sandbag/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
-	var/chance = 30 //basic chance for sandbag to catch bullet
-//	var/S = "S"
+
 	if(!cover)
 		return 1
 
@@ -69,14 +62,13 @@
 		to_chat(world, "You are more than one tile from sandbag. Returns 1")
 		return 1
 
-	if(ismob(P.original))
+	var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
+	if(M)
 		chance += 30
-		to_chat(world, "Ismob(P.original):[chance]")
+		to_chat(world, "Mob located!:[chance]")
 
-		var/mob/M = P.original
 		if(M.lying)
 			chance += 20
-			to_chat(world, "M.lying(P.original):[chance]")
 
 	if(get_dir(loc, from) == dir)
 		to_chat(world, "You fire in front of sandbag:[chance]")
@@ -85,9 +77,23 @@
 	if(prob(chance))
 		for(var/mob/living/carbon/human/H in view(8, src))
 			to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
+		chance = 30//restore it
 		return 0
 
+	chance = 30
 	return 1
+
+/obj/structure/sandbag/MouseDrop_T(obj/O as obj, mob/user as mob)
+	..()
+	if ((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))
+		return
+	if(isrobot(user))
+		return
+	//user.drop_item()
+	if (O.loc != src.loc)
+		to_chat(user, "you start climbing onto [O]...")
+		step(O, get_dir(O, src))
+	return
 
 /obj/structure/sandbag/ex_act(severity)
 	switch(severity)
@@ -119,12 +125,12 @@
 	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
-	for(var/obj/structure/sandbag/baggy in src.loc)
+	for(var/obj/structure/sandbag/baggy in src.loc)//goes wrong, i still can do more that 1 sandbag on 1 dir, and this sandbag will be with 0 layer =|
 		if(baggy.dir == user.dir)
 			to_chat(user, "\red There is no more space.")
 			return
 
-	var/obj/structure/sandbag/bag = new(user.loc)
+	var/obj/structure/sandbag/bag = new /obj/structure/sandbag/ (user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()
 	qdel(src)
