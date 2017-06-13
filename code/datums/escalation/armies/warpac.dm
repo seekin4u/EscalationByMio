@@ -7,7 +7,7 @@
 	name = "Czechoslovak People's Army"
 	enabled = 1
 	faction_tag = "csla"
-	flag_state = "clsa"
+	flag_state = "csla"
 	language = "Czech"
 	base_color = "brown"
 
