@@ -92,7 +92,7 @@
 	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
-	if(locate(/obj/structure/brutswer, user.loc.contants) || locate(/obj/structure/sandbag, user.loc.contants))
+	if(locate(/obj/structure/brutswer, user.loc.contents) || locate(/obj/structure/sandbag, user.loc.contents))
 		to_chat(user, "\red There is no more space.")
 		return
 

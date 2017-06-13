@@ -35,12 +35,10 @@
 
 		return check_cover(mover, target)
 
-	if(get_dir(get_turf(mover), target) == !dir)//turned in front of sandbag
-		return !density
+	if(get_dir(get_turf(src), target) == dir)//turned in front of sandbag
+		return 0
 	else
 		return 1
-
-	return !density
 
 /obj/structure/sandbag/CheckExit(atom/movable/O as mob|obj, target as turf)
 	if(istype(O) && O.checkpass(PASSTABLE))
