@@ -205,6 +205,7 @@
 	position = "team"
 	amount = 3
 
+
 /datum/army_job/usmc/marksman
 	name = "Designated Marksman"
 	english_name = "Sniper"
@@ -214,3 +215,14 @@
 	rank_prefix = "PFC"
 	position = "team"
 	amount = 2
+
+
+/datum/army_job/usmc/headmedic
+	name = "Head Medic"
+	english_name = "Head Medic"
+	enabled = 1
+	outfits = list("")
+	outfit_variant_chance = 0
+	rank_prefix = "HMED"
+	position = "team"
+	amount = 1
