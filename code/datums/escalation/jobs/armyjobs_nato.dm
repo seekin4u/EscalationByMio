@@ -70,12 +70,12 @@
 	rank_prefix = "Soldat"
 	rank_number = 5
 	position = "fireteam"
-	amount = 5
+	amount = 6
 
 
 /datum/army_job/bund/fielddoctor
 	name = "Chef-Sanitäter"			//"chief paramedic"
-	english_name = "Chief Doctor"
+	english_name = "Head Medic"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
@@ -95,6 +95,17 @@
 	position = "team"
 	amount = 3
 
+
+/datum/army_job/bund/marksman
+	name = "Scharfshutze"
+	english_name = "Designated Marksman"
+	enabled = 1
+	outfits = list("")
+	outfit_variant_chance = 0
+	rank_prefix = "Stabsgefreiter" 
+	rank_number = 4
+	position = "team"
+	amount = 2
 
 
 
@@ -146,7 +157,7 @@
 	rank_prefix = "SGT"
 	rank_number = 3
 	position = "fireteam"
-	amount = 1
+	amount = 2
 
 /datum/army_job/usmc/squadradio
 	name = "Radio Operator"
@@ -157,7 +168,7 @@
 	rank_prefix = "LCPL"
 	rank_number = 4
 	position = "fireteam"
-	amount = 1
+	amount = 2
 
 /datum/army_job/usmc/machinegunner
 	name = "Machinegunner"
@@ -168,18 +179,8 @@
 	rank_prefix = "PFC"
 	rank_number = 5
 	position = "fireteam"
-	amount = 1
+	amount = 2
 
-/datum/army_job/usmc/agunner
-	name = "Assistant Gunner"
-	english_name = "Private"
-	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
-	rank_prefix = "Pvt"
-	rank_number = 6
-	position = "fireteam"
-	amount = 1
 
 /datum/army_job/usmc/grunt
 	name = "Marine Rifleman"
@@ -190,7 +191,7 @@
 	rank_prefix = "Pvt"
 	rank_number = 6
 	position = "fireteam"
-	amount = 2
+	amount = 4
 
 
 //Not in squads - "attachments" in the marines
@@ -213,14 +214,3 @@
 	rank_prefix = "PFC"
 	position = "team"
 	amount = 2
-
-/datum/army_job/usmc/engineer
-	name = "Combat Engineer"
-	english_name = "Private 1st class"
-	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
-	rank_prefix = "PFC"
-	rank_number = 5
-	position = "team"
-	amount = 1
