@@ -1,6 +1,7 @@
-/datum/category_item/player_setup_item/general/language
+/* /datum/category_item/player_setup_item/general/language
 	name = "Language"
 	sort_order = 2
+*/
 
 /datum/category_item/player_setup_item/general/language/load_character(var/savefile/S)
 	S["language"]			>> pref.alternate_languages

@@ -1,6 +1,7 @@
-/datum/category_item/player_setup_item/general/flavor
+/* /datum/category_item/player_setup_item/general/flavor
 	name = "Flavor"
 	sort_order = 6
+*/
 
 /datum/category_item/player_setup_item/general/flavor/load_character(var/savefile/S)
 	S["flavor_texts_general"]	>> pref.flavor_texts["general"]
