@@ -1,5 +1,5 @@
-/obj/structure/brutswer
-	name = "brutswer"
+/obj/structure/brutswehr
+	name = "brutswehr"
 	desc = "Land structure to cover your ass!"
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "brutswer"
@@ -12,7 +12,7 @@
 	flags = OBJ_CLIMBABLE
 	var/chance = 20//lower means lower chance to stop bullet in percents
 
-/obj/structure/brutswer/New()
+/obj/structure/brutswehr/New()
 	flags |= ON_BORDER
 	set_dir(dir)
 	..()
@@ -24,7 +24,7 @@
 /obj/structure/sandbag/set_dir(direction)
 	dir = direction
 
-/obj/structure/brutswer/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
+/obj/structure/brutswehr/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
 		var/obj/item/projectile/proj = mover
 
@@ -42,7 +42,7 @@
 		return 1
 
 	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-		to_chat(world, "You are more than one tile from brutswer. Returned 1")
+		to_chat(world, "You are more than one tile from brutswehr. Returned 1")
 		return 1
 
 	for(var/mob/living/carbon/human/H in view(src, 2))//if there are mob somewhere near in range of 1 tile
@@ -57,7 +57,7 @@
 	chance = 20
 	return 1
 
-/obj/structure/brutswer/MouseDrop_T(obj/O as obj, mob/user as mob)
+/obj/structure/brutswehr/MouseDrop_T(obj/O as obj, mob/user as mob)
 	..()
 	if ((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))
 		return
@@ -69,7 +69,7 @@
 		step(O, get_dir(O, src))
 	return
 
-/obj/structure/brutswer/ex_act(severity)
+/obj/structure/brutswehr/ex_act(severity)
 	switch(severity)
 		if(1.0)
 			new /obj/item/weapon/ore/glass(src.loc)
@@ -92,11 +92,11 @@
 	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
-	if(locate(/obj/structure/brutswer, user.loc.contents) || locate(/obj/structure/sandbag, user.loc.contents))
+	if(locate(/obj/structure/brutswehr, user.loc.contents) || locate(/obj/structure/sandbag, user.loc.contents))
 		to_chat(user, "\red There is no more space.")
 		return
 
-	var/obj/structure/brutswer/B = new(user.loc)
+	var/obj/structure/brutswehr/B = new(user.loc)
 	B.set_dir(user.dir)
 	user.drop_item()
 	qdel(src)
