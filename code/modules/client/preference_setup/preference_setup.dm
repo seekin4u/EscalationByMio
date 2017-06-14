@@ -9,10 +9,11 @@
 	sort_order = 1
 	category_item_type = /datum/category_item/player_setup_item/general
 
-/datum/category_group/player_setup_category/skill_preferences
+/* /datum/category_group/player_setup_category/skill_preferences
 	name = "Skills"
 	sort_order = 2
 	category_item_type = /datum/category_item/player_setup_item/skills
+
 
 /datum/category_group/player_setup_category/occupation_preferences
 	name = "Occupation"
@@ -23,7 +24,7 @@
 	name = "Roles"
 	sort_order = 4
 	category_item_type = /datum/category_item/player_setup_item/antagonism
-
+*/
 /datum/category_group/player_setup_category/relations_preferences
 	name = "Matchmaking"
 	sort_order = 5
