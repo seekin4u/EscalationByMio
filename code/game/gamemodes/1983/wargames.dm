@@ -38,6 +38,9 @@
 	return 0
 
 /datum/game_mode/wargames/pre_setup()
+	for(var/mob/new_player/player in player_list)
+		if(player.ready && player.mind && !player.mind.assigned_role)
+			player.mind.assigned_role = player.job.name
 	return
 
 /datum/game_mode/wargames/post_setup()
