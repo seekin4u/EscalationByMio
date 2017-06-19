@@ -17,11 +17,11 @@
 	set_dir(dir)
 	..()
 
-/obj/structure/window/Destroy()
+/obj/structure/brutswehr/Destroy()
 	//chance = null
 	..()
 
-/obj/structure/sandbag/set_dir(direction)
+/obj/structure/brutswehr/set_dir(direction)
 	dir = direction
 
 /obj/structure/brutswehr/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
@@ -36,7 +36,7 @@
 	return !density
 
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
-/obj/structure/brutswer/proc/check_cover(obj/item/projectile/P, turf/from)
+/obj/structure/brutswehr/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
 	if(!cover)
 		return 1
@@ -47,6 +47,7 @@
 
 	for(var/mob/living/carbon/human/H in view(src, 2))//if there are mob somewhere near in range of 1 tile
 		chance = initial(chance) + 10
+		to_chat(world, "MOB DETECTED NEAR BRUTSWEHTR")
 
 	if(prob(chance))
 		for(var/mob/living/carbon/human/M in view(8, src)) //replace on "vievers(src.loc, 8)"
@@ -86,12 +87,10 @@
 	return
 
 /obj/item/weapon/ore/glass/attack_self(mob/user as mob)
-	//if(sand_amount < 4)
-	//	to_chat(user,  "\red You need more sand to make wall.")
-	//	return
 	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
+
 	if(locate(/obj/structure/brutswehr, user.loc.contents) || locate(/obj/structure/sandbag, user.loc.contents))
 		to_chat(user, "\red There is no more space.")
 		return

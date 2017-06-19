@@ -1,31 +1,32 @@
-/obj/structure/sandbag
-	name = "sandbag"
+/obj/structure/concrete_block
+	name = "concrete block"
+	desc = "Stronk concrete structure to cover your ass!"
 	//icon = 'icons/obj/structures.dmi'
-	icon_state = "sandbag"
+	icon_state = "concrete_block"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = 2.8
+	layer = OBJ_LAYER + 0.1//+0.1 makes this block be upon sandbag or brutswehr(what is not possible lul)
 	plane = OBJ_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/chance = 30
+	var/chance = 40
 
-/obj/structure/sandbag/New()
+/obj/structure/concrete_block/New()
 	flags |= ON_BORDER
 	set_dir(dir)
 	..()
 
-/obj/structure/sandbag/Destroy()
+/obj/structure/concrete_block/Destroy()
 	//chance = null
 	..()
 
-/obj/structure/sandbag/set_dir(direction)
+/obj/structure/concrete_block/set_dir(direction)
 	dir = direction
 	if(dir != NORTH)
-		layer = ABOVE_HUMAN_LAYER
+		layer = ABOVE_HUMAN_LAYER + 0.1
 		plane = ABOVE_HUMAN_PLANE
 
-/obj/structure/sandbag/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
+/obj/structure/concrete_block/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
 		var/obj/item/projectile/proj = mover
 
@@ -34,12 +35,12 @@
 
 		return check_cover(mover, target)
 
-	if(get_dir(get_turf(src), target) == dir)//turned in front of sandbag
+	if(get_dir(get_turf(src), target) == dir)//turned in front of block
 		return 0
 	else
 		return 1
 
-/obj/structure/sandbag/CheckExit(atom/movable/O as mob|obj, target as turf)
+/obj/structure/concrete_block/CheckExit(atom/movable/O as mob|obj, target as turf)
 	if(istype(O) && O.checkpass(PASSTABLE))
 		return 1
 	if (get_dir(loc, target) == dir)
@@ -49,12 +50,13 @@
 	return 1
 
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
-/obj/structure/sandbag/proc/check_cover(obj/item/projectile/P, turf/from)
+/obj/structure/concrete_block/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
 
 	if(!cover)
 		return 1
 
+	//also i can't see if this thing works =|
 	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
 		to_chat(world, "You are more than one tile from sandbag. Returns 1")
 		return 1
@@ -68,19 +70,19 @@
 			chance += 20
 
 	if(get_dir(loc, from) == dir)
-		to_chat(world, "You fire in front of sandbag:[chance]")
+		to_chat(world, "You fire in front of cpncrete block:[chance]")
 		chance += 10
 
 	if(prob(chance))
 		for(var/mob/living/carbon/human/H in view(8, src))
 			to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
-		chance = 30
+		chance = 40//replase with initial(chance)!
 		return 0
 
-	chance = 30
+	chance = 40
 	return 1
 
-/obj/structure/sandbag/MouseDrop_T(obj/O as obj, mob/user as mob)
+/obj/structure/concrete_block/MouseDrop_T(obj/O as obj, mob/user as mob)
 	..()
 	if ((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))
 		return
@@ -88,11 +90,12 @@
 		return
 	//user.drop_item()
 	if (O.loc != src.loc)
+		//add do_after or smth etc
 		to_chat(user, "you start climbing onto [O]...")
 		step(O, get_dir(O, src))
 	return
 
-/obj/structure/sandbag/ex_act(severity)
+/obj/structure/concrete_block/ex_act(severity)
 	switch(severity)
 		if(1.0)
 			new /obj/item/weapon/ore/glass(src.loc)
@@ -107,49 +110,4 @@
 			return
 		else
 	return
-
-/obj/item/weapon/sandbag
-	name = "sandbags"
-	//icon = 'icons/obj/weapons.dmi'
-	icon_state = "sandbag_empty"
-	w_class = 1
-	var/sand_amount = 4
-
-/obj/item/weapon/sandbag/attack_self(mob/user as mob)
-	if(sand_amount < 4)
-		to_chat(user,  "\red You need more sand to make wall.")
-		return
-	if(!isturf(user.loc))
-		to_chat(user, "\red Haha. Nice try.")
-		return
-
-	var/i = 0
-
-	for(var/obj/structure/sandbag/baggy in user.loc.contents)
-		i++
-		if((baggy.dir == user.dir) || i > 4)
-			to_chat(user, "\red There is no more space.")
-			return
-
-	var/obj/structure/sandbag/bag = new /obj/structure/sandbag/ (user.loc)//DO-AFTER NEEDED
-	bag.set_dir(user.dir)
-	user.drop_item()
-	qdel(src)
-
-/obj/item/weapon/sandbag/attackby(obj/O as obj, mob/user as mob)
-	if(istype(O, /obj/item/weapon/ore/glass))
-		if(sand_amount >= 4)
-			to_chat(user, "\red [name] is full!")
-			return
-		user.drop_item()
-		qdel(O)
-		sand_amount++
-		w_class++
-		update_icon()
-		to_chat(user, "You need [4 - sand_amount] more units.")
-
-/obj/item/weapon/sandbag/update_icon()
-	if(sand_amount >= 4)
-		icon_state = "sandbag"
-	else
-		icon_state = "sandbag_empty"
+//maybe do craft from something
