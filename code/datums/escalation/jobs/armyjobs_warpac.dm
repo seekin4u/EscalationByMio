@@ -13,7 +13,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Poruchik"
+	rank_prefix = "Por." //Poruchik
 	rank_number = 0
 	position = "team"
 	amount = 1
@@ -24,7 +24,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Podporuchik"
+	rank_prefix = "Podpor." //Podporuchik
 	rank_number = 1 
 	position = "team"
 	amount = 1
@@ -35,7 +35,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Chetar"
+	rank_prefix = "Chet." //Chetar
 	rank_number = 2
 	position = "fireteam"
 	amount = 1
@@ -46,7 +46,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Desiatnik"
+	rank_prefix = "Des." //Desiatnik
 	rank_number = 3
 	position = "fireteam"
 	amount = 1
@@ -57,7 +57,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Svobodnik" //"Corporal"
+	rank_prefix = "Svob." //Svobodnik
 	rank_number = 4
 	position = "fireteam"
 	amount = 1
@@ -68,7 +68,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Svobodnik" //"Corporal"
+	rank_prefix = "Svob." //Svobodnik
 	rank_number = 4
 	position = "fireteam"
 	amount = 1
@@ -79,7 +79,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Vojin" //"Private"
+	rank_prefix = "Voj." //Vojin
 	rank_number = 5
 	position = "fireteam"
 	amount = 1
@@ -90,7 +90,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Vojin" //"Private"
+	rank_prefix = "Voj." //Vojin
 	rank_number = 5
 	position = "fireteam"
 	amount = 1
@@ -101,7 +101,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Vojin" //"Private"
+	rank_prefix = "Voj." //Vojin
 	rank_number = 5
 	position = "fireteam"
 	amount = 3
@@ -114,7 +114,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Svobodnik"
+	rank_prefix = "Svob." //Svobodnik
 	rank_number = 4
 	position = "team"
 	amount = 2
@@ -125,7 +125,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Desiatnik"
+	rank_prefix = "Des." //Desiatnik
 	rank_number = 3
 	position = "team"
 	amount = 4
@@ -146,7 +146,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Leytenant"
+	rank_prefix = "Leyt." //Leytenant
 	rank_number = 0
 	position = "team"
 	amount = 1
@@ -157,7 +157,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Starshina"
+	rank_prefix = "St." //Starshina
 	rank_number = 2 
 	position = "team"
 	amount = 1
@@ -168,7 +168,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Prarorshik"
+	rank_prefix = "Prap." //Praporshik
 	rank_number = 3
 	position = "team"
 	amount = 1
@@ -179,7 +179,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
+	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
 	position = "team"
 	amount = 1
@@ -190,7 +190,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Yefreytor"
+	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
 	position = "team"
 	amount = 1
@@ -201,7 +201,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Serzhant"
+	rank_prefix = "Serzh." //Serzhant
 	rank_number = 5
 	position = "fireteam"
 	amount = 1
@@ -212,7 +212,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Yefreytor" //corporal
+	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
 	position = "fireteam"
 	amount = 1
@@ -223,7 +223,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
+	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
@@ -234,7 +234,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
+	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
@@ -245,7 +245,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
+	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
@@ -256,7 +256,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
+	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
@@ -267,7 +267,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Ryadovoy"
+	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
 	position = "fireteam"
 	amount = 3
@@ -278,7 +278,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Yefreytor"
+	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
 	position = "team"
 	amount = 2
@@ -290,7 +290,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Yefreytor"
+	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
 	position = "team"
 	amount = 3
@@ -301,7 +301,7 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Mladshiy leytenant"
+	rank_prefix = "Ml. Leyt." //Mladshiy Leytenant
 	rank_number = 1
 	position = "team"
 	amount = 1
