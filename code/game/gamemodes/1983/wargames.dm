@@ -41,6 +41,7 @@
 	for(var/mob/new_player/player in player_list)
 		if(player.ready && player.mind && !player.mind.assigned_role)
 			player.mind.assigned_role = player.job.name
+			player.mind.role_alt_title = player.mind.assigned_role
 	return
 
 /datum/game_mode/wargames/post_setup()
