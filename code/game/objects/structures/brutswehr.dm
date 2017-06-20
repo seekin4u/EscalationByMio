@@ -5,17 +5,15 @@
 	icon_state = "brutswer"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER
+	layer = OBJ_LAYER - 0.1
 	plane = OBJ_PLANE
 	anchored = 1
-	layer = 2.7
 	flags = OBJ_CLIMBABLE
 	var/chance = 20//lower means lower chance to stop bullet in percents
 
 /obj/structure/brutswehr/New()
-	flags |= ON_BORDER
-	set_dir(dir)
 	..()
+	flags |= ON_BORDER
 
 /obj/structure/brutswehr/Destroy()
 	//chance = null

@@ -11,9 +11,9 @@
 	var/chance = 30
 
 /obj/structure/sandbag/New()
-	flags |= ON_BORDER
-	set_dir(dir)
 	..()
+	flags |= ON_BORDER
+	to_chat(world, " New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/Destroy()
 	//chance = null
@@ -24,6 +24,7 @@
 	if(dir != NORTH)
 		layer = ABOVE_HUMAN_LAYER
 		plane = ABOVE_HUMAN_PLANE
+		to_chat(world, " set_dir. Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
@@ -131,7 +132,7 @@
 			to_chat(user, "\red There is no more space.")
 			return
 
-	var/obj/structure/sandbag/bag = new /obj/structure/sandbag/ (user.loc)//DO-AFTER NEEDED
+	var/obj/structure/sandbag/bag = new /obj/structure/sandbag(user.loc)//DO-AFTER NEEDED
 	bag.set_dir(user.dir)
 	user.drop_item()
 	qdel(src)

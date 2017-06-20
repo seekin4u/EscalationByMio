@@ -6,15 +6,15 @@
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
 	layer = OBJ_LAYER + 0.1//+0.1 makes this block be upon sandbag or brutswehr(what is not possible lul)
-	plane = OBJ_PLANE
+	plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
 	var/chance = 40
 
 /obj/structure/concrete_block/New()
-	flags |= ON_BORDER
-	set_dir(dir)
 	..()
+	flags |= ON_BORDER
+	set_dir(dir) // think we will add this things on map ONLY with mapping
 
 /obj/structure/concrete_block/Destroy()
 	//chance = null
@@ -22,9 +22,10 @@
 
 /obj/structure/concrete_block/set_dir(direction)
 	dir = direction
-	if(dir != NORTH)
+	if(dir == WEST | EAST)
 		layer = ABOVE_HUMAN_LAYER + 0.1
-		plane = ABOVE_HUMAN_PLANE
+	if(dir == SOUTH)
+		layer = ABOVE_HUMAN_LAYER + 0.2
 
 /obj/structure/concrete_block/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
