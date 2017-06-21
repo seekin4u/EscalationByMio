@@ -8,7 +8,7 @@
 	var/datum/browser/panel
 
 	var/char_is_setup = 0
-	var/datum/job/escalation/escalation/job
+	var/datum/job/escalation/job
 	var/fireteam_view = 0
 	var/team_view = -1
 
@@ -98,8 +98,8 @@
 		out += "<hr><center>"
 		for(var/J in team.slots) //Slots can either be people, or jobs. These are nonsquad jobs.
 			slot_index++
-			if(istype(J,/datum/job/escalation/escalation))
-				var/datum/job/escalation/escalation/A = J
+			if(istype(J,/datum/job/escalation))
+				var/datum/job/escalation/A = J
 				out += "<P><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/M = J
@@ -129,8 +129,8 @@
 		out += "<hr><center>"
 		for(var/S in fireteam.slots)
 			slot_index++
-			if(istype(S,/datum/job/escalation/escalation))
-				var/datum/job/escalation/escalation/A = S
+			if(istype(S,/datum/job/escalation))
+				var/datum/job/escalation/A = S
 				out += "<p><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/P = S
@@ -474,7 +474,7 @@
 
 
 
-/mob/new_player/proc/IsJobAvailable(var/datum/job/escalation/job)
+/mob/new_player/proc/IsJobAvailable(var/datum/job/job)
 	if(!job)	return 0
 	if(!job.is_position_available()) return 0
 	if(jobban_isbanned(src, job.title))	return 0
@@ -482,7 +482,7 @@
 
 	return 1
 
-/mob/new_player/proc/IsJobRestricted(var/datum/job/escalation/job, var/branch_pref, var/rank_pref)
+/mob/new_player/proc/IsJobRestricted(var/datum/job/job, var/branch_pref, var/rank_pref)
 	if(!job.is_branch_allowed(branch_pref))
 		return 1
 	if(!job.is_rank_allowed(branch_pref, rank_pref))
@@ -506,7 +506,7 @@
 	if(!config.enter_allowed)
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 		return 0
-	var/datum/job/escalation/job = job_master.GetJob(rank)
+	var/datum/job/job = job_master.GetJob(rank)
 	if(!IsJobAvailable(job))
 		alert("[rank] is not available. Please try another.")
 		return 0
@@ -604,7 +604,7 @@
 			dat += "<font color='red'>The [station_name()] is currently undergoing crew transfer procedures.</font><br>"
 
 	dat += "Choose from the following open/valid positions:<br>"
-	for(var/datum/job/escalation/job in job_master.occupations)
+	for(var/datum/job/job in job_master.occupations)
 		if(job && IsJobAvailable(job))
 			if(job.minimum_character_age && (client.prefs.age < job.minimum_character_age))
 				continue
@@ -1070,7 +1070,7 @@ mob/new_player/MayRespawn()
 					if(!isnull(href_list["option_[optionid]"]))	//Test if this optionid was selected
 						vote_on_poll(pollid, optionid, 1)
 
-/mob/new_player/proc/IsJobAvailable(var/datum/job/escalation/job)
+/mob/new_player/proc/IsJobAvailable(var/datum/job/job)
 	if(!job)	return 0
 	if(!job.is_position_available()) return 0
 	if(jobban_isbanned(src, job.title))	return 0
@@ -1078,7 +1078,7 @@ mob/new_player/MayRespawn()
 
 	return 1
 
-/mob/new_player/proc/IsJobRestricted(var/datum/job/escalation/job, var/branch_pref, var/rank_pref)
+/mob/new_player/proc/IsJobRestricted(var/datum/job/job, var/branch_pref, var/rank_pref)
 	if(!job.is_branch_allowed(branch_pref))
 		return 1
 	if(!job.is_rank_allowed(branch_pref, rank_pref))
@@ -1102,7 +1102,7 @@ mob/new_player/MayRespawn()
 	if(!config.enter_allowed)
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 		return 0
-	var/datum/job/escalation/job = job_master.GetJob(rank)
+	var/datum/job/job = job_master.GetJob(rank)
 	if(!IsJobAvailable(job))
 		alert("[rank] is not available. Please try another.")
 		return 0
@@ -1200,7 +1200,7 @@ mob/new_player/MayRespawn()
 			dat += "<font color='red'>The [station_name()] is currently undergoing crew transfer procedures.</font><br>"
 
 	dat += "Choose from the following open/valid positions:<br>"
-	for(var/datum/job/escalation/job in job_master.occupations)
+	for(var/datum/job/job in job_master.occupations)
 		if(job && IsJobAvailable(job))
 			if(job.minimum_character_age && (client.prefs.age < job.minimum_character_age))
 				continue

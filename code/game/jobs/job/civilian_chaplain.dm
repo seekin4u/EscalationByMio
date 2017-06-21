@@ -1,5 +1,5 @@
 //Due to how large this one is it gets its own file
-/datum/job/escalation/chaplain
+/datum/job/chaplain
 	title = "Chaplain"
 	department = "Civilian"
 	department_flag = CIV

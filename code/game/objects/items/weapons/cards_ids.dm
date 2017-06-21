@@ -125,7 +125,7 @@ var/const/NO_EMAG_ACT = -50
 /obj/item/weapon/card/id/New()
 	..()
 	if(job_access_type)
-		var/datum/job/escalation/j = job_master.GetJobByType(job_access_type)
+		var/datum/job/j = job_master.GetJobByType(job_access_type)
 		if(j)
 			rank = j.title
 			assignment = rank
@@ -235,14 +235,14 @@ var/const/NO_EMAG_ACT = -50
 	desc = "A silver card which shows honour and dedication."
 	icon_state = "silver"
 	item_state = "silver_id"
-	job_access_type = /datum/job/escalation/hop
+	job_access_type = /datum/job/hop
 
 /obj/item/weapon/card/id/gold
 	name = "identification card"
 	desc = "A golden card which shows power and might."
 	icon_state = "gold"
 	item_state = "gold_id"
-	job_access_type = /datum/job/escalation/captain
+	job_access_type = /datum/job/captain
 
 /obj/item/weapon/card/id/syndicate_command
 	name = "syndicate ID card"
@@ -312,118 +312,118 @@ var/const/NO_EMAG_ACT = -50
 	name = "identification card"
 	desc = "A card issued to medical staff."
 	icon_state = "med"
-	job_access_type = /datum/job/escalation/doctor
+	job_access_type = /datum/job/doctor
 
 /obj/item/weapon/card/id/medical/chemist
-	job_access_type = /datum/job/escalation/chemist
+	job_access_type = /datum/job/chemist
 
 /obj/item/weapon/card/id/medical/geneticist
-	job_access_type = /datum/job/escalation/geneticist
+	job_access_type = /datum/job/geneticist
 
 /obj/item/weapon/card/id/medical/psychiatrist
-	job_access_type = /datum/job/escalation/psychiatrist
+	job_access_type = /datum/job/psychiatrist
 
 /obj/item/weapon/card/id/medical/paramedic
-	job_access_type = /datum/job/escalation/Paramedic
+	job_access_type = /datum/job/Paramedic
 
 /obj/item/weapon/card/id/medical/head
 	name = "identification card"
 	desc = "A card which represents care and compassion."
 	icon_state = "medGold"
-	job_access_type = /datum/job/escalation/cmo
+	job_access_type = /datum/job/cmo
 
 /obj/item/weapon/card/id/security
 	name = "identification card"
 	desc = "A card issued to security staff."
 	icon_state = "sec"
-	job_access_type = /datum/job/escalation/officer
+	job_access_type = /datum/job/officer
 
 /obj/item/weapon/card/id/security/warden
-	job_access_type = /datum/job/escalation/warden
+	job_access_type = /datum/job/warden
 
 /obj/item/weapon/card/id/security/detective
-	job_access_type = /datum/job/escalation/detective
+	job_access_type = /datum/job/detective
 
 /obj/item/weapon/card/id/security/head
 	name = "identification card"
 	desc = "A card which represents honor and protection."
 	icon_state = "secGold"
-	job_access_type = /datum/job/escalation/hos
+	job_access_type = /datum/job/hos
 
 /obj/item/weapon/card/id/engineering
 	name = "identification card"
 	desc = "A card issued to engineering staff."
 	icon_state = "eng"
-	job_access_type = /datum/job/escalation/engineer
+	job_access_type = /datum/job/engineer
 
 /obj/item/weapon/card/id/engineering/atmos
-	job_access_type = /datum/job/escalation/atmos
+	job_access_type = /datum/job/atmos
 
 /obj/item/weapon/card/id/engineering/head
 	name = "identification card"
 	desc = "A card which represents creativity and ingenuity."
 	icon_state = "engGold"
-	job_access_type = /datum/job/escalation/chief_engineer
+	job_access_type = /datum/job/chief_engineer
 
 /obj/item/weapon/card/id/science
 	name = "identification card"
 	desc = "A card issued to science staff."
 	icon_state = "sci"
-	job_access_type = /datum/job/escalation/scientist
+	job_access_type = /datum/job/scientist
 
 /obj/item/weapon/card/id/science/xenobiologist
-	job_access_type = /datum/job/escalation/xenobiologist
+	job_access_type = /datum/job/xenobiologist
 
 /obj/item/weapon/card/id/science/roboticist
-	job_access_type = /datum/job/escalation/roboticist
+	job_access_type = /datum/job/roboticist
 
 /obj/item/weapon/card/id/science/head
 	name = "identification card"
 	desc = "A card which represents knowledge and reasoning."
 	icon_state = "sciGold"
-	job_access_type = /datum/job/escalation/rd
+	job_access_type = /datum/job/rd
 
 /obj/item/weapon/card/id/cargo
 	name = "identification card"
 	desc = "A card issued to cargo staff."
 	icon_state = "cargo"
-	job_access_type = /datum/job/escalation/cargo_tech
+	job_access_type = /datum/job/cargo_tech
 
 /obj/item/weapon/card/id/cargo/mining
-	job_access_type = /datum/job/escalation/mining
+	job_access_type = /datum/job/mining
 
 /obj/item/weapon/card/id/cargo/head
 	name = "identification card"
 	desc = "A card which represents service and planning."
 	icon_state = "cargoGold"
-	job_access_type = /datum/job/escalation/qm
+	job_access_type = /datum/job/qm
 
 /obj/item/weapon/card/id/civilian
 	name = "identification card"
 	desc = "A card issued to civilian staff."
 	icon_state = "civ"
-	job_access_type = /datum/job/escalation/assistant
+	job_access_type = /datum/job/assistant
 
 /obj/item/weapon/card/id/civilian/bartender
-	job_access_type = /datum/job/escalation/bartender
+	job_access_type = /datum/job/bartender
 
 /obj/item/weapon/card/id/civilian/chef
-	job_access_type = /datum/job/escalation/chef
+	job_access_type = /datum/job/chef
 
 /obj/item/weapon/card/id/civilian/botanist
-	job_access_type = /datum/job/escalation/hydro
+	job_access_type = /datum/job/hydro
 
 /obj/item/weapon/card/id/civilian/janitor
-	job_access_type = /datum/job/escalation/janitor
+	job_access_type = /datum/job/janitor
 
 /obj/item/weapon/card/id/civilian/librarian
-	job_access_type = /datum/job/escalation/librarian
+	job_access_type = /datum/job/librarian
 
 /obj/item/weapon/card/id/civilian/internal_affairs_agent
-	job_access_type = /datum/job/escalation/lawyer
+	job_access_type = /datum/job/lawyer
 
 /obj/item/weapon/card/id/civilian/chaplain
-	job_access_type = /datum/job/escalation/chaplain
+	job_access_type = /datum/job/chaplain
 
 /obj/item/weapon/card/id/civilian/head //This is not the HoP. There's no position that uses this right now.
 	name = "identification card"

@@ -1,4 +1,4 @@
-/datum/job/escalation/cmo
+/datum/job/cmo
 	title = "Chief Medical Officer"
 	head_position = 1
 	department = "Medical"
@@ -22,7 +22,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/medical/cmo
 	announced = 1
 
-/datum/job/escalation/doctor
+/datum/job/doctor
 	title = "Medical Doctor"
 	department = "Medical"
 	department_flag = MED
@@ -43,7 +43,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/medical/doctor
 
 //Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro
-/datum/job/escalation/chemist
+/datum/job/chemist
 	title = "Chemist"
 	department = "Medical"
 	department_flag = MED
@@ -59,7 +59,7 @@
 	alt_titles = list("Pharmacist")
 	outfit_type = /decl/hierarchy/outfit/job/medical/chemist
 
-/datum/job/escalation/geneticist
+/datum/job/geneticist
 	title = "Geneticist"
 	department = "Medical"
 	department_flag = MED
@@ -74,7 +74,7 @@
 	minimal_access = list(access_medical, access_morgue, access_genetics, access_research)
 	outfit_type = /decl/hierarchy/outfit/job/medical/geneticist
 
-/datum/job/escalation/psychiatrist
+/datum/job/psychiatrist
 	title = "Psychiatrist"
 	department = "Medical"
 	department_flag = MED
@@ -90,7 +90,7 @@
 	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist)
 	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
 
-/datum/job/escalation/Paramedic
+/datum/job/Paramedic
 	title = "Paramedic"
 	department = "Medical"
 	department_flag = MED

@@ -1,4 +1,4 @@
-/datum/job/escalation/hos
+/datum/job/hos
 	title = "Head of Security"
 	head_position = 1
 	department = "Security"
@@ -22,12 +22,12 @@
 	outfit_type = /decl/hierarchy/outfit/job/security/hos
 	announced = 1
 
-/datum/job/escalation/hos/equip(var/mob/living/carbon/human/H)
+/datum/job/hos/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(H)
 
-/datum/job/escalation/warden
+/datum/job/warden
 	title = "Warden"
 	department = "Security"
 	department_flag = SEC
@@ -42,7 +42,7 @@
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/warden
 
-/datum/job/escalation/detective
+/datum/job/detective
 	title = "Detective"
 	department = "Security"
 	department_flag = SEC
@@ -58,7 +58,7 @@
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/detective
 
-/datum/job/escalation/officer
+/datum/job/officer
 	title = "Security Officer"
 	department = "Security"
 	department_flag = SEC

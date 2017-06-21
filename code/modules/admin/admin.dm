@@ -1275,7 +1275,7 @@ var/global/floorIsLava = 0
 	out += "<br/><a href='?src=\ref[F];toggle=finish_up'>Save and Close</a><br/><br>"
 
 	out += "<BR/><a href='?src=\ref[F];toggle=job_editor'>Edit Jobs</a><br/>"
-	for(var/datum/job/escalation/escalation/J in all_army_jobs)
+	for(var/datum/job/escalation/J in all_army_jobs)
 		if(J.faction_tag == F.faction_tag)
 			if(J.position == "fireteam")
 				out += "[J.name] ([J.english_name]) - [J.rank_prefix] x[J.amount] per fireteam<br/>"

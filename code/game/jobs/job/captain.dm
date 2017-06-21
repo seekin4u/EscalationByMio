@@ -1,6 +1,6 @@
 var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
-/datum/job/escalation/captain
+/datum/job/captain
 	title = "Captain"
 	department = "Command"
 	head_position = 1
@@ -20,15 +20,15 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	outfit_type = /decl/hierarchy/outfit/job/captain
 	announced = 1
 
-/datum/job/escalation/captain/equip(var/mob/living/carbon/human/H)
+/datum/job/captain/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(src)
 
-/datum/job/escalation/captain/get_access()
+/datum/job/captain/get_access()
 	return get_all_station_access()
 
-/datum/job/escalation/hop
+/datum/job/hop
 	title = "Head of Personnel"
 	head_position = 1
 	department_flag = COM|CIV

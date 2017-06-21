@@ -245,7 +245,7 @@
 		medical.fields["b_type"]	= I.blood_type
 		medical.fields["b_dna"]		= I.dna_hash
 
-	var/datum/job/escalation/job = job_master.GetJob(general.fields["rank"])
+	var/datum/job/job = job_master.GetJob(general.fields["rank"])
 	if(job && job.announced)
 		AnnounceArrivalSimple(general.fields["name"], general.fields["rank"])
 	. = ..()

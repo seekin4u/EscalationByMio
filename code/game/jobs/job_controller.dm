@@ -1,3 +1,4 @@
+
 var/global/datum/controller/occupations/job_master
 
 /*#define GET_RANDOM_JOB 0
@@ -23,7 +24,7 @@ var/global/datum/controller/occupations/job_master
 			log_error("<span class='warning'>Error setting up jobs, no job datums found!</span>")
 			return 0
 		for(var/J in all_jobs)
-			var/datum/job/escalation/escalation/job = new J()
+			var/datum/job/escalation/job = new J()
 			if(!job)	continue
 			if(job.faction != faction)	continue
 			occupations += job
@@ -42,14 +43,14 @@ var/global/datum/controller/occupations/job_master
 
 	proc/GetJob(var/rank)
 		if(!rank)	return null
-		for(var/datum/job/escalation/escalation/J in occupations)
+		for(var/datum/job/escalation/J in occupations)
 			if(!J)	continue
 			if(J.title == rank)	return J
 		return null
 
 	proc/ShouldCreateRecords(var/rank)
 		if(!rank) return 0
-		var/datum/job/escalation/job = GetJob(rank)
+		var/datum/job/job = GetJob(rank)
 		if(!job) return 0
 		return job.create_record
 
@@ -59,7 +60,7 @@ var/global/datum/controller/occupations/job_master
 	proc/AssignRole(var/mob/new_player/player, var/rank, var/latejoin = 0)
 		Debug("Running AR, Player: [player], Rank: [rank], LJ: [latejoin]")
 		if(player && player.mind && rank)
-			var/datum/job/escalation/escalation/job = GetJob(rank)
+			var/datum/job/escalation/job = GetJob(rank)
 			if(!job)
 				return 0
 			if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age))
@@ -87,7 +88,7 @@ var/global/datum/controller/occupations/job_master
 		return 0
 
 	proc/FreeRole(var/rank)	//making additional slot on the fly
-		var/datum/job/escalation/escalation/job = GetJob(rank)
+		var/datum/job/escalation/job = GetJob(rank)
 		if(job && job.current_positions >= job.total_positions && job.total_positions != -1)
 			job.total_positions++
 			return 1
@@ -116,7 +117,7 @@ var/global/datum/controller/occupations/job_master
 
 	proc/GiveRandomJob(var/mob/new_player/player)
 		Debug("GRJ Giving random job, Player: [player]")
-		for(var/datum/job/escalation/job in shuffle(occupations))
+		for(var/datum/job/job in shuffle(occupations))
 			if(!job)
 				continue
 
@@ -157,7 +158,7 @@ var/global/datum/controller/occupations/job_master
 /*	proc/FillHeadPosition()
 		for(var/level = 1 to 3)
 			for(var/command_position in command_positions)
-				var/datum/job/escalation/job = GetJob(command_position)
+				var/datum/job/job = GetJob(command_position)
 				if(!job)	continue
 				var/list/candidates = FindOccupationCandidates(job, level)
 				if(!candidates.len)	continue
@@ -197,7 +198,7 @@ var/global/datum/controller/occupations/job_master
 	///This proc is called at the start of the level loop of DivideOccupations() and will cause head jobs to be checked before any other jobs of the same level
 	proc/CheckHeadPositions(var/level)
 		for(var/command_position in command_positions)
-			var/datum/job/escalation/job = GetJob(command_position)
+			var/datum/job/job = GetJob(command_position)
 			if(!job)	continue
 			var/list/candidates = FindOccupationCandidates(job, level)
 			if(!candidates.len)	continue
@@ -217,7 +218,7 @@ var/global/datum/controller/occupations/job_master
 
 		//Holder for Triumvirate is stored in the ticker, this just processes it
 		if(ticker && ticker.triai)
-			for(var/datum/job/escalation/A in occupations)
+			for(var/datum/job/A in occupations)
 				if(A.title == "AI")
 					A.spawn_positions = 3
 					break
@@ -239,7 +240,7 @@ var/global/datum/controller/occupations/job_master
 		Debug("DO, Running Escalation Check 1")
 		var/datum/
 		Debug("DO, Running Assistant Check 1")
-		var/datum/job/escalation/assist = new DEFAULT_JOB_TYPE ()
+		var/datum/job/assist = new DEFAULT_JOB_TYPE ()
 		var/list/assistant_candidates = FindOccupationCandidates(assist, 3)
 		Debug("AC1, Candidates: [assistant_candidates.len]")
 		for(var/mob/new_player/player in assistant_candidates)
@@ -272,7 +273,7 @@ var/global/datum/controller/occupations/job_master
 			for(var/mob/new_player/player in unassigned)
 
 				// Loop through all jobs
-				for(var/datum/job/escalation/job in shuffledoccupations) // SHUFFLE ME BABY
+				for(var/datum/job/job in shuffledoccupations) // SHUFFLE ME BABY
 					if(!job || ticker.mode.disabled_jobs.Find(job.title) )
 						continue
 
@@ -337,7 +338,7 @@ var/global/datum/controller/occupations/job_master
 	proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
 		if(!H)	return null
 
-		var/datum/job/escalation/job = GetJob(rank)
+		var/datum/job/job = GetJob(rank)
 		var/list/spawn_in_storage = list()
 
 		if(job)
@@ -536,7 +537,7 @@ var/global/datum/controller/occupations/job_master
 				continue
 
 			if(name && value)
-				var/datum/job/escalation/J = GetJob(name)
+				var/datum/job/J = GetJob(name)
 				if(!J)	continue
 				J.total_positions = text2num(value)
 				J.spawn_positions = text2num(value)
@@ -547,7 +548,7 @@ var/global/datum/controller/occupations/job_master
 
 
 	proc/HandleFeedbackGathering()
-		for(var/datum/job/escalation/job in occupations)
+		for(var/datum/job/job in occupations)
 			var/tmp_str = "|[job.title]|"
 
 			var/level1 = 0 //high

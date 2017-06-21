@@ -5,7 +5,7 @@
 	var/failed_jobs = 0
 
 	for (var/occ in job_master.occupations)
-		var/datum/job/escalation/occupation = occ
+		var/datum/job/occupation = occ
 		var/decl/hierarchy/outfit/job/outfit = outfit_by_type(occupation.outfit_type)
 		if(!istype(outfit))
 			log_bad("[occupation.title] - [occupation.type]: Invalid outfit type [outfit ? outfit.type : "NULL"].")

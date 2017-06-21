@@ -2,12 +2,12 @@
 
 //** BUND ARMY **
 
-/datum/job/escalation/escalation/bund
+/datum/job/escalation/bund
 	title = "Bundeswehr"
 	enabled = 0
 	faction_tag = "bund" //The tag of the faction this job is a part of, for lookups
 
-/datum/job/escalation/escalation/bund/platoonleader
+/datum/job/escalation/bund/platoonleader
 	title = "Bundeswehr's Platoon Leader"
 	name = "Zugführer"
 	english_name = "Platoon Leader"
@@ -20,7 +20,7 @@
 	amount = 1
 	outfit_type = /decl/hierarchy/outfit/nato/bundes/platoonleader
 
-/datum/job/escalation/escalation/bund/subleader
+/datum/job/escalation/bund/subleader
 	title = "Bundeswehr's Vice Platoon Leader"
 	name = "Zugführer stellvertretender"
 	english_name = "Vice Platoon Leader"
@@ -32,7 +32,7 @@
 	position = "team"
 	amount = 1
 
-/datum/job/escalation/escalation/bund/squadleader
+/datum/job/escalation/bund/squadleader
 	title = "Bundeswehr's Squad Leader"
 	name = "Gruppenführer"
 	english_name = "Squad Leader"
@@ -44,7 +44,7 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/job/escalation/escalation/bund/subsergeant
+/datum/job/escalation/bund/subsergeant
 	title = "Bundeswehr's Fireteam Leader"
 	name = "Gruppenführer stellvertreter"
 	english_name = "Fireteam Leader"
@@ -56,7 +56,7 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/job/escalation/escalation/bund/machinegunner
+/datum/job/escalation/bund/machinegunner
 	title = "Bundeswehr's Machinegunner"
 	name = "Maschinengewehrschütze"
 	english_name = "Machinegunner"
@@ -68,7 +68,7 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/job/escalation/escalation/bund/grunt
+/datum/job/escalation/bund/grunt
 	title = "Bundeswehr's Soldier"
 	name = "Schütze"
 	english_name = "Soldier"
@@ -81,7 +81,7 @@
 	amount = 6
 
 
-/datum/job/escalation/escalation/bund/fielddoctor
+/datum/job/escalation/bund/fielddoctor
 	title = "Bundeswehr's Head Medic"
 	name = "Chef-Sanitäter"			//"chief paramedic"
 	english_name = "Head Medic"
@@ -93,7 +93,7 @@
 	position = "team"
 	amount = 1
 
-/datum/job/escalation/escalation/bund/fieldmedic
+/datum/job/escalation/bund/fieldmedic
 	title = "Bundeswehr's Field Paramedic"
 	name = "Sanitäter"		//Lit. "paramedic"
 	english_name = "Field Paramedic"
@@ -106,7 +106,7 @@
 	amount = 3
 
 
-/datum/job/escalation/escalation/bund/marksman
+/datum/job/escalation/bund/marksman
 	title = "Bundeswehr's Designated Marksman"
 	name = "Scharfshutze"
 	english_name = "Designated Marksman"
@@ -123,12 +123,12 @@
 //** USMC ARMY **
 
 
-/datum/job/escalation/escalation/usmc
+/datum/job/escalation/usmc
 	title = "US"
 	enabled = 0
 	faction_tag = "usmc"
 
-/datum/job/escalation/escalation/usmc/lieu
+/datum/job/escalation/usmc/lieu
 	title = "US First Lieutenant"
 	name = "Platoon Commander"
 	english_name = "First Lieutenant"
@@ -140,7 +140,7 @@
 	position = "team"
 	amount = 1
 
-/datum/job/escalation/escalation/usmc/lieu2
+/datum/job/escalation/usmc/lieu2
 	title = "US Staff Sergeant"
 	name = "Platoon Sergeant"
 	english_name = "Staff Sergeant"
@@ -151,7 +151,7 @@
 	position = "team"
 	amount = 1
 
-/datum/job/escalation/escalation/usmc/radioman
+/datum/job/escalation/usmc/radioman
 	title = "US Warrant Officer"
 	name = "Radio Telegraph Operator"
 	english_name = "Warrant Officer"
@@ -163,7 +163,7 @@
 	position = "team"
 	amount = 1
 
-/datum/job/escalation/escalation/usmc/squadleader
+/datum/job/escalation/usmc/squadleader
 	title = "US Sergeant"
 	name = "Fireteam Leader"
 	english_name = "Sergeant"
@@ -175,7 +175,7 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/job/escalation/escalation/usmc/squadradio
+/datum/job/escalation/usmc/squadradio
 	title = "US Lance-Corporal"
 	name = "Radio Operator"
 	english_name = "Lance-Corporal"
@@ -187,7 +187,7 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/job/escalation/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/machinegunner
 	title = "US Private 1st class"
 	name = "Machinegunner"
 	english_name = "Private 1st class"
@@ -200,7 +200,7 @@
 	amount = 2
 
 
-/datum/job/escalation/escalation/usmc/grunt
+/datum/job/escalation/usmc/grunt
 	title = "US Private"
 	name = "Marine Rifleman"
 	english_name = "Private"
@@ -214,7 +214,7 @@
 
 
 //Not in squads - "attachments" in the marines
-/datum/job/escalation/escalation/usmc/medic
+/datum/job/escalation/usmc/medic
 	title = "US Medic"
 	name = "Corpsman"
 	english_name = "Medic"
@@ -226,7 +226,7 @@
 	amount = 3
 
 
-/datum/job/escalation/escalation/usmc/marksman
+/datum/job/escalation/usmc/marksman
 	title = "US Sniper"
 	name = "Designated Marksman"
 	english_name = "Sniper"
@@ -238,7 +238,7 @@
 	amount = 2
 
 
-/datum/job/escalation/escalation/usmc/headmedic
+/datum/job/escalation/usmc/headmedic
 	title = "US Head Medic"
 	name = "Head Medic"
 	english_name = "Head Medic"

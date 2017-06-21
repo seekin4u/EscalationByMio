@@ -54,7 +54,7 @@ var/global/list/skin_styles_female_list = list()		//unused
 var/datum/category_collection/underwear/global_underwear = new()
 
 var/global/list/backbaglist = list("Nothing", "Backpack", "Satchel", "Brown Satchel", "Messenger Bag", "Black Satchel")
-var/global/list/exclude_jobs = list(/datum/job/escalation/ai,/datum/job/escalation/cyborg)
+var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 
 // Visual nets
 var/list/datum/visualnet/visual_nets = list()
@@ -163,7 +163,7 @@ var/global/list/all_army_jobs = list()
 	paths = typesof(/datum/job)-/datum/job
 	paths -= exclude_jobs
 	for(var/T in paths)
-		var/datum/job/escalation/J = new T
+		var/datum/job/J = new T
 		joblist[J.title] = J
 
 	//Languages and species.

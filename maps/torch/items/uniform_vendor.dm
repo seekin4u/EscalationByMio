@@ -30,7 +30,7 @@
 	if(!ID)
 		dat += "Insert your ID card to proceed."
 	else
-		var/datum/job/escalation/job = job_master.GetJobByType(ID.job_access_type)
+		var/datum/job/job = job_master.GetJobByType(ID.job_access_type)
 		if(job)
 			uniforms = find_uniforms(ID.military_rank, ID.military_branch, job.department_flag)
 		for(var/T in uniforms)

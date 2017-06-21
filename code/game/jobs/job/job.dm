@@ -31,13 +31,13 @@
 
 	var/announced						  //If their arrival is announced on radio
 
-/datum/job/escalation/proc/equip(var/mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch)
+/datum/job/proc/equip(var/mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch)
 	var/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title, branch)
 	if(!outfit)
 		return FALSE
 	. = outfit.equip(H, title, alt_title)
 
-/datum/job/escalation/proc/get_outfit(var/mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch)
+/datum/job/proc/get_outfit(var/mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch)
 	if(alt_title && alt_titles)
 		. = alt_titles[alt_title]
 	if(allowed_branches && branch)
@@ -45,47 +45,47 @@
 	. = . || outfit_type
 	. = outfit_by_type(.)
 
-/datum/job/escalation/proc/setup_account()
+/datum/job/proc/setup_account()
 	return 0
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/del()
-/datum/job/escalation/proc/equip_preview(mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch)
+/datum/job/proc/equip_preview(mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch)
 	var/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title, branch)
 	if(!outfit)
 		return FALSE
 	. = outfit.equip_base(H, title, alt_title)
 
-/datum/job/escalation/proc/get_access()
+/datum/job/proc/get_access()
 	if(!config || config.jobs_have_minimal_access)
 		return src.minimal_access.Copy()
 	else
 		return src.access.Copy()
 
 //If the configuration option is set to require players to be logged as old enough to play certain jobs, then this proc checks that they are, otherwise it just returns 1
-/datum/job/escalation/proc/player_old_enough(client/C)
+/datum/job/proc/player_old_enough(client/C)
 	return (available_in_days(C) == 0) //Available in 0 days = available right now = player is old enough to play.
 
-/datum/job/escalation/proc/available_in_days(client/C)
+/datum/job/proc/available_in_days(client/C)
 	if(C && config.use_age_restriction_for_jobs && isnull(C.holder) && isnum(C.player_age) && isnum(minimal_player_age))
 		return max(0, minimal_player_age - C.player_age)
 	return 0
 
-/datum/job/escalation/proc/apply_fingerprints(var/mob/living/carbon/human/target)
+/datum/job/proc/apply_fingerprints(var/mob/living/carbon/human/target)
 	if(!istype(target))
 		return 0
 	for(var/obj/item/item in target.contents)
 		apply_fingerprints_to_item(target, item)
 	return 1
 
-/datum/job/escalation/proc/apply_fingerprints_to_item(var/mob/living/carbon/human/holder, var/obj/item/item)
+/datum/job/proc/apply_fingerprints_to_item(var/mob/living/carbon/human/holder, var/obj/item/item)
 	item.add_fingerprint(holder,1)
 	if(item.contents.len)
 		for(var/obj/item/sub_item in item.contents)
 			apply_fingerprints_to_item(holder, sub_item)
 
-/datum/job/escalation/proc/is_position_available()
+/datum/job/proc/is_position_available()
 	return (current_positions < total_positions) || (total_positions == -1)
 
-/datum/job/escalation/proc/has_alt_title(var/mob/H, var/supplied_title, var/desired_title)
+/datum/job/proc/has_alt_title(var/mob/H, var/supplied_title, var/desired_title)
 	return (supplied_title == desired_title) || (H.mind && H.mind.role_alt_title == desired_title)
 
 /**
@@ -95,7 +95,7 @@
  *
  *  branch_name - String key for the branch to check
  */
-/datum/job/escalation/proc/is_branch_allowed(var/branch_name)
+/datum/job/proc/is_branch_allowed(var/branch_name)
 	if(!allowed_branches || !using_map || !(using_map.flags & MAP_HAS_BRANCH))
 		return 1
 	if(branch_name == "None")
@@ -120,7 +120,7 @@
  *  branch_name - String key for the branch to which the rank belongs
  *  rank_name - String key for the rank itself
  */
-/datum/job/escalation/proc/is_rank_allowed(var/branch_name, var/rank_name)
+/datum/job/proc/is_rank_allowed(var/branch_name, var/rank_name)
 	if(!allowed_ranks || !using_map || !(using_map.flags & MAP_HAS_RANK))
 		return 1
 	if(branch_name == "None" || rank_name == "None")
@@ -138,7 +138,7 @@
 		return 0
 
 //Returns human-readable list of branches this job allows.
-/datum/job/escalation/proc/get_branches()
+/datum/job/proc/get_branches()
 	var/list/res = list()
 	for(var/T in allowed_branches)
 		var/datum/mil_branch/B = mil_branches.get_branch_by_type(T)
@@ -146,7 +146,7 @@
 	return english_list(res)
 
 //Same as above but ranks
-/datum/job/escalation/proc/get_ranks(branch)
+/datum/job/proc/get_ranks(branch)
 	var/list/res = list()
 	var/datum/mil_branch/B = mil_branches.get_branch(branch)
 	for(var/T in allowed_ranks)

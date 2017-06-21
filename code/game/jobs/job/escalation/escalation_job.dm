@@ -1,4 +1,4 @@
-/datum/job/escalation/escalation
+/datum/job/escalation
 	title = "Escalation" // english_name uses this
 	department = "Escalation"
 	department_flag = ESC
@@ -23,7 +23,7 @@
 	var/position = "team" //"team" "squad" "fireteam". Determines where this job is sorted.
 	var/amount = 1 //How many of this are in each team, squad, or fireteam. -1 is infinite (expanding)
 
-/datum/job/escalation/escalation/proc/remove_mob(var/datum/fireteam/F, var/datum/army_faction/A, var/mob/new_player/mob)
+/datum/job/escalation/proc/remove_mob(var/datum/fireteam/F, var/datum/army_faction/A, var/mob/new_player/mob)
 	var/i = 0
 	if(position == "team" && A)
 		for(var/M in A.slots)
@@ -42,6 +42,6 @@
 	mob.team_picked = null
 	return
 
-/datum/job/escalation/escalation/get_access()
+/datum/job/escalation/get_access()
 	return list()
 

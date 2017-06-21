@@ -1,4 +1,4 @@
-/datum/job/escalation/rd
+/datum/job/rd
 	title = "Research Director"
 	head_position = 1
 	department = "Science"
@@ -23,7 +23,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
 	announced = 1
 
-/datum/job/escalation/scientist
+/datum/job/scientist
 	title = "Scientist"
 	department = "Science"
 	department_flag = SCI
@@ -39,7 +39,7 @@
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/science/scientist
 
-/datum/job/escalation/xenobiologist
+/datum/job/xenobiologist
 	title = "Xenobiologist"
 	department = "Science"
 	department_flag = SCI
@@ -55,7 +55,7 @@
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
 
-/datum/job/escalation/roboticist
+/datum/job/roboticist
 	title = "Roboticist"
 	department = "Science"
 	department_flag = SCI

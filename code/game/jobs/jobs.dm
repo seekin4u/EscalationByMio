@@ -61,7 +61,7 @@ var/list/escalation_positions = list(
 	var/list/all_jobs = typesof(/datum/job)
 
 	for(var/A in all_jobs)
-		var/datum/job/escalation/job = new A()
+		var/datum/job/job = new A()
 		if(!job)	continue
 		occupations += job
 
@@ -71,7 +71,7 @@ var/list/escalation_positions = list(
 	var/list/jobs = get_job_datums()
 	var/list/titles = list()
 
-	for(var/datum/job/escalation/J in jobs)
+	for(var/datum/job/J in jobs)
 		if(J.title == job)
 			titles = J.alt_titles
 
