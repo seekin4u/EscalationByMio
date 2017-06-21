@@ -55,7 +55,7 @@
 	if(!job_master)
 		return
 
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/escalation/job in job_master.occupations)
 		var/alt_title = pref.player_alt_titles[job.title]
 		if(alt_title && !(alt_title in job.alt_titles))
 			pref.player_alt_titles -= job.title
@@ -87,9 +87,9 @@
 		limit = round((job_master.occupations.len+1)/2)
 
 	//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
-	var/datum/job/lastJob
+	var/datum/job/escalation/lastJob
 	if (!job_master)		return
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/escalation/job in job_master.occupations)
 
 		index += 1
 		if((index >= limit) || (job.title in splitJobs))
@@ -195,7 +195,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["select_alt_title"])
-		var/datum/job/job = locate(href_list["select_alt_title"])
+		var/datum/job/escalation/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
 			var/choice = input("Choose an title for [job.title].", "Choose Title", pref.GetPlayerAltTitle(job)) as anything in choices|null
@@ -227,11 +227,11 @@
 			return TOPIC_REFRESH
 	else if(href_list["show_branches"])
 		var/rank = href_list["show_branches"]
-		var/datum/job/job = job_master.GetJob(rank)
+		var/datum/job/escalation/job = job_master.GetJob(rank)
 		to_chat(user, "<span clas='notice'>Valid branches for [rank]: [job.get_branches()]</span>")
 	else if(href_list["show_ranks"])
 		var/rank = href_list["show_ranks"]
-		var/datum/job/job = job_master.GetJob(rank)
+		var/datum/job/escalation/job = job_master.GetJob(rank)
 		to_chat(user, "<span clas='notice'>Valid ranks for [rank] ([pref.char_branch]): [job.get_ranks(pref.char_branch)]</span>")
 
 	return ..()
@@ -244,7 +244,7 @@
 		pref.player_alt_titles[job.title] = new_title
 
 /datum/category_item/player_setup_item/occupation/proc/SetJob(mob/user, role)
-	var/datum/job/job = job_master.GetJob(role)
+	var/datum/job/escalation/job = job_master.GetJob(role)
 	if(!job)
 		return 0
 
@@ -266,7 +266,7 @@
 
 	return 1
 
-/datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/job, var/level)
+/datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/escalation/job, var/level)
 	if(!job || !level)	return 0
 	switch(level)
 		if(1)//Only one of these should ever be active at once so clear them all here
@@ -282,7 +282,7 @@
 			pref.job_low |= job.title
 	return 1
 
-/datum/preferences/proc/CorrectLevel(var/datum/job/job, var/level)
+/datum/preferences/proc/CorrectLevel(var/datum/job/escalation/job, var/level)
 	if(!job || !level)	return 0
 	switch(level)
 		if(1)
@@ -299,7 +299,7 @@
  *  This proc goes through all the preferred jobs, and removes the ones incompatible with current rank or branch.
  */
 /datum/category_item/player_setup_item/occupation/proc/prune_job_prefs_for_rank()
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/escalation/job in job_master.occupations)
 		if(job.title == pref.job_high)
 			if(!job.is_branch_allowed(pref.char_branch) || !job.is_rank_allowed(pref.char_branch, pref.char_rank))
 				pref.job_high = null

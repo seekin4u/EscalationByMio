@@ -9,6 +9,7 @@ var/const/MSC               =(1<<7)
 var/const/SRV               =(1<<8)
 var/const/SUP               =(1<<9)
 var/const/SPT               =(1<<10)
+var/const/ESC               =(1<<11)
 
 var/list/assistant_occupations = list(
 )
@@ -48,6 +49,9 @@ var/list/supply_positions = list(
 var/list/support_positions = list(
 )
 
+var/list/escalation_positions = list(
+)
+
 
 /proc/guest_jobbans(var/job)
 	return ((job in command_positions) || (job in nonhuman_positions) || (job in security_positions))
@@ -57,7 +61,7 @@ var/list/support_positions = list(
 	var/list/all_jobs = typesof(/datum/job)
 
 	for(var/A in all_jobs)
-		var/datum/job/job = new A()
+		var/datum/job/escalation/job = new A()
 		if(!job)	continue
 		occupations += job
 
@@ -67,7 +71,7 @@ var/list/support_positions = list(
 	var/list/jobs = get_job_datums()
 	var/list/titles = list()
 
-	for(var/datum/job/J in jobs)
+	for(var/datum/job/escalation/J in jobs)
 		if(J.title == job)
 			titles = J.alt_titles
 

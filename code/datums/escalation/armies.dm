@@ -11,12 +11,12 @@ proc/init_factions()
 		else
 			qdel(faction)
 
-	for(var/job_type in typesof(/datum/army_job))
-		var/datum/army_job/job = new job_type
-		if(job.enabled)
-			all_army_jobs += job
+	for(var/job_type in typesof(/datum/job/escalation/escalation))
+		var/datum/job/escalation/escalation/J = new job_type
+		if(J.enabled)
+			all_army_jobs += J
 		else
-			qdel(job)
+			qdel(J)
 
 	for(var/datum/army_faction/F in all_factions) //Link the jobs to the armies after they're instanced.
 		F.init_jobs()
@@ -97,7 +97,7 @@ proc/list_armies_by_name(var/show_disabled = 0)
 
 //The way these are set up is pretty much ass for when we have like 30 armies and 300 jobs, but.. whatever. Fix later
 /datum/army_faction/proc/init_jobs()
-	for(var/datum/army_job/J in all_army_jobs) //Add jobs to proper slots
+	for(var/datum/job/escalation/escalation/J in all_army_jobs) //Add jobs to proper slots
 		if(J.faction_tag == faction_tag && J.enabled)
 			if(J.position == "fireteam")
 				for(var/datum/fireteam/T in fireteams)

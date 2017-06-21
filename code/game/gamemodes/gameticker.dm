@@ -115,7 +115,7 @@ var/global/datum/controller/gameticker/ticker
 //	job_master.ResetOccupations()
 //	src.mode.create_antagonists()
 	src.mode.pre_setup()
-//	job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
+	job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
 
 	var/t = src.mode.startRequirements()
 	if(t)

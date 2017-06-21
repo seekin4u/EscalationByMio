@@ -2,12 +2,13 @@
 
 //** CZECH ARMY **
 
-/datum/army_job/csla
-
+/datum/job/escalation/escalation/csla
+	title = "Csla"
 	enabled = 0
 	faction_tag = "csla" //The tag of the faction this job is a part of ("bund", "csla"), for lookups
 
-/datum/army_job/csla/lieutenant
+/datum/job/escalation/escalation/csla/lieutenant
+	title = "Czech's Lieutenant"
 	name = "Poruchik"
 	english_name = "Lieutenant"
 	enabled = 1
@@ -18,18 +19,20 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/csla/sublieutenant
+/datum/job/escalation/escalation/csla/sublieutenant
+	title = "Czech's Sublieutenant"
 	name = "Podporuchik"
 	english_name = "Sublieutenant"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Podporuchik"
-	rank_number = 1 
+	rank_number = 1
 	position = "team"
 	amount = 1
 
-/datum/army_job/csla/sergeant
+/datum/job/escalation/escalation/csla/sergeant
+	title = "Czech's Sergeant"
 	name = "Chetar"
 	english_name = "Sergeant"
 	enabled = 1
@@ -40,7 +43,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/csla/subsergeant
+/datum/job/escalation/escalation/csla/subsergeant
+	title = "Czech's Sergeant deputy"
 	name = "Subchetar"
 	english_name = "Sergeant deputy"
 	enabled = 1
@@ -51,7 +55,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/csla/gunner
+/datum/job/escalation/escalation/csla/gunner
+	title = "Czech's Machinegunner"
 	name = "Kulometnik"
 	english_name = "Machinegunner"
 	enabled = 1
@@ -62,7 +67,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/csla/grenadier
+/datum/job/escalation/escalation/csla/grenadier
+	title = "Czech's Grenadier"
 	name = "Pancerovnik"
 	english_name = "Grenadier"
 	enabled = 1
@@ -73,7 +79,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/csla/grenass
+/datum/job/escalation/escalation/csla/grenass
+	title = "Czech's Grenadier assistant"
 	name = "Pomocnik pancerovnika"
 	english_name = "Grenadier assistant"
 	enabled = 1
@@ -84,7 +91,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/csla/squadradio
+/datum/job/escalation/escalation/csla/squadradio
+	title = "Czech's Radioman"
 	name = "Radista"
 	english_name = "Radioman"
 	enabled = 1
@@ -95,7 +103,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/csla/rifleman
+/datum/job/escalation/escalation/csla/rifleman
+	title = "Czech's Rifleman"
 	name = "Strelec"
 	english_name = "Rifleman"
 	enabled = 1
@@ -108,7 +117,8 @@
 
 
 //NOT in squads
-/datum/army_job/csla/marksman
+/datum/job/escalation/escalation/csla/marksman
+	title = "Czech's Sharpshooter"
 	name = "Nadstrelec"
 	english_name = "Sharpshooter"
 	enabled = 1
@@ -119,7 +129,8 @@
 	position = "team"
 	amount = 2
 
-/datum/army_job/csla/medic
+/datum/job/escalation/escalation/csla/medic
+	title = "Czech's Field Medic"
 	name = "Sanitar"
 	english_name = "Field Medic"
 	enabled = 1
@@ -136,11 +147,13 @@
 //** SOVIET ARMY **
 
 
-/datum/army_job/cccp
+/datum/job/escalation/escalation/cccp
+	title = "cccp"
 	enabled = 0
 	faction_tag = "cccp"
 
-/datum/army_job/cccp/leader
+/datum/job/escalation/escalation/cccp/leader
+	title = "Soviet Platoon Leader"
 	name = "Komvzvoda"
 	english_name = "Platoon Leader"
 	enabled = 1
@@ -151,18 +164,20 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/cccp/subleader
+/datum/job/escalation/escalation/cccp/subleader
+	title = "Soviet Platoon Leader Deputy"
 	name = "Zamkomvzvoda"
 	english_name = "Platoon Leader Deputy"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
 	rank_prefix = "Starshina"
-	rank_number = 2 
+	rank_number = 2
 	position = "team"
 	amount = 1
 
-/datum/army_job/cccp/wo //Quartermaster basically
+/datum/job/escalation/escalation/cccp/wo //Quartermaster basically
+	title = "Soviet Warrant Officer"
 	name = "Starshiy kapter"
 	english_name = "Warrant Officer"
 	enabled = 1
@@ -173,7 +188,8 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/cccp/awoo //QM assistant
+/datum/job/escalation/escalation/cccp/awoo //QM assistant
+	title = "Soviet WO assistant"
 	name = "Pomoshnik Praporshika"
 	english_name = "WO assistant"
 	enabled = 1
@@ -184,7 +200,8 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/cccp/radiomaster //QM's assistant, in charge of radios/communication
+/datum/job/escalation/escalation/cccp/radiomaster //QM's assistant, in charge of radios/communication
+	title = "Soviet HQ Radioman"
 	name = "Shtabnoy radist"
 	english_name = "HQ Radioman"
 	enabled = 1
@@ -195,7 +212,8 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/cccp/squadleader
+/datum/job/escalation/escalation/cccp/squadleader
+	title = "Soviet Squad Leader"
 	name = "Komandir Otdeleniya"
 	english_name = "Squad Leader"
 	enabled = 1
@@ -206,7 +224,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/cccp/squadvice
+/datum/job/escalation/escalation/cccp/squadvice
+	title = "Soviet Squad Leader Deputy"
 	name = "Starshiy strelok"
 	english_name = "Squad Leader Deputy"
 	enabled = 1
@@ -217,7 +236,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/cccp/squadradio
+/datum/job/escalation/escalation/cccp/squadradio
+	title = "Soviet Radioman"
 	name = "Radiotelefonist"
 	english_name = "Radioman"
 	enabled = 1
@@ -228,7 +248,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/cccp/grenadier
+/datum/job/escalation/escalation/cccp/grenadier
+	title = "Soviet Grenadier"
 	name = "Granatometchik"
 	english_name = "Grenadier"  //RPG specialist
 	enabled = 1
@@ -239,7 +260,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/cccp/grenass
+/datum/job/escalation/escalation/cccp/grenass
+	title = "Soviet Grenadier assistant"
 	name = "Pomoshnik granatometchika"
 	english_name = "Grenadier assistant"
 	enabled = 1
@@ -250,7 +272,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/cccp/machinegunner
+/datum/job/escalation/escalation/cccp/machinegunner
+	title = "Soviet Machinegunner"
 	name = "Pulemetchik"
 	english_name = "Machinegunner"
 	enabled = 1
@@ -261,7 +284,8 @@
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/cccp/fifleman
+/datum/job/escalation/escalation/cccp/fifleman
+	title = "Soviet Rifleman"
 	name = "Strelok"
 	english_name = "Rifleman"
 	enabled = 1
@@ -272,7 +296,8 @@
 	position = "fireteam"
 	amount = 3
 
-/datum/army_job/cccp/sniper
+/datum/job/escalation/escalation/cccp/sniper
+	title = "Soviet Sniper"
 	name = "Snayper"
 	english_name = "Sniper"
 	enabled = 1
@@ -284,7 +309,8 @@
 	amount = 2
 
 //Not in squads
-/datum/army_job/cccp/medic
+/datum/job/escalation/escalation/cccp/medic
+	title = "Soviet Field Medic"
 	name = "Sanitar"
 	english_name = "Field Medic"
 	enabled = 1
@@ -295,7 +321,8 @@
 	position = "team"
 	amount = 3
 
-/datum/army_job/cccp/headmedic
+/datum/job/escalation/escalation/cccp/headmedic
+	title = "Soviet Head Medic"
 	name = "Glavvrach"
 	english_name = "Head Medic"
 	enabled = 1

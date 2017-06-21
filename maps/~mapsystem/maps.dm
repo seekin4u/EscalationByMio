@@ -102,7 +102,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	if(!map_levels)
 		map_levels = station_levels.Copy()
 	if(!allowed_jobs)
-		allowed_jobs = subtypesof(/datum/job)
+		allowed_jobs = subtypesof(/datum/job/escalation/escalation)
 
 /datum/map/proc/setup_map()
 	var/list/lobby_music_tracks = subtypesof(/lobby_music)

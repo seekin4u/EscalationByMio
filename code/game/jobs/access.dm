@@ -174,7 +174,7 @@
 	var/list/all_jobs = list()
 	var/list/all_datums = typesof(/datum/job)
 	all_datums -= exclude_jobs
-	var/datum/job/jobdatum
+	var/datum/job/escalation/jobdatum
 	for(var/jobtype in all_datums)
 		jobdatum = new jobtype
 		all_jobs.Add(jobdatum.title)

@@ -1,20 +1,20 @@
 /datum/map/torch
-	allowed_jobs = list(/datum/job/captain, /datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos,
-						/datum/job/liaison, /datum/job/representative, /datum/job/sea, /datum/job/bridgeofficer, /datum/job/solgov_pilot,
-						/datum/job/senior_engineer, /datum/job/engineer, /datum/job/engineer_contractor, /datum/job/roboticist,
-						/datum/job/officer, /datum/job/warden, /datum/job/detective,
-						/datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_contractor,
-						/datum/job/chemist, /datum/job/psychiatrist,
-						/datum/job/qm, /datum/job/cargo_tech, /datum/job/cargo_contractor,
-						/datum/job/janitor, /datum/job/chef, /datum/job/bartender,
-						/datum/job/senior_scientist, /datum/job/nt_pilot, /datum/job/scientist, /datum/job/mining, /datum/job/guard, /datum/job/scientist_assistant,
-						/datum/job/ai, /datum/job/cyborg,
-						/datum/job/crew, /datum/job/assistant,
-						/datum/job/merchant
+	allowed_jobs = list(/datum/job/escalation/captain, /datum/job/escalation/hop, /datum/job/escalation/rd, /datum/job/escalation/cmo, /datum/job/escalation/chief_engineer, /datum/job/escalation/hos,
+						/datum/job/escalation/liaison, /datum/job/escalation/representative, /datum/job/escalation/sea, /datum/job/escalation/bridgeofficer, /datum/job/escalation/solgov_pilot,
+						/datum/job/escalation/senior_engineer, /datum/job/escalation/engineer, /datum/job/escalation/engineer_contractor, /datum/job/escalation/roboticist,
+						/datum/job/escalation/officer, /datum/job/escalation/warden, /datum/job/escalation/detective,
+						/datum/job/escalation/senior_doctor, /datum/job/escalation/doctor, /datum/job/escalation/doctor_contractor,
+						/datum/job/escalation/chemist, /datum/job/escalation/psychiatrist,
+						/datum/job/escalation/qm, /datum/job/escalation/cargo_tech, /datum/job/escalation/cargo_contractor,
+						/datum/job/escalation/janitor, /datum/job/escalation/chef, /datum/job/escalation/bartender,
+						/datum/job/escalation/senior_scientist, /datum/job/escalation/nt_pilot, /datum/job/escalation/scientist, /datum/job/escalation/mining, /datum/job/escalation/guard, /datum/job/escalation/scientist_assistant,
+						/datum/job/escalation/ai, /datum/job/escalation/cyborg,
+						/datum/job/escalation/crew, /datum/job/escalation/assistant,
+						/datum/job/escalation/merchant
 						)
 
 
-/datum/job/captain
+/datum/job/escalation/captain
 	title = "Commanding Officer"
 	supervisors = "the Sol Central Government and the Sol Code of Military Justice"
 	minimal_player_age = 21
@@ -29,7 +29,7 @@
 	)
 
 
-/datum/job/hop
+/datum/job/escalation/hop
 	title = "Executive Officer"
 	supervisors = "the Commanding Officer"
 	department = "Command"
@@ -71,7 +71,7 @@
 			            access_seneng, access_senmed, access_senadv, access_hangar, access_guppy_helm, access_aquila)
 
 
-/datum/job/rd
+/datum/job/escalation/rd
 	title = "Research Director"
 	supervisors = "NanoTrasen and the Commanding Officer"
 	economic_modifier = 20
@@ -91,7 +91,7 @@
 						access_calypso, access_guppy, access_hangar, access_petrov, access_petrov_helm, access_guppy_helm)
 
 
-/datum/job/cmo
+/datum/job/escalation/cmo
 	title = "Chief Medical Officer"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_modifier = 10
@@ -119,7 +119,7 @@
 			            access_cmo, access_surgery, access_RC_announce, access_keycard_auth, access_psychiatrist,
 			            access_medical_equip, access_solgov_crew, access_senmed)
 
-/datum/job/chief_engineer
+/datum/job/escalation/chief_engineer
 	title = "Chief Engineer"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_modifier = 9
@@ -151,7 +151,7 @@
 			            access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,
 			            access_solgov_crew, access_robotics_engineering, access_seneng, access_hangar)
 
-/datum/job/hos
+/datum/job/escalation/hos
 	title = "Chief of Security"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_modifier = 8
@@ -183,7 +183,7 @@
 			            access_hos, access_RC_announce, access_keycard_auth, access_sec_doors,
 			            access_solgov_crew, access_gun)
 
-/datum/job/liaison
+/datum/job/escalation/liaison
 	title = "NanoTrasen Liaison"
 	department = "Support"
 	department_flag = SPT
@@ -208,7 +208,7 @@
 						access_hangar, access_petrov, access_petrov_helm)
 	announced = 1
 
-/datum/job/representative
+/datum/job/escalation/representative
 	title = "SolGov Representative"
 	department = "Support"
 	department_flag = SPT
@@ -230,7 +230,7 @@
 	announced = 1
 
 
-/datum/job/sea
+/datum/job/escalation/sea
 	title = "Senior Enlisted Advisor"
 	department = "Support"
 	department_flag = SPT
@@ -265,7 +265,7 @@
 			            access_kitchen, access_cargo, access_RC_announce, access_keycard_auth, access_guppy_helm,
 			            access_solgov_crew, access_gun, access_calypso, access_guppy, access_senadv, access_hangar)
 
-/datum/job/bridgeofficer
+/datum/job/escalation/bridgeofficer
 	title = "Bridge Officer"
 	department = "Support"
 	department_flag = SPT
@@ -296,7 +296,7 @@
 			            access_heads, access_janitor, access_kitchen, access_cargo, access_RC_announce, access_keycard_auth,
 			            access_solgov_crew)
 
-/datum/job/solgov_pilot
+/datum/job/escalation/solgov_pilot
 	title = "SolGov Pilot"
 	department = "Support"
 	department_flag = SPT
@@ -325,7 +325,7 @@
 						access_calypso, access_calypso_helm, access_guppy, access_guppy_helm, access_hangar, access_solgov_crew, access_heads)
 
 
-/datum/job/senior_engineer
+/datum/job/escalation/senior_engineer
 	title = "Senior Engineer"
 	department = "Engineering"
 	department_flag = ENG
@@ -362,7 +362,7 @@
 			            access_tcomsat, access_solgov_crew, access_seneng)
 
 
-/datum/job/engineer
+/datum/job/escalation/engineer
 	title = "Engineer"
 	total_positions = 4
 	spawn_positions = 4
@@ -403,7 +403,7 @@
 			            access_solgov_crew)
 
 
-/datum/job/engineer_contractor
+/datum/job/escalation/engineer_contractor
 	title = "Maintenance Assistant"
 	department = "Engineering"
 	department_flag = ENG
@@ -424,7 +424,7 @@
 	minimal_access = list(access_maint_tunnels, access_engine, access_engine_equip, access_emergency_storage, access_janitor, access_construction, access_solgov_crew)
 
 
-/datum/job/roboticist
+/datum/job/escalation/roboticist
 	title = "Roboticist"
 	department = "Engineering"
 	department_flag = ENG
@@ -445,7 +445,7 @@
 	minimal_access = list(access_robotics, access_robotics_engineering, access_tech_storage, access_morgue, access_medical, access_robotics_engineering, access_solgov_crew)
 
 
-/datum/job/warden
+/datum/job/escalation/warden
 	title = "Brig Officer"
 	total_positions = 1
 	spawn_positions = 1
@@ -477,7 +477,7 @@
 			            access_maint_tunnels, access_external_airlocks, access_emergency_storage,
 			            access_eva, access_sec_doors, access_solgov_crew, access_gun)
 
-/datum/job/detective
+/datum/job/escalation/detective
 	title = "Forensic Technician"
 	total_positions = 1
 	spawn_positions = 1
@@ -509,7 +509,7 @@
 			            access_sec_doors, access_solgov_crew)
 
 
-/datum/job/officer
+/datum/job/escalation/officer
 	title = "Master at Arms"
 	total_positions = 4
 	spawn_positions = 4
@@ -543,7 +543,7 @@
 			            access_eva, access_sec_doors, access_solgov_crew)
 
 
-/datum/job/senior_doctor
+/datum/job/escalation/senior_doctor
 	title = "Physician"
 	department = "Medical"
 	department_flag = MED
@@ -576,7 +576,7 @@
 			            access_medical_equip, access_solgov_crew, access_senmed)
 
 
-/datum/job/doctor
+/datum/job/escalation/doctor
 	title = "Corpsman"
 	minimal_player_age = 7
 	total_positions = 3
@@ -606,7 +606,7 @@
 			            access_eva, access_surgery, access_medical_equip, access_solgov_crew)
 
 
-/datum/job/doctor_contractor
+/datum/job/escalation/doctor_contractor
 	title = "Medical Contractor"
 	department = "Medical"
 	department_flag = MED
@@ -630,7 +630,7 @@
 	minimal_access = list(access_medical, access_morgue, access_crematorium, access_virology, access_surgery, access_medical_equip, access_solgov_crew)
 
 
-/datum/job/chemist
+/datum/job/escalation/chemist
 	title = "Chemist"
 	minimal_player_age = 7
 	total_positions = 1
@@ -645,7 +645,7 @@
 	access = list(access_medical, access_medical_equip, access_chemistry)
 	minimal_access = list(access_medical, access_medical_equip, access_chemistry)
 
-/datum/job/psychiatrist
+/datum/job/escalation/psychiatrist
 	title = "Counselor"
 	total_positions = 1
 	spawn_positions = 1
@@ -671,7 +671,7 @@
 	minimal_access = list(access_medical, access_morgue, access_chapel_office, access_crematorium, access_psychiatrist, access_solgov_crew)
 
 
-/datum/job/qm
+/datum/job/escalation/qm
 	title = "Deck Officer"
 	department = "Supply"
 	department_flag = SUP
@@ -704,7 +704,7 @@
 						access_cargo_bot, access_qm, access_mailsorting, access_solgov_crew, access_calypso, access_guppy, access_hangar)
 
 
-/datum/job/cargo_tech
+/datum/job/escalation/cargo_tech
 	title = "Deck Technician"
 	department = "Supply"
 	department_flag = SUP
@@ -734,7 +734,7 @@
 						access_cargo_bot, access_mailsorting, access_solgov_crew, access_calypso, access_guppy, access_hangar)
 
 
-/datum/job/cargo_contractor
+/datum/job/escalation/cargo_contractor
 	title = "Supply Assistant"
 	department = "Supply"
 	department_flag = SUP
@@ -752,7 +752,7 @@
 	minimal_access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting, access_hangar, access_guppy, access_guppy_helm, access_solgov_crew)
 
 
-/datum/job/janitor
+/datum/job/escalation/janitor
 	title = "Sanitation Technician"
 	department = "Service"
 	department_flag = SRV
@@ -784,7 +784,7 @@
 	access = list(access_maint_tunnels, access_emergency_storage, access_janitor, access_solgov_crew)
 	minimal_access = list(access_maint_tunnels, access_emergency_storage, access_janitor, access_solgov_crew)
 
-/datum/job/chef
+/datum/job/escalation/chef
 	title = "Cook"
 	department = "Service"
 	department_flag = SRV
@@ -813,7 +813,7 @@
 	access = list(access_maint_tunnels, access_hydroponics, access_kitchen, access_solgov_crew)
 	minimal_access = list(access_maint_tunnels, access_hydroponics, access_kitchen, access_solgov_crew)
 
-/datum/job/bartender
+/datum/job/escalation/bartender
 	department = "Service"
 	department_flag = SRV
 	supervisors = "the Executive Officer"
@@ -827,7 +827,7 @@
 	minimal_access = list(access_hydroponics, access_bar, access_solgov_crew)
 
 
-/datum/job/crew
+/datum/job/escalation/crew
 	title = "Crewman"
 	department = "Service"
 	department_flag = SRV
@@ -860,7 +860,7 @@
 	access = list(access_maint_tunnels, access_emergency_storage, access_solgov_crew)
 	minimal_access = list(access_maint_tunnels, access_emergency_storage, access_solgov_crew)
 
-/datum/job/senior_scientist
+/datum/job/escalation/senior_scientist
 	title = "Senior Researcher"
 	department = "Science"
 	department_flag = SCI
@@ -883,7 +883,7 @@
 						access_mining_station, access_xenobiology, access_xenoarch, access_nanotrasen,
 						access_calypso, access_guppy, access_hangar, access_petrov, access_petrov_helm, access_guppy_helm)
 
-/datum/job/nt_pilot
+/datum/job/escalation/nt_pilot
 	title = "NanoTrasen Pilot"
 	supervisors = "the Research Director"
 	department = "Science"
@@ -907,7 +907,7 @@
 						access_mining_station, access_nanotrasen, access_calypso, access_calypso_helm, access_guppy,
 						access_hangar, access_petrov, access_petrov_helm, access_guppy_helm)
 
-/datum/job/scientist
+/datum/job/escalation/scientist
 	title = "Scientist"
 	total_positions = 6
 	spawn_positions = 6
@@ -935,7 +935,7 @@
 						access_xenoarch, access_nanotrasen, access_calypso, access_guppy, access_hangar)
 
 
-/datum/job/mining
+/datum/job/escalation/mining
 	title = "Prospector"
 	department = "Science"
 	department_flag = SCI
@@ -960,7 +960,7 @@
 						access_calypso, access_guppy, access_hangar, access_petrov, access_guppy_helm)
 
 
-/datum/job/guard
+/datum/job/escalation/guard
 	title = "Security Guard"
 	department = "Science"
 	department_flag = SCI
@@ -982,7 +982,7 @@
 						access_xenoarch, access_nanotrasen, access_sec_guard, access_hangar, access_petrov, access_calypso, access_guppy)
 
 
-/datum/job/scientist_assistant
+/datum/job/escalation/scientist_assistant
 	title = "Research Assistant"
 	department = "Science"
 	department_flag = SCI
@@ -1009,7 +1009,7 @@
 	minimal_access = list(access_research, access_mining_office, access_nanotrasen, access_petrov, access_calypso, access_guppy)
 
 
-/datum/job/assistant
+/datum/job/escalation/assistant
 	title = "Passenger"
 	total_positions = 12
 	spawn_positions = 12
@@ -1037,7 +1037,7 @@
 	)
 
 
-/datum/job/merchant
+/datum/job/escalation/merchant
 	title = "Merchant"
 	department = "Civilian"
 	department_flag = CIV

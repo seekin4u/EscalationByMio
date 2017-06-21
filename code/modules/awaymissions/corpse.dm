@@ -59,9 +59,9 @@
 		M.equip_to_slot_or_del(new src.corpseback(M), slot_back)
 	if(src.corpseid == 1)
 		var/obj/item/weapon/card/id/W = new(M)
-		var/datum/job/jobdatum
+		var/datum/job/escalation/jobdatum
 		for(var/jobtype in typesof(/datum/job))
-			var/datum/job/J = new jobtype
+			var/datum/job/escalation/J = new jobtype
 			if(J.title == corpseidaccess)
 				jobdatum = J
 				break

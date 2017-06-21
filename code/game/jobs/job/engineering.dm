@@ -1,4 +1,4 @@
-/datum/job/chief_engineer
+/datum/job/escalation/chief_engineer
 	title = "Chief Engineer"
 	head_position = 1
 	department = "Engineering"
@@ -26,7 +26,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/engineering/chief_engineer
 	announced = 1
 
-/datum/job/engineer
+/datum/job/escalation/engineer
 	title = "Engineer"
 	department = "Engineering"
 	department_flag = ENG
@@ -43,7 +43,7 @@
 		"Atmospheric Technician" = /decl/hierarchy/outfit/job/engineering/atmos)
 	outfit_type = /decl/hierarchy/outfit/job/engineering/engineer
 
-/datum/job/atmos
+/datum/job/escalation/atmos
 	title = "Atmospheric Technician"
 	department = "Engineering"
 	department_flag = ENG

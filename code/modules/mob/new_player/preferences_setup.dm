@@ -182,20 +182,20 @@ datum/preferences
 	var/update_icon = FALSE
 	copy_to(mannequin, TRUE)
 
-	var/datum/job/previewJob
+	var/datum/job/escalation/previewJob
 	if(equip_preview_mob && job_master)
 		// Determine what job is marked as 'High' priority, and dress them up as such.
 		if("Assistant" in job_low)
 			previewJob = job_master.GetJob("Assistant")
 		else
-			for(var/datum/job/job in job_master.occupations)
+			for(var/datum/job/escalation/job in job_master.occupations)
 				if(job.title == job_high)
 					previewJob = job
 					break
 	else
 		return
 
-	if((equip_preview_mob & EQUIP_PREVIEW_LOADOUT) && !(previewJob && (equip_preview_mob & EQUIP_PREVIEW_JOB) && (previewJob.type == /datum/job/ai || previewJob.type == /datum/job/cyborg)))
+	if((equip_preview_mob & EQUIP_PREVIEW_LOADOUT) && !(previewJob && (equip_preview_mob & EQUIP_PREVIEW_JOB) && (previewJob.type == /datum/job/escalation/ai || previewJob.type == /datum/job/escalation/cyborg)))
 		var/list/equipped_slots = list() //If more than one item takes the same slot only spawn the first
 		for(var/thing in gear)
 			var/datum/gear/G = gear_datums[thing]
