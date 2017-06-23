@@ -55,6 +55,8 @@
 
 	message = capitalize(trim(message))
 
+	message = punctuate(message)
+
 	//speech problems
 	if(!(speaking && (speaking.flags & NO_STUTTER)))
 		var/list/message_data = list(message, verb, 1)
