@@ -55,3 +55,39 @@ var/list/spawntypes = list()
 /datum/spawnpoint/cyborg/New()
 	..()
 	turfs = latejoin_cyborg
+
+/datum/spawnpoint/cccp_faction
+	display_name = "cccp"
+	msg = "woke up" // :&
+
+/datum/spawnpoint/cccp_faction/New()
+	..()
+	turfs = faction_cccp
+
+
+/datum/spawnpoint/czech_faction
+	display_name = "clsa"
+	msg = "woke up" // :&
+/datum/spawnpoint/czech_faction/New()
+	..()
+	turfs = faction_czech
+
+
+/datum/spawnpoint/bund_faction
+	display_name = "bund"
+	msg = "woke up" // :&
+
+/datum/spawnpoint/bund_faction/New()
+	..()
+	turfs = faction_bund
+
+
+/datum/spawnpoint/usa_faction
+	display_name = "usmc"
+	msg = "woke up" // :&
+
+/datum/spawnpoint/usa_faction/New()
+	..()
+	turfs = faction_usa
+
+

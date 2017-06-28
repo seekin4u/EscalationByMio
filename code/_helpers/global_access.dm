@@ -747,6 +747,14 @@
 			return global.latejoin_cyborg;
 		if("latejoin_gateway")
 			return global.latejoin_gateway;
+		if("faction_cccp")
+			return global.faction_cccp;
+		if("faction_czech")
+			return global.faction_czech;
+		if("faction_bund")
+			return global.faction_bund;
+		if("faction_usa")
+			return global.faction_usa;
 		if("lawchanges")
 			return global.lawchanges;
 		if("license_to_url")
@@ -2206,6 +2214,14 @@
 			global.latejoin_cyborg=newval;
 		if("latejoin_gateway")
 			global.latejoin_gateway=newval;
+		if("faction_cccp")
+			global.faction_cccp=newval;
+		if("faction_czech")
+			global.faction_czech=newval;
+		if("faction_bund")
+			global.faction_bund=newval;
+		if("faction_usa")
+			global.faction_usa=newval;
 		if("lawchanges")
 			global.lawchanges=newval;
 		if("license_to_url")
@@ -3295,6 +3311,10 @@
 	"latejoin_cryo",
 	"latejoin_cyborg",
 	"latejoin_gateway",
+	"faction_cccp",
+	"faction_czech",
+	"faction_bund",
+	"faction_usa",
 	"lawchanges",
 	"license_to_url",
 	"life_event",
