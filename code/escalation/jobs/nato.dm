@@ -8,7 +8,7 @@
 	faction_tag = "bund" //The tag of the faction this job is a part of, for lookups
 
 /datum/job/escalation/bund/platoonleader
-	title = "Bundeswehr's Platoon Leader"
+	title = "Bundeswehrs Platoon Leader"
 	name = "Zugführer"
 	english_name = "Platoon Leader"
 	enabled = 1
@@ -21,7 +21,7 @@
 	outfit_type = /decl/hierarchy/outfit/nato/bundes/platoonleader
 
 /datum/job/escalation/bund/subleader
-	title = "Bundeswehr's Vice Platoon Leader"
+	title = "Bundeswehrs Vice Platoon Leader"
 	name = "Zugführer stellvertretender"
 	english_name = "Vice Platoon Leader"
 	enabled = 1
@@ -33,7 +33,7 @@
 	amount = 1
 
 /datum/job/escalation/bund/squadleader
-	title = "Bundeswehr's Squad Leader"
+	title = "Bundeswehrs Squad Leader"
 	name = "Gruppenführer"
 	english_name = "Squad Leader"
 	enabled = 1
@@ -45,7 +45,7 @@
 	amount = 1
 
 /datum/job/escalation/bund/subsergeant
-	title = "Bundeswehr's Fireteam Leader"
+	title = "Bundeswehrs Fireteam Leader"
 	name = "Gruppenführer stellvertreter"
 	english_name = "Fireteam Leader"
 	enabled = 1
@@ -57,7 +57,7 @@
 	amount = 2
 
 /datum/job/escalation/bund/machinegunner
-	title = "Bundeswehr's Machinegunner"
+	title = "Bundeswehrs Machinegunner"
 	name = "Maschinengewehrschütze"
 	english_name = "Machinegunner"
 	enabled = 1
@@ -69,7 +69,7 @@
 	amount = 2
 
 /datum/job/escalation/bund/grunt
-	title = "Bundeswehr's Soldier"
+	title = "Bundeswehrs Soldier"
 	name = "Schütze"
 	english_name = "Soldier"
 	enabled = 1
@@ -82,7 +82,7 @@
 
 
 /datum/job/escalation/bund/fielddoctor
-	title = "Bundeswehr's Head Medic"
+	title = "Bundeswehrs Head Medic"
 	name = "Chef-Sanitäter"			//"chief paramedic"
 	english_name = "Head Medic"
 	enabled = 1
@@ -94,7 +94,7 @@
 	amount = 1
 
 /datum/job/escalation/bund/fieldmedic
-	title = "Bundeswehr's Field Paramedic"
+	title = "Bundeswehrs Field Paramedic"
 	name = "Sanitäter"		//Lit. "paramedic"
 	english_name = "Field Paramedic"
 	enabled = 1
@@ -107,7 +107,7 @@
 
 
 /datum/job/escalation/bund/marksman
-	title = "Bundeswehr's Designated Marksman"
+	title = "Bundeswehrs Designated Marksman"
 	name = "Scharfshutze"
 	english_name = "Designated Marksman"
 	enabled = 1

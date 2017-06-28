@@ -8,7 +8,7 @@
 	faction_tag = "csla" //The tag of the faction this job is a part of ("bund", "csla"), for lookups
 
 /datum/job/escalation/csla/lieutenant
-	title = "Czech's Lieutenant"
+	title = "Czechs Lieutenant"
 	name = "Poruchik"
 	english_name = "Lieutenant"
 	enabled = 1
@@ -20,7 +20,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/sublieutenant
-	title = "Czech's Sublieutenant"
+	title = "Czechs Sublieutenant"
 	name = "Podporuchik"
 	english_name = "Sublieutenant"
 	enabled = 1
@@ -32,7 +32,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/sergeant
-	title = "Czech's Sergeant"
+	title = "Czechs Sergeant"
 	name = "Chetar"
 	english_name = "Sergeant"
 	enabled = 1
@@ -44,7 +44,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/subsergeant
-	title = "Czech's Sergeant deputy"
+	title = "Czechs Sergeant deputy"
 	name = "Subchetar"
 	english_name = "Sergeant deputy"
 	enabled = 1
@@ -56,7 +56,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/gunner
-	title = "Czech's Machinegunner"
+	title = "Czechs Machinegunner"
 	name = "Kulometnik"
 	english_name = "Machinegunner"
 	enabled = 1
@@ -68,7 +68,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/grenadier
-	title = "Czech's Grenadier"
+	title = "Czechs Grenadier"
 	name = "Pancerovnik"
 	english_name = "Grenadier"
 	enabled = 1
@@ -80,7 +80,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/grenass
-	title = "Czech's Grenadier assistant"
+	title = "Czechs Grenadier assistant"
 	name = "Pomocnik pancerovnika"
 	english_name = "Grenadier assistant"
 	enabled = 1
@@ -92,7 +92,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/squadradio
-	title = "Czech's Radioman"
+	title = "Czechs Radioman"
 	name = "Radista"
 	english_name = "Radioman"
 	enabled = 1
@@ -104,7 +104,7 @@
 	amount = 1
 
 /datum/job/escalation/csla/rifleman
-	title = "Czech's Rifleman"
+	title = "Czechs Rifleman"
 	name = "Strelec"
 	english_name = "Rifleman"
 	enabled = 1
@@ -118,7 +118,7 @@
 
 //NOT in squads
 /datum/job/escalation/csla/marksman
-	title = "Czech's Sharpshooter"
+	title = "Czechs Sharpshooter"
 	name = "Nadstrelec"
 	english_name = "Sharpshooter"
 	enabled = 1
@@ -130,7 +130,7 @@
 	amount = 2
 
 /datum/job/escalation/csla/medic
-	title = "Czech's Field Medic"
+	title = "Czechs Field Medic"
 	name = "Sanitar"
 	english_name = "Field Medic"
 	enabled = 1

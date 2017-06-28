@@ -36,27 +36,6 @@ proc/list_armies_by_name(var/show_disabled = 0)
 			names += F.name
 
 	return names
-
-
-/datum/fireteam
-	var/num = 0
-	var/name = "Default Fireteam Name"
-	var/datum/mind/leader = null
-	var/color = "white"
-	var/radio_freq = 0
-	var/datum/army_faction/team = null
-	var/max_players = 6 //This can be expanded/reduced in gamemode settings
-	var/list/slots = list()
-
-/datum/fireteam/New(var/datum/army_faction/faction)
-	..()
-	team = faction
-	radio_freq = rand(1000,2000)
-
-/datum/fireteam/Destroy()
-	slots.Cut()
-	return ..()
-
 //Faction parent. 'army_faction' to differentiate it from the actual basic faction code for antags
 /datum/army_faction
 	var/name = "Base Faction (never see this)"
@@ -174,3 +153,23 @@ proc/list_armies_by_name(var/show_disabled = 0)
 
 	if(usr.client.holder)
 		usr.client.holder.show_army_edit(src)
+
+/datum/fireteam
+	var/num = 0
+	var/name = "Default Fireteam Name"
+	var/datum/mind/leader = null
+	var/color = "white"
+	var/radio_freq = 0
+	var/datum/army_faction/team = null
+	var/max_players = 6 //This can be expanded/reduced in gamemode settings
+	var/list/slots = list()
+
+/datum/fireteam/New(var/datum/army_faction/faction)
+	..()
+	team = faction
+	radio_freq = rand(1000,2000)
+
+/datum/fireteam/Destroy()
+	slots.Cut()
+	return ..()
+
