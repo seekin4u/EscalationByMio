@@ -88,7 +88,7 @@
 	if(isrobot(user))
 		return
 	//user.drop_item()
-	if (O.loc != src.loc)
+	if (O.loc != user.loc)
 		to_chat(user, "you start climbing onto [O]...")
 		step(O, get_dir(O, src))
 	return
@@ -132,7 +132,15 @@
 			to_chat(user, "\red There is no more space.")
 			return
 
-	var/obj/structure/sandbag/bag = new /obj/structure/sandbag(user.loc)//DO-AFTER NEEDED
+	i = 0
+
+	for(var/obj/structure/concrete_block/blocky in user.loc.contents)
+		i++
+		if(i > 0)
+			to_chat(user, "\red There is no more space.")
+			return
+
+	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()
 	qdel(src)

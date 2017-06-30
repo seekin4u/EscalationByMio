@@ -856,6 +856,7 @@
 #include "code\game\objects\structures\bedsheet_bin.dm"
 #include "code\game\objects\structures\brutswehr.dm"
 #include "code\game\objects\structures\coathanger.dm"
+#include "code\game\objects\structures\concrete_block.dm"
 #include "code\game\objects\structures\curtains.dm"
 #include "code\game\objects\structures\displaycase.dm"
 #include "code\game\objects\structures\dogbed.dm"

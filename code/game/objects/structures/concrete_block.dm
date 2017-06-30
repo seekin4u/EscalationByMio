@@ -5,7 +5,7 @@
 	icon_state = "concrete_block"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER + 0.1//+0.1 makes this block be upon sandbag or brutswehr(what is not possible lul)
+	layer = OBJ_LAYER//+0.1 makes this block be upon sandbag or brutswehr(what is not possible lul)
 	plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
@@ -90,7 +90,7 @@
 	if(isrobot(user))
 		return
 	//user.drop_item()
-	if (O.loc != src.loc)
+	if (O.loc != user.loc)
 		//add do_after or smth etc
 		to_chat(user, "you start climbing onto [O]...")
 		step(O, get_dir(O, src))

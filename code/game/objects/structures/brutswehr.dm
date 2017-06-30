@@ -63,7 +63,7 @@
 	if(isrobot(user))
 		return
 	//user.drop_item()
-	if (O.loc != src.loc)
+	if (O.loc != user.loc)
 		to_chat(user, "you start climbing onto [O]...")
 		step(O, get_dir(O, src))
 	return
