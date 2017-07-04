@@ -49,6 +49,7 @@
 	else
 		rotate_to(user, A)
 		update_layer()
+	..()
 
 /obj/item/weapon/gun/projectile/minigun/proc/check_direction(mob/user, atom/A)
 	if(get_turf(A) == src.loc)
@@ -66,9 +67,9 @@
 
 /obj/item/weapon/gun/projectile/minigun/proc/update_layer()
 	if(dir == NORTH)
-		layer = OBJ_LAYER
+		layer = OBJ_LAYER + 0.2
 	else
-		layer = FLY_LAYER
+		layer = FLY_LAYER - 0.1
 
 /obj/item/weapon/gun/projectile/minigun/started_using(mob/user as mob)
 	..()

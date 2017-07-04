@@ -211,9 +211,11 @@
 /obj/proc/started_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] handeled \the [src].</span>", \
 						"<span class='notice'>You handeled \the [src].</span>")
+	to_chat(world, "started_using")
 	return
 
 /obj/proc/stopped_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
 						"<span class='notice'>You released \the [src].</span>")
+	to_chat(world, "stopped_using")
 	return

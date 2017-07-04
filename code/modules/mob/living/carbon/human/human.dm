@@ -1529,3 +1529,6 @@
 
 		if((SKELETON in mutations) && (!w_uniform) && (!wear_suit))
 			play_xylophone()
+
+/mob/living/carbon/human/using_object(atom/T, params)
+	using_object.usedby(src, T, params)
