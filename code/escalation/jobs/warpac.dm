@@ -26,13 +26,8 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-<<<<<<< HEAD:code/escalation/jobs/warpac.dm
-	rank_prefix = "Podporuchik"
-	rank_number = 1
-=======
 	rank_prefix = "Podpor." //Podporuchik
-	rank_number = 1 
->>>>>>> master:code/datums/escalation/jobs/armyjobs_warpac.dm
+	rank_number = 1
 	position = "team"
 	amount = 1
 
@@ -176,13 +171,8 @@
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-<<<<<<< HEAD:code/escalation/jobs/warpac.dm
-	rank_prefix = "Starshina"
-	rank_number = 2
-=======
 	rank_prefix = "St." //Starshina
-	rank_number = 2 
->>>>>>> master:code/datums/escalation/jobs/armyjobs_warpac.dm
+	rank_number = 2
 	position = "team"
 	amount = 1
 
