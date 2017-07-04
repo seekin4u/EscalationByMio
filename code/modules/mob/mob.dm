@@ -1081,3 +1081,22 @@ mob/proc/yank_out_object()
 		return
 	var/obj/screen/zone_sel/selector = mob.zone_sel
 	selector.set_selected_zone(next_in_list(mob.zone_sel.selecting,zones))
+
+/mob/proc/use_object(obj/O)
+	if(using_object)
+		if(using_object == O)
+			return
+		var/obj/UO = using_object
+		using_object.used_by_mob = null
+		using_object = null
+		UO.stopped_using(src)
+	if(O)
+		if(O.used_by_mob)
+			O.used_by_mob.use_object(null)
+		using_object = O
+		using_object.used_by_mob = src
+		using_object.started_using(src)
+
+/mob/proc/using_object(atom/T, params)
+	use_object(null)
+	return 0

@@ -162,3 +162,5 @@
 
 	var/memory = ""
 	var/flavor_text = ""
+
+	var/obj/using_object = null
