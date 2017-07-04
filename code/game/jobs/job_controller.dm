@@ -592,8 +592,8 @@ var/global/datum/controller/occupations/job_master
  *  preference is not set, or the preference is not appropriate for the rank, in
  *  which case a fallback will be selected.
  */
-/datum/controller/occupations/proc/get_spawnpoint_for(var/client/C)
-/*
+/datum/controller/occupations/proc/get_spawnpoint_for(var/client/C, var/rank)
+
 	if(!C)
 		CRASH("Null client passed to get_spawnpoint_for() proc!")
 
@@ -627,16 +627,6 @@ var/global/datum/controller/occupations/job_master
 		warning("Could not find an appropriate spawnpoint for job [rank].")
 		spawnpos = spawntypes[pick(using_map.allowed_spawns)]
 
-	return spawnpos
-*/
-// ESCALATION SHIT
-	if(!C)
-		CRASH("Null client passed to get_spawnpoint_for() proc!")
-	var/mob/M = C.mob
-	var/datum/spawnpoint/spawnpos
-	spawnpos = get_spawnpos_by_faction(M)
-	if(!spawnpos)
-		spawnpos = spawntypes[pick(using_map.allowed_spawns)]
 	return spawnpos
 
 /datum/controller/occupations/proc/GetJobByType(var/job_type)

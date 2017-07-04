@@ -57,10 +57,6 @@ var/list/latejoin         = list()
 var/list/latejoin_gateway = list()
 var/list/latejoin_cryo    = list()
 var/list/latejoin_cyborg  = list()
-var/list/faction_cccp     = list()
-var/list/faction_czech    = list()
-var/list/faction_bund     = list()
-var/list/faction_usa      = list()
 
 var/list/prisonwarp         = list() // Prisoners go to these
 var/list/xeno_spawn         = list() // Aliens spawn at at these.

@@ -633,7 +633,7 @@
 		chosen_species = all_species[client.prefs.species]
 
 	if(!spawn_turf)
-		var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(client)
+		var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(client, get_rank_pref())
 		spawn_turf = pick(spawnpoint.turfs)
 
 	if(chosen_species)

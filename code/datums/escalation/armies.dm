@@ -37,17 +37,6 @@ proc/list_armies_by_name(var/show_disabled = 0)
 
 	return names
 
-proc/get_spawnpos_by_faction(var/mob/M)
-	if(!M || !istype(M, /mob/new_player/))
-		return null
-	var/mob/new_player/H = M
-	if(!H.job || !istype(H.job, /datum/army_job/))
-		return null
-	var/datum/army_job/AJ = H.job
-	var/faction = AJ.faction_tag
-	if(faction == "cccp" || faction == "csla" || faction == "bund" || faction == "usmc")
-		return spawntypes[faction]
-	return null
 
 /datum/fireteam
 	var/num = 0

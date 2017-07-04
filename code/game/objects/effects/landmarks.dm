@@ -37,22 +37,6 @@
 			latejoin_cyborg += loc
 			delete_me = 1
 			return
-		if("faction_cccp")
-			faction_cccp += loc
-			delete_me = 1
-			return
-		if("faction_czech")
-			faction_czech += loc
-			delete_me = 1
-			return
-		if("faction_bund")
-			faction_bund += loc
-			delete_me = 1
-			return
-		if("faction_usa")
-			faction_usa += loc
-			delete_me = 1
-			return
 		if("prisonwarp")
 			prisonwarp += loc
 			delete_me = 1
