@@ -15,7 +15,7 @@
 	max_shells = 6000
 	caliber = "4mm"
 	slot_flags = 0
-	ammo_type = /obj/item/ammo_casing/c4mm
+	ammo_type = /obj/item/ammo_casing/a4mm
 
 	firemodes = list(
 		list(name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0), accuracy=list(0)),

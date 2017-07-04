@@ -341,3 +341,11 @@
 	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 40
 	armor_penetration = 15
+
+/obj/item/projectile/bullet/rifle/ags30x29mm
+	name = "AGS' bullet"
+	damage = 50
+	agony = 20
+	embed = 0
+	edge = 1
+	//fire_sound = 'sound/weapons/gunshot/rpk47.ogg'

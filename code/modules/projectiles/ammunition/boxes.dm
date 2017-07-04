@@ -414,3 +414,21 @@
 /obj/item/ammo_magazine/c556x45s/ap
 	name = "AP magazine (5.56x45mm)"
 	ammo_type = /obj/item/ammo_casing/a556x45/ap
+
+/obj/item/ammo_magazine/a4mm
+	name = "magazine box (4mm)"
+	icon_state = "4mm"
+	mag_type = MAGAZINE
+	caliber = "4mm"
+	ammo_type = /obj/item/ammo_casing/a4mm
+	max_ammo = 400
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/ags30x29mm
+	name = "magazine box (VOG 30x29mm)"
+	icon_state = "ags30x29mm"
+	mag_tupe = MAGAZINE
+	caliber = "30x29mm"
+	ammo_type = /obj/item/ammo_casings/ags30x29mm
+	max_ammo = 30
+	multiple_sprites = 1
