@@ -11,12 +11,12 @@ proc/init_factions()
 		else
 			qdel(faction)
 
-	for(var/job_type in typesof(/datum/army_job))
-		var/datum/army_job/job = new job_type
-		if(job.enabled)
-			all_army_jobs += job
+	for(var/job_type in typesof(/datum/job/escalation))
+		var/datum/job/escalation/J = new job_type
+		if(J.enabled)
+			all_army_jobs += J
 		else
-			qdel(job)
+			qdel(J)
 
 	for(var/datum/army_faction/F in all_factions) //Link the jobs to the armies after they're instanced.
 		F.init_jobs()
@@ -36,27 +36,6 @@ proc/list_armies_by_name(var/show_disabled = 0)
 			names += F.name
 
 	return names
-
-
-/datum/fireteam
-	var/num = 0
-	var/name = "Default Fireteam Name"
-	var/datum/mind/leader = null
-	var/color = "white"
-	var/radio_freq = 0
-	var/datum/army_faction/team = null
-	var/max_players = 6 //This can be expanded/reduced in gamemode settings
-	var/list/slots = list()
-
-/datum/fireteam/New(var/datum/army_faction/faction)
-	..()
-	team = faction
-	radio_freq = rand(1000,2000)
-
-/datum/fireteam/Destroy()
-	slots.Cut()
-	return ..()
-
 //Faction parent. 'army_faction' to differentiate it from the actual basic faction code for antags
 /datum/army_faction
 	var/name = "Base Faction (never see this)"
@@ -97,7 +76,7 @@ proc/list_armies_by_name(var/show_disabled = 0)
 
 //The way these are set up is pretty much ass for when we have like 30 armies and 300 jobs, but.. whatever. Fix later
 /datum/army_faction/proc/init_jobs()
-	for(var/datum/army_job/J in all_army_jobs) //Add jobs to proper slots
+	for(var/datum/job/escalation/J in all_army_jobs) //Add jobs to proper slots
 		if(J.faction_tag == faction_tag && J.enabled)
 			if(J.position == "fireteam")
 				for(var/datum/fireteam/T in fireteams)
@@ -174,3 +153,23 @@ proc/list_armies_by_name(var/show_disabled = 0)
 
 	if(usr.client.holder)
 		usr.client.holder.show_army_edit(src)
+
+/datum/fireteam
+	var/num = 0
+	var/name = "Default Fireteam Name"
+	var/datum/mind/leader = null
+	var/color = "white"
+	var/radio_freq = 0
+	var/datum/army_faction/team = null
+	var/max_players = 6 //This can be expanded/reduced in gamemode settings
+	var/list/slots = list()
+
+/datum/fireteam/New(var/datum/army_faction/faction)
+	..()
+	team = faction
+	radio_freq = rand(1000,2000)
+
+/datum/fireteam/Destroy()
+	slots.Cut()
+	return ..()
+

@@ -1,5 +1,7 @@
-
-/datum/army_job/civilian
+/datum/job/escalation/civilian
+	title = "Civilian"
+	total_position
+	spawn_position
 	name = "Civilian"
 	english_name = "Civilian"
 	faction_tag = "civ"
@@ -10,11 +12,13 @@
 	position = "team"
 	amount = 6
 
-/datum/army_job/redcross
+/datum/job/escalation/redcross
+	title = "Red Cross"
 	enabled = 0
 	faction_tag = "redc"
 
-/datum/army_job/redcross/cmo
+/datum/job/escalation/redcross/cmo
+	title = "Red Cross Leader"
 	name = "Chief Medic"
 	english_name = "Red Cross Leader"
 	enabled = 1
@@ -24,7 +28,8 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/redcross/doctor
+/datum/job/escalation/redcross/doctor
+	title = "Red Cross Doctor"
 	name = "Doctor"
 	english_name = "Red Cross"
 	enabled = 1

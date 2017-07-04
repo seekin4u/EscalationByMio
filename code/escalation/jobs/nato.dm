@@ -2,11 +2,13 @@
 
 //** BUND ARMY **
 
-/datum/army_job/bund
+/datum/job/escalation/bund
+	title = "Bundeswehr"
 	enabled = 0
 	faction_tag = "bund" //The tag of the faction this job is a part of, for lookups
 
-/datum/army_job/bund/platoonleader
+/datum/job/escalation/bund/platoonleader
+	title = "Bundeswehrs Platoon Leader"
 	name = "Zugführer"
 	english_name = "Platoon Leader"
 	enabled = 1
@@ -16,8 +18,10 @@
 	rank_number = 0
 	position = "team"
 	amount = 1
+	outfit_type = /decl/hierarchy/outfit/nato/bundes/platoonleader
 
-/datum/army_job/bund/subleader
+/datum/job/escalation/bund/subleader
+	title = "Bundeswehrs Vice Platoon Leader"
 	name = "Zugführer stellvertretender"
 	english_name = "Vice Platoon Leader"
 	enabled = 1
@@ -28,18 +32,20 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/bund/squadleader
+/datum/job/escalation/bund/squadleader
+	title = "Bundeswehrs Squad Leader"
 	name = "Gruppenführer"
 	english_name = "Squad Leader"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Feldwebel"  
+	rank_prefix = "Feldwebel"
 	rank_number = 2
 	position = "fireteam"
 	amount = 1
 
-/datum/army_job/bund/subsergeant
+/datum/job/escalation/bund/subsergeant
+	title = "Bundeswehrs Fireteam Leader"
 	name = "Gruppenführer stellvertreter"
 	english_name = "Fireteam Leader"
 	enabled = 1
@@ -50,18 +56,20 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/army_job/bund/machinegunner
+/datum/job/escalation/bund/machinegunner
+	title = "Bundeswehrs Machinegunner"
 	name = "Maschinengewehrschütze"
 	english_name = "Machinegunner"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Stabsgefreiter" 
+	rank_prefix = "Stabsgefreiter"
 	rank_number = 4
 	position = "fireteam"
 	amount = 2
 
-/datum/army_job/bund/grunt
+/datum/job/escalation/bund/grunt
+	title = "Bundeswehrs Soldier"
 	name = "Schütze"
 	english_name = "Soldier"
 	enabled = 1
@@ -73,36 +81,39 @@
 	amount = 6
 
 
-/datum/army_job/bund/fielddoctor
+/datum/job/escalation/bund/fielddoctor
+	title = "Bundeswehrs Head Medic"
 	name = "Chef-Sanitäter"			//"chief paramedic"
 	english_name = "Head Medic"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Feldwebel" 
+	rank_prefix = "Feldwebel"
 	rank_number = 3
 	position = "team"
 	amount = 1
 
-/datum/army_job/bund/fieldmedic
+/datum/job/escalation/bund/fieldmedic
+	title = "Bundeswehrs Field Paramedic"
 	name = "Sanitäter"		//Lit. "paramedic"
 	english_name = "Field Paramedic"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Stabsgefreiter" 
+	rank_prefix = "Stabsgefreiter"
 	rank_number = 4
 	position = "team"
 	amount = 3
 
 
-/datum/army_job/bund/marksman
+/datum/job/escalation/bund/marksman
+	title = "Bundeswehrs Designated Marksman"
 	name = "Scharfshutze"
 	english_name = "Designated Marksman"
 	enabled = 1
 	outfits = list("")
 	outfit_variant_chance = 0
-	rank_prefix = "Stabsgefreiter" 
+	rank_prefix = "Stabsgefreiter"
 	rank_number = 4
 	position = "team"
 	amount = 2
@@ -112,11 +123,13 @@
 //** USMC ARMY **
 
 
-/datum/army_job/usmc
+/datum/job/escalation/usmc
+	title = "US"
 	enabled = 0
 	faction_tag = "usmc"
 
-/datum/army_job/usmc/lieu
+/datum/job/escalation/usmc/lieu
+	title = "US First Lieutenant"
 	name = "Platoon Commander"
 	english_name = "First Lieutenant"
 	enabled = 1
@@ -127,7 +140,8 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/usmc/lieu2
+/datum/job/escalation/usmc/lieu2
+	title = "US Staff Sergeant"
 	name = "Platoon Sergeant"
 	english_name = "Staff Sergeant"
 	outfits = list("")
@@ -137,7 +151,8 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/usmc/radioman
+/datum/job/escalation/usmc/radioman
+	title = "US Warrant Officer"
 	name = "Radio Telegraph Operator"
 	english_name = "Warrant Officer"
 	enabled = 1
@@ -148,7 +163,8 @@
 	position = "team"
 	amount = 1
 
-/datum/army_job/usmc/squadleader
+/datum/job/escalation/usmc/squadleader
+	title = "US Sergeant"
 	name = "Fireteam Leader"
 	english_name = "Sergeant"
 	enabled = 1
@@ -159,7 +175,8 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/army_job/usmc/squadradio
+/datum/job/escalation/usmc/squadradio
+	title = "US Lance-Corporal"
 	name = "Radio Operator"
 	english_name = "Lance-Corporal"
 	enabled = 1
@@ -170,7 +187,8 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/army_job/usmc/machinegunner
+/datum/job/escalation/usmc/machinegunner
+	title = "US Private 1st class"
 	name = "Machinegunner"
 	english_name = "Private 1st class"
 	enabled = 1
@@ -182,7 +200,8 @@
 	amount = 2
 
 
-/datum/army_job/usmc/grunt
+/datum/job/escalation/usmc/grunt
+	title = "US Private"
 	name = "Marine Rifleman"
 	english_name = "Private"
 	enabled = 1
@@ -195,7 +214,8 @@
 
 
 //Not in squads - "attachments" in the marines
-/datum/army_job/usmc/medic
+/datum/job/escalation/usmc/medic
+	title = "US Medic"
 	name = "Corpsman"
 	english_name = "Medic"
 	enabled = 1
@@ -206,7 +226,8 @@
 	amount = 3
 
 
-/datum/army_job/usmc/marksman
+/datum/job/escalation/usmc/marksman
+	title = "US Sniper"
 	name = "Designated Marksman"
 	english_name = "Sniper"
 	enabled = 1
@@ -217,7 +238,8 @@
 	amount = 2
 
 
-/datum/army_job/usmc/headmedic
+/datum/job/escalation/usmc/headmedic
+	title = "US Head Medic"
 	name = "Head Medic"
 	english_name = "Head Medic"
 	enabled = 1

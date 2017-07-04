@@ -1,7 +1,8 @@
+
 var/global/datum/controller/occupations/job_master
 
-#define GET_RANDOM_JOB 0
-#define BE_ASSISTANT 1
+/*#define GET_RANDOM_JOB 0
+#define BE_ASSISTANT 1*/
 #define RETURN_TO_LOBBY 2
 
 /datum/controller/occupations
@@ -15,43 +16,22 @@ var/global/datum/controller/occupations/job_master
 	var/list/job_debug = list()
 
 
-	proc/SetupOccupations(var/faction = "Station", var/setup_titles = 0)
+	proc/SetupOccupations(var/faction = "Escalation", var/setup_titles = 0)
 		occupations = list()
 		occupations_by_type = list()
-		var/list/all_jobs = list(/datum/job/assistant) | using_map.allowed_jobs
+		var/list/all_jobs = using_map.allowed_jobs
 		if(!all_jobs.len)
 			log_error("<span class='warning'>Error setting up jobs, no job datums found!</span>")
 			return 0
 		for(var/J in all_jobs)
-			var/datum/job/job = new J()
+			var/datum/job/escalation/job = new J()
 			if(!job)	continue
 			if(job.faction != faction)	continue
 			occupations += job
 			occupations_by_type[job.type] = job
 			if(!setup_titles) continue
-			if(job.department_flag & COM)
-				command_positions |= job.title
-			if(job.department_flag & SPT)
-				support_positions |= job.title
-			if(job.department_flag & SEC)
-				security_positions |= job.title
-			if(job.department_flag & ENG)
-				engineering_positions += job.title
-			if(job.department_flag & MED)
-				medical_positions |= job.title
-			if(job.department_flag & SCI)
-				science_positions |= job.title
-			if(job.department_flag & SUP)
-				supply_positions |= job.title
-			if(job.department_flag & SRV)
-				service_positions |= job.title
-			if(job.department_flag & CRG)
-				cargo_positions |= job.title
-			if(job.department_flag & CIV)
-				civilian_positions |= job.title
-			if(job.department_flag & MSC)
-				nonhuman_positions |= job.title
-
+			if(job.department_flag & ESC)
+				escalation_positions |= job.title
 		return 1
 
 
@@ -63,7 +43,7 @@ var/global/datum/controller/occupations/job_master
 
 	proc/GetJob(var/rank)
 		if(!rank)	return null
-		for(var/datum/job/J in occupations)
+		for(var/datum/job/escalation/J in occupations)
 			if(!J)	continue
 			if(J.title == rank)	return J
 		return null
@@ -80,7 +60,7 @@ var/global/datum/controller/occupations/job_master
 	proc/AssignRole(var/mob/new_player/player, var/rank, var/latejoin = 0)
 		Debug("Running AR, Player: [player], Rank: [rank], LJ: [latejoin]")
 		if(player && player.mind && rank)
-			var/datum/job/job = GetJob(rank)
+			var/datum/job/escalation/job = GetJob(rank)
 			if(!job)
 				return 0
 			if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age))
@@ -108,13 +88,13 @@ var/global/datum/controller/occupations/job_master
 		return 0
 
 	proc/FreeRole(var/rank)	//making additional slot on the fly
-		var/datum/job/job = GetJob(rank)
+		var/datum/job/escalation/job = GetJob(rank)
 		if(job && job.current_positions >= job.total_positions && job.total_positions != -1)
 			job.total_positions++
 			return 1
 		return 0
 
-	proc/FindOccupationCandidates(datum/job/job, level, flag)
+	proc/FindOccupationCandidates(datum/job/escalation/job, level, flag)
 		Debug("Running FOC, Job: [job], Level: [level], Flag: [flag]")
 		var/list/candidates = list()
 		for(var/mob/new_player/player in unassigned)
@@ -170,12 +150,12 @@ var/global/datum/controller/occupations/job_master
 				player.mind.assigned_role = null
 				player.mind.special_role = null
 		SetupOccupations()
-		unassigned = list()
+		unassigned = list() //
 		return
 
 
 	///This proc is called before the level loop of DivideOccupations() and will try to select a head, ignoring ALL non-head preferences for every level until it locates a head or runs out of levels to check
-	proc/FillHeadPosition()
+/*	proc/FillHeadPosition()
 		for(var/level = 1 to 3)
 			for(var/command_position in command_positions)
 				var/datum/job/job = GetJob(command_position)
@@ -250,13 +230,13 @@ var/global/datum/controller/occupations/job_master
 
 		Debug("DO, Len: [unassigned.len]")
 		if(unassigned.len == 0)	return 0
-
 		//Shuffle players and jobs
 		unassigned = shuffle(unassigned)
 
 		HandleFeedbackGathering()
-
 		//People who wants to be assistants, sure, go on.
+		Debug("DO, Running Escalation Check 1")
+		var/datum/
 		Debug("DO, Running Assistant Check 1")
 		var/datum/job/assist = new DEFAULT_JOB_TYPE ()
 		var/list/assistant_candidates = FindOccupationCandidates(assist, 3)
@@ -266,7 +246,6 @@ var/global/datum/controller/occupations/job_master
 			AssignRole(player, "Assistant")
 			assistant_candidates -= player
 		Debug("DO, AC1 end")
-
 		//Select one head
 		Debug("DO, Running Head Check")
 		FillHeadPosition()
@@ -312,7 +291,6 @@ var/global/datum/controller/occupations/job_master
 							AssignRole(player, job.title)
 							unassigned -= player
 							break
-
 		// Hand out random jobs to the people who didn't get any in the last check
 		// Also makes sure that they got their preference correct
 		for(var/mob/new_player/player in unassigned)
@@ -332,7 +310,6 @@ var/global/datum/controller/occupations/job_master
 					AssignRole(player, branch.assistant_job)
 				else
 					AssignRole(player, "Assistant")
-
 		//For ones returning to lobby
 		for(var/mob/new_player/player in unassigned)
 			if(player.client.prefs.alternate_option == RETURN_TO_LOBBY)
@@ -340,7 +317,18 @@ var/global/datum/controller/occupations/job_master
 				player.new_player_panel_proc()
 				unassigned -= player
 		return 1
-
+*/
+	proc/DivideOccupations() // Esc
+		SetupOccupations()
+		for(var/mob/new_player/player in player_list)
+			if(player.ready && player.mind && !player.mind.assigned_role)
+				unassigned += player
+		if(unassigned.len == 0)	return 0
+		//Shuffle players and jobs
+		unassigned = shuffle(unassigned)
+		for(var/mob/new_player/player in unassigned)
+			if(player.job)
+				AssignRole(player, player.job.title)
 
 	proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
 		if(!H)	return null
@@ -353,7 +341,7 @@ var/global/datum/controller/occupations/job_master
 			//Equip custom gear loadout.
 			var/list/custom_equip_slots = list() //If more than one item takes the same slot, all after the first one spawn in storage.
 			var/list/custom_equip_leftovers = list()
-			if(H.client.prefs.gear && H.client.prefs.gear.len && job.title != "Cyborg" && job.title != "AI")
+			if(H.client.prefs.gear && H.client.prefs.gear.len)
 				for(var/thing in H.client.prefs.gear)
 					var/datum/gear/G = gear_datums[thing]
 					if(G)
@@ -386,7 +374,7 @@ var/global/datum/controller/occupations/job_master
 						else
 							spawn_in_storage += thing
 			//Equip job items.
-			job.setup_account(H)
+	//		job.setup_account(H)
 			job.equip(H, H.mind ? H.mind.role_alt_title : "", H.char_branch)
 			job.apply_fingerprints(H)
 

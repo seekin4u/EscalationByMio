@@ -8,7 +8,7 @@
 	var/datum/browser/panel
 
 	var/char_is_setup = 0
-	var/datum/army_job/job
+	var/datum/job/escalation/job
 	var/fireteam_view = 0
 	var/team_view = -1
 
@@ -98,8 +98,8 @@
 		out += "<hr><center>"
 		for(var/J in team.slots) //Slots can either be people, or jobs. These are nonsquad jobs.
 			slot_index++
-			if(istype(J,/datum/army_job))
-				var/datum/army_job/A = J
+			if(istype(J,/datum/job/escalation))
+				var/datum/job/escalation/A = J
 				out += "<P><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/M = J
@@ -129,8 +129,8 @@
 		out += "<hr><center>"
 		for(var/S in fireteam.slots)
 			slot_index++
-			if(istype(S,/datum/army_job))
-				var/datum/army_job/A = S
+			if(istype(S,/datum/job/escalation))
+				var/datum/job/escalation/A = S
 				out += "<p><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/P = S
