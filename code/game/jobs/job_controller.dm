@@ -230,12 +230,10 @@ var/global/datum/controller/occupations/job_master
 
 		Debug("DO, Len: [unassigned.len]")
 		if(unassigned.len == 0)	return 0
-		world << "1"
 		//Shuffle players and jobs
 		unassigned = shuffle(unassigned)
 
 		HandleFeedbackGathering()
-		world << "2"
 		//People who wants to be assistants, sure, go on.
 		Debug("DO, Running Escalation Check 1")
 		var/datum/
@@ -248,7 +246,6 @@ var/global/datum/controller/occupations/job_master
 			AssignRole(player, "Assistant")
 			assistant_candidates -= player
 		Debug("DO, AC1 end")
-		world << "3"
 		//Select one head
 		Debug("DO, Running Head Check")
 		FillHeadPosition()
@@ -294,7 +291,6 @@ var/global/datum/controller/occupations/job_master
 							AssignRole(player, job.title)
 							unassigned -= player
 							break
-		world << "4"
 		// Hand out random jobs to the people who didn't get any in the last check
 		// Also makes sure that they got their preference correct
 		for(var/mob/new_player/player in unassigned)
@@ -314,7 +310,6 @@ var/global/datum/controller/occupations/job_master
 					AssignRole(player, branch.assistant_job)
 				else
 					AssignRole(player, "Assistant")
-		world << "5EEEEEEEEEEEEEEEEEEEEEEEE"
 		//For ones returning to lobby
 		for(var/mob/new_player/player in unassigned)
 			if(player.client.prefs.alternate_option == RETURN_TO_LOBBY)
