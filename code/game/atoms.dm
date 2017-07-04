@@ -207,6 +207,9 @@ its easier to just keep the beam vertical.
 		else
 			f_name += "oil-stained [name][infix]."
 
+	if(istype(user, /mob/living))
+		user.visible_message("<span class='smallblack'><b>[user]</b> looks at [src].")
+
 	to_chat(user, "\icon[src] That's [f_name] [suffix]")
 	to_chat(user, desc)
 

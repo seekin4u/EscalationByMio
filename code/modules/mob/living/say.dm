@@ -184,6 +184,8 @@ proc/get_radio_key_from_channel(var/channel)
 
 	message = handle_autohiss(message, speaking)
 
+	message = punctuate(message)
+
 	if(!(speaking && (speaking.flags & NO_STUTTER)))
 		var/list/message_data = list(message, verb, 0)
 		if(handle_speech_problems(message_data))

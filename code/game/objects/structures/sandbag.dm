@@ -4,19 +4,18 @@
 	icon_state = "sandbag"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER
+	layer = 2.8
 	plane = OBJ_PLANE
 	anchored = 1
-	layer = 2.8
 	flags = OBJ_CLIMBABLE
 	var/chance = 30
 
 /obj/structure/sandbag/New()
-	flags |= ON_BORDER
-	set_dir(dir)
 	..()
+	flags |= ON_BORDER
+	to_chat(world, " New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
-/obj/structure/window/Destroy()
+/obj/structure/sandbag/Destroy()
 	//chance = null
 	..()
 
@@ -25,6 +24,7 @@
 	if(dir != NORTH)
 		layer = ABOVE_HUMAN_LAYER
 		plane = ABOVE_HUMAN_PLANE
+		to_chat(world, " set_dir. Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
@@ -88,7 +88,7 @@
 	if(isrobot(user))
 		return
 	//user.drop_item()
-	if (O.loc != src.loc)
+	if (O.loc != user.loc)
 		to_chat(user, "you start climbing onto [O]...")
 		step(O, get_dir(O, src))
 	return
@@ -132,7 +132,15 @@
 			to_chat(user, "\red There is no more space.")
 			return
 
-	var/obj/structure/sandbag/bag = new /obj/structure/sandbag/ (user.loc)//DO-AFTER NEEDED
+	i = 0
+
+	for(var/obj/structure/concrete_block/blocky in user.loc.contents)
+		i++
+		if(i > 0)
+			to_chat(user, "\red There is no more space.")
+			return
+
+	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()
 	qdel(src)
