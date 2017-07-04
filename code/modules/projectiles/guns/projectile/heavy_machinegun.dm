@@ -101,3 +101,41 @@
 	if(istype(mover, /obj/item/projectile))
 		return 1
 	return 0
+
+///////////////////////
+////Stationary KORD////
+///////////////////////
+/obj/item/weapon/gun/projectile/minigun/kord
+	name = "KORD"
+	desc = "Heavy machinegun"
+	icon_state = "pkms"
+	load_method = MAGAZINE
+	handle_casings = EJECT_CASINGS
+	caliber = "a127x108"
+	magazine_type = /obj/item/ammo_casing/a127x99mm
+	max_shells = 0
+
+	//fire_sound = 'sound/weapons/kord1.ogg'
+
+	firemodes = list(
+		list(name="default", burst=3, burst_delay=0.5, fire_delay=1.5, dispersion=list(0), accuracy=list(2))
+		)
+
+/obj/item/weapon/gun/projectile/minigun/kord/rotate_to(mob/user, atom/A)
+	var/shot_dir = get_carginal_dir(src, A)
+	dir = shot_dir
+
+	var/diff_x = 0
+	var/diff_y = 0
+	if(dir == EAST)
+		diff_x = -16 + user_old_x
+	if(dir == WEST)
+		diff_x = 16 + user_old_x
+	if(dir == NORTH)
+		diff_y = -16 + user_old_y
+	if(dir == SOUTH)
+		diff_y = 16 + user_old_y
+
+	user.forceMove(src.loc)
+	user.dir = src.dir
+	animate(user, pixel_x=diff_x, pixel_y=diff_y, 4, 1)

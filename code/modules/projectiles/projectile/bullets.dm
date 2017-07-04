@@ -344,6 +344,7 @@
 
 /obj/item/projectile/bullet/rifle/ags30x29mm
 	name = "AGS' bullet"
+	icon_state = "vog"
 	damage = 50
 	agony = 20
 	embed = 0

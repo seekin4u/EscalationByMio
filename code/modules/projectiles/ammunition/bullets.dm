@@ -294,8 +294,8 @@
 	icon_state = "rifle-casing"
 	spent_icon = "rifle-casing-spent"
 
-/obj/item/ammo_casings/ags30x29mm
-	desc = "A 30x29mm AGS-17' VOG casing
+/obj/item/ammo_casing/ags30x29mm
+	desc = "A 30x29mm AGS-17' VOG casing"
 	caliber = "30x29mm"
 	projectile_type = /obj/item/projectile/bullet/rifle/ags30x29mm
 	icon_state = "vog17-casing"

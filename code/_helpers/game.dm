@@ -343,6 +343,19 @@ proc/isInSight(var/atom/A, var/atom/B)
 			return M
 	return null
 
+/proc/get_carginal_dir(atom/start, atom/finish)
+	var/dx = finish.x - start.x
+	var/dy = finish.y - start.y
+	if(abs(dy) > abs(dx))
+		if(dy > 0)
+			return NORTH
+		else
+			return SOUTH
+	else
+		if(dx > 0)
+			return EAST
+		else
+			return WEST
 
 // Will return a list of active candidates. It increases the buffer 5 times until it finds a candidate which is active within the buffer.
 /proc/get_active_candidates(var/buffer = 1)

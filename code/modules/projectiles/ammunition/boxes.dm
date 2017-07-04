@@ -427,8 +427,8 @@
 /obj/item/ammo_magazine/ags30x29mm
 	name = "magazine box (VOG 30x29mm)"
 	icon_state = "ags30x29mm"
-	mag_tupe = MAGAZINE
+	mag_type = MAGAZINE
 	caliber = "30x29mm"
-	ammo_type = /obj/item/ammo_casings/ags30x29mm
+	ammo_type = /obj/item/ammo_casing/ags30x29mm
 	max_ammo = 30
 	multiple_sprites = 1
