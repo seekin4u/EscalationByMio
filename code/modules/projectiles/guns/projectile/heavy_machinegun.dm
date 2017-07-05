@@ -24,6 +24,7 @@
 
 	var/user_old_x = 0
 	var/user_old_y = 0
+	var/mob/used_by_mob = null
 
 /obj/item/weapon/gun/projectile/minigun/attack_hand(mob/user)
 	if(user.using_object == src)
@@ -34,13 +35,13 @@
 		var/turf/T = get_step(src.loc, grip_dir)
 		if(user.loc == T)
 			if(user.get_active_hand() == null && user.get_inactive_hand() == null)
-				user.use_object(src)
+				started_using(user)
 			else
 				user << "\red Your hands are busy by holding things."
 		else
 			user << "\red You're too far from the handles."
 
-/obj/item/weapon/gun/projectile/minigun/usedby(mob/user, atom/A, params)
+/obj/item/weapon/gun/projectile/minigun/proc/usedby(mob/user, atom/A, params)
 	if(A == src)
 		switch_firemodes(user)
 
@@ -62,8 +63,9 @@
 	return 1
 
 /obj/item/weapon/gun/projectile/minigun/proc/rotate_to(mob/user, atom/A)
-	user << "<span class='warning'>You can't turn the [name] there.</span>"
-	return 0
+	if(anchored)
+		user << "<span class='warning'>You can't turn the [name] there.</span>"
+		return 0
 
 /obj/item/weapon/gun/projectile/minigun/proc/update_layer()
 	if(dir == NORTH)
@@ -71,8 +73,12 @@
 	else
 		layer = FLY_LAYER - 0.1
 
-/obj/item/weapon/gun/projectile/minigun/started_using(mob/user as mob)
-	..()
+/obj/item/weapon/gun/projectile/minigun/proc/started_using(mob/user as mob)
+	user.visible_message("<span class='notice'>[user.name] handeled \the [src].</span>", \
+						 "<span class='notice'>You handeled \the [src].</span>")
+	used_by_mob = user
+	user.using_object = src
+	user.update_canmove()
 	var/diff_x = 0
 	var/diff_y = 0
 	if(dir == EAST)
@@ -91,18 +97,39 @@
 	user.dir = src.dir
 	animate(user, pixel_x=diff_x, pixel_y=diff_y, 4, 1)
 
-/obj/item/weapon/gun/projectile/minigun/stopped_using(mob/user as mob)
-	..()
+/obj/item/weapon/gun/projectile/minigun/proc/stopped_using(mob/user as mob)
+	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
+						 "<span class='notice'>You released \the [src].</span>")
+	used_by_mob = null
+	user.using_object = null
+	user.update_canmove()
+	user.anchored = 0
 	var/grip_dir = reverse_direction(dir)
+	var/old_dir = dir
 	step(user, grip_dir)
 	animate(user, pixel_x=user_old_x, pixel_y=user_old_y, 4, 1)
+	user.dir = old_dir // visual better
 
 /obj/item/weapon/gun/projectile/minigun/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
-	if(air_group || (height==0)) return 1
 	if(istype(mover, /obj/item/projectile))
 		return 1
 	return 0
 
+/obj/item/weapon/gun/projectile/minigun/AltClick(mob/user)
+	..()
+	if(used_by_mob == user)
+		safety = !safety
+		playsound(user, 'sound/weapons/selector.ogg', 50, 1)
+		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+
+/obj/item/weapon/gun/projectile/minigun/verb/set_anchored()
+	set name = "sukakakoetutnazvaniebleat"
+	set category = "Object"
+	set src in view(1)
+
+	if(usr.stat || usr.restrained())
+		return
+	anchored = !anchored
 ///////////////////////
 ////Stationary KORD////
 ///////////////////////

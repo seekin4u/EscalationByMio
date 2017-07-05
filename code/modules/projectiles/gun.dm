@@ -67,7 +67,7 @@
 	var/unload_sound 	= 'sound/weapons/flipblade.ogg'
 	var/reload_sound 	= null //We don't want these for guns that don't have them.
 	var/cocked_sound 	= null
-	var/safety = 0 //Whether or not the safety is on.
+	var/safety = 1 //Whether or not the safety is on.
 
 	var/next_fire_time = 0
 

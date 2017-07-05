@@ -12,8 +12,6 @@
 	var/damtype = "brute"
 	var/armor_penetration = 0
 
-	var/mob/used_by_mob = null
-
 /obj/Destroy()
 	processing_objects -= src
 	return ..()
@@ -203,19 +201,3 @@
 				update_icon()
 			return
 	return ..()
-
-/obj/proc/usedby(mob/user as mob, atom/A as obj, params)
-	user.use_object(null)
-	return
-
-/obj/proc/started_using(mob/user as mob)
-	user.visible_message("<span class='notice'>[user.name] handeled \the [src].</span>", \
-						"<span class='notice'>You handeled \the [src].</span>")
-	to_chat(world, "started_using")
-	return
-
-/obj/proc/stopped_using(mob/user as mob)
-	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
-						"<span class='notice'>You released \the [src].</span>")
-	to_chat(world, "stopped_using")
-	return
