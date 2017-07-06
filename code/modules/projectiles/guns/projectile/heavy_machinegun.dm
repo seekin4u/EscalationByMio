@@ -2,12 +2,12 @@
 ////Stationary Machinegun////
 /////////////////////////////
 /obj/item/weapon/gun/projectile/minigun
-	name = "minigun"
+	name = "staionary machinegun"
 	desc = "6-barreled highspeed machinegun."
 	icon_state = "minigun"
 	item_state = ""
 	layer = FLY_LAYER
-	anchored = 1
+	anchored = 0
 	density = 1
 	w_class = 6
 	load_method = MAGAZINE
@@ -18,22 +18,31 @@
 	ammo_type = /obj/item/ammo_casing/a4mm
 
 	firemodes = list(
-		list(name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0), accuracy=list(0)),
-		list(name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1, dispersion=list(1.5), accuracy=list(0))
+		list(mode_name="(3000 rpm)", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0), accuracy=list(0)),
+		list(mode_name="(6000 rpm)", burst=20, burst_delay=0.05, fire_delay=1, dispersion=list(1.5), accuracy=list(0))
 		)
 
 	var/user_old_x = 0
 	var/user_old_y = 0
 	var/mob/used_by_mob = null
 
+/obj/item/weapon/gun/projectile/minigun/New()
+	..()
+	verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
+
 /obj/item/weapon/gun/projectile/minigun/attack_hand(mob/user)
 	if(user.using_object == src)
 		if(firemodes.len > 1)
-			switch_firemodes(user)
+			var/datum/firemode/new_mode = switch_firemodes(user)
+			if(new_mode)
+				to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
 	else
 		var/grip_dir = reverse_direction(dir)
 		var/turf/T = get_step(src.loc, grip_dir)
 		if(user.loc == T)
+			if(!anchored)
+				user << "You need to attach [name] to the ground first!"
+				return
 			if(user.get_active_hand() == null && user.get_inactive_hand() == null)
 				started_using(user)
 			else
@@ -43,7 +52,9 @@
 
 /obj/item/weapon/gun/projectile/minigun/proc/usedby(mob/user, atom/A, params)
 	if(A == src)
-		switch_firemodes(user)
+		var/datum/firemode/new_mode = switch_firemodes(user)
+		if(new_mode)
+			to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
 
 	if(check_direction(user, A))
 		afterattack(A, user, 0, params)
@@ -122,14 +133,41 @@
 		playsound(user, 'sound/weapons/selector.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
 
-/obj/item/weapon/gun/projectile/minigun/verb/set_anchored()
-	set name = "sukakakoetutnazvaniebleat"
+/obj/item/weapon/gun/projectile/minigun/proc/toggle_anchored(mob/user as mob)
+
+	if(user.stat || user.restrained())
+		return
+
+	if(used_by_mob && anchored)
+		used_by_mob << "You can't detach the [name] while someone using it"
+		return
+
+	user << "You starting [anchored ? "detaching" : "attaching"] the [name] [anchored ? "from" : "to"] floor."
+	if(do_after(user, 20, src))
+		if(!anchored)
+			anchored = 1
+			verbs += /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
+			verbs -= /obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground
+			user << "You attach the [name] to ground"
+		else
+			anchored = 0
+			verbs += /obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground
+			verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
+			user << "You detach the [name] from ground"
+
+/obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground()
+	set name = "Attach to ground"
 	set category = "Object"
 	set src in view(1)
 
-	if(usr.stat || usr.restrained())
-		return
-	anchored = !anchored
+	toggle_anchored(usr)
+
+/obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground()
+	set name = "Detach from ground"
+	set category = "Object"
+	set src in view(1)
+
+	toggle_anchored(usr)
 ///////////////////////
 ////Stationary KORD////
 ///////////////////////
