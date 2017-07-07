@@ -16,10 +16,14 @@
 	caliber = "4mm"
 	slot_flags = 0
 	ammo_type = /obj/item/ammo_casing/a4mm
+	burst = 10
+	burst_delay = 0.1
+	fire_delay = 1
+	dispersion = list(1.0)
 
 	firemodes = list(
-		list(mode_name="(3000 rpm)", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0)),
-		list(mode_name="(6000 rpm)", burst=20, burst_delay=0.05, fire_delay=1, dispersion=list(1.5))
+		list(mode_name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0)),
+		list(mode_name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1, dispersion=list(1.5))
 		)
 
 	var/user_old_x = 0
@@ -31,31 +35,32 @@
 	verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
 
 /obj/item/weapon/gun/projectile/minigun/attack_hand(mob/user)
-	if(user.using_object == src)
+	var/grip_dir = reverse_direction(dir)
+	var/turf/T = get_step(src.loc, grip_dir)
+	if(user.loc == T)
+		if(!anchored)
+			user << "You need to attach [name] to the ground first!"
+			return
+		if(user.get_active_hand() == null && user.get_inactive_hand() == null)
+			started_using(user)
+		else
+			user << "\red Your hands are busy by holding things."
+	else
+		user << "\red You're too far from the handles."
+
+/obj/item/weapon/gun/projectile/minigun/Fire(atom/A ,mob/user)
+	if(A == src)
 		if(firemodes.len > 1)
 			var/datum/firemode/new_mode = switch_firemodes(user)
 			if(new_mode)
 				to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
-	else
-		var/grip_dir = reverse_direction(dir)
-		var/turf/T = get_step(src.loc, grip_dir)
-		if(user.loc == T)
-			if(!anchored)
-				user << "You need to attach [name] to the ground first!"
 				return
-			if(user.get_active_hand() == null && user.get_inactive_hand() == null)
-				started_using(user)
-			else
-				user << "\red Your hands are busy by holding things."
-		else
-			user << "\red You're too far from the handles."
-
-/obj/item/weapon/gun/projectile/minigun/Fire(atom/A ,mob/user)
 	if(check_direction(user, A))
-		..()
+		return ..()
 	else
 		rotate_to(user, A)
 		update_layer()
+		return
 
 /obj/item/weapon/gun/projectile/minigun/proc/check_direction(mob/user, atom/A)
 	if(get_turf(A) == src.loc)
@@ -179,6 +184,12 @@
 	set src in view(1)
 
 	toggle_anchored(usr)
+
+/obj/item/weapon/gun/projectile/minigun/MouseDrop(over_object, src_location, over_location)
+	..()
+	if((over_object == usr && in_range(src, usr)) && !used_by_mob)
+		unload_ammo(usr, 0)
+		return
 ///////////////////////
 ////Stationary KORD////
 ///////////////////////
