@@ -69,6 +69,12 @@
 	if(!canClick()) // in the year 2000...
 		return
 
+	if(using_object)
+		if(istype(using_object, /obj/item/weapon/gun/projectile/minigun) || using_object != A)
+			var/obj/item/weapon/gun/projectile/minigun/M = using_object
+			M.Fire(A, src)
+			return 1
+
 	if(istype(loc, /obj/mecha))
 		if(!locate(/turf) in list(A, A.loc)) // Prevents inventory from being drilled
 			return

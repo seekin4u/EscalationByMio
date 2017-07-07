@@ -595,6 +595,9 @@ default behaviour is:
 	if(buckled)
 		spawn() escape_buckle()
 		return TRUE
+	if(using_object)
+		var/obj/item/weapon/gun/projectile/minigun/M = using_object
+		M.stopped_using(src)
 
 	//Breaking out of a locker?
 	if( src.loc && (istype(src.loc, /obj/structure/closet)) )
