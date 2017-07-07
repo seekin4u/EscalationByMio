@@ -18,8 +18,8 @@
 	ammo_type = /obj/item/ammo_casing/a4mm
 
 	firemodes = list(
-		list(mode_name="(3000 rpm)", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0), accuracy=list(0)),
-		list(mode_name="(6000 rpm)", burst=20, burst_delay=0.05, fire_delay=1, dispersion=list(1.5), accuracy=list(0))
+		list(mode_name="(3000 rpm)", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0)),
+		list(mode_name="(6000 rpm)", burst=20, burst_delay=0.05, fire_delay=1, dispersion=list(1.5))
 		)
 
 	var/user_old_x = 0
@@ -50,18 +50,12 @@
 		else
 			user << "\red You're too far from the handles."
 
-/obj/item/weapon/gun/projectile/minigun/proc/usedby(mob/user, atom/A, params)
-	if(A == src)
-		var/datum/firemode/new_mode = switch_firemodes(user)
-		if(new_mode)
-			to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
-
+/obj/item/weapon/gun/projectile/minigun/Fire(atom/A ,mob/user)
 	if(check_direction(user, A))
-		afterattack(A, user, 0, params)
+		..()
 	else
 		rotate_to(user, A)
 		update_layer()
-	..()
 
 /obj/item/weapon/gun/projectile/minigun/proc/check_direction(mob/user, atom/A)
 	if(get_turf(A) == src.loc)
@@ -74,9 +68,23 @@
 	return 1
 
 /obj/item/weapon/gun/projectile/minigun/proc/rotate_to(mob/user, atom/A)
-	if(anchored)
-		user << "<span class='warning'>You can't turn the [name] there.</span>"
-		return 0
+	if(!A || !user.x || !user.y || !A.x || !A.y) return // code/_onclick/click.dm 312 ln
+	var/dx = A.x - user.x
+	var/dy = A.y - user.y
+	if(!dx && !dy) return
+
+	var/direction
+	if(abs(dx) < abs(dy))
+		if(dy > 0)	direction = NORTH
+		else		direction = SOUTH
+	else
+		if(dx > 0)	direction = EAST
+		else		direction = WEST
+	src.set_dir(direction)
+	user.set_dir(direction)
+	update_pixels(user)
+	user << "You rotate the [name]"
+	return 0
 
 /obj/item/weapon/gun/projectile/minigun/proc/update_layer()
 	if(dir == NORTH)
@@ -84,29 +92,30 @@
 	else
 		layer = FLY_LAYER - 0.1
 
+/obj/item/weapon/gun/projectile/minigun/proc/update_pixels(mob/user as mob)
+	var/diff_x = 0
+	var/diff_y = 0
+	if(dir == EAST)
+		diff_x = -16 + user_old_x
+	if(dir == WEST)
+		diff_x = 16 + user_old_x
+	if(dir == NORTH)
+		diff_y = -16 + user_old_y
+	if(dir == SOUTH)
+		diff_y = 16 + user_old_y
+	animate(user, pixel_x=diff_x, pixel_y=diff_y, 4, 1)
+
 /obj/item/weapon/gun/projectile/minigun/proc/started_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] handeled \the [src].</span>", \
 						 "<span class='notice'>You handeled \the [src].</span>")
 	used_by_mob = user
 	user.using_object = src
 	user.update_canmove()
-	var/diff_x = 0
-	var/diff_y = 0
-	if(dir == EAST)
-		diff_x = -16 + user.pixel_x
-	if(dir == WEST)
-		diff_x = 16 + user.pixel_x
-	if(dir == NORTH)
-		diff_y = -16 + user.pixel_y
-	if(dir == SOUTH)
-		diff_y = 16 + user.pixel_y
-
-	user_old_x = user.pixel_x
-	user_old_y = user.pixel_y
-
 	user.forceMove(src.loc)
 	user.dir = src.dir
-	animate(user, pixel_x=diff_x, pixel_y=diff_y, 4, 1)
+	user_old_x = user.pixel_x
+	user_old_y = user.pixel_y
+	update_pixels(user)
 
 /obj/item/weapon/gun/projectile/minigun/proc/stopped_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
@@ -119,6 +128,8 @@
 	var/old_dir = dir
 	step(user, grip_dir)
 	animate(user, pixel_x=user_old_x, pixel_y=user_old_y, 4, 1)
+	user_old_x = 0
+	user_old_y = 0
 	user.dir = old_dir // visual better
 
 /obj/item/weapon/gun/projectile/minigun/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
