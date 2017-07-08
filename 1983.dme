@@ -2320,6 +2320,8 @@
 #include "code\unit_tests\zas_tests.dm"
 #include "code\unit_tests\~helpers.dm"
 #include "code\unit_tests\~unit_test_types.dm"
+#include "escalation\modules\admin\ticket.dm"
+#include "interface\inf_redirect.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_map_include.dm"

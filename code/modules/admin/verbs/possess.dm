@@ -1,6 +1,6 @@
 /proc/possess(obj/O as obj in range(world.view))
 	set name = "Possess Obj"
-	set category = "Object"
+	set category = "Admin"
 
 	if(istype(O,/obj/singularity))
 		if(config.forbid_singulo_possession)
@@ -28,7 +28,7 @@
 
 /proc/release(obj/O as obj in range(world.view))
 	set name = "Release Obj"
-	set category = "Object"
+	set category = "Admin"
 	//usr.loc = get_turf(usr)
 
 	if(usr.control_object && usr.name_archive) //if you have a name archived and if you are actually relassing an object

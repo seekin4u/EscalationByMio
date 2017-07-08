@@ -44,7 +44,7 @@ var/intercom_range_display_status = 0
 	..()
 
 /client/proc/camera_view()
-	set category = "Mapping"
+	set category = "Debug"
 	set name = "Camera Range Display"
 
 	if(camera_range_display_status)
@@ -65,7 +65,7 @@ var/intercom_range_display_status = 0
 
 
 /client/proc/sec_camera_report()
-	set category = "Mapping"
+	set category = "Debug"
 	set name = "Camera Report"
 
 	if(!master_controller)
@@ -105,7 +105,7 @@ var/intercom_range_display_status = 0
 	feedback_add_details("admin_verb","mCRP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/intercom_view()
-	set category = "Mapping"
+	set category = "Debug"
 	set name = "Intercom Range Display"
 
 	if(intercom_range_display_status)

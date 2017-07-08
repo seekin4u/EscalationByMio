@@ -95,7 +95,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/list_traders,
 	/client/proc/add_trader,
 	/client/proc/remove_trader,
-	/datum/admins/proc/sendFax
+	/datum/admins/proc/sendFax,
+	/client/proc/newadminpanel
 )
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
@@ -360,6 +361,8 @@ var/list/admin_verbs_mentor = list(
 		debug_verbs
 		)
 
+
+
 /client/proc/hide_most_verbs()//Allows you to keep some functionality while hiding some verbs
 	set name = "Adminverbs - Hide Most"
 	set category = "Admin"
@@ -394,11 +397,17 @@ var/list/admin_verbs_mentor = list(
 
 
 
-
+/client/proc/newadminpanel()
+	set name = "1983 Admin Panel"
+	set category = "Admin"
+	if(!holder) return//fuck you non admin piece of shit
+	winshow(src, "adminpanel", 1)
+	//winset(usr, "adminpanel", "serverpanel")
 
 /client/proc/admin_ghost()
 	set category = "Admin"
 	set name = "Aghost"
+	set hidden = 1
 	if(!holder)	return
 	if(isghost(mob))
 		//re-enter
@@ -453,6 +462,7 @@ var/list/admin_verbs_mentor = list(
 /client/proc/player_panel_new()
 	set name = "Player Panel New"
 	set category = "Admin"
+	set hidden = 1
 	if(holder)
 		holder.player_panel_new()
 	feedback_add_details("admin_verb","PPN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -470,6 +480,7 @@ var/list/admin_verbs_mentor = list(
 /client/proc/jobbans()
 	set name = "Display Job bans"
 	set category = "Admin"
+	set hidden = 1
 	if(holder)
 		if(config.ban_legacy_system)
 			holder.Jobbans()
@@ -481,6 +492,7 @@ var/list/admin_verbs_mentor = list(
 /client/proc/unban_panel()
 	set name = "Unban Panel"
 	set category = "Admin"
+	set hidden = 1
 	if(holder)
 		if(config.ban_legacy_system)
 			holder.unbanpanel()
@@ -492,6 +504,7 @@ var/list/admin_verbs_mentor = list(
 /client/proc/game_panel()
 	set name = "Game Panel"
 	set category = "Admin"
+	set hidden = 1
 	if(holder)
 		holder.Game()
 	feedback_add_details("admin_verb","GP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -634,6 +647,7 @@ var/list/admin_verbs_mentor = list(
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
 	set category = "Special Verbs"
+	set hidden = 1
 
 	if(!check_rights(R_ADMIN))
 		return
