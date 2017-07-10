@@ -33,7 +33,11 @@
 /obj/item/weapon/gun/projectile/minigun/New()
 	..()
 	verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
-
+/obj/item/weapon/gun/projectile/minigun/Destroy()
+	if(used_by_mob)
+		used_by_mob.using_object = null
+		used_by_mob = null
+	..()
 /obj/item/weapon/gun/projectile/minigun/attack_hand(mob/user)
 	var/grip_dir = reverse_direction(dir)
 	var/turf/T = get_step(src.loc, grip_dir)
