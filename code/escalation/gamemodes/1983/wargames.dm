@@ -45,6 +45,11 @@
 	if(ticker && ticker.mode)
 		feedback_set_details("game_mode","[ticker.mode]")
 	feedback_set_details("server_ip","[world.internet_address]:[world.port]")
+	for(var/mob/living/carbon/human/H in human_mob_list)
+		if(istype(job_master.GetJob(H.job), /datum/job/escalation/))
+			var/datum/job/escalation/J = job_master.GetJob(H.job)
+			var/datum/army_faction/AF = get_army(J.faction_tag)
+			AF.players += H
 	return 1
 
 /datum/game_mode/wargames/announce_ert_disabled()
@@ -55,5 +60,5 @@
 	return admin_ended_round
 
 /datum/game_mode/wargames/declare_completion()
-	//Put end round stats etc here.
+	to_world(show_statistic())
 	return 0

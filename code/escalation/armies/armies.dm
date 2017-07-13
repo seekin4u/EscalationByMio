@@ -35,7 +35,24 @@ proc/list_armies_by_name(var/show_disabled = 0)
 		if(F.enabled || (show_disabled && !F.enabled))
 			names += F.name
 
-	return names
+proc/show_statistic()
+	fraction live kill in action mortality rate
+	if(!ticker.mode.wargames) return
+	var/dat = ""
+	if(!all_factions.len)
+		dat = "No factions in game!"
+		return dat
+	for(var/datum/army_faction/F in all_factions)
+		var/live = 0
+		var/dead = 0
+		var/mortality_rate = 0
+		for(var/mob/living/carbon/human/H in F.players)
+			if(H.stat == 2) dead++
+			else 			life++
+		mortality_rate = round(100 * (dead / life))
+		dat += "[F.name]: [live] alive, [dead] KIA. Mortality rate: [mortality_rate]% <br>"
+	return dat
+
 //Faction parent. 'army_faction' to differentiate it from the actual basic faction code for antags
 /datum/army_faction
 	var/name = "Base Faction (never see this)"
