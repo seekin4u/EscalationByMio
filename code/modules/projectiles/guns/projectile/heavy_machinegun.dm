@@ -21,9 +21,11 @@
 	fire_delay = 1
 	dispersion = list(1.0)
 
+	fire_sound = 'sound/weapons/minigun_1sec.ogg'
+
 	firemodes = list(
 		list(mode_name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0)),
-		list(mode_name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1, dispersion=list(1.5))
+		list(mode_name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1.5, dispersion=list(1.5))
 		)
 
 	var/user_old_x = 0
@@ -33,24 +35,26 @@
 /obj/item/weapon/gun/projectile/minigun/New()
 	..()
 	verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
+
 /obj/item/weapon/gun/projectile/minigun/Destroy()
 	if(used_by_mob)
 		used_by_mob.using_object = null
 		used_by_mob = null
 	..()
+
 /obj/item/weapon/gun/projectile/minigun/attack_hand(mob/user)
 	var/grip_dir = reverse_direction(dir)
 	var/turf/T = get_step(src.loc, grip_dir)
 	if(user.loc == T)
 		if(!anchored)
-			user << "You need to attach [name] to the ground first!"
+			to_chat(user, "You need to attach [name] to the ground first!")
 			return
 		if(user.get_active_hand() == null && user.get_inactive_hand() == null)
 			started_using(user)
 		else
-			user << "\red Your hands are busy by holding things."
+			to_chat(user, "\red Your hands are busy by holding things.")
 	else
-		user << "\red You're too far from the handles."
+		to_chat(user, "\red You're too far from the handles.")
 
 /obj/item/weapon/gun/projectile/minigun/Fire(atom/A ,mob/user)
 	if(A == src)
@@ -77,22 +81,29 @@
 	return 1
 
 /obj/item/weapon/gun/projectile/minigun/proc/rotate_to(mob/user, atom/A)
-	if(!A || !user.x || !user.y || !A.x || !A.y) return // code/_onclick/click.dm 312 ln
+	if(!A || !user.x || !user.y || !A.x || !A.y)
+		return // code/_onclick/click.dm 312 ln
 	var/dx = A.x - user.x
 	var/dy = A.y - user.y
-	if(!dx && !dy) return
+	if(!dx && !dy)
+		return
 
 	var/direction
 	if(abs(dx) < abs(dy))
-		if(dy > 0)	direction = NORTH
-		else		direction = SOUTH
+		if(dy > 0)
+			direction = NORTH
+		else
+			direction = SOUTH
 	else
-		if(dx > 0)	direction = EAST
-		else		direction = WEST
+		if(dx > 0)
+			direction = EAST
+		else
+			direction = WEST
+
 	src.set_dir(direction)
 	user.set_dir(direction)
 	update_pixels(user)
-	user << "You rotate the [name]"
+	to_chat(user, "You rotate the [name]")
 	return 0
 
 /obj/item/weapon/gun/projectile/minigun/proc/update_layer()
@@ -131,8 +142,8 @@
 						 "<span class='notice'>You released \the [src].</span>")
 	used_by_mob = null
 	user.using_object = null
-	user.update_canmove()
 	user.anchored = 0
+	user.update_canmove()
 	var/grip_dir = reverse_direction(dir)
 	var/old_dir = dir
 	step(user, grip_dir)
@@ -159,21 +170,21 @@
 		return
 
 	if(used_by_mob && anchored)
-		used_by_mob << "You can't detach the [name] while someone using it"
+		to_chat(used_by_mob, "You can't detach the [name] while someone using it")// WHA?
 		return
 
-	user << "You starting [anchored ? "detaching" : "attaching"] the [name] [anchored ? "from" : "to"] floor."
+	to_chat(user, "You starting [anchored ? "detaching" : "attaching"] the [name] [anchored ? "from" : "to"] floor.")
 	if(do_after(user, 20, src))
 		if(!anchored)
 			anchored = 1
 			verbs += /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
 			verbs -= /obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground
-			user << "You attach the [name] to ground"
+			to_chat(user, "You attach the [name] to ground")
 		else
 			anchored = 0
 			verbs += /obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground
 			verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
-			user << "You detach the [name] from ground"
+			to_chat(user, "You detach the [name] from ground")
 
 /obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground()
 	set name = "Attach to ground"
@@ -194,6 +205,7 @@
 	if((over_object == usr && in_range(src, usr)) && !used_by_mob)
 		unload_ammo(usr, 0)
 		return
+
 ///////////////////////
 ////Stationary KORD////
 ///////////////////////
