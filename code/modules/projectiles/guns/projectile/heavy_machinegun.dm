@@ -1,48 +1,49 @@
 /////////////////////////////
-////Stationary Machinegun////
+////Basic heavy MG///////////
 /////////////////////////////
-/obj/item/weapon/gun/projectile/minigun
+//this thing is portable object which will fire.
+/obj/item/weapon/gun/projectile/heavy_mg
 	name = "staionary machinegun"
-	desc = "6-barreled highspeed machinegun."
-	icon_state = "minigun"
+	desc = "basic heavy machinegun."
+	icon_state = "basic-mg"
 	item_state = ""
 	layer = FLY_LAYER
 	anchored = 0
 	density = 1
 	w_class = 6
-	load_method = MAGAZINE
-	handle_casings = EJECT_CASINGS
+	load_method = SINGLE_CASING
+	handle_casings = REMOVE_CASINGS//delete it's casings after fire.
 	max_shells = 6000
-	caliber = "4mm"
-	slot_flags = 0
-	ammo_type = /obj/item/ammo_casing/a4mm
-	burst = 10
-	burst_delay = 0.1
-	fire_delay = 1
-	dispersion = list(1.0)
+	caliber = "9mm"
+	slot_flags = 0//no flags for BIG GUNS
+	ammo_type = /obj/item/ammo_casing/c9mm//9mm shots hell NO, but for tests it's OK
 
-	fire_sound = 'sound/weapons/minigun_1sec.ogg'
+	burst=1
+	burst_delay=0.1
+	fire_delay=0.1
+
+	fire_sound = 'sound/weapons/basic-mg.ogg'
 
 	firemodes = list(
-		list(mode_name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0)),
-		list(mode_name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1.5, dispersion=list(1.5))
+		list(mode_name="semiauto", burst=1, burst_delay=0.1, fire_delay=0.1),
+		list(mode_name="3-round bursts", burst=3, burst_delay=0.1, fire_delay=0.2)
 		)
 
 	var/user_old_x = 0
 	var/user_old_y = 0
 	var/mob/used_by_mob = null
 
-/obj/item/weapon/gun/projectile/minigun/New()
+/obj/item/weapon/gun/projectile/heavy_mg/New()
 	..()
-	verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
+	verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
 
-/obj/item/weapon/gun/projectile/minigun/Destroy()
+/obj/item/weapon/gun/projectile/heavy_mg/Destroy()
 	if(used_by_mob)
 		used_by_mob.using_object = null
 		used_by_mob = null
 	..()
 
-/obj/item/weapon/gun/projectile/minigun/attack_hand(mob/user)
+/obj/item/weapon/gun/projectile/heavy_mg/attack_hand(mob/user)
 	var/grip_dir = reverse_direction(dir)
 	var/turf/T = get_step(src.loc, grip_dir)
 	if(user.loc == T)
@@ -56,7 +57,7 @@
 	else
 		to_chat(user, "\red You're too far from the handles.")
 
-/obj/item/weapon/gun/projectile/minigun/Fire(atom/A ,mob/user)
+/obj/item/weapon/gun/projectile/heavy_mg/Fire(atom/A ,mob/user)
 	if(A == src)
 		if(firemodes.len > 1)
 			var/datum/firemode/new_mode = switch_firemodes(user)
@@ -70,7 +71,7 @@
 		update_layer()
 		return
 
-/obj/item/weapon/gun/projectile/minigun/proc/check_direction(mob/user, atom/A)
+/obj/item/weapon/gun/projectile/heavy_mg/proc/check_direction(mob/user, atom/A)
 	if(get_turf(A) == src.loc)
 		return 0
 
@@ -80,7 +81,7 @@
 
 	return 1
 
-/obj/item/weapon/gun/projectile/minigun/proc/rotate_to(mob/user, atom/A)
+/obj/item/weapon/gun/projectile/heavy_mg/proc/rotate_to(mob/user, atom/A)
 	if(!A || !user.x || !user.y || !A.x || !A.y)
 		return // code/_onclick/click.dm 312 ln
 	var/dx = A.x - user.x
@@ -106,13 +107,13 @@
 	to_chat(user, "You rotate the [name]")
 	return 0
 
-/obj/item/weapon/gun/projectile/minigun/proc/update_layer()
-	if(dir == NORTH)
+/obj/item/weapon/gun/projectile/heavy_mg/proc/update_layer()
+	if(dir != NORTH)
 		layer = OBJ_LAYER + 0.2
 	else
 		layer = FLY_LAYER - 0.1
 
-/obj/item/weapon/gun/projectile/minigun/proc/update_pixels(mob/user as mob)
+/obj/item/weapon/gun/projectile/heavy_mg/proc/update_pixels(mob/user as mob)
 	var/diff_x = 0
 	var/diff_y = 0
 	if(dir == EAST)
@@ -125,7 +126,7 @@
 		diff_y = 16 + user_old_y
 	animate(user, pixel_x=diff_x, pixel_y=diff_y, 4, 1)
 
-/obj/item/weapon/gun/projectile/minigun/proc/started_using(mob/user as mob)
+/obj/item/weapon/gun/projectile/heavy_mg/proc/started_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] handeled \the [src].</span>", \
 						 "<span class='notice'>You handeled \the [src].</span>")
 	used_by_mob = user
@@ -137,7 +138,7 @@
 	user_old_y = user.pixel_y
 	update_pixels(user)
 
-/obj/item/weapon/gun/projectile/minigun/proc/stopped_using(mob/user as mob)
+/obj/item/weapon/gun/projectile/heavy_mg/proc/stopped_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
 						 "<span class='notice'>You released \the [src].</span>")
 	used_by_mob = null
@@ -152,19 +153,19 @@
 	user_old_y = 0
 	user.dir = old_dir // visual better
 
-/obj/item/weapon/gun/projectile/minigun/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
+/obj/item/weapon/gun/projectile/heavy_mg/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
 		return 1
 	return 0
 
-/obj/item/weapon/gun/projectile/minigun/AltClick(mob/user)
+/obj/item/weapon/gun/projectile/heavy_mg/AltClick(mob/user)
 	..()
 	if(used_by_mob == user)
 		safety = !safety
 		playsound(user, 'sound/weapons/selector.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
 
-/obj/item/weapon/gun/projectile/minigun/proc/toggle_anchored(mob/user as mob)
+/obj/item/weapon/gun/projectile/heavy_mg/proc/toggle_anchored(mob/user as mob)
 
 	if(user.stat || user.restrained())
 		return
@@ -177,69 +178,109 @@
 	if(do_after(user, 20, src))
 		if(!anchored)
 			anchored = 1
-			verbs += /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
-			verbs -= /obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground
+			verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
+			verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground
 			to_chat(user, "You attach the [name] to ground")
 		else
 			anchored = 0
-			verbs += /obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground
-			verbs -= /obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground
+			verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground
+			verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
 			to_chat(user, "You detach the [name] from ground")
 
-/obj/item/weapon/gun/projectile/minigun/verb/attach_to_ground()
+/obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground()
 	set name = "Attach to ground"
 	set category = "Object"
 	set src in view(1)
 
 	toggle_anchored(usr)
 
-/obj/item/weapon/gun/projectile/minigun/verb/detach_from_ground()
+/obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground()
 	set name = "Detach from ground"
 	set category = "Object"
 	set src in view(1)
 
 	toggle_anchored(usr)
 
-/obj/item/weapon/gun/projectile/minigun/MouseDrop(over_object, src_location, over_location)
+/obj/item/weapon/gun/projectile/heavy_mg/MouseDrop(over_object, src_location, over_location)
 	..()
 	if((over_object == usr && in_range(src, usr)) && !used_by_mob)
 		unload_ammo(usr, 0)
 		return
 
+/////////////////////////////
+////Minigun//////////////////
+/////////////////////////////
+/obj/item/weapon/gun/projectile/heavy_mg/minigun
+	name = "staionary machinegun"
+	desc = "6-barreled highspeed machinegun."
+	icon_state = "minigun"
+	load_method = MAGAZINE
+	handle_casings = EJECT_CASINGS
+	caliber = "4mm"
+	ammo_type = /obj/item/ammo_casing/a4mm
+
+	burst=10
+	burst_delay=0.1
+	fire_delay=1
+	dispersion=list(1.0)
+
+	fire_sound = 'sound/weapons/minigun_1sec.ogg'
+
+	firemodes = list(
+		list(mode_name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0)),
+		list(mode_name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1.5, dispersion=list(1.5))
+		)
+
+//////////////////////
+///UTES///////////////
+//////////////////////
+/obj/item/weapon/gun/projectile/heavy_mg/utes
+	name = "NSV Utes"
+	desc = "Heavy machinegun"
+	icon_state = "utes"
+	load_method = MAGAZINE//we do not have ammo box for it
+	handle_casings = EJECT_CASINGS
+	caliber = "127x99mm"//fix caliber to
+	ammo_type = /obj/item/ammo_casing/a127x99mm
+//	magazine_type = /obj/item/ammo_magazine/c127x99b
+	max_shells = 0
+
+	burst = 1
+	burst_delay = 0.1
+	fire_delay = 0.1
+
+	fire_sound = 'sound/weapons/kord1.ogg'//TODO : FIND AND REPLACE
+
+	firemodes = list(
+		list(mode_name = "semiauto", burst = 1, burst_delay = 0.1, fire_delay = 0.1),
+		list(mode_name = "3-round bursts", burst = 3, burst_delay = 0.1, fire_delay = 0.5),
+		list(mode_name = "5-round bursts", burst = 5, burst_delay = 0.2, fire_delay = 0.7),
+		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_delay = 1)
+		)
+
 ///////////////////////
 ////Stationary KORD////
 ///////////////////////
-/obj/item/weapon/gun/projectile/minigun/kord
+//98 year. NOT FOR US!
+/obj/item/weapon/gun/projectile/heavy_mg/kord
 	name = "KORD"
 	desc = "Heavy machinegun"
 	icon_state = "pkms"
-	load_method = MAGAZINE
+	load_method = MAGAZINE//we do not have ammo box for it
 	handle_casings = EJECT_CASINGS
-	caliber = "a127x108"
-	magazine_type = /obj/item/ammo_casing/a127x99mm
+	caliber = "127x99mm"//cal of ammo box
+	ammo_type = /obj/item/ammo_casing/a127x99mm
+//	magazine_type = /obj/item/ammo_magazine/c127x99b//if we want mg be pre_loaded with this ammo box
 	max_shells = 0
 
-	//fire_sound = 'sound/weapons/kord1.ogg'
+	burst = 3
+	burst_delay = 0.5
+	fire_delay = 1.5
+	dispersion = list(0)
+	accuracy = list(2)
+
+	fire_sound = 'sound/weapons/kord1.ogg'
 
 	firemodes = list(
-		list(name="default", burst=3, burst_delay=0.5, fire_delay=1.5, dispersion=list(0), accuracy=list(2))
+		list(name="3-round bursts", burst=3, burst_delay=0.5, fire_delay=1.5, dispersion=list(0), accuracy=list(2))
 		)
-
-/obj/item/weapon/gun/projectile/minigun/kord/rotate_to(mob/user, atom/A)
-	var/shot_dir = get_carginal_dir(src, A)
-	dir = shot_dir
-
-	var/diff_x = 0
-	var/diff_y = 0
-	if(dir == EAST)
-		diff_x = -16 + user_old_x
-	if(dir == WEST)
-		diff_x = 16 + user_old_x
-	if(dir == NORTH)
-		diff_y = -16 + user_old_y
-	if(dir == SOUTH)
-		diff_y = 16 + user_old_y
-
-	user.forceMove(src.loc)
-	user.dir = src.dir
-	animate(user, pixel_x=diff_x, pixel_y=diff_y, 4, 1)

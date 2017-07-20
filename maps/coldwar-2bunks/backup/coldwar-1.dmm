@@ -28,26 +28,22 @@
 "B" = (/obj/effect/landmark{name = "Observer-Start"},/turf/snow,/area/coldwar)
 "C" = (/obj/effect/landmark/start,/turf/snow,/area/coldwar)
 "D" = (/obj/item/weapon/sandbag,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/obj/item/weapon/ore/glass,/turf/snow,/area/coldwar)
-"E" = (/obj/item/weapon/gun/projectile/heavy_mg/minigun,/turf/snow,/area/coldwar)
-"F" = (/obj/item/ammo_magazine/a4mm,/turf/snow,/area/coldwar)
-"G" = (/obj/item/weapon/gun/projectile/heavy_mg/kord,/turf/snow,/area/coldwar)
-"H" = (/obj/item/ammo_magazine/c127x99b,/turf/snow,/area/coldwar)
-"I" = (/obj/item/weapon/gun/projectile/heavy_mg/utes,/turf/snow,/area/coldwar)
-"J" = (/obj/item/weapon/gun/projectile/heavy_mg,/turf/snow,/area/coldwar)
-"K" = (/turf/simulated/floor/wood,/area/coldwar)
-"L" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/wood,/area/coldwar)
-"M" = (/turf/simulated/floor/tiled/white,/area/coldwar)
-"N" = (/turf/simulated/floor/lino,/area/coldwar)
-"O" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/lino,/area/coldwar)
-"P" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/wood,/area/coldwar)
-"Q" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/wood,/area/coldwar)
-"R" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/tiled/white,/area/coldwar)
-"S" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/tiled/white,/area/coldwar)
-"T" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/lino,/area/coldwar)
-"U" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/lino,/area/coldwar)
-"V" = (/obj/structure/sandbag,/turf/simulated/floor/wood,/area/coldwar)
-"W" = (/obj/structure/sandbag,/turf/simulated/floor/tiled/white,/area/coldwar)
-"X" = (/obj/structure/sandbag,/turf/simulated/floor/lino,/area/coldwar)
+"E" = (/obj/item/weapon/gun/projectile/minigun,/turf/snow,/area/coldwar)
+"F" = (/obj/item/weapon/gun/projectile/minigun/kord,/turf/snow,/area/coldwar)
+"G" = (/turf/simulated/floor/wood,/area/coldwar)
+"H" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/wood,/area/coldwar)
+"I" = (/turf/simulated/floor/tiled/white,/area/coldwar)
+"J" = (/turf/simulated/floor/lino,/area/coldwar)
+"K" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/lino,/area/coldwar)
+"L" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/wood,/area/coldwar)
+"M" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/wood,/area/coldwar)
+"N" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/tiled/white,/area/coldwar)
+"O" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/tiled/white,/area/coldwar)
+"P" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/lino,/area/coldwar)
+"Q" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/lino,/area/coldwar)
+"R" = (/obj/structure/sandbag,/turf/simulated/floor/wood,/area/coldwar)
+"S" = (/obj/structure/sandbag,/turf/simulated/floor/tiled/white,/area/coldwar)
+"T" = (/obj/structure/sandbag,/turf/simulated/floor/lino,/area/coldwar)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -293,13 +289,13 @@ bddddddjvjdlwldnxnddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaa
 bddddddjjjdllldnnnddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bddddddjjjdllldnnnddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bdddddddddyzzdddddddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bddddddABCzDzEFdGHddHIJdddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bddddddABCzDzEddFdddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bdddddddddzzzdddddddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bddddddKLKdMMMdNONddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bddddddPKQdRMSdTNUddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bddddddKVKdMWMdNXNddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bddddddKKKdMMMdNNNddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bddddddKKKdMMMdNNNddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bddddddGHGdIIIdJKJddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bddddddLGMdNIOdPJQddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bddddddGRGdISIdJTJddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bddddddGGGdIIIdJJJddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bddddddGGGdIIIdJJJddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

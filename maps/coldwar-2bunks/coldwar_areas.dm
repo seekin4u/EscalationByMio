@@ -2,7 +2,7 @@
 /area/coldwar
 	name = "area"
 	icon_state = "hallF"
-	requires_power = 1
+	requires_power = 0
 	lighting_use_dynamic = 1
 	base_turf = /turf/snow/gravsnow
 

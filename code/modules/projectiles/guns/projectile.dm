@@ -2,7 +2,7 @@
 #define CLEAR_CASINGS	1 //clear chambered so that the next round will be automatically loaded and fired, but don't drop anything on the floor
 #define EJECT_CASINGS	2 //drop spent casings on the ground after firing
 #define CYCLE_CASINGS	3 //cycle casings, like a revolver. Also works for multibarrelled guns
-
+#define REMOVE_CASINGS	4
 /obj/item/weapon/gun/projectile
 	name = "gun"
 	desc = "A gun that fires bullets."
@@ -82,6 +82,8 @@
 	if (!chambered) return
 
 	switch(handle_casings)
+		if(REMOVE_CASINGS)
+			qdel(chambered)
 		if(EJECT_CASINGS) //eject casing onto ground.
 			chambered.loc = get_turf(src)
 		if(CYCLE_CASINGS) //cycle the casing back to the end.
@@ -115,7 +117,7 @@
 				ammo_magazine = AM
 				user.visible_message("[user] inserts [AM] into [src].", "<span class='notice'>You insert [AM] into [src].</span>")
 				cock_gun(user)
-				if(reload_sound) 
+				if(reload_sound)
 					playsound(user, reload_sound, 100, 1)
 			if(SPEEDLOADER)
 				if(loaded.len >= max_shells)
@@ -133,7 +135,7 @@
 				if(count)
 					user.visible_message("[user] reloads [src].", "<span class='notice'>You load [count] round\s into [src].</span>")
 					cock_gun(user)
-					if(reload_sound) 
+					if(reload_sound)
 						playsound(user, reload_sound, 100, 1)
 		AM.update_icon()
 	else if(istype(A, /obj/item/ammo_casing))
@@ -148,7 +150,7 @@
 		C.loc = src
 		loaded.Insert(1, C) //add to the head of the list
 		user.visible_message("[user] inserts \a [C] into [src].", "<span class='notice'>You insert \a [C] into [src].</span>")
-		if(reload_sound) 
+		if(reload_sound)
 			playsound(user, reload_sound, 100, 1)
 
 	update_icon()

@@ -70,8 +70,8 @@
 		return
 
 	if(using_object)
-		if(istype(using_object, /obj/item/weapon/gun/projectile/minigun) || using_object != A)
-			var/obj/item/weapon/gun/projectile/minigun/M = using_object
+		if(istype(using_object, /obj/item/weapon/gun/projectile/heavy_mg) || using_object != A)
+			var/obj/item/weapon/gun/projectile/heavy_mg/M = using_object
 			M.Fire(A, src)
 			return 1
 
