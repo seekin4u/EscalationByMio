@@ -297,6 +297,6 @@
 /obj/item/ammo_casing/ags30x29mm
 	desc = "A 30x29mm AGS-17' VOG casing"
 	caliber = "30x29mm"
-	projectile_type = /obj/item/projectile/bullet/rifle/ags30x29mm
+	projectile_type = /obj/item/projectile/bullet/gyro/ags30x29mm
 	icon_state = "vog17-casing"
 	spent_icon = "vog17-casing-spent"

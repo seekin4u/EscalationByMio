@@ -221,7 +221,7 @@
 	desc = "6-barreled highspeed machinegun."
 	icon_state = "minigun"
 	load_method = MAGAZINE
-	handle_casings = EJECT_CASINGS
+	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
 	caliber = "4mm"
 	ammo_type = /obj/item/ammo_casing/a4mm
 
@@ -245,7 +245,7 @@
 	desc = "Heavy machinegun"
 	icon_state = "utes"
 	load_method = MAGAZINE//we do not have ammo box for it
-	handle_casings = EJECT_CASINGS
+	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
 	caliber = "127x99mm"//fix caliber to
 	ammo_type = /obj/item/ammo_casing/a127x99mm
 //	magazine_type = /obj/item/ammo_magazine/c127x99b
@@ -275,7 +275,7 @@
 	desc = "Heavy machinegun"
 	icon_state = "pkms"
 	load_method = MAGAZINE//we do not have ammo box for it yet, so we use UTES' box
-	handle_casings = EJECT_CASINGS
+	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
 	caliber = "127x99mm"//cal of ammo box
 	ammo_type = /obj/item/ammo_casing/a127x99mm
 //	magazine_type = /obj/item/ammo_magazine/c127x99b//if we want mg be pre-loaded with this ammo box
@@ -291,4 +291,31 @@
 
 	firemodes = list(
 		list(name="3-round bursts", burst=3, burst_delay=0.5, fire_delay=1.5, dispersion=list(0), accuracy=list(2))
+		)
+
+
+//////////////////////
+///AGS-17/////////////
+//////////////////////
+/obj/item/weapon/gun/projectile/heavy_mg/ags_17
+	name = "AGS-17 Plamya"
+	desc = "Automatic grenade launcher."
+	icon_state = "ags17"
+	load_method = MAGAZINE
+	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
+	caliber = "30x29mm"//cal of ammo box
+	ammo_type = /obj/item/ammo_casing/ags30x29mm
+
+	burst = 1
+	burst_delay = 0.1
+	fire_delay = 0.1
+
+	fire_sound = 'sound/weapons/gunshot/ags_17_1_shot_real.ogg'
+	//i know it's kords sounds, but it is to booring to find and copy-paste URTES' sounds
+
+	firemodes = list(
+		list(mode_name = "semiauto", burst = 1, burst_delay = 0.1, fire_delay = 0.2),
+		list(mode_name = "2-round bursts", burst = 2, burst_delay = 0.1, fire_delay = 0.3),
+		list(mode_name = "3-round bursts", burst = 3, burst_delay = 0.1, fire_delay = 0.5),
+		list(mode_name = "5-round bursts", burst = 5, burst_delay = 0.2, fire_delay = 1.0),
 		)
