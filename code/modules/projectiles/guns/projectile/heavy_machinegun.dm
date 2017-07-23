@@ -255,15 +255,15 @@
 	burst_delay = 0.1
 	fire_delay = 0.1
 
-	//fire_sound = 'sound/weapons/gunshot/heavy_mg/kord1.ogg'
+	fire_sound = 'sound/weapons/gunshot/heavy_mg/kord1.ogg'
 	//i know it's kords sounds, but it is to booring to find and copy-paste URTES' sounds
 
 	firemodes = list(
-		list(mode_name = "semiauto", burst = 1, burst_delay = 0.1, fire_sound='sound/weapons/gunshot/heavy_mg/kord1.ogg', fire_delay = 0.1),
-		list(mode_name = "2-round bursts", burst = 2, burst_delay = 0.1, fire_sound='sound/weapons/gunshot/heavy_mg/kord2.ogg' , fire_delay = 0.3),
-		list(mode_name = "3-round bursts", burst = 3, burst_delay = 0.1, fire_sound='sound/weapons/gunshot/heavy_mg/kord3.ogg', fire_delay = 0.5),
-		list(mode_name = "5-round bursts", burst = 5, burst_delay = 0.2, fire_sound='sound/weapons/gunshot/heavy_mg/kord5.ogg', fire_delay = 0.7),
-		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_sound='sound/weapons/gunshot/heavy_mg/kord10.ogg', fire_delay = 1.2)
+		list(mode_name = "semiauto", burst = 1, burst_delay = 0.1, fire_delay = 0.1),
+		list(mode_name = "2-round bursts", burst = 2, burst_delay = 0.1, fire_delay = 0.3),
+		list(mode_name = "3-round bursts", burst = 3, burst_delay = 0.1, fire_delay = 0.5),
+		list(mode_name = "5-round bursts", burst = 5, burst_delay = 0.2, fire_delay = 0.7),
+		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_delay = 1.2)
 		)
 
 ///////////////////////

@@ -333,12 +333,12 @@
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/rifle/a4mm
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	fire_sound = 'sound/weapons/minigun_1sec.ogg'
 	damage = 15
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/rifle/a127x99mm
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	fire_sound = 'sound/weapons/gunshot/heavy_mg/kord1.ogg'
 	damage = 40
 	armor_penetration = 15
 
