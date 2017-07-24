@@ -320,6 +320,7 @@
 #include "code\escalation\clothing\helmets.dm"
 #include "code\escalation\clothing\misc.dm"
 #include "code\escalation\clothing\uniforms.dm"
+#include "code\escalation\game\objects\items\weapons\mines.dm"
 #include "code\escalation\gamemodes\1983\wargames.dm"
 #include "code\escalation\jobs\civilian.dm"
 #include "code\escalation\jobs\escalation_job.dm"
