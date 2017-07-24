@@ -29,7 +29,7 @@
 			"You hear the slow creaking of a spring."
 		)
 
-		if(do_after(user, 60, src))
+		if(do_after(user, 60, user))//we need progress bar upon user, not upon mine in your hands
 			user.visible_message(
 				"<span class='danger'>\The [user] has deployed \the [src].</span>",
 				"<span class='danger'>You have deployed \the [src]!</span>",
@@ -79,3 +79,15 @@
 	..()
 
 	icon_state = "mine[deployed ? "" : "-not"]-deployed-[mine_type]"
+
+/obj/item/weapon/mine/soviet
+	name = "CA mine"
+	icon_state = "mine-not-deployed-ca"
+	desc = "Desc for CA mine. BOOM BOOM BITCH!"
+	mine_type = "ca"//see update_icon, DO NOT TOUCH
+
+/obj/item/weapon/mine/usmc
+	name = "USMC mine"
+	icon_state = "mine-not-deployed-usmc"
+	desc = "Desc for USMC mine. BOOM BOOM BITCH!"
+	mine_type = "usmc"//see update_icon
