@@ -23,10 +23,14 @@
 	check_armour = "bullet"
 	sharp = 1
 	edge = 1
+	fire_sound = 'sound/effects/explosion1.ogg'
 
-	on_hit(var/atom/target, var/blocked = 0)
+	on_impact(var/atom/A)
+		var/turf/target = get_turf(A)
+		if(!isturf(target))
+			return ..()
 		explosion(target, -1, 0, 2)
-		return 1
+		..()
 
 /obj/item/projectile/temp
 	name = "freeze beam"
@@ -108,7 +112,7 @@
 			M.show_message("<span class='notice'>The radiation beam dissipates harmlessly through your body.</span>")
 		else
 			return 1
-			
+
 /obj/item/projectile/energy/floramut/gene
 	name = "gamma somatoray"
 	icon_state = "energy2"
