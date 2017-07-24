@@ -307,15 +307,15 @@
 	ammo_type = /obj/item/ammo_casing/ags30x29mm
 
 	burst = 1
-	burst_delay = 0.1
-	fire_delay = 0.1
+	burst_delay = 1.5
+	fire_delay = 0.4
 
 	fire_sound = 'sound/weapons/gunshot/ags_17_1_shot_real.ogg'
 	//i know it's kords sounds, but it is to booring to find and copy-paste URTES' sounds
 
 	firemodes = list(
-		list(mode_name = "semiauto", burst = 1, burst_delay = 0.1, fire_delay = 0.2),
-		list(mode_name = "2-round bursts", burst = 2, burst_delay = 0.1, fire_delay = 0.3),
-		list(mode_name = "3-round bursts", burst = 3, burst_delay = 0.1, fire_delay = 0.5),
-		list(mode_name = "5-round bursts", burst = 5, burst_delay = 0.2, fire_delay = 1.0),
+		list(mode_name = "semiauto", burst = 1, burst_delay = 1.5, fire_delay = 0.4),
+		list(mode_name = "2-round bursts", burst = 2, burst_delay = 1.5, fire_delay = 0.7),
+		list(mode_name = "3-round bursts", burst = 3, burst_delay = 1.5, fire_delay = 1.0),
+		list(mode_name = "5-round bursts", burst = 5, burst_delay = 1.5, fire_delay = 1.6),
 		)
