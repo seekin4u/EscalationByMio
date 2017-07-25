@@ -218,11 +218,6 @@
 /obj/item/projectile/bullet/gyro
 	fire_sound = 'sound/effects/explosion1.ogg'
 
-/obj/item/projectile/bullet/gyro/on_hit(var/atom/target, var/blocked = 0)
-	if(isturf(target))
-		explosion(target, -1, 0, 2)
-	..()
-
 /obj/item/projectile/bullet/blank
 	invisibility = 101
 	damage = 1
@@ -333,20 +328,20 @@
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/rifle/a4mm
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	fire_sound = 'sound/weapons/minigun_1sec.ogg'
 	damage = 15
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/rifle/a127x99mm
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	fire_sound = 'sound/weapons/gunshot/heavy_mg/kord1.ogg'
 	damage = 40
 	armor_penetration = 15
 
-/obj/item/projectile/bullet/rifle/ags30x29mm
+/obj/item/projectile/bullet/gyro/ags30x29mm
 	name = "AGS' bullet"
 	icon_state = "vog"
 	damage = 50
 	agony = 20
 	embed = 0
 	edge = 1
-	//fire_sound = 'sound/weapons/gunshot/rpk47.ogg'
+	fire_sound = null//here we gonna use sound in AGS and not in bullets
