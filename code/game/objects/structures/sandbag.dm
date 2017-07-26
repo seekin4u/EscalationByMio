@@ -4,7 +4,7 @@
 	icon_state = "sandbag"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER
+	layer = OBJ_LAYER - 0.2
 	plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
@@ -115,6 +115,22 @@
 	w_class = 1
 	var/sand_amount = 4
 
+/obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
+	var/i = 0
+
+	for(var/obj/structure/sandbag/baggy in user.loc.contents)
+		i++
+		if((baggy.dir == user.dir) || i > 4)
+			to_chat(user, "\red There is no more space.")
+			return 0
+
+	return 1
+
+/obj/item/weapon/sandbag/proc/check4concrete(mob/user as mob)
+	if(locate(/obj/structure/concrete_block) in user.loc.contents)
+		return 0
+	return 1
+
 /obj/item/weapon/sandbag/attack_self(mob/user as mob)
 	if(sand_amount < 4)
 		to_chat(user,  "\red You need more sand to make wall.")
@@ -123,23 +139,10 @@
 		to_chat(user, "\red Haha. Nice try.")
 		return
 
-	var/i = 0
-
-	for(var/obj/structure/sandbag/baggy in user.loc.contents)
-		i++
-		if((baggy.dir == user.dir) || i > 4)
-			to_chat(user, "\red There is no more space.")
-			return
-
-	i = initial(i)//return to 0
-
-	for(var/obj/structure/concrete_block/blocky in user.loc.contents)
-		i++
-		if(i > 0)
-			to_chat(user, "\red There is no more space.")
-			return
-
-	i = initial(i)
+	if(!check4sandbags(user))
+		return
+	if(!check4concrete(user))
+		return
 
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
