@@ -292,7 +292,7 @@
 	mag_type = MAGAZINE
 	caliber = "762x39"
 	ammo_type = /obj/item/ammo_casing/a762x39
-	max_ammo = 300
+	max_ammo = 30
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c762x39m/ap

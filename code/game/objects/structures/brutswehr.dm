@@ -86,12 +86,14 @@
 /obj/item/weapon/ore/glass/proc/check4brut(mob/user as mob)
 	if(locate(/obj/structure/brutswehr) in user.loc.contents)
 		to_chat(user, "\red There is no more space.")
-		return
+		return 0
+	return 1
 
 /obj/item/weapon/ore/glass/proc/check4sansbag(mob/user as mob)
 	if(locate(/obj/structure/sandbag) in user.loc.contents)
 		to_chat(user, "\red There is no more space.")
-		return
+		return 0
+	return 1
 
 /obj/item/weapon/ore/glass/attack_self(mob/user as mob)
 	if(!isturf(user.loc))
