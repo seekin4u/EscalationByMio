@@ -4,11 +4,11 @@
 	icon_state = "sandbag"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = 2.8
-	plane = OBJ_PLANE
+	layer = OBJ_LAYER
+	plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/chance = 30
+	var/basic_chance = 30
 
 /obj/structure/sandbag/New()
 	..()
@@ -52,6 +52,7 @@
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/sandbag/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
+	var/chance = basic_chance
 
 	if(!cover)
 		return 1
@@ -75,20 +76,18 @@
 	if(prob(chance))
 		for(var/mob/living/carbon/human/H in view(8, src))
 			to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
-		chance = 30
 		return 0
 
-	chance = 30
 	return 1
 
 /obj/structure/sandbag/MouseDrop_T(obj/O as obj, mob/user as mob)
 	..()
-	if ((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))
+	if((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))
 		return
 	if(isrobot(user))
 		return
 	//user.drop_item()
-	if (O.loc != user.loc)
+	if(O.loc != user.loc)
 		to_chat(user, "you start climbing onto [O]...")
 		step(O, get_dir(O, src))
 	return
@@ -132,13 +131,15 @@
 			to_chat(user, "\red There is no more space.")
 			return
 
-	i = 0
+	i = initial(i)//return to 0
 
 	for(var/obj/structure/concrete_block/blocky in user.loc.contents)
 		i++
 		if(i > 0)
 			to_chat(user, "\red There is no more space.")
 			return
+
+	i = initial(i)
 
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
