@@ -5,11 +5,11 @@
 	icon_state = "concrete_block"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER//+0.1 makes this block be upon sandbag or brutswehr(what is not possible lul)
+	layer = OBJ_LAYER - 0.1//-0.1 makes this block be upon sandbag or brutswehr(what is not possible lul)
 	plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/chance = 40
+	var/basic_chance = 40
 
 /obj/structure/concrete_block/New()
 	..()
@@ -53,6 +53,7 @@
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/concrete_block/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
+	var/chance = basic_chance
 
 	if(!cover)
 		return 1
@@ -77,10 +78,8 @@
 	if(prob(chance))
 		for(var/mob/living/carbon/human/H in view(8, src))
 			to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
-		chance = 40//replase with initial(chance)!
 		return 0
 
-	chance = 40
 	return 1
 
 /obj/structure/concrete_block/MouseDrop_T(obj/O as obj, mob/user as mob)

@@ -74,8 +74,7 @@
 		chance += 10
 
 	if(prob(chance))
-		for(var/mob/living/carbon/human/H in view(8, src))
-			to_chat(H, "<span class='warning'>[P] hits \the [src]!</span>")
+		visible_message("<span class='warning'>[P] hits \the [src]!</span>")
 		return 0
 
 	return 1
@@ -128,6 +127,13 @@
 
 /obj/item/weapon/sandbag/proc/check4concrete(mob/user as mob)
 	if(locate(/obj/structure/concrete_block) in user.loc.contents)
+		to_chat(user, "\red There is no more space.")
+		return 0
+	return 1
+
+/obj/item/weapon/sandbag/proc/check4brutswehr(mob/user as mob)
+	if(locate(/obj/structure/brutswehr) in user.loc.contents)
+		to_chat(user, "\red There is no more space.")
 		return 0
 	return 1
 
@@ -139,9 +145,7 @@
 		to_chat(user, "\red Haha. Nice try.")
 		return
 
-	if(!check4sandbags(user))
-		return
-	if(!check4concrete(user))
+	if(!check4sandbags(user) || !check4concrete(user) || !check4brutswehr(user))
 		return
 
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
