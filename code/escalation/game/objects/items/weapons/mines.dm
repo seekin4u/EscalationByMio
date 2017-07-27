@@ -73,7 +73,7 @@
 		triggered = 1
 		explosion(loc, 0, 1, 2, 3)
 	else
-		to_chat(AM, "<b>Thanks to god mine wasn't deployed!</b>")
+		to_chat(AM, "<b>It wasn't deployed.</b>")
 
 /obj/item/weapon/mine/update_icon()
 	..()
