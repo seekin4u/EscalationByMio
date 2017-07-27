@@ -1,7 +1,7 @@
 
 /obj/item/clothing/head/helmet/usmc
 	name = "PASGT Helmet"
-	desc = "A kevlar helmet also known as the 'K-pot'. Used primarily by the US armed forces."
+	desc = "An olive kevlar helmet."
 	icon_state = "pasgtm81-olive"
 
 	body_parts_covered = HEAD
@@ -9,7 +9,7 @@
 
 /obj/item/clothing/head/helmet/bund
 	name = "M1 Helmet"
-	desc = "A steel helmet also known as the 'steel pot'. Used by both the Bundeswehr and US Armed Forces for decades."
+	desc = "A steel helmet."
 	icon_state = "m1helmet"
 
 	body_parts_covered = HEAD
@@ -17,7 +17,7 @@
 
 /obj/item/clothing/head/helmet/ssh68
 	name = "SSh-68 Helmet"
-	desc = "A steel helmet used by most Warsaw Pact countries. Not designed to protect against bullets, but excellent against shrapnel."
+	desc = "A steel helmet."
 	icon_state = "m1helmet"
 
 	body_parts_covered = HEAD
@@ -25,7 +25,7 @@
 
 /obj/item/clothing/head/helmet/redcross
 	name = "M1 Red Cross Helmet"
-	desc = "A steel helmet also known as the 'steel pot'. This one is painted in Red Cross colors."
+	desc = "A steel helmet. This one has the Red Cross insignia on it."
 	icon_state = "m1red"
 
 	body_parts_covered = HEAD
