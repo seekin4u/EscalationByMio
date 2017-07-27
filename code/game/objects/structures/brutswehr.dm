@@ -5,11 +5,11 @@
 	icon_state = "brutswer"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER - 0.1
+	layer = OBJ_LAYER - 0.3 //makes brut be under sandbag
 	plane = OBJ_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/chance = 20//lower means lower chance to stop bullet in percents
+	var/basic_chance = 20//lower means lower chance to stop bullet in percents
 
 /obj/structure/brutswehr/New()
 	..()
@@ -36,6 +36,8 @@
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/brutswehr/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover = get_turf(src)
+	var/chance = basic_chance
+
 	if(!cover)
 		return 1
 
@@ -48,12 +50,11 @@
 		to_chat(world, "MOB DETECTED NEAR BRUTSWEHTR")
 
 	if(prob(chance))
-		for(var/mob/living/carbon/human/M in view(8, src)) //replace on "vievers(src.loc, 8)"
-			to_chat(M, "<span class='warning'>[P] hits \the [src]!</span>")
-		chance = 20
-		to_chat(world, "BRUTSVER_PROB:[chance]")
+		visible_message("<span class='warning'>[P] hits \the [src]!</span>")
 		return 0
-	chance = 20
+
+	to_chat(world, "BRUTSVER_PROB:[chance]")
+
 	return 1
 
 /obj/structure/brutswehr/MouseDrop_T(obj/O as obj, mob/user as mob)
@@ -72,8 +73,6 @@
 	switch(severity)
 		if(1.0)
 			new /obj/item/weapon/ore/glass(src.loc)
-			new /obj/item/weapon/ore/glass(src.loc)
-			new /obj/item/weapon/ore/glass(src.loc)
 			qdel(src)
 			return
 		if(2.0)
@@ -84,13 +83,24 @@
 		else
 	return
 
+/obj/item/weapon/ore/glass/proc/check4brut(mob/user as mob)
+	if(locate(/obj/structure/brutswehr) in user.loc.contents)
+		to_chat(user, "\red There is no more space.")
+		return 0
+	return 1
+
+/obj/item/weapon/ore/glass/proc/check4sansbag(mob/user as mob)
+	if(locate(/obj/structure/sandbag) in user.loc.contents)
+		to_chat(user, "\red There is no more space.")
+		return 0
+	return 1
+
 /obj/item/weapon/ore/glass/attack_self(mob/user as mob)
 	if(!isturf(user.loc))
 		to_chat(user, "\red Haha. Nice try.")
 		return
 
-	if(locate(/obj/structure/brutswehr, user.loc.contents) || locate(/obj/structure/sandbag, user.loc.contents))
-		to_chat(user, "\red There is no more space.")
+	if(!check4brut(user) || !check4sansbag(user))
 		return
 
 	var/obj/structure/brutswehr/B = new(user.loc)
