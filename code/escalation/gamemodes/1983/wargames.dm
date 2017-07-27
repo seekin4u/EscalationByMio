@@ -1,4 +1,4 @@
-//Very basic escalation 1984 gamemode. has no objectives, admins have to set everything.
+//Very basic escalation 1983 gamemode. has no objectives, admins have to set everything.
 
 /datum/game_mode/wargames
 	name = "Wargames_1983"

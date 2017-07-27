@@ -6,7 +6,7 @@
 
 /obj/structure/flora/tree/dead_big_96x96/New()
 	..()
-	icon_state = "tree_winter_96x96_1"//replace end of string to rand(1,*) if we'll sprite enough trees
+	icon_state = "tree_winter_96x96_1"//replace end of string to rand(1,*) if we sprite enough trees
 
 /obj/structure/flora/tree/dead_big_64x128
 	name = "dead tree"
@@ -15,4 +15,4 @@
 
 /obj/structure/flora/tree/dead_big_64x128/New()
 	..()
-	icon_state = "tree_winter_64x128_1"//replace end of string to rand(1,*) if we'll sprite enough trees
+	icon_state = "tree_winter_64x128_1"//replace end of string to rand(1,*) if we sprite enough trees
