@@ -7,7 +7,7 @@
 	density = 1
 	throwpass = 1
 	layer = ABOVE_OBJ_LAYER + 0.1
-	plane = ABOVE_HUMAN_PLANE
+	plane = OBJ_PLANE
 	flags = OBJ_CLIMBABLE
 
 
