@@ -5,7 +5,7 @@
 	density = 1
 	pixel_x = -16
 	plane = ABOVE_HUMAN_PLANE
-	layer = ABOVE_HUMAN_LAYER
+	layer = ABOVE_HUMAN_LAYER + 1//trees now upon every cover we have in buid ~don bastardo
 
 /obj/structure/flora/tree/pine
 	name = "pine tree"
