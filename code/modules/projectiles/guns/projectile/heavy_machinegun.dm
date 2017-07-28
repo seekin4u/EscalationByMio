@@ -16,7 +16,7 @@
 	layer = FLY_LAYER
 	anchored = 0
 	density = 1
-	w_class = 6
+	w_class = ITEM_SIZE_GARGANTUAN
 	load_method = SINGLE_CASING
 	handle_casings = REMOVE_CASINGS//delete it's casings after fire.
 	max_shells = 6000
