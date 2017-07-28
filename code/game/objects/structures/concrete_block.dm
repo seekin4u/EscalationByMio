@@ -1,10 +1,10 @@
 /obj/structure/concrete_block
 	name = "concrete block"
-	desc = "Stronk concrete structure to cover your ass!"
+	desc = "A concrete block you can take cover behind."
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "concrete_block"
 	density = 1
-	throwpass = 1//we can throw granades despite it's density
+	throwpass = 1//we can throw grenades despite its density
 	layer = ABOVE_HUMAN_LAYER
 	plane = ABOVE_HUMAN_PLANE
 	anchored = 1
@@ -74,7 +74,7 @@
 			chance += 20
 
 	if(get_dir(loc, from) == dir)
-		to_chat(world, "You fire in front of cpncrete block:[chance]")
+		to_chat(world, "You fire in front of concrete block:[chance]")
 		chance += 10
 
 	if(prob(chance))

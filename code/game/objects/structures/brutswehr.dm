@@ -1,15 +1,15 @@
 /obj/structure/brutswehr
-	name = "brutswehr"
-	desc = "Land structure to cover your ass!"
+	name = "brustwehr"
+	desc = "Land structure to cover your ass!" //change this stupid description
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "brutswer"
 	density = 1
-	throwpass = 1//we can throw granades despite it's density
+	throwpass = 1//we can throw grenades despite its density
 	layer = BELOW_OBJ_LAYER - 0.2 //1.8
 	//plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/basic_chance = 20//lower means lower chance to stop bullet in percents
+	var/basic_chance = 20//lower means lower chance to stop bullet in percentage
 
 /obj/structure/brutswehr/New()
 	..()
