@@ -5,8 +5,8 @@
 	icon_state = "brutswer"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER - 0.3 //makes brut be under sandbag
-	plane = OBJ_PLANE
+	layer = BELOW_OBJ_LAYER - 0.2 //1.8
+	//plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
 	var/basic_chance = 20//lower means lower chance to stop bullet in percents
@@ -14,6 +14,7 @@
 /obj/structure/brutswehr/New()
 	..()
 	flags |= ON_BORDER
+	set_dir(dir)
 
 /obj/structure/brutswehr/Destroy()
 	//chance = null
@@ -42,18 +43,18 @@
 		return 1
 
 	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-		to_chat(world, "You are more than one tile from brutswehr. Returned 1")
+		to_world("You are more than one tile from brutswehr. Returned 1")
 		return 1
 
 	for(var/mob/living/carbon/human/H in view(src, 2))//if there are mob somewhere near in range of 1 tile
 		chance = initial(chance) + 10
-		to_chat(world, "MOB DETECTED NEAR BRUTSWEHTR")
+		to_world("MOB DETECTED NEAR BRUTSWEHTR")
 
 	if(prob(chance))
 		visible_message("<span class='warning'>[P] hits \the [src]!</span>")
 		return 0
 
-	to_chat(world, "BRUTSVER_PROB:[chance]")
+	to_world("BRUTSVER_PROB:[chance]")
 
 	return 1
 

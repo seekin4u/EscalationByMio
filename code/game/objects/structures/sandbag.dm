@@ -4,8 +4,8 @@
 	icon_state = "sandbag"
 	density = 1
 	throwpass = 1//we can throw granades despite it's density
-	layer = OBJ_LAYER - 0.2
-	plane = ABOVE_HUMAN_PLANE
+	layer = ABOVE_HUMAN_LAYER - 0.3
+	//plane = ABOVE_HUMAN_PLANE//-15
 	anchored = 1
 	flags = OBJ_CLIMBABLE
 	var/basic_chance = 30
@@ -13,7 +13,8 @@
 /obj/structure/sandbag/New()
 	..()
 	flags |= ON_BORDER
-	to_chat(world, " New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
+	set_dir(dir)
+	to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/Destroy()
 	//chance = null
@@ -22,9 +23,9 @@
 /obj/structure/sandbag/set_dir(direction)
 	dir = direction
 	if(dir != NORTH)
-		layer = ABOVE_HUMAN_LAYER
+		layer = ABOVE_OBJ_LAYER + 0.1
 		plane = ABOVE_HUMAN_PLANE
-		to_chat(world, " set_dir. Dir:[dir]; Layer:[layer]; plane:[plane]")
+		to_world(" set_dir. Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
@@ -58,19 +59,19 @@
 		return 1
 
 	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-		to_chat(world, "You are more than one tile from sandbag. Returns 1")
+		to_world("You are more than one tile from sandbag. Returns 1")
 		return 1
 
 	var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
 	if(M)
 		chance += 30
-		to_chat(world, "Mob located!:[chance]")
+		to_world("Mob located!:[chance]")
 
 		if(M.lying)
 			chance += 20
 
 	if(get_dir(loc, from) == dir)
-		to_chat(world, "You fire in front of sandbag:[chance]")
+		to_world("You fire in front of sandbag:[chance]")
 		chance += 10
 
 	if(prob(chance))
