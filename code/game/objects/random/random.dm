@@ -1006,9 +1006,9 @@ something, make sure it's not in one of the other lists.*/
 					prob(7);/obj/item/weapon/FixOVein,\
 					prob(7);/obj/item/weapon/retractor,\
 					prob(7);/obj/item/weapon/hemostat,\
-					prob(7);/obj/item/weapon/cautery,\
+					prob(7);/obj/item/weapon/needle,\
 					prob(7);/obj/item/weapon/bonesetter,\
-					prob(7);/obj/item/weapon/bonegel,\
+					prob(7);/obj/item/weapon/plate,\
 					prob(7);/obj/item/weapon/circular_saw,\
 					prob(7);/obj/item/weapon/scalpel,\
 					prob(9);/obj/item/weapon/melee/baton/loaded,\

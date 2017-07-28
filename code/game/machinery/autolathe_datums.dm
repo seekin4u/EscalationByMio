@@ -246,9 +246,9 @@
 	path = /obj/item/weapon/retractor
 	category = "Medical"
 
-/datum/autolathe/recipe/cautery
-	name = "cautery"
-	path = /obj/item/weapon/cautery
+/datum/autolathe/recipe/needle
+	name = "surgical needle"
+	path = /obj/item/weapon/needle
 	category = "Medical"
 
 /datum/autolathe/recipe/hemostat

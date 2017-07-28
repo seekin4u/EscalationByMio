@@ -2,7 +2,7 @@
  * Contains:
  *		Retractor
  *		Hemostat
- *		Cautery
+ *		Needle
  *		Surgical Drill
  *		Scalpel
  *		Circular Saw
@@ -36,18 +36,18 @@
 	attack_verb = list("attacked", "pinched")
 
 /*
- * Cautery
+ * Needle
  */
-/obj/item/weapon/cautery
-	name = "cautery"
+/obj/item/weapon/needle
+	name = "surgical needle"
 	desc = "This stops bleeding."
 	icon = 'icons/obj/surgery.dmi'
-	icon_state = "cautery"
+	icon_state = "needle"
 	matter = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 2500)
 	flags = CONDUCT
 	w_class = ITEM_SIZE_SMALL
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
-	attack_verb = list("burnt")
+	attack_verb = list("punctured")
 
 /*
  * Surgical Drill
@@ -137,13 +137,46 @@
 	edge = 1
 
 //misc, formerly from code/defines/weapons.dm
-/obj/item/weapon/bonegel
-	name = "bone gel"
+
+/obj/item/weapon/setofplates
+	name = "set of plates"
+	desc = "Set of plates and pins of different sizes and forms."
 	icon = 'icons/obj/surgery.dmi'
-	icon_state = "bone-gel"
+	icon_state = "setofplates"
 	force = 0
-	w_class = ITEM_SIZE_SMALL
+	w_class = ITEM_SIZE_HUGE
 	throwforce = 1.0
+
+/obj/item/weapon/setofplates/attack_hand(mob/user as mob)
+	if(!ishuman(user))
+		return
+	if(user.get_inactive_hand() != src)
+		return ..()
+	var/mob/living/carbon/human/H = user
+	var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
+	if (H.hand)
+		temp = H.organs_by_name[BP_L_HAND]
+	if(temp && !temp.is_usable())
+		to_chat(user, "<span class='notice'>You try to move your [temp.name], but cannot!</span>")
+		return
+
+	var/obj/item/weapon/plate/P
+	P = new /obj/item/weapon/plate
+	P.loc = user.loc
+	user.put_in_hands(P)
+	to_chat(user, "<span class='notice'>You took \the [P.name] out of the case.</span>")
+
+/obj/item/weapon/plate
+	name = "plate"
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "plate0"
+	force = 0
+	w_class = ITEM_SIZE_TINY
+	throwforce = 1.0
+
+/obj/item/weapon/plate/New()
+	..()
+	icon_state = "plate[rand(0, 4)]"
 
 /obj/item/weapon/FixOVein
 	name = "FixOVein"
