@@ -3,7 +3,7 @@
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "sandbag"
 	density = 1
-	throwpass = 1//we can throw granades despite it's density
+	throwpass = 1//we can throw grenades despite its density
 	layer = ABOVE_HUMAN_LAYER - 0.3
 	//plane = ABOVE_HUMAN_PLANE//-15
 	anchored = 1
@@ -140,10 +140,10 @@
 
 /obj/item/weapon/sandbag/attack_self(mob/user as mob)
 	if(sand_amount < 4)
-		to_chat(user,  "\red You need more sand to make wall.")
+		to_chat(user,  "\red You need more sand to make a wall.")
 		return
 	if(!isturf(user.loc))
-		to_chat(user, "\red Haha. Nice try.")
+		to_chat(user, "\red Haha.")
 		return
 
 	if(!check4sandbags(user) || !check4concrete(user) || !check4brutswehr(user))

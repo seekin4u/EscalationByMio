@@ -1,6 +1,6 @@
 /obj/structure/chezh_hangehog
 	name = "Tank trap"
-	desc = "Land structure to protect your from enemyes vehicles!"
+	desc = "An obstacle defense made of metal angle beams."
 	icon = 'icons/escalation/obj/structures.dmi'
 	icon_state = "tank_trap"
 	anchored = 0
