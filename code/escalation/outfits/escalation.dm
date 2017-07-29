@@ -14,13 +14,13 @@
 /decl/hierarchy/outfit/nato
 	hierarchy_type = /decl/hierarchy/outfit/nato
 
-	shoes = /obj/item/clothing/shoes/military/nato
+	shoes = /obj/item/clothing/shoes/escalation/military/nato
 	id_slot = slot_wear_id
 	id_type = /obj/item/weapon/card/id/dogtags
 
 /decl/hierarchy/outfit/nato/bundes
-	uniform = /obj/item/clothing/under/bundes
-	head = /obj/item/clothing/head/helmet/bund
+	uniform = /obj/item/clothing/under/escalation/bundes
+	head = /obj/item/clothing/head/helmet/escalation/bund
 
 /decl/hierarchy/outfit/nato/bundes/platoonleader
 	name = "Bundeswehr Leader"
