@@ -7,14 +7,6 @@
 	var/totalPlayersReady = 0
 	var/datum/browser/panel
 
-	var/char_is_setup = 0
-	var/datum/job/escalation/job
-	var/fireteam_view = 0
-	var/team_view = -1
-
-	var/datum/army_faction/team_picked
-	var/datum/fireteam/fireteam_picked
-
 	universal_speak = 1
 
 	invisibility = 101
@@ -26,6 +18,14 @@
 	anchored = 1	//  don't get pushed around
 
 	virtual_mob = null // Hear no evil, speak no evil
+
+	// Escalation
+	var/datum/job/escalation/job
+	var/fireteam_view = 0
+	var/team_view = 0
+
+	var/datum/army_faction/team_picked
+	var/datum/fireteam/fireteam_picked
 	var/picking_teams = 0
 
 /mob/new_player/New()
@@ -39,11 +39,7 @@
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = ""
 	output +="<hr>"
-
-	if(char_is_setup)
-		output += "<p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a> (Done)</p>"
-	else
-		output += "<p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a> (Required)</p>"
+	output += "<p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a></p>"
 	if(!ready)
 		if(ticker && ticker.mode && ticker.mode.admin_enabled_joining)
 			output += "<p><a href='byond://?src=\ref[src];join=1'>Join Team!</A></p>"
@@ -56,10 +52,6 @@
 
 	if(src.client && src.client.holder && ticker.current_state == GAME_STATE_PREGAME) //Are they an admin?
 		output += "<p><a href='byond://?src=\ref[src];game_setup=1'>Game Setup</A> (Admin)</p>"
-		if(ticker && ticker.mode && ticker.mode.admin_enabled_joining)
-			output += "<p><a href='byond://?src=\ref[src];start_countdown=1'>Start Countdown</A> (Admin)</p>"
-		else
-			output += "<p>Countdown (Awaiting Setup)</p>"
 
 	panel = new(src, "Welcome","Welcome", 240, 320, src)
 	panel.set_window_options("can_close=0")
@@ -73,20 +65,25 @@
 	picking_teams = 1
 
 	var/out = "<center><p><b>[ticker.mode.name]</b></center></p>"
-	var/datum/army_faction/team = get_army(team_view)
-	if(!team)
-		team_view = 0
+	var/datum/army_faction/team = null
+	if(team_view)
+		team = get_army(team_view)
 
 	out += "<center>"
+
 	for(var/datum/army_faction/T in ticker.mode.teams)
-		if(team && team == T)
+		if(!T.check_team_whitelist_for_player(src))
+			out += "[T.name] (blocked for you)"
+		else if(team && team == T)
 			out += "[T.name]  "
 		else
 			out += "<a href='byond://?src=\ref[src];set_team=[T.team_num]'>[T.name]</A>  "
 	out += "<br/>"
 
 	for(var/datum/army_faction/N in ticker.mode.neutral_teams)
-		if(team && team == N)
+		if(!N.check_team_whitelist_for_player(src))
+			out += "[N.name] (blocked for you)"
+		else if(team && team == N)
 			out += "[N.name]  "
 		else
 			out += "<a href='byond://?src=\ref[src];set_team=[N.team_num]'>[N.name]</A>  "
@@ -100,7 +97,7 @@
 			slot_index++
 			if(istype(J,/datum/job/escalation))
 				var/datum/job/escalation/A = J
-				out += "<P><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				out += "<P><a href='byond://?src=\ref[src];set_job=[slot_index];is_fireteam=0'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/M = J
 				if(istype(M) && M.client && M.client.prefs)
@@ -131,7 +128,7 @@
 			slot_index++
 			if(istype(S,/datum/job/escalation))
 				var/datum/job/escalation/A = S
-				out += "<p><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				out += "<p><a href='byond://?src=\ref[src];set_job=[slot_index];is_fireteam=1'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/P = S
 				if(istype(P) && P.client && P.client.prefs)
@@ -189,17 +186,18 @@
 	if(href_list["set_job"])
 		var/datum/army_faction/team = get_army(team_view)
 		var/datum/fireteam/fireteam
+		var/is_fireteam = text2num(href_list["is_fireteam"])
 		if(team && fireteam_view > 0)
 			fireteam = team.fireteams[fireteam_view]
 
 		var/slot_index = text2num(href_list["set_job"])
 
-		if(fireteam && istype(fireteam.slots[slot_index],/mob/new_player))
+		if(fireteam && is_fireteam && istype(fireteam.slots[slot_index],/mob/new_player))
 			alert("Someone has already picked that job. Too slow!")
 			new_player_show_teams()
 			return
 
-		else if(!fireteam && team && istype(team.slots[slot_index],/mob/new_player))
+		else if(!is_fireteam && team && istype(team.slots[slot_index],/mob/new_player))
 			alert("Someone has already picked that job. Too slow!")
 			new_player_show_teams()
 			return
@@ -208,7 +206,7 @@
 		if(job) //They already have a job set, remove it & replace job in slots
 			job.remove_mob(fireteam_picked,team_picked,src)
 
-		if(fireteam)
+		if(fireteam && is_fireteam)
 			job = fireteam.slots[slot_index]
 			fireteam_picked = fireteam
 			team_picked = team
@@ -216,7 +214,6 @@
 		else if (team)
 			job = team.slots[slot_index]
 			fireteam_picked = null
-			fireteam_view = 0
 			team_picked = team
 			team.slots[slot_index] = src
 

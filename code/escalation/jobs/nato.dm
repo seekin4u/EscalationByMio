@@ -19,6 +19,7 @@
 	position = "team"
 	amount = 1
 	outfit_type = /decl/hierarchy/outfit/nato/bundes/platoonleader
+	leading = 1
 
 /datum/job/escalation/bund/subleader
 	title = "DE Zugfuhrer Stellvertretender"
@@ -43,6 +44,7 @@
 	rank_number = 2
 	position = "squad"
 	amount = 1
+	leading = 1
 
 /datum/job/escalation/bund/subsergeant
 	title = "DE Gruppenfuhrer Stellvertreter"
@@ -138,6 +140,7 @@
 	rank_number = 0
 	position = "team"
 	amount = 1
+	leading = 1
 
 /datum/job/escalation/usmc/lieu2
 	title = "US Staff Sergeant"
@@ -184,7 +187,8 @@
 	rank_prefix = "Sgt."
 	rank_number = 3
 	position = "squad"
-	amount = 6
+	amount = 4
+	leading = 1
 
 /datum/job/escalation/usmc/squadradio
 	title = "US Radio Operator"

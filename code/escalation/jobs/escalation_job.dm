@@ -20,8 +20,9 @@
 	var/outfit_variant_chance = 0  //Odds of getting an outfit that's not the first one in the list
 	var/rank_prefix = "PFC" //Text shown before people's names
 	var/rank_number = 0 //Determines who is above and below this rank, 0 is leader
-	var/position = "team" //"team" "squad" "fireteam". Determines where this job is sorted.
+	var/position = "team" //"team" "squad" "squad". Determines where this job is sorted.
 	var/amount = 1 //How many of this are in each team, squad, or fireteam. -1 is infinite (expanding)
+	var/leading
 
 /datum/job/escalation/proc/remove_mob(var/datum/fireteam/F, var/datum/army_faction/A, var/mob/new_player/mob)
 	var/i = 0
@@ -31,7 +32,7 @@
 			if(M == mob)
 				A.slots[i] = src
 				break
-	else if(position == "fireteam" && F)
+	else if(position == "squad" && F)
 		for(var/M in F.slots)
 			i++
 			if(M == mob)

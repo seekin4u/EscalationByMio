@@ -18,6 +18,7 @@
 	rank_number = 0
 	position = "team"
 	amount = 1
+	leading = 1
 
 /datum/job/escalation/csla/sublieutenant
 	title = "CZ Podporuchik"
@@ -175,6 +176,7 @@
 	rank_number = 0
 	position = "team"
 	amount = 1
+	leading = 1
 
 /datum/job/escalation/cccp/subleader
 	title = "CCCP Zam Komandira"
@@ -235,6 +237,7 @@
 	rank_number = 5
 	position = "squad"
 	amount = 1
+	leading = 1
 
 /datum/job/escalation/cccp/squadvice
 	title = "CCCP Starshiy Strelok"

@@ -1,6 +1,8 @@
 /mob/new_player/Logout()
 	ready = 0
-
+	if(istype(job, /datum/job/escalation))
+		var/datum/job/escalation/J = job
+		J.remove_mob(fireteam_picked, team_picked, src)
 	// see login.dm
 	if(my_client)
 		my_client.screen -= lobby_image
