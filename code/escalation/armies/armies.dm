@@ -168,6 +168,8 @@ proc/show_statistic()
 //The way these are set up is pretty much ass for when we have like 30 armies and 300 jobs, but.. whatever. Fix later
 /datum/army_faction/proc/init_jobs()
 	for(var/datum/job/escalation/J in all_army_jobs) //Add jobs to proper slots
+		J.total_positions = J.amount
+		J.spawn_positions = J.amount
 		if(J.faction_tag == faction_tag && J.enabled)
 			if(J.position == "fireteam")
 				for(var/datum/fireteam/T in fireteams)

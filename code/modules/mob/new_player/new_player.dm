@@ -95,7 +95,8 @@
 			slot_index++
 			if(istype(J,/datum/job/escalation))
 				var/datum/job/escalation/A = J
-				out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				if(A.current_positions < A.amount)
+					out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/M = J
 				var/admin_text = ""
@@ -212,7 +213,7 @@
 				ready = 1
 		else
 			if(chosenSlot)
-				AttemptLateSpawn(chosenSlot, client.prefs.spawnpoint)
+				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 
 		new_player_show_teams()
 
@@ -248,7 +249,7 @@
 				ready = 1
 		else
 			if(chosenSlot)
-				AttemptLateSpawn(chosenSlot, client.prefs.spawnpoint)
+				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 
 		new_player_show_teams()
 
