@@ -137,3 +137,19 @@
 	'sound/ambience/coldwar/hel1.ogg',
 	'sound/ambience/coldwar/hel2.ogg'
 	)
+
+/area/coldwar/trucks/
+	name = ""
+	icon = 'icons/escalation/turf/area.dmi'
+
+/area/coldwar/trucks/ural
+	name = "ural_base"
+	icon_state = "ural1"
+
+/area/coldwar/trucks/m35
+	name = "m35_base"
+	icon_state = "m35_1"
+
+/area/coldwar/trucks/lost //for lost during traveling soldiers
+	name = "lost"
+	icon_state = "lost"
