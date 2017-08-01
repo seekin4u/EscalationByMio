@@ -169,7 +169,7 @@ proc/show_statistic()
 /datum/army_faction/proc/init_jobs()
 	for(var/datum/job/escalation/J in all_army_jobs) //Add jobs to proper slots
 		if(J.faction_tag == faction_tag && J.enabled)
-			if(J.position == "squad")
+			if(J.position == "fireteam")
 				for(var/datum/fireteam/T in fireteams)
 					for(var/count = 1 to J.amount)
 						T.slots += J

@@ -12,8 +12,6 @@
 	name = "Poruchik"
 	english_name = "Lieutenant"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Por." //Poruchik
 	rank_number = 0
 	position = "team"
@@ -25,8 +23,6 @@
 	name = "Podporuchik"
 	english_name = "Sublieutenant"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Podpor." //Podporuchik
 	rank_number = 1
 	position = "team"
@@ -37,23 +33,20 @@
 	name = "Chetar"
 	english_name = "Sergeant"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Chet." //Chetar
 	rank_number = 2
-	position = "squad"
+	position = "fireteam"
 	amount = 1
+	leading = 1
 
 /datum/job/escalation/csla/subsergeant
 	title = "CZ Subchetar"
 	name = "Subchetar"
 	english_name = "Sergeant's Deputy"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Des." //Desiatnik
 	rank_number = 3
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/csla/gunner
@@ -61,11 +54,9 @@
 	name = "Strelec"
 	english_name = "Machinegunner"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Svob." //Svobodnik
 	rank_number = 4
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/csla/grenadier
@@ -73,11 +64,9 @@
 	name = "Pancerovnik"
 	english_name = "Grenadier"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Svob." //Svobodnik
 	rank_number = 4
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/csla/grenass
@@ -85,11 +74,9 @@
 	name = "Pomocnik pancerovnika"
 	english_name = "Grenadier assistant"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Voj." //Vojin
 	rank_number = 5
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/csla/teamradio
@@ -97,8 +84,6 @@
 	name = "Radista"
 	english_name = "Radioman"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Svob." //Svobodnik
 	rank_number = 5
 	position = "team"
@@ -109,11 +94,9 @@
 	name = "Radista"
 	english_name = "Radioman"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Voj." //Vojin
 	rank_number = 5
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/csla/rifleman
@@ -121,11 +104,9 @@
 	name = "Strelec"
 	english_name = "Rifleman"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Voj." //Vojin
 	rank_number = 5
-	position = "squad"
+	position = "fireteam"
 	amount = 3
 
 
@@ -135,8 +116,6 @@
 	name = "Nadstrelec"
 	english_name = "Sharpshooter"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Svob." //Svobodnik
 	rank_number = 4
 	position = "team"
@@ -147,8 +126,6 @@
 	name = "Sanitar"
 	english_name = "Field Medic"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Des." //Desiatnik
 	rank_number = 3
 	position = "team"
@@ -170,8 +147,6 @@
 	name = "Komandir Vzvoda"
 	english_name = "Platoon Leader"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Leyt." //Leytenant
 	rank_number = 0
 	position = "team"
@@ -183,8 +158,6 @@
 	name = "Zam Komandira"
 	english_name = "Platoon Leader's Deputy"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "StSer." //Starshina
 	rank_number = 2
 	position = "team"
@@ -195,8 +168,6 @@
 	name = "Kapter"
 	english_name = "Quartermaster"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Prap." //Praporshik
 	rank_number = 3
 	position = "team"
@@ -207,8 +178,6 @@
 	name = "Pomoshnik Kaptera"
 	english_name = "QM assistant"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
 	position = "team"
@@ -219,8 +188,6 @@
 	name = "Shtabnoy Radist"
 	english_name = "HQ Radioman"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
 	position = "team"
@@ -231,11 +198,9 @@
 	name = "Komandir Otdeleniya"
 	english_name = "Squad Leader"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Serzh." //Serzhant
 	rank_number = 5
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 	leading = 1
 
@@ -244,11 +209,9 @@
 	name = "Starshiy Strelok"
 	english_name = "Squad Leader Deputy"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/cccp/squadradio
@@ -256,11 +219,9 @@
 	name = "Radiotelefonist"
 	english_name = "Radioman"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/cccp/grenadier
@@ -268,11 +229,9 @@
 	name = "Granatometchik"
 	english_name = "Grenadier"  //RPG specialist
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/cccp/grenass
@@ -280,11 +239,9 @@
 	name = "Pomoshnik granatometchika"
 	english_name = "Grenadier assistant"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/cccp/machinegunner
@@ -292,11 +249,9 @@
 	name = "Pulemetchik"
 	english_name = "Machinegunner"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
-	position = "squad"
+	position = "fireteam"
 	amount = 1
 
 /datum/job/escalation/cccp/rifleman
@@ -304,11 +259,9 @@
 	name = "Strelok"
 	english_name = "Rifleman"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Ryad." //Ryadovoy
 	rank_number = 7
-	position = "squad"
+	position = "fireteam"
 	amount = 3
 
 /datum/job/escalation/cccp/marksman
@@ -316,8 +269,6 @@
 	name = "Snayper"
 	english_name = "Designater Marksman"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
 	position = "team"
@@ -329,8 +280,6 @@
 	name = "Sanitar"
 	english_name = "Field Medic"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Yefr." //Yefreytor
 	rank_number = 6
 	position = "team"
@@ -341,8 +290,6 @@
 	name = "Glavvrach"
 	english_name = "Head Medic"
 	enabled = 1
-	outfits = list("")
-	outfit_variant_chance = 0
 	rank_prefix = "Ml. Leyt." //Mladshiy Leytenant
 	rank_number = 1
 	position = "team"
