@@ -129,7 +129,8 @@
 			slot_index++
 			if(istype(S,/datum/job/escalation))
 				var/datum/job/escalation/A = S
-				out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				if(A.current_positions < A.amount)
+					out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
 				var/mob/new_player/P = S
 				var/admin_text = ""
@@ -213,8 +214,8 @@
 				ready = 1
 		else
 			if(chosenSlot)
+				onclose(usr,"Teams")
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
-
 		new_player_show_teams()
 
 	if(href_list["set_fireteam_job"])
@@ -249,8 +250,8 @@
 				ready = 1
 		else
 			if(chosenSlot)
+				onclose(usr,"Teams")
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
-
 		new_player_show_teams()
 
 	if(href_list["exit_slot"])
