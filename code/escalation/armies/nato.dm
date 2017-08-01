@@ -1,6 +1,7 @@
 /datum/army_faction/nato
 	group_name = "NATO"
 	enabled = 0
+	fireteam_names = list("Alpha", "Bravo", "Charlie", "Delta")
 
 /datum/army_faction/nato/german
 	name = "Bundeswehr"

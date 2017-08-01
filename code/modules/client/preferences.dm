@@ -110,6 +110,7 @@ datum/preferences
 	var/list/relations_info
 
 	var/list/ooc_languages = list()
+	var/datum/job/escalation/escJob = null
 
 
 /datum/preferences/New(client/C)

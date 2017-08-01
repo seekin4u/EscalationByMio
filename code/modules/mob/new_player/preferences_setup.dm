@@ -187,6 +187,9 @@ datum/preferences
 		// Determine what job is marked as 'High' priority, and dress them up as such.
 		if("Assistant" in job_low)
 			previewJob = job_master.GetJob("Assistant")
+		else if(escJob)
+			if(istype(escJob, /datum/job/escalation/))
+				previewJob = escJob
 		else
 			for(var/datum/job/job in job_master.occupations)
 				if(job.title == job_high)

@@ -102,8 +102,8 @@ var/global/list/additional_antag_types = list()
 						for(var/mob/new_player/mob in world)
 							mob.ready = 0
 							mob.new_player_panel_proc() //Refresh their panel
-							if(mob.job)
-								mob.job.remove_mob(mob.fireteam_picked,mob.team_picked,mob)
+							if(mob.chosenSlot)
+								mob.chosenSlot.remove_mob(mob.fireteam_picked, mob.team_picked, mob)
 								mob.fireteam_view = 0
 								mob.team_view = 0
 								mob.fireteam_picked = null

@@ -83,6 +83,17 @@ var/global/datum/controller/occupations/job_master
 				player.mind.role_alt_title = GetPlayerAltTitle(player, rank)
 				unassigned -= player
 				job.current_positions++
+				var/datum/army_faction/AF = get_army(job.faction_tag)
+				if(!isnull(AF))
+					if(job.leading && job.position == "team")
+						AF.leader = player.mind
+
+					else if (job.leading && job.position == "fireteam")
+						var/datum/fireteam/FT
+						if(AF && player.fireteam_view > 0)
+							FT = AF.fireteams[player.fireteam_view]
+							if(!isnull(FT))
+								FT.leader = player.mind
 				return 1
 		Debug("AR has failed, Player: [player], Rank: [rank]")
 		return 0
@@ -327,8 +338,8 @@ var/global/datum/controller/occupations/job_master
 		//Shuffle players and jobs
 		unassigned = shuffle(unassigned)
 		for(var/mob/new_player/player in unassigned)
-			if(player.job)
-				AssignRole(player, player.job.title)
+			if(player.chosenSlot)
+				AssignRole(player, player.chosenSlot.title)
 
 	proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
 		if(!H)	return null
