@@ -215,8 +215,6 @@
 				AttemptLateSpawn(chosenSlot, client.prefs.spawnpoint)
 
 		new_player_show_teams()
-		else
-
 
 	if(href_list["set_fireteam_job"])
 		var/datum/army_faction/team = get_army(team_view)
