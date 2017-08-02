@@ -24,12 +24,14 @@
 
 /datum/job/escalation/proc/remove_mob(var/datum/fireteam/F, var/datum/army_faction/A, var/mob/new_player/mob)
 	var/i = 0
+
 	if(position == "team" && A)
 		for(var/M in A.slots)
 			i++
 			if(M == mob)
 				A.slots[i] = src
 				break
+
 	else if(position == "fireteam" && F)
 		for(var/M in F.slots)
 			i++
@@ -40,8 +42,10 @@
 	mob.fireteam_picked = null
 	mob.team_picked = null
 	mob.chosenSlot = null
+
 	if(mob.client && mob.client.prefs)
 		mob.client.prefs.escJob = null
+
 	return
 
 /datum/job/escalation/get_access()
