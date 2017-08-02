@@ -2,6 +2,7 @@
 	group_name = "WARPAC"
 	enabled = 0
 	language = "Russian"
+	fireteam_names = list("Anna", "Boris", "Vasiliy", "Grigoriy")
 
 /datum/army_faction/warpac/czech
 	name = "Czechoslovak People's Army"

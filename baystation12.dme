@@ -318,6 +318,7 @@
 #include "code\escalation\armies\warpac.dm"
 #include "code\escalation\clothing\armor.dm"
 #include "code\escalation\clothing\boots.dm"
+#include "code\escalation\clothing\escalation_clothing.dm"
 #include "code\escalation\clothing\helmets.dm"
 #include "code\escalation\clothing\misc.dm"
 #include "code\escalation\clothing\uniforms.dm"

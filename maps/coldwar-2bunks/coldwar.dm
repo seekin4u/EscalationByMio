@@ -1,6 +1,7 @@
 #if !defined(USING_MAP_DATUM)
 
 	#include "coldwar_areas.dm"
+	#include "coldwar_effects.dm"
 	//#include "coldwar_shuttles.dm"
 
 	//#include "coldwar_unit_testing.dm"
@@ -17,6 +18,8 @@
 	#include "../shared/exodus_torch/_include.dm"
 
 	#include "coldwar-1.dmm"
+	#include "coldwar-2.dmm"
+	#include "coldwar-4.dmm"
 
 	#define USING_MAP_DATUM /datum/map/coldwar
 

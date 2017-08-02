@@ -1,4 +1,5 @@
-
+//1 - CA bunker,  2 - USMC bunker, 3 - main battleground, 4 - level with animated roads
+//5 - for lost soldiers.
 /datum/map/coldwar
 	name = ""
 	full_name = "Coldwar test map"
@@ -12,8 +13,8 @@
 	//admin_levels = list(3)
 	contact_levels = list(1,2,3) //the third level is main battleground| levels which can be reached for e.g. announsments
 	player_levels = list(1,2,3) //levels which character can reach
-	//sealed_levels = list(6) //don't ned this
-	//empty_levels = list(6) //and this for some reason.
+	//sealed_levels = list(5) //don't ned this
+	empty_levels = list(5) //and this for some reason.
 	//accessible_z_levels = list("1" = 5, "2" = 5, "4" = 10, "5" = 15, "7" = 60) we don't need this
 	//base_turf_by_z = list("6" = /turf/snow/gravsnow) // and this
 
