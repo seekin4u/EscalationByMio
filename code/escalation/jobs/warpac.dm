@@ -129,7 +129,7 @@
 	rank_prefix = "Des." //Desiatnik
 	rank_number = 3
 	position = "team"
-	amount = 4
+	amount = 3
 
 
 
@@ -155,7 +155,7 @@
 
 /datum/job/escalation/cccp/subleader
 	title = "CCCP Zam Komandira"
-	name = "Zam Komandira"
+	name = "Zamkomvzvoda"
 	english_name = "Platoon Leader's Deputy"
 	enabled = 1
 	rank_prefix = "StSer." //Starshina
