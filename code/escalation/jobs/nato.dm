@@ -64,11 +64,11 @@
 	title = "DE Grenadier"
 	name = "Grenadier"
 	english_name = "Grenadier"
-	enabled = 1
+	enabled = 0
 	rank_prefix = "Soldat"
-	rank_number = 5
+	rank_number = 6
 	position = "fireteam"
-	amount = 6
+	amount = 1
 
 /datum/job/escalation/bund/grunt
 	title = "DE Schutze"
@@ -160,7 +160,7 @@
 	rank_prefix = "Sgt."
 	rank_number = 3
 	position = "fireteam"
-	amount = 4
+	amount = 2
 
 /datum/job/escalation/usmc/squadradio
 	title = "US Radio Operator"
@@ -191,7 +191,7 @@
 	rank_prefix = "Pfc."
 	rank_number = 6
 	position = "fireteam"
-	amount = 4
+	amount = 6
 
 
 //Not in squads - "attachments" in the marines
@@ -218,7 +218,7 @@
 	title = "US Surgeon"
 	name = "Surgeon"
 	english_name = "Surgeon"
-	enabled = 1
+	enabled = 0
 	rank_prefix = "LT."
 	position = "team"
 	amount = 1
