@@ -8,7 +8,10 @@
 	selection_color = "#1d1d4f"
 	access = list() 			//See get_access()
 	minimal_access = list() 	//See get_access()
-	outfit_type = /decl/hierarchy/outfit/job/escalation
+	outfit_type = /decl/hierarchy/outfit/escalation
+	total_positions = 1
+	spawn_positions = 1
+
 	// ESC STUFF
 
 	var/name = "Base job (never see this)"

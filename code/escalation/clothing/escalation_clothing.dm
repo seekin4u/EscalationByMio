@@ -61,3 +61,15 @@
 		if(winter_name)          name = winter_name
 		if(winter_desc)          desc = winter_desc
 		if(winter_icon_state)    icon_state = winter_icon_state
+
+/obj/item/clothing/gloves/escalation
+	var/winter_name
+	var/winter_desc
+	var/winter_icon_state
+
+/obj/item/clothing/gloves/escalation/New()
+	..()
+	if(USE_WINTER_CLOTHES)
+		if(winter_name)          name = winter_name
+		if(winter_desc)          desc = winter_desc
+		if(winter_icon_state)    icon_state = winter_icon_state
