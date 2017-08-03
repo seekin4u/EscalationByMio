@@ -31,5 +31,5 @@
 	l_ear = /obj/item/device/radio/headset/heads/captain  //Obviously replace this with a proper walkie-talkie
 	l_hand = /obj/item/device/megaphone //Why the hell not
 
-	id_pda_assignment = "Zugführer"
+	id_pda_assignment = "Zugfuhrer"
 
