@@ -238,7 +238,7 @@
 
 /proc/punctuate(var/t as text)
 	var/last = copytext(t,-1)
-	if(last != "!" || "?" || ".")
+	if(last != ("!" || "?" || "."))
 		return t + "."
 
 //Returns a string with the first element of the string capitalized.

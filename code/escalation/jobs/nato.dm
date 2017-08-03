@@ -6,6 +6,7 @@
 	title = "Bundeswehr"
 	enabled = 0
 	faction_tag = "bund" //The tag of the faction this job is a part of, for lookups
+	outfit_type = /decl/hierarchy/outfit/escalation/nato/bundes
 
 /datum/job/escalation/bund/platoonleader
 	title = "DE Zugfuhrer"
@@ -16,7 +17,7 @@
 	rank_number = 0
 	position = "team"
 	amount = 1
-	outfit_type = /decl/hierarchy/outfit/nato/bundes/platoonleader
+	outfit_type = /decl/hierarchy/outfit/escalation/nato/bundes/platoonleader
 	leading = 1
 
 /datum/job/escalation/bund/subleader
