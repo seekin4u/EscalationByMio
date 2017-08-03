@@ -141,6 +141,7 @@
 	title = "cccp"
 	enabled = 0
 	faction_tag = "cccp"
+	outfit_type = /decl/hierarchy/outfit/escalation/warpac/cccp
 
 /datum/job/escalation/cccp/leader
 	title = "CCCP Komandir Vzvoda"
@@ -152,6 +153,7 @@
 	position = "team"
 	amount = 1
 	leading = 1
+	outfit_type = /decl/hierarchy/outfit/escalation/warpac/cccp/leader
 
 /datum/job/escalation/cccp/subleader
 	title = "CCCP Zam Komandira"

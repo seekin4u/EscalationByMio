@@ -248,12 +248,12 @@
 
 		if(fireteam)
 			chosenSlot = fireteam.slots[slot_index]
+			if(src.client && src.client.prefs)
+				src.client.prefs.escJob = fireteam.slots[slot_index]
+
 			fireteam_picked = fireteam
 			team_picked = team
 			fireteam.slots[slot_index] = src
-
-			if(src.client && src.client.prefs)
-				src.client.prefs.escJob = fireteam.slots[slot_index]
 
 		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 			if(!ready)

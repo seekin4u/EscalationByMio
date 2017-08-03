@@ -23,8 +23,11 @@
 
 /obj/item/clothing/under/escalation/soviet
 	name = "Afghanka field uniform"
+	winter_name = "Afghanka winter field uniform"
 	desc = "Field uniform consisting of a long BDU jacket, large collar, and field trousers."
-	icon_state = "afganka_autumn_var1"
+	winter_desc = "A heavy uniform with liners for additional warmth. Consists of a BDU jacket and trousers."
+	icon_state = "afghanka"
+	winter_icon_state = "afghanka_winter"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
