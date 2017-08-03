@@ -61,16 +61,6 @@
 	position = "fireteam"
 	amount = 2
 
-/datum/job/escalation/bund/grenadier
-	title = "DE Grenadier"
-	name = "Grenadier"
-	english_name = "Grenadier"
-	enabled = 0
-	rank_prefix = "Soldat"
-	rank_number = 6
-	position = "fireteam"
-	amount = 1
-
 /datum/job/escalation/bund/grunt
 	title = "DE Schutze"
 	name = "Schutze"
@@ -101,6 +91,16 @@
 	rank_number = 4
 	position = "team"
 	amount = 3
+	
+/datum/job/escalation/bund/sniper
+	title = "DE Scharfschutze"
+	name = "Scharfschutze"
+	english_name = "Sniper"
+	enabled = 1
+	rank_prefix = "Gefreiter"
+	rank_number = 5
+	position = "team"
+	amount = 2
 
 
 
