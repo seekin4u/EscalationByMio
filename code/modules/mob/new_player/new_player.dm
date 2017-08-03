@@ -27,6 +27,8 @@
 	var/datum/army_faction/team_picked
 	var/datum/fireteam/fireteam_picked
 
+	var/datum/browser/escpanel
+
 /mob/new_player/New()
 	..()
 //	verbs += /mob/proc/toggle_antag_pool
@@ -39,19 +41,20 @@
 	var/output = ""
 
 	output +="<hr>"
-	output += "<p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a></p>"
+	output += "<center><p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a></p></center>"
 
 	if(ticker && ticker.mode && ticker.mode.admin_enabled_joining)
-		output += "<p><a href='byond://?src=\ref[src];join=1'>Join Team!</A>[chosenSlot ? " ([chosenSlot.title])" : ""]</p>"
-	else
-		output += "<p>Join Team (Waiting For Admins)</p>"
+		output += "<center><p><a href='byond://?src=\ref[src];join=1'>Join Team!</A></p></center>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+	else
+		output += "<center><p>Join Team (Waiting For Admins)</p></center>"
+
+	output += "<center><p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p></center>"
 
 	if(src.client && src.client.holder && ticker.current_state == GAME_STATE_PREGAME) //Are they an admin?
-		output += "<p><a href='byond://?src=\ref[src];game_setup=1'>Game Setup</A> (Admin)</p>"
+		output += "<center><p><a href='byond://?src=\ref[src];game_setup=1'>Game Setup</A></p></center>"
 
-	panel = new(src, "Welcome","Welcome", 240, 320, src)
+	panel = new(src, "Welcome","<center>Welcome</center>", 240, 320, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -158,10 +161,15 @@
 	if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
 		out += "<p><font size=3><center><a href='byond://?src=\ref[src];admin_kick_all_slots=1'><B>ADMIN: KICK EVERYONE FROM SLOT!</b></A></center></font></p>"
 
-	panel = new(src, "Teams","Teams", 420, 750, src)
-	panel.set_content(out)
-	panel.open()
+	escpanel = new(src, "Teams","Teams", 420, 750, src)
+	escpanel.set_content(out)
+	escpanel.open()
 	return
+
+/mob/new_player/proc/update_escpanels_for_all()
+	for(var/mob/new_player/player in player_list)
+		if(player.escpanel)
+			player.new_player_show_teams()
 
 /mob/new_player/Stat()
 	. = ..()
@@ -184,6 +192,11 @@
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
+
+	if(href_list["close"])
+		if(escpanel)
+			onclose(usr, "Teams")
+			escpanel = null
 
 	if(href_list["set_team"])
 		team_view = text2num(href_list["set_team"])
@@ -217,6 +230,7 @@
 			fireteam_picked = null
 			team_picked = team
 			team.slots[slot_index] = src
+			update_escpanels_for_all()
 
 		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 			if(!ready)
@@ -254,6 +268,7 @@
 			fireteam_picked = fireteam
 			team_picked = team
 			fireteam.slots[slot_index] = src
+			update_escpanels_for_all()
 
 		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 			if(!ready)
@@ -264,7 +279,6 @@
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 				return
 
-		new_player_show_teams()
 
 	if(href_list["exit_slot"])
 		if(chosenSlot)
@@ -273,7 +287,7 @@
 		if(ready)
 			ready = 0
 
-		new_player_show_teams()
+		update_escpanels_for_all()
 
 	if(href_list["admin_kick_slot"])
 		if(!check_rights(0))
@@ -291,7 +305,7 @@
 
 			T.chosenSlot.remove_mob(T.fireteam_picked, T.team_picked, T)
 
-		new_player_show_teams()
+		update_escpanels_for_all()
 
 	if(href_list["admin_kick_all_slots"])
 		if(!check_rights(0))
@@ -302,8 +316,8 @@
 				if(NP.chosenSlot)
 					if(NP.ready)
 						ready = 0
-
 					NP.chosenSlot.remove_mob(NP.fireteam_picked, NP.team_picked, NP)
+					to_chat(NP, "<span class='warning'>You has been removed from your slot.</span>")
 
 			if(AF.num_fireteams > 0)
 				for(var/datum/fireteam/FT in AF.fireteams)
@@ -313,10 +327,10 @@
 								ready = 0
 
 							NP.chosenSlot.remove_mob(NP.fireteam_picked, NP.team_picked, NP)
+							to_chat(NP, "<span class='warning'>You has been removed from your slot.</span>")
 
 		log_and_message_admins("removed all players from their slots", usr)
-		new_player_show_teams()
-
+		update_escpanels_for_all()
 	if(href_list["char_setup"])
 		client.prefs.ShowChoices(src)
 
