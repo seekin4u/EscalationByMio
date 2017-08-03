@@ -22,4 +22,5 @@
 	name = "Field Army Boots"
 	desc = "A pair of heavy lace-up boots."
 	icon_state = "warpacboots"
+	winter_icon_state = "warpacboots_winter"
 
