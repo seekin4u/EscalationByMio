@@ -110,7 +110,7 @@
 				if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
 					admin_text = "<a href='byond://?src=\ref[src];admin_kick_slot=\ref[M]'>ADMIN: KICK SLOT</a>"
 
-				out += "<p>[M.name] - [M.chosenSlot.name] ([M.chosenSlot.english_name]) [admin_text]</p>"
+				out += "<p>[(M.client && M.client.prefs) ? M.client.prefs.real_name : M.name] - [M.chosenSlot.name] ([M.chosenSlot.english_name]) [admin_text]</p>"
 
 		if(team.num_fireteams > 0)
 			out += "<hr><p>"
@@ -145,7 +145,7 @@
 				if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
 					admin_text = "<a href='byond://?src=\ref[src];admin_kick_slot=\ref[P]'>ADMIN: KICK SLOT</a>"
 
-				out += "<p>[P.name] - [P.chosenSlot.name] ([P.chosenSlot.english_name]) [admin_text]</P>"
+				out += "<p>[(P.client && P.client.prefs) ? P.client.prefs.real_name : P.name] - [P.chosenSlot.name] ([P.chosenSlot.english_name]) [admin_text]</P>"
 
 		out += "</center>"
 		out += "<hr>"
@@ -166,7 +166,7 @@
 		escpanel.close()
 		escpanel = null
 
-/mob/new_player/proc/update_escpanels_for_all()
+/proc/update_escpanels_for_all()
 	for(var/mob/new_player/player in player_list)
 		if(player.escpanel)
 			player.new_player_show_teams()
