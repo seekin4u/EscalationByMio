@@ -1,5 +1,4 @@
-//1 - CA bunker,  2 - USMC bunker, 3 - main battleground, 4 - level with animated roads
-//5 - for lost soldiers.
+//1 - CA bunker,  2 - USMC bunker, 3 - main battleground (maybe BIG map, like 450*450), 4 - level with animated roads and lost soldiers.
 /datum/map/coldwar
 	name = ""
 	full_name = "Coldwar test map"
