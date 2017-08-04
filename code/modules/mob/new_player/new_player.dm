@@ -160,6 +160,12 @@
 	escpanel.open()
 	return
 
+/mob/new_player/proc/close_team_panel()
+	src << browse(null, "window=Teams")
+	if(escpanel)
+		escpanel.close()
+		escpanel = null
+
 /mob/new_player/proc/update_escpanels_for_all()
 	for(var/mob/new_player/player in player_list)
 		if(player.escpanel)
@@ -188,9 +194,7 @@
 	if(!client)	return 0
 
 	if(href_list["close"])
-		if(escpanel)
-			onclose(usr, "Teams")
-			escpanel = null
+		close_team_panel()
 
 	if(href_list["set_team"])
 		team_view = text2num(href_list["set_team"])
@@ -232,9 +236,7 @@
 
 		else
 			if(chosenSlot)
-				if(escpanel)
-					onclose(usr,"Teams")
-					escpanel = null
+				close_team_panel()
 
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 
@@ -271,9 +273,7 @@
 				ready = 1
 		else
 			if(chosenSlot)
-				if(escpanel)
-					onclose(usr, "Teams")
-					escpanel = null
+				close_team_panel()
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 				return
 
@@ -716,9 +716,7 @@
 	spawning = 1
 	close_spawn_windows()
 
-	if(escpanel)
-		onclose(usr, "Teams")
-		escpanel = null
+	close_team_panel()
 
 	var/mob/living/carbon/human/new_character
 
