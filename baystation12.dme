@@ -2328,7 +2328,6 @@
 #include "code\unit_tests\~unit_test_types.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
-#include "maps\_map_include.dm"
 #include "maps\coldwar-2bunks\coldwar.dm"
 #include "maps\coldwar-2bunks\coldwar_define.dm"
 #include "maps\example\example_define.dm"
