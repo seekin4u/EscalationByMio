@@ -7,7 +7,7 @@
 
 	if (src.client)
 		if (src.client.prefs.muted & MUTE_IC)
-			to_chat(src, "<span class='warning'>You cannot whisper (muted).</span>")
+			to_chat(src, "<span class='warning'>You cannot whisper.</span>")
 			return
 
 
@@ -18,7 +18,7 @@
 		return
 
 	if(name != GetVoice())
-		alt_name = "(as [get_id_name("Unknown")])"
+		alt_name = ""
 
 	//parse the language code and consume it
 	var/datum/language/speaking = parse_language(message)
@@ -32,7 +32,7 @@
 /mob/living/carbon/human/proc/whisper_say(var/message, var/datum/language/speaking = null, var/alt_name="", var/verb="whispers")
 
 	if (istype(src.wear_mask, /obj/item/clothing/mask/muzzle))
-		to_chat(src, "<span class='danger'>You're muzzled and cannot speak!</span>")
+		to_chat(src, "<span class='danger'>You're muzzled.</span>")
 		return
 
 	var/message_range = 1

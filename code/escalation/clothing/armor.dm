@@ -24,8 +24,11 @@
 
 /obj/item/clothing/suit/armor/escalation/pasgt/woodland
 	name = "PASGT Vest"
-	desc = "A protective vest utilizing kevlar."
+	desc = "A protective vest made out of kevlar."
 	icon_state = "pasgt_woodland"
+	//	allowed = list(/obj/item/weapon/gun/energy,/obj/item/device/radio,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs)
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	armor = list(melee = 35, bullet = 50, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/storage/vest/escalation/soviet_heavy
 	name = "6B3 Heavy Armor Vest"
