@@ -5,7 +5,7 @@
 	full_name = "Coldwar test map"
 	path = "coldwar-2bunks"
 
-	lobby_icon = 'maps/exodus/exodus_lobby.dmi'
+	lobby_icon = 'maps/coldwar-2bunks/coldwar_lobby.dmi'
 
 	load_legacy_saves = TRUE
 
