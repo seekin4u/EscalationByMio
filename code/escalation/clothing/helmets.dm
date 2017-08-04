@@ -20,7 +20,7 @@
 /obj/item/clothing/head/helmet/escalation/ssh68
 	name = "SSh-68 Helmet"
 	desc = "A steel helmet."
-	icon_state = "m1helmet"
+	icon_state = "ssh68"
 
 	body_parts_covered = HEAD
 	armor = list(melee = 60, bullet = 45, laser = 30,energy = 25, bomb = 45, bio = 0, rad = 0)

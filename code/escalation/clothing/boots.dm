@@ -16,9 +16,11 @@
 /obj/item/clothing/shoes/escalation/military/nato
 	name = "Belleville Combat Boots"
 	desc = "A pair of heavy lace-up boots."
+	icon_state = "natoboots"
 
 /obj/item/clothing/shoes/escalation/military/warpac
 	name = "Field Army Boots"
 	desc = "A pair of heavy lace-up boots."
-	icon_state = "jackboots"
+	icon_state = "warpacboots"
+	winter_icon_state = "warpacboots_winter"
 

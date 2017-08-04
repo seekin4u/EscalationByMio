@@ -7,14 +7,6 @@
 	var/totalPlayersReady = 0
 	var/datum/browser/panel
 
-	var/char_is_setup = 0
-	var/datum/job/escalation/job
-	var/fireteam_view = 0
-	var/team_view = -1
-
-	var/datum/army_faction/team_picked
-	var/datum/fireteam/fireteam_picked
-
 	universal_speak = 1
 
 	invisibility = 101
@@ -26,7 +18,16 @@
 	anchored = 1	//  don't get pushed around
 
 	virtual_mob = null // Hear no evil, speak no evil
-	var/picking_teams = 0
+
+	// Escalation
+	var/datum/job/escalation/chosenSlot
+	var/fireteam_view = 0
+	var/team_view = 0
+
+	var/datum/army_faction/team_picked
+	var/datum/fireteam/fireteam_picked
+
+	var/datum/browser/escpanel
 
 /mob/new_player/New()
 	..()
@@ -38,30 +39,22 @@
 
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = ""
+
 	output +="<hr>"
+	output += "<center><p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a></p></center>"
 
-	if(char_is_setup)
-		output += "<p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a> (Done)</p>"
-	else
-		output += "<p><a href='byond://?src=\ref[src];char_setup=1'>Setup Character</a> (Required)</p>"
-	if(!ready)
-		if(ticker && ticker.mode && ticker.mode.admin_enabled_joining)
-			output += "<p><a href='byond://?src=\ref[src];join=1'>Join Team!</A></p>"
-		else
-			output += "<p>Join Team (Waiting For Admins)</p>"
-	else
-		output += "<p><B>Waiting For Round Start...</b></p>"
+	if(ticker && ticker.mode && ticker.mode.admin_enabled_joining)
+		output += "<center><p><a href='byond://?src=\ref[src];join=1'>Join Team!</A></p></center>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+	else
+		output += "<center><p>Join Team (Waiting For Admins)</p></center>"
+
+	output += "<center><p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p></center>"
 
 	if(src.client && src.client.holder && ticker.current_state == GAME_STATE_PREGAME) //Are they an admin?
-		output += "<p><a href='byond://?src=\ref[src];game_setup=1'>Game Setup</A> (Admin)</p>"
-		if(ticker && ticker.mode && ticker.mode.admin_enabled_joining)
-			output += "<p><a href='byond://?src=\ref[src];start_countdown=1'>Start Countdown</A> (Admin)</p>"
-		else
-			output += "<p>Countdown (Awaiting Setup)</p>"
+		output += "<center><p><a href='byond://?src=\ref[src];game_setup=1'>Game Setup</A></p></center>"
 
-	panel = new(src, "Welcome","Welcome", 240, 320, src)
+	panel = new(src, "Welcome","<center>Welcome</center>", 240, 320, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -70,24 +63,34 @@
 /mob/new_player/proc/new_player_show_teams()
 	if(!ticker || !ticker.mode) return //somehow
 	if(!ticker.mode.wargames) return //Must be escalation gamemode
-	picking_teams = 1
 
 	var/out = "<center><p><b>[ticker.mode.name]</b></center></p>"
-	var/datum/army_faction/team = get_army(team_view)
-	if(!team)
-		team_view = 0
+	var/datum/army_faction/team = null
+
+	if(team_view)
+		team = get_army(team_view)
 
 	out += "<center>"
+
 	for(var/datum/army_faction/T in ticker.mode.teams)
-		if(team && team == T)
+		if(!T.check_team_whitelist_for_player(src))
+			out += "[T.name] (blocked for you)"
+
+		else if(team && team == T)
 			out += "[T.name]  "
+
 		else
 			out += "<a href='byond://?src=\ref[src];set_team=[T.team_num]'>[T.name]</A>  "
+
 	out += "<br/>"
 
 	for(var/datum/army_faction/N in ticker.mode.neutral_teams)
-		if(team && team == N)
+		if(!N.check_team_whitelist_for_player(src))
+			out += "[N.name] (blocked for you)"
+
+		else if(team && team == N)
 			out += "[N.name]  "
+
 		else
 			out += "<a href='byond://?src=\ref[src];set_team=[N.team_num]'>[N.name]</A>  "
 
@@ -100,17 +103,19 @@
 			slot_index++
 			if(istype(J,/datum/job/escalation))
 				var/datum/job/escalation/A = J
-				out += "<P><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				if(A.current_positions < A.amount)
+					out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 			else
+				if(!ismob(J))
+					continue
+
 				var/mob/new_player/M = J
-				if(istype(M) && M.client && M.client.prefs)
-					var/L
-					for(var/lang_string in M.client.prefs.ooc_languages) //Display their languages
-						L += lang_string
-					if(L)
-						out += "<p>[M.name] - [M.job.name] ([M.job.english_name]) {[L]}</P>"
-				else if(M)
-					out += "<p>[M.name] - [M.job.name] ([M.job.english_name])</P>"
+				var/admin_text = ""
+
+				if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
+					admin_text = "<a href='byond://?src=\ref[src];admin_kick_slot=\ref[M]'>ADMIN: KICK SLOT</a>"
+
+				out += "<p>[M.name] - [M.chosenSlot.name] ([M.chosenSlot.english_name]) [admin_text]</p>"
 
 		if(team.num_fireteams > 0)
 			out += "<hr><p>"
@@ -118,42 +123,53 @@
 				if(fireteam_view == F.num)
 					out += "[F.name] "
 				else
-					out += "<a href='byond://?src=\ref[src];set_fireteam=[F.num]'><B>[F.name]</b></A> "
+					out += "<a href='byond://?src=\ref[src];set_fireteam=[F.num]'><b>[F.name]</b></a> "
 			out += "</p></center></hr>"
 
 
 
-	if(fireteam_view > 0 && team)
+	if(team && fireteam_view > 0)
 		var/datum/fireteam/fireteam = team.fireteams[fireteam_view]
 		var/slot_index = 0
 		out += "<hr><center>"
 		for(var/S in fireteam.slots)
 			slot_index++
-			if(istype(S,/datum/job/escalation))
+
+			if(istype(S, /datum/job/escalation))
 				var/datum/job/escalation/A = S
-				out += "<p><a href='byond://?src=\ref[src];set_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				if(A.current_positions < A.amount)
+					out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
+
 			else
+				if(!ismob(S))
+					continue
+
 				var/mob/new_player/P = S
-				if(istype(P) && P.client && P.client.prefs)
-					var/A = ""
-					for(var/lang_string in P.client.prefs.ooc_languages) //Display their languages
-						A = "[A][lang_string]"
-					out += "<p>[P.name] - [P.job.name] ([P.job.english_name]) {[A]}</P>"
-				else if(P)
-					out += "<p>[P.name] - [P.job.name] ([P.job.english_name]) {SSD}</P>"
+
+				var/admin_text = ""
+
+				if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
+					admin_text = "<a href='byond://?src=\ref[src];admin_kick_slot=\ref[P]'>ADMIN: KICK SLOT</a>"
+
+				out += "<p>[P.name] - [P.chosenSlot.name] ([P.chosenSlot.english_name]) [admin_text]</P>"
 
 		out += "</center>"
 		out += "<hr>"
 
-	if(job)
-		out += "<p><font size=3><center><a href='byond://?src=\ref[src];finish_teams=1'><B>Save and Lock In!</b></A></center></font></P>"
-	else
-		out += "<p><font size=3><center><a href='byond://?src=\ref[src];cancel_teams=1'><B>Back to Main Menu</b></A></center></font></p>"
+	out += "<p><font size=3><center><a href='byond://?src=\ref[src];exit_slot=1'><B>Exit slot</b></A></center></font></p>"
 
-	panel = new(src, "Teams","Teams", 420, 750, src)
-	panel.set_content(out)
-	panel.open()
+	if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
+		out += "<p><font size=3><center><a href='byond://?src=\ref[src];admin_kick_all_slots=1'><B>ADMIN: KICK EVERYONE FROM SLOT!</b></A></center></font></p>"
+
+	escpanel = new(src, "Teams","Teams", 420, 750, src)
+	escpanel.set_content(out)
+	escpanel.open()
 	return
+
+/mob/new_player/proc/update_escpanels_for_all()
+	for(var/mob/new_player/player in player_list)
+		if(player.escpanel)
+			player.new_player_show_teams()
 
 /mob/new_player/Stat()
 	. = ..()
@@ -166,7 +182,7 @@
 
 		if(ticker.current_state == GAME_STATE_PREGAME && ticker.mode)
 			stat("Time To Start:", "[ticker.pregame_timeleft][round_progressing ? "" : " (DELAYED)"]")
-			if(istype(ticker.mode,/datum/game_mode/wargames)) //our cold war base gametype
+			if(istype(ticker.mode, /datum/game_mode/wargames)) //our cold war base gametype
 				var/datum/game_mode/wargames/W = ticker.mode
 				stat("Teams Selected: ")
 				for(var/datum/army_faction/T in W.teams)
@@ -177,6 +193,11 @@
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
 
+	if(href_list["close"])
+		if(escpanel)
+			onclose(usr, "Teams")
+			escpanel = null
+
 	if(href_list["set_team"])
 		team_view = text2num(href_list["set_team"])
 		fireteam_view = 0
@@ -186,64 +207,132 @@
 		fireteam_view = text2num(href_list["set_fireteam"])
 		new_player_show_teams()
 
-	if(href_list["set_job"])
+	if(href_list["set_team_job"])
 		var/datum/army_faction/team = get_army(team_view)
-		var/datum/fireteam/fireteam
-		if(team && fireteam_view > 0)
-			fireteam = team.fireteams[fireteam_view]
 
-		var/slot_index = text2num(href_list["set_job"])
+		var/slot_index = text2num(href_list["set_team_job"])
 
-		if(fireteam && istype(fireteam.slots[slot_index],/mob/new_player))
-			alert("Someone has already picked that job. Too slow!")
-			new_player_show_teams()
-			return
-
-		else if(!fireteam && team && istype(team.slots[slot_index],/mob/new_player))
+		if(team && istype(team.slots[slot_index], /mob/new_player))
 			alert("Someone has already picked that job. Too slow!")
 			new_player_show_teams()
 			return
 
 		//There's probably easier list tools to do all this stuff, I just don't know them. rip
-		if(job) //They already have a job set, remove it & replace job in slots
-			job.remove_mob(fireteam_picked,team_picked,src)
+		if(chosenSlot) //They already have a job set, remove it & replace job in slots
+			chosenSlot.remove_mob(fireteam_picked, team_picked, src)
+
+		if (team)
+			chosenSlot = team.slots[slot_index]
+
+			if(src.client && src.client.prefs)
+				src.client.prefs.escJob = team.slots[slot_index]
+
+			fireteam_picked = null
+			team_picked = team
+			team.slots[slot_index] = src
+			update_escpanels_for_all()
+
+		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+			if(!ready)
+				ready = 1
+
+		else
+			if(chosenSlot)
+				onclose(usr,"Teams")
+				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
+		new_player_show_teams()
+
+	if(href_list["set_fireteam_job"])
+		var/datum/army_faction/team = get_army(team_view)
+		var/datum/fireteam/fireteam
+
+		if(team && fireteam_view > 0)
+			fireteam = team.fireteams[fireteam_view]
+
+		var/slot_index = text2num(href_list["set_fireteam_job"])
+
+		if(fireteam && istype(fireteam.slots[slot_index], /mob/new_player))
+			alert("Someone has already picked that job. Too slow!")
+			new_player_show_teams()
+			return
+
+		//There's probably easier list tools to do all this stuff, I just don't know them. rip
+		if(chosenSlot) //They already have a job set, remove it & replace job in slots
+			chosenSlot.remove_mob(fireteam_picked,team_picked,src)
 
 		if(fireteam)
-			job = fireteam.slots[slot_index]
+			chosenSlot = fireteam.slots[slot_index]
+			if(src.client && src.client.prefs)
+				src.client.prefs.escJob = fireteam.slots[slot_index]
+
 			fireteam_picked = fireteam
 			team_picked = team
 			fireteam.slots[slot_index] = src
-		else if (team)
-			job = team.slots[slot_index]
-			fireteam_picked = null
-			fireteam_view = 0
-			team_picked = team
-			team.slots[slot_index] = src
+			update_escpanels_for_all()
 
-		new_player_show_teams()
-
-	if(href_list["cancel_teams"])
-		picking_teams = 0
-		if(job)
-			job.remove_mob(fireteam_picked,team_picked,src)
-
-		fireteam_view = 0
-		team_view = 0
-		onclose(usr,"Teams")
-		new_player_panel_proc()
-
-	if(href_list["finish_teams"])
-		picking_teams = 0
-		onclose(usr,"Teams")
-		new_player_panel_proc()
-		ready = 1
-
-	if(href_list["char_setup"])
-		if(!ready)
-			client.prefs.ShowChoices(src)
+		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+			if(!ready)
+				ready = 1
 		else
-			to_chat(src,"<span class='warning'>Too late for that now, you already locked in your team!</span>")
+			if(chosenSlot)
+				onclose(usr, "Teams")
+				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
+				return
+
+
+	if(href_list["exit_slot"])
+		if(chosenSlot)
+			chosenSlot.remove_mob(fireteam_picked, team_picked, src)
+
+		if(ready)
+			ready = 0
+
+		update_escpanels_for_all()
+
+	if(href_list["admin_kick_slot"])
+		if(!check_rights(0))
 			return
+
+		var/mob/new_player/T = locate(href_list["admin_kick_slot"])
+		if(!istype(T, /mob/new_player/))
+			return
+
+		if(T.chosenSlot)
+			to_chat(T, "<span class='warning'>You has been removed from your slot.</span>")
+			log_and_message_admins("kicked [T.ckey] from [T.chosenSlot.title] slot", usr)
+			if(T.ready)
+				T.ready = 0
+
+			T.chosenSlot.remove_mob(T.fireteam_picked, T.team_picked, T)
+
+		update_escpanels_for_all()
+
+	if(href_list["admin_kick_all_slots"])
+		if(!check_rights(0))
+			return
+
+		for(var/datum/army_faction/AF in all_factions)
+			for(var/mob/new_player/NP in AF.slots)
+				if(NP.chosenSlot)
+					if(NP.ready)
+						ready = 0
+					NP.chosenSlot.remove_mob(NP.fireteam_picked, NP.team_picked, NP)
+					to_chat(NP, "<span class='warning'>You has been removed from your slot.</span>")
+
+			if(AF.num_fireteams > 0)
+				for(var/datum/fireteam/FT in AF.fireteams)
+					for(var/mob/new_player/NP in FT.slots)
+						if(NP.chosenSlot)
+							if(NP.ready)
+								ready = 0
+
+							NP.chosenSlot.remove_mob(NP.fireteam_picked, NP.team_picked, NP)
+							to_chat(NP, "<span class='warning'>You has been removed from your slot.</span>")
+
+		log_and_message_admins("removed all players from their slots", usr)
+		update_escpanels_for_all()
+	if(href_list["char_setup"])
+		client.prefs.ShowChoices(src)
 
 	if(href_list["game_setup"])
 		if(!(initialization_stage&INITIALIZATION_COMPLETE))
@@ -286,15 +375,13 @@
 			to_chat(usr, "<span class='danger'>The world is currently exploding. Joining would go poorly. Just observe.</span>")
 			return
 
-		if(ready)
-			to_chat(src,"<span class='warning'>You already locked in your choice, live with it or beg an admin to change it!</span>")
-			return
-
 		var/datum/game_mode/wargames/W = ticker.mode
+
 		if(istype(W))
 			if(W.teams.len < W.minimum_teams)
 				to_chat(src,"<span class='warning'>Be patient, the teams have not been selected.</span>")
 				return
+
 			if(!W.admin_enabled_joining)
 				to_chat(src,"<span class='warning'>Be patient, the admins haven't completed setting up the round.</span>")
 				return

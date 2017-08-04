@@ -67,7 +67,7 @@ proc/show_statistic()
 	var/munition_points = 0 //Used for leaders buying explosives/weapons
 	var/fuel_points = 0 //Used for leaders buying vehicles
 	var/win_points = 0 //Used for controlpoint maps
-	var/latejoin = 0 //Can players join the faction if the round has already started?
+	var/latejoin = 1 //Can players join the faction if the round has already started?
 	var/flag_icon = "icons/flags.dm" //change this later
 	var/flag_state = "parent" //If different than tag, otherwise flag should be named as tag
 	var/language = "English" //Main language of the army.
@@ -77,6 +77,7 @@ proc/show_statistic()
 	var/list/players = list()
 	var/num_fireteams = 4
 	var/list/datum/fireteam/fireteams = list()
+	var/list/fireteam_names = list()
 	var/list/slots = list()
 
 //This also initializes fireteams
@@ -90,21 +91,11 @@ proc/show_statistic()
 	for(var/i = 1 to num_fireteams)
 		var/datum/fireteam/F = new /datum/fireteam(src) //Add instance of fireteam
 		F.num = i
-		F.name = "Fireteam [i]"
+		if(fireteam_names.len && fireteam_names.len >= i)
+			F.name = fireteam_names[i]
+		else
+			F.name = "Fireteam [i]"
 		fireteams += F
-
-
-//The way these are set up is pretty much ass for when we have like 30 armies and 300 jobs, but.. whatever. Fix later
-/datum/army_faction/proc/init_jobs()
-	for(var/datum/job/escalation/J in all_army_jobs) //Add jobs to proper slots
-		if(J.faction_tag == faction_tag && J.enabled)
-			if(J.position == "fireteam")
-				for(var/datum/fireteam/T in fireteams)
-					for(var/count = 1 to J.amount)
-						T.slots += J
-			else if (J.position == "team")
-				for(var/count = 1 to J.amount)
-					slots += J
 
 /datum/army_faction/Destroy()
 	slots.Cut()
@@ -174,6 +165,21 @@ proc/show_statistic()
 	if(usr.client.holder)
 		usr.client.holder.show_army_edit(src)
 
+//The way these are set up is pretty much ass for when we have like 30 armies and 300 jobs, but.. whatever. Fix later
+/datum/army_faction/proc/init_jobs()
+	for(var/datum/job/escalation/J in all_army_jobs) //Add jobs to proper slots
+		if(J.faction_tag == faction_tag && J.enabled)
+			if(J.position == "fireteam")
+				for(var/datum/fireteam/T in fireteams)
+					for(var/count = 1 to J.amount)
+						T.slots += J
+			else if (J.position == "team")
+				for(var/count = 1 to J.amount)
+					slots += J
+
+/datum/army_faction/proc/check_team_whitelist_for_player(var/mob/new_player/NP)
+	return 1
+
 /datum/fireteam
 	var/num = 0
 	var/name = "Default Fireteam Name"
@@ -190,6 +196,8 @@ proc/show_statistic()
 	radio_freq = rand(1000,2000)
 
 /datum/fireteam/Destroy()
+	leader = null
+	team = null
 	slots.Cut()
 	return ..()
 

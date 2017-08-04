@@ -19,3 +19,4 @@ __pycache__
 # ignore config, but not subdirs
 config/*
 !config/*/
+ESCALATION_TEMP_sprites_TEMP/Bund/BDW_Gear.dmi
