@@ -20,13 +20,8 @@
 	virtual_mob = null // Hear no evil, speak no evil
 
 	// Escalation
-	var/datum/job/escalation/chosenSlot
 	var/fireteam_view = 0
 	var/team_view = 0
-
-	var/datum/army_faction/team_picked
-	var/datum/fireteam/fireteam_picked
-
 	var/datum/browser/escpanel
 
 /mob/new_player/New()
@@ -103,13 +98,13 @@
 			slot_index++
 			if(istype(J,/datum/job/escalation))
 				var/datum/job/escalation/A = J
-				if(A.current_positions < A.amount)
-					out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+
 			else
 				if(!ismob(J))
 					continue
 
-				var/mob/new_player/M = J
+				var/mob/M = J
 				var/admin_text = ""
 
 				if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
@@ -137,14 +132,13 @@
 
 			if(istype(S, /datum/job/escalation))
 				var/datum/job/escalation/A = S
-				if(A.current_positions < A.amount)
-					out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
+				out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
 
 			else
 				if(!ismob(S))
 					continue
 
-				var/mob/new_player/P = S
+				var/mob/P = S
 
 				var/admin_text = ""
 
@@ -238,9 +232,11 @@
 
 		else
 			if(chosenSlot)
-				onclose(usr,"Teams")
+				if(escpanel)
+					onclose(usr,"Teams")
+					escpanel = null
+
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
-		new_player_show_teams()
 
 	if(href_list["set_fireteam_job"])
 		var/datum/army_faction/team = get_army(team_view)
@@ -275,7 +271,9 @@
 				ready = 1
 		else
 			if(chosenSlot)
-				onclose(usr, "Teams")
+				if(escpanel)
+					onclose(usr, "Teams")
+					escpanel = null
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 				return
 
@@ -604,24 +602,29 @@
 		alert("Wrong rank for [rank]. Valid ranks in [client.prefs.char_branch] are: [job.get_ranks(client.prefs.char_branch)].")
 		return 0
 
+	var/datum/spawnpoint/spawnpoint = null
+	var/turf/spawn_turf = null
 
-	var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(client, rank)
-	var/turf/spawn_turf = pick(spawnpoint.turfs)
-	var/airstatus = IsTurfAtmosUnsafe(spawn_turf)
-	if(airstatus)
-		var/reply = alert(usr, "Warning. Your selected spawn location seems to have unfavorable atmospheric conditions. \
-		You may die shortly after spawning. It is possible to select different spawn point via character preferences. \
-		Spawn anyway? More information: [airstatus]", "Atmosphere warning", "Abort", "Spawn anyway")
-		if(reply == "Abort")
-			return 0
-		else
-			// Let the staff know, in case the person complains about dying due to this later. They've been warned.
-			log_and_message_admins("User [src] spawned at spawn point with dangerous atmosphere.")
+	var/obj/S = null
+	var/list/loc_list = new()
 
-		// Just in case someone stole our position while we were waiting for input from alert() proc
-		if(!IsJobAvailable(job))
-			to_chat(src, alert("[rank] is not available. Please try another."))
-			return 0
+	for(var/obj/effect/landmark/start/sloc in landmarks_list)
+		if(sloc.name != rank)	continue
+
+		if(locate(/mob/living) in sloc.loc)	continue
+
+		loc_list += sloc
+
+	if(loc_list.len)
+		S = pick(loc_list)
+
+	if(istype(S, /obj/effect/landmark/start) && istype(S.loc, /turf))
+		spawn_turf = S.loc
+
+	else
+		spawnpoint = job_master.get_spawnpoint_for(client, rank)
+		spawn_turf = pick(spawnpoint.turfs)
+
 
 	job_master.AssignRole(src, rank, 1)
 
@@ -660,7 +663,7 @@
 			data_core.manifest_inject(character)
 			ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
 
-			if(job.announced)
+			if(job.announced && spawnpoint)
 				AnnounceArrival(character, rank, spawnpoint.msg)
 		matchmaker.do_matchmaking()
 	log_and_message_admins("has joined the round as [character.mind.assigned_role].", character)
@@ -712,6 +715,10 @@
 /mob/new_player/proc/create_character(var/turf/spawn_turf)
 	spawning = 1
 	close_spawn_windows()
+
+	if(escpanel)
+		onclose(usr, "Teams")
+		escpanel = null
 
 	var/mob/living/carbon/human/new_character
 
@@ -766,6 +773,28 @@
 	new_character.dna.ready_dna(new_character)
 	new_character.dna.b_type = client.prefs.b_type
 	new_character.sync_organ_dna()
+
+	if(chosenSlot)
+		new_character.chosenSlot = chosenSlot
+		new_character.team_picked = team_picked
+		new_character.fireteam_picked = fireteam_picked
+
+		var/i = 0
+
+		if(chosenSlot.position == "team" && team_picked)
+			for(var/M in team_picked.slots)
+				i++
+				if(M == src)
+					team_picked.slots[i] = new_character
+					break
+
+		else if(chosenSlot.position == "fireteam" && fireteam_picked)
+			for(var/M in fireteam_picked.slots)
+				i++
+				if(M == src)
+					fireteam_picked.slots[i] = new_character
+					break
+
 	if(client.prefs.disabilities)
 		// Set defer to 1 if you add more crap here so it only recalculates struc_enzymes once. - N3X
 		new_character.dna.SetSEState(GLASSESBLOCK,1,0)

@@ -340,6 +340,7 @@ var/global/datum/controller/occupations/job_master
 		for(var/mob/new_player/player in unassigned)
 			if(player.chosenSlot)
 				AssignRole(player, player.chosenSlot.title)
+		return 1
 
 	proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
 		if(!H)	return null

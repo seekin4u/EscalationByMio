@@ -1,9 +1,8 @@
 /mob/new_player/Logout()
 	ready = 0
 
-	if(istype(chosenSlot, /datum/job/escalation))
-		var/datum/job/escalation/J = chosenSlot
-		J.remove_mob(fireteam_picked, team_picked, src)
+	if(chosenSlot)
+		chosenSlot.remove_mob(fireteam_picked, team_picked, src)
 
 	// see login.dm
 	if(my_client)
