@@ -233,14 +233,14 @@
 
 /decl/hierarchy/supply_pack/medical/surgery
 	name = "Surgery crate"
-	contains = list(/obj/item/weapon/cautery,
+	contains = list(/obj/item/weapon/needle,
 					/obj/item/weapon/surgicaldrill,
 					/obj/item/clothing/mask/breath/medical,
 					/obj/item/weapon/tank/anesthetic,
 					/obj/item/weapon/FixOVein,
 					/obj/item/weapon/hemostat,
 					/obj/item/weapon/scalpel,
-					/obj/item/weapon/bonegel,
+					/obj/item/weapon/plate,
 					/obj/item/weapon/retractor,
 					/obj/item/weapon/bonesetter,
 					/obj/item/weapon/circular_saw)

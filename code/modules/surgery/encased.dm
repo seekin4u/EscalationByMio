@@ -199,10 +199,7 @@
 //	ribcage mending surgery step
 //////////////////////////////////////////////////////////////////
 /datum/surgery_step/open_encased/mend
-	allowed_tools = list(
-	/obj/item/weapon/bonegel = 100,	\
-	/obj/item/weapon/screwdriver = 75
-	)
+	allowed_tools = list(/obj/item/weapon/plate = 100)
 
 	min_duration = 20
 	max_duration = 40
@@ -220,8 +217,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] starts applying \the [tool] to [target]'s [affected.encased]."
-	var/self_msg = "You start applying \the [tool] to [target]'s [affected.encased]."
+	var/msg = "[user] starts fixing \the [affected.encased] with the [tool]."
+	var/self_msg = "You start fixing \the [affected.encased] with the [tool]."
 	user.visible_message(msg, self_msg)
 	target.custom_pain("Something hurts horribly in your [affected.name]!",100, affecting = affected)
 	..()
@@ -232,8 +229,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "<span class='notice'>[user] applied \the [tool] to [target]'s [affected.encased].</span>"
-	var/self_msg = "<span class='notice'>You applied \the [tool] to [target]'s [affected.encased].</span>"
+	var/msg = "<span class='notice'>[user] fixed \the [affected.encased] with the [tool]</span>"
+	var/self_msg = "<span class='notice'>You fixed \the [affected.encased] with the [tool].</span>"
 	user.visible_message(msg, self_msg)
-
+	user.drop_item()
+	qdel(tool)
 	affected.open = 2

@@ -1,4 +1,4 @@
-/obj/item/clothing/shoes/military
+/obj/item/clothing/shoes/escalation/military
 	name = "military boots"
 	desc = "A pair of heavy lace-up boots."
 	icon_state = "jungle"
@@ -13,11 +13,11 @@
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOE_MAX_HEAT_PROTECTION_TEMPERATURE
 
-/obj/item/clothing/shoes/military/nato
+/obj/item/clothing/shoes/escalation/military/nato
 	name = "Belleville Combat Boots"
 	desc = "A pair of heavy lace-up boots."
 
-/obj/item/clothing/shoes/military/warpac
+/obj/item/clothing/shoes/escalation/military/warpac
 	name = "Field Army Boots"
 	desc = "A pair of heavy lace-up boots."
 	icon_state = "jackboots"

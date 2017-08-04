@@ -111,13 +111,13 @@
 
 	startswith = list(
 		/obj/item/weapon/bonesetter,
-		/obj/item/weapon/cautery,
+		/obj/item/weapon/needle,
 		/obj/item/weapon/circular_saw,
 		/obj/item/weapon/hemostat,
 		/obj/item/weapon/retractor,
 		/obj/item/weapon/scalpel,
 		/obj/item/weapon/surgicaldrill,
-		/obj/item/weapon/bonegel,
+		/obj/item/weapon/plate,
 		/obj/item/weapon/FixOVein,
 		/obj/item/stack/medical/advanced/bruise_pack,
 		)

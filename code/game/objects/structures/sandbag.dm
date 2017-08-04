@@ -4,8 +4,6 @@
 	icon_state = "sandbag"
 	density = 1
 	throwpass = 1//we can throw grenades despite its density
-	layer = ABOVE_HUMAN_LAYER - 0.3
-	//plane = ABOVE_HUMAN_PLANE//-15
 	anchored = 1
 	flags = OBJ_CLIMBABLE
 	var/basic_chance = 30
@@ -13,19 +11,23 @@
 /obj/structure/sandbag/New()
 	..()
 	flags |= ON_BORDER
-	set_dir(dir)
+	update_layers()
 	to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/Destroy()
 	//chance = null
 	..()
+/obj/structure/sandbag/proc/update_layers()
+	if(dir == NORTH)
+		layer = initial(layer)
+		plane = initial(plane)
+	else
+		layer = ABOVE_WINDOW_LAYER
+		plane = ABOVE_HUMAN_PLANE
 
 /obj/structure/sandbag/set_dir(direction)
-	dir = direction
-	if(dir != NORTH)
-		layer = ABOVE_OBJ_LAYER + 0.1
-		plane = ABOVE_HUMAN_PLANE
-		to_world(" set_dir. Dir:[dir]; Layer:[layer]; plane:[plane]")
+	..()
+	update_layers()
 
 /obj/structure/sandbag/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))

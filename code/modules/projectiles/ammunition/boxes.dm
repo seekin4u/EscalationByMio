@@ -236,7 +236,7 @@
 
 /obj/item/ammo_magazine/c762x51m
 	name = "magazine (7.62x51mm)"
-	icon_state = "7.62x51m"
+	icon_state = "7.62x51mm"
 	mag_type = MAGAZINE
 	caliber = "762x51"
 	ammo_type = /obj/item/ammo_casing/a762x51

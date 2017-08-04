@@ -1,4 +1,4 @@
-/obj/item/clothing/suit/armor/soviet
+/obj/item/clothing/suit/armor/escalation/soviet
 	name = "6B2 Armor Vest"
 	desc = "A titanium and fabric vest."
 	icon_state = "6b2"
@@ -6,7 +6,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 40, bullet = 35, laser = 20, energy = 10, bomb = 25, bio = 0, rad = 0)
 
-/obj/item/clothing/suit/armor/flakvest
+/obj/item/clothing/suit/armor/escalation/flakvest
 	name = "M1955 Flak Vest"
 	desc = "A lightweight vest designed mostly to stop shrapnel."
 	icon_state = "usmc_flakvest"
@@ -14,7 +14,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
 
-/obj/item/clothing/suit/armor/pasgt
+/obj/item/clothing/suit/armor/escalation/pasgt
 	name = "PASGT Vest"
 	desc = "A protective kevlar vest."
 	icon_state = "pasgt_olive"
@@ -22,12 +22,12 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 35, bullet = 50, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
 
-/obj/item/clothing/suit/armor/pasgt/woodland
+/obj/item/clothing/suit/armor/escalation/pasgt/woodland
 	name = "PASGT Vest"
 	desc = "A protective vest utilizing kevlar."
 	icon_state = "pasgt_woodland"
 
-/obj/item/clothing/suit/storage/vest/soviet_heavy
+/obj/item/clothing/suit/storage/vest/escalation/soviet_heavy
 	name = "6B3 Heavy Armor Vest"
 	desc = "A heavy armor vest with several pockets."
 	icon_state = "6b3"
@@ -37,7 +37,7 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO
 	heat_protection = UPPER_TORSO|LOWER_TORSO
 
-/obj/item/clothing/suit/storage/vest/usmc_webvest
+/obj/item/clothing/suit/storage/vest/escalation/usmc_webvest
 	name = "USMC Webbing"
 	desc = "A set of straps, pouches, and attachment points for carrying equipment."
 	icon_state = "usmc_webvest-big"
