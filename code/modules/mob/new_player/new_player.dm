@@ -46,7 +46,7 @@
 
 	output += "<center><p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p></center>"
 
-	if(src.client && src.client.holder && ticker.current_state == GAME_STATE_PREGAME) //Are they an admin?
+	if(src.client && src.client.holder && ticker && ticker.current_state == GAME_STATE_PREGAME) //Are they an admin?
 		output += "<center><p><a href='byond://?src=\ref[src];game_setup=1'>Game Setup</A></p></center>"
 
 	panel = new(src, "Welcome","<center>Welcome</center>", 240, 320, src)
