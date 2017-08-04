@@ -21,6 +21,9 @@
 	#include "coldwar-2.dmm"
 	#include "coldwar-4.dmm"
 
+	//include non-defined in bay12.dme files to play some music in lobby
+	#include "../../code/escalation/modules/lobby_music/blitzkrieg.dm"
+
 	#define USING_MAP_DATUM /datum/map/coldwar
 
 #elif !defined(MAP_OVERRIDE)
