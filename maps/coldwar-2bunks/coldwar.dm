@@ -21,8 +21,8 @@
 	#include "coldwar-2.dmm"
 	#include "coldwar-4.dmm"
 
-	//include non-defined in bay12.dme files to play some music in lobby
-	#include "../../code/escalation/modules/lobby_music/blitzkrieg.dm"
+	//to add new sounds - go by this path and add new 'path' to list.
+	#include "../../code/escalation/modules/lobby_music/random_lobby.dm"
 
 	#define USING_MAP_DATUM /datum/map/coldwar
 
