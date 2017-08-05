@@ -1147,8 +1147,6 @@
 			qdel(hud_used)
 		hud_used = new /datum/hud(src)
 
-	if(config && config.use_cortical_stacks && client && client.prefs.has_cortical_stack)
-		create_stack()
 	full_prosthetic = null
 
 	//recheck species-restricted clothing
