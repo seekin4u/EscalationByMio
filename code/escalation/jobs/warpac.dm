@@ -6,6 +6,7 @@
 	title = "CSLA"
 	enabled = 0
 	faction_tag = "csla" //The tag of the faction this job is a part of ("bund", "csla"), for lookups
+	outfit_type = /decl/hierarchy/outfit/escalation/warpac/csla
 
 /datum/job/escalation/csla/lieutenant
 	title = "CZ Poruchik"
@@ -17,6 +18,7 @@
 	position = "team"
 	amount = 1
 	leading = 1
+	outfit_type = /decl/hierarchy/outfit/escalation/warpac/csla/leader
 
 /datum/job/escalation/csla/sublieutenant
 	title = "CZ Podporuchik"

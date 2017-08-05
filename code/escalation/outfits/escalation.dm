@@ -37,3 +37,15 @@
 	l_hand = /obj/item/device/megaphone //Why the hell not
 
 	id_pda_assignment = "Komandir Vzvoda"
+
+/decl/hierarchy/outfit/escalation/warpac/csla
+	uniform = /obj/item/clothing/under/escalation/czech
+	head = /obj/item/clothing/head/helmet/escalation/vz53
+
+/decl/hierarchy/outfit/escalation/warpac/csla/leader
+	name = "Czechs Leader" // change this
+
+	l_ear = /obj/item/device/radio/headset/heads/captain  //Obviously replace this with a proper walkie-talkie
+	l_hand = /obj/item/device/megaphone //Why the hell not
+
+	id_pda_assignment = "Poruchik"
