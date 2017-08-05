@@ -21,7 +21,7 @@
 "u" = (/obj/machinery/door/window/northright,/turf/simulated/wall/wood,/area/space)
 "v" = (/obj/machinery/door/airlock,/turf/simulated/wall/wood,/area/space)
 "w" = (/turf/simulated/floor/holofloor/wood,/area/space)
-"x" = (/obj/structure/bed/chair/wood{step_y = 0},/turf/simulated/floor/holofloor/wood,/area/space)
+"x" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/holofloor/wood,/area/space)
 "y" = (/obj/structure/table/woodentable,/turf/simulated/floor/holofloor/wood,/area/space)
 "z" = (/obj/machinery/door/window/eastright,/turf/simulated/wall/wood,/area/space)
 "A" = (/obj/machinery/door/airlock,/turf/simulated/floor/holofloor/wood,/area/space)
@@ -30,10 +30,10 @@
 "D" = (/turf/simulated/floor/shuttle/white,/area/space)
 "E" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/holofloor/wood,/area/space)
 "F" = (/obj/machinery/food_replicator,/turf/simulated/floor/holofloor/wood,/area/space)
-"G" = (/obj/structure/bed/chair/wood{step_x = 1; step_y = 1},/turf/simulated/floor/holofloor/wood,/area/space)
+"G" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/holofloor/wood,/area/space)
 "H" = (/obj/structure/mirror,/turf/simulated/wall/wood,/area/space)
 "I" = (/obj/structure/sink{dir = 8; pixel_x = -12},/turf/simulated/floor/shuttle/white,/area/space)
-"J" = (/obj/structure/bed/chair/wood{step_y = 1},/turf/simulated/floor/holofloor/wood,/area/space)
+"J" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/holofloor/wood,/area/space)
 "K" = (/obj/machinery/door/window/southleft,/turf/simulated/wall/wood,/area/space)
 
 (1,1,1) = {"
