@@ -803,7 +803,8 @@
 	new_character.force_update_limbs()
 	new_character.update_eyes()
 	new_character.regenerate_icons()
-	set_fraction_language(new_character)
+	add_team_language(new_character)
+	add_other_languages(new_character)
 	new_character.key = key		//Manually transfer the key to log them in
 	return new_character
 

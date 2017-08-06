@@ -1,6 +1,6 @@
 //coldwar languages
 
-/proc/set_fraction_language(var/mob/living/carbon/human/target)
+/proc/add_team_language(var/mob/living/carbon/human/target)
 	if(!ishuman(target))
 		return
 
@@ -34,7 +34,21 @@
 
 	return 1
 
+/proc/add_other_languages(var/mob/living/carbon/human/target)
 
+	if(!ishuman(target))
+		return
+
+	var/mob/living/carbon/human/H = target
+
+	if(!H.chosenSlot || !H.chosenSlot.also_known_languages.len)
+		return
+
+	var/i
+
+	for(i in H.chosenSlot.also_known_languages)
+		if(prob(H.chosenSlot.also_known_languages[i]))
+			H.add_language(i)
 
 /datum/language/escalation
 	name = "Escalation language"

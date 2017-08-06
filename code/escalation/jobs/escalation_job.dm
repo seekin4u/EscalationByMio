@@ -24,6 +24,7 @@
 	var/position = "team" //"team" or "fireteam". Determines where this job is sorted.
 	var/amount = 1 //How many of this are in each team or fireteam.
 	var/leading = 0 // Is job is leader of team or fireteam?
+	var/list/also_known_languages = list()
 
 /datum/job/escalation/proc/remove_mob(var/datum/fireteam/F, var/datum/army_faction/A, var/mob/mob)
 	var/i = 0

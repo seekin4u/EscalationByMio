@@ -19,6 +19,7 @@
 	amount = 1
 	outfit_type = /decl/hierarchy/outfit/escalation/nato/bundes/platoonleader
 	leading = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 30, LANGUAGE_CZECH = 15)
 
 /datum/job/escalation/bund/subleader
 	title = "DE Zugfuhrer Stellvertretender"
@@ -29,6 +30,7 @@
 	rank_number = 1
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 30, LANGUAGE_CZECH = 15)
 
 /datum/job/escalation/bund/squadleader
 	title = "DE Gruppenfuhrer"
@@ -91,7 +93,7 @@
 	rank_number = 4
 	position = "team"
 	amount = 3
-	
+
 /datum/job/escalation/bund/sniper
 	title = "DE Scharfschutze"
 	name = "Scharfschutze"
