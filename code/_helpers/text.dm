@@ -237,9 +237,16 @@
 	return trim_left(trim_right(text))
 
 /proc/punctuate(var/t as text)
-	var/last = copytext(t,-1)
-	if(last != ("!" || "?" || "."))
+	if(!t)
+		return
+
+	var/last = copytext(t, -1)
+
+	if(!(findtext(t, "!") || findtext(t, "?") || findtext(t, ".")))
 		return t + "."
+
+	else
+		return t
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
