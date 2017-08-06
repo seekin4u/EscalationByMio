@@ -89,8 +89,9 @@ h1.alert, h2.alert		{color: #000000;}
 /* Languages */
 
 .russian				{color: #94312B;}
-.english				{color: #002566;}
 .czech					{color: #359631;}
+.english				{color: #002566;}
+.german					{color: #702d08;}
 .alien					{color: #543354;}
 .tajaran				{color: #803B56;}
 .tajaran_signlang		{color: #941C1C;}
