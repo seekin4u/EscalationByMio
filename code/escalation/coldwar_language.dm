@@ -90,5 +90,5 @@
 	name = "German"
 	desc = "This is the languaged used by the Bundeswehr."
 	colour = "german"
-	key = "g"
+	key = "gr"
 	syllables = list("das", "die", "kön", "nen", "sein", "hab", "der", "ähn", "ehrl", "groß", "erst", "jetzt", "auf", "schön", "später", "mög", "lich", "wech", "fleis", "zwischen", "wechseln", "heißen", "adolph", "hitler", "reich", "langsam", "spülen", "messer", "entschuldigen", "dann", "dort", "fuhrer", "mein", "shickse", "scheisse", "drauf", "fick", "biberpelz", "oktoberfest", "bier", "frankfurters")
