@@ -242,7 +242,7 @@
 
 	var/last = copytext(t, -1)
 
-	if(!(findtext(t, "!") || findtext(t, "?") || findtext(t, ".")))
+	if(!(findtext(last, "!") || findtext(last, "?") || findtext(last, ".")))
 		return t + "."
 
 	else
