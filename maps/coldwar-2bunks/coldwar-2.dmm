@@ -1,5 +1,4 @@
 "a" = (/turf/snow/gravsnow,/area/space)
-<<<<<<< HEAD
 "b" = (/turf/simulated/mineral,/area/coldwar/civdef)
 "c" = (/turf/snow/gravsnow,/area/coldwar/civdef)
 "d" = (/turf/simulated/wall/iron,/area/coldwar/civdef)
@@ -45,7 +44,6 @@
 "R" = (/obj/structure/sink{dir = 8; pixel_x = -12},/turf/simulated/floor/shuttle/white,/area/space)
 "S" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/holofloor/wood,/area/space)
 "T" = (/obj/machinery/door/window/southleft,/turf/simulated/wall/wood,/area/space)
-=======
 "b" = (/turf/simulated/wall/iron,/area/coldwar/civdef)
 "c" = (/turf/simulated/floor/plating,/area/coldwar/civdef)
 "d" = (/turf/simulated/mineral,/area/coldwar/civdef)
@@ -82,7 +80,6 @@
 "I" = (/obj/structure/sink{dir = 8; pixel_x = -12},/turf/simulated/floor/shuttle/white,/area/space)
 "J" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/holofloor/wood,/area/space)
 "K" = (/obj/machinery/door/window/southleft,/turf/simulated/wall/wood,/area/space)
->>>>>>> origin/master
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
