@@ -70,8 +70,14 @@
 	desc = "This is the languaged used by the Soviet Army."
 	colour = "russian"
 	key = "r"
-	syllables = list("àë", "àí", "áû", "âå", "âî", "ãî", "äå", "åë", "åí", "åğ", "åò", "êà", "êî", "ëà", "ëè", "ëî", "ëü", "íà", "íå", "íè", "íî", "îâ", "îë", "îí", "îğ", "ñëîã", "îò", "ïî", "ïğ", "ğà", "ğå", "ğî", "ñò", "òà", "òå", "òî", "òü", "àòü", "áûë", "âåğ", "åãî", "åíè", "åíí", "åñò", "êàê", "ëüí", "îâà", "îãî", "îëü", "îğî", "îñò", "îòî", "ïğè", "ïğî", "ñòà", "ñòâ", "òîğ", "÷òî", "ıòî")
+	syllables = list("zhena", "reb", "kot", "tvoy", "vodka", "blyad", "lenin", "ponimat", "zhit", "kley", "sto", "yat", "si", "det", "re", "be", "nok", "chto", "tovarish", "kak", "govor", "navernoe", "da", "net", "horosho", "pochemu", "privet", "ebat", "krovat", "stol", "za", "ryad", "ka", "voyna", "dumat", "patroni", "fashisti", "zdorovie", "day", "dengi", "nemci", "chehi", "odin", "dva", "soyuz", "holod", "granata", "ne", "re", "ru", "rukzak")
 
+/datum/language/escalation/czech
+	name = "Czech"
+	desc = "This is the languaged used by the CSLA."
+	colour = "czech"
+	key = "z"
+	syllables = list("byt", "ten", "ze", "ktery", "pan", "hlava", "zem", "lide", "doba", "dobry", "cely", "tvrdy", "roz", "hodny", "nezlomny", "staly", "scvrnkly", "ener", "gicky", "nezmen", "itelnı", "i", "ved", "dur", "pec", "dát", "bıt", "ten", "on", "na", "e", "kterı", "pán", "ivot", "clo", "vek", "prá", "zeme", "lidé", "dob", "hlav", "mít", "moci", "muse", "vedet", "chtít", "jít", "ríci", "celı", "ivı", "trvanlivı", "hou", "ev", "natı", "dobrı")
 
 /datum/language/escalation/english
 	name = "English"
@@ -80,9 +86,9 @@
 	key = "e"
 	syllables = list("al", "an", "ar", "as", "at", "ea", "ed", "en", "er", "es", "ha", "he", "hi", "in", "is", "it", "le", "me", "nd", "ne", "ng", "nt", "on", "or", "ou", "re", "se", "st", "te", "th", "ti", "to", "ve", "wa", "all", "and", "are", "but", "ent", "era", "ere", "eve", "for", "had", "hat", "hen", "her", "hin", "his", "ing", "ion", "ith", "not", "ome", "oul", "our", "sho", "ted", "ter", "tha", "the", "thi", "tio", "uld", "ver", "was", "wit", "you")
 
-/datum/language/escalation/czech
-	name = "Czech"
-	desc = "This is the languaged used by the CSLA."
-	colour = "czech"
-	key = "cz"
-	syllables = list("byt", "ten", "ze", "ktery", "pan", "hlava", "zem", "lide", "doba", "dobry", "cely", "maly", "mozny", "pevny", "trvanlivy", "odolny", "solidni", "bytelny", "nezdolny", "silny", "tuhy", "hutny", "prurazny", "tvrdy", "rozhodny", "nezlomny", "staly", "scvrnkly", "energicky", "nezmenitelnı", "i", "ved", "dur", "pec", "dát", "bıt", "ten", "on", "na", "e", "kterı", "pán", "ivot", "clo", "vek", "prá", "zeme", "lidé", "dob", "hlav", "mít", "moci", "muse", "vedet", "chtít", "jít", "ríci", "celı", "ivı", "trvanlivı", "houevnatı", "dobrı")
+/datum/language/escalation/german
+	name = "German"
+	desc = "This is the languaged used by the Bundeswehr."
+	colour = "german"
+	key = "g"
+	syllables = list("das", "die", "kön", "nen", "sein", "hab", "der", "ähn", "ehrl", "groß", "erst", "jetzt", "auf", "schön", "später", "mög", "lich", "wech", "fleis", "zwischen", "wechseln", "heißen", "adolph", "hitler", "reich", "langsam", "spülen", "messer", "entschuldigen", "dann", "dort", "fuhrer", "mein", "shickse", "scheisse", "drauf", "fick", "biberpelz", "oktoberfest", "bier", "frankfurters")

@@ -42,7 +42,7 @@
 #define LANGUAGE_SIGN "Sign Language"
 
 #define LANGUAGE_ENGLISH "English"
-#define LANGUAGE_GERMAN  "English" // Add german language and change this
+#define LANGUAGE_GERMAN  "German"
 
 #define LANGUAGE_RUSSIAN "Russian"
 #define LANGUAGE_CZECH   "Czech"
