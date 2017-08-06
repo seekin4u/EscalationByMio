@@ -41,6 +41,12 @@
 #define LANGUAGE_CULT "Cult"
 #define LANGUAGE_SIGN "Sign Language"
 
+#define LANGUAGE_ENGLISH "English"
+#define LANGUAGE_GERMAN  "English" // Add german language and change this
+
+#define LANGUAGE_RUSSIAN "Russian"
+#define LANGUAGE_CZECH   "Czech"
+
 // Language flags.
 #define WHITELISTED  1   // Language is available if the speaker is whitelisted.
 #define RESTRICTED   2   // Language can only be acquired by spawning or an admin.
