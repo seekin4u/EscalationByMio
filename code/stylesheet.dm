@@ -88,11 +88,12 @@ h1.alert, h2.alert		{color: #000000;}
 
 /* Languages */
 
-.russian				{color: #94312B;}
-.czech					{color: #359631;}
-.english				{color: #002566;}
-.german					{color: #702d08;}
-.alien					{color: #543354;}
+.russian				{color: #94312B; font-weight: bold;}
+.czech					{color: #359631; font-weight: bold;}
+.english				{color: #002566; font-weight: bold;}
+.german					{color: #702d08; font-weight: bold;}
+
+.alien					{color: #543354; font-weight: bold;}
 .tajaran				{color: #803B56;}
 .tajaran_signlang		{color: #941C1C;}
 .skrell					{color: #00CED1;}

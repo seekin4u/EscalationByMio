@@ -77,18 +77,18 @@
 	desc = "This is the languaged used by the CSLA."
 	colour = "czech"
 	key = "z"
-	syllables = list("byt", "ten", "ze", "ktery", "pan", "hlava", "zem", "lide", "doba", "dobry", "cely", "tvrdy", "roz", "hodny", "nezlomny", "staly", "scvrnkly", "ener", "gicky", "nezmen", "itelný", "ži", "ved", "dur", "pec", "dát", "být", "ten", "on", "na", "že", "který", "pán", "život", "clo", "vek", "prá", "zeme", "lidé", "dob", "hlav", "mít", "moci", "muse", "vedet", "chtít", "jít", "ríci", "celý", "živý", "trvanlivý", "hou", "žev", "natý", "dobrý")
+	syllables = list("byt", "ten", "ze", "ktery", "pan", "hlava", "zem", "lide", "doba", "dobry", "cely", "tvrdy", "roz", "hodny", "nezlomny", "staly", "scvrnkly", "ener", "gicky", "nezmen", "itelne", "hi", "ved", "dur", "pec", "dat", "bet", "ten", "on", "na", "he", "ktere", "pen", "hivot", "clo", "vek", "pre", "zeme", "lidu", "dob", "hlav", "mht", "moci", "muse", "vedet", "chtht", "jht", "rhci", "cele", "hive", "trvanlive", "hou", "hev", "nate", "dobre")
 
 /datum/language/escalation/english
 	name = "English"
 	desc = "This is the languaged used by the American Army."
 	colour = "english"
 	key = "e"
-	syllables = list("al", "an", "ar", "as", "at", "ea", "ed", "en", "er", "es", "ha", "he", "hi", "in", "is", "it", "le", "me", "nd", "ne", "ng", "nt", "on", "or", "ou", "re", "se", "st", "te", "th", "ti", "to", "ve", "wa", "all", "and", "are", "but", "ent", "era", "ere", "eve", "for", "had", "hat", "hen", "her", "hin", "his", "ing", "ion", "ith", "not", "ome", "oul", "our", "sho", "ted", "ter", "tha", "the", "thi", "tio", "uld", "ver", "was", "wit", "you")
+	syllables = list("he", "she", "it", "as", "known", "worse", "fish", "president", "dream", "look", "stop", "hand", "enemy", "squad", "me", "my", "big", "little", "nuke", "want", "friend", "one", "two", "or", "some", "re", "se", "st", "te", "th", "ti", "to", "ve", "wa", "all", "and", "are", "but", "ent", "era", "ere", "eve", "for", "had", "hat", "hen", "her", "hin", "his", "ing", "ion", "ith", "not", "ome", "oul", "our", "sho", "ted", "ter", "tha", "the", "thi", "tio", "uld", "ver", "was", "wit", "you")
 
 /datum/language/escalation/german
 	name = "German"
 	desc = "This is the languaged used by the Bundeswehr."
 	colour = "german"
-	key = "gr"
-	syllables = list("das", "die", "kön", "nen", "sein", "hab", "der", "ähn", "ehrl", "groß", "erst", "jetzt", "auf", "schön", "später", "mög", "lich", "wech", "fleis", "zwischen", "wechseln", "heißen", "adolph", "hitler", "reich", "langsam", "spülen", "messer", "entschuldigen", "dann", "dort", "fuhrer", "mein", "shickse", "scheisse", "drauf", "fick", "biberpelz", "oktoberfest", "bier", "frankfurters")
+	key = "g"
+	syllables = list("das", "die", "kun", "nen", "sein", "hab", "der", "ähn", "ehrl", "groy", "erst", "jetzt", "auf", "schön", "später", "mug", "lich", "wech", "fleis", "zwischen", "wechseln", "heiyen", "adolph", "hitler", "reich", "langsam", "spelen", "messer", "entschuldigen", "dann", "dort", "fuhrer", "mein", "shickse", "scheisse", "drauf", "fick", "biberpelz", "oktoberfest", "bier", "frankfurters")
