@@ -17,6 +17,14 @@
 	body_parts_covered = HEAD
 	armor = list(melee = 55, bullet = 50, laser = 30,energy = 25, bomb = 35, bio = 0, rad = 0)
 
+/obj/item/clothing/head/helmet/escalation/vz53
+	name = "Vz. 53 Helmet"
+	desc = "A steel helmet."
+	icon_state = "vz53"
+
+	body_parts_covered = HEAD
+	armor = list(melee = 60, bullet = 45, laser = 30,energy = 25, bomb = 45, bio = 0, rad = 0)
+
 /obj/item/clothing/head/helmet/escalation/ssh68
 	name = "SSh-68 Helmet"
 	desc = "A steel helmet."

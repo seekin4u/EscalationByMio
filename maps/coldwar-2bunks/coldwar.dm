@@ -21,6 +21,9 @@
 	#include "coldwar-2.dmm"
 	#include "coldwar-4.dmm"
 
+	//to add new sounds - go by this path and add new 'path' to list.
+	#include "../../code/escalation/modules/lobby_music/random_lobby.dm"
+
 	#define USING_MAP_DATUM /datum/map/coldwar
 
 #elif !defined(MAP_OVERRIDE)

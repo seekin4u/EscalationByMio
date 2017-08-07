@@ -2,6 +2,10 @@
 	mob_list -= src
 	dead_mob_list_ -= src
 	living_mob_list_ -= src
+
+	if(chosenSlot)
+		chosenSlot.remove_mob(fireteam_picked, team_picked, src)
+
 	unset_machine()
 	qdel(hud_used)
 	clear_fullscreen()

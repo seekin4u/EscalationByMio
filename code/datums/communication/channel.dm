@@ -86,7 +86,7 @@
 	return usr != src ? "[key_name] - usr: [plain_key_name(usr)]" : key_name
 
 /proc/sanitize_and_communicate(var/channel_type, var/communicator, var/message)
-	message = sanitize_russian(message)
+	message = sanitize(message)
 	return communicate(arglist(args))
 
 /proc/communicate(var/channel_type, var/communicator, var/message)

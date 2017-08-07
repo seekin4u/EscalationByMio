@@ -38,7 +38,7 @@
 		//In addition to processing html, html_encode removes byond formatting codes like "\ red", "\ i" and other.
 		//It is important to avoid double-encode text, it can "break" quotes and some other characters.
 		//Also, keep in mind that escaped characters don't work in the interface (window titles, lower left corner of the main window, etc.)
-		input = html_encode(input)
+		input = rhtml_encode(input)
 	else
 		//If not need encode text, simply remove < and >
 		//note: we can also remove here byond formatting codes: 0xFF + next byte
@@ -156,7 +156,7 @@
 
 //Old variant. Haven't dared to replace in some places.
 /proc/sanitize_old(var/t,var/list/repl_chars = list("\n"="#","\t"="#"))
-	return html_encode(replace_characters(t,repl_chars))
+	return rhtml_encode(replace_characters(t,repl_chars))
 
 /*
  * Text searches
@@ -237,9 +237,16 @@
 	return trim_left(trim_right(text))
 
 /proc/punctuate(var/t as text)
-	var/last = copytext(t,-1)
-	if(last != ("!" || "?" || "."))
+	if(!t)
+		return
+
+	var/last = copytext(t, -1)
+
+	if(!(findtext(last, "!") || findtext(last, "?") || findtext(last, ".")))
 		return t + "."
+
+	else
+		return t
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
@@ -322,7 +329,7 @@ proc/TextPreview(var/string,var/len=40)
 
 //alternative copytext() for encoded text, doesn't break html entities (&#34; and other)
 /proc/copytext_preserve_html(var/text, var/first, var/last)
-	return html_encode(copytext(html_decode(text), first, last))
+	return rhtml_encode(copytext(html_decode(text), first, last))
 
 //For generating neat chat tag-images
 //The icon var could be local in the proc, but it's a waste of resources

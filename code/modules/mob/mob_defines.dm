@@ -164,3 +164,9 @@
 	var/flavor_text = ""
 
 	var/obj/using_object = null
+
+	// Escalation
+
+	var/datum/job/escalation/chosenSlot = null
+	var/datum/army_faction/team_picked = null
+	var/datum/fireteam/fireteam_picked = null

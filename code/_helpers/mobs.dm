@@ -93,6 +93,36 @@ proc/random_name(gender, species = SPECIES_HUMAN)
 	else
 		return current_species.get_random_name(gender)
 
+proc/esc_random_name(gender, faction)
+	if(!faction)
+		return random_name(gender)
+
+	switch(faction)
+		if("usmc")
+			if(gender == FEMALE)
+				return capitalize(pick(first_names_female_usmc)) + " " + capitalize(pick(last_names_usmc))
+			else
+				return capitalize(pick(first_names_male_usmc)) + " " + capitalize(pick(last_names_usmc))
+
+		if("bund")
+			if(gender == FEMALE)
+				return capitalize(pick(first_names_female_bund)) + " " + capitalize(pick(last_names_bund))
+			else
+				return capitalize(pick(first_names_male_bund)) + " " + capitalize(pick(last_names_bund))
+
+		if("cccp")
+			if(gender == FEMALE)
+				return capitalize(pick(first_names_female_cccp)) + " " + capitalize(pick(last_names_female_cccp))
+			else
+				return capitalize(pick(first_names_male_cccp)) + " " + capitalize(pick(last_names_cccp))
+
+		if("csla")
+			if(gender == FEMALE)
+				return capitalize(pick(first_names_female_csla)) + " " + capitalize(pick(last_names_female_csla))
+			else
+				return capitalize(pick(first_names_male_csla)) + " " + capitalize(pick(last_names_csla))
+
+
 proc/random_skin_tone()
 	switch(pick(60;"caucasian", 15;"afroamerican", 10;"african", 10;"latino", 5;"albino"))
 		if("caucasian")		. = -10

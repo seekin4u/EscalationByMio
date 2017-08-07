@@ -116,7 +116,11 @@ datum/preferences
 /datum/preferences/New(client/C)
 	player_setup = new(src)
 	gender = pick(MALE, FEMALE)
-	real_name = "New Character"
+	if(escJob && escJob.faction_tag)
+		real_name = esc_random_name(gender, escJob.faction_tag)
+	else
+		real_name = random_name(gender)
+
 	b_type = RANDOM_BLOOD_TYPE
 
 	gear = list()
@@ -266,7 +270,10 @@ datum/preferences
 	player_setup.sanitize_setup()
 	character.set_species(species)
 	if(be_random_name)
-		real_name = random_name(gender,species)
+		if(escJob && escJob.faction_tag)
+			real_name = esc_random_name(gender, escJob.faction_tag)
+		else
+			real_name = random_name(gender,species)
 
 	if(config.humans_need_surnames)
 		var/firstspace = findtext(real_name, " ")

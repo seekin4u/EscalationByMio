@@ -496,9 +496,6 @@ var/list/gamemode_cache = list()
 				if("protect_roles_from_antagonist")
 					config.protect_roles_from_antagonist = 1
 
-				if("use_cortical_stacks")
-					config.use_cortical_stacks = 1
-
 				if ("probability")
 					var/prob_pos = findtext(value, " ")
 					var/prob_name = null

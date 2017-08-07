@@ -81,16 +81,19 @@ h1.alert, h2.alert		{color: #000000;}
 .alium					{color: #00ff00;}
 .cult					{color: #800080; font-weight: bold; font-style: italic;}
 
-.largeblack				{color: #000000;}	font-weight: bold;		font-size: 120%;}
-.smallblack 			{color: #000000;}	font-size: 50%;}
+.largeblack				{color: #000000; font-weight: bold;	ont-size: 120%;}
+.smallblack 			{color: #000000; font-size: 50%;}
 
 .reflex_shoot			{color: #000099; font-style: italic;}
 
 /* Languages */
 
-.russian				{color: #94312B;}
-.english				{color: #002566;}
-.alien					{color: #543354;}
+.russian				{color: #94312B; font-weight: bold;}
+.czech					{color: #359631; font-weight: bold;}
+.english				{color: #002566; font-weight: bold;}
+.german					{color: #702d08; font-weight: bold;}
+
+.alien					{color: #543354; font-weight: bold;}
 .tajaran				{color: #803B56;}
 .tajaran_signlang		{color: #941C1C;}
 .skrell					{color: #00CED1;}

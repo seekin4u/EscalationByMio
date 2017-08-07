@@ -6,6 +6,7 @@
 	title = "CSLA"
 	enabled = 0
 	faction_tag = "csla" //The tag of the faction this job is a part of ("bund", "csla"), for lookups
+	outfit_type = /decl/hierarchy/outfit/escalation/warpac/csla
 
 /datum/job/escalation/csla/lieutenant
 	title = "CZ Poruchik"
@@ -17,6 +18,8 @@
 	position = "team"
 	amount = 1
 	leading = 1
+	outfit_type = /decl/hierarchy/outfit/escalation/warpac/csla/leader
+	also_known_languages = list(LANGUAGE_RUSSIAN = 100, LANGUAGE_ENGLISH = 25, LANGUAGE_GERMAN = 40)
 
 /datum/job/escalation/csla/sublieutenant
 	title = "CZ Podporuchik"
@@ -27,6 +30,7 @@
 	rank_number = 1
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 100, LANGUAGE_ENGLISH = 25, LANGUAGE_GERMAN = 40)
 
 /datum/job/escalation/csla/sergeant
 	title = "CZ Chetar"
@@ -38,6 +42,7 @@
 	position = "fireteam"
 	amount = 1
 	leading = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 /datum/job/escalation/csla/subsergeant
 	title = "CZ Subchetar"
@@ -48,16 +53,18 @@
 	rank_number = 3
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 /datum/job/escalation/csla/gunner
-	title = "CZ Strelec"
-	name = "Strelec"
+	title = "CZ Delostrelec"
+	name = "Delostrelec"
 	english_name = "Machinegunner"
 	enabled = 1
 	rank_prefix = "Svob." //Svobodnik
 	rank_number = 4
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 /datum/job/escalation/csla/grenadier
 	title = "CZ Pancerovnik"
@@ -68,6 +75,7 @@
 	rank_number = 4
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 /datum/job/escalation/csla/grenass
 	title = "CZ Pomocnik Pancerovnika"
@@ -78,6 +86,7 @@
 	rank_number = 5
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 /datum/job/escalation/csla/teamradio
 	title = "CZ Cheta Radista"
@@ -88,6 +97,7 @@
 	rank_number = 5
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 /datum/job/escalation/csla/squadradio
 	title = "CZ Radista"
@@ -98,6 +108,7 @@
 	rank_number = 5
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 100, LANGUAGE_ENGLISH = 25, LANGUAGE_GERMAN = 35)
 
 /datum/job/escalation/csla/rifleman
 	title = "CZ Strelec"
@@ -120,6 +131,7 @@
 	rank_number = 4
 	position = "team"
 	amount = 2
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 /datum/job/escalation/csla/medic
 	title = "CZ Sanitar"
@@ -130,7 +142,7 @@
 	rank_number = 3
 	position = "team"
 	amount = 3
-
+	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 
 
@@ -154,6 +166,7 @@
 	amount = 1
 	leading = 1
 	outfit_type = /decl/hierarchy/outfit/escalation/warpac/cccp/leader
+	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 40, LANGUAGE_GERMAN = 30)
 
 /datum/job/escalation/cccp/subleader
 	title = "CCCP Zam Komandira"
@@ -164,6 +177,7 @@
 	rank_number = 2
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 40, LANGUAGE_GERMAN = 30)
 
 /datum/job/escalation/cccp/qm //Quartermaster basically
 	title = "CCCP Kapter"
@@ -174,6 +188,7 @@
 	rank_number = 3
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 50, LANGUAGE_ENGLISH = 30, LANGUAGE_GERMAN = 30)
 
 /datum/job/escalation/cccp/aqm //QM assistant
 	title = "CCCP Pomoshnik Kaptera"
@@ -184,6 +199,7 @@
 	rank_number = 7
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/radiomaster //QM's assistant, in charge of radios/communication
 	title = "CCCP Shtabnoy Radist"
@@ -194,6 +210,8 @@
 	rank_number = 6
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 35, LANGUAGE_GERMAN = 35)
+	
 
 /datum/job/escalation/cccp/squadleader
 	title = "CCCP Komandir Otdeleniya"
@@ -205,6 +223,7 @@
 	position = "fireteam"
 	amount = 1
 	leading = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/squadvice
 	title = "CCCP Starshiy Strelok"
@@ -215,6 +234,7 @@
 	rank_number = 6
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/squadradio
 	title = "CCCP Radiotelefonist"
@@ -225,6 +245,7 @@
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/grenadier
 	title = "CCCP Granatometchik"
@@ -235,6 +256,7 @@
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/grenass
 	title = "CCCP Pomoshnik Granatometchika"
@@ -245,6 +267,7 @@
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/machinegunner
 	title = "CCCP Pulemetchik"
@@ -255,6 +278,7 @@
 	rank_number = 7
 	position = "fireteam"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/rifleman
 	title = "CCCP Strelok"
@@ -265,6 +289,7 @@
 	rank_number = 7
 	position = "fireteam"
 	amount = 3
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/marksman
 	title = "CCCP Snayper"
@@ -275,6 +300,7 @@
 	rank_number = 6
 	position = "team"
 	amount = 2
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 //Not in squads
 /datum/job/escalation/cccp/medic
@@ -286,6 +312,7 @@
 	rank_number = 6
 	position = "team"
 	amount = 3
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/headmedic
 	title = "CCCP Glavvrach"
@@ -296,3 +323,4 @@
 	rank_number = 1
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 35, LANGUAGE_GERMAN = 35)

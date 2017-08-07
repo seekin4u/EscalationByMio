@@ -5,11 +5,11 @@
 	var/title
 	var/album
 	var/license
-	var/song
+	var/list/song
 	var/url // Remember to include http:// or https://
 
 /lobby_music/proc/play_to(var/listener)
-	if(!song)
+	if(!song || !song.len)
 		return
 	to_chat(listener, "<span class='good'>Now Playing:</span>")
 	to_chat(listener, "<span class='good'>[title][artist ? " by [artist]" : ""][album ? " ([album])" : ""]</span>")
@@ -18,4 +18,4 @@
 	if(license)
 		var/license_url = license_to_url[license]
 		to_chat(listener, "<span class='good'>License: [license_url ? "<a href='[license_url]'>[license]</a>" : license]</span>")
-	sound_to(listener, sound(song, repeat = 1, wait = 0, volume = 85, channel = 1))
+	sound_to(listener, sound(pick(song), repeat = 1, wait = 0, volume = 85, channel = 1))

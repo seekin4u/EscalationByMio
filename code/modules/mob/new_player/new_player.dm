@@ -20,13 +20,8 @@
 	virtual_mob = null // Hear no evil, speak no evil
 
 	// Escalation
-	var/datum/job/escalation/chosenSlot
 	var/fireteam_view = 0
 	var/team_view = 0
-
-	var/datum/army_faction/team_picked
-	var/datum/fireteam/fireteam_picked
-
 	var/datum/browser/escpanel
 
 /mob/new_player/New()
@@ -51,7 +46,7 @@
 
 	output += "<center><p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p></center>"
 
-	if(src.client && src.client.holder && ticker.current_state == GAME_STATE_PREGAME) //Are they an admin?
+	if(src.client && src.client.holder && ticker && ticker.current_state == GAME_STATE_PREGAME) //Are they an admin?
 		output += "<center><p><a href='byond://?src=\ref[src];game_setup=1'>Game Setup</A></p></center>"
 
 	panel = new(src, "Welcome","<center>Welcome</center>", 240, 320, src)
@@ -103,19 +98,19 @@
 			slot_index++
 			if(istype(J,/datum/job/escalation))
 				var/datum/job/escalation/A = J
-				if(A.current_positions < A.amount)
-					out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+
 			else
 				if(!ismob(J))
 					continue
 
-				var/mob/new_player/M = J
+				var/mob/M = J
 				var/admin_text = ""
 
 				if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
 					admin_text = "<a href='byond://?src=\ref[src];admin_kick_slot=\ref[M]'>ADMIN: KICK SLOT</a>"
 
-				out += "<p>[M.name] - [M.chosenSlot.name] ([M.chosenSlot.english_name]) [admin_text]</p>"
+				out += "<p>[(M.client && M.client.prefs) ? M.client.prefs.real_name : M.name] - [M.chosenSlot.name] ([M.chosenSlot.english_name]) [admin_text]</p>"
 
 		if(team.num_fireteams > 0)
 			out += "<hr><p>"
@@ -137,21 +132,20 @@
 
 			if(istype(S, /datum/job/escalation))
 				var/datum/job/escalation/A = S
-				if(A.current_positions < A.amount)
-					out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
+				out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
 
 			else
 				if(!ismob(S))
 					continue
 
-				var/mob/new_player/P = S
+				var/mob/P = S
 
 				var/admin_text = ""
 
 				if(src.client.holder && (!ticker || ticker.current_state <= GAME_STATE_PREGAME))
 					admin_text = "<a href='byond://?src=\ref[src];admin_kick_slot=\ref[P]'>ADMIN: KICK SLOT</a>"
 
-				out += "<p>[P.name] - [P.chosenSlot.name] ([P.chosenSlot.english_name]) [admin_text]</P>"
+				out += "<p>[(P.client && P.client.prefs) ? P.client.prefs.real_name : P.name] - [P.chosenSlot.name] ([P.chosenSlot.english_name]) [admin_text]</P>"
 
 		out += "</center>"
 		out += "<hr>"
@@ -166,7 +160,13 @@
 	escpanel.open()
 	return
 
-/mob/new_player/proc/update_escpanels_for_all()
+/mob/new_player/proc/close_team_panel()
+	src << browse(null, "window=Teams")
+	if(escpanel)
+		escpanel.close()
+		escpanel = null
+
+/proc/update_escpanels_for_all()
 	for(var/mob/new_player/player in player_list)
 		if(player.escpanel)
 			player.new_player_show_teams()
@@ -194,9 +194,7 @@
 	if(!client)	return 0
 
 	if(href_list["close"])
-		if(escpanel)
-			onclose(usr, "Teams")
-			escpanel = null
+		close_team_panel()
 
 	if(href_list["set_team"])
 		team_view = text2num(href_list["set_team"])
@@ -208,6 +206,9 @@
 		new_player_show_teams()
 
 	if(href_list["set_team_job"])
+		if(spawning)
+			return
+
 		var/datum/army_faction/team = get_army(team_view)
 
 		var/slot_index = text2num(href_list["set_team_job"])
@@ -238,11 +239,14 @@
 
 		else
 			if(chosenSlot)
-				onclose(usr,"Teams")
+				close_team_panel()
+
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
-		new_player_show_teams()
 
 	if(href_list["set_fireteam_job"])
+		if(spawning)
+			return
+
 		var/datum/army_faction/team = get_army(team_view)
 		var/datum/fireteam/fireteam
 
@@ -275,12 +279,15 @@
 				ready = 1
 		else
 			if(chosenSlot)
-				onclose(usr, "Teams")
+				close_team_panel()
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 				return
 
 
 	if(href_list["exit_slot"])
+		if(spawning)
+			return
+
 		if(chosenSlot)
 			chosenSlot.remove_mob(fireteam_picked, team_picked, src)
 
@@ -363,6 +370,9 @@
 		to_chat(src,"<B>Countdown started!</b>")
 
 	if(href_list["join"])
+		if(spawning)
+			return
+
 		if(!ticker || !ticker.mode)
 			to_chat(src,"<span class='warning'>Be patient, the game mode has not been selected yet.</span>")
 			return
@@ -424,7 +434,11 @@
 			qdel(mannequin)
 
 			if(client.prefs.be_random_name)
-				client.prefs.real_name = random_name(client.prefs.gender)
+				if(client.prefs.escJob && client.prefs.escJob.faction_tag)
+					client.prefs.real_name = esc_random_name(client.prefs.gender, client.prefs.escJob.faction_tag)
+				else
+					client.prefs.real_name = random_name(client.prefs.gender)
+
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
@@ -604,24 +618,29 @@
 		alert("Wrong rank for [rank]. Valid ranks in [client.prefs.char_branch] are: [job.get_ranks(client.prefs.char_branch)].")
 		return 0
 
+	var/datum/spawnpoint/spawnpoint = null
+	var/turf/spawn_turf = null
 
-	var/datum/spawnpoint/spawnpoint = job_master.get_spawnpoint_for(client, rank)
-	var/turf/spawn_turf = pick(spawnpoint.turfs)
-	var/airstatus = IsTurfAtmosUnsafe(spawn_turf)
-	if(airstatus)
-		var/reply = alert(usr, "Warning. Your selected spawn location seems to have unfavorable atmospheric conditions. \
-		You may die shortly after spawning. It is possible to select different spawn point via character preferences. \
-		Spawn anyway? More information: [airstatus]", "Atmosphere warning", "Abort", "Spawn anyway")
-		if(reply == "Abort")
-			return 0
-		else
-			// Let the staff know, in case the person complains about dying due to this later. They've been warned.
-			log_and_message_admins("User [src] spawned at spawn point with dangerous atmosphere.")
+	var/obj/S = null
+	var/list/loc_list = new()
 
-		// Just in case someone stole our position while we were waiting for input from alert() proc
-		if(!IsJobAvailable(job))
-			to_chat(src, alert("[rank] is not available. Please try another."))
-			return 0
+	for(var/obj/effect/landmark/start/sloc in landmarks_list)
+		if(sloc.name != rank)	continue
+
+		if(locate(/mob/living) in sloc.loc)	continue
+
+		loc_list += sloc
+
+	if(loc_list.len)
+		S = pick(loc_list)
+
+	if(istype(S, /obj/effect/landmark/start) && istype(S.loc, /turf))
+		spawn_turf = S.loc
+
+	else
+		spawnpoint = job_master.get_spawnpoint_for(client, rank)
+		spawn_turf = pick(spawnpoint.turfs)
+
 
 	job_master.AssignRole(src, rank, 1)
 
@@ -660,7 +679,7 @@
 			data_core.manifest_inject(character)
 			ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
 
-			if(job.announced)
+			if(job.announced && spawnpoint)
 				AnnounceArrival(character, rank, spawnpoint.msg)
 		matchmaker.do_matchmaking()
 	log_and_message_admins("has joined the round as [character.mind.assigned_role].", character)
@@ -712,6 +731,8 @@
 /mob/new_player/proc/create_character(var/turf/spawn_turf)
 	spawning = 1
 	close_spawn_windows()
+
+	close_team_panel()
 
 	var/mob/living/carbon/human/new_character
 
@@ -766,20 +787,40 @@
 	new_character.dna.ready_dna(new_character)
 	new_character.dna.b_type = client.prefs.b_type
 	new_character.sync_organ_dna()
+
+	if(chosenSlot)
+		new_character.chosenSlot = chosenSlot
+		new_character.team_picked = team_picked
+		new_character.fireteam_picked = fireteam_picked
+
+		var/i = 0
+
+		if(chosenSlot.position == "team" && team_picked)
+			for(var/M in team_picked.slots)
+				i++
+				if(M == src)
+					team_picked.slots[i] = new_character
+					break
+
+		else if(chosenSlot.position == "fireteam" && fireteam_picked)
+			for(var/M in fireteam_picked.slots)
+				i++
+				if(M == src)
+					fireteam_picked.slots[i] = new_character
+					break
+
 	if(client.prefs.disabilities)
 		// Set defer to 1 if you add more crap here so it only recalculates struc_enzymes once. - N3X
 		new_character.dna.SetSEState(GLASSESBLOCK,1,0)
 		new_character.disabilities |= NEARSIGHTED
 
 	// Give them their cortical stack if we're using them.
-	if(config && config.use_cortical_stacks && client && client.prefs.has_cortical_stack /*&& new_character.should_have_organ(BP_BRAIN)*/)
-		new_character.create_stack()
-
 	// Do the initial caching of the player's body icons.
 	new_character.force_update_limbs()
 	new_character.update_eyes()
 	new_character.regenerate_icons()
-
+	add_team_language(new_character)
+	add_other_languages(new_character)
 	new_character.key = key		//Manually transfer the key to log them in
 	return new_character
 
