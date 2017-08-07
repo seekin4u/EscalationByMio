@@ -19,7 +19,7 @@
 	amount = 1
 	outfit_type = /decl/hierarchy/outfit/escalation/nato/bundes/platoonleader
 	leading = 1
-	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 30, LANGUAGE_CZECH = 15)
+	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 40, LANGUAGE_CZECH = 20)
 
 /datum/job/escalation/bund/subleader
 	title = "DE Zugfuhrer Stellvertretender"
@@ -30,7 +30,7 @@
 	rank_number = 1
 	position = "team"
 	amount = 1
-	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 30, LANGUAGE_CZECH = 15)
+	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 40, LANGUAGE_CZECH = 20)
 
 /datum/job/escalation/bund/squadleader
 	title = "DE Gruppenfuhrer"
@@ -42,6 +42,7 @@
 	position = "fireteam"
 	amount = 1
 	leading = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)	
 
 /datum/job/escalation/bund/subsergeant
 	title = "DE Gruppenfuhrer Stellvertreter"
@@ -52,6 +53,7 @@
 	rank_number = 3
 	position = "fireteam"
 	amount = 2
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/machinegunner
 	title = "DE Maschinengewehrschutze"
@@ -62,6 +64,7 @@
 	rank_number = 4
 	position = "fireteam"
 	amount = 2
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/grunt
 	title = "DE Schutze"
@@ -72,7 +75,7 @@
 	rank_number = 6
 	position = "fireteam"
 	amount = 6
-
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/fielddoctor
 	title = "DE Chef-Sanitater"
@@ -83,6 +86,7 @@
 	rank_number = 3
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 35, LANGUAGE_CZECH = 15)
 
 /datum/job/escalation/bund/fieldmedic
 	title = "DE Sanitater"
@@ -93,6 +97,7 @@
 	rank_number = 4
 	position = "team"
 	amount = 3
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/sniper
 	title = "DE Scharfschutze"
@@ -103,6 +108,7 @@
 	rank_number = 5
 	position = "team"
 	amount = 2
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 
 
@@ -124,6 +130,7 @@
 	position = "team"
 	amount = 1
 	leading = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 40, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/lieu2
 	title = "US Staff Sergeant"
@@ -133,6 +140,7 @@
 	rank_number = 1 //Second in command
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 40, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/radioman
 	title = "US Radio Telegraph Operator"
@@ -143,6 +151,7 @@
 	rank_number = 2
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 20, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/squadleader
 	title = "US Sergeant"
@@ -154,6 +163,7 @@
 	position = "fireteam"
 	amount = 1
 	leading = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/fireteamleader
 	title = "US Corporal"
@@ -164,6 +174,7 @@
 	rank_number = 3
 	position = "fireteam"
 	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/squadradio
 	title = "US Radio Operator"
@@ -174,6 +185,7 @@
 	rank_number = 4
 	position = "fireteam"
 	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/machinegunner
 	title = "US Machinegunner"
@@ -184,7 +196,7 @@
 	rank_number = 5
 	position = "fireteam"
 	amount = 2
-
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/grunt
 	title = "US Rifleman"
@@ -195,7 +207,7 @@
 	rank_number = 6
 	position = "fireteam"
 	amount = 6
-
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 //Not in squads - "attachments" in the marines
 /datum/job/escalation/usmc/medic
@@ -206,7 +218,7 @@
 	rank_prefix = "HM3"
 	position = "team"
 	amount = 3
-
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/marksman
 	title = "US Designated Marksman"
@@ -216,6 +228,7 @@
 	rank_prefix = "Pfc."
 	position = "team"
 	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/surgeon
 	title = "US Surgeon"
@@ -235,3 +248,4 @@
 	rank_prefix = "2ndLT"
 	position = "team"
 	amount = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 30, LANGUAGE_CZECH = 15)
