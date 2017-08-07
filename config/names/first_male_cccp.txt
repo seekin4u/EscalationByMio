@@ -6,7 +6,7 @@ Sergey
 Yaroslav
 Grigory
 Maksim
-Yevgeny
+Yevgeniy
 Ignat
 Taras
 Bogdan
@@ -16,13 +16,13 @@ Pyotr
 Anton
 Ruslan
 Viktor
-Valery
+Valeriy
 Vladimir
 Ilya
 Stepan
 Fedor
 Oleg
-Dmitry
+Dmitriy
 Lev
 Daniil
 Denis
@@ -30,7 +30,7 @@ Georgiy
 Gleb
 Eduard
 Pavel
-Arkady
+Arkadiy
 Andrey
 Kirill
 Yegor
@@ -43,3 +43,13 @@ Semyon
 Igor
 Boris
 Valentin
+Platon
+Arseniy
+Vladlen
+Yakov
+Timofey
+Matvey
+Vitaliy
+Yuriy
+Vadim
+Rostislav
