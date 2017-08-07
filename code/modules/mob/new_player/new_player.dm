@@ -206,6 +206,9 @@
 		new_player_show_teams()
 
 	if(href_list["set_team_job"])
+		if(spawning)
+			return
+
 		var/datum/army_faction/team = get_army(team_view)
 
 		var/slot_index = text2num(href_list["set_team_job"])
@@ -241,6 +244,9 @@
 				AttemptLateSpawn(chosenSlot.title, client.prefs.spawnpoint)
 
 	if(href_list["set_fireteam_job"])
+		if(spawning)
+			return
+
 		var/datum/army_faction/team = get_army(team_view)
 		var/datum/fireteam/fireteam
 
@@ -279,6 +285,9 @@
 
 
 	if(href_list["exit_slot"])
+		if(spawning)
+			return
+
 		if(chosenSlot)
 			chosenSlot.remove_mob(fireteam_picked, team_picked, src)
 
@@ -361,6 +370,9 @@
 		to_chat(src,"<B>Countdown started!</b>")
 
 	if(href_list["join"])
+		if(spawning)
+			return
+
 		if(!ticker || !ticker.mode)
 			to_chat(src,"<span class='warning'>Be patient, the game mode has not been selected yet.</span>")
 			return
@@ -422,7 +434,11 @@
 			qdel(mannequin)
 
 			if(client.prefs.be_random_name)
-				client.prefs.real_name = random_name(client.prefs.gender)
+				if(client.prefs.escJob && client.prefs.escJob.faction_tag)
+					client.prefs.real_name = esc_random_name(client.prefs.gender, client.prefs.escJob.faction_tag)
+				else
+					client.prefs.real_name = random_name(client.prefs.gender)
+
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.

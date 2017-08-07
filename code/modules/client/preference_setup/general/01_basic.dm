@@ -28,7 +28,10 @@ datum/preferences
 	pref.gender             = sanitize_inlist(pref.gender, S.genders, pick(S.genders))
 	pref.real_name          = sanitize_name(pref.real_name, pref.species)
 	if(!pref.real_name)
-		pref.real_name      = random_name(pref.gender, pref.species)
+		if(pref.escJob && pref.escJob.faction_tag)
+			pref.real_name  = esc_random_name(pref.gender, pref.escJob.faction_tag)
+		else
+			pref.real_name  = random_name(pref.real_name, pref.species)
 	pref.spawnpoint         = sanitize_inlist(pref.spawnpoint, spawntypes, initial(pref.spawnpoint))
 	pref.be_random_name     = sanitize_integer(pref.be_random_name, 0, 1, initial(pref.be_random_name))
 
@@ -61,7 +64,10 @@ datum/preferences
 				return TOPIC_NOACTION
 
 	else if(href_list["random_name"])
-		pref.real_name = random_name(pref.gender, pref.species)
+		if(pref.escJob && pref.escJob.faction_tag)
+			pref.real_name = esc_random_name(pref.gender, pref.escJob.faction_tag)
+		else
+			pref.real_name = random_name(pref.gender, pref.species)
 		return TOPIC_REFRESH
 
 	else if(href_list["always_random_name"])
