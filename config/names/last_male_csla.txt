@@ -1,4 +1,4 @@
-Pokorny
+okorny
 Lishkov
 Nemechkov
 Jandov
@@ -28,3 +28,18 @@ Sivak
 Guchkov
 Matiashkov
 Grajov
+Beranek
+Kovarzh
+Pavlik
+Vacek
+Sedlachek
+Nemecek
+Buresh
+Ruzhichka
+Kadlec
+Vesely
+Stanek
+Janda
+Maly
+Kubichek
+Konechny
