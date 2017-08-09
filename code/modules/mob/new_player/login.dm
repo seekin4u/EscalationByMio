@@ -7,6 +7,7 @@
 
 /obj/effect/lobby_image/initialize()
 	icon = using_map.lobby_icon
+/*
 	var/known_icon_states = icon_states(icon)
 	for(var/lobby_screen in using_map.lobby_screens)
 		if(!(lobby_screen in known_icon_states))
@@ -17,6 +18,9 @@
 		icon_state = pick(using_map.lobby_screens)
 	else
 		icon_state = known_icon_states[1]
+*/
+//no switching for now
+	icon_state = "title"
 
 /mob/new_player/Login()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
