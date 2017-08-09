@@ -17,7 +17,7 @@
 "q" = (/obj/structure/bed,/obj/item/weapon/bedsheet/blue,/turf/simulated/floor/plating,/area/coldwar/civdef)
 "r" = (/obj/structure/table/rack,/turf/simulated/floor/plating,/area/coldwar/civdef)
 "s" = (/obj/item/clothing/shoes/escalation/military/nato,/turf/simulated/floor/plating,/area/coldwar/civdef)
-"t" = (/obj/machinery/light/small{step_x = 1; step_y = 0},/turf/simulated/floor/plating,/area/coldwar/civdef)
+"t" = (/obj/machinery/light/small,/turf/simulated/floor/plating,/area/coldwar/civdef)
 "u" = (/obj/item/weapon/stool/padded,/turf/simulated/floor/plating,/area/coldwar/civdef)
 "v" = (/obj/item/frame/apc,/turf/simulated/wall/iron,/area/coldwar/civdef)
 "w" = (/turf/simulated/mineral,/area/space)
