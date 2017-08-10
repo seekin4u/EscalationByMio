@@ -126,7 +126,7 @@
 	sound_env = LIVINGROOM
 	forced_ambience = list('sound/effects/wind/windloopindoors.ogg')
 
-/area/coldwar/usmcfob
+/area/coldwar/usmc1/usmc_fob
 	name = "USMC FOB"
 	icon_state = "usmcfob"
 	sound_env = PLAIN
@@ -138,7 +138,58 @@
 	'sound/ambience/coldwar/hel2.ogg'
 	)
 
-/area/coldwar/trucks/
+/area/coldwar/sa
+	icon = 'icons/escalation/turf/area.dmi'
+	icon_state = "sa"
+
+/area/coldwar/sa/sa_fob
+	name = "SA fob"
+	icon_state = "sa_fob"
+
+/area/coldwar/sa/sa_bunk
+	name = "SA bunker"
+	icon_state = "sa_bunk"
+
+/area/coldwar/sa/sa_kapter
+	name = "SA kapterka"
+	icon_state = "sa_kapter"
+
+/area/coldwar/sa/spawn_area/sa_soldiers
+	name = "SA soldiers barracks"
+	icon_state = "sa_sold_spawn"
+
+/area/coldwar/sa/spawn_area/sa_officers
+	name = "SA officers barracks"
+	icon_state = "sa_officers_spawn"
+
+/area/coldwar/sa/spawn_area/cz_soldiers
+	name = "CZ soldiers barracks"
+	icon_state = "cz_sold_spawn"
+
+/area/coldwar/sa/spawn_area/cz_officers
+	name = "CZ officers barracks"
+	icon_state = "cz_officers_spawn"
+
+/area/coldwar/usmc
+	icon = 'icons/escalation/turf/area.dmi'
+	icon_state = "usmc"
+
+//TODO - sprites for it and replace another spsrites from icons/turf/area.dmi
+/*/area/coldwar/usmc/usmc_fob
+
+/area/coldwar/usmc/usmc_bace
+
+/area/coldwar/usmc/usmc_tents
+
+/area/coldwar/usmc/spawn_area/usmc_soldiers
+
+/area/coldwar/usmc/spawn_area/usmc_officers
+
+/area/coldwar/usmc/spawn_area/bund_soldiers
+
+/area/coldwar/usmc/spawn_area/bund_officers*/
+
+/area/coldwar/trucks
 	name = ""
 	icon = 'icons/escalation/turf/area.dmi'
 
