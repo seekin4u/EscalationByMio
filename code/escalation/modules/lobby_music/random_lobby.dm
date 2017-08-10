@@ -1,10 +1,10 @@
 /lobby_music/basic_chatter
-	song = list('sound/music/escalation/1983_radio_chatter_eng.ogg', \
-				'sound/music/escalation/blow_myself.ogg', \
-				'sound/music/escalation/grozniy_radio_chatter.ogg', \
-				'sound/music/escalation/korobochka.ogg', \
-				'sound/music/escalation/mw_chatter.ogg', \
-				'sound/music/escalation/lobby_blitzkrieg.ogg')
+	song = list('sound/music/escalation/1983_radio_chatter_eng.ogg')
+//				'sound/music/escalation/blow_myself.ogg', \
+//				'sound/music/escalation/grozniy_radio_chatter.ogg', \
+//				'sound/music/escalation/korobochka.ogg', \
+//				'sound/music/escalation/mw_chatter.ogg', \
+//				'sound/music/escalation/lobby_blitzkrieg.ogg')
 
 /*lobby_music/chatter_2
 	artist = "2"
