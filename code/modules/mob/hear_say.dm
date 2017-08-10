@@ -70,7 +70,7 @@
 		if(language && !(language in languages))
 			on_hear_say("<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][language.format_message(message, verb, src)]</span>")
 		else
-			on_hear_say("<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][verb], <span class='message'><span class='body'>\"[message]\"</span></span></span>")
+			on_hear_say("<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][verb], <span class='message'><span class='body'>\"[capitalize(message)]\"</span></span></span>")
 		if (speech_sound && (get_dist(speaker, src) <= world.view && src.z == speaker.z))
 			var/turf/source = speaker? get_turf(speaker) : get_turf(src)
 			src.playsound_local(source, speech_sound, sound_vol, 1)
