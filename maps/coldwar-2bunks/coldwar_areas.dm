@@ -154,6 +154,14 @@
 	name = "SA kapterka"
 	icon_state = "sa_kapter"
 
+/area/coldwar/sa/sa_med
+	name = "SA medbay"
+	icon_state = "sa_med"
+
+/area/coldwar/sa/sa_cant
+	name = "SA cantine"
+	icon_state = "sa_cant"
+
 /area/coldwar/sa/spawn_area/sa_soldiers
 	name = "SA soldiers barracks"
 	icon_state = "sa_sold_spawn"
@@ -175,10 +183,15 @@
 	icon_state = "usmc"
 
 //TODO - sprites for it and replace another spsrites from icons/turf/area.dmi
-/*/area/coldwar/usmc/usmc_fob
+/area/coldwar/usmc/usmc_fob
+	name = "USMC fob"
+	icon_state = "usmc_fob"
 
 /area/coldwar/usmc/usmc_bace
+	name = "USMC bace"
+	icon_state = "usmc_bace"
 
+/*
 /area/coldwar/usmc/usmc_tents
 
 /area/coldwar/usmc/spawn_area/usmc_soldiers
