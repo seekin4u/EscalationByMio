@@ -23,6 +23,7 @@
 		else if (a == 184)
 			t += ascii2text(168)
 		else t += ascii2text(a)
+	t = replacetext(t,"ÿ","ß")
 	t = replacetext(t,"&#255;","ß")
 	return t
 

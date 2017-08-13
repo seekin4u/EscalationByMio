@@ -83,8 +83,11 @@
 
 	return scrambled_text
 
-/datum/language/proc/format_message(message, verb)
-	return "[verb], <span class='message'><span class='[colour]'>\"[capitalize(message)]\"</span></span>"
+/datum/language/proc/format_message(message, verb, var/mob/user)
+	if(src in user.languages)
+		return "[verb], <span class='message'><span class='[colour]'>\"[capitalize(message)]\"</span></span>"
+	else
+		return "[verb], <span class='message'><span class='[colour]'>\"<b>[capitalize(message)]</b>\"</span></span>"
 
 /datum/language/proc/format_message_plain(message, verb)
 	return "[verb], \"[capitalize(message)]\""
