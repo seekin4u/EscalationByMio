@@ -347,11 +347,14 @@ var/list/name_to_material
 
 /material/concrete
 	name = "concrete"
-	icon_base = "stone"
-	icon_reinf = "reinf_over"
-	icon_colour = "#D9C179"
-	weight = 20
-	hardness = 150
+	icon_base = "concrete"
+	icon_reinf = "reinf_over_concrete"
+	icon_colour = "#898787"
+	explosion_resistance = 50
+	brute_armor = 10
+	burn_armor = 15
+	hardness = 80
+	weight = 23
 	stack_type = /obj/item/stack/material/concrete
 	hitsound = 'sound/weapons/smash.ogg'
 
