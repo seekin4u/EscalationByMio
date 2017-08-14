@@ -3,7 +3,7 @@
 "ac" = (/turf/simulated/wall/concrete,/area/coldwar)
 "ad" = (/turf/snow,/area/coldwar)
 "ae" = (/turf/simulated/wall/armedconcrete,/area/coldwar)
-"af" = (/obj/structure/concrete_block,/turf/snow,/area/coldwar)
+"af" = (/obj/structure/sandbag/concrete_block,/turf/snow,/area/coldwar)
 "ag" = (/obj/structure/sandbag,/turf/snow,/area/coldwar)
 "ah" = (/turf/simulated/wall/titanium,/area/coldwar)
 "ai" = (/turf/simulated/wall,/area/coldwar)
