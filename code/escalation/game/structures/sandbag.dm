@@ -15,17 +15,17 @@
 	to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/Destroy()
-	//chance = null
 	..()
+
 /obj/structure/sandbag/proc/update_layers()
 	if(dir == NORTH)
-		layer = initial(layer)
+		layer = initial(layer) + 0.1
 		plane = initial(plane)
 	else
-		layer = ABOVE_WINDOW_LAYER
+		layer = ABOVE_WINDOW_LAYER + 0.1
 		plane = ABOVE_HUMAN_PLANE
 
-/obj/structure/sandbag/set_dir(direction)
+/obj/structure/sandbag/set_dir()
 	..()
 	update_layers()
 
@@ -118,6 +118,7 @@
 	var/sand_amount = 4
 
 /obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
+	to_world("Sandbag's check4sandbags")
 	var/i = 0
 
 	for(var/obj/structure/sandbag/baggy in user.loc.contents)
@@ -128,14 +129,12 @@
 
 	return 1
 
-/obj/item/weapon/sandbag/proc/check4concrete(mob/user as mob)
-	if(locate(/obj/structure/concrete_block) in user.loc.contents)
-		to_chat(user, "\red There is no more space.")
-		return 0
-	return 1
-
-/obj/item/weapon/sandbag/proc/check4brutswehr(mob/user as mob)
-	if(locate(/obj/structure/brutswehr) in user.loc.contents)
+/obj/item/weapon/sandbag/proc/check4struct(mob/user as mob)
+	to_world("Sandbag's check4struck")
+	if((locate(/obj/structure/chezh_hangehog) || \
+		locate(/obj/structure/sandbag/concrete_block) || \
+		locate(/obj/structure/brutswehr)) in user.loc.contents \
+		)
 		to_chat(user, "\red There is no more space.")
 		return 0
 	return 1
@@ -148,7 +147,7 @@
 		to_chat(user, "\red Haha.")
 		return
 
-	if(!check4sandbags(user) || !check4concrete(user) || !check4brutswehr(user))
+	if(!check4sandbags(user) || !check4struct(user))
 		return
 
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
