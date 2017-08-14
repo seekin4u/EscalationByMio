@@ -104,7 +104,7 @@
 /turf/simulated/wall/armedconcrete/New(var/newloc)
 	icon_state = null
 	color = null
-	..(newloc, "concrete", "steel")
+	..(newloc, "concrete", "concrete")
 
 /turf/simulated/wall/titanium
 	icon = 'icons/turf/wall_masks.dmi'
