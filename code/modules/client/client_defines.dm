@@ -49,3 +49,6 @@
 	var/static/obj/screen/click_catcher/void
 
 	var/chosen_languages = 0
+
+
+	var/list/selected_target[2]
