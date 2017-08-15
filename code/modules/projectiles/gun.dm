@@ -69,6 +69,8 @@
 	var/cocked_sound 	= null
 	var/safety = 1 //Whether or not the safety is on.
 
+	var/automatic = 0  //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
+
 	var/next_fire_time = 0
 
 	var/sel_mode = 1 //index of the currently selected mode
