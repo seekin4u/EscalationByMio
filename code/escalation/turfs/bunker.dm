@@ -11,6 +11,17 @@
 
 
 
+/turf/simulated/rock
+	name = "Mountain"
+	icon = 'icons/escalation/turf/Rock.dmi'
+	icon_state = "Rock"
+	blocks_air = 1
+	density = 1
+/turf/simulated/rock/edge
+	icon_state = "Rock_outline"
+
+
+
 
 /turf/simulated/floor/dirt
 	name = "dirt"
@@ -33,7 +44,8 @@
 	icon_state = "Outward_corner"
 
 
-
+/turf/snow/no_flora
+	//just for the flora code
 
 
 
@@ -44,6 +56,11 @@
 
 /turf/simulated/wall/concrete/reinforced
 	icon_state = "Reinforced_cw"
+
+/turf/simulated/wall/brick
+	name = "brick wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "Wall_brick"
 
 
 /obj/effect/decal/warning_stripes/bunker
@@ -93,4 +110,5 @@
 	density = 1
 	on = 1
 	use = 0
+	anchored = 1
 
