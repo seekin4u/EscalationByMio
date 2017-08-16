@@ -130,6 +130,15 @@
 	area_station = /area/shuttle/merchant/home
 	area_offsite = /area/shuttle/merchant/away
 
+/datum/shuttle/ferry/
+	name = "Merchant"
+	warmup_time = 10
+	docking_controller_tag = "merchant_ship_dock"
+	dock_target_station = "merchant_station_dock"
+	dock_target_offsite = "merchant_shuttle_station_dock"
+	area_station = /area/shuttle/merchant/home
+	area_offsite = /area/shuttle/merchant/away
+
 /datum/shuttle/multi_shuttle/mercenary
 	name = "Mercenary"
 	warmup_time = 0
@@ -154,9 +163,19 @@
 		)
 	announcer = "NDV Icarus"
 
-/datum/shuttle/multi_shuttle/mercenary/New()
-	arrival_message = "Attention, [using_map.station_short], you have a large signature approaching the station - looks unarmed to surface scans. We're too far out to intercept - brace for visitors."
-	departure_message = "Your visitors are on their way out of the system, [using_map.station_short], burning delta-v like it's nothing. Good riddance."
+/datum/shuttle/multi_shuttle/truck/ural
+	name = "Ural"
+	warmup_time = 0
+	location = 0
+	origin = /area/coldwar/trucks/ural/ural_home
+	/area/coldwar/trucks/ural
+	destinations = list(
+		"FOB" = /area/coldwar/trucks/ural/ural_fob
+		)
+
+/datum/shuttle/multi_shuttle/truck/ural/New()
+	arrival_message = "URALLL IS COMUNG TO FOB!."
+	departure_message = "URAL GO HOMEEEEEE."
 	..()
 
 /datum/shuttle/multi_shuttle/skipjack

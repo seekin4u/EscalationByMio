@@ -324,6 +324,7 @@
 #include "code\escalation\clothing\helmets.dm"
 #include "code\escalation\clothing\misc.dm"
 #include "code\escalation\clothing\uniforms.dm"
+#include "code\escalation\game\objects\ural.dm"
 #include "code\escalation\game\objects\items\weapons\mines.dm"
 #include "code\escalation\game\structures\brutswehr.dm"
 #include "code\escalation\game\structures\concrete_block.dm"

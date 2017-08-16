@@ -205,10 +205,20 @@
 /area/coldwar/trucks
 	name = ""
 	icon = 'icons/escalation/turf/area.dmi'
+	icon_state = ""
+	requires_power = 0
 
 /area/coldwar/trucks/ural
 	name = "ural_base"
 	icon_state = "ural1"
+
+/area/coldwar/trucks/ural/ural_home
+	name = "ural_home"
+	icon_state = "ural_home"
+
+/area/coldwar/trucks/ural/ural_fob
+	name = "ural_fob"
+	icon_state = "ural_fob"
 
 /area/coldwar/trucks/m35
 	name = "m35_base"
