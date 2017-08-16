@@ -332,6 +332,7 @@
 #include "code\escalation\game\structures\sandbag.dm"
 #include "code\escalation\game\turfs\flooring\floorind_premade.dm"
 #include "code\escalation\game\turfs\flooring\flooring.dm"
+#include "code\escalation\game\turfs\simulated\wall_shuttle.dm"
 #include "code\escalation\gamemodes\1983\wargames.dm"
 #include "code\escalation\jobs\civilian.dm"
 #include "code\escalation\jobs\escalation_job.dm"

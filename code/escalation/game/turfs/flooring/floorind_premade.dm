@@ -10,6 +10,11 @@
 	icon_state = ""
 	initial_flooring = /decl/flooring/ural/basic
 
+/turf/simulated/floor/ural_basic/n5
+	name = "URAL's tile n5"
+	icon_state = "5"
+	initial_flooring = /decl/flooring/ural/basic/n5
+
 /turf/simulated/floor/ural_basic/n6
 	name = "URAL's tile n6"
 	icon_state = "6"
@@ -19,6 +24,11 @@
 	name = "URAL's tile n7"
 	icon_state = "7"
 	initial_flooring = /decl/flooring/ural/basic/n7
+
+/turf/simulated/floor/ural_basic/n8
+	name = "URAL's tile n8"
+	icon_state = "8"
+	initial_flooring = /decl/flooring/ural/basic/n8
 
 /turf/simulated/floor/ural_basic/n14
 	name = "URAL's tile n14"

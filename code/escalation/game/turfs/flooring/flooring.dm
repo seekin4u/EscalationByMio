@@ -19,6 +19,10 @@
 	icon = 'icons/escalation/turf/ural.dmi'
 	icon_base = "decal_base"
 
+/decl/flooring/ural/basic/n5
+	name = "5 part"
+	icon_base = "5"
+
 /decl/flooring/ural/basic/n6
 	name = "6 part"
 	icon_base = "6"
@@ -26,6 +30,10 @@
 /decl/flooring/ural/basic/n7
 	name = "7 part"
 	icon_base = "7"
+
+/decl/flooring/ural/basic/n8
+	name = "8 part"
+	icon_base = "8"
 
 /decl/flooring/ural/basic/n14
 	name = "14 part"
