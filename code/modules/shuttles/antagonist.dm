@@ -18,3 +18,10 @@
 	req_access = list(access_syndicate)
 	shuttle_tag = "Ninja"
 
+/obj/machinery/computer/shuttle_control/multi/ural
+	name = "URAL's control console"
+	icon = 'icons/escalation/turf/ural.dmi'
+	icon_state = "panel"
+	density = 0
+	req_access = list(access_cent_specops)
+	shuttle_tag = "Ural"
