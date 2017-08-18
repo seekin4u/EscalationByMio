@@ -340,6 +340,7 @@
 #include "code\escalation\jobs\escalation_job.dm"
 #include "code\escalation\jobs\nato.dm"
 #include "code\escalation\jobs\warpac.dm"
+#include "code\escalation\modules\admin\verbs\debud.dm"
 #include "code\escalation\outfits\escalation.dm"
 #include "code\escalation\turfs\bunker.dm"
 #include "code\game\atoms.dm"
