@@ -2,7 +2,7 @@
 
 	#include "coldwar_areas.dm"
 	#include "coldwar_effects.dm"
-	//#include "coldwar_shuttles.dm"
+	#include "coldwar_shuttles.dm"
 
 	//#include "coldwar_unit_testing.dm"
 	//#include "coldwar_zas_tests.dm"

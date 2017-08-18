@@ -1,5 +1,5 @@
 // Escape shuttle and pods
-/datum/shuttle/ferry/emergency/centcom
+/*datum/shuttle/ferry/emergency/centcom
 	name = "Escape"
 	location = 1
 	warmup_time = 10
@@ -161,17 +161,18 @@
 		"Mercenary Base" = "merc_base",
 		"Arrivals dock" = "nuke_shuttle_dock_airlock",
 		)
-	announcer = "NDV Icarus"
+	announcer = "NDV Icarus"*/
 
 /datum/shuttle/multi_shuttle/truck/ural
 	name = "Ural"
 	warmup_time = 0
-	location = 0
 	origin = /area/coldwar/trucks/ural/ural_home
-	/area/coldwar/trucks/ural
+	interim = /area/coldwar/trucks/ural
 	destinations = list(
 		"FOB" = /area/coldwar/trucks/ural/ural_fob
 		)
+	docking_controller_tag = "ural_1"
+
 
 /datum/shuttle/multi_shuttle/truck/ural/New()
 	arrival_message = "URALLL IS COMUNG TO FOB!."
@@ -181,10 +182,11 @@
 /datum/shuttle/ferry/ural
 	name = "Ural1"
 	warmup_time = 5
+	docking_controller_tag = "ural_1"
 	area_offsite = /area/coldwar/trucks/ural/ural_fob
 	area_station = /area/coldwar/trucks/ural/ural_home
 
-/datum/shuttle/multi_shuttle/skipjack
+/*datum/shuttle/multi_shuttle/skipjack
 	name = "Skipjack"
 	warmup_time = 0
 	origin = /area/skipjack_station/start
@@ -242,4 +244,4 @@
 	docking_controller_tag_station = "specops_shuttle_port"
 	docking_controller_tag_offsite = "specops_shuttle_fore"
 	dock_target_station = "specops_centcom_dock"
-	dock_target_offsite = "specops_dock_airlock"
+	dock_target_offsite = "specops_dock_airlock"*/
