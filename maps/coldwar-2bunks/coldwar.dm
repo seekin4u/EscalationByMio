@@ -19,6 +19,7 @@
 
 	#include "coldwar-1.dmm"
 	#include "coldwar-2.dmm"
+	#include "coldwar-2fortests.dmm"
 	#include "coldwar-4.dmm"
 
 	//to add new sounds - go by this path and add new 'path' to list.

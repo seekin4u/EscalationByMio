@@ -166,12 +166,12 @@
 /datum/shuttle/multi_shuttle/truck/ural
 	name = "Ural"
 	warmup_time = 0
-	origin = /area/coldwar/trucks/ural/ural_home
+	origin = area_offsite = /area/shuttle/truck/ural/start
 	interim = /area/coldwar/trucks/ural
 	destinations = list(
-		"FOB" = /area/coldwar/trucks/ural/ural_fob
+		"FOB" = area_station = /area/shuttle/truck/ural/finish
 		)
-	docking_controller_tag = "ural_1"
+	docking_controller_tag = "ural_2"
 
 
 /datum/shuttle/multi_shuttle/truck/ural/New()
@@ -183,8 +183,8 @@
 	name = "Ural1"
 	warmup_time = 5
 	docking_controller_tag = "ural_1"
-	area_offsite = /area/coldwar/trucks/ural/ural_fob
-	area_station = /area/coldwar/trucks/ural/ural_home
+	area_offsite = /area/shuttle/truck/ural/start
+	area_station = /area/shuttle/truck/ural/finish
 
 /*datum/shuttle/multi_shuttle/skipjack
 	name = "Skipjack"

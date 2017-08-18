@@ -28,7 +28,9 @@
 
 /obj/machinery/computer/shuttle_control/ural
 	name = "mining shuttle control console"
+	icon = 'icons/escalation/turf/ural.dmi'
+	icon_state = "panel"
 	shuttle_tag = "Ural1"
 	density = 0
 	//req_access = list(access_mining)
-	circuit = /obj/item/weapon/circuitboard/mining_shuttle
+	circuit = /obj/item/weapon/circuitboard/ural_shuttle
