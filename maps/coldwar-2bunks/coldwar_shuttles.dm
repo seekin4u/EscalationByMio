@@ -166,10 +166,10 @@
 /datum/shuttle/multi_shuttle/truck/ural
 	name = "Ural"
 	warmup_time = 0
-	origin = area_offsite = /area/shuttle/truck/ural/start
+	origin = /area/shuttle/truck/ural/start
 	interim = /area/coldwar/trucks/ural
 	destinations = list(
-		"FOB" = area_station = /area/shuttle/truck/ural/finish
+		"FOB" = /area/shuttle/truck/ural/finish
 		)
 	docking_controller_tag = "ural_2"
 
