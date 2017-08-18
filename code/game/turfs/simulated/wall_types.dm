@@ -86,10 +86,7 @@
 	color = null
 	..(newloc, "wood")
 
-/turf/simulated/wall/concrete
-	icon = 'icons/turf/wall_masks.dmi'
-	icon_state = "concrete_preview"
-	color = "#CCCCCC"
+
 
 /turf/simulated/wall/concrete/New(var/newloc)
 	icon_state = null
