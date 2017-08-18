@@ -1,12 +1,17 @@
 /obj/effect/border_effect
-	name = "snow"
-	desc = "A layer of snow"
+	name = "border_effect"
+	desc = "You shouldn't be seeing this"
 	icon = 'icons/escalation/turf/Turfs.dmi'
 	icon_state = "Snow1"
 	var/overlay_icon_state = "snow_overlay"
 	var/borders = 0
 	var/border_start = 0
 	anchored = 1
+
+/obj/effect/border_effect/snow
+	name = "snow"
+	desc = "A layer of snow"
+
 /obj/effect/border_effect/proc/update_overlays()
 	var/turf/parent_turf=get_turf(src)
 	parent_turf.overlays.Cut(border_start,borders+border_start)
@@ -24,15 +29,12 @@
 			var/image/overlay
 			switch(i)
 				if(0)
-
 					overlay=image(icon, icon_state = overlay_icon_state, dir = 1)
 					overlay.pixel_y = 32
 				if(1)
-
 					overlay=image(icon, icon_state = overlay_icon_state, dir = 2)
 					overlay.pixel_y = -32
 				if(2)
-
 					overlay=image(icon, icon_state = overlay_icon_state, dir = 4)
 					overlay.pixel_x = 32
 				if(3)
@@ -44,7 +46,7 @@
 			parent_turf.overlays += overlay
 
 
-/obj/effect/border_effect/snow/New()
+/obj/effect/border_effect/New()
 	..()
 	icon_state = "Snow[rand(1,10)]"
 	update_overlays()
@@ -55,7 +57,7 @@
 			be.update_overlays()
 
 
-/obj/effect/border_effect/snow/Destroy()
+/obj/effect/border_effect/Destroy()
 	var/turf/parent_turf=get_turf(src)
 	parent_turf.overlays.Cut(border_start,border_start+borders)
 	for(var/i = 0, i < 3, i++)
