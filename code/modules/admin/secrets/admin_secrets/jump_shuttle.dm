@@ -2,7 +2,9 @@
 	name = "Jump a Shuttle"
 
 /datum/admin_secret_item/admin_secret/jump_shuttle/can_execute(var/mob/user)
-	if(!shuttle_controller) return 0
+	if(!shuttle_controller)
+		to_world("!SHUTTLE CONTROLLER")
+		return 0
 	return ..()
 
 /datum/admin_secret_item/admin_secret/jump_shuttle/execute(var/mob/user)

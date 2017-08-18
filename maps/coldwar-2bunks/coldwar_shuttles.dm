@@ -178,6 +178,12 @@
 	departure_message = "URAL GO HOMEEEEEE."
 	..()
 
+/datum/shuttle/ferry/ural
+	name = "Ural1"
+	warmup_time = 5
+	area_offsite = /area/coldwar/trucks/ural/ural_fob
+	area_station = /area/coldwar/trucks/ural/ural_home
+
 /datum/shuttle/multi_shuttle/skipjack
 	name = "Skipjack"
 	warmup_time = 0
