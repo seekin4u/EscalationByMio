@@ -20,6 +20,9 @@
 /turf/simulated/rock/edge
 	icon_state = "Rock_outline"
 
+/obj/effect/decal/warning_stripes/bunker
+	icon = 'icons/escalation/turf/concrete_floor.dmi'
+	icon_state = "striped_border"
 
 
 
@@ -35,13 +38,9 @@
 	icon = 'icons/escalation/turf/Turfs.dmi'
 	icon_state = "Road"
 
-/turf/simulated/floor/road/edge
-	icon_state = "Edge_1"
-/turf/simulated/floor/road/edge/New()
-	icon_state = pick("Edge_1","Edge_2")
-
-/turf/simulated/floor/road/corner
-	icon_state = "Outward_corner"
+/turf/simulated/floor/road/New()
+	if(prob(10))
+		new /obj/effect/border_effect/snow(src)
 
 
 /turf/snow/no_flora
@@ -62,18 +61,6 @@
 	icon = 'icons/escalation/turf/Walls.dmi'
 	icon_state = "Wall_brick"
 
-
-/obj/effect/decal/warning_stripes/bunker
-	icon = 'icons/escalation/turf/concrete_floor.dmi'
-	icon_state = "striped_border"
-
-/obj/effect/decal/warning_stripes/dirt_border
-	icon = 'icons/escalation/turf/Turfs.dmi'
-	icon_state = "dirt_overlay"
-
-/obj/effect/decal/warning_stripes/snow_border
-	icon = 'icons/escalation/turf/Turfs.dmi'
-	icon_state = "snow_overlay"
 
 //structures and machines
 /obj/structure/window/fence

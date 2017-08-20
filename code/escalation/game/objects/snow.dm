@@ -7,6 +7,8 @@
 	var/borders = 0
 	var/border_start = 0
 	anchored = 1
+	plane = ABOVE_TURF_PLANE
+	layer = DECAL_LAYER
 
 /obj/effect/border_effect/snow
 	name = "snow"
