@@ -145,6 +145,11 @@
 	name = "\improper URAL BASE AREA"
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "ural1"
+	base_turf = /turf/snow
+
+/area/shuttle/truck/ural/intertim
+	name = "\improper URAL intertim"
+	icon_state = "ural_intertim"
 
 /area/shuttle/truck/ural/start
 	name = "\improper URAL's start area"
@@ -240,11 +245,11 @@
 
 /area/coldwar/trucks/ural/ural_home
 	name = "ural_home"
-	icon_state = "ural_home"
+	icon_state = "ural_start"
 
 /area/coldwar/trucks/ural/ural_fob
 	name = "ural_fob"
-	icon_state = "ural_fob"
+	icon_state = "ural_finish"
 
 /area/coldwar/trucks/m35
 	name = "m35_base"

@@ -167,7 +167,7 @@
 	name = "Ural"
 	warmup_time = 0
 	origin = /area/shuttle/truck/ural/start
-	interim = /area/coldwar/trucks/ural
+	interim = /area/shuttle/truck/ural/intertim
 	destinations = list(
 		"FOB" = /area/shuttle/truck/ural/finish
 		)
