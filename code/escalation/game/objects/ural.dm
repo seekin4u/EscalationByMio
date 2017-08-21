@@ -48,7 +48,7 @@
 /obj/structure/truck/ural/basic_wall
 	name = "wall's basic"
 	icon_state = "wall_base"
-//	opacity = 1//opaque = block light
+	opacity = 1//opaque = block light
 	density = 1//visible
 
 /obj/structure/truck/ural/basic_wall/n1
