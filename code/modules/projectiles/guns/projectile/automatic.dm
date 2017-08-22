@@ -670,7 +670,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a1
 	name = "M16A1"
-	desc = "That's the outdated weapon of the USMC"
+	desc = "M16A1 is an outdated USMC automatic rifle"
 	icon_state = "m16a1"
 	item_state = "m16"
 	w_class = 5
