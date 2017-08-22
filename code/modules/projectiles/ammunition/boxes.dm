@@ -341,7 +341,7 @@
 
 /obj/item/ammo_magazine/c556x45m
 	name = "magazine (5.56x45mm)"
-	icon_state = "5.56x45m"
+	icon_state = "5.56x45mm"
 	mag_type = MAGAZINE
 	caliber = "556x45"
 	ammo_type = /obj/item/ammo_casing/a556x45
