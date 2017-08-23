@@ -285,7 +285,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/ak74
 	name = "AK-74"
-	desc = "That's the standard-issue weapon of the Soviet infantry."
+	desc = "The AK-74 is a standard-issued automatic rifle of the Soviet infantry."
 	icon_state = "ak74"
 	item_state = "ak"
 	w_class = 5
@@ -695,12 +695,12 @@
 		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5)),
 		)
 
-/obj/item/weapon/gun/projectile/automatic/m16a2/update_icon()
+/obj/item/weapon/gun/projectile/automatic/m16a1/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "m16a2"
+		icon_state = "m16a1"
 	else
-		icon_state = "m16a2-empty"
+		icon_state = "m16a1-empty"
 
 
 /obj/item/weapon/gun/projectile/automatic/svd
