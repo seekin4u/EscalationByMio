@@ -41,3 +41,12 @@
 	desc = "Worn by robust fighters who are willing to do anything to win."
 	icon_state = "luchar"
 	item_state = "luchar"
+
+/obj/item/clothing/mask/coif
+	name = "Coif"
+	desc = "Worn in winter"
+	icon_state = "coif"
+	item_state = "coif"
+	flags_inv = HIDEFACE|BLOCKHAIR
+	body_parts_covered = HEAD|FACE
+	w_class = ITEM_SIZE_SMALL

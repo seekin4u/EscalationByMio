@@ -273,6 +273,7 @@
 	name = "AP magazine (7.62x51mm)"
 	ammo_type = /obj/item/ammo_casing/a762x51/ap
 
+
 /obj/item/ammo_magazine/c762x39b
 	name = "magazine box (7.62x39mm)"
 	icon_state = "7.62x39b"

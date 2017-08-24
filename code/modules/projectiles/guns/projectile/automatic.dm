@@ -736,3 +736,37 @@
 		icon_state = "svd"
 	else
 		icon_state = "svd-empty"
+
+
+/obj/item/weapon/gun/projectile/automatic/g3a3
+	name = "G3A3"
+	desc = "The G3A3 is a standart rifle of Bundeswehr forces."
+	icon_state = "g3a3"
+	item_state = "g3a3"
+	w_class = 5
+	load_method = MAGAZINE
+	caliber = "762x51"
+	slot_flags = SLOT_BACK
+	ammo_type = /obj/item/ammo_casing/a762x51
+	allowed_magazines = /obj/item/ammo_magazine/c762x51s
+	magazine_type = /obj/item/ammo_magazine/c762x51s
+	one_hand_penalty = 5
+	accuracy = 4
+	fire_delay = 4
+	wielded_item_state = "g3a3-wielded"
+	fire_sound = 'sound/weapons/gunshot/m16.ogg'
+	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
+	reload_sound = 'sound/weapons/gunporn/m16_magin.ogg'
+	cocked_sound = 'sound/weapons/gunporn/m16_chargeback.ogg'
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
+		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1),       dispersion=list(0.3, 0.6)),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/g3a3/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "g3a3"
+	else
+		icon_state = "g3a3-empty"
