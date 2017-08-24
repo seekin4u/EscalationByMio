@@ -24,6 +24,15 @@
 	icon = 'icons/escalation/turf/concrete_floor.dmi'
 	icon_state = "striped_border"
 
+/obj/effect/decal/warning_stripes/road_line
+	icon = 'icons/escalation/turf/road.dmi'
+	icon_state = "Yellow_line"
+
+/obj/effect/decal/warning_stripes/road_line/outer_corner
+	icon_state = "Yellow_line_outer_corner"
+
+/obj/effect/decal/warning_stripes/road_line/inner_corner
+	icon_state = "Yellow_line_inner_corner"
 
 
 /turf/simulated/floor/dirt
@@ -35,8 +44,28 @@
 
 /turf/simulated/floor/road
 	name = "road"
-	icon = 'icons/escalation/turf/Turfs.dmi'
-	icon_state = "Road"
+	icon = 'icons/escalation/turf/road.dmi'
+	icon_state = "Road_grey"
+
+/turf/simulated/floor/pavement
+	name = "pavement"
+	icon = 'icons/escalation/turf/road.dmi'
+	icon_state = "Pavement0"
+
+
+/turf/simulated/floor/pavement/New()
+	icon_state = "Pavement[rand(0,3)]"
+	if(prob(10))
+		new /obj/effect/border_effect/snow(src)
+
+/turf/simulated/floor/pavement/corner/outer
+	icon_state = "Corner"
+
+/turf/simulated/floor/pavement/corner/New()
+	if(prob(10))
+		new /obj/effect/border_effect/snow(src)
+/turf/simulated/floor/pavement/corner/inner
+	icon_state = "Inner_corner"
 
 /turf/simulated/floor/road/New()
 	if(prob(10))
