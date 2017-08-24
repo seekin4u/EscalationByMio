@@ -132,7 +132,7 @@ Please contact me on #coderbus IRC. ~Carn x
 #define FACEMASK_LAYER			18 //UNIFORM_LAYER
 #define UNIFORM_LAYER			19 //5
 #define HEAD_LAYER				20
-#define BACK_LAYER				21
+#define BACK_LAYER				21 //15
 #define COLLAR_LAYER			22
 #define HANDCUFF_LAYER			23
 #define L_HAND_LAYER			24
