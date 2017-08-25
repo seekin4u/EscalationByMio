@@ -290,7 +290,7 @@
 	item_state = "ak74"
 	w_class = 5
 	load_method = MAGAZINE
-	caliber = "556x45"
+	caliber = "545x39"
 	slot_flags = SLOT_BACK
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = /obj/item/ammo_magazine/c545x39m
