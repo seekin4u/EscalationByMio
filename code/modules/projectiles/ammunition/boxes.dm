@@ -366,6 +366,19 @@
 	name = "AP magazine (5.45x39mm)"
 	ammo_type = /obj/item/ammo_casing/a545x39/ap
 
+/obj/item/ammo_magazine/c545x39b
+	name = "magazine (5.45x39mm)"
+	icon_state = "5.45x39b"
+	mag_type = MAGAZINE
+	caliber = "545x39"
+	ammo_type = /obj/item/ammo_casing/a545x39
+	max_ammo = 45
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c545x39b/ap
+	name = "AP magazine (5.45x39mm)"
+	ammo_type = /obj/item/ammo_casing/a545x39/ap
+
 /obj/item/ammo_magazine/a9x19
 	name = "magazine (9x19mm)"
 	icon_state = "9x19a"
