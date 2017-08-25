@@ -287,7 +287,7 @@
 	name = "AK-74"
 	desc = "The AK-74 is a standard-issued automatic rifle of the Soviet infantry."
 	icon_state = "ak74"
-	item_state = "ak"
+	item_state = "ak74"
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "556x45"
@@ -298,7 +298,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
-	wielded_item_state = "ak-wielded"
+	wielded_item_state = "ak74-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'
@@ -311,13 +311,49 @@
 		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.4),
 		)
 
-
 /obj/item/weapon/gun/projectile/automatic/ak74/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "ak74"
 	else
 		icon_state = "ak74-empty"
+
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl
+	name = "AK-74"
+	desc = "This AK modified with GP-25, an underbarrel grenade launcher."
+	icon_state = "ak74gl"
+	item_state = "ak74gl"
+	w_class = 5
+	load_method = MAGAZINE
+	caliber = "556x45"
+	slot_flags = SLOT_BACK
+	ammo_type = /obj/item/ammo_casing/a545x39
+	allowed_magazines = /obj/item/ammo_magazine/c545x39m
+	magazine_type = /obj/item/ammo_magazine/c545x39m
+	one_hand_penalty = 3
+	accuracy = 2
+	fire_delay = 3
+	wielded_item_state = "ak74gl-wielded"
+	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
+	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
+	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'
+	cocked_sound = 'sound/weapons/gunporn/ak74_cock.ogg'
+
+	firemodes = list(
+		list(mode_name="semiauto",     burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.4),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "ak74gl"
+	else
+		icon_state = "ak74gl-empty"
+
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
