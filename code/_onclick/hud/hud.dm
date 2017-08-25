@@ -143,31 +143,35 @@ datum/hud/New(mob/owner)
 			if(hud_shown)
 				switch(hud_data["slot"])
 					if(slot_s_store)
-						if(H.s_store) H.s_store.screen_loc = hud_data["loc"]
+						if(H.s_store)  H.s_store.screen_loc =  hud_data["loc"]
 					if(slot_wear_id)
-						if(H.wear_id) H.wear_id.screen_loc = hud_data["loc"]
+						if(H.wear_id)  H.wear_id.screen_loc =  hud_data["loc"]
 					if(slot_belt)
-						if(H.belt)    H.belt.screen_loc =    hud_data["loc"]
+						if(H.belt)     H.belt.screen_loc =     hud_data["loc"]
 					if(slot_back)
-						if(H.back)    H.back.screen_loc =    hud_data["loc"]
+						if(H.back)     H.back.screen_loc =     hud_data["loc"]
+					if(slot_add_gun)
+						if(H.wear_gun) H.wear_gun.screen_loc = hud_data["loc"]
 					if(slot_l_store)
-						if(H.l_store) H.l_store.screen_loc = hud_data["loc"]
+						if(H.l_store)  H.l_store.screen_loc =  hud_data["loc"]
 					if(slot_r_store)
-						if(H.r_store) H.r_store.screen_loc = hud_data["loc"]
+						if(H.r_store)  H.r_store.screen_loc =  hud_data["loc"]
 			else
 				switch(hud_data["slot"])
 					if(slot_s_store)
-						if(H.s_store) H.s_store.screen_loc = null
+						if(H.s_store)  H.s_store.screen_loc =  null
 					if(slot_wear_id)
-						if(H.wear_id) H.wear_id.screen_loc = null
+						if(H.wear_id)  H.wear_id.screen_loc =  null
 					if(slot_belt)
-						if(H.belt)    H.belt.screen_loc =    null
+						if(H.belt)     H.belt.screen_loc =     null
 					if(slot_back)
-						if(H.back)    H.back.screen_loc =    null
+						if(H.back)     H.back.screen_loc =     null
+					if(slot_add_gun)
+						if(H.wear_gun) H.wear_gun.screen_loc = null
 					if(slot_l_store)
-						if(H.l_store) H.l_store.screen_loc = null
+						if(H.l_store)  H.l_store.screen_loc =  null
 					if(slot_r_store)
-						if(H.r_store) H.r_store.screen_loc = null
+						if(H.r_store)  H.r_store.screen_loc =  null
 
 
 /datum/hud/proc/instantiate()
@@ -195,7 +199,8 @@ datum/hud/New(mob/owner)
 		to_chat(usr, "<span class='warning'>Inventory hiding is currently only supported for human mobs, sorry.</span>")
 		return
 
-	if(!client) return
+	if(!client)
+		return
 	if(client.view != world.view)
 		return
 	if(hud_used.hud_shown)

@@ -291,7 +291,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "545x39"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK | SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = /obj/item/ammo_magazine/c545x39m
 	magazine_type = /obj/item/ammo_magazine/c545x39m

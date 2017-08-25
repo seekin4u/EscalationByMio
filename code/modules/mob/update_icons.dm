@@ -16,6 +16,9 @@
 /mob/proc/update_inv_back()
 	return
 
+/mob/proc/update_inv_add_gun()
+	return
+
 /mob/proc/update_inv_l_hand()
 	return
 
