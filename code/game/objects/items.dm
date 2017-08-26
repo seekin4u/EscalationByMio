@@ -265,7 +265,7 @@
 // note this isn't called during the initial dressing of a player
 /obj/item/proc/equipped(var/mob/user, var/slot)
 	hud_layerise()
-	if(user.client)	user.client.screen |= src
+	if(user.client) user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
 
 	//Update two-handing status

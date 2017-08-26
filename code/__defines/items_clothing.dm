@@ -236,5 +236,5 @@ var/list/default_onmob_icons = list(
 		slot_gloves_str = 'icons/mob/hands.dmi',
 		slot_s_store_str = 'icons/mob/belt_mirror.dmi',
 		slot_tie_str = 'icons/mob/ties.dmi',
-		slot_add_gun_str = 'icons/escalation/mob/add_gun_slot.dmi'
+		slot_add_gun_str = 'icons/escalation/mob/gun_slot.dmi'
 		)
