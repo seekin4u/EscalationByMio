@@ -48,6 +48,7 @@
 //The list of slots by priority. equip_to_appropriate_slot() uses this list. Doesn't matter if a mob type doesn't have a slot.
 var/list/slot_equipment_priority = list( \
 		slot_back,\
+		slot_add_gun, \
 		slot_wear_id,\
 		slot_w_uniform,\
 		slot_wear_suit,\
@@ -185,6 +186,9 @@ var/list/slot_equipment_priority = list( \
 	else if (W == wear_mask)
 		wear_mask = null
 		update_inv_wear_mask(0)
+	else if (W == wear_gun)
+		wear_gun = null
+		update_inv_add_gun(0)
 	return
 
 /mob/proc/isEquipped(obj/item/I)
@@ -240,6 +244,7 @@ var/list/slot_equipment_priority = list( \
 		if(slot_l_hand) return l_hand
 		if(slot_r_hand) return r_hand
 		if(slot_back) return back
+		if(slot_add_gun) return wear_gun
 		if(slot_wear_mask) return wear_mask
 	return null
 

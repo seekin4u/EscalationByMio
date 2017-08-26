@@ -265,7 +265,7 @@
 // note this isn't called during the initial dressing of a player
 /obj/item/proc/equipped(var/mob/user, var/slot)
 	hud_layerise()
-	if(user.client)	user.client.screen |= src
+	if(user.client) user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
 
 	//Update two-handing status
@@ -281,6 +281,7 @@
 var/list/global/slot_flags_enumeration = list(
 	"[slot_wear_mask]" = SLOT_MASK,
 	"[slot_back]" = SLOT_BACK,
+	"[slot_add_gun]" = SLOT_BACK_GUN,
 	"[slot_wear_suit]" = SLOT_OCLOTHING,
 	"[slot_gloves]" = SLOT_GLOVES,
 	"[slot_shoes]" = SLOT_FEET,

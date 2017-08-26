@@ -16,6 +16,7 @@
 #define SLOT_ID         0x100
 #define SLOT_BELT       0x200
 #define SLOT_BACK       0x400
+#define SLOT_BACK_GUN   0x600
 #define SLOT_POCKET     0x800  // This is to allow items with a w_class of 3 or 4 to fit in pockets.
 #define SLOT_DENYPOCKET 0x1000  // This is to  deny items with a w_class of 2 or 1 from fitting in pockets.
 #define SLOT_TWOEARS    0x2000
@@ -87,6 +88,7 @@
 #define slot_legs        21
 #define slot_tie         22
 #define slot_last        22
+#define slot_add_gun     23
 
 // Inventory slot strings.
 // since numbers cannot be used as associative list keys.
@@ -104,13 +106,14 @@
 #define slot_head_str      	"slot_head"
 #define slot_wear_mask_str 	"slot_wear_mask"
 #define slot_handcuffed_str "slot_handcuffed"
-#define slot_legcuffed_str "slot_legcuffed"
+#define slot_legcuffed_str  "slot_legcuffed"
 #define slot_wear_mask_str 	"slot_wear_mask"
 #define slot_wear_id_str  	"slot_wear_id"
 #define slot_gloves_str  	"slot_gloves"
 #define slot_glasses_str  	"slot_glasses"
 #define slot_s_store_str	"slot_s_store"
 #define slot_tie_str		"slot_tie"
+#define slot_add_gun_str    "slot_add_gun"//aditional gun
 
 // Bitflags for clothing parts.
 #define HEAD        0x1
@@ -232,5 +235,6 @@ var/list/default_onmob_icons = list(
 		slot_legcuffed_str = 'icons/mob/mob.dmi',
 		slot_gloves_str = 'icons/mob/hands.dmi',
 		slot_s_store_str = 'icons/mob/belt_mirror.dmi',
-		slot_tie_str = 'icons/mob/ties.dmi'
+		slot_tie_str = 'icons/mob/ties.dmi',
+		slot_add_gun_str = 'icons/escalation/mob/gun_slot.dmi'
 		)

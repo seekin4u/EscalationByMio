@@ -76,6 +76,8 @@ This saves us from having to call add_fingerprint() any time something is put in
 			return has_organ(BP_CHEST)
 		if(slot_wear_mask)
 			return has_organ(BP_HEAD)
+		if(slot_add_gun)
+			return has_organ(BP_CHEST)
 		if(slot_handcuffed)
 			return has_organ(BP_L_HAND) && has_organ(BP_R_HAND)
 		if(slot_legcuffed)
@@ -178,6 +180,9 @@ This saves us from having to call add_fingerprint() any time something is put in
 				internals.icon_state = "internal0"
 			internal = null
 		update_inv_wear_mask()
+	else if(W == wear_gun)
+		wear_gun = null
+		update_inv_add_gun()
 	else if (W == wear_id)
 		wear_id = null
 		update_inv_wear_id()
@@ -239,6 +244,11 @@ This saves us from having to call add_fingerprint() any time something is put in
 				update_inv_ears(0)
 			W.equipped(src, slot)
 			update_inv_wear_mask(redraw_mob)
+		if(slot_add_gun)//custom gun slot
+			src.wear_gun = W
+			W.equipped(src, slot)
+			W.screen_loc = ui_gun_slot
+			update_inv_add_gun(redraw_mob)
 		if(slot_handcuffed)
 			src.handcuffed = W
 			drop_r_hand()
@@ -374,6 +384,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 /mob/living/carbon/human/get_equipped_item(var/slot)
 	switch(slot)
 		if(slot_back)       return back
+		if(slot_add_gun)    return wear_gun
 		if(slot_handcuffed) return handcuffed
 		if(slot_l_store)    return l_store
 		if(slot_r_store)    return r_store

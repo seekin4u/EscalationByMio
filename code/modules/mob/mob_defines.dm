@@ -99,6 +99,8 @@
 	var/obj/item/weapon/storage/s_active = null//Carbon
 	var/obj/item/clothing/mask/wear_mask = null//Carbon
 
+	var/obj/item/weapon/gun/wear_gun = null//4AddGuns
+
 
 	var/datum/hud/hud_used = null
 

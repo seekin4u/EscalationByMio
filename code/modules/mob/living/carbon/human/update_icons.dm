@@ -126,7 +126,7 @@ Please contact me on #coderbus IRC. ~Carn x
 #define GLASSES_LAYER			12
 #define BELT_LAYER_ALT			13
 #define SUIT_STORE_LAYER		14
-//#define BACK_LAYER				15
+#define ADD_GUN_LAYER			15 //NEW GUN SLOT
 #define HAIR_LAYER				16		//TODO: make part of head layer?
 #define EARS_LAYER				17
 #define FACEMASK_LAYER			18 //UNIFORM_LAYER
@@ -436,6 +436,7 @@ var/global/list/damage_icon_parts = list()
 	update_inv_head(0)
 	update_inv_belt(0)
 	update_inv_back(0)
+	update_inv_add_gun(0)
 	update_inv_wear_suit(0)
 	update_inv_r_hand(0)
 	update_inv_l_hand(0)
@@ -573,7 +574,8 @@ var/global/list/damage_icon_parts = list()
 	if(update_icons)   update_icons()
 
 /mob/living/carbon/human/update_inv_pockets(var/update_icons=1)
-	if(update_icons)	update_icons()
+	if(update_icons)
+		update_icons()
 
 
 /mob/living/carbon/human/update_inv_wear_mask(var/update_icons=1)
@@ -592,6 +594,14 @@ var/global/list/damage_icon_parts = list()
 	if(update_icons)
 		update_icons()
 
+/mob/living/carbon/human/update_inv_add_gun(var/update_icons=1)
+	if( wear_gun && ( istype(wear_gun, /obj/item/weapon/gun) ) )
+		overlays_standing[ADD_GUN_LAYER] = wear_gun.get_mob_overlay(src,slot_add_gun_str)
+	else
+		overlays_standing[ADD_GUN_LAYER] = null
+
+	if(update_icons)
+		update_icons()
 
 /mob/living/carbon/human/update_hud()	//TODO: do away with this if possible
 	if(client)
