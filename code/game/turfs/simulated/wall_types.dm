@@ -116,10 +116,11 @@
 /turf/simulated/wall/brick
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "brick_preview"
+	color = "#732E24"
 
 /turf/simulated/wall/brick/New(var/newloc)
 	icon_state = null
-	color = null
+	color = "#732E24"
 	..(newloc, "brick")
 
 /turf/simulated/wall/brick2/New(var/newloc)
