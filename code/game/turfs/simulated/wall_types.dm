@@ -112,3 +112,17 @@
 	icon_state = null
 	color = null
 	..(newloc,"titanium")
+
+/turf/simulated/wall/brick
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "brick_preview"
+
+/turf/simulated/wall/brick/New(var/newloc)
+	icon_state = null
+	color = null
+	..(newloc, "brick")
+
+/turf/simulated/wall/brick2/New(var/newloc)
+	icon_state = null
+	color = "#AB3E3E"
+	..(newloc,"titanium")

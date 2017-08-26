@@ -85,7 +85,7 @@
 /turf/simulated/wall/concrete/reinforced
 	icon_state = "Reinforced_cw"
 
-/turf/simulated/wall/brick
+/turf/simulated/wall/brck
 	name = "brick wall"
 	icon = 'icons/escalation/turf/Walls.dmi'
 	icon_state = "Wall_brick"

@@ -868,3 +868,14 @@ var/list/name_to_material
 	ignition_point = T0C+232
 	melting_point = T0C+300
 	conductive = 0
+
+/material/brick
+	name = "brick"
+	icon_base = "brick"
+	explosion_resistance = 50
+	brute_armor = 10
+	burn_armor = 15
+	hardness = 80
+	weight = 23
+	stack_type = /obj/item/stack/material/concrete
+	hitsound = 'sound/weapons/smash.ogg'
