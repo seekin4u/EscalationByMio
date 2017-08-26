@@ -14,9 +14,9 @@
 #define SLOT_HEAD       0x40
 #define SLOT_FEET       0x80
 #define SLOT_ID         0x100
-#define SLOT_BELT       0x200
-#define SLOT_BACK       0x400
-#define SLOT_BACK_GUN   0x600
+#define SLOT_BELT       0x200 //1000000000
+#define SLOT_BACK       0x400 //0100000000 FUCK SHIT HATE BITS!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#define SLOT_BACK_GUN   0x600 //1100000000
 #define SLOT_POCKET     0x800  // This is to allow items with a w_class of 3 or 4 to fit in pockets.
 #define SLOT_DENYPOCKET 0x1000  // This is to  deny items with a w_class of 2 or 1 from fitting in pockets.
 #define SLOT_TWOEARS    0x2000
