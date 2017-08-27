@@ -381,11 +381,11 @@ var/list/global/slot_flags_enumeration = list(
 				return 0
 
 		if(slot_add_gun)
-			if(!H.w_uniform && ((slot_w_uniform) in mob_equip))
+			if(!H.w_uniform && (slot_w_uniform in mob_equip))
 				if(!disable_warning)
-					to_chat(H, "<span class='warning'>You need a jumpsuit before you can attach this [name].</span>")
+					to_chat(H, "<span class='warning'>11You need a jumpsuit before you can attach this [name].</span>")
 				return 0
-			if(!(slot_flags == SLOT_BACK_GUN))//600 & 200 = 2200 and ETC - WE DON'T NEED IT SO SOMETHING GOES HARD
+			if(!(slot_flags & SLOT_BACK_GUN))
 				to_chat(H, "<span class='warning'>You can't place [name] on your shoulder.</span>")
 				return 0
 			if(istype(src, typesof(/obj/item/weapon/gun/projectile/automatic)) )

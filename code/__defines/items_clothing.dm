@@ -14,14 +14,14 @@
 #define SLOT_HEAD       0x40
 #define SLOT_FEET       0x80
 #define SLOT_ID         0x100
-#define SLOT_BELT       0x200 //1000000000
-#define SLOT_BACK       0x400 //0100000000 FUCK SHIT HATE BITS!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#define SLOT_BACK_GUN   0x600 //1100000000
+#define SLOT_BELT       0x200
+#define SLOT_BACK       0x400
 #define SLOT_POCKET     0x800  // This is to allow items with a w_class of 3 or 4 to fit in pockets.
 #define SLOT_DENYPOCKET 0x1000  // This is to  deny items with a w_class of 2 or 1 from fitting in pockets.
 #define SLOT_TWOEARS    0x2000
 #define SLOT_TIE        0x4000
-#define SLOT_HOLSTER	0x8000 //16th bit - higher than this will overflow
+#define SLOT_HOLSTER    0x10000 //16th bit - higher than this will overflow
+#define SLOT_BACK_GUN   0x8000
 
 // Flags bitmasks.
 #define NOBLUDGEON         0x1    // When an item has this it produces no "X has been hit by Y with Z" message with the default handler.
@@ -30,7 +30,7 @@
 #define NOBLOODY           0x8   // Used for items if they don't want to get a blood overlay.
 #define OPENCONTAINER      0x10 // Is an open container for chemistry purposes.
 #define PHORONGUARD        0x20 // Does not get contaminated by phoron.
-#define	NOREACT            0x40 // Reagents don't react inside this container.
+#define NOREACT            0x40 // Reagents don't react inside this container.
 #define PROXMOVE           0x80  // Does this object require proximity checking in Enter()?
 
 //Flags for items (equipment)
@@ -87,7 +87,7 @@
 #define slot_r_ear       20
 #define slot_legs        21
 #define slot_tie         22
-#define slot_last        22
+#define slot_last        24
 #define slot_add_gun     23
 
 // Inventory slot strings.
@@ -197,8 +197,8 @@
 #define SUIT_SENSOR_VITAL    2
 #define SUIT_SENSOR_TRACKING 3
 
-#define SUIT_NO_SENSORS 0
-#define SUIT_HAS_SENSORS 1
+#define SUIT_NO_SENSORS     0
+#define SUIT_HAS_SENSORS    1
 #define SUIT_LOCKED_SENSORS 2
 
 // Storage

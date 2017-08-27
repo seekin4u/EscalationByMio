@@ -116,30 +116,32 @@ Please contact me on #coderbus IRC. ~Carn x
 #define DAMAGE_LAYER			2
 #define SURGERY_LEVEL			3		//bs12 specific.
 #define UNDERWEAR_LAYER         4
-//#define UNIFORM_LAYER			5
-#define ID_LAYER				6
-#define SHOES_LAYER				7
-#define GLOVES_LAYER			8
-#define BELT_LAYER				9
-#define SUIT_LAYER				10
-#define TAIL_LAYER				11		//bs12 specific. this hack is probably gonna come back to haunt me
-#define GLASSES_LAYER			12
-#define BELT_LAYER_ALT			13
-#define SUIT_STORE_LAYER		14
-#define ADD_GUN_LAYER			15 //NEW GUN SLOT
-#define HAIR_LAYER				16		//TODO: make part of head layer?
-#define EARS_LAYER				17
-#define FACEMASK_LAYER			18 //UNIFORM_LAYER
-#define UNIFORM_LAYER			19 //5
+#define ID_LAYER				5
+#define SHOES_LAYER				6
+#define GLOVES_LAYER			7
+#define BELT_LAYER				8
+#define SUIT_LAYER				9
+#define TAIL_LAYER				10		//bs12 specific. this hack is probably gonna come back to haunt me
+#define GLASSES_LAYER			11
+#define BELT_LAYER_ALT			12
+#define SUIT_STORE_LAYER		13
+//
+#define HAIR_LAYER				15		//TODO: make part of head layer?
+#define EARS_LAYER				16
+#define FACEMASK_LAYER			17
+#define UNIFORM_LAYER			18
+//reserved
+//
 #define HEAD_LAYER				20
-#define BACK_LAYER				21 //15
-#define COLLAR_LAYER			22
-#define HANDCUFF_LAYER			23
-#define L_HAND_LAYER			24
-#define R_HAND_LAYER			25
-#define FIRE_LAYER				26		//If you're on fire
-#define TARGETED_LAYER			27		//BS12: Layer for the target overlay from weapon targeting system
-#define TOTAL_LAYERS			28
+#define BACK_LAYER				21
+#define ADD_GUN_LAYER			24 //NEW GUN SLOT
+#define COLLAR_LAYER			23
+#define HANDCUFF_LAYER			24
+#define L_HAND_LAYER			25
+#define R_HAND_LAYER			26
+#define FIRE_LAYER				27		//If you're on fire
+#define TARGETED_LAYER			28		//BS12: Layer for the target overlay from weapon targeting system
+#define TOTAL_LAYERS			29
 //////////////////////////////////
 
 /mob/living/carbon/human
@@ -473,7 +475,8 @@ var/global/list/damage_icon_parts = list()
 	BITSET(hud_updateflag, ID_HUD)
 	BITSET(hud_updateflag, WANTED_HUD)
 
-	if(update_icons)   update_icons()
+	if(update_icons)
+		update_icons()
 
 /mob/living/carbon/human/update_inv_gloves(var/update_icons=1)
 	if(gloves && !(wear_suit && wear_suit.flags_inv & HIDEGLOVES))
@@ -484,7 +487,8 @@ var/global/list/damage_icon_parts = list()
 			overlays_standing[GLOVES_LAYER]	= bloodsies
 		else
 			overlays_standing[GLOVES_LAYER]	= null
-	if(update_icons)   update_icons()
+	if(update_icons)
+		update_icons()
 
 
 /mob/living/carbon/human/update_inv_glasses(var/update_icons=1)
@@ -492,12 +496,14 @@ var/global/list/damage_icon_parts = list()
 		overlays_standing[GLASSES_LAYER] = glasses.get_mob_overlay(src,slot_glasses_str)
 	else
 		overlays_standing[GLASSES_LAYER]	= null
-	if(update_icons)   update_icons()
+	if(update_icons)
+		update_icons()
 
 /mob/living/carbon/human/update_inv_ears(var/update_icons=1)
 	overlays_standing[EARS_LAYER] = null
 	if( (head && (head.flags_inv & (BLOCKHAIR | BLOCKHEADHAIR))) || (wear_mask && (wear_mask.flags_inv & (BLOCKHAIR | BLOCKHEADHAIR))))
-		if(update_icons)   update_icons()
+		if(update_icons)
+			update_icons()
 		return
 
 	if(l_ear || r_ear)
@@ -511,7 +517,8 @@ var/global/list/damage_icon_parts = list()
 
 	else
 		overlays_standing[EARS_LAYER]	= null
-	if(update_icons)   update_icons()
+	if(update_icons)
+		update_icons()
 
 /mob/living/carbon/human/update_inv_shoes(var/update_icons=1)
 	if(shoes && !(wear_suit && wear_suit.flags_inv & HIDESHOES))
@@ -522,14 +529,16 @@ var/global/list/damage_icon_parts = list()
 			overlays_standing[SHOES_LAYER] = bloodsies
 		else
 			overlays_standing[SHOES_LAYER] = null
-	if(update_icons)   update_icons()
+	if(update_icons)
+		update_icons()
 
 /mob/living/carbon/human/update_inv_s_store(var/update_icons=1)
 	if(s_store)
-		overlays_standing[SUIT_STORE_LAYER]	= s_store.get_mob_overlay(src,slot_s_store_str)
+		overlays_standing[SUIT_STORE_LAYER] = s_store.get_mob_overlay(src,slot_s_store_str)
 	else
-		overlays_standing[SUIT_STORE_LAYER]	= null
-	if(update_icons)   update_icons()
+		overlays_standing[SUIT_STORE_LAYER] = null
+	if(update_icons)
+		update_icons()
 
 
 /mob/living/carbon/human/update_inv_head(var/update_icons=1)
@@ -537,7 +546,8 @@ var/global/list/damage_icon_parts = list()
 		overlays_standing[HEAD_LAYER] = head.get_mob_overlay(src,slot_head_str)
 	else
 		overlays_standing[HEAD_LAYER]	= null
-	if(update_icons)   update_icons()
+	if(update_icons)
+		update_icons()
 
 /mob/living/carbon/human/update_inv_belt(var/update_icons=1)
 	if(belt)
@@ -554,7 +564,8 @@ var/global/list/damage_icon_parts = list()
 	else
 		overlays_standing[BELT_LAYER] = null
 		overlays_standing[BELT_LAYER_ALT] = null
-	if(update_icons)   update_icons()
+	if(update_icons)
+		update_icons()
 
 
 /mob/living/carbon/human/update_inv_wear_suit(var/update_icons=1)
