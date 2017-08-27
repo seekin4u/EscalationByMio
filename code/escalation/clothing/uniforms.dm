@@ -6,7 +6,7 @@
 	winter_desc = "A green and white field uniform for winter use."
 	icon_state = "bundes"
 	winter_icon_state = "bundes_winter"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) //Add some armor to uniforms too
 	siemens_coefficient = 0.9
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
@@ -14,7 +14,7 @@
 	name = "Marine Corps BDU"
 	winter_name = "Marine Corps Winter BDU"
 	desc = "A forest camouflage field uniform."
-	winter_desc = "A pure white field uniform for winter use."
+	winter_desc = "A warm field uniform for winter use."
 	icon_state = "usmc_camo"
 	winter_icon_state = "usmc_winter"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
