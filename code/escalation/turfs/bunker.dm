@@ -54,7 +54,7 @@
 
 
 /turf/simulated/floor/pavement/New()
-	icon_state = "Pavement[rand(0,3)]"
+	icon_state = "Pavement[rand(0,5)]"
 	if(prob(10))
 		new /obj/effect/border_effect/snow(src)
 
