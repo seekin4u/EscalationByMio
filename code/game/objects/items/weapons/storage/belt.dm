@@ -234,24 +234,24 @@
 	item_state = "usmc_med"
 	storage_slots = 9
 
-/obj/item/weapon/storage/belt/bdw/ammo
+/obj/item/weapon/storage/belt/ammo/bdw
 	name = "BDW Ammo Pouch"
 	desc = "Have enough space to hold 4 magazines."
 	icon_state = "bdw_ammo"
 	item_state = "bdw_ammo"
 	storage_slots = 4
-	slot_flags = SLOT_HOLSTER
+	slot_flags = SLOT_BELT
 	can_hold = list(
 		/obj/item/ammo_magazine
 		)
 
-/obj/item/weapon/storage/belt/usmc/ammo
+/obj/item/weapon/storage/belt/ammo/usmc
 	name = "USMC Ammo Pouch"
 	desc = "Have enough space to hold 4 magazines."
 	icon_state = "usmc_ammo"
 	item_state = "usmc_ammo"
 	storage_slots = 4
-	slot_flags = SLOT_HOLSTER
+	slot_flags = SLOT_BELT
 	can_hold = list(
 		/obj/item/ammo_magazine
 		)
