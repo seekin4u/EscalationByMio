@@ -128,3 +128,37 @@
 	use = 0
 	anchored = 1
 
+/turf/simulated/wall/wooden
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood"
+
+/turf/simulated/wall/wooden/pillar
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_pillar"
+
+/turf/simulated/wall/wooden/corner
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_ends"
+
+/turf/simulated/wall/wooden/t-junction
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_T"
+
+/turf/simulated/wall/wooden/x-junction
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_4"
+
+/obj/structure/window/wooden
+	name = "window"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_window"
+
+/obj/structure/window/wooden/broken
+	name = "broken window"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_broken"
