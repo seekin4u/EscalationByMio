@@ -335,7 +335,7 @@
 
 	//Accuracy modifiers
 	P.accuracy = accuracy + acc_mod
-	P.dispersion = disp_mod
+	P.dispersion = disp_mod + (dispersion_modifyer / 2)//disp_mod see in click.dm
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))

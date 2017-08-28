@@ -174,4 +174,6 @@ var/max_explosion_range = 14
 var/global/obj/item/device/radio/announcer/global_announcer = new
 var/global/obj/item/device/radio/announcer/subspace/global_headset = new
 
+var/dispersion_modifyer = 0 //while(automatic) dispersion_mod++; dispersion = 0.1 + dispersion_mod;
+
 var/list/station_departments = list("Command", "Medical", "Engineering", "Science", "Security", "Cargo", "Civilian")

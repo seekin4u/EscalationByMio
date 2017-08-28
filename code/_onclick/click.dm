@@ -447,7 +447,10 @@ var/const/CLICK_HANDLER_ALL                  = (~0)
 	click_handler.Enter()
 	click_handlers.Push(click_handler)
 
-// AUTOMATIC CLICKS
+
+///////////////////////////
+/////AUTOMATIC CLICKS//////
+///////////////////////////
 
 /client/MouseDown(object, location, control, params)
 	var/delay = mob.CanMobAutoclick(object, location, params)
@@ -455,8 +458,10 @@ var/const/CLICK_HANDLER_ALL                  = (~0)
 		selected_target[1] = object
 		selected_target[2] = params
 		while(selected_target[1])
+			dispersion_modifyer += 0.05
 			Click(selected_target[1], location, control, selected_target[2])
 			sleep(delay)
+		dispersion_modifyer = 0
 
 /client/MouseUp(object, location, control, params)
 	selected_target[1] = null
@@ -478,6 +483,9 @@ var/const/CLICK_HANDLER_ALL                  = (~0)
 
 /obj/item/proc/CanItemAutoclick(object, location, params)
 	return
+
+/obj/item/weapon/gun/CanItemAutoclick(object, location, params)
+	. = automatic
 
 /obj/item/weapon/gun/CanItemAutoclick(object, location, params)
 	. = automatic
