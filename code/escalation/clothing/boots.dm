@@ -24,3 +24,8 @@
 	icon_state = "warpacboots"
 	winter_icon_state = "warpacboots_winter"
 
+/obj/item/clothing/shoes/escalation/military/usmc
+	name = "Combat Boots"
+	desc = "A pair of heavy lace-up boots."
+	icon_state = "usmc"
+	item_state = "usmc"

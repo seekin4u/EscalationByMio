@@ -224,10 +224,34 @@
 	name = "USMC Field Pack"
 	desc = "Standart satchel of the USMC infantry. Reffered to as Butt Pack."
 	icon_state = "usmc"
+	item_state = "usmc"
 	storage_slots = 7
 
 /obj/item/weapon/storage/belt/usmc/medical
 	name = "USMC Medical Pack"
 	desc = "Standart satchel of the USMC medics."
 	icon_state = "usmc_med"
+	item_state = "usmc_med"
 	storage_slots = 9
+
+/obj/item/weapon/storage/belt/bdw/ammo
+	name = "BDW Ammo Pouch"
+	desc = "Have enough space to hold 4 magazines."
+	icon_state = "bdw_ammo"
+	item_state = "bdw_ammo"
+	storage_slots = 4
+	slot_flags = SLOT_HOLSTER
+	can_hold = list(
+		/obj/item/ammo_magazine
+		)
+
+/obj/item/weapon/storage/belt/usmc/ammo
+	name = "USMC Ammo Pouch"
+	desc = "Have enough space to hold 4 magazines."
+	icon_state = "usmc_ammo"
+	item_state = "usmc_ammo"
+	storage_slots = 4
+	slot_flags = SLOT_HOLSTER
+	can_hold = list(
+		/obj/item/ammo_magazine
+		)

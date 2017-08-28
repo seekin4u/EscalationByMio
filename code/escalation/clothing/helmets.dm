@@ -3,9 +3,8 @@
 	name = "PASGT Helmet"
 	winter_name = "PASGT Winter Helmet"
 	desc = "A kevlar helmet."
-	icon_state = "pasgt"
-	winter_icon_state = "pasgt_winter"
-
+	icon_state = "pasgt_winter"
+	item_state = "pasgt_winter"
 	body_parts_covered = HEAD
 	armor = list(melee = 50, bullet = 55, laser = 30,energy = 25, bomb = 30, bio = 0, rad = 0)
 

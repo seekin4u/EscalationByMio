@@ -42,11 +42,20 @@
 	icon_state = "luchar"
 	item_state = "luchar"
 
-/obj/item/clothing/mask/coif
+/obj/item/clothing/mask/bdw
 	name = "Coif"
-	desc = "Worn in winter"
-	icon_state = "coif"
-	item_state = "coif"
-	flags_inv = HIDEFACE|BLOCKHAIR
+	desc = "Black warm coif"
+	icon_state = "bdw"
+	item_state = "bdw"
+	flags_inv = BLOCKHAIR
+	body_parts_covered = HEAD|FACE
+	w_class = ITEM_SIZE_SMALL
+
+/obj/item/clothing/mask/usmc
+	name = "Coif"
+	desc = "Olive warm coif"
+	icon_state = "usmc"
+	item_state = "usmc"
+	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE
 	w_class = ITEM_SIZE_SMALL
