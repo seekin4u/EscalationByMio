@@ -66,12 +66,12 @@ datum/controller/game_controller/proc/setup_objects()
 
 	initialization_stage |= INITIALIZATION_HAS_BEGUN
 
-	report_progress("Initializing turbolifts")
+	/*report_progress("Initializing turbolifts")
 	for(var/thing in turbolifts)
 		if(!deleted(thing))
 			var/obj/turbolift_map_holder/lift = thing
 			lift.initialize()
-			CHECK_SLEEP_MASTER
+			CHECK_SLEEP_MASTER*/
 
 	report_progress("Initializing objects")
 	for(var/atom/movable/object)
@@ -84,17 +84,17 @@ datum/controller/game_controller/proc/setup_objects()
 		area.initialize()
 		CHECK_SLEEP_MASTER
 
-	if(using_map.use_overmap)
+	/*if(using_map.use_overmap)
 		report_progress("Initializing overmap events")
 		overmap_event_handler.create_events(using_map.overmap_z, using_map.overmap_size, using_map.overmap_event_areas)
-		CHECK_SLEEP_MASTER
+		CHECK_SLEEP_MASTER*/
 
-	report_progress("Initializing pipe networks")
+	/*report_progress("Initializing pipe networks")
 	for(var/obj/machinery/atmospherics/machine in machines)
 		machine.build_network()
-		CHECK_SLEEP_MASTER
+		CHECK_SLEEP_MASTER*/
 
-	report_progress("Initializing atmos machinery")
+	/*report_progress("Initializing atmos machinery")
 	for(var/obj/machinery/atmospherics/unary/U in machines)
 		if(istype(U, /obj/machinery/atmospherics/unary/vent_pump))
 			var/obj/machinery/atmospherics/unary/vent_pump/T = U
@@ -102,7 +102,7 @@ datum/controller/game_controller/proc/setup_objects()
 		else if(istype(U, /obj/machinery/atmospherics/unary/vent_scrubber))
 			var/obj/machinery/atmospherics/unary/vent_scrubber/T = U
 			T.broadcast_status()
-		CHECK_SLEEP_MASTER
+		CHECK_SLEEP_MASTER*/
 
 #undef CHECK_SLEEP_MASTER
 
