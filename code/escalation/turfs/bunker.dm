@@ -117,8 +117,6 @@
 	playsound(loc, 'sound/effects/grillehit.ogg', 100, 1)
 	qdel(src)
 
-
-
 /obj/machinery/floodlight/bunker
 	name = "bunker floodlight"
 	icon = 'icons/obj/machines/floodlight.dmi'
@@ -128,3 +126,27 @@
 	use = 0
 	anchored = 1
 
+/turf/simulated/wall/house
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood"
+
+/turf/simulated/wall/house/pillar
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_pillar"
+
+/turf/simulated/wall/house/end
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_ends"
+
+/turf/simulated/wall/house/tjunction
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_T"
+
+/turf/simulated/wall/house/xjunction
+	name = "wooden wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "wood_4"
