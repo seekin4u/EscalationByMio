@@ -18,7 +18,7 @@
 	position = "team"
 	amount = 1
 	leading = 1
-	outfit_type = /decl/hierarchy/outfit/escalation/warpac/csla/leader
+	outfit_type = /decl/hierarchy/outfit/escalation/warpac/csla/lieutenant
 	also_known_languages = list(LANGUAGE_RUSSIAN = 100, LANGUAGE_ENGLISH = 25, LANGUAGE_GERMAN = 40)
 
 /datum/job/escalation/csla/sublieutenant
@@ -211,7 +211,7 @@
 	position = "team"
 	amount = 1
 	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 35, LANGUAGE_GERMAN = 35)
-	
+
 
 /datum/job/escalation/cccp/squadleader
 	title = "CCCP Komandir Otdeleniya"
