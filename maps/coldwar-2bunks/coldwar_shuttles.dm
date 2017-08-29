@@ -165,7 +165,7 @@
 
 /datum/shuttle/multi_shuttle/truck/ural
 	name = "Ural"
-	warmup_time = 0
+	warmup_time = 1
 	origin = /area/shuttle/truck/ural/start
 	interim = /area/shuttle/truck/ural/intertim
 	destinations = list(
@@ -181,7 +181,7 @@
 
 /datum/shuttle/ferry/ural
 	name = "Ural1"
-	warmup_time = 5
+	warmup_time = 1
 	docking_controller_tag = "ural_1"
 	area_offsite = /area/shuttle/truck/ural/start
 	area_station = /area/shuttle/truck/ural/finish
