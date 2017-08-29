@@ -17,6 +17,7 @@
 	icon_state = "Rock"
 	blocks_air = 1
 	density = 1
+
 /turf/simulated/rock/edge
 	icon_state = "Rock_outline"
 
@@ -64,6 +65,7 @@
 /turf/simulated/floor/pavement/corner/New()
 	if(prob(10))
 		new /obj/effect/border_effect/snow(src)
+
 /turf/simulated/floor/pavement/corner/inner
 	icon_state = "Inner_corner"
 

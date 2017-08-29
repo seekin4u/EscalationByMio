@@ -5,7 +5,7 @@
 	icon_state = "brutswer"
 	density = 1
 	throwpass = 1//we can throw grenades despite its density
-	layer = ABOVE_WINDOW_LAYER + 0.2
+//	layer = ABOVE_WINDOW_LAYER + 0.2
 	//plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
@@ -30,6 +30,10 @@
 		if(proj.firer && Adjacent(proj.firer))
 			return 1
 
+		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
+			to_world("You are located nearly one tile from brutswehr.")
+			return 1
+
 		return check_cover(mover, target)
 
 	return !density
@@ -40,10 +44,6 @@
 	var/chance = basic_chance
 
 	if(!cover)
-		return 1
-
-	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-		to_world("You are more than one tile from brutswehr. Returned 1")
 		return 1
 
 	for(var/mob/living/carbon/human/H in view(src, 2))//if there are mob somewhere near in range of 1 tile

@@ -6,11 +6,11 @@
 	basic_chance = 40
 
 /obj/structure/sandbag/concrete_block/update_layers()
-	if(dir == NORTH)
-		layer = initial(layer) + 0.3
+	if(dir != SOUTH)
+		layer = initial(layer) + 0.4
 		plane = initial(plane)
 	else
-		layer = ABOVE_WINDOW_LAYER + 0.3
+		layer = ABOVE_OBJ_LAYER + 0.4
 		plane = ABOVE_HUMAN_PLANE
 
 

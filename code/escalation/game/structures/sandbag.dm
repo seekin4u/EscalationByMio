@@ -12,17 +12,17 @@
 	..()
 	flags |= ON_BORDER
 	update_layers()
-	to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
+	//to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/Destroy()
 	..()
 
 /obj/structure/sandbag/proc/update_layers()
-	if(dir == NORTH)
+	if(dir != SOUTH)
 		layer = initial(layer) + 0.1
 		plane = initial(plane)
 	else
-		layer = ABOVE_WINDOW_LAYER + 0.1
+		layer = ABOVE_OBJ_LAYER + 0.1
 		plane = ABOVE_HUMAN_PLANE
 
 /obj/structure/sandbag/set_dir()
@@ -36,10 +36,15 @@
 		if(proj.firer && Adjacent(proj.firer))
 			return 1
 
+		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
+			to_world("You are located nearly one tile from sandbag.")
+			return 1
+
 		return check_cover(mover, target)
 
 	if(get_dir(get_turf(src), target) == dir)//turned in front of sandbag
 		return 0
+
 	else
 		return 1
 
@@ -60,20 +65,16 @@
 	if(!cover)
 		return 1
 
-	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-		to_world("You are more than one tile from sandbag. Returns 1")
-		return 1
-
 	var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
 	if(M)
 		chance += 30
-		to_world("Mob located!:[chance]")
+		//to_world("Mob located!:[chance]")
 
 		if(M.lying)
 			chance += 20
 
 	if(get_dir(loc, from) == dir)
-		to_world("You fire in front of sandbag:[chance]")
+		//to_world("You fire in front of sandbag:[chance]")
 		chance += 10
 
 	if(prob(chance))
@@ -150,6 +151,7 @@
 	if(!check4sandbags(user) || !check4struct(user))
 		return
 
+	to_world("OBJ_LAYER:[OBJ_LAYER]")
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()
