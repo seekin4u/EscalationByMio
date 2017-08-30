@@ -347,11 +347,14 @@ var/list/name_to_material
 
 /material/concrete
 	name = "concrete"
-	icon_base = "stone"
-	icon_reinf = "reinf_over"
-	icon_colour = "#D9C179"
-	weight = 20
-	hardness = 150
+	icon_base = "concrete"
+	icon_reinf = "reinf_over_concrete"
+	icon_colour = "#898787"
+	explosion_resistance = 50
+	brute_armor = 10
+	burn_armor = 15
+	hardness = 80
+	weight = 23
 	stack_type = /obj/item/stack/material/concrete
 	hitsound = 'sound/weapons/smash.ogg'
 
@@ -673,7 +676,7 @@ var/list/name_to_material
 	stack_type = /obj/item/stack/material/wood
 	icon_colour = "#824B28"
 	integrity = 50
-	icon_base = "solid"
+	icon_base = "wood"
 	explosion_resistance = 2
 	shard_type = SHARD_SPLINTER
 	shard_can_repair = 0 // you can't weld splinters back into planks
@@ -865,3 +868,14 @@ var/list/name_to_material
 	ignition_point = T0C+232
 	melting_point = T0C+300
 	conductive = 0
+
+/material/brick
+	name = "brick"
+	icon_base = "brick"
+	explosion_resistance = 50
+	brute_armor = 10
+	burn_armor = 15
+	hardness = 80
+	weight = 23
+	stack_type = /obj/item/stack/material/concrete
+	hitsound = 'sound/weapons/smash.ogg'

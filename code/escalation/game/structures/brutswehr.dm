@@ -5,11 +5,11 @@
 	icon_state = "brutswer"
 	density = 1
 	throwpass = 1//we can throw grenades despite its density
-	layer = BELOW_OBJ_LAYER - 0.2 //1.8
+//	layer = ABOVE_WINDOW_LAYER + 0.2
 	//plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/basic_chance = 20//lower means lower chance to stop bullet in percentage
+	var/basic_chance = 20
 
 /obj/structure/brutswehr/New()
 	..()
@@ -30,6 +30,10 @@
 		if(proj.firer && Adjacent(proj.firer))
 			return 1
 
+		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
+			to_world("You are located nearly one tile from brutswehr.")
+			return 1
+
 		return check_cover(mover, target)
 
 	return !density
@@ -42,19 +46,15 @@
 	if(!cover)
 		return 1
 
-	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-		to_world("You are more than one tile from brutswehr. Returned 1")
-		return 1
-
 	for(var/mob/living/carbon/human/H in view(src, 2))//if there are mob somewhere near in range of 1 tile
 		chance = initial(chance) + 10
-		to_world("MOB DETECTED NEAR BRUTSWEHTR")
+		to_world("MOB DETECTED NEAR BRUTSWEHR")
 
 	if(prob(chance))
 		visible_message("<span class='warning'>[P] hits \the [src]!</span>")
 		return 0
 
-	to_world("BRUTSVER_PROB:[chance]")
+	to_world("BRUTSWEHR_PROB:[chance]")
 
 	return 1
 
@@ -84,14 +84,13 @@
 		else
 	return
 
-/obj/item/weapon/ore/glass/proc/check4brut(mob/user as mob)
-	if(locate(/obj/structure/brutswehr) in user.loc.contents)
-		to_chat(user, "\red There is no more space.")
-		return 0
-	return 1
-
-/obj/item/weapon/ore/glass/proc/check4sansbag(mob/user as mob)
-	if(locate(/obj/structure/sandbag) in user.loc.contents)
+/obj/item/weapon/ore/glass/proc/check4struct(mob/user as mob)
+	to_world("Brut's check4struct")
+	if((locate(/obj/structure/chezh_hangehog) || \
+		locate(/obj/structure/brutswehr) || \
+		locate(/obj/structure/sandbag) || \
+		locate(/obj/structure/sandbag/concrete_block)) in user.loc.contents \
+		)
 		to_chat(user, "\red There is no more space.")
 		return 0
 	return 1
@@ -101,7 +100,7 @@
 		to_chat(user, "\red Haha. Nice try.")
 		return
 
-	if(!check4brut(user) || !check4sansbag(user))
+	if(!check4struct(user))
 		return
 
 	var/obj/structure/brutswehr/B = new(user.loc)

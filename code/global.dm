@@ -14,10 +14,11 @@ var/global/list/sec_hud_users            = list() // List of all entities using 
 var/global/list/hud_icon_reference       = list()
 var/global/list/traders                  = list() //List of all nearby traders
 
-var/global/list/listening_objects         = list() // List of objects that need to be able to hear, used to avoid recursive searching through contents.
+var/global/list/listening_objects        = list() // List of objects that need to be able to hear, used to avoid recursive searching through contents.
 
+var/global/list/spent_casings            = list()//for deleting all or half spent casings to free some space
 
-var/global/list/global_mutations  = list() // List of hidden mutation things.
+var/global/list/global_mutations         = list() // List of hidden mutation things.
 
 var/global/datum/universal_state/universe = new
 
@@ -172,5 +173,7 @@ var/max_explosion_range = 14
 // Announcer intercom, because too much stuff creates an intercom for one message then hard del()s it. Also headset, for things that should be affected by comms outages.
 var/global/obj/item/device/radio/announcer/global_announcer = new
 var/global/obj/item/device/radio/announcer/subspace/global_headset = new
+
+var/dispersion_modifyer = 0 //while(automatic) dispersion_mod++; dispersion = 0.1 + dispersion_mod;
 
 var/list/station_departments = list("Command", "Medical", "Engineering", "Science", "Security", "Cargo", "Civilian")

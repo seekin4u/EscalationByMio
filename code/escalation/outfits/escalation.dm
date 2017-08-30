@@ -5,8 +5,13 @@
 
 /decl/hierarchy/outfit/escalation/nato
 	shoes = /obj/item/clothing/shoes/escalation/military/nato
-	id_slot = slot_wear_id
-	id_type = /obj/item/weapon/card/id/dogtags
+
+/decl/hierarchy/outfit/escalation/nato/usmc/lieu
+	name = "USMC Leader"
+
+	l_hand = /obj/item/device/megaphone
+
+	id_pda_assignment = "Lieutenant"
 
 /decl/hierarchy/outfit/escalation/nato/bundes
 	uniform = /obj/item/clothing/under/escalation/bundes
@@ -16,15 +21,12 @@
 /decl/hierarchy/outfit/escalation/nato/bundes/platoonleader
 	name = "Bundeswehr Leader"
 
-	l_ear = /obj/item/device/radio/headset/heads/captain  //Obviously replace this with a proper walkie-talkie
 	l_hand = /obj/item/device/megaphone //Why the hell not
 
 	id_pda_assignment = "Zugfuhrer"
 
 /decl/hierarchy/outfit/escalation/warpac
 	shoes = /obj/item/clothing/shoes/escalation/military/warpac
-	id_slot = slot_wear_id
-	id_type = /obj/item/weapon/card/id/dogtags
 
 /decl/hierarchy/outfit/escalation/warpac/cccp
 	uniform = /obj/item/clothing/under/escalation/soviet
@@ -33,19 +35,17 @@
 /decl/hierarchy/outfit/escalation/warpac/cccp/leader
 	name = "Soviet Leader"
 
-	l_ear = /obj/item/device/radio/headset/heads/captain  //Obviously replace this with a proper walkie-talkie
 	l_hand = /obj/item/device/megaphone //Why the hell not
 
-	id_pda_assignment = "Komandir Vzvoda"
+	id_pda_assignment = "Leytenant"
 
 /decl/hierarchy/outfit/escalation/warpac/csla
 	uniform = /obj/item/clothing/under/escalation/czech
 	head = /obj/item/clothing/head/helmet/escalation/vz53
 
-/decl/hierarchy/outfit/escalation/warpac/csla/leader
+/decl/hierarchy/outfit/escalation/warpac/csla/lieutenant
 	name = "Czechs Leader" // change this
 
-	l_ear = /obj/item/device/radio/headset/heads/captain  //Obviously replace this with a proper walkie-talkie
 	l_hand = /obj/item/device/megaphone //Why the hell not
 
 	id_pda_assignment = "Poruchik"

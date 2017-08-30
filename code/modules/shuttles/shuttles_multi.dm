@@ -4,9 +4,10 @@
 	var/cloaked = 1
 	var/at_origin = 1
 	var/returned_home = 0
-	var/move_time = 240
-	var/cooldown = 20
-	var/last_move = 0	//the time at which we last moved
+	var/move_time = 50//150 is ok
+
+	var/cooldown = 5
+	var/last_move = 0   //the time at which we last moved
 
 	var/announcer
 	var/arrival_message
@@ -88,7 +89,7 @@
 	if(!istype(MS)) return
 
 	var/dat
-	dat = "<center>[shuttle_tag] Ship Control<hr>"
+	dat = "<center>[shuttle_tag] Truck soft Control<hr>"
 
 
 	if(MS.moving_status != SHUTTLE_IDLE)
@@ -98,15 +99,15 @@
 		dat += "Location: [areacheck.name]<br>"
 
 	if((MS.last_move + MS.cooldown*10) > world.time)
-		dat += "<font color='red'>Engines charging.</font><br>"
+		dat += "<font color='red'>Engines cooling.</font><br>"
 	else
 		dat += "<font color='green'>Engines ready.</font><br>"
 
-	dat += "<br><b><A href='?src=\ref[src];toggle_cloak=[1]'>Toggle cloaking field</A></b><br>"
-	dat += "<b><A href='?src=\ref[src];move_multi=[1]'>Move ship</A></b><br>"
+	//dat += "<br><b><A href='?src=\ref[src];toggle_cloak=[1]'>Toggle cloaking field</A></b><br>"
+	dat += "<b><A href='?src=\ref[src];move_multi=[1]'>Move truck</A></b><br>"
 	dat += "<b><A href='?src=\ref[src];start=[1]'>Return to base</A></b></center>"
 
-	//Docking
+	/*/Docking
 	dat += "<center><br><br>"
 	if(MS.skip_docking_checks())
 		dat += "Docking Status: <font color='grey'>Not in use.</font>"
@@ -133,7 +134,7 @@
 			if("undocked")
 				dat += "<b><A href='?src=\ref[src];dock_command=[1]'>Dock</A></b>"
 			if("docked")
-				dat += "<b><A href='?src=\ref[src];undock_command=[1]'>Undock</A></b>"
+				dat += "<b><A href='?src=\ref[src];undock_command=[1]'>Undock</A></b>"*/
 	dat += "</center>"
 
 	user << browse("[dat]", "window=[shuttle_tag]shuttlecontrol;size=300x600")
@@ -171,16 +172,16 @@
 		return
 
 	if (MS.moving_status != SHUTTLE_IDLE)
-		to_chat(usr, "<span class='notice'>[shuttle_tag] vessel is moving.</span>")
+		to_chat(usr, "<span class='notice'>[shuttle_tag] truck is moving.</span>")
 		return
 
-	if(href_list["dock_command"])
+	/*if(href_list["dock_command"])
 		MS.dock()
-		return
+		return*/
 
-	if(href_list["undock_command"])
+	/*if(href_list["undock_command"])
 		MS.undock()
-		return
+		return*/
 
 	if(href_list["start"])
 		if(MS.at_origin)
@@ -188,43 +189,43 @@
 			return
 
 		if((MS.last_move + MS.cooldown*10) > world.time)
-			to_chat(usr, "<span class='warning'>The ship's drive is inoperable while the engines are charging.</span>")
+			to_chat(usr, "<span class='warning'>The truck's drive is inoperable while the engines are cooling.</span>")
 			return
 
-		if(!check_docking(MS))
+		/*if(!check_docking(MS))
 			updateUsrDialog()
-			return
+			return*/
 
-		if(!MS.return_warning)
+		/*if(!MS.return_warning)
 			to_chat(usr, "<span class='warning'>Returning to your home base will end your mission. If you are sure, press the button again.</span>")
 			//TODO: Actually end the mission.
 			MS.return_warning = 1
-			return
+			return*/
 
 		MS.long_jump(MS.last_departed,MS.origin,MS.interim,MS.move_time)
 		MS.last_departed = MS.origin
 		MS.last_location = MS.start_location
 		MS.at_origin = 1
 
-	if(href_list["toggle_cloak"])
+	/*if(href_list["toggle_cloak"])
 
 		MS.cloaked = !MS.cloaked
-		to_chat(usr, "<span class='warning'>Ship stealth systems have been [(MS.cloaked ? "activated. The [station_name()] will not" : "deactivated. The [station_name()] will")] be warned of our arrival.</span>")
+		to_chat(usr, "<span class='warning'>Ship stealth systems have been [(MS.cloaked ? "activated. The [station_name()] will not" : "deactivated. The [station_name()] will")] be warned of our arrival.</span>")*/
 
 
 	if(href_list["move_multi"])
 		if((MS.last_move + MS.cooldown*10) > world.time)
-			to_chat(usr, "<span class='warning'>The ship's drive is inoperable while the engines are charging.</span>")
+			to_chat(usr, "<span class='warning'>The truck's drive is inoperable while the engines are cooling.</span>")
 			return
 
-		if(!check_docking(MS))
+		/*if(!check_docking(MS))
 			updateUsrDialog()
-			return
+			return*/
 
 		var/choice = input("Select a destination.") as null|anything in MS.destinations
 		if(!choice) return
 
-		to_chat(usr, "<span class='notice'>[shuttle_tag] main computer recieved message.</span>")
+		to_chat(usr, "<span class='notice'>[shuttle_tag] main computer recieved message - REPLACE.</span>")
 
 		if(MS.at_origin)
 			MS.announce_arrival()

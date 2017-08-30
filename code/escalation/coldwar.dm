@@ -1,3 +1,4 @@
+//#define GENERATE_BUSHIES 1
 var/roundstart_time = 0
 
 /hook/roundstart/proc/game_start()
@@ -12,6 +13,7 @@ var/wlg_selected_bush = 0
 var/wlg_selected_pine = 0
 var/wlg_selected_deadtree = 0
 
+#ifdef GENERATE_BUSHES
 /hook/startup/proc/spawn_bushes()
 	to_world("<b>Generating wildlife.</b>")
 	wlg_total = 0
@@ -25,7 +27,7 @@ var/wlg_selected_deadtree = 0
 		for(var/turf/T in world)
 			if(T.z != 1)
 				continue
-			if(!istype(T, /turf/snow))
+			if(!istype(T, /turf/snow) || !istype(T, /turf/snow/no_flora))
 				continue
 
 			wlg_total++
@@ -67,3 +69,4 @@ var/wlg_selected_deadtree = 0
 					var/bushes = /obj/structure/flora/bush
 					new bushes(T)
 	return 1
+#endif

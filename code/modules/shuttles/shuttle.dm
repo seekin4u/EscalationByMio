@@ -41,6 +41,7 @@
 /datum/shuttle/proc/init_docking_controllers()
 	if(docking_controller_tag)
 		docking_controller = locate(docking_controller_tag)
+//		to_world("Docking Controller : [docking_controller]")
 		if(!istype(docking_controller))
 			warning("Shuttle with docking tag [docking_controller_tag] could not find it's controller!")
 
@@ -81,6 +82,7 @@
 
 /datum/shuttle/proc/dock()
 	if (!docking_controller)
+//		to_world("\n!DOCK_CONTROLLER\n")
 		return
 
 	var/dock_target = current_dock_target()
@@ -140,6 +142,7 @@
 
 	// if there's a zlevel above our destination, paint in a ceiling on it so we retain our air
 	var/turf/some_dest_turf = locate() in destination
+	//to_world("some_dest_turf : [some_dest_turf]!")
 	if (HasAbove(some_dest_turf.z))
 		for (var/turf/TD in dstturfs)
 			var/turf/TA = GetAbove(TD)
@@ -150,6 +153,7 @@
 
 	// if there was a zlevel above our origin, erase our ceiling now we're gone
 	var/turf/some_origin_turf = locate() in origin
+	//to_world("some_origin_turf : [some_origin_turf]!")
 	if (HasAbove(some_origin_turf.z))
 		for (var/turf/TO in origin)
 			var/turf/TA = GetAbove(TO)

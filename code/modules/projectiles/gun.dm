@@ -69,6 +69,8 @@
 	var/cocked_sound 	= null
 	var/safety = 1 //Whether or not the safety is on.
 
+	var/automatic = 0  //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
+
 	var/next_fire_time = 0
 
 	var/sel_mode = 1 //index of the currently selected mode
@@ -195,9 +197,9 @@
 			to_chat(user, "<span class='warning'>[src] is not ready to fire again!</span>")
 		return
 
-	var/shoot_time = (burst - 1)* burst_delay
-	user.setClickCooldown(shoot_time) //no clicking on things while shooting
-	user.setMoveCooldown(shoot_time) //no moving while shooting either
+	var/shoot_time = (burst - 1)* burst_delay//burst - bullets count for one gun's burst so 1*0 = 0?
+	user.setClickCooldown(shoot_time / 3) //no clicking on things while shooting
+	user.setMoveCooldown(shoot_time / 3) //no moving while shooting either
 	next_fire_time = world.time + shoot_time
 
 	var/held_twohanded = (user.can_wield_item(src) && src.is_held_twohanded(user))
@@ -227,8 +229,8 @@
 			pointblank = 0
 
 	//update timing
-	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-	user.setMoveCooldown(move_delay)
+	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN / 3)
+	user.setMoveCooldown(move_delay / 3)
 	next_fire_time = world.time + fire_delay
 
 //obtains the next projectile to fire
@@ -333,7 +335,7 @@
 
 	//Accuracy modifiers
 	P.accuracy = accuracy + acc_mod
-	P.dispersion = disp_mod
+	P.dispersion = disp_mod + (dispersion_modifyer / 2)//disp_mod see in click.dm
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))

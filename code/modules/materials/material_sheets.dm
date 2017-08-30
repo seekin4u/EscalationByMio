@@ -102,7 +102,8 @@
 
 /obj/item/stack/material/concrete
 	name = "concrete brick"
-	icon_state = "iron"
+	icon = 'icons/escalation/obj/items.dmi'
+	icon_state = "sheet-concrete"
 	default_type = "concrete" //used it get_material_by_name
 
 /obj/item/stack/material/diamond

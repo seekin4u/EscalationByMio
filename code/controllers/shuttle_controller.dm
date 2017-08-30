@@ -19,8 +19,11 @@ var/global/datum/shuttle_controller/shuttle_controller
 		if(initial(shuttle.category) == shuttle_type)
 			continue
 		shuttle = new shuttle()
-		shuttle.init_docking_controllers()
-		shuttle.dock() //makes all shuttles docked to something at round start go into the docked state
+//		shuttle.init_docking_controllers()
+//		shuttle.dock() //makes all shuttles docked to something at round start go into the docked state
+//DON'T NEED THIS SHIT, BUT IT STILL RARELY RUNTIMES
+
+//	to_world("setup_shuttle_docks in process!")
 
 	for(var/obj/machinery/embedded_controller/C in machines)
 		if(istype(C.program, /datum/computer/file/embedded_program/docking))

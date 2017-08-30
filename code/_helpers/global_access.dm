@@ -109,6 +109,8 @@
 			return global._preloader;
 		if("account_hack_attempted")
 			return global.account_hack_attempted;
+		if("dispersion_modifyer")//for autoclick fire
+			return global.dispersion_modifyer;
 		if("acting_rank_prefixes")
 			return global.acting_rank_prefixes;
 		if("active_diseases")
@@ -1572,6 +1574,8 @@
 			global._preloader=newval;
 		if("account_hack_attempted")
 			global.account_hack_attempted=newval;
+		if("dispersion_modifyer")
+			global.dispersion_modifyer=newval;
 		if("acting_rank_prefixes")
 			global.acting_rank_prefixes=newval;
 		if("active_diseases")

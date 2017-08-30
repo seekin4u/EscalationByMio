@@ -20,7 +20,8 @@
 #define SLOT_DENYPOCKET 0x1000  // This is to  deny items with a w_class of 2 or 1 from fitting in pockets.
 #define SLOT_TWOEARS    0x2000
 #define SLOT_TIE        0x4000
-#define SLOT_HOLSTER	0x8000 //16th bit - higher than this will overflow
+#define SLOT_HOLSTER    0x10000 //16th bit - higher than this will overflow
+#define SLOT_BACK_GUN   0x8000
 
 // Flags bitmasks.
 #define NOBLUDGEON         0x1    // When an item has this it produces no "X has been hit by Y with Z" message with the default handler.
@@ -29,7 +30,7 @@
 #define NOBLOODY           0x8   // Used for items if they don't want to get a blood overlay.
 #define OPENCONTAINER      0x10 // Is an open container for chemistry purposes.
 #define PHORONGUARD        0x20 // Does not get contaminated by phoron.
-#define	NOREACT            0x40 // Reagents don't react inside this container.
+#define NOREACT            0x40 // Reagents don't react inside this container.
 #define PROXMOVE           0x80  // Does this object require proximity checking in Enter()?
 
 //Flags for items (equipment)
@@ -86,7 +87,8 @@
 #define slot_r_ear       20
 #define slot_legs        21
 #define slot_tie         22
-#define slot_last        22
+#define slot_last        24
+#define slot_add_gun     23
 
 // Inventory slot strings.
 // since numbers cannot be used as associative list keys.
@@ -104,13 +106,14 @@
 #define slot_head_str      	"slot_head"
 #define slot_wear_mask_str 	"slot_wear_mask"
 #define slot_handcuffed_str "slot_handcuffed"
-#define slot_legcuffed_str "slot_legcuffed"
+#define slot_legcuffed_str  "slot_legcuffed"
 #define slot_wear_mask_str 	"slot_wear_mask"
 #define slot_wear_id_str  	"slot_wear_id"
 #define slot_gloves_str  	"slot_gloves"
 #define slot_glasses_str  	"slot_glasses"
 #define slot_s_store_str	"slot_s_store"
 #define slot_tie_str		"slot_tie"
+#define slot_add_gun_str    "slot_add_gun"//aditional gun
 
 // Bitflags for clothing parts.
 #define HEAD        0x1
@@ -194,8 +197,8 @@
 #define SUIT_SENSOR_VITAL    2
 #define SUIT_SENSOR_TRACKING 3
 
-#define SUIT_NO_SENSORS 0
-#define SUIT_HAS_SENSORS 1
+#define SUIT_NO_SENSORS     0
+#define SUIT_HAS_SENSORS    1
 #define SUIT_LOCKED_SENSORS 2
 
 // Storage
@@ -232,5 +235,6 @@ var/list/default_onmob_icons = list(
 		slot_legcuffed_str = 'icons/mob/mob.dmi',
 		slot_gloves_str = 'icons/mob/hands.dmi',
 		slot_s_store_str = 'icons/mob/belt_mirror.dmi',
-		slot_tie_str = 'icons/mob/ties.dmi'
+		slot_tie_str = 'icons/mob/ties.dmi',
+		slot_add_gun_str = 'icons/escalation/mob/gun_slot.dmi'
 		)

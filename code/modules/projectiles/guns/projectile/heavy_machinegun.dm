@@ -13,7 +13,8 @@
 	desc = "basic heavy machinegun."
 	icon_state = "basic-mg"
 	item_state = ""
-	layer = FLY_LAYER
+	plane = ABOVE_OBJ_PLANE
+	layer = ABOVE_OBJ_LAYER + 0.11
 	anchored = 0
 	density = 1
 	w_class = ITEM_SIZE_GARGANTUAN
@@ -42,12 +43,33 @@
 /obj/item/weapon/gun/projectile/heavy_mg/New()
 	..()
 	verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
+	update_layer()
 
 /obj/item/weapon/gun/projectile/heavy_mg/Destroy()
 	if(used_by_mob)
 		used_by_mob.using_object = null
 		used_by_mob = null
 	..()
+
+/obj/item/weapon/gun/projectile/heavy_mg/proc/update_layer()
+	if(dir == NORTH)
+		layer = initial(layer) + 0.1
+		plane = initial(plane)
+	else if(dir == SOUTH)
+		layer = initial(layer) + 0.1
+		plane = initial(plane)
+	else
+		layer = ABOVE_OBJ_LAYER + 0.2 //above sandbags
+		plane = ABOVE_HUMAN_PLANE
+
+/*
+	if(dir != SOUTH)
+		layer = initial(layer) + 0.1
+		plane = initial(plane)
+	else
+		layer = ABOVE_OBJ_LAYER + 0.1
+		plane = ABOVE_HUMAN_PLANE
+		*/
 
 /obj/item/weapon/gun/projectile/heavy_mg/attack_hand(mob/user)
 	var/grip_dir = reverse_direction(dir)
@@ -107,17 +129,18 @@
 		else
 			direction = WEST
 
+	if(/obj/structure/sandbag in src.loc.contents)
+		var/obj/structure/sandbag/S = locate(src.loc.contents)
+		if(direction == reverse_direction(S.dir))
+			to_chat(user, "<span class='notice'>You can't rotate it in that way!</span>")
+			return 0
+
 	src.set_dir(direction)
 	user.set_dir(direction)
 	update_pixels(user)
 	to_chat(user, "You rotate the [name]")
-	return 0
 
-/obj/item/weapon/gun/projectile/heavy_mg/proc/update_layer()
-	if(dir != NORTH)
-		layer = OBJ_LAYER + 0.2
-	else
-		layer = FLY_LAYER - 0.1
+	return 0
 
 /obj/item/weapon/gun/projectile/heavy_mg/proc/update_pixels(mob/user as mob)
 	var/diff_x = 0
@@ -180,6 +203,10 @@
 		to_chat(used_by_mob, "You can't detach the [name] while someone using it")// WHA?
 		return
 
+	if(locate(/obj/structure/sandbag/concrete_block) in user.loc.contents)
+		to_chat(user, "<span class='notice'>You can't place \the [src] here. It's too hight to shoot up of it.</span>")
+		return
+
 	to_chat(user, "You starting [anchored ? "detaching" : "attaching"] the [name] [anchored ? "from" : "to"] floor.")
 	if(do_after(user, 20, src))
 		if(!anchored)
@@ -192,6 +219,8 @@
 			verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground
 			verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
 			to_chat(user, "You detach the [name] from ground")
+
+	update_layer()
 
 /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground()
 	set name = "Attach to ground"

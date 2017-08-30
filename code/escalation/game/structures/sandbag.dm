@@ -12,20 +12,20 @@
 	..()
 	flags |= ON_BORDER
 	update_layers()
-	to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
+	//to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/Destroy()
-	//chance = null
 	..()
+
 /obj/structure/sandbag/proc/update_layers()
-	if(dir == NORTH)
-		layer = initial(layer)
+	if(dir != SOUTH)
+		layer = initial(layer) + 0.1
 		plane = initial(plane)
 	else
-		layer = ABOVE_WINDOW_LAYER
+		layer = ABOVE_OBJ_LAYER + 0.1
 		plane = ABOVE_HUMAN_PLANE
 
-/obj/structure/sandbag/set_dir(direction)
+/obj/structure/sandbag/set_dir()
 	..()
 	update_layers()
 
@@ -36,10 +36,15 @@
 		if(proj.firer && Adjacent(proj.firer))
 			return 1
 
+		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
+			to_world("You are located nearly one tile from sandbag.")
+			return 1
+
 		return check_cover(mover, target)
 
 	if(get_dir(get_turf(src), target) == dir)//turned in front of sandbag
 		return 0
+
 	else
 		return 1
 
@@ -60,20 +65,16 @@
 	if(!cover)
 		return 1
 
-	if (get_dist(P.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-		to_world("You are more than one tile from sandbag. Returns 1")
-		return 1
-
 	var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
 	if(M)
 		chance += 30
-		to_world("Mob located!:[chance]")
+		//to_world("Mob located!:[chance]")
 
 		if(M.lying)
 			chance += 20
 
 	if(get_dir(loc, from) == dir)
-		to_world("You fire in front of sandbag:[chance]")
+		//to_world("You fire in front of sandbag:[chance]")
 		chance += 10
 
 	if(prob(chance))
@@ -118,6 +119,7 @@
 	var/sand_amount = 4
 
 /obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
+	to_world("Sandbag's check4sandbags")
 	var/i = 0
 
 	for(var/obj/structure/sandbag/baggy in user.loc.contents)
@@ -128,14 +130,12 @@
 
 	return 1
 
-/obj/item/weapon/sandbag/proc/check4concrete(mob/user as mob)
-	if(locate(/obj/structure/concrete_block) in user.loc.contents)
-		to_chat(user, "\red There is no more space.")
-		return 0
-	return 1
-
-/obj/item/weapon/sandbag/proc/check4brutswehr(mob/user as mob)
-	if(locate(/obj/structure/brutswehr) in user.loc.contents)
+/obj/item/weapon/sandbag/proc/check4struct(mob/user as mob)
+	to_world("Sandbag's check4struck")
+	if((locate(/obj/structure/chezh_hangehog) || \
+		locate(/obj/structure/sandbag/concrete_block) || \
+		locate(/obj/structure/brutswehr)) in user.loc.contents \
+		)
 		to_chat(user, "\red There is no more space.")
 		return 0
 	return 1
@@ -148,9 +148,10 @@
 		to_chat(user, "\red Haha.")
 		return
 
-	if(!check4sandbags(user) || !check4concrete(user) || !check4brutswehr(user))
+	if(!check4sandbags(user) || !check4struct(user))
 		return
 
+	to_world("OBJ_LAYER:[OBJ_LAYER]")
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()

@@ -662,6 +662,9 @@
 
 //Updates canmove, lying and icons. Could perhaps do with a rename but I can't think of anything to describe it.
 /mob/proc/update_canmove()
+	if(cannot_stand() && using_object)
+		var/obj/item/weapon/gun/projectile/heavy_mg/M = using_object
+		M.stopped_using(src)
 
 	if(!resting && cannot_stand() && can_stand_overridden())
 		lying = 0

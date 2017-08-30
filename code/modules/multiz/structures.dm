@@ -14,14 +14,14 @@
 	var/allowed_directions = DOWN
 	var/obj/structure/ladder/target_up
 	var/obj/structure/ladder/target_down
-
+	var/id
 	var/const/climb_time = 2 SECONDS
 
 /obj/structure/ladder/initialize()
 	// the upper will connect to the lower
 	if(allowed_directions & DOWN) //we only want to do the top one, as it will initialize the ones before it.
-		for(var/obj/structure/ladder/L in GetBelow(src))
-			if(L.allowed_directions & UP)
+		for(var/obj/structure/ladder/L in world)
+			if(L.allowed_directions & UP && L.id == id)
 				target_down = L
 				L.target_up = src
 				return

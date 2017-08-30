@@ -50,9 +50,6 @@
 /turf/simulated/wall/sandstone/New(var/newloc)
 	..(newloc,"sandstone")
 
-/turf/simulated/wall/wood/New(var/newloc)
-	..(newloc,"wood")
-
 /turf/simulated/wall/ironphoron/New(var/newloc)
 	..(newloc,"iron","phoron")
 
@@ -83,13 +80,10 @@
 
 /turf/simulated/wall/wood/New(var/newloc)
 	icon_state = null
-	color = null
+	color = "#824B28"
 	..(newloc, "wood")
 
-/turf/simulated/wall/concrete
-	icon = 'icons/turf/wall_masks.dmi'
-	icon_state = "concrete_preview"
-	color = "#CCCCCC"
+
 
 /turf/simulated/wall/concrete/New(var/newloc)
 	icon_state = null
@@ -104,7 +98,7 @@
 /turf/simulated/wall/armedconcrete/New(var/newloc)
 	icon_state = null
 	color = null
-	..(newloc, "concrete", "steel")
+	..(newloc, "concrete", "concrete")
 
 /turf/simulated/wall/titanium
 	icon = 'icons/turf/wall_masks.dmi'
@@ -114,4 +108,19 @@
 /turf/simulated/wall/titanium/New(var/newloc)
 	icon_state = null
 	color = null
+	..(newloc,"titanium")
+
+/turf/simulated/wall/brick
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "brick_preview"
+	color = "#732E24"
+
+/turf/simulated/wall/brick/New(var/newloc)
+	icon_state = null
+	color = "#a13423"
+	..(newloc, "brick")
+
+/turf/simulated/wall/brick2/New(var/newloc)
+	icon_state = null
+	color = "#852E21"
 	..(newloc,"titanium")

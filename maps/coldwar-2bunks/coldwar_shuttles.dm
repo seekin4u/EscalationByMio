@@ -1,5 +1,5 @@
 // Escape shuttle and pods
-/datum/shuttle/ferry/emergency/centcom
+/*datum/shuttle/ferry/emergency/centcom
 	name = "Escape"
 	location = 1
 	warmup_time = 10
@@ -130,6 +130,15 @@
 	area_station = /area/shuttle/merchant/home
 	area_offsite = /area/shuttle/merchant/away
 
+/datum/shuttle/ferry/
+	name = "Merchant"
+	warmup_time = 10
+	docking_controller_tag = "merchant_ship_dock"
+	dock_target_station = "merchant_station_dock"
+	dock_target_offsite = "merchant_shuttle_station_dock"
+	area_station = /area/shuttle/merchant/home
+	area_offsite = /area/shuttle/merchant/away
+
 /datum/shuttle/multi_shuttle/mercenary
 	name = "Mercenary"
 	warmup_time = 0
@@ -152,14 +161,32 @@
 		"Mercenary Base" = "merc_base",
 		"Arrivals dock" = "nuke_shuttle_dock_airlock",
 		)
-	announcer = "NDV Icarus"
+	announcer = "NDV Icarus"*/
 
-/datum/shuttle/multi_shuttle/mercenary/New()
-	arrival_message = "Attention, [using_map.station_short], you have a large signature approaching the station - looks unarmed to surface scans. We're too far out to intercept - brace for visitors."
-	departure_message = "Your visitors are on their way out of the system, [using_map.station_short], burning delta-v like it's nothing. Good riddance."
+/datum/shuttle/multi_shuttle/truck/ural
+	name = "Ural"
+	warmup_time = 1
+	origin = /area/shuttle/truck/ural/start
+	interim = /area/shuttle/truck/ural/intertim
+	destinations = list(
+		"FOB" = /area/shuttle/truck/ural/finish
+		)
+	docking_controller_tag = "ural_2"
+
+
+/datum/shuttle/multi_shuttle/truck/ural/New()
+	arrival_message = "URALLL IS COMUNG TO FOB!."
+	departure_message = "URAL GO HOMEEEEEE."
 	..()
 
-/datum/shuttle/multi_shuttle/skipjack
+/datum/shuttle/ferry/ural
+	name = "Ural1"
+	warmup_time = 1
+	docking_controller_tag = "ural_1"
+	area_offsite = /area/shuttle/truck/ural/start
+	area_station = /area/shuttle/truck/ural/finish
+
+/*datum/shuttle/multi_shuttle/skipjack
 	name = "Skipjack"
 	warmup_time = 0
 	origin = /area/skipjack_station/start
@@ -217,4 +244,4 @@
 	docking_controller_tag_station = "specops_shuttle_port"
 	docking_controller_tag_offsite = "specops_shuttle_fore"
 	dock_target_station = "specops_centcom_dock"
-	dock_target_offsite = "specops_dock_airlock"
+	dock_target_offsite = "specops_dock_airlock"*/

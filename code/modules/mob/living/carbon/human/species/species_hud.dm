@@ -29,6 +29,7 @@
 		"suit storage" = list("loc" = ui_sstore1,   "name" = "Suit Storage", "slot" = slot_s_store,   "state" = "suitstore"),
 		"back" =         list("loc" = ui_back,      "name" = "Back",         "slot" = slot_back,      "state" = "back"),
 		"id" =           list("loc" = ui_id,        "name" = "ID",           "slot" = slot_wear_id,   "state" = "id"),
+		"gun_slot" =     list("loc" = ui_gun_slot,  "name" = "wear gun",     "slot" = slot_add_gun,   "state" = "wear_gun"),
 		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
 		"belt" =         list("loc" = ui_belt,      "name" = "Belt",         "slot" = slot_belt,      "state" = "belt")
@@ -46,6 +47,9 @@
 
 	if(slot_back in equip_slots)
 		equip_slots |= slot_in_backpack
+
+	if(slot_add_gun in equip_slots)
+		equip_slots |= slot_add_gun
 
 	if(slot_w_uniform in equip_slots)
 		equip_slots |= slot_tie

@@ -265,7 +265,7 @@
 // note this isn't called during the initial dressing of a player
 /obj/item/proc/equipped(var/mob/user, var/slot)
 	hud_layerise()
-	if(user.client)	user.client.screen |= src
+	if(user.client) user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
 
 	//Update two-handing status
@@ -281,6 +281,7 @@
 var/list/global/slot_flags_enumeration = list(
 	"[slot_wear_mask]" = SLOT_MASK,
 	"[slot_back]" = SLOT_BACK,
+	"[slot_add_gun]" = SLOT_BACK_GUN,
 	"[slot_wear_suit]" = SLOT_OCLOTHING,
 	"[slot_gloves]" = SLOT_GLOVES,
 	"[slot_shoes]" = SLOT_FEET,
@@ -335,11 +336,13 @@ var/list/global/slot_flags_enumeration = list(
 				return 0
 			if( (slot_flags & SLOT_TWOEARS) && H.get_equipped_item(slot_other_ear) )
 				return 0
+
 		if(slot_wear_id, slot_belt)
 			if(!H.w_uniform && (slot_w_uniform in mob_equip))
 				if(!disable_warning)
 					to_chat(H, "<span class='warning'>You need a jumpsuit before you can attach this [name].</span>")
 				return 0
+
 		if(slot_l_store, slot_r_store)
 			if(!H.w_uniform && (slot_w_uniform in mob_equip))
 				if(!disable_warning)
@@ -351,6 +354,7 @@ var/list/global/slot_flags_enumeration = list(
 				return 0
 			if(get_storage_cost() == ITEM_SIZE_NO_CONTAINER)
 				return 0 //pockets act like storage and should respect ITEM_SIZE_NO_CONTAINER. Suit storage might be fine as is
+
 		if(slot_s_store)
 			if(!H.wear_suit && (slot_wear_suit in mob_equip))
 				if(!disable_warning)
@@ -362,9 +366,11 @@ var/list/global/slot_flags_enumeration = list(
 				return 0
 			if( !(istype(src, /obj/item/device/pda) || istype(src, /obj/item/weapon/pen) || is_type_in_list(src, H.wear_suit.allowed)) )
 				return 0
+
 		if(slot_handcuffed)
 			if(!istype(src, /obj/item/weapon/handcuffs))
 				return 0
+
 		if(slot_in_backpack) //used entirely for equipping spawned mobs or at round start
 			var/allow = 0
 			if(H.back && istype(H.back, /obj/item/weapon/storage/backpack))
@@ -373,6 +379,19 @@ var/list/global/slot_flags_enumeration = list(
 					allow = 1
 			if(!allow)
 				return 0
+
+		if(slot_add_gun)
+			if(!H.w_uniform && (slot_w_uniform in mob_equip))
+				if(!disable_warning)
+					to_chat(H, "<span class='warning'>11You need a jumpsuit before you can attach this [name].</span>")
+				return 0
+			if(!(slot_flags & SLOT_BACK_GUN))
+				to_chat(H, "<span class='warning'>You can't place [name] on your shoulder.</span>")
+				return 0
+			if(istype(src, typesof(/obj/item/weapon/gun/projectile/automatic)) )
+				return 0
+
+
 		if(slot_tie)
 			if(!H.w_uniform && (slot_w_uniform in mob_equip))
 				if(!disable_warning)
@@ -383,6 +402,7 @@ var/list/global/slot_flags_enumeration = list(
 				if (!disable_warning)
 					to_chat(H, "<span class='warning'>You already have an accessory of this type attached to your [uniform].</span>")
 				return 0
+
 	return 1
 
 /obj/item/proc/mob_can_unequip(mob/M, slot, disable_warning = 0)

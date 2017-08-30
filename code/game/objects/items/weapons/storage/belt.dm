@@ -205,3 +205,53 @@
 /obj/item/weapon/storage/belt/waistpack/big/New()
 	..()
 	slowdown_per_slot[slot_belt] = 3
+
+/obj/item/weapon/storage/belt/bdw
+	name = "BDW Field Pack"
+	desc = "Standart satchel of the Bundeswehr infantry."
+	icon_state = "bdw"
+	item_state = "bdw"
+	storage_slots = 7
+
+/obj/item/weapon/storage/belt/bdw/medical
+	name = "BDW Medical Satchel"
+	desc = "Standart satchel of the Bundeswehr medics."
+	icon_state = "bdw_med"
+	item_state = "bdw_med"
+	storage_slots = 9
+
+/obj/item/weapon/storage/belt/usmc
+	name = "USMC Field Pack"
+	desc = "Standart satchel of the USMC infantry. Reffered to as Butt Pack."
+	icon_state = "usmc"
+	item_state = "usmc"
+	storage_slots = 7
+
+/obj/item/weapon/storage/belt/usmc/medical
+	name = "USMC Medical Pack"
+	desc = "Standart satchel of the USMC medics."
+	icon_state = "usmc_med"
+	item_state = "usmc_med"
+	storage_slots = 9
+
+/obj/item/weapon/storage/belt/ammo/bdw
+	name = "BDW Ammo Pouch"
+	desc = "Have enough space to hold 4 magazines."
+	icon_state = "bdw_ammo"
+	item_state = "bdw_ammo"
+	storage_slots = 4
+	slot_flags = SLOT_BELT
+	can_hold = list(
+		/obj/item/ammo_magazine
+		)
+
+/obj/item/weapon/storage/belt/ammo/usmc
+	name = "USMC Ammo Pouch"
+	desc = "Have enough space to hold 4 magazines."
+	icon_state = "usmc_ammo"
+	item_state = "usmc_ammo"
+	storage_slots = 4
+	slot_flags = SLOT_BELT
+	can_hold = list(
+		/obj/item/ammo_magazine
+		)

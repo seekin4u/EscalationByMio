@@ -273,6 +273,7 @@
 	name = "AP magazine (7.62x51mm)"
 	ammo_type = /obj/item/ammo_casing/a762x51/ap
 
+
 /obj/item/ammo_magazine/c762x39b
 	name = "magazine box (7.62x39mm)"
 	icon_state = "7.62x39b"
@@ -288,7 +289,7 @@
 
 /obj/item/ammo_magazine/c762x39m
 	name = "magazine (7.62x39mm)"
-	icon_state = "7.62x39m"
+	icon_state = "7.62x39mm"
 	mag_type = MAGAZINE
 	caliber = "762x39"
 	ammo_type = /obj/item/ammo_casing/a762x39
@@ -341,7 +342,7 @@
 
 /obj/item/ammo_magazine/c556x45m
 	name = "magazine (5.56x45mm)"
-	icon_state = "5.56x45m"
+	icon_state = "5.56x45mm"
 	mag_type = MAGAZINE
 	caliber = "556x45"
 	ammo_type = /obj/item/ammo_casing/a556x45
@@ -354,14 +355,27 @@
 
 /obj/item/ammo_magazine/c545x39m
 	name = "magazine (5.45x39mm)"
-	icon_state = "5.45x39m"
+	icon_state = "5.45x39mm"
 	mag_type = MAGAZINE
 	caliber = "545x39"
 	ammo_type = /obj/item/ammo_casing/a545x39
-	max_ammo = 30
+	max_ammo = 300
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c545x39m/ap
+	name = "AP magazine (5.45x39mm)"
+	ammo_type = /obj/item/ammo_casing/a545x39/ap
+
+/obj/item/ammo_magazine/c545x39b
+	name = "magazine (5.45x39mm)"
+	icon_state = "5.45x39b"
+	mag_type = MAGAZINE
+	caliber = "545x39"
+	ammo_type = /obj/item/ammo_casing/a545x39
+	max_ammo = 45
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c545x39b/ap
 	name = "AP magazine (5.45x39mm)"
 	ammo_type = /obj/item/ammo_casing/a545x39/ap
 

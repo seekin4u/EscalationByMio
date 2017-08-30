@@ -17,8 +17,9 @@
 		var/mob/living/L = target
 		shake_camera(L, 3, 2)
 
+//penatrating 2 times less - damage / 2
 /obj/item/projectile/bullet/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier)
-	if(penetrating > 0 && damage > 20 && prob(damage))
+	if(penetrating > 0 && damage > 20 && prob(damage / 2))
 		mob_passthrough_check = 1
 	else
 		mob_passthrough_check = 0

@@ -138,6 +138,37 @@
 	'sound/ambience/coldwar/hel2.ogg'
 	)
 
+//////////////////////////////////
+///TRUCKS STUFF, DO NOT TOUCH/////
+//////////////////////////////////
+/area/shuttle/truck/ural
+	name = "\improper URAL BASE AREA"
+	icon = 'icons/escalation/turf/area.dmi'
+	icon_state = "ural1"
+	base_turf = /turf/snow/gravsnow
+	lighting_use_dynamic = 0
+
+/area/shuttle/truck/ural/intertim
+	name = "\improper URAL intertim"
+	icon_state = "ural_intertim"
+
+/area/shuttle/truck/ural/start
+	name = "\improper URAL's start area"
+	icon_state = "ural_start"
+
+/area/shuttle/truck/ural/finish
+	name = "\improper URAL's finish ares"
+	icon_state = "ural_finish"
+
+/*
+	requires_power = 0
+	sound_env = SMALL_ENCLOSED
+	base_turf = /turf/space*/
+
+//////////////////////////////////
+//////////////////////////////////
+//////////////////////////////////
+
 /area/coldwar/sa
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "sa"
@@ -205,10 +236,21 @@
 /area/coldwar/trucks
 	name = ""
 	icon = 'icons/escalation/turf/area.dmi'
+	icon_state = "default"
+	requires_power = 0
+
 
 /area/coldwar/trucks/ural
 	name = "ural_base"
 	icon_state = "ural1"
+
+/area/coldwar/trucks/ural/ural_home
+	name = "ural_home"
+	icon_state = "ural_start"
+
+/area/coldwar/trucks/ural/ural_fob
+	name = "ural_fob"
+	icon_state = "ural_finish"
 
 /area/coldwar/trucks/m35
 	name = "m35_base"

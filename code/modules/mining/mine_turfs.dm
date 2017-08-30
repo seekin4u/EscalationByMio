@@ -9,6 +9,8 @@ var/list/mining_floors = list()
 	blocks_air = 1
 	density = 1
 
+
+
 /turf/simulated/mineral //wall piece
 	name = "Rock"
 	icon = 'icons/turf/walls.dmi'
