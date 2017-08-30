@@ -3,9 +3,9 @@
 	schedule_interval = 20 // every 2 seconds
 	start_delay = 4
 
-	//if(!air_master)
-	//	air_master = new
-	//	air_master.Setup()
+	if(!air_master)
+		air_master = new
+		air_master.Setup()
 
 /datum/controller/process/air/doWork()
 	if(!air_processing_killed)
