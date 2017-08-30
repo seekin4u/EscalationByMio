@@ -7,21 +7,27 @@
 "g" = (/obj/structure/window/fence{dir = 4},/turf/snow/gravsnow,/area/space)
 "h" = (/turf/simulated/floor/wood,/area/space)
 "i" = (/obj/structure/barricade,/turf/simulated/floor/wood,/area/space)
-"j" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/space)
-"k" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/space)
-"l" = (/obj/structure/table/standard,/turf/simulated/floor/wood,/area/space)
-"m" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/space)
-"n" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/wood,/area/space)
-"o" = (/obj/structure/window/fence{dir = 1},/turf/snow/gravsnow,/area/space)
-"p" = (/obj/structure/bed,/obj/item/weapon/bedsheet/blue,/turf/simulated/floor/wood,/area/space)
-"q" = (/obj/structure/table/standard,/obj/item/weapon/grenade/frag,/turf/simulated/floor/wood,/area/space)
-"r" = (/turf/simulated/wall/concrete,/area/space)
-"s" = (/obj/structure/table/steel,/turf/simulated/floor/fixed,/area/space)
-"t" = (/turf/simulated/floor/fixed,/area/space)
-"u" = (/obj/structure/table/steel,/turf/simulated/floor/wood,/area/space)
-"v" = (/turf/simulated/floor/holofloor/tiled,/area/space)
-"w" = (/obj/machinery/shower,/turf/simulated/floor/holofloor/tiled,/area/space)
-"x" = (/obj/structure/toilet{dir = 1},/turf/simulated/floor/holofloor/tiled,/area/space)
+"j" = (/obj/structure/toilet,/turf/simulated/floor/tiled/white,/area/space)
+"k" = (/turf/simulated/floor/tiled/white,/area/space)
+"l" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/space)
+"m" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/space)
+"n" = (/obj/structure/table/standard,/turf/simulated/floor/wood,/area/space)
+"o" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/space)
+"p" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/wood,/area/space)
+"q" = (/obj/structure/bed/chair/comfy,/turf/simulated/floor/wood,/area/space)
+"r" = (/obj/structure/bed/chair/comfy{dir = 4},/turf/simulated/floor/wood,/area/space)
+"s" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/space)
+"t" = (/obj/structure/bed/chair/comfy{dir = 1},/turf/simulated/floor/wood,/area/space)
+"u" = (/obj/structure/window/fence{dir = 1},/turf/snow/gravsnow,/area/space)
+"v" = (/obj/structure/bed,/obj/item/weapon/bedsheet/blue,/turf/simulated/floor/wood,/area/space)
+"w" = (/obj/structure/table/standard,/obj/item/weapon/grenade/frag,/turf/simulated/floor/wood,/area/space)
+"x" = (/turf/simulated/wall/concrete,/area/space)
+"y" = (/obj/structure/table/steel,/turf/simulated/floor/fixed,/area/space)
+"z" = (/turf/simulated/floor/fixed,/area/space)
+"A" = (/obj/structure/table/steel,/turf/simulated/floor/wood,/area/space)
+"B" = (/turf/simulated/floor/holofloor/tiled,/area/space)
+"C" = (/obj/machinery/shower,/turf/simulated/floor/holofloor/tiled,/area/space)
+"D" = (/obj/structure/toilet{dir = 1},/turf/simulated/floor/holofloor/tiled,/area/space)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaabaaabaaaaaaaaaaaaaaaaaaaabccccbaaaaaaaaaaaaaaaaaaaa
@@ -32,55 +38,55 @@ addddddddddddddddddbcccbaaaaaaaaaaaaaaaaaaaabccccbaaaaaaaaaaaaaaaaaaaa
 aefffffaaaaaaaaaaagbcccbaaaaaaaaaaaaaaaaaaaabccccbaaaaaaaaaaaaaaaaaaaa
 aefhhhfaaaaaaaaaaagbcccbaaaaaaaaaaaaaaaaaaaabccccbaaaaaaaaaaaaaaaaaaaa
 aefhhhfaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaaaaaaaaaaaaaaaaaaaa
-aeffiffaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefffffffffffffffagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefhjhjfkllmhfhhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefhjhjfhnnhhhhhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefhhhhhhhhhhfhhfaabcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefhjhjfhhhhhfhhhbbbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefffffffffffffffbgbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
+aeffiffaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaffffffffffffffaaaaa
+aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhfhhhhhfjkkfaaaaa
+aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhhhhhhhfkkkfaaaaa
+aefffffffffffffffagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaffhfffffffffhfaaaaa
+aefhlhlfmnnohfhhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhhhfhhhfhhhfaaaaa
+aefhlhlfhpphhhhhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhhhfhhhfhhhfaaaaa
+aefhhhhhhhhhhfhhfaabcccbhhhhhhhhhhhhhhhhhhhhbccccbafhqhhhhhhhhhhfaaaaa
+aefhlhlfhhhhhfhhhbbbcccbhhhhhhhhhhhhhhhhhhhhbccccbafrshhfmsofhhhfaaaaa
+aefffffffffffffffbgbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhthhfmsofhhhfaaaaa
+aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaffffffffffffffaaaaa
 aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaaaaaaaaaaaaaaaaaaaa
 aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaaaaaaaaaaaaaaaaaaaa
 aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaaaaaaaaaaaaaaaaaaaa
-aoooooooooooooooooobcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aeffiffffffffffffagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefhhhfpppfkqmhhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefhhhfhhhhhnhhhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefhhhfpppfhhhhhhbbbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aefffffffffffffffagbcccbhhhhhhhhhhhhhhhhhhhhbccccbahhhhhhhhhhhhhhaaaaa
-aeaaaaaaaaaaaaaaaagbcccbaaaaaaaaaaaaaaaaaaaabccccbahhhhhhhhhhhhhhaaaaa
-adooooooooooooooooobcccbaaaaaaaaaaaaaaaaaaaabccccbahhhhhhhhhhhhhhaaaaa
+auuuuuuuuuuuuuuuuuubcccbhhhhhhhhhhhhhhhhhhhhbccccbaffffffffffffffaaaaa
+aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhfhhhhhfjkkfaaaaa
+aeaaaaaaaaaaaaaaaagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhhhhhhhfkkkfaaaaa
+aeffiffffffffffffagbcccbhhhhhhhhhhhhhhhhhhhhbccccbaffhfffffffffhfaaaaa
+aefhhhfvvvfmwohhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhhhfhhhfhhhfaaaaa
+aefhhhfhhhhhphhhfagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhhhhfhhhfhhhfaaaaa
+aefhhhfvvvfhhhhhhbbbcccbhhhhhhhhhhhhhhhhhhhhbccccbafhqhhhhhhhhhhfaaaaa
+aefffffffffffffffagbcccbhhhhhhhhhhhhhhhhhhhhbccccbafrshhfmsofhhhfaaaaa
+aeaaaaaaaaaaaaaaaagbcccbaaaaaaaaaaaaaaaaaaaabccccbafhthhfmsofhhhfaaaaa
+aduuuuuuuuuuuuuuuuubcccbaaaaaaaaaaaaaaaaaaaabccccbaffffffffffffffaaaaa
 aeaaaaaaaaaaaaaaaagbcccbaaaaaaaaaaaaaaaaaaaabccccbaaaaaaaaaaaaaaaaaaaa
 aeaaaaaaaaaaaaaaaagbcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
 aeaaaaaaaaaaaaaaaagbcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
-aeaaaaaaaaaaaaaaaagbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aeffiffffffffffffagbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aefhhhhfjjjfkllmfagbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aefhhhhfjhhhhhhhfbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aefhhhhfjjjhhhhhhbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aefffffffffffffffbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aoooooooooooooooooobcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aarrrrrrrrrrrrrrraabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aarsssssrttttttttaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aarsttttrttttttttaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aarstttttttttttttaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
-aarrrrrrrrrrrrrrraabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
+aeaaaaaaaaaaaaaaaagbcccbbbbbbbbbbbbbbbbbbbbbbccccbaffffffffffffffaaaaa
+aeffiffffffffffffagbcccbbbbbbbbbbbbbbbbbbbbbbccccbafhhfhhhhhfjkkfaaaaa
+aefhhhhflllfmnnofagbcccbbbbbbbbbbbbbbbbbbbbbbccccbbfhhhhhhhhfkkkfaaaaa
+aefhhhhflhhhhhhhfbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbaffhfffffffffhfaaaaa
+aefhhhhflllhhhhhhbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbafhhhhfhhhfhhhfaaaaa
+aefffffffffffffffbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbafhhhhfhhhfhhhfaaaaa
+auuuuuuuuuuuuuuuuuubcccbbbbbbbbbbbbbbbbbbbbbbccccbafhqhhhhhhhhhhfaaaaa
+aaxxxxxxxxxxxxxxxaabcccbbbbbbbbbbbbbbbbbbbbbbccccbafrshhfmsofhhhfaaaaa
+aaxyyyyyxzzzzzzzzaabcccbbbbbbbbbbbbbbbbbbbbbbccccbafhthhfmsofhhhfaaaaa
+aaxyzzzzxzzzzzzzzaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaffffffffffffffaaaaa
+aaxyzzzzzzzzzzzzzaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
+aaxxxxxxxxxxxxxxxaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
-aaffffffffffffffaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aafhhhhfhhhhfhhfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aafhhhhfhhhhfhhfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aaffffiffffiffhfbbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aafhhhhhhhhhhhhhbbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aaffffhffffhfhhfbbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aafjhhhfkumhffffaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aafjhhhfkumhhvwfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aafjjjjfhhhhfxvfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
-aaffffffffffffffaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbahhhhhhhhhhhhhhaaaaa
+aaffffffffffffffaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaffffffffffffffaaaaa
+aafhhhhfhhhhfhhfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbafhhfhhhhhfjkkfaaaaa
+aafhhhhfhhhhfhhfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbbfhhhhhhhhfkkkfaaaaa
+aaffffiffffiffhfbbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbaffhfffffffffhfaaaaa
+aafhhhhhhhhhhhhhbbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbafhhhhfhhhfhhhfaaaaa
+aaffffhffffhfhhfbbbbcccbbbbbbbbbbbbbbbbbbbbbbccccbafhhhhfhhhfhhhfaaaaa
+aaflhhhfmAohffffaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbafhqhhhhhhhhhhfaaaaa
+aaflhhhfmAohhBCfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbafrshhfmsofhhhfaaaaa
+aafllllfhhhhfDBfaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbafhthhfmsofhhhfaaaaa
+aaffffffffffffffaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaffffffffffffffaaaaa
 aaaaaaaaaaaaaaaaaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaabcccbbbbbbbbbbbbbbbbbbbbbbccccbaaaaaaaaaaaaaaaaaaaa
