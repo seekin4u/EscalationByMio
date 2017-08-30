@@ -80,7 +80,7 @@ Class Procs:
 /datum/controller/air_system/var/active_zones = 0
 
 /datum/controller/air_system/var/current_cycle = 0
-/datum/controller/air_system/var/update_delay = 5 //How long between check should it try to process atmos again.
+/datum/controller/air_system/var/update_delay = 25 //How long between check should it try to process atmos again.
 /datum/controller/air_system/var/failed_ticks = 0 //How many ticks have runtimed?
 
 /datum/controller/air_system/var/tick_progress = 0
@@ -107,7 +107,7 @@ Class Procs:
 
 	for(var/turf/simulated/S in world)
 		simulated_turf_count++
-		S.update_air_properties()
+		//S.update_air_properties()
 
 	admin_notice({"<span class='danger'>Geometry initialized in [round(0.1*(world.timeofday-start_time),0.1)] seconds.</span>
 <span class='info'>
@@ -132,13 +132,15 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	set background = 1
 	#endif
 
-	while(1)
+	return//выключаем нахуй контроллер воздуха, температура останется а это дерьмо нам вроде не нужно
+
+	/*while(1)
 		Tick()
-		sleep(max(5,update_delay*tick_multiplier))
+		sleep(max(5,update_delay*tick_multiplier))*/
 
 
 /datum/controller/air_system/proc/Tick()
-	. = 1 //Set the default return value, for runtime detection.
+	. = 0 //Set the default return value, for runtime detection.
 
 	current_cycle++
 
