@@ -594,11 +594,11 @@ datum/objective/capture
 			return 0
 
 // Heist objectives.
-datum/objective/heist
+/*datum/objective/heist
 	proc/choose_target()
-		return
+		return*/
 
-datum/objective/heist/kidnap
+/*datum/objective/heist/kidnap
 	choose_target()
 		var/list/roles = list("Chief Engineer","Research Director","Roboticist","Chemist","Engineer")
 		var/list/possible_targets = list()
@@ -635,9 +635,9 @@ datum/objective/heist/kidnap
 				if(target.current == M)
 					return 1 //They're restrained on the shuttle. Success.
 		else
-			return 0
+			return 0*/
 
-datum/objective/heist/loot
+/*datum/objective/heist/loot
 
 	choose_target()
 		var/loot = "an object"
@@ -693,9 +693,9 @@ datum/objective/heist/loot
 					if(istype(O,target)) total_amount++
 					if(total_amount >= target_amount) return 1
 
-		return 0
+		return 0*/
 
-datum/objective/heist/salvage
+/*datum/objective/heist/salvage
 
 	choose_target()
 		switch(rand(1,8))
@@ -752,15 +752,15 @@ datum/objective/heist/salvage
 							total_amount += S.get_amount()
 
 		if(total_amount >= target_amount) return 1
-		return 0
+		return 0*/
 
 
-/datum/objective/heist/preserve_crew
+/*datum/objective/heist/preserve_crew
 	explanation_text = "Do not leave anyone behind, alive or dead."
 
 	check_completion()
 		if(raiders && raiders.is_raider_crew_safe()) return 1
-		return 0
+		return 0*/
 
 //Borer objective(s).
 /datum/objective/borer_survive

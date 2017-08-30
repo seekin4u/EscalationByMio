@@ -39,7 +39,7 @@
 	icon_state = "detective"
 	item_state = "gun"
 	flags =  CONDUCT
-	slot_flags = SLOT_BELT|SLOT_HOLSTER
+	slot_flags = SLOT_BELT
 	matter = list(DEFAULT_WALL_MATERIAL = 2000)
 	w_class = ITEM_SIZE_NORMAL
 	throwforce = 5

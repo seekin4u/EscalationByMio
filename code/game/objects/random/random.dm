@@ -864,10 +864,6 @@ obj/random/obstruction //Large objects to block things off in maintenance
 					prob(2);/obj/item/clothing/accessory/storage/brown_vest,\
 					prob(2);/obj/item/clothing/accessory/storage/white_vest,\
 					prob(1);/obj/item/clothing/accessory/storage/bandolier,\
-					prob(1);/obj/item/clothing/accessory/holster/thigh,\
-					prob(1);/obj/item/clothing/accessory/holster/hip,\
-					prob(1);/obj/item/clothing/accessory/holster/waist,\
-					prob(1);/obj/item/clothing/accessory/holster/armpit,\
 					prob(3);/obj/item/clothing/accessory/kneepads,\
 					prob(2);/obj/item/clothing/accessory/stethoscope)
 

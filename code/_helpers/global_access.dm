@@ -1055,8 +1055,6 @@
 			return global.radio_controller;
 		if("radiochannels")
 			return global.radiochannels;
-		if("raiders")
-			return global.raiders;
 		if("random_junk_")
 			return global.random_junk_;
 		if("random_maps")
@@ -2516,8 +2514,6 @@
 			global.radio_controller=newval;
 		if("radiochannels")
 			global.radiochannels=newval;
-		if("raiders")
-			global.raiders=newval;
 		if("random_junk_")
 			global.random_junk_=newval;
 		if("random_maps")

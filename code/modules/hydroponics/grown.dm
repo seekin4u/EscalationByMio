@@ -6,7 +6,6 @@
 	icon_state = "blank"
 	randpixel = 5
 	desc = "Nutritious! Probably."
-	slot_flags = SLOT_HOLSTER
 
 	var/plantname
 	var/datum/seed/seed

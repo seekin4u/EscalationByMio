@@ -5,8 +5,8 @@
 #define CANDLE_LUM 3 // For how bright candles are.
 
 // Item inventory slot bitmasks.
-#define SLOT_OCLOTHING  0x1
-#define SLOT_ICLOTHING  0x2
+#define SLOT_OCLOTHING  0x2
+#define SLOT_ICLOTHING  0x1
 #define SLOT_GLOVES     0x4
 #define SLOT_EYES       0x8
 #define SLOT_EARS       0x10
@@ -20,7 +20,6 @@
 #define SLOT_DENYPOCKET 0x1000  // This is to  deny items with a w_class of 2 or 1 from fitting in pockets.
 #define SLOT_TWOEARS    0x2000
 #define SLOT_TIE        0x4000
-#define SLOT_HOLSTER    0x10000 //16th bit - higher than this will overflow
 #define SLOT_BACK_GUN   0x8000
 
 // Flags bitmasks.
