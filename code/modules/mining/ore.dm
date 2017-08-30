@@ -37,7 +37,6 @@
 
 /obj/item/weapon/ore/glass
 	ore = /ore/glass
-	slot_flags = SLOT_HOLSTER
 
 // POCKET SAND!
 /obj/item/weapon/ore/glass/throw_impact(atom/hit_atom)

@@ -19,7 +19,6 @@
 	name = "PASGT Vest"
 	desc = "A protective kevlar vest."
 	icon_state = "pasgt_olive"
-	allowed = list()
 //	allowed = list(/obj/item/weapon/gun/energy,/obj/item/device/radio,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 40, bullet = 35, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
@@ -28,7 +27,7 @@
 	name = "PASGT Vest"
 	desc = "A protective vest made out of kevlar."
 	icon_state = "pasgt_woodland"
-	//	allowed = list(/obj/item/weapon/gun/energy,/obj/item/device/radio,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs)
+	allowed = list(/obj/item/weapon/storage/belt/ammo/usmc)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 40, bullet = 35, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
 
@@ -36,7 +35,7 @@
 	name = "6B3 Heavy Armor Vest"
 	desc = "A heavy armor vest with several pockets."
 	icon_state = "6b3"
-//	allowed = list(/obj/item/weapon/gun/energy,/obj/item/device/radio,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs)
+	allowed = list(/obj/item/weapon/gun/projectile,/obj/item/device/radio,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/handcuffs)
 	armor = list(melee = 55, bullet = 45, laser = 20, energy = 10, bomb = 40, bio = 0, rad = 0)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	cold_protection = UPPER_TORSO|LOWER_TORSO

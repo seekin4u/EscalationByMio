@@ -198,19 +198,6 @@
 	containername = "\improper wall shield generators crate"
 	access = access_teleporter
 
-/decl/hierarchy/supply_pack/security/holster
-	name = "Holster crate"
-	num_contained = 4
-	contains = list(/obj/item/clothing/accessory/holster,
-					/obj/item/clothing/accessory/holster/armpit,
-					/obj/item/clothing/accessory/holster/waist,
-					/obj/item/clothing/accessory/holster/hip)
-	cost = 15
-	containertype = /obj/structure/closet/crate/secure
-	containername = "\improper Holster crate"
-	access = access_security
-	supply_method = /decl/supply_method/randomized
-
 /decl/hierarchy/supply_pack/security/securityextragear
 	name = "Security surplus equipment"
 	contains = list(/obj/item/weapon/storage/belt/security = 3,
@@ -321,7 +308,6 @@
 					/obj/item/weapon/storage/belt/security,
 					/obj/item/device/flash,
 					/obj/item/device/hailer,
-					/obj/item/clothing/accessory/holster/waist,
 					/obj/item/weapon/melee/telebaton,
 					/obj/item/clothing/head/beret/sec/corporate/hos)
 	cost = 65

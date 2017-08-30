@@ -35,8 +35,7 @@
 								/obj/item/ammo_magazine/box/a762/empty      = TRADER_BLACKLIST,
 								/obj/item/ammo_magazine/c45uzi/empty        = TRADER_BLACKLIST,
 								/obj/item/ammo_magazine/mc9mmt/empty        = TRADER_BLACKLIST,
-								/obj/item/ammo_magazine/a50/empty           = TRADER_BLACKLIST,
-								/obj/item/clothing/accessory/holster        = TRADER_ALL)
+								/obj/item/ammo_magazine/a50/empty           = TRADER_BLACKLIST)
 
 /datum/trader/ship/egunshop
 	name = "Energy Gun Shop Employee"
@@ -67,8 +66,7 @@
 								/obj/item/weapon/cell/crap                               = TRADER_THIS_TYPE,
 								/obj/item/weapon/cell/high                               = TRADER_THIS_TYPE,
 								/obj/item/weapon/cell/super                              = TRADER_THIS_TYPE,
-								/obj/item/weapon/cell/hyper                              = TRADER_THIS_TYPE,
-								/obj/item/clothing/accessory/holster                     = TRADER_ALL)
+								/obj/item/weapon/cell/hyper                              = TRADER_THIS_TYPE)
 
 /datum/trader/dogan
 	name = "Dogan"
@@ -95,5 +93,4 @@
 								/obj/item/weapon/gun/projectile/silenced/cheap          = TRADER_THIS_TYPE,
 								/obj/item/weapon/gun/projectile/heavysniper/ant         = TRADER_THIS_TYPE,
 								/obj/item/weapon/gun/energy/laser/dogan                 = TRADER_THIS_TYPE,
-								/obj/item/weapon/gun/projectile/automatic/mini_uzi/usi  = TRADER_THIS_TYPE,
-								/obj/item/clothing/accessory/holster                    = TRADER_ALL)
+								/obj/item/weapon/gun/projectile/automatic/mini_uzi/usi  = TRADER_THIS_TYPE)
