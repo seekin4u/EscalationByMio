@@ -129,13 +129,14 @@
 		else
 			direction = WEST
 
-	if(/obj/structure/sandbag in src.loc.contents)
-		var/obj/structure/sandbag/S = locate(src.loc.contents)
+	var/obj/structure/sandbag/S = locate() in loc.contents
+	if(S)
 		if(direction == reverse_direction(S.dir))
 			to_chat(user, "<span class='notice'>You can't rotate it in that way!</span>")
 			return 0
 
 	src.set_dir(direction)
+
 	user.set_dir(direction)
 	update_pixels(user)
 	to_chat(user, "You rotate the [name]")
