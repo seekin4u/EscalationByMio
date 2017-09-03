@@ -265,6 +265,12 @@
 		else
 			return if_no_id
 
+/mob/living/carbon/human/proc/get_assigned_army_rank()
+	if(!chosenSlot)
+		return
+	else
+		return "[choosenSlot]"
+
 //gets name from ID or ID inside PDA or PDA itself
 //Useful when player do something with computers
 /mob/living/carbon/human/proc/get_authentification_name(var/if_no_id = "Unknown")
