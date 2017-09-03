@@ -1,6 +1,10 @@
 // Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
 var/global/list/default_internal_channels = list(
-	num2text(PUB_FREQ) = list(),
+	num2text(CA_ARMY_FREQ) = list(),
+	num2text(CZ_ARMY_FREQ) = list(),
+	num2text(USMC_ARMY_FREQ) = list(),
+	num2text(BUND_ARMY_FREQ) = list()
+/*	num2text(PUB_FREQ) = list(),
 	num2text(AI_FREQ)  = list(access_synth),
 	num2text(ENT_FREQ) = list(),
 	num2text(ERT_FREQ) = list(access_cent_specops),
@@ -12,7 +16,7 @@ var/global/list/default_internal_channels = list(
 	num2text(SEC_I_FREQ)=list(access_security),
 	num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo),
-	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics)
+	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics)*/
 )
 
 var/global/list/default_medbay_channels = list(
@@ -154,6 +158,8 @@ var/global/list/default_medbay_channels = list(
 
 	return user.has_internal_radio_channel_access(internal_channels[freq])
 
+//сделать зависимость не от айди, а от ранга
+//и запилить како-то ранагм доступ
 /mob/proc/has_internal_radio_channel_access(var/list/req_one_accesses)
 	var/obj/item/weapon/card/id/I = GetIdCard()
 	return has_access(list(), req_one_accesses, I ? I.GetAccess() : list())
@@ -175,10 +181,10 @@ var/global/list/default_medbay_channels = list(
 			"}
 
 /obj/item/device/radio/proc/ToggleBroadcast()
-	broadcasting = !broadcasting && !(wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL))
+	broadcasting = !broadcasting// && !(wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL))
 
 /obj/item/device/radio/proc/ToggleReception()
-	listening = !listening && !(wires.IsIndexCut(WIRE_RECEIVE) || wires.IsIndexCut(WIRE_SIGNAL))
+	listening = !listening// && !(wires.IsIndexCut(WIRE_RECEIVE) || wires.IsIndexCut(WIRE_SIGNAL))
 
 /obj/item/device/radio/CanUseTopic()
 	if(!on)
