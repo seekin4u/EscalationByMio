@@ -34,7 +34,7 @@
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/leader
 	name = "Soviet Leader"
-
+	uniform = /obj/item/clothing/under/escalation/soviet_officer
 	l_hand = /obj/item/device/megaphone //Why the hell not
 
 	id_pda_assignment = "Leytenant"
@@ -44,7 +44,9 @@
 	head = /obj/item/clothing/head/helmet/escalation/vz53
 
 /decl/hierarchy/outfit/escalation/warpac/csla/lieutenant
-	name = "Czechs Leader" // change this
+	name = "Czechoslovak Leader" // change this
+
+	uniform = /obj/item/clothing/under/escalation/czech_officer
 
 	l_hand = /obj/item/device/megaphone //Why the hell not
 

@@ -32,7 +32,7 @@
 	siemens_coefficient = 0.9
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
-/obj/item/clothing/under/escalation/soviet
+/obj/item/clothing/under/escalation/soviet_officer
 	name = "Officer afghanka field uniform"
 	winter_name = "Officer afghanka winter field uniform"
 	desc = "Field uniform consisting of a long BDU jacket, large collar, and field trousers."
