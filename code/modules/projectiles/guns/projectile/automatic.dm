@@ -777,7 +777,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/svd
 	name = "SVD"
-	desc = "That's the SVD, a standard-issue sniper rifle used by SA."
+	desc = "That's the SVD, a standard-issue sniper rifle used by SA and CSLA."
 	icon_state = "svd"
 	item_state = "m14"
 	slot_flags = SLOT_BACK
@@ -910,7 +910,7 @@
 		icon_state = "g3sg1-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58
-	name = "Sa vz.58"
+	name = "Vz.58"
 	desc = "The Sa vz.58 is a standard-issued automatic rifle of the CSLA."
 	icon_state = "vz58"
 	item_state = "vz58"
@@ -945,8 +945,8 @@
 		icon_state = "vz58-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl
-	name = "Sa vz.58"
-	desc = "This Sa vz.58 modified with grenade laucher."
+	name = "Vz.58 with Vg-70"
+	desc = "This Vz.58 modified with 26.5 mm Vg-70 underbarrel grenade laucher."
 	icon_state = "vz58gl"
 	item_state = "vz58gl"
 	w_class = 5
