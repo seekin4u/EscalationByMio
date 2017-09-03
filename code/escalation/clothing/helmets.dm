@@ -40,5 +40,5 @@
 	icon_state = "m1red"
 
 	body_parts_covered = HEAD
-	armor = list(melee = 50, bullet = 55, laser = 50,energy = 25, bomb = 35, bio = 0, rad = 0)
+	armor = list(melee = 35, bullet = 10, laser = 50,energy = 25, bomb = 20, bio = 0, rad = 0)
 
