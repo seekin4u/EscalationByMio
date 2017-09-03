@@ -265,6 +265,7 @@
 		else
 			return if_no_id
 
+//returns job's name like /datum/job/escalation/cccp/medic.name = "Sanitar"
 /mob/living/carbon/human/proc/get_assigned_army_rank()
 	if(!chosenSlot)
 		return
