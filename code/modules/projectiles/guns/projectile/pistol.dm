@@ -268,7 +268,7 @@
 
 //COLD WAR GUNS
 /obj/item/weapon/gun/projectile/berettam9
-	name = "Beretta M9"
+	name = "Beretta M9"  // DO NOT USE
 	desc = "That's the Italian-made pistol. Uses 9x19 ammo."
 	icon_state = "berettam9"
 	item_state = "gun"
@@ -314,4 +314,50 @@
 	else
 		icon_state = "makarov-empty"
 
+/obj/item/weapon/gun/projectile/cz82
+	name = "CZ82"
+	desc = "That's CZ82. Uses 9x18ammo."
+	icon_state = "cz82"
+	item_state = "gun"
+	w_class = 2
+	caliber = "9x18"
+	fire_delay = 1
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/a9x18 //later add its own 12-round mags
+	allowed_magazines = /obj/item/ammo_magazine/a9x18 //later add its own 12-round mags
+	fire_sound = 'sound/weapons/gunshot/makarov.ogg'
+	unload_sound = 'sound/weapons/gunporn/pistol_magout.ogg'
+	reload_sound = 'sound/weapons/gunporn/pistol_magin.ogg'
+	cocked_sound = 'sound/weapons/gunporn/pistol_sliderelease.ogg'
 
+/obj/item/weapon/gun/projectile/colt911
+	name = "Colt1911"
+	desc = "Solid classic. Uses 9x19 ammo."
+	icon_state = "berettam9" //fix
+	item_state = "gun"
+	w_class = 2
+	caliber = "9x19"
+	fire_delay = 1
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/a9x19
+	allowed_magazines = /obj/item/ammo_magazine/a9x19
+	fire_sound = 'sound/weapons/gunshot/m9.ogg'
+	unload_sound = 'sound/weapons/gunporn/pistol_magout.ogg'
+	reload_sound = 'sound/weapons/gunporn/pistol_magin.ogg'
+	cocked_sound = 'sound/weapons/gunporn/pistol_sliderelease.ogg'
+
+/obj/item/weapon/gun/projectile/walther
+	name = "P1"
+	desc = "A bit modified Walther P38 with politically correct name. Uses 9x19 ammo"
+	icon_state = "berettam9" //fix
+	item_state = "gun" //fix
+	w_class = 2
+	caliber = "9x19"
+	fire_delay = 1
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/a9x19
+	allowed_magazines = /obj/item/ammo_magazine/a9x19
+	fire_sound = 'sound/weapons/gunshot/m9.ogg'
+	unload_sound = 'sound/weapons/gunporn/pistol_magout.ogg'
+	reload_sound = 'sound/weapons/gunporn/pistol_magin.ogg'
+	cocked_sound = 'sound/weapons/gunporn/pistol_sliderelease.ogg'
