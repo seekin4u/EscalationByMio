@@ -270,7 +270,7 @@
 	if(!chosenSlot)
 		return
 	else
-		return "[choosenSlot]"
+		return "[chosenSlot]"
 
 //gets name from ID or ID inside PDA or PDA itself
 //Useful when player do something with computers
