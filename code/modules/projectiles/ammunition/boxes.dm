@@ -386,7 +386,7 @@
 	ammo_type = /obj/item/ammo_casing/a9x19
 	matter = list(DEFAULT_WALL_MATERIAL = 1200)
 	caliber = "9x19"
-	max_ammo = 15
+	max_ammo = 8
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/a9x19/ap
@@ -401,6 +401,16 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 1200)
 	caliber = "9x18"
 	max_ammo = 8
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/cz9x18
+	name = "CZ82 magazine (9x18mm)"
+	icon_state = "9x18a" //fix
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/a9x18
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	caliber = "9x18"
+	max_ammo = 12
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/a9x18/ap

@@ -323,8 +323,8 @@
 	caliber = "9x18"
 	fire_delay = 1
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/a9x18 //later add its own 12-round mags
-	allowed_magazines = /obj/item/ammo_magazine/a9x18 //later add its own 12-round mags
+	magazine_type = /obj/item/ammo_magazine/cz9x18
+	allowed_magazines = /obj/item/ammo_magazine/cz9x18
 	fire_sound = 'sound/weapons/gunshot/makarov.ogg'
 	unload_sound = 'sound/weapons/gunporn/pistol_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/pistol_magin.ogg'
@@ -339,8 +339,8 @@
 	caliber = "9x19"
 	fire_delay = 1
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/a9x19
-	allowed_magazines = /obj/item/ammo_magazine/a9x19
+	magazine_type = /obj/item/ammo_magazine/c45m
+	allowed_magazines = /obj/item/ammo_magazine/c45m
 	fire_sound = 'sound/weapons/gunshot/m9.ogg'
 	unload_sound = 'sound/weapons/gunporn/pistol_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/pistol_magin.ogg'
