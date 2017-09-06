@@ -85,6 +85,8 @@
 	var/tmp/told_cant_shoot = 0 //So that it doesn't spam them with the fact they cannot hit them.
 	var/tmp/lock_time = -100
 
+	var/obj/item/attachment/bayonet = null
+
 /obj/item/weapon/gun/New()
 	..()
 	for(var/i in 1 to firemodes.len)
@@ -478,3 +480,11 @@
 		safety = !safety
 		playsound(user, 'sound/weapons/selector.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+
+/obj/item/weapon/gun/attackby(obj/item/I, mob/user)
+	if(istype(I, /obj/item/attachment))
+		var/obj/item/attachment/A = I
+		if(A.attachable)
+			try_attach(A, user)
+			to_world("Attaching [I.name]")
+	..()

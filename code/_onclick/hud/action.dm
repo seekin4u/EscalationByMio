@@ -30,6 +30,13 @@
 /datum/action/Destroy()
 	if(owner)
 		Remove(owner)
+	if(target)
+		target = null
+	if(button)
+		qdel(button)
+	else
+		button = null
+	return ..()
 
 /datum/action/proc/Grant(mob/living/T)
 	if(owner)
@@ -37,9 +44,10 @@
 			return
 		Remove(owner)
 	owner = T
-	owner.actions.Add(src)
-	owner.update_action_buttons()
-	return
+	T.actions.Add(src)
+	if(T.client)
+		T.client.screen += button
+	T.update_action_buttons()
 
 /datum/action/proc/Remove(mob/living/T)
 	if(button)
@@ -50,7 +58,6 @@
 	T.actions.Remove(src)
 	T.update_action_buttons()
 	owner = null
-	return
 
 /datum/action/proc/Trigger()
 	if(!Checks())

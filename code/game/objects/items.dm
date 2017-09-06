@@ -4,6 +4,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 
+	var/list/actions = list()
 	var/image/blood_overlay = null //this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/randpixel = 6
 	var/r_speed = 1.0
@@ -193,6 +194,7 @@
 	else
 		if(isliving(src.loc))
 			return
+	pickup(user)
 	if(user.put_in_active_hand(src))
 		if(randpixel)
 			pixel_x = rand(-randpixel, randpixel)
