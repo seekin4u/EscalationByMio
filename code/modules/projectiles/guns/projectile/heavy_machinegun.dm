@@ -348,3 +348,63 @@
 		list(mode_name = "3-round bursts", burst = 3, burst_delay = 1.5, fire_delay = 1.0),
 		list(mode_name = "5-round bursts", burst = 5, burst_delay = 1.5, fire_delay = 1.6),
 		)
+
+
+
+//////////////////////////////
+////////////M2BROWNING/////////
+//////////////////////////////
+
+/obj/item/weapon/gun/projectile/heavy_mg/m2
+	name = "M2 Browning"
+	desc = "Heavy machinegun, standard-issued by USMC"
+	icon_state = "utes" //fix
+	load_method = MAGAZINE//we do not have ammo box for it
+	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
+	caliber = "127x99mm"//fix caliber
+	ammo_type = /obj/item/ammo_casing/a127x99mm //fix
+	max_shells = 0
+
+	burst = 1
+	burst_delay = 0.1
+	fire_delay = 0.1
+
+	fire_sound = 'sound/weapons/gunshot/heavy_mg/kord1.ogg'
+	//fixfixfix
+	//////basically that's Utes for now. Must be fixed
+	firemodes = list(
+		list(mode_name = "semiauto", burst = 1, burst_delay = 0.1, fire_delay = 0.1),
+		list(mode_name = "2-round bursts", burst = 2, burst_delay = 0.1, fire_delay = 0.3),
+		list(mode_name = "3-round bursts", burst = 3, burst_delay = 0.1, fire_delay = 0.5),
+		list(mode_name = "5-round bursts", burst = 5, burst_delay = 0.2, fire_delay = 0.7),
+		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_delay = 1.2)
+		)
+
+///////////////////////////////////////
+////////////MK19//////////////////////
+///////////////////////////////////////
+
+/obj/item/weapon/gun/projectile/heavy_mg/mk19
+	name = "MK 19"
+	desc = "Automatic grenade launcher, standard-issued by USMC."
+	icon_state = "ags17" /////fix
+	load_method = MAGAZINE
+	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
+	caliber = "40x53mm"
+	ammo_type = /obj/item/ammo_casing/mk19_40x53mm
+
+	burst = 1
+	burst_delay = 1.5
+	fire_delay = 0.4
+
+	fire_sound = 'sound/weapons/gunshot/ags_17_1_shot_real.ogg'
+	//fixfixfix
+
+	firemodes = list(
+		list(mode_name = "semiauto", burst = 1, burst_delay = 1.5, fire_delay = 0.4),
+		list(mode_name = "2-round bursts", burst = 2, burst_delay = 1.5, fire_delay = 0.7),
+		list(mode_name = "3-round bursts", burst = 3, burst_delay = 1.5, fire_delay = 1.0),
+		list(mode_name = "5-round bursts", burst = 5, burst_delay = 1.5, fire_delay = 1.6),
+		)
+
+

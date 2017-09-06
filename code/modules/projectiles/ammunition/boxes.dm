@@ -456,3 +456,13 @@
 	ammo_type = /obj/item/ammo_casing/ags30x29mm
 	max_ammo = 30
 	multiple_sprites = 1
+
+	/obj/item/ammo_magazine/c127x29b //thing for UTES, check and fix
+	name = "magazine (12.7x29mm)"
+	icon_state = "7.62x51b"
+	mag_type = MAGAZINE
+	caliber = "127x99"
+	ammo_type = /obj/item/ammo_casing/a127x99mm
+	max_ammo = 200
+	multiple_sprites = 1
+
