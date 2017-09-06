@@ -359,7 +359,7 @@
 	mag_type = MAGAZINE
 	caliber = "545x39"
 	ammo_type = /obj/item/ammo_casing/a545x39
-	max_ammo = 300
+	max_ammo = 30
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c545x39m/ap
