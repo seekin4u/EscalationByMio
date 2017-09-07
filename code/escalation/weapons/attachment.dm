@@ -63,7 +63,7 @@
 /obj/item/weapon/gun/verb/field_strip()
 	set name = "Field Strip"
 	set desc = "Removes any attachments."
-	set category = "Objects"
+	set category = "Object"
 	var/mob/living/carbon/human/user = usr
 
 	for(var/obj/item/attachment/A in attachments)
@@ -84,7 +84,7 @@
 	if(!A || !user)
 		return
 	if(user.get_inactive_hand() != src)
-		user << "You must be holding the [src] to add attachments."
+		to_chat(user, "You must be holding the [src] to add attachments.")
 		return
 	attach_A(A, user)
 
@@ -95,29 +95,29 @@
 			if(attachment_slots & ATTACH_IRONSIGHTS)
 				A.attached(user, src)
 			else
-				user << "You already have iron sights."
+				to_chat(user, "You already have iron sights.")
 		if(ATTACH_SCOPE)
 			if(attachment_slots & ATTACH_SCOPE)
 				A.attached(user, src)
 			else
-				user << "You fumble around with the attachment."
+				to_chat(user, "You fumble around with the attachment.")
 		if(ATTACH_STOCK)
 			if(attachment_slots & ATTACH_STOCK)
 				A.attached(user, src)
 			else
-				user << "You fumble around with the attachment."
+				to_chat(user, "You fumble around with the attachment.")
 		if(ATTACH_BARREL)
 			if(attachment_slots & ATTACH_BARREL)
 				A.attached(user, src)
 			else
-				user << "You fumble around with the attachment."
+				to_chat(user, "You fumble around with the attachment.")
 		if(ATTACH_UNDER)
 			if(attachment_slots & ATTACH_UNDER)
 				A.attached(user, src)
 			else
-				user << "You fumble around with the attachment."
+				to_chat(user, "You fumble around with the attachment.")
 		else
-			user << "[A] cannot be attached to the [src]."
+			to_chat(user, "[A] cannot be attached to the [src].")
 
 //ATTACHMENTS
 
