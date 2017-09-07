@@ -678,8 +678,8 @@
 
 
 /obj/item/weapon/gun/projectile/automatic/m14/scoped
-	name = "M14"
-	desc = "That's the scoped M14, an marksman rifle used by USMC."
+	name = "M21"
+	desc = "That's the M21, an marksman rifle used by USMC."
 	icon_state = "m14scoped"
 	item_state = "m14"
 	accuracy = 5
@@ -708,7 +708,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a1
 	name = "M16A1"
-	desc = "M16A1 is an outdated USMC automatic rifle"
+	desc = "A standard-issued USMC automatic rifle"
 	icon_state = "m16a1"
 	item_state = "m16"
 	w_class = 5

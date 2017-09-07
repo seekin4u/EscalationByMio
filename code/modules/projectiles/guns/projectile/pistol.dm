@@ -350,7 +350,7 @@
 	name = "P1"
 	desc = "A bit modified Walther P38 with politically correct name. Uses 9x19 ammo"
 	icon_state = "berettam9" //fix
-	item_state = "gun" //fix
+	item_state = "gun"
 	w_class = 2
 	caliber = "9x19"
 	fire_delay = 1
