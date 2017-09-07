@@ -26,7 +26,7 @@
 
 /datum/action/New(var/Target)
 	target = Target
-	button = new
+	button = new()
 	button.name = name
 
 /datum/action/Destroy()
@@ -41,6 +41,7 @@
 	return ..()
 
 /datum/action/proc/Grant(mob/living/T)
+	..()
 	if(owner)
 		if(owner == T)
 			return
@@ -103,6 +104,9 @@
 /obj/screen/movable/action_button
 	var/datum/action/owner
 	screen_loc = "WEST,NORTH"
+
+/obj/screen/movable/action_button/New()
+	..()
 
 /obj/screen/movable/action_button/Click(location,control,params)
 	var/list/modifiers = params2list(params)

@@ -21,7 +21,7 @@ Parts of code courtesy of Super3222
 /obj/item/attachment/scope/adjustable
 	name = "generic adjustable scope"
 	var/min_zoom = 3
-	var/max_zoom = 20
+	var/max_zoom = 12
 
 /obj/item/attachment/scope/iron_sights
 	//icon = 'icons/escalation/obj/items.dmi'
@@ -34,6 +34,7 @@ Parts of code courtesy of Super3222
 	name = "sniper scope"
 	icon_state = "sniperscope"
 	desc = "You can attach this to rifles... or use them as binoculars."
+	var/datum/action/toggle_scope/sniper/szoom
 	max_zoom = 20
 
 obj/item/attachment/scope/adjustable/sniper_scope/removed(mob/user, obj/item/weapon/gun/G)
@@ -52,6 +53,10 @@ obj/item/attachment/scope/adjustable/sniper_scope/removed(mob/user, obj/item/wea
 	//G.recoil = initial(G.recoil)
 
 /obj/item/attachment/scope/iron_sights/removed(mob/user, obj/item/weapon/gun/G)
+	return
+
+/obj/item/attachment/scope/adjustable/sniper_scope/removed(mob/user, obj/item/weapon/gun/G)
+	to_chat(user, "You can't remove opticals from [src]"
 	return
 
 /obj/item/attachment/scope/adjustable/New()
@@ -222,11 +227,15 @@ obj/item/attachment/scope/adjustable/sniper_scope/zoom()
 				o.invisibility = initial(o.invisibility)
 
 /datum/action/toggle_scope
-	name = "Toggle Sights"
+	name = "Toggle Ironsights"
 	check_flags = AB_CHECK_ALIVE|AB_CHECK_RESTRAINED|AB_CHECK_STUNNED|AB_CHECK_LYING
 	button_icon = 'icons/escalation/mob/actions.dmi'//sprite it
-	button_icon_state = "sniper_zoom"
+	button_icon_state = "ironsights_zoom"
 	var/obj/item/attachment/scope/scope = null
+
+/datum/action/toggle_scope/sniper
+	name = "Toggle Optic"
+	button_icon_state = "sniper_zoom"
 
 /datum/action/toggle_scope/IsAvailable()
 	. = ..()
@@ -257,6 +266,21 @@ obj/item/attachment/scope/adjustable/sniper_scope/zoom()
 	..()
 	if(azoom)
 		azoom.Remove(user)
+
+/obj/item/attachment/scope/adjustable/sniper_scope/build_zooming()
+	szoom = new()
+	szoom.scope = src
+	actions += szoom
+
+/obj/item/attachment/scope/adjustable/sniper_scope/pickup(mob/user)
+	..()
+	if(szoom)
+		szoom.Grant(user)
+
+/obj/item/attachment/scope/adjustable/sniper_scope/dropped(mob/user)
+	..()
+	if(szoom)
+		szoom.Remove(user)
 
 /mob/living/carbon/human/Move()//Resets zoom on movement
 	..()
