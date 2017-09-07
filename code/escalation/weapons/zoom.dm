@@ -21,7 +21,7 @@ Parts of code courtesy of Super3222
 /obj/item/attachment/scope/adjustable
 	name = "generic adjustable scope"
 	var/min_zoom = 3
-	var/max_zoom = 3
+	var/max_zoom = 20
 
 /obj/item/attachment/scope/iron_sights
 	//icon = 'icons/escalation/obj/items.dmi'
@@ -32,30 +32,24 @@ Parts of code courtesy of Super3222
 
 /obj/item/attachment/scope/adjustable/sniper_scope
 	name = "sniper scope"
-	icon_state = "kar_scope"
+	icon_state = "sniperscope"
 	desc = "You can attach this to rifles... or use them as binoculars."
 	max_zoom = 20
 
-/*obj/item/attachment/scope/adjustable/sniper_scope/removed(mob/user, obj/item/weapon/gun/G)
+obj/item/attachment/scope/adjustable/sniper_scope/removed(mob/user, obj/item/weapon/gun/G)
 	..()
   //This should only be temporary until more attachment icons are made, then we switch to adding/removing icon masks
 	G.icon_state = initial(G.icon_state)
 	G.item_state = initial(G.item_state)
-	if(istype(G, /obj/item/weapon/gun/projectile/boltaction))
-	var/obj/item/weapon/gun/projectile/boltaction/W = G
-	if(W.bolt_open)
-		W.icon_state = addtext(W.icon_state, "_open")
 
 /obj/item/attachment/scope/adjustable/sniper_scope/attached(mob/user, obj/item/weapon/gun/G)
 	..()
-	if(istype(G, /obj/item/weapon/gun/projectile/boltaction))
-		var/obj/item/weapon/gun/projectile/boltaction/W = G
-		W.update_icon(1)
+	G.update_icon(1)
 
 /obj/item/attachment/scope/removed(mob/user, obj/item/weapon/gun/G)
 	..()
 	G.accuracy = initial(G.accuracy)
-	G.recoil = initial(G.recoil)*/
+	//G.recoil = initial(G.recoil)
 
 /obj/item/attachment/scope/iron_sights/removed(mob/user, obj/item/weapon/gun/G)
 	return
@@ -64,7 +58,7 @@ Parts of code courtesy of Super3222
 	..()
 	zoom_amt = max_zoom // this really makes more sense IMO, 95% of people will just set it to the max - Kachnov
 
-/*obj/item/attachment/scope/adjustable/sniper_scope/zoom()
+obj/item/attachment/scope/adjustable/sniper_scope/zoom()
 	..()
 	if(A_attached)
 		var/obj/item/weapon/gun/L = loc //loc is the gun this is attached to
@@ -72,11 +66,11 @@ Parts of code courtesy of Super3222
 		if(zoomed)
 			if(L.accuracy)
 				L.accuracy = L.scoped_accuracy + zoom_offset
-			if(L.recoil)
-				L.recoil = round(L.recoil*(zoom_amt/5)+1)//recoil is worse when looking through a scope
+			//if(L.recoil)
+			//	L.recoil = round(L.recoil*(zoom_amt/5)+1)//recoil is worse when looking through a scope
 		else
 			L.accuracy = initial(L.accuracy)
-			L.recoil = initial(L.recoil)*/
+			//L.recoil = initial(L.recoil)
 
 //Not actually an attachment
 /obj/item/attachment/scope/adjustable/binoculars
@@ -230,7 +224,7 @@ Parts of code courtesy of Super3222
 /datum/action/toggle_scope
 	name = "Toggle Sights"
 	check_flags = AB_CHECK_ALIVE|AB_CHECK_RESTRAINED|AB_CHECK_STUNNED|AB_CHECK_LYING
-	//button_icon = 'icons/escalation/mob/actions.dmi'//sprite it
+	button_icon = 'icons/escalation/mob/actions.dmi'//sprite it
 	button_icon_state = "sniper_zoom"
 	var/obj/item/attachment/scope/scope = null
 
