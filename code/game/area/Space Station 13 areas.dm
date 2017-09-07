@@ -70,7 +70,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	power_equip = 0
 	power_environ = 0
 	has_gravity = 0
-	ambience = list('sound/music/title2.ogg')
+	//ambience = list('sound/music/title2.ogg')
 
 /area/space/updateicon()
 	return
