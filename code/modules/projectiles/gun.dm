@@ -180,10 +180,24 @@
 /obj/item/weapon/gun/attack(atom/A, mob/living/user, def_zone)
 	if (A == user && user.zone_sel.selecting == BP_MOUTH && !mouthshoot)
 		handle_suicide(user)
-	else if(user.a_intent == I_HURT) //point blank shooting
+	if(user.a_intent == I_HURT && !bayonet) //point blank shooting
 		Fire(A, user, pointblank=1)
 	else
-		return ..() //Pistolwhippin'
+		if(bayonet && isliving(A))
+			var/mob/living/l = A
+			if (prob(35) && l != user && !l.lying)
+				visible_message("<span class = 'danger'>[user] tries to bayonet [l], but they miss!</span>")
+			else
+				var/obj/item/attachment/bayonet/a = bayonet
+				user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN) // No more rapid stabbing for you.
+				visible_message("<span class = 'danger'>[user] impales [l] with their gun's bayonet!</span>")
+				l.apply_damage(a.force * 2, BRUTE, def_zone)
+				l.Weaken(rand(1,2))
+				if (l.stat == CONSCIOUS)
+					l.emote("scream")
+				playsound(get_turf(src), a.attack_sound, rand(90,100))
+		else
+			..() //Pistolwhippin'
 
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, clickparams, pointblank=0, reflex=0)
 	if(!user || !target) return
