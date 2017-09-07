@@ -26,6 +26,8 @@
 
 /datum/action/New(var/Target)
 	target = Target
+	button = new
+	button.name = name
 
 /datum/action/Destroy()
 	if(owner)
@@ -44,10 +46,11 @@
 			return
 		Remove(owner)
 	owner = T
-	owner.actions.Add(src)
-	if(owner.client)
-		owner.client.screen += button
-	owner.update_action_buttons()
+	button.owner = src
+	T.actions += src
+	if(T.client)
+		T.client.screen += button
+	T.update_action_buttons()
 
 /datum/action/proc/Remove(mob/living/T)
 	if(button)

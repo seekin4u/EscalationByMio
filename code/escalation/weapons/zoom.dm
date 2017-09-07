@@ -5,7 +5,7 @@ Parts of code courtesy of Super3222
 
 /obj/item/attachment/scope
 	name = "generic scope"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/escalation/obj/items.dmi'
 	icon_state = "binoculars"
 	zoomdevicename = null
 	var/zoom_amt = 3
@@ -24,7 +24,7 @@ Parts of code courtesy of Super3222
 	var/max_zoom = 3
 
 /obj/item/attachment/scope/iron_sights
-	icon = 'icons/escalation/obj/items.dmi'
+	//icon = 'icons/escalation/obj/items.dmi'
 	icon_state = "ironsight"
 	name = "iron sights"
 	attachment_type = ATTACH_IRONSIGHTS
