@@ -230,7 +230,7 @@ Parts of code courtesy of Super3222
 /datum/action/toggle_scope
 	name = "Toggle Sights"
 	check_flags = AB_CHECK_ALIVE|AB_CHECK_RESTRAINED|AB_CHECK_STUNNED|AB_CHECK_LYING
-	button_icon = 'icons/escalation/mob/actions.dmi'//sprite it
+	//button_icon = 'icons/escalation/mob/actions.dmi'//sprite it
 	button_icon_state = "sniper_zoom"
 	var/obj/item/attachment/scope/scope = null
 
