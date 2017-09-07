@@ -63,26 +63,8 @@
 	owner = null
 
 /datum/action/proc/Trigger()
-	if(!Checks())
-		return
-	switch(action_type)
-		if(AB_ITEM)
-			if(target)
-				var/obj/item/item = target
-				item.ui_action_click()
-		//if(AB_SPELL)
-		//	if(target)
-		//		var/obj/effect/proc_holder/spell = target
-		//		spell.Click()
-		if(AB_INNATE)
-			if(!active)
-				Activate()
-			else
-				Deactivate()
-		if(AB_GENERIC)
-			if(target && procname)
-				call(target,procname)(usr)
-	return
+	if(!IsAvailable())
+		return 0
 
 /datum/action/proc/Activate()
 	return
@@ -97,9 +79,6 @@
 	return 0
 
 /datum/action/proc/IsAvailable()
-	return Checks()
-
-/datum/action/proc/Checks()// returns 1 if all checks pass
 	if(!owner)
 		return 0
 	if(check_flags & AB_CHECK_RESTRAINED)
@@ -117,7 +96,6 @@
 	if(check_flags & AB_CHECK_INSIDE)
 		if(!(target in owner))
 			return 0
-	return 1
 
 /datum/action/proc/UpdateName()
 	return name
