@@ -44,10 +44,10 @@
 			return
 		Remove(owner)
 	owner = T
-	T.actions.Add(src)
-	if(T.client)
-		T.client.screen += button
-	T.update_action_buttons()
+	owner.actions.Add(src)
+	if(owner.client)
+		owner.client.screen += button
+	owner.update_action_buttons()
 
 /datum/action/proc/Remove(mob/living/T)
 	if(button)
