@@ -66,10 +66,10 @@ var/const/PUBLIC_LOW_FREQ	= 1241
 var/const/PUBLIC_HIGH_FREQ	= 1800
 var/const/RADIO_HIGH_FREQ	= 1900
 
-var/const/CA_ARMY_FREQ_PROTECTED = 1801
-var/const/CZ_ARMY_FREQ_PROTECTED = 1802
-var/const/USMC_ARMY_FREQ_PROTECTED = 1811
-var/const/BUND_ARMY_FREQ_PROTECTED = 1812
+var/const/CA_ARMY_FREQ_PROTECTED = 1811
+var/const/CZ_ARMY_FREQ_PROTECTED = 1812
+var/const/USMC_ARMY_FREQ_PROTECTED = 1821
+var/const/BUND_ARMY_FREQ_PROTECTED = 1822
 
 var/const/BOT_FREQ	= 1447
 var/const/COMM_FREQ = 1200
@@ -81,7 +81,7 @@ var/const/RAID_FREQ	= 1277
 var/const/ENT_FREQ	= 1200 //entertainment frequency. This is not a diona exclusive frequency.
 
 // department channels
-var/const/PUB_FREQ = 1200
+var/const/PUB_FREQ = 1488
 var/const/SEC_FREQ = 1200
 var/const/ENG_FREQ = 1200
 var/const/MED_FREQ = 1200
@@ -114,10 +114,14 @@ var/list/radiochannels = list(
 	"Entertainment" = ENT_FREQ,
 	"Medical(I)"	= MED_I_FREQ,
 	"Security(I)"	= SEC_I_FREQ,
-	"Coviet Army"	= CA_ARMY_FREQ,
+	"Soviet Army"	= CA_ARMY_FREQ,
 	"Czech Army"	= CZ_ARMY_FREQ,
-	"USMC Army"			= USMC_ARMY_FREQ,
-	"Bund Army"			= BUND_ARMY_FREQ
+	"USMC Army"		= USMC_ARMY_FREQ,
+	"Bund Army"		= BUND_ARMY_FREQ,
+	"Soviet Army protected"	= CA_ARMY_FREQ_PROTECTED,
+	"Czech Army protected"	= CZ_ARMY_FREQ_PROTECTED,
+	"USMC Army protected"	= USMC_ARMY_FREQ_PROTECTED,
+	"Bund Army protected"	= BUND_ARMY_FREQ_PROTECTED
 )
 
 
