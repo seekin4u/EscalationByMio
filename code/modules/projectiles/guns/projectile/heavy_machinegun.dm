@@ -8,6 +8,12 @@
 //так что или инициализируем нужными значениями
 //или при спавне пушек делаем switch_firemodes (так как времени не очень много для тестов - пока что делаем первое)
 
+/obj/item/weapon/gun/projectile/heavy_mg/verb/eject_mag()
+	set category = "Object"
+	set name = "Eject magazine"
+	set src in range(1, usr)
+	src.try_remove_mag(usr)
+
 /obj/item/weapon/gun/projectile/heavy_mg
 	name = "staionary machinegun"
 	desc = "basic heavy machinegun."
@@ -32,8 +38,8 @@
 	fire_sound = 'sound/weapons/gunshot/heavy_mg/basic-mg.ogg'
 
 	firemodes = list(
-		list(mode_name="semiauto", burst=1, burst_delay=0.1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, burst_delay=0.1, fire_delay=0.2)
+		list(mode_name="semiauto", burst=1, burst_delay=0.1, fire_delay=0.1, burst_accuracy=list(0,-1), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="3-round bursts", burst=3, burst_delay=0.1, fire_delay=0.2, burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0))
 		)
 
 	var/user_old_x = 0
@@ -84,6 +90,20 @@
 			to_chat(user, "\red Your hands are busy by holding things.")
 	else
 		to_chat(user, "\red You're too far from the handles.")
+
+/obj/item/weapon/gun/projectile/heavy_mg/proc/is_used_by(mob/user)
+	return user.using_object == src && user.loc == src.loc
+
+/obj/item/weapon/gun/projectile/heavy_mg/proc/try_remove_mag(mob/user)
+	if(!ishuman(user))
+		return
+	if (!src.is_used_by(user))
+		if (user.has_empty_hand())
+			src.unload_ammo(user)
+		else
+			user.show_message("<span class='warning'>You need an empty hand to unload mag from [src].</span>")
+	else
+		user.show_message("<span class='warning'>You can't do this while using \the [src].</span>")
 
 /obj/item/weapon/gun/projectile/heavy_mg/Fire(atom/A ,mob/user)
 	if(A == src)
@@ -136,9 +156,22 @@
 			return 0
 
 	src.set_dir(direction)
-	user.set_dir(direction)
+	//user.set_dir(direction)
 	update_pixels(user)
 	to_chat(user, "You rotate the [name]")
+
+	for(var/datum/action/Ac in actions)
+		if(istype(Ac, /datum/action/toggle_scope))
+			if(user.client.pixel_x | user.client.pixel_y)
+				for(var/datum/action/toggle_scope/T in actions)
+					if(T.scope.zoomed)
+						T.scope.zoom(user, FALSE)
+			var/datum/action/toggle_scope/S = Ac
+			S.scope.zoom(user, TRUE, 1)
+
+
+	user.forceMove(src.loc)
+	user.set_dir(src.dir)
 
 	return 0
 
@@ -162,10 +195,26 @@
 	user.using_object = src
 	user.update_canmove()
 	user.forceMove(src.loc)
-	user.dir = src.dir
+	user.set_dir(src.dir)
 	user_old_x = user.pixel_x
 	user_old_y = user.pixel_y
 	update_pixels(user)
+
+/*obj/item/weapon/gun/projectile/heavy_mg/started_using(mob/user as mob)
+	..()
+	for(var/datum/action/A in actions)
+		if(istype(A, /datum/action/toggle_scope))
+			if(user.client.pixel_x | user.client.pixel_y)
+				for(var/datum/action/toggle_scope/T in actions)
+					if(T.scope.zoomed)
+						T.scope.zoom(user, FALSE)
+			var/datum/action/toggle_scope/S = A
+			S.scope.zoom(user, TRUE, 1)
+
+
+	user.forceMove(src.loc)
+	user.set_dir(src.dir)*/
+
 
 /obj/item/weapon/gun/projectile/heavy_mg/proc/stopped_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
@@ -181,6 +230,14 @@
 	user_old_x = 0
 	user_old_y = 0
 	user.dir = old_dir // visual better
+
+/obj/item/weapon/gun/projectile/heavy_mg/stopped_using(mob/user as mob)
+	..()
+	for(var/datum/action/A in actions)
+		if(istype(A, /datum/action/toggle_scope))
+			var/datum/action/toggle_scope/S = A
+			S.scope.zoom(user, FALSE)
+
 
 /obj/item/weapon/gun/projectile/heavy_mg/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))
@@ -262,8 +319,8 @@
 	fire_sound = 'sound/weapons/minigun_1sec.ogg'
 
 	firemodes = list(
-		list(mode_name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0)),
-		list(mode_name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1.5, dispersion=list(1.5))
+		list(mode_name="3000 rpm", burst=10, burst_delay=0.1, fire_delay=1, dispersion=list(1.0), burst_accuracy=list(0,-1)),
+		list(mode_name="6000 rpm", burst=20, burst_delay=0.05, fire_delay=1.5, dispersion=list(1.5), burst_accuracy=list(0,-1,-1))
 		)
 
 //////////////////////
@@ -288,11 +345,11 @@
 	//i know it's kords sounds, but it is to booring to find and copy-paste URTES' sounds
 
 	firemodes = list(
-		list(mode_name = "semiauto", burst = 1, burst_delay = 0.1, fire_delay = 0.1),
-		list(mode_name = "2-round bursts", burst = 2, burst_delay = 0.1, fire_delay = 0.3),
-		list(mode_name = "3-round bursts", burst = 3, burst_delay = 0.1, fire_delay = 0.5),
-		list(mode_name = "5-round bursts", burst = 5, burst_delay = 0.2, fire_delay = 0.7),
-		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_delay = 1.2)
+		list(mode_name = "semiauto", 		burst = 1,  burst_delay = 0.1, fire_delay = 0.1, burst_accuracy=list(0,-1),       dispersion=list(0.0, 0.3, 1.0)),
+		list(mode_name = "2-round bursts",  burst = 2,  burst_delay = 0.1, fire_delay = 0.3, burst_accuracy=list(0,-1),       dispersion=list(0.1, 0.3, 0.6)),
+		list(mode_name = "3-round bursts",  burst = 3,  burst_delay = 0.1, fire_delay = 0.5, burst_accuracy=list(0,-1),       dispersion=list(0.1, 0.4, 0.8)),
+		list(mode_name = "5-round bursts",  burst = 5,  burst_delay = 0.2, fire_delay = 0.7, burst_accuracy=list(0,-1, -1),   dispersion=list(0.2, 0.5, 1.0)),
+		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_delay = 1.2, burst_accuracy=list(0,-1, -1.5), dispersion=list(0.2, 0.5, 1.1))
 		)
 
 ///////////////////////
