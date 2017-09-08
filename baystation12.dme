@@ -331,6 +331,7 @@
 #include "code\escalation\game\structures\brutswehr.dm"
 #include "code\escalation\game\structures\concrete_block.dm"
 #include "code\escalation\game\structures\flora.dm"
+#include "code\escalation\game\structures\fluff.dm"
 #include "code\escalation\game\structures\hedgehog.dm"
 #include "code\escalation\game\structures\sandbag.dm"
 #include "code\escalation\game\turfs\flooring\floorind_premade.dm"
