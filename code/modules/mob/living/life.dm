@@ -19,7 +19,7 @@
 		handle_breathing()
 
 		//Mutations and radiation
-		handle_mutations_and_radiation()
+		//handle_mutations_and_radiation()
 
 		//Chemicals in the body
 		handle_chemicals_in_body()
