@@ -1,22 +1,6 @@
 // Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
 var/global/list/default_internal_channels = list(
-	num2text(CA_ARMY_FREQ) = list(),
-	num2text(CZ_ARMY_FREQ) = list(),
-	num2text(USMC_ARMY_FREQ) = list(),
-	num2text(BUND_ARMY_FREQ) = list()
-/*	num2text(PUB_FREQ) = list(),
-	num2text(AI_FREQ)  = list(access_synth),
-	num2text(ENT_FREQ) = list(),
-	num2text(ERT_FREQ) = list(access_cent_specops),
-	num2text(COMM_FREQ)= list(access_heads),
-	num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
-	num2text(MED_FREQ) = list(access_medical_equip),
-	num2text(MED_I_FREQ)=list(access_medical_equip),
-	num2text(SEC_FREQ) = list(access_security),
-	num2text(SEC_I_FREQ)=list(access_security),
-	num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
-	num2text(SUP_FREQ) = list(access_cargo),
-	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics)*/
+	num2text(COMM_FREQ) = list()
 )
 
 var/global/list/default_medbay_channels = list(
@@ -156,7 +140,7 @@ var/global/list/default_medbay_channels = list(
 	if(!(freq in internal_channels))
 		return 0
 
-	return user.has_internal_radio_channel_access(internal_channels[freq])
+	return 1
 
 //сделать зависимость не от айди, а от ранга
 //и запилить како-то ранагм доступ
@@ -462,9 +446,9 @@ var/global/list/default_medbay_channels = list(
 
 	sleep(rand(10,25)) // wait a little...
 
-	if(signal.data["done"] && position.z in signal.data["level"])
+	/*if(signal.data["done"] && position.z in signal.data["level"])
 		// we're done here.
-		return 1
+		return 1*/
 
 	// Oh my god; the comms are down or something because the signal hasn't been broadcasted yet in our level.
 	// Send a mundane broadcast with limited targets:
