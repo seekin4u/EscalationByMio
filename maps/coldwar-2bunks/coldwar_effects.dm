@@ -1,6 +1,6 @@
 //В переездах между локациями можно выйти из урала и проебаться. Для каждой фракции своя комнатка для потерянных долбаебов
 /obj/effect/step_trigger/teleporter/random/Crossed(A as mob|obj)
-	if(isghost(A)
+	if(isghost(A))
 		return
 	Trigger(A)
 
