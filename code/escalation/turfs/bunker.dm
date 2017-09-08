@@ -133,6 +133,21 @@
 	icon = 'icons/escalation/turf/Walls.dmi'
 	icon_state = "wood"
 
+/turf/simulated/wall/german
+	name = "german house wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "German_wall1"
+
+/turf/simulated/wall/german2
+	name = "german house wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "German_wall2"
+
+/turf/simulated/wall/german3
+	name = "german house wall"
+	icon = 'icons/escalation/turf/Walls.dmi'
+	icon_state = "German_wall3"
+
 /turf/simulated/wall/house/pillar
 	name = "wooden wall"
 	icon = 'icons/escalation/turf/Walls.dmi'
