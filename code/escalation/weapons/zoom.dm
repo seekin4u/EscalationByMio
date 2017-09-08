@@ -56,7 +56,7 @@ obj/item/attachment/scope/adjustable/sniper_scope/removed(mob/user, obj/item/wea
 	return
 
 /obj/item/attachment/scope/adjustable/sniper_scope/removed(mob/user, obj/item/weapon/gun/G)
-	to_chat(user, "You can't remove opticals from [src]"
+	to_chat(user, "You can't remove opticals from [src]")
 	return
 
 /obj/item/attachment/scope/adjustable/New()
