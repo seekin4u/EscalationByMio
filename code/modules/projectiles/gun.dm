@@ -85,6 +85,8 @@
 	var/tmp/told_cant_shoot = 0 //So that it doesn't spam them with the fact they cannot hit them.
 	var/tmp/lock_time = -100
 
+	var/obj/item/attachment/bayonet = null
+
 /obj/item/weapon/gun/New()
 	..()
 	for(var/i in 1 to firemodes.len)
@@ -178,10 +180,24 @@
 /obj/item/weapon/gun/attack(atom/A, mob/living/user, def_zone)
 	if (A == user && user.zone_sel.selecting == BP_MOUTH && !mouthshoot)
 		handle_suicide(user)
-	else if(user.a_intent == I_HURT) //point blank shooting
+	if(user.a_intent == I_HURT && !bayonet) //point blank shooting
 		Fire(A, user, pointblank=1)
 	else
-		return ..() //Pistolwhippin'
+		if(bayonet && isliving(A))
+			var/mob/living/l = A
+			if (prob(35) && l != user && !l.lying)
+				visible_message("<span class = 'danger'>[user] tries to bayonet [l], but they miss!</span>")
+			else
+				var/obj/item/attachment/bayonet/a = bayonet
+				user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN) // No more rapid stabbing for you.
+				visible_message("<span class = 'danger'>[user] impales [l] with their gun's bayonet!</span>")
+				l.apply_damage(a.force * 2, BRUTE, def_zone)
+				l.Weaken(rand(1,2))
+				if (l.stat == CONSCIOUS)
+					l.emote("scream")
+				playsound(get_turf(src), a.attack_sound, rand(90,100))
+		else
+			..() //Pistolwhippin'
 
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, clickparams, pointblank=0, reflex=0)
 	if(!user || !target) return
@@ -478,3 +494,11 @@
 		safety = !safety
 		playsound(user, 'sound/weapons/selector.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+
+/obj/item/weapon/gun/attackby(obj/item/I, mob/user)
+	if(istype(I, /obj/item/attachment))
+		var/obj/item/attachment/A = I
+		if(A.attachable)
+			try_attach(A, user)
+			to_world("Attaching [I.name]")
+	..()

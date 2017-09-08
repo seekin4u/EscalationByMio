@@ -38,6 +38,8 @@
 	//var/list/icon_keys = list()		//keys
 	//var/list/ammo_states = list()	//values
 
+	attachment_slots = ATTACH_IRONSIGHTS | ATTACH_SCOPE | ATTACH_BARREL
+
 /obj/item/weapon/gun/projectile/New()
 	..()
 	if (starts_loaded)
@@ -46,6 +48,10 @@
 				loaded += new ammo_type(src)
 		if(ispath(magazine_type) && (load_method & MAGAZINE))
 			ammo_magazine = new magazine_type(src)
+
+	var/obj/item/attachment/A = new /obj/item/attachment/scope/iron_sights(src)
+	spawn_add_attachment(A, src)
+
 	update_icon()
 
 /obj/item/weapon/gun/projectile/consume_next_projectile()
@@ -191,7 +197,9 @@
 	update_icon()
 
 /obj/item/weapon/gun/projectile/attackby(var/obj/item/A as obj, mob/user as mob)
-	load_ammo(A, user)
+	..()
+	if(istype(A, /obj/item/ammo_magazine))
+		load_ammo(A, user)
 
 /obj/item/weapon/gun/projectile/attack_self(mob/user as mob)
 	if(firemodes.len > 1)
