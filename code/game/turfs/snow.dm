@@ -11,8 +11,7 @@
 	var/list/crossed_dirs = list()
 	var/hasGround = 0
 
-/turf/snow/New()
-	..()
+/turf/snow/initialize()
 	icon_state = "snow[rand(0, 5)]"
 
 /turf/snow/Entered(atom/A)
@@ -62,6 +61,10 @@
 
 /turf/snow/gravsnow/truck//basetype
 	icon = 'icons/escalation/turf/road.dmi'
+	icon_state = "1"
+
+/turf/snow/gravsnow/truck/initialize()
+	return
 
 /turf/snow/gravsnow/truck/snow
 	name = "snow"
