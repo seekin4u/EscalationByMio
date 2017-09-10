@@ -12,6 +12,8 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 1000)
 	screen_shake = 1
 
+	action_button_name = "Toggle gunmode"
+
 	var/caliber = "357"		//determines which casings will fit
 	var/handle_casings = EJECT_CASINGS	//determines how spent casings should be handled
 	var/load_method = SINGLE_CASING|SPEEDLOADER //1 = Single shells, 2 = box or quick loader, 3 = magazine
@@ -48,6 +50,17 @@
 			ammo_magazine = new magazine_type(src)
 
 	update_icon()
+
+/obj/item/weapon/gun/projectile/verb/toggle_firemode()
+	set name = "Toggle Firemode"
+	set category = "Object"
+
+	src.switch_firemodes()
+
+	//usr.update_action_buttons()
+
+	to_world("Firemode changed!")
+
 
 /obj/item/weapon/gun/projectile/consume_next_projectile()
 	if(!is_jammed && prob(jam_chance))
