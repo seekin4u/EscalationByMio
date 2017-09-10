@@ -52,7 +52,7 @@
 	heat_protection = UPPER_TORSO
 
 /obj/item/clothing/suit/storage/vest/escalation/bdw_harness
-	name = "USMC Webbing"
+	name = "BDW Webbing"
 	desc = "A set of straps, pouches, and attachment points for carrying equipment."
 	icon_state = "bdw_harness"
 	item_state = "bdw_harness"
@@ -62,7 +62,7 @@
 	heat_protection = UPPER_TORSO
 
 /obj/item/clothing/suit/storage/vest/escalation/usmc_webvest
-	name = "USMC Webbing" //NO?
+	name = "USMC Webbing"
 	desc = "A set of straps, pouches, and attachment points for carrying equipment."
 	icon_state = "usmc_webvest-big"
 	item_state = "usmc_webvest-big"

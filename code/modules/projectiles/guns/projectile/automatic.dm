@@ -293,7 +293,7 @@
 	caliber = "545x39"
 	slot_flags = SLOT_BACK | SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
-	allowed_magazines = /obj/item/ammo_magazine/c545x39m
+	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = /obj/item/ammo_magazine/c545x39m
 	one_hand_penalty = 3
 	accuracy = 2
@@ -331,7 +331,7 @@
 	caliber = "556x45"
 	slot_flags = SLOT_BACK
 	ammo_type = /obj/item/ammo_casing/a545x39
-	allowed_magazines = /obj/item/ammo_magazine/c545x39m
+	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = /obj/item/ammo_magazine/c545x39m
 	one_hand_penalty = 3
 	accuracy = 2
@@ -471,7 +471,7 @@
 	ammo_type = /obj/item/ammo_casing/a545x39
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/c545x39b
-	allowed_magazines = /obj/item/ammo_magazine/c545x39b
+	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	one_hand_penalty = 6
 	accuracy = 3
 	wielded_item_state = "rpk-wielded"
