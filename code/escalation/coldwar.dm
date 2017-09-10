@@ -1,4 +1,5 @@
 //#define GENERATE_BUSHIES 1
+
 var/roundstart_time = 0
 
 /hook/roundstart/proc/game_start()

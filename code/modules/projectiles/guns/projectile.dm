@@ -38,8 +38,6 @@
 	//var/list/icon_keys = list()		//keys
 	//var/list/ammo_states = list()	//values
 
-	attachment_slots = ATTACH_IRONSIGHTS | ATTACH_SCOPE | ATTACH_BARREL
-
 /obj/item/weapon/gun/projectile/New()
 	..()
 	if (starts_loaded)
@@ -48,9 +46,6 @@
 				loaded += new ammo_type(src)
 		if(ispath(magazine_type) && (load_method & MAGAZINE))
 			ammo_magazine = new magazine_type(src)
-
-	var/obj/item/attachment/A = new /obj/item/attachment/scope/iron_sights(src)
-	spawn_add_attachment(A, src)
 
 	update_icon()
 

@@ -668,7 +668,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		transport_turf_contents(source, target, direction)
 
 	//change the old turfs
-#ifdef URALS_DEBUG
+#if (URALS_DEBUG < 0)
 	to_world("--Tried do change old turfs!")
 #endif
 	/*for(var/turf/source in turfs_src)
@@ -688,7 +688,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 	for(var/obj/O in source)
 		if(O.simulated)
 			O.forceMove(new_turf)
-#ifdef URALS_DEBUG
+#if (URALS_DEBUG < 0)
 			to_world("Simulated obj forceMoved")
 #endif
 

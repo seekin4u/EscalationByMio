@@ -345,8 +345,6 @@
 #include "code\escalation\modules\admin\verbs\debud.dm"
 #include "code\escalation\outfits\escalation.dm"
 #include "code\escalation\turfs\bunker.dm"
-#include "code\escalation\weapons\attachment.dm"
-#include "code\escalation\weapons\zoom.dm"
 #include "code\game\atoms.dm"
 #include "code\game\atoms_movable.dm"
 #include "code\game\base_turf.dm"

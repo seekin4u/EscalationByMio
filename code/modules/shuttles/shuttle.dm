@@ -142,33 +142,33 @@
 
 	// if there's a zlevel above our destination, paint in a ceiling on it so we retain our air
 	var/turf/some_dest_turf = locate() in destination
-#ifdef URALS_DEBUG
+#if (URALS_DEBUG < 0)
 	to_world("some_dest_turf : [some_dest_turf]!")
 #endif
 	if(HasAbove(some_dest_turf.z))
-#ifded URALS_DEBUG
+#if (URALS_DEBUG < 0)
 		to_world("HasAbove on some_dest_turf")
 #endif
-		/*for (var/turf/TD in dstturfs)
+		for (var/turf/TD in dstturfs)
 			var/turf/TA = GetAbove(TD)
 			if (TA && istype(TA, get_base_turf_by_area(TA)))
-				TA.ChangeTurf(ceiling_type, 1, 1)*/
+				TA.ChangeTurf(ceiling_type, 1, 1)
 
 	origin.move_contents_to(destination, direction=direction)
 
 	// if there was a zlevel above our origin, erase our ceiling now we're gone
 	var/turf/some_origin_turf = locate() in origin
-#ifdef URALS_DEBUG
+#if (URALS_DEBUG < 0)
 	to_world("some_origin_turf : [some_origin_turf]!")
 #endif
 	if(HasAbove(some_origin_turf.z))
-#ifdef URALS_DEBUG
+#if (URALS_DEBUG < 0)
 		to_world("HasAbove on some_origin_turf")
 #endif
-		/*for (var/turf/TO in origin)
+		for (var/turf/TO in origin)
 			var/turf/TA = GetAbove(TO)
 			if (TA && istype(TA, ceiling_type))
-				TA.ChangeTurf(get_base_turf_by_area(TA), 1, 1)*/
+				TA.ChangeTurf(get_base_turf_by_area(TA), 1, 1)
 
 	for(var/mob/M in destination)
 		if(M.client)

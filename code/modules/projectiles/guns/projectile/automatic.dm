@@ -802,12 +802,6 @@
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=5, burst_accuracy=null, dispersion=null),
 		)
 
-/obj/item/weapon/gun/projectile/automatic/svd/New()
-	..()
-	attachments.Cut()
-	var/obj/item/attachment/A = new /obj/item/attachment/scope/adjustable/sniper_scope(src)
-	spawn_add_attachment(A, src)
-
 /obj/item/weapon/gun/projectile/automatic/svd/update_icon()
 	..()
 	if(ammo_magazine)

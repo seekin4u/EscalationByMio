@@ -8,12 +8,6 @@
 //так что или инициализируем нужными значениями
 //или при спавне пушек делаем switch_firemodes (так как времени не очень много для тестов - пока что делаем первое)
 
-/obj/item/weapon/gun/projectile/heavy_mg/verb/eject_mag()
-	set category = "Object"
-	set name = "Eject magazine"
-	set src in range(1, usr)
-	src.try_remove_mag(usr)
-
 /obj/item/weapon/gun/projectile/heavy_mg
 	name = "staionary machinegun"
 	desc = "basic heavy machinegun."
@@ -91,20 +85,6 @@
 	else
 		to_chat(user, "\red You're too far from the handles.")
 
-/obj/item/weapon/gun/projectile/heavy_mg/proc/is_used_by(mob/user)
-	return user.using_object == src && user.loc == src.loc
-
-/obj/item/weapon/gun/projectile/heavy_mg/proc/try_remove_mag(mob/user)
-	if(!ishuman(user))
-		return
-	if (!src.is_used_by(user))
-		if (user.has_empty_hand())
-			src.unload_ammo(user)
-		else
-			user.show_message("<span class='warning'>You need an empty hand to unload mag from [src].</span>")
-	else
-		user.show_message("<span class='warning'>You can't do this while using \the [src].</span>")
-
 /obj/item/weapon/gun/projectile/heavy_mg/Fire(atom/A ,mob/user)
 	if(A == src)
 		if(firemodes.len > 1)
@@ -156,22 +136,9 @@
 			return 0
 
 	src.set_dir(direction)
-	//user.set_dir(direction)
+	user.set_dir(direction)
 	update_pixels(user)
 	to_chat(user, "You rotate the [name]")
-
-	for(var/datum/action/Ac in actions)
-		if(istype(Ac, /datum/action/toggle_scope))
-			if(user.client.pixel_x | user.client.pixel_y)
-				for(var/datum/action/toggle_scope/T in actions)
-					if(T.scope.zoomed)
-						T.scope.zoom(user, FALSE)
-			var/datum/action/toggle_scope/S = Ac
-			S.scope.zoom(user, TRUE, 1)
-
-
-	user.forceMove(src.loc)
-	user.set_dir(src.dir)
 
 	return 0
 
@@ -200,22 +167,6 @@
 	user_old_y = user.pixel_y
 	update_pixels(user)
 
-/*obj/item/weapon/gun/projectile/heavy_mg/started_using(mob/user as mob)
-	..()
-	for(var/datum/action/A in actions)
-		if(istype(A, /datum/action/toggle_scope))
-			if(user.client.pixel_x | user.client.pixel_y)
-				for(var/datum/action/toggle_scope/T in actions)
-					if(T.scope.zoomed)
-						T.scope.zoom(user, FALSE)
-			var/datum/action/toggle_scope/S = A
-			S.scope.zoom(user, TRUE, 1)
-
-
-	user.forceMove(src.loc)
-	user.set_dir(src.dir)*/
-
-
 /obj/item/weapon/gun/projectile/heavy_mg/proc/stopped_using(mob/user as mob)
 	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
 						 "<span class='notice'>You released \the [src].</span>")
@@ -230,14 +181,6 @@
 	user_old_x = 0
 	user_old_y = 0
 	user.dir = old_dir // visual better
-
-/obj/item/weapon/gun/projectile/heavy_mg/stopped_using(mob/user as mob)
-	..()
-	for(var/datum/action/A in actions)
-		if(istype(A, /datum/action/toggle_scope))
-			var/datum/action/toggle_scope/S = A
-			S.scope.zoom(user, FALSE)
-
 
 /obj/item/weapon/gun/projectile/heavy_mg/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(istype(mover, /obj/item/projectile))

@@ -100,3 +100,8 @@
 #define qdel_null(x) if(x) { qdel(x) ; x = null }
 
 #define ARGS_DEBUG log_debug("[__FILE__] - [__LINE__]") ; for(var/arg in args) { log_debug("\t[log_info_line(arg)]") }
+
+////
+//ESCALATION STUFF
+///
+#define URALS_DEBUG 1
