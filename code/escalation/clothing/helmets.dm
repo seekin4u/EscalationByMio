@@ -2,7 +2,7 @@
 /obj/item/clothing/head/helmet/escalation/usmc
 	name = "PASGT Helmet"
 	winter_name = "PASGT Winter Helmet"
-	desc = "A standard-issued USMC kevlar helmet. So modern!"
+	desc = "Standard issue modern kevlar helmet. Good for keeping your head attached."
 	icon_state = "pasgt_winter"
 	item_state = "pasgt_winter"
 	body_parts_covered = HEAD
@@ -11,7 +11,7 @@
 /obj/item/clothing/head/helmet/escalation/bund
 	name = "M1 Helmet"
 	winter_name = "M1 Winter Helmet"
-	desc = "A steel helmet, standard-issued in Bundeswehr. Americans fought in Vietnam in these."
+	desc = "Standard issue M1 Steel Pot. Good for keeping your head attached. "
 	icon_state = "m1helmet"
 	winter_icon_state = "m1helmet_winter"
 
@@ -20,7 +20,7 @@
 
 /obj/item/clothing/head/helmet/escalation/vz53
 	name = "Vz. 53 Helmet"
-	desc = "A steel helmet, standard-issued in CSLA. It reminds you about WWII."
+	desc = "A steel helmet, standard issue to CSLA. It reminds you of the old war."
 	icon_state = "vz53"
 
 	body_parts_covered = HEAD
@@ -28,7 +28,7 @@
 
 /obj/item/clothing/head/helmet/escalation/ssh68
 	name = "SSh-68 Helmet"
-	desc = "A steel helmet, standard-issued in SA. I bet that even our grandsons will wear it."
+	desc = "A steel helmet, standard issue to SA. I bet that even our grandsons will wear it."
 	icon_state = "ssh68"
 
 	body_parts_covered = HEAD
@@ -36,7 +36,7 @@
 
 /obj/item/clothing/head/helmet/escalation/redcross
 	name = "M1 Red Cross Helmet"
-	desc = "A steel helmet. This one has the Red Cross insignia on it."
+	desc = "M1 Steel Pot. This one has the Red Cross insignia on it."
 	icon_state = "m1red"
 
 	body_parts_covered = HEAD

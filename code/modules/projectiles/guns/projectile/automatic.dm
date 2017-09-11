@@ -328,7 +328,7 @@
 	item_state = "ak74gl"
 	w_class = 5
 	load_method = MAGAZINE
-	caliber = "556x45"
+	caliber = "545x39"
 	slot_flags = SLOT_BACK
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
@@ -364,7 +364,7 @@
 	item_state = "ak"
 	w_class = 4
 	load_method = MAGAZINE
-	caliber = "556x39"
+	caliber = "545x39"
 	slot_flags = SLOT_BACK
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = /obj/item/ammo_magazine/c545x39m
@@ -393,7 +393,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
-	desc = "That's the standard-issue weapon of the USMC."
+	desc = "Standard issue rifle of the USMC."
 	icon_state = "m16a2"
 	item_state = "m16"
 	w_class = 5
