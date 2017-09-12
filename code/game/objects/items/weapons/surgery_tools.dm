@@ -179,9 +179,9 @@
 	icon_state = "plate[rand(0, 4)]"
 
 /obj/item/weapon/FixOVein
-	name = "Chemical Cautery"
+	name = "ñautery"
 	icon = 'icons/obj/surgery.dmi'
-	icon_state = "fixovein"
+	icon_state = "cautery"
 	force = 0
 	throwforce = 1.0
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 3)

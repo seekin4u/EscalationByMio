@@ -9,3 +9,15 @@
 	desc = "Knit by Army Widows Association."
 	icon_state = "usmc"
 	item_state = "usmc"
+
+/obj/item/clothing/gloves/escalation/sa
+	name = "SA gloves"
+	desc = "Knit by Babushka."
+	icon_state = "sa0"
+	item_state = "sa0"
+
+/obj/item/clothing/gloves/escalation/csla
+	name = "CSLA gloves"
+	desc = "Leather gloves for winter combat."
+	icon_state = "csla"
+	item_state = "csla"
