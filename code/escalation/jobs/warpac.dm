@@ -173,7 +173,7 @@
 	name = "Zamkomvzvoda"
 	english_name = "Platoon Leader's Deputy"
 	enabled = 1
-	rank_prefix = "StSer." //Starshina
+	rank_prefix = "Starsh." //Starshina
 	rank_number = 2
 	position = "team"
 	amount = 1
@@ -324,3 +324,47 @@
 	position = "team"
 	amount = 1
 	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 35, LANGUAGE_GERMAN = 35)
+
+/datum/job/escalation/cccp/hwscom
+	title = "CCCP HWS Leader"
+	name = "Komandir rascheta"
+	english_name = "HWS Leader"
+	enabled = 1
+	rank_prefix = "Serzh."
+	rank_number = 5
+	position = "team"
+	amount = 2
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
+
+/datum/job/escalation/cccp/hwsgun
+	title = "CCCP HWS Leader"
+	name = "Strelok Rascheta"
+	english_name = "HWS Gunner"
+	enabled = 1
+	rank_prefix = "Ryad."
+	rank_number = 7
+	position = "team"
+	amount = 2
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
+
+/datum/job/escalation/cccp/hwsass
+	title = "CCCP HWS Assistant"
+	name = "Assistent Rascheta"
+	english_name = "HWS Assistant"
+	enabled = 1
+	rank_prefix = "Ryad."
+	rank_number = 7
+	position = "team"
+	amount = 2
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
+
+/datum/job/escalation/cccp/vzmachinegunner
+	title = "CCCP Vzvodny Pulemetchik"
+	name = "Vzvodny Pulemetchik"
+	english_name = "Platoon machinegunner"
+	enabled = 1
+	rank_prefix = "Ryad." //Ryadovoy
+	rank_number = 7
+	position = "team"
+	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)

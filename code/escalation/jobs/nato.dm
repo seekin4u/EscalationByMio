@@ -42,12 +42,12 @@
 	position = "fireteam"
 	amount = 1
 	leading = 1
-	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)	
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/subsergeant
 	title = "DE Gruppenfuhrer Stellvertreter"
 	name = "Gruppenfuhrer stellvertreter"
-	english_name = "Fireteam Leader"
+	english_name = "Squad Leader Deputy"
 	enabled = 1
 	rank_prefix = "Unteroffizier"  //"sergeant"
 	rank_number = 3
@@ -74,7 +74,7 @@
 	rank_prefix = "Soldat"
 	rank_number = 6
 	position = "fireteam"
-	amount = 6
+	amount = 2
 	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/fielddoctor
@@ -106,10 +106,20 @@
 	enabled = 1
 	rank_prefix = "Gefreiter"
 	rank_number = 5
-	position = "team"
-	amount = 2
+	position = "fireteam"
+	amount = 1
 	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
+/datum/job/escalation/bund/radio
+	title = "DE Funker"
+	name = "Funker"
+	english_name = "Radioman"
+	enabled = 1
+	rank_prefix = "Gefreiter"
+	rank_number = 5
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 
 //** USMC ARMY **
@@ -170,7 +180,7 @@
 	name = "Fireteam Leader"
 	english_name = "Corporal"
 	enabled = 3
-	rank_prefix = "Sgt."
+	rank_prefix = "Cpl."
 	rank_number = 3
 	position = "fireteam"
 	amount = 2
@@ -249,3 +259,33 @@
 	position = "team"
 	amount = 1
 	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 30, LANGUAGE_CZECH = 15)
+
+/datum/job/escalation/usmc/hwscom
+	title = "US HWS Commander"
+	name = "HWS Commander"
+	english_name = "HWS Commander"
+	enabled = 1
+	rank_prefix = "Sgt."
+	position = "team"
+	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/usmc/hwsgun
+	title = "US HWS Gunner"
+	name = "HWS Gunner"
+	english_name = "HWS Gunner"
+	enabled = 1
+	rank_prefix = "Pfc."
+	position = "team"
+	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/usmc/hwsass
+	title = "US HWS Assistant"
+	name = "HWS Assistant"
+	english_name = "HWS Assistant"
+	enabled = 1
+	rank_prefix = "Pfc."
+	position = "team"
+	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
