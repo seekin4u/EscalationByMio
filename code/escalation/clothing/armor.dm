@@ -13,7 +13,9 @@
 //	allowed = list(/obj/item/weapon/gun/energy,/obj/item/device/radio,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 30, bullet = 10, laser = 20, energy = 10, bomb = 25, bio = 0, rad = 0)
-	allowed = /obj/item/weapon/storage/belt/ammo/usmc
+	allowed = list(
+		/obj/item/weapon/storage/belt/suit
+		)
 
 /obj/item/clothing/suit/armor/escalation/pasgt
 	name = "PASGT Vest"
@@ -27,7 +29,7 @@
 	name = "PASGT Vest"
 	desc = "A protective kevlar vest."
 	icon_state = "pasgt_woodland"
-	allowed = list(/obj/item/weapon/storage/belt/ammo/usmc)
+	allowed = list(/obj/item/weapon/storage/belt/suit)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 30, bullet = 35, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
 
@@ -50,6 +52,7 @@
 	body_parts_covered = UPPER_TORSO
 	cold_protection = UPPER_TORSO
 	heat_protection = UPPER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)
 
 /obj/item/clothing/suit/storage/vest/escalation/bdw_harness
 	name = "BDW Webbing"
@@ -60,6 +63,29 @@
 	body_parts_covered = UPPER_TORSO
 	cold_protection = UPPER_TORSO
 	heat_protection = UPPER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)
+
+/obj/item/clothing/suit/storage/vest/escalation/sa_harness
+	name = "SA Webbing"
+	desc = "A set of straps, pouches, and attachment points for carrying equipment."
+	icon_state = "sa_harness"
+	item_state = "sa_harness"
+	armor = list(melee = 10, bullet = 5, laser = 20, energy = 20, bomb = 5, bio = 0, rad = 0)
+	body_parts_covered = UPPER_TORSO
+	cold_protection = UPPER_TORSO
+	heat_protection = UPPER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)
+
+/obj/item/clothing/suit/storage/vest/escalation/csla_harness
+	name = "CSLA Webbing"
+	desc = "A set of straps, pouches, and attachment points for carrying equipment."
+	icon_state = "csla_harness"
+	item_state = "csla_harness"
+	armor = list(melee = 10, bullet = 5, laser = 20, energy = 20, bomb = 5, bio = 0, rad = 0)
+	body_parts_covered = UPPER_TORSO
+	cold_protection = UPPER_TORSO
+	heat_protection = UPPER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)
 
 /obj/item/clothing/suit/storage/vest/escalation/usmc_webvest
 	name = "USMC Webbing"
@@ -70,6 +96,7 @@
 	body_parts_covered = UPPER_TORSO
 	cold_protection = UPPER_TORSO
 	heat_protection = UPPER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)
 
 /obj/item/clothing/suit/storage/vest/escalation/sa_webvest
 	name = "SA Webbing"
@@ -80,6 +107,7 @@
 	body_parts_covered = UPPER_TORSO
 	cold_protection = UPPER_TORSO
 	heat_protection = UPPER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)
 
 /obj/item/clothing/suit/storage/vest/escalation/csla_webvest
 	name = "CSLA Webbing"
@@ -90,4 +118,5 @@
 	body_parts_covered = UPPER_TORSO
 	cold_protection = UPPER_TORSO
 	heat_protection = UPPER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)
 

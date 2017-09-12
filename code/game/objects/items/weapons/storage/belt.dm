@@ -207,34 +207,77 @@
 	slowdown_per_slot[slot_belt] = 3
 
 /obj/item/weapon/storage/belt/bdw
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "BDW Field Pack"
 	desc = "Standart satchel of the Bundeswehr infantry."
 	icon_state = "bdw"
 	item_state = "bdw"
-	storage_slots = 7
+	storage_slots = 5
 
 /obj/item/weapon/storage/belt/bdw/medical
 	name = "BDW Medical Satchel"
 	desc = "Standart satchel of the Bundeswehr medics."
 	icon_state = "bdw_med"
 	item_state = "bdw_med"
-	storage_slots = 9
+	storage_slots = 7
 
 /obj/item/weapon/storage/belt/usmc
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "USMC Field Pack"
 	desc = "Standart satchel of the USMC infantry. Reffered to as Butt Pack."
 	icon_state = "usmc"
 	item_state = "usmc"
-	storage_slots = 7
+	storage_slots = 5
 
 /obj/item/weapon/storage/belt/usmc/medical
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "USMC Medical Pack"
 	desc = "Standart satchel of the USMC medics."
 	icon_state = "usmc_med"
 	item_state = "usmc_med"
-	storage_slots = 9
+	storage_slots = 7
 
-/obj/item/weapon/storage/belt/ammo/bdw
+/obj/item/weapon/storage/belt/sa
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
+	name = "SA Field Pack"
+	desc = "Standart satchel of the SA infantry."
+	icon_state = "sa"
+	item_state = "sa"
+	storage_slots = 5
+
+/obj/item/weapon/storage/belt/sa/medical
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
+	name = "SA Medical Pack"
+	desc = "Standart satchel of the SA medics."
+	icon_state = "sa_med"
+	item_state = "sa_med"
+	storage_slots = 7
+
+/obj/item/weapon/storage/belt/csla
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
+	name = "CSLA Field Pack"
+	desc = "Standart satchel of the CSLA infantry."
+	icon_state = "csla"
+	item_state = "csla"
+	storage_slots = 5
+
+/obj/item/weapon/storage/belt/csla/medical
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
+	name = "CSLA Medical Pack"
+	desc = "Standart satchel of the CSLA medics."
+	icon_state = "csla_med"
+	item_state = "csla_med"
+	storage_slots = 7
+
+/obj/item/weapon/storage/belt/suit/ammo/bdw
+	w_class = ITEM_SIZE_HUGE
 	name = "BDW Ammo Pouch"
 	desc = "Have enough space to hold 4 magazines."
 	icon_state = "bdw_ammo"
@@ -245,7 +288,8 @@
 		/obj/item/ammo_magazine
 		)
 
-/obj/item/weapon/storage/belt/ammo/usmc
+/obj/item/weapon/storage/belt/suit/ammo/usmc
+	w_class = ITEM_SIZE_HUGE
 	name = "USMC Ammo Pouch"
 	desc = "Have enough space to hold 4 magazines."
 	icon_state = "usmc_ammo"
@@ -254,4 +298,55 @@
 	slot_flags = SLOT_BELT
 	can_hold = list(
 		/obj/item/ammo_magazine
+		)
+
+/obj/item/weapon/storage/belt/suit/ammo/sa
+	w_class = ITEM_SIZE_HUGE
+	name = "SA Ammo Pouch"
+	desc = "Have enough space to hold 4 magazines."
+	icon_state = "sa_ammo"
+	item_state = "sa_ammo"
+	storage_slots = 4
+	slot_flags = SLOT_BELT
+	can_hold = list(
+		/obj/item/ammo_magazine
+		)
+
+/obj/item/weapon/storage/belt/suit/ammo/csla
+	w_class = ITEM_SIZE_HUGE
+	name = "CSLA Ammo Pouch"
+	desc = "Have enough space to hold 4 magazines."
+	icon_state = "csla_ammo"
+	item_state = "csla_ammo"
+	storage_slots = 4
+	slot_flags = SLOT_BELT
+	can_hold = list(
+		/obj/item/ammo_magazine
+		)
+
+/obj/item/weapon/storage/belt/suit/surgery
+	w_class = ITEM_SIZE_HUGE
+	name = "Field Surgery Kit"
+	desc = "Saves lifes."
+	icon_state = "surgical"
+	item_state = null
+	storage_slots = 7
+	slot_flags = SLOT_BELT
+	can_hold = list(
+		/obj/item/weapon/retractor,
+		/obj/item/weapon/hemostat,
+		/obj/item/weapon/needle,
+		/obj/item/weapon/scalpel,
+		/obj/item/weapon/setofplates,
+		/obj/item/weapon/bonesetter,
+		/obj/item/weapon/FixOVein
+		)
+	startswith = list(
+		/obj/item/weapon/retractor,
+		/obj/item/weapon/hemostat,
+		/obj/item/weapon/needle,
+		/obj/item/weapon/scalpel,
+		/obj/item/weapon/setofplates,
+		/obj/item/weapon/bonesetter,
+		/obj/item/weapon/FixOVein
 		)
