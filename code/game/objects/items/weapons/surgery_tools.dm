@@ -179,7 +179,7 @@
 	icon_state = "plate[rand(0, 4)]"
 
 /obj/item/weapon/FixOVein
-	name = "ñautery"
+	name = "cautery"
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "cautery"
 	force = 0
