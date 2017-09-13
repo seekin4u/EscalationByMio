@@ -47,6 +47,57 @@
 	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
 	..()
 
+/obj/item/weapon/gun/launcher/rpg7
+	name = "RPG7"
+	desc = "A grenade launcher, standard-issued by soviet and czech army."
+	icon_state = "rocket" ///change
+	item_state = "rocket" ///change
+	w_class = 5
+	throw_speed = 3
+	throw_range = 40
+	force = 5.0
+	flags =  CONDUCT
+	slot_flags = 0
+	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 5)
+	fire_sound = 'sound/weapons/gunshot/rocketfire1.ogg'
+
+	release_force = 40
+	throw_distance = 30
+	var/max_rockets = 1
+	var/list/rockets = new/list()
+
+/obj/item/weapon/gun/launcher/rocket/examine(mob/user)
+	if(!..(user, 2))
+		return
+	user << "\blue [rockets.len] / [max_rockets] rockets."
+
+/obj/item/weapon/gun/launcher/rocket/attackby(obj/item/I as obj, mob/user as mob)
+	if(istype(I, /obj/item/ammo_casing/rocket))
+		if(rockets.len < max_rockets)
+			user.drop_item()
+			I.loc = src
+			rockets += I
+			user << "\blue You put the rocket in [src]."
+			user << "\blue [rockets.len] / [max_rockets] rockets."
+		else
+			usr << "\red [src] cannot hold more rockets."
+
+/obj/item/weapon/gun/launcher/rocket/consume_next_projectile()
+	if(rockets.len)
+		var/obj/item/ammo_casing/rocket/I = rockets[1]
+		var/obj/item/missile/M = new (src)
+		M.primed = 1
+		rockets -= I
+		return M
+	return null
+
+/obj/item/weapon/gun/launcher/rocket/handle_post_fire(mob/user, atom/target)
+	message_admins("[key_name_admin(user)] fired a rocket from an RPG ([src.name]) at [target].")
+	log_game("[key_name_admin(user)] used an RPG ([src.name]) at [target].")
+	..()
+
+///////////////////Not ours///////////////////////////////////////////////
+
 /obj/item/weapon/gun/launcher/rpg18
 	name = "RPG-18"
 	desc = "Also known as 'Mukha'."

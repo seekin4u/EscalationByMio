@@ -333,7 +333,7 @@
 /obj/item/weapon/gun/projectile/colt911
 	name = "Colt1911"
 	desc = "Solid classic. Uses 9x19 ammo."
-	icon_state = "berettam9" //fix
+	icon_state = "colt" //fix
 	item_state = "gun"
 	w_class = 2
 	caliber = "9x19"
@@ -346,10 +346,17 @@
 	reload_sound = 'sound/weapons/gunporn/pistol_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/pistol_sliderelease.ogg'
 
+/obj/item/weapon/gun/projectile/colt911/update_icon()
+	..()
+	if(ammo_magazine && ammo_magazine.stored_ammo.len)
+		icon_state = "colt"
+	else
+		icon_state = "colt-empty"
+
 /obj/item/weapon/gun/projectile/walther
 	name = "P1"
 	desc = "A bit modified Walther P38 with politically correct name. Uses 9x19 ammo"
-	icon_state = "berettam9" //fix
+	icon_state = "p1" //fix
 	item_state = "gun"
 	w_class = 2
 	caliber = "9x19"
