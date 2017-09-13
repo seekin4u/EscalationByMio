@@ -61,68 +61,41 @@
 
 */
 
-/*
-Frequency range: 1200 to 1600
-Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency, even during mapmaking)
-
-Radio:
-1459 - standard radio chat
-1351 - Science
-1353 - Command
-1355 - Medical
-1357 - Engineering
-1359 - Security
-1341 - deathsquad
-1443 - Confession Intercom
-1347 - Cargo techs
-1349 - Service people
-
-Devices:
-1451 - tracking implant
-1457 - RSD default
-
-On the map:
-1311 for prison shuttle console (in fact, it is not used)
-1435 for status displays
-1437 for atmospherics/fire alerts
-1438 for engine components
-1439 for air pumps, air scrubbers, atmo control
-1441 for atmospherics - supply tanks
-1443 for atmospherics - distribution loop/mixed air tank
-1445 for bot nav beacons
-1447 for mulebot, secbot and ed209 control
-1449 for airlock controls, electropack, magnets
-1451 for toxin lab access
-1453 for engineering access
-1455 for AI access
-*/
-
 var/const/RADIO_LOW_FREQ	= 1200
-var/const/PUBLIC_LOW_FREQ	= 1441
-var/const/PUBLIC_HIGH_FREQ	= 1489
-var/const/RADIO_HIGH_FREQ	= 1600
+var/const/PUBLIC_LOW_FREQ	= 1241
+var/const/PUBLIC_HIGH_FREQ	= 1800
+var/const/RADIO_HIGH_FREQ	= 1900
+
+var/const/CA_ARMY_FREQ_PROTECTED = 1811
+var/const/CZ_ARMY_FREQ_PROTECTED = 1812
+var/const/USMC_ARMY_FREQ_PROTECTED = 1821
+var/const/BUND_ARMY_FREQ_PROTECTED = 1822
 
 var/const/BOT_FREQ	= 1447
-var/const/COMM_FREQ = 1353
-var/const/ERT_FREQ	= 1345
-var/const/AI_FREQ	= 1343
-var/const/DTH_FREQ	= 1341
-var/const/SYND_FREQ = 1213
+var/const/COMM_FREQ = 1200
+var/const/ERT_FREQ	= 1200
+var/const/AI_FREQ	= 1200
+var/const/DTH_FREQ	= 1200
+var/const/SYND_FREQ = 1200
 var/const/RAID_FREQ	= 1277
-var/const/ENT_FREQ	= 1461 //entertainment frequency. This is not a diona exclusive frequency.
+var/const/ENT_FREQ	= 1200 //entertainment frequency. This is not a diona exclusive frequency.
 
 // department channels
-var/const/PUB_FREQ = 1459
-var/const/SEC_FREQ = 1359
-var/const/ENG_FREQ = 1357
-var/const/MED_FREQ = 1355
-var/const/SCI_FREQ = 1351
-var/const/SRV_FREQ = 1349
-var/const/SUP_FREQ = 1347
+var/const/PUB_FREQ = 1488
+var/const/SEC_FREQ = 1200
+var/const/ENG_FREQ = 1200
+var/const/MED_FREQ = 1200
+var/const/SCI_FREQ = 1200
+var/const/SRV_FREQ = 1200
+var/const/SUP_FREQ = 1200
+var/const/CA_ARMY_FREQ = 1547
+var/const/CZ_ARMY_FREQ = 1549
+var/const/USMC_ARMY_FREQ = 1747
+var/const/BUND_ARMY_FREQ = 1749
 
 // internal department channels
-var/const/MED_I_FREQ = 1485
-var/const/SEC_I_FREQ = 1475
+var/const/MED_I_FREQ = 1200
+var/const/SEC_I_FREQ = 1200
 
 var/list/radiochannels = list(
 	"Common"		= PUB_FREQ,
@@ -140,8 +113,22 @@ var/list/radiochannels = list(
 	"AI Private"	= AI_FREQ,
 	"Entertainment" = ENT_FREQ,
 	"Medical(I)"	= MED_I_FREQ,
-	"Security(I)"	= SEC_I_FREQ
+	"Security(I)"	= SEC_I_FREQ,
+	"Soviet Army"	= CA_ARMY_FREQ,
+	"Czech Army"	= CZ_ARMY_FREQ,
+	"USMC Army"		= USMC_ARMY_FREQ,
+	"Bund Army"		= BUND_ARMY_FREQ,
+	"Soviet Army protected"	= CA_ARMY_FREQ_PROTECTED,
+	"Czech Army protected"	= CZ_ARMY_FREQ_PROTECTED,
+	"USMC Army protected"	= USMC_ARMY_FREQ_PROTECTED,
+	"Bund Army protected"	= BUND_ARMY_FREQ_PROTECTED
 )
+
+
+//aviable freqs for 4 armies
+var/list/ARMIES_FREQS = list(USMC_ARMY_FREQ, BUND_ARMY_FREQ, CZ_ARMY_FREQ, CA_ARMY_FREQ)
+
+var/list/ARMIES_FREQS_PROTECTED = list(USMC_ARMY_FREQ_PROTECTED, BUND_ARMY_FREQ_PROTECTED, CZ_ARMY_FREQ_PROTECTED, CA_ARMY_FREQ_PROTECTED)
 
 // central command channels, i.e deathsquid & response teams
 var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
@@ -156,8 +143,12 @@ var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, MED_FREQ, SEC_FREQ, SCI
 #define TRANSMISSION_RADIO	1
 
 /proc/frequency_span_class(var/frequency)
+	if(frequency in ARMIES_FREQS)
+		return "armyradio"
+	if(frequency in ARMIES_FREQS_PROTECTED)
+		return "protectedarmyradio"
 	// Antags!
-	if (frequency in ANTAG_FREQS)
+	if(frequency in ANTAG_FREQS)
 		return "syndradio"
 	// centcomm channels (deathsquid and ert)
 	if(frequency in CENT_FREQS)
@@ -171,7 +162,7 @@ var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, MED_FREQ, SEC_FREQ, SCI
 	// department radio formatting (poorly optimized, ugh)
 	if(frequency == SEC_FREQ)
 		return "secradio"
-	if (frequency == ENG_FREQ)
+	if(frequency == ENG_FREQ)
 		return "engradio"
 	if(frequency == SCI_FREQ)
 		return "sciradio"

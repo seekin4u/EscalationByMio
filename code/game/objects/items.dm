@@ -193,6 +193,7 @@
 	else
 		if(isliving(src.loc))
 			return
+
 	if(user.put_in_active_hand(src))
 		if(randpixel)
 			pixel_x = rand(-randpixel, randpixel)

@@ -360,3 +360,69 @@
 	name = "security messenger bag"
 	desc = "A tactical backpack worn over one shoulder. This one is in Security colors."
 	icon_state = "courierbagsec"
+
+/*
+ * Escalation storage
+ */
+// Add allowed for rockets and grenades
+
+/obj/item/weapon/storage/backpack/rpgsa
+	name = "RPG rocket backpack"
+	desc = "Soviet Army backpack for RPG shots. Can hold two rockets."
+	icon_state = "sa_rpg2"
+	item_state = "sa_rpg"
+	storage_slots = 2
+
+/obj/item/weapon/storage/backpack/rpgsa/assistant
+	name = "RPG rocket backpack"
+	desc = "Backpack for grenadier assistant. Can hold three rockets."
+	icon_state = "sa_rpg3"
+	item_state = "sa_rpg"
+	storage_slots = 3
+
+/obj/item/weapon/storage/backpack/rpgcsla
+	name = "RPG rocket backpack"
+	desc = "CSLA backpack for RPG shots. Can hold two rockets."
+	icon_state = "csla_rpg2"
+	item_state = "csla_rpg"
+	storage_slots = 2
+
+/obj/item/weapon/storage/backpack/rpgcsla/assistant
+	name = "RPG rocket backpack"
+	desc = "Backpack for grenadier assistant. Can hold three rockets."
+	icon_state = "csla_rpg3"
+	item_state = "csla_rpg"
+	storage_slots = 3
+
+/obj/item/weapon/storage/backpack/gl/usmc
+	name = "Grenade belt"
+	desc = "USMC grenade belt."
+	icon_state = "usmc_ugl"
+	item_state = null
+	storage_slots = 6
+
+/obj/item/weapon/storage/backpack/gl/bdw
+	name = "Grenade belt"
+	desc = "BDW grenade belt."
+	icon_state = "bdw_ugl"
+	item_state = null
+	storage_slots = 6
+
+/obj/item/weapon/storage/backpack/gl/bdw/big
+	name = "Grenade belt"
+	desc = "Grenadier belt with more grenade pouches."
+	icon_state = "bdw_hk69"
+	item_state = null
+	storage_slots = 12
+
+/obj/item/weapon/storage/backpack/gl/sa
+	name = "Grenade satchel"
+	desc = "SA grenade satchel."
+	icon_state = "sa_ugl"
+	storage_slots = 6
+
+/obj/item/weapon/storage/backpack/gl/csla
+	name = "Grenade satchel"
+	desc = "CSLA grenade satchel."
+	icon_state = "csla_ugl"
+	storage_slots = 6

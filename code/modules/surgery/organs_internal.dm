@@ -27,8 +27,8 @@
 	/obj/item/weapon/tape_roll = 20
 	)
 
-	min_duration = 70
-	max_duration = 90
+	min_duration = 40
+	max_duration = 70
 
 /datum/surgery_step/internal/fix_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 

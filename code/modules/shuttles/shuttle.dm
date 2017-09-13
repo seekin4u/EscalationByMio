@@ -142,8 +142,13 @@
 
 	// if there's a zlevel above our destination, paint in a ceiling on it so we retain our air
 	var/turf/some_dest_turf = locate() in destination
-	//to_world("some_dest_turf : [some_dest_turf]!")
-	if (HasAbove(some_dest_turf.z))
+#if (URALS_DEBUG < 0)
+	to_world("some_dest_turf : [some_dest_turf]!")
+#endif
+	if(HasAbove(some_dest_turf.z))
+#if (URALS_DEBUG < 0)
+		to_world("HasAbove on some_dest_turf")
+#endif
 		for (var/turf/TD in dstturfs)
 			var/turf/TA = GetAbove(TD)
 			if (TA && istype(TA, get_base_turf_by_area(TA)))
@@ -153,8 +158,13 @@
 
 	// if there was a zlevel above our origin, erase our ceiling now we're gone
 	var/turf/some_origin_turf = locate() in origin
-	//to_world("some_origin_turf : [some_origin_turf]!")
-	if (HasAbove(some_origin_turf.z))
+#if (URALS_DEBUG < 0)
+	to_world("some_origin_turf : [some_origin_turf]!")
+#endif
+	if(HasAbove(some_origin_turf.z))
+#if (URALS_DEBUG < 0)
+		to_world("HasAbove on some_origin_turf")
+#endif
 		for (var/turf/TO in origin)
 			var/turf/TA = GetAbove(TO)
 			if (TA && istype(TA, ceiling_type))

@@ -125,8 +125,8 @@
 	/obj/item/weapon/material/shard = 50, 		\
 	)
 
-	min_duration = 90
-	max_duration = 110
+	min_duration = 40
+	max_duration = 50
 
 /datum/surgery_step/generic/cut_open/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -168,8 +168,8 @@
 	/obj/item/device/assembly/mousetrap = 20
 	)
 
-	min_duration = 40
-	max_duration = 60
+	min_duration = 20
+	max_duration = 30
 
 /datum/surgery_step/generic/clamp_bleeders/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -207,8 +207,8 @@
 	/obj/item/weapon/material/kitchen/utensil/fork = 50
 	)
 
-	min_duration = 30
-	max_duration = 40
+	min_duration = 10
+	max_duration = 20
 
 /datum/surgery_step/generic/retract_skin/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -243,8 +243,8 @@
 /datum/surgery_step/generic/slitching
 	allowed_tools = list(/obj/item/weapon/needle = 100)
 
-	min_duration = 70
-	max_duration = 100
+	min_duration = 30
+	max_duration = 50
 
 /datum/surgery_step/generic/slitching/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 

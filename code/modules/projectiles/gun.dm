@@ -176,9 +176,9 @@
 		Fire(A,user,params) //Otherwise, fire normally.
 
 /obj/item/weapon/gun/attack(atom/A, mob/living/user, def_zone)
-	if (A == user && user.zone_sel.selecting == BP_MOUTH && !mouthshoot)
+	if (A == user && user.zone_sel.selecting == BP_MOUTH && !mouthshoot && user.a_intent == I_DISARM)
 		handle_suicide(user)
-	else if(user.a_intent == I_HURT) //point blank shooting
+	if(user.a_intent == I_HURT) //point blank shooting
 		Fire(A, user, pointblank=1)
 	else
 		return ..() //Pistolwhippin'

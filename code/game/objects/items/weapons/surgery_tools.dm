@@ -144,7 +144,7 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "setofplates"
 	force = 0
-	w_class = ITEM_SIZE_HUGE
+	w_class = ITEM_SIZE_NORMAL
 	throwforce = 1.0
 
 /obj/item/weapon/setofplates/attack_hand(mob/user as mob)
@@ -179,9 +179,9 @@
 	icon_state = "plate[rand(0, 4)]"
 
 /obj/item/weapon/FixOVein
-	name = "FixOVein"
+	name = "cautery"
 	icon = 'icons/obj/surgery.dmi'
-	icon_state = "fixovein"
+	icon_state = "cautery"
 	force = 0
 	throwforce = 1.0
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 3)

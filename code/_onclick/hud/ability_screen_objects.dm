@@ -13,6 +13,8 @@
 
 	var/mob/my_mob = null // The mob that possesses this hud object.
 
+	invisibility = 101
+
 /obj/screen/movable/ability_master/New(newloc,owner)
 	if(owner)
 		my_mob = owner

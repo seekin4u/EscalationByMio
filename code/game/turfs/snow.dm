@@ -2,7 +2,7 @@
 
 /turf/snow
 	name = "snow"
-	dynamic_lighting = 1
+	dynamic_lighting = 0
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snow0"
 	oxygen = MOLES_O2STANDARD * 1.15
@@ -11,8 +11,7 @@
 	var/list/crossed_dirs = list()
 	var/hasGround = 0
 
-/turf/snow/New()
-	..()
+/turf/snow/initialize()
 	icon_state = "snow[rand(0, 5)]"
 
 /turf/snow/Entered(atom/A)
@@ -39,32 +38,6 @@
 			crossed_dirs.Cut()
 			update_icon()
 			// snow-obj in future
-
-	/*
-	if (istype(C, /obj/item/stack/rods))
-		var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-		if(L)
-			return
-		var/obj/item/stack/rods/R = C
-		if (R.use(1))
-			to_chat(user, "<span class='notice'>Constructing support lattice ...</span>")
-			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-			ReplaceWithLattice()
-		return
-
-	if (istype(C, /obj/item/stack/tile/floor))
-		var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-		if(L)
-			var/obj/item/stack/tile/floor/S = C
-			if (S.get_amount() < 1)
-				return
-			qdel(L)
-			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-			S.use(1)
-			return
-		else
-			to_chat(user, "<span class='warning'>The plating is going to need some support.</span>")
-	*/
 	return
 
 /turf/snow/update_icon()
@@ -85,6 +58,27 @@
 /turf/snow/gravsnow
 	name = "frozen ground"
 	icon_state = "ground_frozen"
+
+/turf/snow/gravsnow/truck//basetype
+	icon = 'icons/escalation/turf/road.dmi'
+	icon_state = "1"
+
+/turf/snow/gravsnow/truck/initialize()
+	return
+
+/turf/snow/gravsnow/truck/snow
+	name = "snow"
+	icon_state = "snow"
+
+/turf/snow/gravsnow/truck/road
+	name = "road"
+	icon_state = "road"
+
+/turf/snow/gravsnow/truck/road/snow_overlay
+
+/turf/snow/gravsnow/truck/road/snow_overlay/New()
+	..()
+	overlays += image(icon = src.icon, icon_state = "snow_overlay", layer = src.layer + 0.1)
 
 /turf/ground/plating
 	name = "snowy plating"

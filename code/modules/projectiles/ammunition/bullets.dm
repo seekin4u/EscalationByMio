@@ -300,3 +300,10 @@
 	projectile_type = /obj/item/projectile/bullet/gyro/ags30x29mm
 	icon_state = "vog17-casing"
 	spent_icon = "vog17-casing-spent"
+
+/obj/item/ammo_casing/mk19_40x53mm
+	desc = "A 40x53mm MK 19 casing"
+	caliber = "40x53mm"
+	projectile_type = /obj/item/projectile/bullet/gyro/mk19_40x53mm
+	icon_state = "vog17-casing" ////fix
+	spent_icon = "vog17-casing-spent"	/////fix

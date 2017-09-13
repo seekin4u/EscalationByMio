@@ -1,7 +1,12 @@
 //В переездах между локациями можно выйти из урала и проебаться. Для каждой фракции своя комнатка для потерянных долбаебов
+/obj/effect/step_trigger/teleporter/random/Crossed(A as mob|obj)
+	if(isghost(A))
+		return
+	Trigger(A)
+
 /obj/effect/step_trigger/teleporter/random/trucks_ural
 	icon = 'icons/escalation/effects/effect.dmi'
-	icon_state = "random_tele_ural"
+	icon_state = "rantom_tele_ural"
 	teleport_x = 2
 	teleport_y = 2
 	teleport_z = 4

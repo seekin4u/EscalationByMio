@@ -341,8 +341,17 @@
 /obj/item/projectile/bullet/gyro/ags30x29mm
 	name = "AGS' bullet"
 	icon_state = "vog"
-	damage = 50
+	damage = 60
 	agony = 20
 	embed = 0
 	edge = 1
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
+
+/obj/item/projectile/bullet/gyro/mk19_40x53mm
+	name = "MK19' bullet"
+	icon_state = "vog" ////////fix
+	damage = 75
+	agony = 20
+	embed = 0
+	edge = 1
+	fire_sound = null//here we gonna use sound in MK and not in bullets

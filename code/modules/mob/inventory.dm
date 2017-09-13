@@ -137,6 +137,11 @@ var/list/slot_equipment_priority = list( \
 	drop_from_inventory(W)
 	return 0
 
+/mob/proc/has_empty_hand(var/both = 0)
+	if (both)
+		return src.l_hand == null && src.r_hand == null
+	return src.l_hand == null || src.r_hand == null
+
 // Removes an item from inventory and places it in the target atom.
 // If canremove or other conditions need to be checked then use unEquip instead.
 /mob/proc/drop_from_inventory(var/obj/item/W, var/atom/target = null)

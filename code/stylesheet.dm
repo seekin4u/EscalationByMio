@@ -58,6 +58,8 @@ em						{font-style: normal;font-weight: bold;}
 .supradio				{color: #5F4519;}
 .srvradio				{color: #6eaa2c;}
 
+.armyradio				{color: #ff4500;}
+.protectedarmyradio		{color: #4b0082;}
 /* Miscellaneous */
 .name					{font-weight: bold;}
 .say					{}

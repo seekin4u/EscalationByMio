@@ -293,7 +293,7 @@
 	caliber = "545x39"
 	slot_flags = SLOT_BACK | SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
-	allowed_magazines = /obj/item/ammo_magazine/c545x39m
+	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = /obj/item/ammo_magazine/c545x39m
 	one_hand_penalty = 3
 	accuracy = 2
@@ -328,10 +328,10 @@
 	item_state = "ak74gl"
 	w_class = 5
 	load_method = MAGAZINE
-	caliber = "556x45"
+	caliber = "545x39"
 	slot_flags = SLOT_BACK
 	ammo_type = /obj/item/ammo_casing/a545x39
-	allowed_magazines = /obj/item/ammo_magazine/c545x39m
+	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = /obj/item/ammo_magazine/c545x39m
 	one_hand_penalty = 3
 	accuracy = 2
@@ -364,7 +364,7 @@
 	item_state = "ak"
 	w_class = 4
 	load_method = MAGAZINE
-	caliber = "556x39"
+	caliber = "545x39"
 	slot_flags = SLOT_BACK
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = /obj/item/ammo_magazine/c545x39m
@@ -393,7 +393,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
-	desc = "That's the standard-issue weapon of the USMC."
+	desc = "Standard issue rifle of the USMC."
 	icon_state = "m16a2"
 	item_state = "m16"
 	w_class = 5
@@ -471,7 +471,7 @@
 	ammo_type = /obj/item/ammo_casing/a545x39
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/c545x39b
-	allowed_magazines = /obj/item/ammo_magazine/c545x39b
+	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	one_hand_penalty = 6
 	accuracy = 3
 	wielded_item_state = "rpk-wielded"
@@ -678,8 +678,8 @@
 
 
 /obj/item/weapon/gun/projectile/automatic/m14/scoped
-	name = "M14"
-	desc = "That's the scoped M14, an marksman rifle used by USMC."
+	name = "M21"
+	desc = "That's the M21, an marksman rifle used by USMC."
 	icon_state = "m14scoped"
 	item_state = "m14"
 	accuracy = 5
@@ -708,7 +708,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a1
 	name = "M16A1"
-	desc = "M16A1 is an outdated USMC automatic rifle"
+	desc = "A standard-issued USMC automatic rifle"
 	icon_state = "m16a1"
 	item_state = "m16"
 	w_class = 5
@@ -777,7 +777,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/svd
 	name = "SVD"
-	desc = "That's the SVD, a standard-issue sniper rifle used by SA."
+	desc = "That's the SVD, a standard-issue sniper rifle used by SA and CSLA."
 	icon_state = "svd"
 	item_state = "m14"
 	slot_flags = SLOT_BACK
@@ -910,7 +910,7 @@
 		icon_state = "g3sg1-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58
-	name = "Sa vz.58"
+	name = "Vz.58"
 	desc = "The Sa vz.58 is a standard-issued automatic rifle of the CSLA."
 	icon_state = "vz58"
 	item_state = "vz58"
@@ -945,8 +945,8 @@
 		icon_state = "vz58-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl
-	name = "Sa vz.58"
-	desc = "This Sa vz.58 modified with grenade laucher."
+	name = "Vz.58 with Vg-70"
+	desc = "This Vz.58 modified with 26.5 mm Vg-70 underbarrel grenade laucher."
 	icon_state = "vz58gl"
 	item_state = "vz58gl"
 	w_class = 5
