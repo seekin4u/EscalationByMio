@@ -35,21 +35,20 @@
 "aI" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "aJ" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "aK" = (/obj/structure/window/fence{dir = 1},/turf/snow/gravsnow,/area/coldwar/sa/sa_med)
-"aL" = (/turf/snow/gravsnow,/area/space)
-"aM" = (/turf/simulated/wall/concrete,/area/coldwar/sa/sa_med)
-"aN" = (/obj/structure/table/steel,/turf/simulated/floor/fixed,/area/coldwar/sa/sa_med)
-"aO" = (/turf/simulated/floor/fixed,/area/coldwar/sa/sa_med)
-"aP" = (/obj/machinery/door/unpowered/simple/iron,/turf/simulated/floor/fixed,/area/coldwar/sa/sa_med)
-"aQ" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"aR" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"aS" = (/obj/machinery/optable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"aT" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"aU" = (/obj/structure/table/steel,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"aV" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"aW" = (/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
-"aX" = (/obj/structure/sink/kitchen,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
-"aY" = (/obj/structure/toilet{dir = 1},/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
-"aZ" = (/obj/machinery/shower,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"aL" = (/turf/simulated/wall/concrete,/area/coldwar/sa/sa_med)
+"aM" = (/obj/structure/table/steel,/turf/simulated/floor/fixed,/area/coldwar/sa/sa_med)
+"aN" = (/turf/simulated/floor/fixed,/area/coldwar/sa/sa_med)
+"aO" = (/obj/machinery/door/unpowered/simple/iron,/turf/simulated/floor/fixed,/area/coldwar/sa/sa_med)
+"aP" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"aQ" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"aR" = (/obj/machinery/optable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"aS" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"aT" = (/obj/structure/table/steel,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"aU" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"aV" = (/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"aW" = (/obj/structure/sink/kitchen,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"aX" = (/obj/structure/toilet{dir = 1},/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"aY" = (/obj/machinery/shower,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -93,22 +92,22 @@ aaaeaAaFaFaFaFaAaFaFaFaFaFaFaFaFaAaEaEaEacacacababababababababababababababababab
 aaaeaAaFaFaFaFaAaGaIaIaGaGaGaGaFaJaEaEaEacacacababababababababababababababababababababababacacacacabaaafahahahahafahahahafahahahafaaaaaaaaaa
 aaaeaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaEaEaEacacacababababababababababababababababababababababacacacacabaaafahahahahafahahahafahahahafaaaaaaaaaa
 aaawaKaKaKaKaKaKaKaKaKaKaKaKaKaKaKaKaKaEacacacababababababababababababababababababababababacacacacabaaafahasahahahahahahahahahahafaaaaaaaaaa
-aaaLaMaMaMaMaMaMaMaMaMaMaMaMaMaMaMaCaCaEacacacababababababababababababababababababababababacacacacabaaafatauahahafaoauaqafahahahafaaaaaaaaaa
-aaaLaMaNaNaNaNaNaMaOaOaOaOaOaOaOaPaCaCaEacacacababababababababababababababababababababababacacacacabaaafahavahahafaoauaqafahahahafaaaaaaaaaa
-aaaaaMaNaOaOaOaOaMaOaOaOaOaOaOaOaPaCaCaEacacacababababababababababababababababababababababacacacacabaaafafafafafafafafafafafafafafaaaaaaaaaa
-aaaaaMaNaOaOaOaOaOaOaOaOaOaOaOaOaPaCaCaEacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaMaMaMaMaMaMaMaMaMaMaMaMaMaMaMaCaCaEacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaCaCaEacacacababababababababababababababababababababababacacacacabaaafatauahahafaoauaqafahahahafaaaaaaaaaa
+aaaaaLaMaMaMaMaMaLaNaNaNaNaNaNaNaOaCaCaEacacacababababababababababababababababababababababacacacacabaaafahavahahafaoauaqafahahahafaaaaaaaaaa
+aaaaaLaMaNaNaNaNaLaNaNaNaNaNaNaNaOaCaCaEacacacababababababababababababababababababababababacacacacabaaafafafafafafafafafafafafafafaaaaaaaaaa
+aaaaaLaMaNaNaNaNaNaNaNaNaNaNaNaNaOaCaCaEacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaCaCaEacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaEacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaAaAaAaAaAaAaAaAaAaAaAaAaAaAaCaCaCaEacacacababababababababababababababababababababababacacacacabaaafafafafafafafafafafafafafafaaaaaaaaaa
-aaaaaAaQaFaQaQaAaQaFaQaQaAaRaRaAaCaCaCaEacacacababababababababababababababababababababababacacacacabaaafahahafahahahahahafalamamafaaaaaaaaaa
-aaaaaAaSaFaFaFaAaSaFaFaFaAaFaFaAaCaCaCaEacacacababababababababababababababababababababababacacacacababafahahahahahahahahafamamamafaaaaaaaaaa
+aaaaaAaPaFaPaPaAaPaFaPaPaAaQaQaAaCaCaCaEacacacababababababababababababababababababababababacacacacabaaafahahafahahahahahafalamamafaaaaaaaaaa
+aaaaaAaRaFaFaFaAaRaFaFaFaAaFaFaAaCaCaCaEacacacababababababababababababababababababababababacacacacababafahahahahahahahahafamamamafaaaaaaaaaa
 aaaaaAaAaAaAaJaAaAaAaAaJaAaAaJaAaEaEaEaEacacacababababababababababababababababababababababacacacacabaaafafahafafafafafafafafafahafaaaaaaaaaa
 aaaaaAaFaFaFaFaFaFaFaFaFaFaFaFaJaEaEaEaEacacacababababababababababababababababababababababacacacacabaaafahahahahafahahahafahahahafaaaaaaaaaa
 aaaaaAaAaAaAaJaAaAaAaAaJaAaFaFaAaEaEaEaEacacacababababababababababababababababababababababacacacacabaaafahahahahafahahahafahahahafaaaaaaaaaa
-aaaaaAaIaFaFaFaAaTaUaVaFaAaAaAaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafahasahahahahahahahahahahafaaaaaaaaaa
-aaaaaAaIaFaFaGaAaTaUaVaFaJaWaXaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafatauahahafaoauaqafahahahafaaaaaaaaaa
-aaaaaAaIaFaFaGaAaFaFaFaFaAaWaWaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafahavahahafaoauaqafahahahafaaaaaaaaaa
-aaaaaAaFaIaIaFaAaQaQaRaRaAaYaZaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafafafafafafafafafafafafafafaaaaaaaaaa
+aaaaaAaIaFaFaFaAaSaTaUaFaAaAaAaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafahasahahahahahahahahahahafaaaaaaaaaa
+aaaaaAaIaFaFaGaAaSaTaUaFaJaVaWaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafatauahahafaoauaqafahahahafaaaaaaaaaa
+aaaaaAaIaFaFaGaAaFaFaFaFaAaVaVaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafahavahahafaoauaqafahahahafaaaaaaaaaa
+aaaaaAaFaIaIaFaAaPaPaQaQaAaXaYaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaafafafafafafafafafafafafafafaaaaaaaaaa
 aaaaaAaAaAaAaAaAaAaAaAaAaAaAaAaAaaaaaaabacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacababababababababababababababababababababababacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
