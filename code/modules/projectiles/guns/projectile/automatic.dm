@@ -285,7 +285,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/ak74
 	name = "AK-74"
-	desc = "The AK-74 is a standard-issued automatic rifle of the Soviet infantry."
+	desc = "AK-74. Soviet standard issue combat rifle."
 	icon_state = "ak74"
 	item_state = "ak74"
 	w_class = 5
@@ -323,7 +323,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl
 	name = "AK-74"
-	desc = "This AK modified with GP-25, an underbarrel grenade launcher."
+	desc = "Standard issue AK-74 with GP-25 grenade launcher."
 	icon_state = "ak74gl"
 	item_state = "ak74gl"
 	w_class = 5
@@ -359,7 +359,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
-	desc = "That's the standard-issue weapon of the Soviet paratroopers."
+	desc = "A lighter variant of the AK-74. Standard issue to Soviet paratroopers."
 	icon_state = "aks74"
 	item_state = "ak"
 	w_class = 4
@@ -426,7 +426,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/coltmodel733
 	name = "Colt Model 733"
-	desc = "That's the standard-issue weapon of the USMC."
+	desc = "Standard issue carbine of the USMC."
 	icon_state = "coltmodel733"
 	item_state = "m16"
 	w_class = 4
@@ -460,7 +460,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/rpk74
 	name = "RPK-74"
-	desc = "The RPK-74 is a standart light machine gun of Soviet army."
+	desc = "RPK-74. Standard issue Soviet squad support weapon."
 	icon_state = "rpk"
 	item_state = "rpk"
 	slot_flags = SLOT_BACK
@@ -496,7 +496,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/pkm
 	name = "PKM"
-	desc = "That's the standard-issue HMG used by Soviet Army."
+	desc = "PKM. Standard Soviet general purpose machine gun."
 	icon_state = "pkm"
 	item_state = "lmg"
 	w_class = 5
@@ -568,8 +568,8 @@
 
 
 /obj/item/weapon/gun/projectile/automatic/m60
-	name = "M60E2"
-	desc = "That's the standard-issue HMG used by USMC."
+	name = "M60E1"
+	desc = "M60, lovingly dubbed 'the pig.' Standard issue LMG of the USMC."
 	icon_state = "m60"
 	item_state = "lmg"
 	w_class = 5
@@ -642,7 +642,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m14
 	name = "M14"
-	desc = "That's the M14, an outdated service rifle used by USMC."
+	desc = "M14 Rifle, formerly standard issue battle rifle of the USMC."
 	icon_state = "m14"
 	item_state = "m14"
 	slot_flags = SLOT_BACK
@@ -679,7 +679,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m14/scoped
 	name = "M21"
-	desc = "That's the M21, an marksman rifle used by USMC."
+	desc = "M21 Marksman rifle. Modification of the M14 battle rifle."
 	icon_state = "m14scoped"
 	item_state = "m14"
 	accuracy = 5
@@ -706,7 +706,7 @@
 
 	toggle_scope(usr, 2.0)
 
-/obj/item/weapon/gun/projectile/automatic/m16a1
+/obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
 	name = "M16A1"
 	desc = "A standard-issued USMC automatic rifle"
 	icon_state = "m16a1"
@@ -740,9 +740,9 @@
 	else
 		icon_state = "m16a1-empty"
 
-/obj/item/weapon/gun/projectile/automatic/m16a1gl
-	name = "M16A1"
-	desc = "This M16A1 modified with M203 grenade launcher."
+/obj/item/weapon/gun/projectile/automatic/m16a1gl // Change this later
+	name = "M16A2"
+	desc = "An M16A2 with M203 grenade launcher."
 	icon_state = "m16a1gl"
 	item_state = "m16gl"
 	w_class = 5
@@ -812,7 +812,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/g3a3
 	name = "G3A3"
-	desc = "The G3A3 is a standart rifle of Bundeswehr forces."
+	desc = "G3A3 Battle Rifle. Standard issue to Bundeswehr riflemen."
 	icon_state = "g3a3"
 	item_state = "g3a3"
 	w_class = 5
@@ -845,7 +845,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/g3tgs
 	name = "G3TGS"
-	desc = "The G3TGS is a modification of G3 with HK79 grenade laucher."
+	desc = "G3A3 with an HK79 underbarrel grenade launcher."
 	icon_state = "g3tgs"
 	item_state = "g3tgs"
 	w_class = 5
@@ -878,7 +878,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/g3sg1
 	name = "G3SG1"
-	desc = "The G3SG1 is a modification of G3 with magnified scope."
+	desc = "Marksman variant of the G3A3."
 	icon_state = "g3sg1"
 	item_state = "g3sg1"
 	w_class = 5
