@@ -238,3 +238,11 @@
 
 /obj/machinery/door/unpowered/simple/cult/New(var/newloc,var/material_name,var/complexity)
 	..(newloc, "cult", complexity)
+
+// /obj/structure/door/unpowered/simple/attack_hand(var/mob/living/carbon/human/human)
+//   if (human.a_intent == I_HURT)
+// playsound(src, "sound/doors/knockknock[rand(1,6)].ogg", 70)  //knocks on the door
+// else if (human.a_intent == I_HELP)
+//  playsound(src, "sound/doors/wlocked[pick(1,2)].ogg", 70)  // tries to open locked door
+// else
+  // other
