@@ -167,6 +167,20 @@
 	throwforce = 7.0
 	w_class = ITEM_SIZE_SMALL
 
+/obj/item/weapon/saperka
+	name = "Spade"
+	desc = "A small tool for digging, moving dirt and close combat."
+	icon_state = "spade" //change
+	slot_flags = SLOT_ID
+	force = 15.0
+	throwforce = 10.0
+	item_state = "spade" //change
+	w_class = ITEM_SIZE_SMALL
+	matter = list(DEFAULT_WALL_MATERIAL = 50)
+	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
+	sharp = 1
+	edge = 1
+
 
 /**********************Mining car (Crate like thing, not the rail car)**************************/
 
