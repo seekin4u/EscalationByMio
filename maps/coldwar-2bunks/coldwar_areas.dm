@@ -4,7 +4,7 @@
 	icon_state = "hallF"
 	requires_power = 0
 	lighting_use_dynamic = 0//Say NO to lighting! SNEAKY BITCH = BAY'S LIGHT
-	base_turf = /turf/snow/dirt
+	base_turf = /turf/simulated/floor/dirt
 
 /area/coldwar/outside
 	name = "outside"
