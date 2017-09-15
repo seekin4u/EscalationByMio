@@ -298,6 +298,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
+	zoom_ammount = 15
 	wielded_item_state = "ak74-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -320,6 +321,15 @@
 		icon_state = "ak74-empty"
 		item_state = "ak74-empty"
 
+/obj/item/weapon/gun/projectile/automatic/ak74/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr, 10))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl
 	name = "AK-74"

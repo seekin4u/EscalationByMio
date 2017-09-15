@@ -81,7 +81,7 @@
 	set hidden = 1
 	if(istype(mob, /mob/living/carbon))
 		mob:swap_hand()
-	if(istype(mob,/mob/living/silicon/robot))
+	if(istype(mob, /mob/living/silicon/robot))
 		var/mob/living/silicon/robot/R = mob
 		R.cycle_modules()
 	return
@@ -184,7 +184,8 @@
 	if(!mob)
 		return // Moved here to avoid nullrefs below
 
-	if(mob.control_object)	Move_object(direct)
+	if(mob.control_object)
+		Move_object(direct)
 
 	if(mob.incorporeal_move && isobserver(mob))
 		Process_Incorpmove(direct)
@@ -222,24 +223,9 @@
 		if(mob.client)
 			if(mob.client.view != world.view) // If mob moves while zoomed in with device, unzoom them.
 				for(var/obj/item/item in mob.contents)
-					if(item.zoom)
+					if(item.zoom)//item's zoom
 						item.zoom(mob)
 						break
-				/*
-				if(locate(/obj/item/weapon/gun/energy/sniperrifle, mob.contents))		// If mob moves while zoomed in with sniper rifle, unzoom them.
-					var/obj/item/weapon/gun/energy/sniperrifle/s = locate() in mob
-					if(s.zoom)
-						s.zoom()
-				if(locate(/obj/item/device/binoculars, mob.contents))		// If mob moves while zoomed in with binoculars, unzoom them.
-					var/obj/item/device/binoculars/b = locate() in mob
-					if(b.zoom)
-						b.zoom()
-				*/
-
-
-
-	//if(istype(mob.loc, /turf/space) || (mob.flags & NOGRAV))
-	//	if(!mob.Allow_Spacemove(0))	return 0
 
 	if(!mob.lastarea)
 		mob.lastarea = get_area(mob.loc)
@@ -318,9 +304,11 @@
 				else if(mob.confused)
 					switch(mob.m_intent)
 						if("run")
-							if(prob(50))	direct = turn(direct, pick(90, -90))
+							if(prob(50))
+								direct = turn(direct, pick(90, -90))
 						if("walk")
-							if(prob(25))	direct = turn(direct, pick(90, -90))
+							if(prob(25))
+								direct = turn(direct, pick(90, -90))
 				move_delay += 2
 				return mob.buckled.relaymove(mob,direct)
 
@@ -363,11 +351,11 @@
 			if(mob.confused)
 				switch(mob.m_intent)
 					if("run")
-						if(prob(75))
+						if(prob(50))//more chances to run away if confused
 							direct = turn(direct, pick(90, -90))
 							n = get_step(mob, direct)
 					if("walk")
-						if(prob(25))
+						if(prob(16))//same
 							direct = turn(direct, pick(90, -90))
 							n = get_step(mob, direct)
 			. = mob.SelfMove(n, direct)
@@ -384,6 +372,7 @@
 		return .
 
 	return
+
 
 /mob/proc/SelfMove(turf/n, direct)
 	return Move(n, direct)

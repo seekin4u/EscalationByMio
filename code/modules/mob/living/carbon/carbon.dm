@@ -140,6 +140,10 @@
 	return
 
 /mob/living/carbon/swap_hand()
+	var/obj/item/weapon/gun/G = get_active_hand()
+	if(G)
+		if(G.zoom)
+			return
 	src.hand = !( src.hand )
 	if(hud_used.l_hand_hud_object && hud_used.r_hand_hud_object)
 		if(hand)	//This being 1 means the left hand is in use
@@ -269,11 +273,17 @@
 	src.throw_mode_off()
 	if(usr.stat || !target)
 		return
-	if(target.type == /obj/screen) return
+	if(target.type == /obj/screen)
+		return
 
 	var/atom/movable/item = src.get_active_hand()
 
-	if(!item) return
+	if(!item)
+		return
+	if(istype(item, /obj/item))
+		var/obj/item/I = item
+		if(I.zoom)
+			return
 
 	var/throw_range = item.throw_range
 	if (istype(item, /obj/item/weapon/grab))
@@ -432,3 +442,17 @@
 
 /mob/living/carbon/proc/get_adjusted_metabolism(metabolism)
 	return metabolism
+
+//know this is shit but whateva, we have to fix user's vision somehow
+/mob/proc/reset_vision(mob/user as mob)
+	if(user.pixel_x | user.pixel_y)
+		user.client.pixel_x = 0
+		user.client.pixel_y = 0
+		user.client.view = world.view
+		if(isghost(user))
+			return
+		for(var/obj/item/weapon/W in user.contents)
+			if(W.zoom)//weapons re
+				var/obj/item/weapon/Zoomed = locate(W) in user.contents
+				if(Zoomed)
+					Zoomed.zoom(src, FALSE)

@@ -2,6 +2,8 @@
 /obj/item/weapon/gun/dropped(var/mob/living/user)
 	if(istype(user))
 		user.stop_aiming(src)
+	if(zoom)
+		src.zoom(user, FALSE)//may be source of problem, as do_after in gun.dm already doind unzoom
 	return ..()
 
 /obj/item/weapon/gun/equipped(var/mob/living/user, var/slot)
