@@ -13,6 +13,57 @@ meteor_act
 	if(!has_organ(def_zone))
 		return PROJECTILE_FORCE_MISS //if they don't have the organ in question then the projectile just passes by.
 
+	if(P.impact_force)
+		for(var/i=1, i<=P.impact_force, i++)
+			step_to(src, get_step(loc, P.dir))
+			if(istype(src.loc, /turf/simulated))
+				src.loc.add_blood(src)
+
+	var/obj/item/organ/external/affected = get_organ(def_zone)
+	if(affected)
+		switch (def_zone)
+			if(BP_HEAD)
+				P.damage *= 1.5
+			if(BP_L_HAND, BP_R_HAND)
+				P.damage *= 0.55
+				P.agony *= 1.5
+				var/c_hand
+				if (def_zone == BP_L_HAND)
+					c_hand = l_hand
+				else
+					c_hand = r_hand
+				if(c_hand && (P.agony > 10))
+					if(prob(65))
+						drop_from_inventory(c_hand)
+						emote("me", 1, "dropped all they were holding in their [affected.name]!")
+			if(BP_L_ARM, BP_R_ARM)
+				P.damage *= 0.75
+				P.agony *= 1.8
+				var/c_hand
+				if (def_zone == BP_L_HAND)
+					c_hand = l_hand
+				else
+					c_hand = r_hand
+				if(c_hand && (P.agony > 10))
+					if(prob(50))
+						drop_from_inventory(c_hand)
+						emote("me", 1, "drops what they were holding in their [affected.name]!")
+			if(BP_GROIN)
+				P.agony *= 1.5
+				P.damage *= 0.9
+			if(BP_L_FOOT, BP_R_FOOT)
+				P.damage *= 0.55
+				P.agony *= 3.0
+				if(prob(40))
+					AdjustWeakened(rand(2, 6))
+					emote("me", 1, "screams in pain and falls on the ground!")
+			if(BP_L_LEG, BP_R_LEG)
+				P.damage *= 0.75
+				P.agony *= 2.0
+				if(prob(20))
+					AdjustWeakened(rand(2, 8))
+					emote("me", 1, "screams in pain and falls on the ground!")
+
 	//Shields
 	var/shield_check = check_shields(P.damage, P, null, def_zone, "the [P.name]")
 	if(shield_check)
