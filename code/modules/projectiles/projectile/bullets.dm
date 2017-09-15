@@ -370,8 +370,25 @@
 /obj/item/projectile/bullet/mk19_40x53mm
 	name = "MK19' bullet"
 	icon_state = "vog" ////////fix
-	damage = 75
-	agony = 20
-	embed = 0
-	edge = 1
-	fire_sound = null//here we gonna use sound in MK and not in bullets
+	damage = 110
+	step_delay = 1.2
+	impact_force = 1
+	stopping_power = 5
+	kill_count = 30
+
+/obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
+	explosion(target, -1,3,4,5)//a little bit explosive that 30x29
+	..()
+
+/obj/item/projectile/bullet/mk19_40x53mm/pow
+	damage = 180
+	armor_penetration = 100
+	step_delay = 1.2
+	impact_force = 1
+	penetrating = 5
+	stopping_power = 1
+	kill_count = 35
+
+/obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
+	explosion(target, -1,0,2,5)
+	..()
