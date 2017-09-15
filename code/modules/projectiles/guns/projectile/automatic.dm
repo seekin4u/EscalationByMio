@@ -291,7 +291,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "545x39"
-	slot_flags = SLOT_BACK | SLOT_BACK_GUN
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = /obj/item/ammo_magazine/c545x39m
@@ -339,7 +339,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "545x39"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = /obj/item/ammo_magazine/c545x39m
@@ -375,7 +375,7 @@
 	w_class = 4
 	load_method = MAGAZINE
 	caliber = "545x39"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = /obj/item/ammo_magazine/c545x39m
 	magazine_type = /obj/item/ammo_magazine/c545x39m
@@ -409,7 +409,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "556x45"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45m
 	magazine_type = /obj/item/ammo_magazine/c556x45m
@@ -442,7 +442,7 @@
 	w_class = 4
 	load_method = MAGAZINE
 	caliber = "556x45"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	magazine_type = /obj/item/ammo_magazine/c556x45m
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45m
@@ -473,7 +473,7 @@
 	desc = "RPK-74. Standard issue Soviet squad support weapon."
 	icon_state = "rpk"
 	item_state = "rpk"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	w_class = 5
 	force = 10
 	max_shells = 45
@@ -511,7 +511,7 @@
 	item_state = "lmg"
 	w_class = 5
 	force = 15
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	max_shells = 200
 	caliber = "762x54"
 	ammo_type = /obj/item/ammo_casing/a762x54
@@ -584,7 +584,7 @@
 	item_state = "lmg"
 	w_class = 5
 	force = 15
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	max_shells = 200
 	caliber = "762x51"
 	ammo_type = /obj/item/ammo_casing/a762x51
@@ -650,12 +650,85 @@
 	else
 		icon_state = "m60-empty"
 
+/obj/item/weapon/gun/projectile/automatic/mg3
+	name = "M60E1"
+	desc = "MG3, a popular son of a famous MG-42. Main machinegun of the Bundeswehr."
+	icon_state = "MG3"
+	item_state = "lmg"
+	w_class = 5
+	force = 15
+	slot_flags = SLOT_BACK_GUN
+	max_shells = 100
+	caliber = "762x51"
+	ammo_type = /obj/item/ammo_casing/a762x51
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/c762x51b
+	allowed_magazines = /obj/item/ammo_magazine/c762x51b
+	one_hand_penalty = 9
+	wielded_item_state = "lmg-wielded"
+	fire_sound = 'sound/weapons/gunshot/m60.ogg'
+	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
+	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
+	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
+
+	firemodes = list(
+		list(mode_name="short bursts",	burst=6, move_delay=9, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4)),
+		list(mode_name="long bursts",	burst=12, move_delay=13, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.2, 1.2, 1.2, 1.2, 1.4)),
+		)
+
+	var/cover_open = 0
+
+
+/obj/item/weapon/gun/projectile/automatic/mg3/special_check(mob/user)
+	if(cover_open)
+		user << "<span class='warning'>[src]'s cover is open! Close it before firing!</span>"
+		return 0
+	return ..()
+
+/obj/item/weapon/gun/projectile/automatic/mg3/proc/toggle_cover(mob/user)
+	cover_open = !cover_open
+	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
+	update_icon()
+
+/obj/item/weapon/gun/projectile/automatic/mg3/attack_self(mob/user as mob)
+	if(cover_open)
+		toggle_cover(user) //close the cover
+		playsound(user, 'sound/weapons/gunporn/m249_close.ogg', 100, 1)
+	else
+		return ..() //once closed, behave like normal
+
+/obj/item/weapon/gun/projectile/automatic/mg3/attack_hand(mob/user as mob)
+	if(!cover_open && user.get_inactive_hand() == src)
+		toggle_cover(user) //open the cover
+		playsound(user, 'sound/weapons/gunporn/m249_open.ogg', 100, 1)
+	else
+		return ..() //once open, behave like normal
+
+/obj/item/weapon/gun/projectile/automatic/mg3/load_ammo(var/obj/item/A, mob/user)
+	if(!cover_open)
+		user << "<span class='warning'>You need to open the cover to load that into [src].</span>"
+		return
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/mg3/unload_ammo(mob/user, var/allow_dump=1)
+	if(!cover_open)
+		user << "<span class='warning'>You need to open the cover to unload [src].</span>"
+		return
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/mg3/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "MG3"
+	else
+		icon_state = "MG3_Empty"
+
 /obj/item/weapon/gun/projectile/automatic/m14
 	name = "M14"
 	desc = "M14 Rifle, formerly standard issue battle rifle of the USMC."
 	icon_state = "m14"
 	item_state = "m14"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	w_class = 5
 	force = 10
 	max_shells = 20
@@ -724,7 +797,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "556x45"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45s
 	magazine_type = /obj/item/ammo_magazine/c556x45s
@@ -751,14 +824,14 @@
 		icon_state = "m16a1-empty"
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl // Change this later
-	name = "M16A2"
-	desc = "An M16A2 with M203 grenade launcher."
+	name = "M16A1"
+	desc = "An M16A1 with M203 grenade launcher."
 	icon_state = "m16a1gl"
 	item_state = "m16gl"
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "556x45"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45s
 	magazine_type = /obj/item/ammo_magazine/c556x45s
@@ -790,7 +863,7 @@
 	desc = "That's the SVD, a standard-issue sniper rifle used by SA and CSLA."
 	icon_state = "svd"
 	item_state = "m14"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	w_class = 5
 	force = 10
 	max_shells = 10
@@ -828,7 +901,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "762x51"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x51
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
 	magazine_type = /obj/item/ammo_magazine/c762x51s
@@ -861,7 +934,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "762x51"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x51
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
 	magazine_type = /obj/item/ammo_magazine/c762x51s
@@ -894,7 +967,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "762x51"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x51
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
 	magazine_type = /obj/item/ammo_magazine/c762x51s
@@ -927,7 +1000,7 @@
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "762x39"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x39
 	allowed_magazines = /obj/item/ammo_magazine/c762x39m
 	magazine_type = /obj/item/ammo_magazine/c762x39m
@@ -955,14 +1028,14 @@
 		icon_state = "vz58-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl
-	name = "Vz.58 with Vg-70"
-	desc = "This Vz.58 modified with 26.5 mm Vg-70 underbarrel grenade laucher."
+	name = "Vz.58 with GP-25"
+	desc = "This Vz.58 modified with soviet 30 mm GP-25 underbarrel grenade laucher."
 	icon_state = "vz58gl"
 	item_state = "vz58gl"
 	w_class = 5
 	load_method = MAGAZINE
 	caliber = "762x39"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x39
 	allowed_magazines = /obj/item/ammo_magazine/c762x39m
 	magazine_type = /obj/item/ammo_magazine/c762x39m

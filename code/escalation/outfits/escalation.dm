@@ -9,7 +9,7 @@
 /decl/hierarchy/outfit/escalation/nato/usmc/lieu
 	name = "USMC Leader"
 
-	l_hand = /obj/item/device/megaphone
+	r_hand = /obj/item/weapon/gun/projectile/colt911
 
 	id_pda_assignment = "Lieutenant"
 
@@ -21,7 +21,7 @@
 /decl/hierarchy/outfit/escalation/nato/bundes/platoonleader
 	name = "Bundeswehr Leader"
 
-	l_hand = /obj/item/device/megaphone //Why the hell not
+	r_hand = /obj/item/weapon/gun/projectile/walther
 
 	id_pda_assignment = "Zugfuhrer"
 
@@ -35,9 +35,14 @@
 /decl/hierarchy/outfit/escalation/warpac/cccp/leader
 	name = "Soviet Leader"
 	uniform = /obj/item/clothing/under/escalation/soviet_officer
-	l_hand = /obj/item/device/megaphone //Why the hell not
+	r_hand = /obj/item/weapon/gun/projectile/makarov
 
 	id_pda_assignment = "Leytenant"
+
+/decl/hierarchy/outfit/escalation/warpac/cccp/squadleader
+	name = "Soviet Squad Leader"
+	uniform = /obj/item/clothing/under/escalation/soviet_officer
+	r_hand = /obj/item/weapon/gun/projectile/makarov
 
 /decl/hierarchy/outfit/escalation/warpac/csla
 	uniform = /obj/item/clothing/under/escalation/czech
@@ -48,6 +53,6 @@
 
 	uniform = /obj/item/clothing/under/escalation/czech_officer
 
-	l_hand = /obj/item/device/megaphone //Why the hell not
+	r_hand = /obj/item/weapon/gun/projectile/cz82
 
 	id_pda_assignment = "Poruchik"
