@@ -455,4 +455,4 @@
 			if(W.zoom)//weapons re
 				var/obj/item/weapon/Zoomed = locate(W) in user.contents
 				if(Zoomed)
-					Zoomed.zoom(src, FALSE)
+					Zoomed.zoom(user, FALSE)
