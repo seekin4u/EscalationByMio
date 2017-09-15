@@ -344,7 +344,6 @@
 	damage = 100
 	step_delay = 1.2
 	impact_force = 1
-	stopping_power = 5
 	kill_count = 30
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
@@ -358,7 +357,6 @@
 	armor_penetration = 100
 	step_delay = 1.2
 	penetrating = 0
-	stopping_power = 6
 	kill_count = 35
 
 /obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
@@ -373,7 +371,6 @@
 	damage = 110
 	step_delay = 1.2
 	impact_force = 1
-	stopping_power = 5
 	kill_count = 30
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
@@ -386,7 +383,6 @@
 	step_delay = 1.2
 	impact_force = 1
 	penetrating = 5
-	stopping_power = 1
 	kill_count = 35
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)

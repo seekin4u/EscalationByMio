@@ -303,7 +303,7 @@
 
 /obj/item/ammo_casing/ags30x29mm/shrapnel
 	desc = "VOG with something like \"shrapnel\" drawn on it"
-	projectile_type - /obj/item/projectile/bullet/ags30x29mm/pow
+	projectile_type = /obj/item/projectile/bullet/ags30x29mm/pow
 
 /obj/item/ammo_casing/mk19_40x53mm
 	desc = "A 40x53mm MK 19 casing"
