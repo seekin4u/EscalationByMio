@@ -603,9 +603,27 @@ For zooming with scope or binoculars. This is called from
 modules/mob/mob_movement.dm if you move you will be zoomed out
 modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 */
+/obj/item/proc/can_zoom(mob/living/user, var/silent = 0)
+	if(user.stat || !ishuman(user))
+		if(!silent)
+			user.visible_message("You are unable to focus through \the [src].")
+		return 0
+	if(user.client.pixel_x | user.client.pixel_y) //Keep people from looking through two scopes at once
+		if(!silent)
+			user.visible_message("You are too distracted to look through \the [src].")
+			return 0
+		if(user.get_active_hand() != src)
+			if(!silent)
+				user.visible_message(" You are too distracted to look through \the [src].")
+			return 0
+	else if(user.get_active_hand() != src)
+		if(!silent) user.visible_message("  You are too distracted to look through \the [src].")
+		return 0
+	return 1
+
 //Looking through a scope or binoculars should /not/ improve your periphereal vision. Still, increase viewsize a tiny bit so that sniping isn't as restricted to NSEW
 /obj/item/proc/zoom(mob/user, var/tileoffset = 14,var/viewsize = 9) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
-	if(!user.client)
+	if(!user || !user.client)
 		return
 
 	var/devicename
@@ -665,6 +683,60 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 			user.visible_message("[zoomdevicename ? "\The [user] looks up from [src]" : "\The [user] lowers [src]"].")
 
 	return
+
+//basically zoom to 5 tiles if not set zoom_ammount
+/obj/item/weapon/zoom(mob/living/user, forced_zoom, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
+	if(!user)
+		return
+
+	switch(forced_zoom)
+		if(FALSE)
+			zoom = FALSE
+		if(TRUE)
+			zoom = TRUE
+		else
+			zoom = !zoom
+
+	if(zoom)
+		if(!can_zoom(user) && !bypass_can_zoom)
+			zoom = FALSE
+			return
+		else
+			if(do_after(user, 5, user, 1))//delay to scope
+				var/_x = 0
+				var/_y = 0
+				switch(user.dir)
+					if(NORTH)
+						_y = zoom_ammount
+					if(EAST)
+						_x = zoom_ammount
+					if(SOUTH)
+						_y = -zoom_ammount
+					if(WEST)
+						_x = -zoom_ammount
+				if(zoom_ammount > world.view)//So we can still see the player at the edge of the screen if the zoom amount is greater than the world view
+					var/view_offset = round((zoom_ammount - world.view)/2, 1)
+					user.client.view += view_offset
+					switch(user.dir)
+						if(NORTH)
+							_y -= view_offset
+						if(EAST)
+							_x -= view_offset
+						if(SOUTH)
+							_y += view_offset
+						if(WEST)
+							_x += view_offset
+					animate(user.client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, 4, 1)
+				else // Otherwise just slide the camera
+					animate(user.client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, 4, 1)
+				user.visible_message("[user] peers through the [zoomdevicename ? "[zoomdevicename] of \the [src.name]" : "[src.name]"].")
+			else
+				zoom = FALSE
+	else //Resets everything
+		user.client.pixel_x = 0
+		user.client.pixel_y = 0
+		user.client.view = world.view
+		user.visible_message("[zoomdevicename ? "[user] looks up from \the [src.name]" : "[user] lowers \the [src.name]"].")
 
 /obj/item/proc/pwr_drain()
 	return 0 // Process Kill
