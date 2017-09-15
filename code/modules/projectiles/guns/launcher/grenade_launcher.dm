@@ -163,7 +163,7 @@
 /obj/item/weapon/gun/launcher/grenade/hk69
 	name = "HK69 grenade launcher"
 	desc = "A light grenade launcher, standard-issued by the German Army"
-	icon_state = "riotgun" //change
+	icon_state = "hk69" //change
 	item_state = "riotgun" //change
 	w_class = ITEM_SIZE_HUGE
 	force = 10
