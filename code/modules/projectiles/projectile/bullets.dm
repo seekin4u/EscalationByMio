@@ -338,16 +338,36 @@
 	damage = 40
 	armor_penetration = 15
 
-/obj/item/projectile/bullet/gyro/ags30x29mm
+/obj/item/projectile/bullet/ags30x29mm
 	name = "AGS' bullet"
 	icon_state = "vog"
-	damage = 60
-	agony = 20
-	embed = 0
-	edge = 1
+	damage = 100
+	step_delay = 1.2
+	impact_force = 1
+	stopping_power = 5
+	kill_count = 30
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
-/obj/item/projectile/bullet/gyro/mk19_40x53mm
+//proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
+/obj/item/projectile/bullet/ags30x29mm/on_impact(var/atom/target, var/blocked = 0)
+	explosion(target, -1, 1, 3, 5)
+
+/obj/item/projectile/bullet/gyro/ags30x29mm/pow
+	damage = 160
+	agony = 20
+	armor_penetration = 100
+	step_delay = 1.2
+	penetrating = 0
+	stopping_power = 6
+	kill_count = 35
+
+/obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
+	explosion(target, -1, 1, 6, 6)
+	if(prob(10))
+		target.ex_act(1)
+	..()
+
+/obj/item/projectile/bullet/mk19_40x53mm
 	name = "MK19' bullet"
 	icon_state = "vog" ////////fix
 	damage = 75
