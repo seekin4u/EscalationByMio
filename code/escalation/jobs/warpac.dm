@@ -32,6 +32,18 @@
 	amount = 1
 	also_known_languages = list(LANGUAGE_RUSSIAN = 100, LANGUAGE_ENGLISH = 25, LANGUAGE_GERMAN = 40)
 
+
+/datum/job/escalation/csla/platradio
+	title = "CZ Druzhstvo Radista"
+	name = "Druzhstvo Radista"
+	english_name = "Platoon Radio"
+	enabled = 1
+	rank_prefix = "Des." //Desiatnik
+	rank_number = 1
+	position = "team"
+	amount = 1
+	also_known_languages = list(LANGUAGE_RUSSIAN = 100, LANGUAGE_ENGLISH = 25, LANGUAGE_GERMAN = 40)
+
 /datum/job/escalation/csla/sergeant
 	title = "CZ Chetar"
 	name = "Chetar"
@@ -142,7 +154,7 @@
 	rank_number = 3
 	position = "team"
 	amount = 3
-	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
+	also_known_languages = list(LANGUAGE_RUSSIAN = 100, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
 
 
@@ -312,7 +324,7 @@
 	rank_number = 6
 	position = "team"
 	amount = 3
-	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
+	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/headmedic
 	title = "CCCP Glavvrach"

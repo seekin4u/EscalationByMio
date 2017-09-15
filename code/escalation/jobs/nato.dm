@@ -32,6 +32,17 @@
 	amount = 1
 	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 40, LANGUAGE_CZECH = 20)
 
+/datum/job/escalation/bund/platradio
+	title = "DE Zug Funker"
+	name = "Zug Funker"
+	english_name = "Platoon Radio"
+	enabled = 1
+	rank_prefix = "Oberleutnant" //1st lieutenant
+	rank_number = 1
+	position = "team"
+	amount = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 40, LANGUAGE_CZECH = 20)
+
 /datum/job/escalation/bund/squadleader
 	title = "DE Gruppenfuhrer"
 	name = "Gruppenfuhrer"
@@ -97,7 +108,7 @@
 	rank_number = 4
 	position = "team"
 	amount = 3
-	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+	also_known_languages = list(LANGUAGE_ENGLISH = 100, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/sniper
 	title = "DE Scharfschutze"
@@ -228,7 +239,7 @@
 	rank_prefix = "HM3"
 	position = "team"
 	amount = 3
-	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/marksman
 	title = "US Designated Marksman"
