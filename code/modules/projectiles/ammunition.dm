@@ -95,7 +95,7 @@
 	icon = 'icons/obj/ammo.dmi'
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	item_state = "syringe_kit"
+	item_state = null
 	matter = list(DEFAULT_WALL_MATERIAL = 500)
 	throwforce = 5
 	w_class = ITEM_SIZE_SMALL

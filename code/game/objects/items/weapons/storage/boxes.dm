@@ -429,3 +429,35 @@
 	name = "box of spare headsets"
 	desc = "A box full of headsets."
 	startswith = list(/obj/item/device/radio/headset = 7)
+
+/obj/item/weapon/storage/box/ammocan/sa
+	name = "ammo can (5.45x39mm). Ne proeby tsink!"
+	icon_state = "sa"
+	w_class = ITEM_SIZE_LARGE
+	can_hold = list(/obj/item/ammo_magazine/ammobox/box545x39)
+	startswith = list(/obj/item/ammo_magazine/ammobox/box545x39 = 20)
+	allow_quick_empty = 1
+
+/obj/item/weapon/storage/box/ammocan/csla
+	name = "ammo can (7.62x39mm)"
+	icon_state = "csla"
+	w_class = ITEM_SIZE_LARGE
+	can_hold = list(/obj/item/ammo_magazine/ammobox/box762x39)
+	startswith = list(/obj/item/ammo_magazine/ammobox/box762x39 = 20)
+	allow_quick_empty = 1
+
+/obj/item/weapon/storage/box/ammocan/usmc
+	name = "ammo can (5.56x45mm)"
+	icon_state = "usmc"
+	w_class = ITEM_SIZE_LARGE
+	can_hold = list(/obj/item/ammo_magazine/ammobox/box556x45)
+	startswith = list(/obj/item/ammo_magazine/ammobox/box556x45 = 20)
+	allow_quick_empty = 1
+
+/obj/item/weapon/storage/box/ammocan/bdw
+	name = "ammo can (7.62x51mm)"
+	icon_state = "bdw"
+	w_class = ITEM_SIZE_LARGE
+	can_hold = list(/obj/item/ammo_magazine/ammobox/box762x51)
+	startswith = list(/obj/item/ammo_magazine/ammobox/box762x51 = 20)
+	allow_quick_empty = 1
