@@ -222,16 +222,21 @@
 	name = "USMC bace"
 	icon_state = "usmc_bace"
 
-/*
-/area/coldwar/usmc/usmc_tents
-
 /area/coldwar/usmc/spawn_area/usmc_soldiers
+	name = "USMC Soldiers Barracks"
+	icon_state = "usmc"
 
 /area/coldwar/usmc/spawn_area/usmc_officers
+	name = "USMC_officers"
+	icon_state = "usmc"
 
 /area/coldwar/usmc/spawn_area/bund_soldiers
+	name = "Bund Soldiers Barracks"
+	icon_state = "usmc"
 
-/area/coldwar/usmc/spawn_area/bund_officers*/
+/area/coldwar/usmc/spawn_area/bund_officers/
+	name = "Bund Soldiers Barracks"
+	icon_state = "usmc"
 
 /area/coldwar/trucks
 	name = ""
