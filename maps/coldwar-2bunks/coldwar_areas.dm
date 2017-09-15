@@ -193,19 +193,19 @@
 	name = "SA cantine"
 	icon_state = "sa_cant"
 
-/area/coldwar/sa/spawn_area/sa_soldiers
+/area/coldwar/sa/spawn_area/soviet
 	name = "SA soldiers barracks"
 	icon_state = "sa_sold_spawn"
 
-/area/coldwar/sa/spawn_area/sa_officers
+//area/coldwar/sa/spawn_area/sa_officers
 	name = "SA officers barracks"
 	icon_state = "sa_officers_spawn"
 
-/area/coldwar/sa/spawn_area/cz_soldiers
+/area/coldwar/sa/spawn_area/czech
 	name = "CZ soldiers barracks"
 	icon_state = "cz_sold_spawn"
 
-/area/coldwar/sa/spawn_area/cz_officers
+//area/coldwar/sa/spawn_area/cz_officers
 	name = "CZ officers barracks"
 	icon_state = "cz_officers_spawn"
 
@@ -222,20 +222,20 @@
 	name = "USMC bace"
 	icon_state = "usmc_bace"
 
-/area/coldwar/usmc/spawn_area/usmc_soldiers
+/area/coldwar/usmc/spawn_area/usmc
 	name = "USMC Soldiers Barracks"
 	icon_state = "usmc"
 
-/area/coldwar/usmc/spawn_area/usmc_officers
+//area/coldwar/usmc/spawn_area/usmc_officers
 	name = "USMC_officers"
 	icon_state = "usmc"
 
-/area/coldwar/usmc/spawn_area/bund_soldiers
+/area/coldwar/usmc/spawn_area/bund
 	name = "Bund Soldiers Barracks"
 	icon_state = "usmc"
 
-/area/coldwar/usmc/spawn_area/bund_officers/
-	name = "Bund Soldiers Barracks"
+//area/coldwar/usmc/spawn_area/bund_officers/
+	name = "Bund officers Barracks"
 	icon_state = "usmc"
 
 /area/coldwar/trucks
