@@ -103,6 +103,11 @@
 /decl/hierarchy/outfit/escalation/nato/bundes/radio
 	name = "Bundeswehr Squad Radiomen"
 
+/decl/hierarchy/outfit/escalation/nato/bundes/grenadier
+	name = "Bundeswehr Grenadier"
+
+/decl/hierarchy/outfit/escalation/nato/bundes/grenadierass
+	name = "Bundeswehr Grenadier Assistant"
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -199,3 +204,30 @@
 	name = "Czechoslovak Squad Leader"
 	uniform = /obj/item/clothing/under/escalation/czech_officer
 	r_hand = /obj/item/weapon/gun/projectile/cz82
+
+/decl/hierarchy/outfit/escalation/warpac/csla/platradio
+	name = "Czechoslovak Platoon Radiomen"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/subsergeant
+	name = "Czechoslovak Squad Leader Deputy"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/gunner
+	name = "Czechoslovak MG"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/grenadier
+	name = "Czechoslovak Grenadier"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/grenass
+	name = "Czechoslovak Grenadier Assistant"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/squadradio
+	name = "Czechoslovak Radiomen"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/rifleman
+	name = "Czechoslovak Squad Riflemen"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/marksman
+	name = "Czechoslovak Marksmen"
+
+/decl/hierarchy/outfit/escalation/warpac/csla/medic
+	name = "Czechoslovak Medic"

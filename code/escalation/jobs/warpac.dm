@@ -100,17 +100,6 @@
 	amount = 1
 	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
 
-/datum/job/escalation/csla/teamradio
-	title = "CZ Cheta Radista"
-	name = "Radista"
-	english_name = "Radioman"
-	enabled = 1
-	rank_prefix = "Svob." //Svobodnik
-	rank_number = 5
-	position = "team"
-	amount = 1
-	also_known_languages = list(LANGUAGE_RUSSIAN = 40, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 25)
-
 /datum/job/escalation/csla/squadradio
 	title = "CZ Radista"
 	name = "Radista"

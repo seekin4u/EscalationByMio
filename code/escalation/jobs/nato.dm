@@ -23,7 +23,7 @@
 
 /datum/job/escalation/bund/subleader
 	title = "DE Zugfuhrer Stellvertretender"
-	name = "Zugfuhrer stellvertretender"
+	name = "Zugfuhrer Stellvertretender"
 	english_name = "Platoon Leader's Deputy"
 	enabled = 1
 	rank_prefix = "Oberleutnant" //1st lieutenant
@@ -56,14 +56,14 @@
 	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/subsergeant
-	title = "DE Gruppenfuhrer Stellvertreter"
-	name = "Gruppenfuhrer stellvertreter"
+	title = "DE Gruppenfuhrer Stellvertretender"
+	name = "Gruppenfuhrer Stellvertretender"
 	english_name = "Squad Leader Deputy"
 	enabled = 1
 	rank_prefix = "Unteroffizier"  //"sergeant"
 	rank_number = 3
 	position = "fireteam"
-	amount = 2
+	amount = 1
 	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/machinegunner
@@ -74,7 +74,29 @@
 	rank_prefix = "Oberstabsgefreiter"
 	rank_number = 4
 	position = "fireteam"
-	amount = 2
+	amount = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/bund/grenadier
+	title = "DE Grenadier"
+	name = "Grenadier"
+	english_name = "Grenadier"
+	enabled = 1
+	rank_prefix = "Stabsgefreiter"
+	rank_number = 5
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/bund/grenadierass
+	title = "DE Grenadier Assistent"
+	name = "Grenadier Assistent"
+	english_name = "Grenadier Assistant"
+	enabled = 1
+	rank_prefix = "Soldat"
+	rank_number = 6
+	position = "fireteam"
+	amount = 1
 	also_known_languages = list(LANGUAGE_ENGLISH = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/bund/grunt
