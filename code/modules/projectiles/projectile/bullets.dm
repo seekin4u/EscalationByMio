@@ -349,7 +349,7 @@
 
 //proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
 /obj/item/projectile/bullet/ags30x29mm/on_impact(var/atom/target, var/blocked = 0)
-	explosion(target, -1, 1, 3, 5)
+	explosion(target, -1, 1, 3, 4)
 
 /obj/item/projectile/bullet/ags30x29mm/pow
 	damage = 110
@@ -360,7 +360,7 @@
 	kill_count = 35
 
 /obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
-	explosion(target, -1, 1, 6, 6)
+	explosion(target, -1, 1, 5, 6)
 	if(prob(10))
 		target.ex_act(1)
 	..()
@@ -374,7 +374,7 @@
 	kill_count = 30
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
-	explosion(target, -1,3,4,5)//a little bit explosive that 30x29
+	explosion(target, -1,1,3,4)//a little bit explosive that 30x29
 	..()
 
 /obj/item/projectile/bullet/mk19_40x53mm/pow
@@ -386,7 +386,7 @@
 	kill_count = 35
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
-	explosion(target, -1,0,2,5)
+	explosion(target, -1,1,4,5)
 	..()
 
 /obj/item/projectile/bullet/rgprocket

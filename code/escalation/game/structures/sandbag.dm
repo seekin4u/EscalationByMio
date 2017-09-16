@@ -6,7 +6,7 @@
 	throwpass = 1//we can throw grenades despite its density
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/basic_chance = 30
+	var/basic_chance = 60
 
 /obj/structure/sandbag/New()
 	..()
@@ -37,7 +37,6 @@
 			return 1
 
 		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-			to_world("You are located nearly one tile from sandbag.")
 			return 1
 
 		return check_cover(mover, target)
@@ -68,13 +67,11 @@
 	var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
 	if(M)
 		chance += 30
-		//to_world("Mob located!:[chance]")
 
 		if(M.lying)
 			chance += 20
 
 	if(get_dir(loc, from) == dir)
-		//to_world("You fire in front of sandbag:[chance]")
 		chance += 10
 
 	if(prob(chance))
