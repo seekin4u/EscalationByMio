@@ -153,47 +153,127 @@
 		to_chat(user, "<span class='warning'>\The [src] is empty.</span>")
 
 //////////////////////////////////////////////////
-/////ESCALATION UNDERSLUG/////////////////////////
+/////ESCALATION LAUNCHERS/////////////////////////
 //////////////////////////////////////////////////
 
+////////////////////////////underslug/gp////////////////////////////
+
+//murucan&bund
+/obj/item/weapon/gun/launcher/grenade/underslung/m203
+	name = "M203 grenade launcher"
+	release_force = 2
+	throw_distance = 40
+	desc = "Not much more than a tube and a firing mechanism, this grenade launcher is designed to be fitted to a rifle."
+	whitelisted_grenades = list(
+		/obj/item/weapon/grenade/frag/shell40mm)
+	blacklisted_grenades = list(
+		/obj/item/weapon/grenade/frag/vog25,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/smokebomb
+		)
+
+//soviet&czhech
+/obj/item/weapon/gun/launcher/grenade/underslung/gp25
+	name = "GP-25 'Koster' grenade launcher"
+	release_force = 2
+	throw_distance = 40
+	desc = "Not much more than a tube and a firing mechanism, this grenade launcher is designed to be fitted to a rifle."
+	whitelisted_grenades = list(
+		/obj/item/weapon/grenade/frag/vog25)
+	blacklisted_grenades = list(
+		/obj/item/weapon/grenade/frag/shell40mm,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/smokebomb
+		)
 
 
+/////////////////////////granadelaunchers with ~6 shells chamber///////////////////////////////
 
-/////////////////////////GERMAN HK69 GL NOT UNDERSLUNG/////////////////////////////////////////
 /obj/item/weapon/gun/launcher/grenade/hk69
-	name = "HK69 grenade launcher"
-	desc = "A light grenade launcher, standard-issued by the German Army"
-	icon_state = "riotgun" //change
-	item_state = "riotgun" //change
-	w_class = ITEM_SIZE_HUGE
-	force = 10
+	name = "HK69A1 grenade launcher"
+	desc = "That's a rifle grenade launcher used by Bundeswehr"
+	whitelisted_grenades = list(
+		/obj/item/weapon/grenade/frag/shell40mm)
+	blacklisted_grenades = list(
+		/obj/item/weapon/grenade/frag/vog25,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/smokebomb
+		)
+	icon = 'icons/obj/gun.dmi'
+	icon_state = "hk69"
+	item_state = "riotgun"
+	w_class = 4
 	max_grenades = 0
-
-	fire_sound = 'sound/weapons/empty.ogg'
-	fire_sound_text = "a metallic thunk"
 	screen_shake = 1
-	throw_distance = 20
-	release_force = 5
+	release_force = 2
+	throw_distance = 40
+	slot_flags = SLOT_BELT | SLOT_BACK_GUN
+	var/cover_opened = FALSE
 
-/obj/item/weapon/gun/launcher/grenade/underslung/attack_self()
-	return
+
+/obj/item/weapon/gun/launcher/grenade/hk69/initialize()
+	..()
+	update_icon()
+
+/obj/item/weapon/gun/launcher/grenade/hk69/attackby(obj/item/I, mob/user)//redeterm to use cover_opened
+	if((istype(I, /obj/item/weapon/grenade)))
+		load(I, user)
+	else
+		..()
 
 //load and unload directly into chambered
-/obj/item/weapon/gun/launcher/grenade/underslung/load(obj/item/weapon/grenade/G, mob/user)
+/obj/item/weapon/gun/launcher/grenade/hk69/load(obj/item/weapon/grenade/G, mob/user)
 	if(!can_load_grenade_type(G, user))
 		return
 
+	if(!cover_opened)
+		to_chat(user, "<span class='warning'>[src]'s cover is closed! Open it first </span>")
+
 	if(chambered)
-		to_chat(user, "<span class='warning'>\The [src] is already loaded.</span>")
+		user << "<span class='warning'>\The [src] is already loaded.</span>"
 		return
 	user.drop_from_inventory(G, src)
 	chambered = G
 	user.visible_message("\The [user] load \a [G] into \the [src].", "<span class='notice'>You load \a [G] into \the [src].</span>")
+	update_icon()
 
-/obj/item/weapon/gun/launcher/grenade/underslung/unload(mob/user)
+/obj/item/weapon/gun/launcher/grenade/hk69/unload(mob/user)
+	if(cover_opened)
+		to_chat(user, "<span class='warning'>[src]'s cover is closed! Open it first </span>")
+
 	if(chambered)
 		user.put_in_hands(chambered)
 		user.visible_message("\The [user] removes \a [chambered] from \the[src].", "<span class='notice'>You remove \a [chambered] from \the [src].</span>")
 		chambered = null
+		update_icon()
 	else
-		to_chat(user, "<span class='warning'>\The [src] is empty.</span>")
+		user << "<span class='warning'>\The [src] is empty.</span>"
+
+/obj/item/weapon/gun/launcher/grenade/hk69/proc/toggle_cover(mob/user)
+	cover_opened = !cover_opened
+	user << "<span class='notice'>You [cover_opened ? "open" : "close"] [src]'s cover.</span>"
+	update_icon()
+
+/obj/item/weapon/gun/launcher/grenade/hk69/attack_self(mob/user as mob)
+	if(cover_opened)
+		toggle_cover(user) //close the cover
+		//playsound(user, 'sound/weapons/gunporn/m249_close.ogg', 100, 1)
+	else
+		return ..() //once closed, behave like normal
+
+/obj/item/weapon/gun/launcher/grenade/hk69/attack_hand(mob/user as mob)
+	if(!cover_opened && user.get_inactive_hand() == src)
+		toggle_cover(user) //open the cover
+		//playsound(user, 'sound/weapons/gunporn/m249_open.ogg', 100, 1)
+	else
+		return ..() //once open, behave like normal
+
+/obj/item/weapon/gun/launcher/grenade/hk69/update_icon()
+	..()
+	if(cover_opened)//opened
+		if(chambered)//and with shell
+			icon_state = "hk69-open"
+		else//opened but without shell :'(
+			icon_state = "hk69-empty"
+	else
+		icon_state = "hk69"//closed
