@@ -136,9 +136,9 @@
 		reagents.add_reagent("paracetamol", 15)
 
 /obj/item/weapon/reagent_containers/pill/tramadol
-	name = "Tramadol pill"
+	name = "Nurofene pill"
 	desc = "A simple painkiller."
-	icon_state = "pill8"
+	icon_state = "nuro_pill"
 	New()
 		..()
 		reagents.add_reagent("tramadol", 15)
@@ -176,9 +176,9 @@
 		reagents.add_reagent("dermaline", 15)
 
 /obj/item/weapon/reagent_containers/pill/dylovene
-	name = "Dylovene pill"
+	name = "Sorbex pill"
 	desc = "A broad-spectrum anti-toxin."
-	icon_state = "pill13"
+	icon_state = "sorb_pill"
 	New()
 		..()
 		reagents.add_reagent("anti_toxin", 15)
@@ -192,12 +192,12 @@
 		reagents.add_reagent("inaprovaline", 30)
 
 /obj/item/weapon/reagent_containers/pill/bicaridine
-	name = "Bicaridine pill"
+	name = "Methyluracil pill"
 	desc = "Used to treat physical injuries."
-	icon_state = "pill18"
+	icon_state = "meth_pill"
 	New()
 		..()
-		reagents.add_reagent("bicaridine", 20)
+		reagents.add_reagent("bicaridine", 10)
 
 /obj/item/weapon/reagent_containers/pill/happy
 	name = "Happy pill"
