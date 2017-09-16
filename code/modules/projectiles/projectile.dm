@@ -455,3 +455,15 @@
 	var/output = trace.launch(target) //Test it!
 	qdel(trace) //No need for it anymore
 	return output //Send it back to the gun!
+
+/turf/bullet_act(obj/item/projectile/P)
+	if(P && src.can_bullets && src.bullet_holes < 5 ) //Pop a bullet hole on that fucker. 5 max per turf
+		var/image/I = image('icons/effects/effects.dmi',src,"dent")
+		I.pixel_x = P.p_x
+		I.pixel_y = P.p_y
+		if(P.damage > 30)
+			I.icon_state = "bhole"
+		//I.dir = pick(NORTH,SOUTH,EAST,WEST) // random scorch design
+		overlays += I
+		bullet_holes++
+	return 1
