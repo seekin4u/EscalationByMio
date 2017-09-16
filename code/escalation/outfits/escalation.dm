@@ -9,6 +9,7 @@
 /decl/hierarchy/outfit/escalation/nato/usmc
 
 	suit = /obj/item/clothing/suit/storage/vest/escalation/usmc_harness
+	uniform = /obj/item/clothing/under/escalation/usmc
 
 /decl/hierarchy/outfit/escalation/nato/usmc/lieu
 	name = "USMC Leader"
@@ -45,6 +46,16 @@
 
 	id_pda_assignment = "Leytenant"
 
+/decl/hierarchy/outfit/escalation/warpac/cccp/subleader
+	name = "Soviet Leader Deputy"
+	uniform = /obj/item/clothing/under/escalation/soviet_officer
+	r_hand = /obj/item/weapon/gun/projectile/makarov
+
+/decl/hierarchy/outfit/escalation/warpac/cccp/qm
+	name = "Soviet QM"
+	uniform = /obj/item/clothing/under/escalation/soviet_officer
+	r_hand = /obj/item/weapon/gun/projectile/makarov
+
 /decl/hierarchy/outfit/escalation/warpac/cccp/squadleader
 	name = "Soviet Squad Leader"
 	uniform = /obj/item/clothing/under/escalation/soviet_officer
@@ -56,10 +67,17 @@
 	suit = /obj/item/clothing/suit/storage/vest/escalation/csla_harness
 
 /decl/hierarchy/outfit/escalation/warpac/csla/lieutenant
-	name = "Czechoslovak Leader" // change this
-
+	name = "Czechoslovak Leader"
 	uniform = /obj/item/clothing/under/escalation/czech_officer
+	r_hand = /obj/item/weapon/gun/projectile/cz82
+	id_pda_assignment = "Poruchik"
 
+/decl/hierarchy/outfit/escalation/warpac/csla/sublieutenant
+	name = "Czechoslovak Deputy Leader"
+	uniform = /obj/item/clothing/under/escalation/czech_officer
 	r_hand = /obj/item/weapon/gun/projectile/cz82
 
-	id_pda_assignment = "Poruchik"
+/decl/hierarchy/outfit/escalation/warpac/csla/sergeant
+	name = "Czechoslovak Squad Leader"
+	uniform = /obj/item/clothing/under/escalation/czech_officer
+	r_hand = /obj/item/weapon/gun/projectile/cz82
