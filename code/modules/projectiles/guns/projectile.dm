@@ -59,9 +59,6 @@
 
 	//usr.update_action_buttons()
 
-	to_world("Firemode changed!")
-
-
 /obj/item/weapon/gun/projectile/consume_next_projectile()
 	if(!is_jammed && prob(jam_chance))
 		src.visible_message("<span class='danger'>\The [src] jams!</span>")

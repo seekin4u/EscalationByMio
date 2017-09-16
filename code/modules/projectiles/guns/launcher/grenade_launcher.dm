@@ -171,6 +171,7 @@
 		/obj/item/weapon/grenade/frag,
 		/obj/item/weapon/grenade/smokebomb
 		)
+	safety = FALSE
 
 //soviet&czhech
 /obj/item/weapon/gun/launcher/grenade/underslung/gp25
@@ -185,6 +186,7 @@
 		/obj/item/weapon/grenade/frag,
 		/obj/item/weapon/grenade/smokebomb
 		)
+	safety = FALSE
 
 
 /////////////////////////granadelaunchers with ~6 shells chamber///////////////////////////////
