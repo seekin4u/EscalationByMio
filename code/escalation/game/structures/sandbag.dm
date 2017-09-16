@@ -116,7 +116,6 @@
 	var/sand_amount = 4
 
 /obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
-	to_world("Sandbag's check4sandbags")
 	var/i = 0
 
 	for(var/obj/structure/sandbag/baggy in user.loc.contents)
@@ -128,7 +127,6 @@
 	return 1
 
 /obj/item/weapon/sandbag/proc/check4struct(mob/user as mob)
-	to_world("Sandbag's check4struck")
 	if((locate(/obj/structure/chezh_hangehog) || \
 		locate(/obj/structure/sandbag/concrete_block) || \
 		locate(/obj/structure/brutswehr)) in user.loc.contents \
@@ -142,13 +140,12 @@
 		to_chat(user,  "\red You need more sand to make a wall.")
 		return
 	if(!isturf(user.loc))
-		to_chat(user, "\red Haha.")
+		to_chat(user, "\red Haha, not funny.")
 		return
 
 	if(!check4sandbags(user) || !check4struct(user))
 		return
 
-	to_world("OBJ_LAYER:[OBJ_LAYER]")
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()
