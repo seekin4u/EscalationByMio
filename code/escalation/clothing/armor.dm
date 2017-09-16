@@ -44,7 +44,7 @@
 	heat_protection = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/suit/storage/vest/escalation/usmc_harness
-	name = "USMC Webbing"
+	name = "USMC Harness"
 	desc = "A set of straps, pouches, and attachment points for carrying equipment."
 	icon_state = "usmc_harness"
 	item_state = "usmc_harness"
@@ -55,7 +55,7 @@
 	allowed = list(/obj/item/weapon/storage/belt/suit)
 
 /obj/item/clothing/suit/storage/vest/escalation/bdw_harness
-	name = "BDW Webbing"
+	name = "BDW Harness"
 	desc = "A set of straps, pouches, and attachment points for carrying equipment."
 	icon_state = "bdw_harness"
 	item_state = "bdw_harness"
@@ -66,7 +66,7 @@
 	allowed = list(/obj/item/weapon/storage/belt/suit)
 
 /obj/item/clothing/suit/storage/vest/escalation/sa_harness
-	name = "SA Webbing"
+	name = "SA Harness"
 	desc = "A set of straps, pouches, and attachment points for carrying equipment."
 	icon_state = "sa_harness"
 	item_state = "sa_harness"
@@ -77,7 +77,7 @@
 	allowed = list(/obj/item/weapon/storage/belt/suit)
 
 /obj/item/clothing/suit/storage/vest/escalation/csla_harness
-	name = "CSLA Webbing"
+	name = "CSLA Harness"
 	desc = "A set of straps, pouches, and attachment points for carrying equipment."
 	icon_state = "csla_harness"
 	item_state = "csla_harness"
@@ -86,37 +86,3 @@
 	cold_protection = UPPER_TORSO
 	heat_protection = UPPER_TORSO
 	allowed = list(/obj/item/weapon/storage/belt/suit)
-
-/obj/item/clothing/suit/storage/vest/escalation/usmc_webvest
-	name = "USMC Webbing"
-	desc = "A set of straps, pouches, and attachment points for carrying equipment."
-	icon_state = "usmc_webvest-big"
-	item_state = "usmc_webvest-big"
-	armor = list(melee = 10, bullet = 5, laser = 20, energy = 20, bomb = 5, bio = 0, rad = 0)
-	body_parts_covered = UPPER_TORSO
-	cold_protection = UPPER_TORSO
-	heat_protection = UPPER_TORSO
-	allowed = list(/obj/item/weapon/storage/belt/suit)
-
-/obj/item/clothing/suit/storage/vest/escalation/sa_webvest
-	name = "SA Webbing"
-	desc = "A set of straps, pouches, and attachment points for carrying equipment." //change to something more fitting
-	icon_state = "usmc_webvest-big" //change
-	item_state = "usmc_webvest-big" //change
-	armor = list(melee = 10, bullet = 5, laser = 20, energy = 20, bomb = 5, bio = 0, rad = 0)
-	body_parts_covered = UPPER_TORSO
-	cold_protection = UPPER_TORSO
-	heat_protection = UPPER_TORSO
-	allowed = list(/obj/item/weapon/storage/belt/suit)
-
-/obj/item/clothing/suit/storage/vest/escalation/csla_webvest
-	name = "CSLA Webbing"
-	desc = "A set of straps, pouches, and attachment points for carrying equipment." //change to something more fitting
-	icon_state = "usmc_webvest-big" //change
-	item_state = "usmc_webvest-big" //change
-	armor = list(melee = 10, bullet = 5, laser = 20, energy = 20, bomb = 5, bio = 0, rad = 0)
-	body_parts_covered = UPPER_TORSO
-	cold_protection = UPPER_TORSO
-	heat_protection = UPPER_TORSO
-	allowed = list(/obj/item/weapon/storage/belt/suit)
-

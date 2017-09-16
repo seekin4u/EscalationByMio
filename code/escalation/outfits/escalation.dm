@@ -6,6 +6,10 @@
 /decl/hierarchy/outfit/escalation/nato
 	shoes = /obj/item/clothing/shoes/escalation/military/nato
 
+/decl/hierarchy/outfit/escalation/nato/usmc
+
+	suit = /obj/item/clothing/suit/storage/vest/escalation/usmc_harness
+
 /decl/hierarchy/outfit/escalation/nato/usmc/lieu
 	name = "USMC Leader"
 
@@ -17,6 +21,7 @@
 	uniform = /obj/item/clothing/under/escalation/bundes
 	head = /obj/item/clothing/head/helmet/escalation/bund
 	gloves = /obj/item/clothing/gloves/escalation/bundesgloves
+	suit = /obj/item/clothing/suit/storage/vest/escalation/bdw_harness
 
 /decl/hierarchy/outfit/escalation/nato/bundes/platoonleader
 	name = "Bundeswehr Leader"
@@ -31,6 +36,7 @@
 /decl/hierarchy/outfit/escalation/warpac/cccp
 	uniform = /obj/item/clothing/under/escalation/soviet
 	head = /obj/item/clothing/head/helmet/escalation/ssh68
+	suit = /obj/item/clothing/suit/storage/vest/escalation/sa_harness
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/leader
 	name = "Soviet Leader"
@@ -47,6 +53,7 @@
 /decl/hierarchy/outfit/escalation/warpac/csla
 	uniform = /obj/item/clothing/under/escalation/czech
 	head = /obj/item/clothing/head/helmet/escalation/vz53
+	suit = /obj/item/clothing/suit/storage/vest/escalation/csla_harness
 
 /decl/hierarchy/outfit/escalation/warpac/csla/lieutenant
 	name = "Czechoslovak Leader" // change this
