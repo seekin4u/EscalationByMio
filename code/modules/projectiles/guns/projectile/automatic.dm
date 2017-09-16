@@ -651,7 +651,7 @@
 		icon_state = "m60-empty"
 
 /obj/item/weapon/gun/projectile/automatic/mg3
-	name = "M60E1"
+	name = "MG3"
 	desc = "MG3, a popular son of a famous MG-42. Main machinegun of the Bundeswehr."
 	icon_state = "MG3"
 	item_state = "lmg"
@@ -665,7 +665,7 @@
 	magazine_type = /obj/item/ammo_magazine/c762x51b
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
-	wielded_item_state = "lmg-wielded"
+	wielded_item_state = "lmg-wielded" //change
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
@@ -823,7 +823,7 @@
 	else
 		icon_state = "m16a1-empty"
 
-/obj/item/weapon/gun/projectile/automatic/m16a1gl // Change this later
+/obj/item/weapon/gun/projectile/automatic/m16a1gl
 	name = "M16A1"
 	desc = "An M16A1 with M203 grenade launcher."
 	icon_state = "m16a1gl"

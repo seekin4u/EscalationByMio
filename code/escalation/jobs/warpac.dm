@@ -224,17 +224,6 @@
 	amount = 1
 	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 35, LANGUAGE_GERMAN = 35)
 
-/datum/job/escalation/cccp/platmg
-	title = "CCCP Vzvodny Pulemetchik"
-	name = "Vzvodny Pulemetchik"
-	english_name = "Platoon MG"
-	enabled = 1
-	rank_prefix = "Ryad." //Ryadovoy
-	rank_number = 7
-	position = "team"
-	amount = 1
-	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
-
 /datum/job/escalation/cccp/squadleader
 	title = "CCCP Komandir Otdeleniya"
 	name = "Komandir Otdeleniya"
