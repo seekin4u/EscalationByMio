@@ -352,12 +352,39 @@
 	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/ak74_cock.ogg'
 
+	var/use_launcher = FALSE
+	var/obj/item/weapon/gun/launcher/grenade/underslung/gp25/launcher
+
 	firemodes = list(
 		list(mode_name="semiauto",     burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
 		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
 		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.4),
 		)
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/New()
+	..()
+	launcher = new(src)
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/attackby(obj/item/I, mob/user)
+	if((istype(I, /obj/item/weapon/grenade)))//load check it for it's type
+		launcher.load(I, user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/attack_hand(mob/user)
+	if(user.get_inactive_hand() == src && use_launcher)
+		launcher.unload(user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
+	if(use_launcher)
+		launcher.Fire(target, user, params, pointblank, reflex)
+		if(!launcher.chambered)
+			switch_firemodes() //switch back automatically
+	else
+		..()
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl/update_icon()
 	..()
@@ -366,6 +393,14 @@
 	else
 		icon_state = "ak74gl-empty"
 
+/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp(mob/user)
+	set name = "Granade launcher"
+	set category = "Object"
+	set popup_menu = 1
+
+	if(launcher)
+		use_launcher = !use_launcher
+		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
