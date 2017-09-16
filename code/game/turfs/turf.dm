@@ -29,6 +29,13 @@
 
 	var/list/decals
 
+	var/interior = 1
+	var/blend_with_neighbors = 0
+	var/can_bullets = 0 //Can bullet holes spawn on it?
+
+
+	var/bullet_holes = 0 //How many bullets already there?
+
 /turf/New()
 	..()
 	for(var/atom/movable/AM as mob|obj in src)

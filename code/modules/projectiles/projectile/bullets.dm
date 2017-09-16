@@ -360,7 +360,7 @@
 	kill_count = 35
 
 /obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
-	explosion(target, -1, 1, 5, 6)
+	explosion(target, -1, 2, 3, 4)
 	if(prob(10))
 		target.ex_act(1)
 	..()
