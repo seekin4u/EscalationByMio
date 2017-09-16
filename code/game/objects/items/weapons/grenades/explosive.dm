@@ -36,7 +36,7 @@
 	desc = "A military fragmentation grenade, designed to explode in a deadly shower of fragments, while avoiding massive structural damage."
 	icon_state = "frggrenade"
 
-	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment = 1)
+	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
 	var/num_fragments = 72  //total number of fragments produced by the grenade
 	var/explosion_size = 2   //size of the center explosion
 
@@ -44,20 +44,6 @@
 	var/spread_range = 7 //leave as is, for some reason setting this higher makes the spread pattern have gaps close to the epicenter
 
 /obj/item/weapon/grenade/frag/detonate()
-	..()
-
-	var/turf/O = get_turf(src)
-	if(!O) return
-
-	if(explosion_size)
-		on_explosion(O)
-
-	src.fragmentate(O, num_fragments, spread_range, fragment_types)
-
-	qdel(src)
-
-
-/obj/proc/fragmentate(var/turf/T=get_turf(src), var/fragment_number = 30, var/spreading_range = 5, var/list/fragtypes=list(/obj/item/projectile/bullet/pellet/fragment/))
 	set waitfor = 0
 	..()
 
@@ -209,7 +195,7 @@
 	desc = "Cannot be thrown as the usual grenade, by the way."
 	icon_state = "40x44mmshell"
 	num_fragments = 130 //less powerful than a regular frag grenade
-	arm_sound = 'sound/weapons/gunshot/grenadelaunch.ogg'
+	//arm_sound = 'sound/weapons/gunshot/grenadelaunch.ogg'
 	throw_speed = 1
 	throw_range = 15
 
@@ -222,7 +208,7 @@
 	desc = "Cannot be thrown as the usual grenade, by the way."
 	icon_state = "40x103mmshell"
 	num_fragments = 160 //less powerful than a regular frag grenade
-	arm_sound = 'sound/weapons/gunshot/grenadelaunch.ogg'
+	//arm_sound = 'sound/weapons/gunshot/grenadelaunch.ogg'
 	throw_speed = 1
 	throw_range = 15
 
