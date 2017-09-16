@@ -341,7 +341,7 @@
 /obj/item/projectile/bullet/ags30x29mm
 	name = "AGS' bullet"
 	icon_state = "vog"
-	damage = 100
+	damage = 90
 	step_delay = 1.2
 	impact_force = 1
 	kill_count = 30
@@ -351,8 +351,8 @@
 /obj/item/projectile/bullet/ags30x29mm/on_impact(var/atom/target, var/blocked = 0)
 	explosion(target, -1, 1, 3, 5)
 
-/obj/item/projectile/bullet/gyro/ags30x29mm/pow
-	damage = 160
+/obj/item/projectile/bullet/ags30x29mm/pow
+	damage = 110
 	agony = 20
 	armor_penetration = 100
 	step_delay = 1.2
@@ -368,7 +368,7 @@
 /obj/item/projectile/bullet/mk19_40x53mm
 	name = "MK19' bullet"
 	icon_state = "vog" ////////fix
-	damage = 110
+	damage = 100
 	step_delay = 1.2
 	impact_force = 1
 	kill_count = 30
@@ -378,7 +378,7 @@
 	..()
 
 /obj/item/projectile/bullet/mk19_40x53mm/pow
-	damage = 180
+	damage = 120
 	armor_penetration = 100
 	step_delay = 1.2
 	impact_force = 1
@@ -388,3 +388,12 @@
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
 	explosion(target, -1,0,2,5)
 	..()
+
+/obj/item/projectile/bullet/rgprocket
+	icon_state = "rocket1"
+	damage = 150
+	armor_penetration = 100
+	step_delay = 1.5
+
+/obj/item/projectile/bullet/newrocket/on_impact(var/atom/target, blocked = 0)
+	explosion(target, 1,2,4,5)

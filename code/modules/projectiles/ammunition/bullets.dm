@@ -312,5 +312,5 @@
 	icon_state = "vog17-casing" ////fix
 	spent_icon = "vog17-casing-spent"/////fix
 
-/obj/item/ammo_casing/mk19_40x53mm
+/obj/item/ammo_casing/mk19_40x53mm/shrapnel
 	projectile_type = /obj/item/projectile/bullet/mk19_40x53mm/pow

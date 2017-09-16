@@ -453,9 +453,18 @@
 	icon_state = "ags30x29mm"
 	mag_type = MAGAZINE
 	caliber = "30x29mm"
-	ammo_type = /obj/item/ammo_casing/ags30x29mm
+	ammo_type = /obj/item/ammo_casing/ags30x29mm/shrapnel
 	max_ammo = 30
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/mk19_40x53mm
+	name = "magazine box (MK19 40x53mm)"
+	icon_state = "ags30x29mm"
+	mag_type = MAGAZINE
+	caliber = "40x53mm"
+	ammo_type = /obj/item/ammo_casing/mk19_40x53mm/shrapnel
+	max_ammo = 32//32 in one box.
+	//multiple_sprites = 1
 
 	/obj/item/ammo_magazine/c127x29b //thing for UTES, check and fix
 	name = "magazine (12.7x29mm)"
