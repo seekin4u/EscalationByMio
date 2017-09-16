@@ -203,7 +203,7 @@
 	color = "#CB68FC"
 	overdose = 30
 	scannable = 1
-	metabolism = 0.02
+	metabolism = 0.1
 	flags = IGNORE_MOB_SIZE
 
 /datum/reagent/tramadol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -220,8 +220,8 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#800080"
-	overdose = 20
-	metabolism = 0.02
+	overdose = 10
+	metabolism = 0.1
 	flags = IGNORE_MOB_SIZE
 
 /datum/reagent/oxycodone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)

@@ -41,10 +41,10 @@
 	icon_state = "firstaid"
 
 	startswith = list(
-		/obj/item/stack/medical/bruise_pack = 3,
-		/obj/item/stack/medical/ointment = 2,
-		/obj/item/device/healthanalyzer,
-		/obj/item/weapon/reagent_containers/hypospray/autoinjector,
+		/obj/item/stack/medical/advanced/bruise_pack = 4,
+		/obj/item/stack/medical/advanced/ointment = 1,
+		/obj/item/weapon/storage/pill_bottle/bicaridine,
+		/obj/item/stack/medical/splint
 		)
 
 /obj/item/weapon/storage/firstaid/toxin
@@ -137,7 +137,7 @@
 	item_state = "contsolid"
 	w_class = ITEM_SIZE_SMALL
 	max_w_class = ITEM_SIZE_TINY
-	max_storage_space = 7
+	max_storage_space = 24
 	can_hold = list(/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/dice,/obj/item/weapon/paper)
 	allow_quick_gather = 1
 	use_to_pickup = 1
@@ -150,10 +150,11 @@
 	startswith = list(/obj/item/weapon/reagent_containers/pill/antitox = 7)
 
 /obj/item/weapon/storage/pill_bottle/bicaridine
-	name = "bottle of Bicaridine pills"
+	name = "box of Methyluracil pills"
+	icon_state = "Methyluracil"
 	desc = "Contains pills used to stabilize the severely injured."
 
-	startswith = list(/obj/item/weapon/reagent_containers/pill/bicaridine = 7)
+	startswith = list(/obj/item/weapon/reagent_containers/pill/bicaridine = 24)
 
 /obj/item/weapon/storage/pill_bottle/dexalin_plus
 	name = "bottle of Dexalin Plus pills"
@@ -168,10 +169,11 @@
 	startswith = list(/obj/item/weapon/reagent_containers/pill/dermaline = 7)
 
 /obj/item/weapon/storage/pill_bottle/dylovene
-	name = "bottle of Dylovene pills"
+	name = "box of Sorbex pills"
+	icon_state = "Sorbex"
 	desc = "Contains pills used to treat toxic substances in the blood."
 
-	startswith = list(/obj/item/weapon/reagent_containers/pill/dylovene = 7)
+	startswith = list(/obj/item/weapon/reagent_containers/pill/dylovene = 24)
 
 /obj/item/weapon/storage/pill_bottle/inaprovaline
 	name = "bottle of Inaprovaline pills"
@@ -192,10 +194,11 @@
 	startswith = list(/obj/item/weapon/reagent_containers/pill/spaceacillin = 7)
 
 /obj/item/weapon/storage/pill_bottle/tramadol
-	name = "bottle of Tramadol pills"
+	name = "bottle of Nurofene pills"
+	icon_state = "Nurofene"
 	desc = "Contains pills used to relieve pain."
 
-	startswith = list(/obj/item/weapon/reagent_containers/pill/tramadol = 7)
+	startswith = list(/obj/item/weapon/reagent_containers/pill/tramadol = 24)
 
 //Baycode specific Psychiatry pills.
 /obj/item/weapon/storage/pill_bottle/citalopram

@@ -466,3 +466,35 @@
 	max_ammo = 200
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/ammobox
+	name = "ammo box (5.45x39mm)"
+	icon_state = "sa_box"
+	w_class = ITEM_SIZE_SMALL
+	ammo_type = /obj/item/ammo_casing/a545x39
+	max_ammo = 40
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/ammobox/box545x39
+	name = "ammo box (5.45x39mm)"
+	icon_state = "sa_box"
+	ammo_type = /obj/item/ammo_casing/a545x39
+	caliber = "545x39"
+
+/obj/item/ammo_magazine/ammobox/box762x39
+	name = "ammo box (7.62x39mm)"
+	icon_state = "csla_box"
+	ammo_type = /obj/item/ammo_casing/a762x39
+	caliber = "762x39"
+
+/obj/item/ammo_magazine/ammobox/box556x45
+	name = "ammo box (5.56x45mm)"
+	icon_state = "usmc_box"
+	ammo_type = /obj/item/ammo_casing/a556x45
+	caliber = "556x45"
+
+/obj/item/ammo_magazine/ammobox/box762x51
+	name = "ammo box (7.62x51mm)"
+	icon_state = "bdw_box"
+	ammo_type = /obj/item/ammo_casing/a762x51
+	caliber = "762x51"

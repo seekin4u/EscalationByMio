@@ -350,3 +350,62 @@
 		/obj/item/weapon/bonesetter,
 		/obj/item/weapon/FixOVein
 		)
+
+/obj/item/weapon/storage/belt/holster
+	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
+	name = "Sidearm Holster"
+	desc = "This holster can hold pistol and one magazine."
+	icon_state = "holster"
+	item_state = null
+	slot_flags = SLOT_ID
+	max_storage_space = 3
+	storage_slots = null
+
+/obj/item/weapon/storage/belt/holster/sa
+	name = "SA Sidearm Holster"
+	desc = "This holster can hold Makarov pistol and one magazine."
+	startswith = list(
+		/obj/item/weapon/gun/projectile/makarov,
+		/obj/item/ammo_magazine/a9x18
+		)
+	can_hold = list(
+		/obj/item/weapon/gun/projectile/makarov,
+		/obj/item/ammo_magazine/a9x18
+		)
+
+/obj/item/weapon/storage/belt/holster/csla
+	name = "CSLA Sidearm Holster"
+	desc = "This holster can hold CZ82 pistol and one magazine."
+	startswith = list(
+		/obj/item/weapon/gun/projectile/cz82,
+		/obj/item/ammo_magazine/a9x18
+		)
+	can_hold = list(
+		/obj/item/weapon/gun/projectile/cz82,
+		/obj/item/ammo_magazine/a9x18
+		)
+
+/obj/item/weapon/storage/belt/holster/usmc
+	name = "USMC Sidearm Holster"
+	desc = "This holster can hold M1911A1 and one magazine."
+	startswith = list(
+		/obj/item/weapon/gun/projectile/colt911,
+		/obj/item/ammo_magazine/c45m
+		)
+	can_hold = list(
+		/obj/item/weapon/gun/projectile/colt911,
+		/obj/item/ammo_magazine/c45m
+		)
+
+/obj/item/weapon/storage/belt/holster/bdw
+	name = "BDW Sidearm Holster"
+	desc = "This holster can hold Walter P1 and one magazine."
+	startswith = list(
+		/obj/item/weapon/gun/projectile/walther,
+		/obj/item/ammo_magazine/a9x19
+		)
+	can_hold = list(
+		/obj/item/weapon/gun/projectile/walther,
+		/obj/item/ammo_magazine/a9x19
+		)

@@ -61,6 +61,25 @@
 	icon_state = "brutepack"
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 5
+	heal_brute = 5
+
+/obj/item/stack/medical/bruise_pack/wp
+	name = "roll of gauze"
+	singular_name = "gauze length"
+	desc = "Some sterile gauze to wrap around bloody stumps."
+	icon_state = "wp"
+	origin_tech = list(TECH_BIO = 1)
+	animal_heal = 5
+	heal_brute = 5
+
+/obj/item/stack/medical/bruise_pack/nato
+	name = "roll of gauze"
+	singular_name = "gauze length"
+	desc = "Some sterile gauze to wrap around bloody stumps."
+	icon_state = "nato"
+	origin_tech = list(TECH_BIO = 1)
+	animal_heal = 5
+	heal_brute = 5
 
 /obj/item/stack/medical/bruise_pack/attack(mob/living/carbon/M as mob, mob/user as mob)
 	if(..())
@@ -151,9 +170,11 @@
 	singular_name = "advanced trauma kit"
 	desc = "An advanced trauma kit for severe injuries."
 	icon_state = "traumakit"
-	heal_brute = 0
+	heal_brute = 15
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 12
+	amount = 10
+	max_amount = 10
 
 /obj/item/stack/medical/advanced/bruise_pack/attack(mob/living/carbon/M as mob, mob/user as mob)
 	if(..())
@@ -208,9 +229,11 @@
 	singular_name = "advanced burn kit"
 	desc = "An advanced treatment kit for severe burns."
 	icon_state = "burnkit"
-	heal_burn = 0
+	heal_burn = 15
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 7
+	amount = 10
+	max_amount = 10
 
 
 /obj/item/stack/medical/advanced/ointment/attack(mob/living/carbon/M as mob, mob/user as mob)
@@ -244,8 +267,8 @@
 	singular_name = "medical splint"
 	desc = "Modular splints capable of supporting and immobilizing bones in both limbs and appendages."
 	icon_state = "splint"
-	amount = 5
-	max_amount = 5
+	amount = 7
+	max_amount = 7
 	animal_heal = 0
 	var/list/splintable_organs = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT)	//List of organs you can splint, natch.
 

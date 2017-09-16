@@ -272,7 +272,7 @@
 	desc = "That's the Italian-made pistol. Uses 9x19 ammo."
 	icon_state = "berettam9"
 	item_state = "gun"
-	w_class = 2
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "9x19"
 	fire_delay = 1
 	load_method = MAGAZINE
@@ -295,7 +295,7 @@
 	desc = "That's Pistolet Makarova. Uses 9x18ammo."
 	icon_state = "makarov"
 	item_state = "gun"
-	w_class = 2
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "9x18"
 	fire_delay = 1
 	load_method = MAGAZINE
@@ -335,7 +335,7 @@
 	desc = "Solid classic. Uses 9x19 ammo."
 	icon_state = "colt" //fix
 	item_state = "gun"
-	w_class = 2
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "9x19"
 	fire_delay = 1
 	load_method = MAGAZINE
@@ -358,7 +358,7 @@
 	desc = "A bit modified Walther P38 with politically correct name. Uses 9x19 ammo"
 	icon_state = "p1" //fix
 	item_state = "gun"
-	w_class = 2
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "9x19"
 	fire_delay = 1
 	load_method = MAGAZINE
