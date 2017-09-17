@@ -191,6 +191,17 @@
 	amount = 1
 	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 30, LANGUAGE_GERMAN = 30)
 
+/datum/job/escalation/cccp/komissar
+	title = "CCCP Zampolit"
+	name = "Zampolit"
+	english_name = "Komissar"
+	enabled = 1
+	rank_prefix = "Leyt."
+	rank_number = 1
+	position = "team"
+	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 100, LANGUAGE_ENGLISH = 30, LANGUAGE_GERMAN = 30)
+
 /datum/job/escalation/cccp/aqm //QM assistant
 	title = "CCCP Pomoshnik Kaptera"
 	name = "Pomoshnik Kaptera"

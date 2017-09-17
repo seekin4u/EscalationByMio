@@ -75,7 +75,7 @@ proc/show_statistic()
 	var/base_color = "white" //Color code for various things
 	var/group_name //Name of the group this team belongs to, ie. WARPAC
 	var/list/players = list()
-	var/num_fireteams = 4
+	var/num_fireteams = 3
 	var/list/datum/fireteam/fireteams = list()
 	var/list/fireteam_names = list()
 	var/list/slots = list()
