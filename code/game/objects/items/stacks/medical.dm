@@ -61,7 +61,7 @@
 	icon_state = "brutepack"
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 5
-	heal_brute = 5
+	heal_brute = 7
 
 /obj/item/stack/medical/bruise_pack/wp
 	name = "roll of gauze"
@@ -70,7 +70,7 @@
 	icon_state = "wp"
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 5
-	heal_brute = 5
+	heal_brute = 7
 
 /obj/item/stack/medical/bruise_pack/nato
 	name = "roll of gauze"
@@ -79,7 +79,7 @@
 	icon_state = "nato"
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 5
-	heal_brute = 5
+	heal_brute = 7
 
 /obj/item/stack/medical/bruise_pack/attack(mob/living/carbon/M as mob, mob/user as mob)
 	if(..())

@@ -91,18 +91,13 @@
 
 /obj/item/weapon/storage/firstaid/combat
 	name = "combat medical kit"
-	desc = "Contains advanced medical treatments."
+	desc = "Individual medical kit."
 	icon_state = "bezerk"
 	item_state = "firstaid-advanced"
 
 	startswith = list(
-		/obj/item/weapon/storage/pill_bottle/bicaridine,
-		/obj/item/weapon/storage/pill_bottle/dermaline,
-		/obj/item/weapon/storage/pill_bottle/dexalin_plus,
-		/obj/item/weapon/storage/pill_bottle/dylovene,
-		/obj/item/weapon/storage/pill_bottle/tramadol,
-		/obj/item/weapon/storage/pill_bottle/spaceacillin,
-		/obj/item/stack/medical/splint,
+		/obj/item/stack/medical/bruise_pack/wp,
+		/obj/item/weapon/reagent_containers/syringe/morphine,
 		)
 
 /obj/item/weapon/storage/firstaid/surgery
