@@ -340,3 +340,12 @@
 		reagents.add_reagent("adrenaline",5)
 		reagents.add_reagent("hyperzine",10)
 
+/obj/item/weapon/reagent_containers/syringe/morphine
+	name = "Syringe (morphine)"
+	desc = "Contains strong painkiller."
+	New()
+		..()
+		reagents.add_reagent("oxycodone", 5)
+		mode = SYRINGE_INJECT
+		update_icon()
+

@@ -247,6 +247,9 @@
 	name = "AP magazine (7.62x51mm)"
 	ammo_type = /obj/item/ammo_casing/a762x51/ap
 
+/obj/item/ammo_magazine/c762x51m/empty
+	initial_ammo = 0
+
 /obj/item/ammo_magazine/c762x51s
 	name = "magazine (7.62x51mm)"
 	icon_state = "7.62x51s"
@@ -259,6 +262,9 @@
 /obj/item/ammo_magazine/c762x51s/ap
 	name = "AP magazine (7.62x51mm)"
 	ammo_type = /obj/item/ammo_casing/a762x51/ap
+
+/obj/item/ammo_magazine/c762x51s/empty
+	initial_ammo = 0
 
 /obj/item/ammo_magazine/c762x51b
 	name = "magazine box (7.62x51mm)"
@@ -296,6 +302,9 @@
 	max_ammo = 30
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/c762x39m/empty
+	initial_ammo = 0
+
 /obj/item/ammo_magazine/c762x39m/ap
 	name = "AP magazine (7.62x39mm)"
 	ammo_type = /obj/item/ammo_casing/a762x39/ap
@@ -309,6 +318,9 @@
 	max_ammo = 45
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/c762x39r/empty
+	initial_ammo = 0
+
 /obj/item/ammo_magazine/c762x39r/ap
 	name = "AP magazine (7.62x39mm)"
 	ammo_type = /obj/item/ammo_casing/a762x39/ap
@@ -321,6 +333,9 @@
 	ammo_type = /obj/item/ammo_casing/a762x54
 	max_ammo = 10
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c762x54s/empty
+	initial_ammo = 0
 
 /obj/item/ammo_magazine/c762x54s/ap
 	name = "AP magazine (7.62x54mm)"
@@ -349,6 +364,9 @@
 	max_ammo = 30
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/c556x45m/empty
+	initial_ammo = 0
+
 /obj/item/ammo_magazine/c556x45m/ap
 	name = "AP magazine (5.56x45mm)"
 	ammo_type = /obj/item/ammo_casing/a556x45/ap
@@ -362,6 +380,9 @@
 	max_ammo = 30
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/c545x39m/empty
+	initial_ammo = 0
+
 /obj/item/ammo_magazine/c545x39m/ap
 	name = "AP magazine (5.45x39mm)"
 	ammo_type = /obj/item/ammo_casing/a545x39/ap
@@ -374,6 +395,9 @@
 	ammo_type = /obj/item/ammo_casing/a545x39
 	max_ammo = 45
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c545x39b/empty
+	initial_ammo = 0
 
 /obj/item/ammo_magazine/c545x39b/ap
 	name = "AP magazine (5.45x39mm)"
@@ -434,6 +458,9 @@
 	ammo_type = /obj/item/ammo_casing/a556x45
 	max_ammo = 20
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c556x45s/empty
+	initial_ammo = 0
 
 /obj/item/ammo_magazine/c556x45s/ap
 	name = "AP magazine (5.56x45mm)"

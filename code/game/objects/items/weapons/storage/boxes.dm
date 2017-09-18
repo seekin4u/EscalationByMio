@@ -461,3 +461,106 @@
 	can_hold = list(/obj/item/ammo_magazine/ammobox/box762x51)
 	startswith = list(/obj/item/ammo_magazine/ammobox/box762x51 = 20)
 	allow_quick_empty = 1
+
+/obj/item/weapon/storage/box/cargo
+	name = "kit box"
+	desc = "Box with standart kit."
+	w_class = ITEM_SIZE_LARGE
+	can_hold = list(/obj/structure/bed/roller)
+	foldable = /obj/item/stack/material/cardboard
+
+/obj/item/weapon/storage/box/cargo/sa
+	name = "SA kit."
+	desc = "Box with kit."
+	icon_state = "sa_cargo"
+
+/obj/item/weapon/storage/box/cargo/sa/standart
+	name = "SA strelok kit."
+	desc = "Box with standart kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c545x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/grenade/frag = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/sa/medic
+	name = "SA sanitar kit."
+	desc = "Box with medical kit."
+	startswith = list(
+		/obj/item/weapon/storage/firstaid/regular = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
+		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
+		/obj/item/ammo_magazine/c545x39m = 3,
+		/obj/structure/bed/roller,
+		/obj/item/weapon/material/knife/sa
+		)
+
+/obj/item/weapon/storage/box/cargo/sa/grenadier
+	name = "SA granatometchik kit."
+	desc = "Box with rockets inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c545x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/rpgsa,
+		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/weapon/material/knife/sa
+		)
+
+/obj/item/weapon/storage/box/cargo/sa/grenadier/assistant
+	name = "SA pomoshnik granatometchika kit."
+	desc = "Box with rockets inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c545x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/rpgsa/assistant,
+		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/grenade/frag
+		)
+
+/obj/item/weapon/storage/box/cargo/sa/sniper
+	name = "SA snayper kit."
+	desc = "Box with marksman kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x54s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/mine/soviet = 2,
+		/obj/item/device/binoculars
+		)
+
+/obj/item/weapon/storage/box/cargo/sa/machinegunner
+	name = "SA pulemetchik kit."
+	desc = "Box with machinegunner kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x54b = 3,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/sa
+		)
+
+/obj/item/weapon/storage/box/cargo/sa/sergeant
+	name = "SA komadir otdeleniya kit."
+	desc = "Box with sergeant kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c545x39m = 5,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/frag/high_yield,
+		/obj/item/device/binoculars,
+		/obj/item/ammo_magazine/a9x18 = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/sa/advanced
+	name = "SA starshiy srelok kit."
+	desc = "Box with grenades and ammo inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c545x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/grenade/frag/high_yield = 2,
+		/obj/item/weapon/storage/backpack/gl/sa
+		)

@@ -294,7 +294,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
-	magazine_type = /obj/item/ammo_magazine/c545x39m
+	magazine_type = null
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
@@ -342,7 +342,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a545x39
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
-	magazine_type = /obj/item/ammo_magazine/c545x39m
+	magazine_type = null
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
@@ -412,7 +412,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45m
-	magazine_type = /obj/item/ammo_magazine/c556x45m
+	magazine_type = null
 	one_hand_penalty = 4
 	accuracy = 2
 	fire_delay = 3
@@ -443,7 +443,7 @@
 	load_method = MAGAZINE
 	caliber = "556x45"
 	slot_flags = SLOT_BACK_GUN
-	magazine_type = /obj/item/ammo_magazine/c556x45m
+	magazine_type = null
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45m
 	one_hand_penalty = 2
@@ -480,7 +480,7 @@
 	caliber = "545x39"
 	ammo_type = /obj/item/ammo_casing/a545x39
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/c545x39b
+	magazine_type = null
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	one_hand_penalty = 6
 	accuracy = 3
@@ -516,7 +516,7 @@
 	caliber = "762x54"
 	ammo_type = /obj/item/ammo_casing/a762x54
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/c762x54b
+	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x54b
 	one_hand_penalty = 9
 	wielded_item_state = "lmg-wielded"
@@ -589,7 +589,7 @@
 	caliber = "762x51"
 	ammo_type = /obj/item/ammo_casing/a762x51
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/c762x51b
+	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
 	wielded_item_state = "lmg-wielded"
@@ -662,7 +662,7 @@
 	caliber = "762x51"
 	ammo_type = /obj/item/ammo_casing/a762x51
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/c762x51b
+	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
 	wielded_item_state = "lmg-wielded" //change
@@ -735,7 +735,7 @@
 	caliber = "762x51"
 	ammo_type = /obj/item/ammo_casing/a762x51
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/c762x51s
+	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
 	one_hand_penalty = 4
 	accuracy = 3
@@ -800,7 +800,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45s
-	magazine_type = /obj/item/ammo_magazine/c556x45s
+	magazine_type = null
 	one_hand_penalty = 4
 	accuracy = 3
 	fire_delay = 3
@@ -834,7 +834,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
 	allowed_magazines = /obj/item/ammo_magazine/c556x45s
-	magazine_type = /obj/item/ammo_magazine/c556x45s
+	magazine_type = null
 	one_hand_penalty = 4
 	accuracy = 3
 	fire_delay = 3
@@ -870,7 +870,7 @@
 	caliber = "762x54"
 	ammo_type = /obj/item/ammo_casing/a762x54
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/c762x54s
+	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x54s
 	one_hand_penalty = 4
 	accuracy = 5
@@ -904,7 +904,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x51
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
-	magazine_type = /obj/item/ammo_magazine/c762x51s
+	magazine_type = null
 	one_hand_penalty = 5
 	accuracy = 4
 	fire_delay = 4
@@ -937,7 +937,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x51
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
-	magazine_type = /obj/item/ammo_magazine/c762x51s
+	magazine_type = null
 	one_hand_penalty = 5
 	accuracy = 4
 	fire_delay = 4
@@ -970,7 +970,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x51
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
-	magazine_type = /obj/item/ammo_magazine/c762x51s
+	magazine_type = null
 	one_hand_penalty = 5
 	accuracy = 4
 	fire_delay = 4
@@ -1003,7 +1003,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x39
 	allowed_magazines = /obj/item/ammo_magazine/c762x39m
-	magazine_type = /obj/item/ammo_magazine/c762x39m
+	magazine_type = null
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
@@ -1038,7 +1038,7 @@
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a762x39
 	allowed_magazines = /obj/item/ammo_magazine/c762x39m
-	magazine_type = /obj/item/ammo_magazine/c762x39m
+	magazine_type = null
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3

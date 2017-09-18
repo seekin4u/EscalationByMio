@@ -19,7 +19,7 @@
 	icon_state = "frggrenade"
 
 	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment = 1)
-	var/num_fragments = 72  //total number of fragments produced by the grenade
+	var/num_fragments = 50  //total number of fragments produced by the grenade
 	var/explosion_size = 2   //size of the center explosion
 
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
