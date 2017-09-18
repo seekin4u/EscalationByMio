@@ -1,3 +1,5 @@
+
+
 /////////////////////////////
 ////Basic heavy MG///////////
 /////////////////////////////
@@ -8,15 +10,28 @@
 //так что или инициализируем нужными значениями
 //или при спавне пушек делаем switch_firemodes (так как времени не очень много для тестов - пока что делаем первое)
 
+/obj/item/weapon/mg_tripod
+	name = "stationary machinegun tripod"
+	icon = 'icons/escalation/obj/stationary_guns.dmi'
+	icon_state = "utes-tripod"
+	var/need_type = /obj/item/weapon/gun/projectile/heavy_mg
+
+/obj/item/weapon/mg_tripod/attackby(var/obj/item/A as obj, mob/user as mob)
+	..()
+	if(istype(A, need_type))
+		var/obj/item/weapon/gun/projectile/heavy_mg/HM = A
+		HM.attach_tripod(src)
+
 /obj/item/weapon/gun/projectile/heavy_mg
 	name = "staionary machinegun"
 	desc = "basic heavy machinegun."
+	icon = 'icons/escalation/obj/stationary_guns.dmi'
 	icon_state = "basic-mg"
 	item_state = ""
 	plane = ABOVE_OBJ_PLANE
 	layer = ABOVE_OBJ_LAYER + 0.11
 	anchored = 0
-	density = 1
+	density = 0
 	w_class = ITEM_SIZE_GARGANTUAN
 	load_method = SINGLE_CASING
 	handle_casings = REMOVE_CASINGS//delete it's casings after fire.
@@ -39,17 +54,77 @@
 	var/user_old_x = 0
 	var/user_old_y = 0
 	var/mob/used_by_mob = null
+	var/obj/item/weapon/mg_tripod/tripod = null
+	var/mg_stage = 0 // 1 with tripod
+	var/standart_icon_state = "basic_mg"
 
 /obj/item/weapon/gun/projectile/heavy_mg/New()
 	..()
-	verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
+	update_mg_verbs()
 	update_layer()
+	standart_icon_state = icon_state
 
 /obj/item/weapon/gun/projectile/heavy_mg/Destroy()
 	if(used_by_mob)
 		used_by_mob.using_object = null
 		used_by_mob = null
 	..()
+
+/obj/item/weapon/gun/projectile/heavy_mg/update_icon()
+	..()
+	var/new_icon_state = mg_stage ? "[standart_icon_state]" : "[standart_icon_state]_disconnected"
+	icon_state = new_icon_state
+
+/obj/item/weapon/gun/projectile/heavy_mg/proc/attach_tripod(var/obj/item/weapon/mg_tripod/T)
+	if(!istype(T))
+		return
+
+	var/obj/item/weapon/mg_tripod/TR = T
+	if(!isturf(TR.loc))
+		return
+
+	src.forceMove(TR.loc)
+	TR.forceMove(src)
+	tripod = TR
+	mg_stage = 1
+	density = 1
+	update_icon()
+	update_mg_verbs()
+	return
+
+/obj/item/weapon/gun/projectile/heavy_mg/proc/detach_tripod(var/mob/user)
+	if(!has_tripod() || !user)
+		return 0
+
+	var/obj/item/weapon/mg_tripod/TR = tripod
+	TR.forceMove(src.loc)
+	tripod = null
+	mg_stage = 0
+	density = 0
+	update_icon()
+	update_mg_verbs()
+	user.put_in_hands(src)
+	return
+
+/obj/item/weapon/gun/projectile/heavy_mg/proc/update_mg_verbs()
+	verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
+	verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground
+	verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_tripod
+	if(anchored)
+		verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
+
+	else
+		verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground
+
+	if(mg_stage)
+		verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_tripod
+
+/obj/item/weapon/gun/projectile/heavy_mg/proc/has_tripod()
+	if(mg_stage && tripod)
+		return 1
+
+	else
+		return 0
 
 /obj/item/weapon/gun/projectile/heavy_mg/proc/update_layer()
 	if(dir == NORTH)
@@ -72,6 +147,10 @@
 		*/
 
 /obj/item/weapon/gun/projectile/heavy_mg/attack_hand(mob/user)
+	if(!has_tripod())
+		. = ..()
+		return
+
 	var/grip_dir = reverse_direction(dir)
 	var/turf/T = get_step(src.loc, grip_dir)
 	if(user.loc == T)
@@ -86,6 +165,9 @@
 		to_chat(user, "\red You're too far from the handles.")
 
 /obj/item/weapon/gun/projectile/heavy_mg/Fire(atom/A ,mob/user)
+	if(!has_tripod())
+		return 0
+
 	if(A == src)
 		if(firemodes.len > 1)
 			var/datum/firemode/new_mode = switch_firemodes(user)
@@ -110,6 +192,9 @@
 	return 1
 
 /obj/item/weapon/gun/projectile/heavy_mg/proc/rotate_to(mob/user, atom/A)
+	if(!has_tripod())
+		return 0
+
 	if(!A || !user.x || !user.y || !A.x || !A.y)
 		return // code/_onclick/click.dm 312 ln
 	var/dx = A.x - user.x
@@ -156,6 +241,9 @@
 	animate(user, pixel_x=diff_x, pixel_y=diff_y, 4, 1)
 
 /obj/item/weapon/gun/projectile/heavy_mg/proc/started_using(mob/user as mob)
+	if(!has_tripod())
+		return 0
+
 	user.visible_message("<span class='notice'>[user.name] handeled \the [src].</span>", \
 						 "<span class='notice'>You handeled \the [src].</span>")
 	used_by_mob = user
@@ -168,6 +256,9 @@
 	update_pixels(user)
 
 /obj/item/weapon/gun/projectile/heavy_mg/proc/stopped_using(mob/user as mob)
+	if(!has_tripod())
+		return 0
+
 	user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
 						 "<span class='notice'>You released \the [src].</span>")
 	used_by_mob = null
@@ -189,12 +280,17 @@
 
 /obj/item/weapon/gun/projectile/heavy_mg/AltClick(mob/user)
 	..()
+	if(!has_tripod())
+		return
+
 	if(used_by_mob == user)
 		safety = !safety
 		playsound(user, 'sound/weapons/selector.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
 
 /obj/item/weapon/gun/projectile/heavy_mg/proc/toggle_anchored(mob/user as mob)
+	if(!has_tripod())
+		return 0
 
 	if(user.stat || user.restrained())
 		return
@@ -211,13 +307,11 @@
 	if(do_after(user, 20, src))
 		if(!anchored)
 			anchored = 1
-			verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
-			verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground
+			update_mg_verbs()
 			to_chat(user, "You attach the [name] to ground")
 		else
 			anchored = 0
-			verbs += /obj/item/weapon/gun/projectile/heavy_mg/verb/attach_to_ground
-			verbs -= /obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_ground
+			update_mg_verbs()
 			to_chat(user, "You detach the [name] from ground")
 
 	update_layer()
@@ -236,8 +330,21 @@
 
 	toggle_anchored(usr)
 
+/obj/item/weapon/gun/projectile/heavy_mg/verb/detach_from_tripod()
+	set name = "Detach from tripod"
+	set category = "Object"
+	set src in view(1)
+
+	if(ammo_magazine)
+		to_chat(usr, "You need to unload [name] first!")
+
+	detach_tripod(usr)
+
 /obj/item/weapon/gun/projectile/heavy_mg/MouseDrop(over_object, src_location, over_location)
 	..()
+	if(!has_tripod())
+		return 0
+
 	if((over_object == usr && in_range(src, usr)) && !used_by_mob)
 		unload_ammo(usr, 0)
 		return
@@ -245,6 +352,12 @@
 /////////////////////////////
 ////Minigun//////////////////
 /////////////////////////////
+
+/obj/item/weapon/mg_tripod/minigun
+	name = "stationary machinegun tripod"
+	icon_state = "utes-tripod"
+	need_type = /obj/item/weapon/gun/projectile/heavy_mg/minigun
+
 /obj/item/weapon/gun/projectile/heavy_mg/minigun
 	name = "staionary machinegun"
 	desc = "6-barreled highspeed machinegun."
@@ -269,6 +382,12 @@
 //////////////////////
 ///UTES///////////////
 //////////////////////
+
+/obj/item/weapon/mg_tripod/utes
+	name = "NSV Utes tripod"
+	icon_state = "utes-tripod"
+	need_type = /obj/item/weapon/gun/projectile/heavy_mg/utes
+
 /obj/item/weapon/gun/projectile/heavy_mg/utes
 	name = "NSV Utes"
 	desc = "Heavy machinegun"
@@ -299,6 +418,14 @@
 ////Stationary KORD////
 ///////////////////////
 //98 year. NOT FOR US! ONLY TEST PURPOSES
+
+/obj/item/weapon/mg_tripod/kord
+	name = "KORD tripod"
+	icon_state = "kord-tripod"
+	need_type = /obj/item/weapon/gun/projectile/heavy_mg/kord
+
+
+
 /obj/item/weapon/gun/projectile/heavy_mg/kord
 	name = "KORD"
 	desc = "Heavy machinegun"
@@ -326,6 +453,14 @@
 //////////////////////
 ///AGS-17/////////////
 //////////////////////
+
+
+/obj/item/weapon/mg_tripod/ags_17
+	name = "AGS-17 Plamya tripod"
+	icon_state = "ags17-tripod"
+	need_type = /obj/item/weapon/gun/projectile/heavy_mg/ags_17
+
+
 /obj/item/weapon/gun/projectile/heavy_mg/ags_17
 	name = "AGS-17 Plamya"
 	desc = "Automatic grenade launcher."
@@ -354,6 +489,11 @@
 //////////////////////////////
 ////////////M2BROWNING/////////
 //////////////////////////////
+/obj/item/weapon/mg_tripod/m2
+	name = "M2 Browning tripod"
+	icon_state = "ags17-tripod"
+	need_type = /obj/item/weapon/gun/projectile/heavy_mg/m2
+
 
 /obj/item/weapon/gun/projectile/heavy_mg/m2
 	name = "M2 Browning"
@@ -383,6 +523,12 @@
 ///////////////////////////////////////
 ////////////MK19//////////////////////
 ///////////////////////////////////////
+
+/obj/item/weapon/mg_tripod/mk19
+	name = "MK 19 tripod"
+	icon_state = "ags17-tripod" /////fix
+	need_type = /obj/item/weapon/gun/projectile/heavy_mg/mk19
+
 
 /obj/item/weapon/gun/projectile/heavy_mg/mk19
 	name = "MK 19"
