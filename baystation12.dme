@@ -1954,6 +1954,7 @@
 #include "code\modules\projectiles\guns\projectile\shotgun.dm"
 #include "code\modules\projectiles\guns\projectile\sniper.dm"
 #include "code\modules\projectiles\guns\projectile\heavy_machinegun\heavy_machinegun.dm"
+#include "code\modules\projectiles\guns\projectile\heavy_machinegun\mg_disassembled.dm"
 #include "code\modules\projectiles\guns\projectile\heavy_machinegun\tripod.dm"
 #include "code\modules\projectiles\projectile\animate.dm"
 #include "code\modules\projectiles\projectile\beams.dm"
