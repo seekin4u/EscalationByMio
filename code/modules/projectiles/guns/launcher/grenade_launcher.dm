@@ -232,7 +232,7 @@
 		to_chat(user, "<span class='warning'>[src]'s cover is closed! Open it first </span>")
 
 	if(chambered)
-		user << "<span class='warning'>\The [src] is already loaded.</span>"
+		to_chat(user, "<span class='warning'>\The [src] is already loaded.</span>")
 		return
 	user.drop_from_inventory(G, src)
 	chambered = G
@@ -249,11 +249,11 @@
 		chambered = null
 		update_icon()
 	else
-		user << "<span class='warning'>\The [src] is empty.</span>"
+		to_chat(user, "<span class='warning'>\The [src] is empty.</span>")
 
 /obj/item/weapon/gun/launcher/grenade/hk69/proc/toggle_cover(mob/user)
 	cover_opened = !cover_opened
-	user << "<span class='notice'>You [cover_opened ? "open" : "close"] [src]'s cover.</span>"
+	to_chat(user, "<span class='notice'>You [cover_opened ? "open" : "close"] [src]'s cover.</span>")
 	update_icon()
 
 /obj/item/weapon/gun/launcher/grenade/hk69/attack_self(mob/user as mob)
