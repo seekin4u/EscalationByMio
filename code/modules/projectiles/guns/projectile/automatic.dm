@@ -570,11 +570,11 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/pkm/update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "pkm"
+	if(istype(ammo_magazine, /obj/item/ammo_magazine/c762x54b))
+		icon_state = "pkm[cover_open ? "open" : "closed"]"
 	else
-		icon_state = "pkm-empty"
+		icon_state = "pkm[cover_open ? "open" : "closed"]-empty"
+	..()
 
 
 /obj/item/weapon/gun/projectile/automatic/m60
@@ -1055,7 +1055,7 @@
 		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.4),
 		)
 
-/obj/item/weapon/gun/projectile/automatic/vz58/update_icon()
+/obj/item/weapon/gun/projectile/automatic/vz58gl/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "vz58gl"
