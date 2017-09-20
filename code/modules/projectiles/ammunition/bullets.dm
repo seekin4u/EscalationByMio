@@ -169,6 +169,13 @@
 	projectile_type = /obj/item/missile
 	caliber = "rocket"
 
+/obj/item/ammo_casing/rocket/smaw
+	name = "HEDP rocket"
+	desc = "A high explosive dual purpose rocket effective against the enemy's manpower and fortifications."
+	icon_state = "smaw"
+	projectile_type = /obj/item/missile
+	caliber = "rocket"
+
 /obj/item/ammo_casing/cap
 	name = "cap"
 	desc = "A cap for children toys."
