@@ -77,9 +77,8 @@ meteor_act
 	if(!(species.flags & NO_EMBED) && P.can_embed())
 		var/obj/item/organ/external/organ = get_organ(def_zone)
 		var/armor = getarmor_organ(organ, "bullet")
-		var/pr = 20 + max(P.damage - armor, -10)
+		var/pr = 15 + max(P.damage - armor, -10)
 		if(prob(pr))
-			to_world("-Shrapnel%:[pr]")
 			var/obj/item/weapon/material/shard/shrapnel/SP = new()
 			SP.name = (P.name != "shrapnel")? "[P.name] shrapnel" : "shrapnel"
 			SP.desc = "[SP.desc] It looks like it was fired from [P.shot_from]."
