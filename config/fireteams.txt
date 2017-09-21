@@ -1,0 +1,162 @@
+# FIRETEAM_NAME:FIRETEAM_FACTION
+# TYPE_OF_JOB, TYPE_OF_JOB, ETC...
+# Faction Tags: bund, cccp, csla, usmc
+# Example:
+# Motostrelki:cccp
+# /datum/job/escalation/cccp/rifleman
+# /datum/job/escalation/cccp/marksman
+# /datum/job/escalation/cccp/grenadier
+# @END@
+
+# WARPAC
+
+Otdeleniye #1:cccp
+/datum/job/escalation/cccp/squadleader
+/datum/job/escalation/cccp/squadvice
+/datum/job/escalation/cccp/squadradio
+/datum/job/escalation/cccp/grenadier
+/datum/job/escalation/cccp/grenass
+/datum/job/escalation/cccp/machinegunner
+/datum/job/escalation/cccp/rifleman
+@END@
+
+Otdeleniye #2:cccp
+/datum/job/escalation/cccp/squadleader
+/datum/job/escalation/cccp/squadvice
+/datum/job/escalation/cccp/squadradio
+/datum/job/escalation/cccp/grenadier
+/datum/job/escalation/cccp/grenass
+/datum/job/escalation/cccp/machinegunner
+/datum/job/escalation/cccp/rifleman
+@END@
+
+Otdeleniye #3:cccp
+/datum/job/escalation/cccp/squadleader
+/datum/job/escalation/cccp/squadvice
+/datum/job/escalation/cccp/squadradio
+/datum/job/escalation/cccp/grenadier
+/datum/job/escalation/cccp/grenass
+/datum/job/escalation/cccp/machinegunner
+/datum/job/escalation/cccp/rifleman
+@END@
+
+Otdeleniye #4:cccp
+/datum/job/escalation/cccp/squadleader
+/datum/job/escalation/cccp/squadvice
+/datum/job/escalation/cccp/squadradio
+/datum/job/escalation/cccp/grenadier
+/datum/job/escalation/cccp/grenass
+/datum/job/escalation/cccp/machinegunner
+/datum/job/escalation/cccp/rifleman
+@END@
+
+Cheta #1:csla
+/datum/job/escalation/csla/sergeant
+/datum/job/escalation/csla/subsergeant
+/datum/job/escalation/csla/gunner
+/datum/job/escalation/csla/grenadier
+/datum/job/escalation/csla/grenass
+/datum/job/escalation/csla/squadradio
+/datum/job/escalation/csla/rifleman
+@END@
+
+Cheta #2:csla
+/datum/job/escalation/csla/sergeant
+/datum/job/escalation/csla/subsergeant
+/datum/job/escalation/csla/gunner
+/datum/job/escalation/csla/grenadier
+/datum/job/escalation/csla/grenass
+/datum/job/escalation/csla/squadradio
+/datum/job/escalation/csla/rifleman
+@END@
+
+Cheta #3:csla
+/datum/job/escalation/csla/sergeant
+/datum/job/escalation/csla/subsergeant
+/datum/job/escalation/csla/gunner
+/datum/job/escalation/csla/grenadier
+/datum/job/escalation/csla/grenass
+/datum/job/escalation/csla/squadradio
+/datum/job/escalation/csla/rifleman
+@END@
+
+Cheta #4:csla
+/datum/job/escalation/csla/sergeant
+/datum/job/escalation/csla/subsergeant
+/datum/job/escalation/csla/gunner
+/datum/job/escalation/csla/grenadier
+/datum/job/escalation/csla/grenass
+/datum/job/escalation/csla/squadradio
+/datum/job/escalation/csla/rifleman
+@END@
+
+# NATO
+
+Squad #1:usmc
+/datum/job/escalation/usmc/squadleader
+/datum/job/escalation/usmc/fireteamleader
+/datum/job/escalation/usmc/squadradio
+/datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/grunt
+@END@
+
+Squad #2:usmc
+/datum/job/escalation/usmc/squadleader
+/datum/job/escalation/usmc/fireteamleader
+/datum/job/escalation/usmc/squadradio
+/datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/grunt
+@END@
+
+Squad #3:usmc
+/datum/job/escalation/usmc/squadleader
+/datum/job/escalation/usmc/fireteamleader
+/datum/job/escalation/usmc/squadradio
+/datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/grunt
+@END@
+
+Squad #4:usmc
+/datum/job/escalation/usmc/squadleader
+/datum/job/escalation/usmc/fireteamleader
+/datum/job/escalation/usmc/squadradio
+/datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/grunt
+@END@
+
+Gruppe #1:bund
+/datum/job/escalation/bund/squadleader
+/datum/job/escalation/bund/subsergeant
+/datum/job/escalation/bund/machinegunner
+/datum/job/escalation/bund/grenadier
+/datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/grunt
+@END@
+
+Gruppe #2:bund
+/datum/job/escalation/bund/squadleader
+/datum/job/escalation/bund/subsergeant
+/datum/job/escalation/bund/machinegunner
+/datum/job/escalation/bund/grenadier
+/datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/grunt
+@END@
+
+Gruppe #3:bund
+/datum/job/escalation/bund/squadleader
+/datum/job/escalation/bund/subsergeant
+/datum/job/escalation/bund/machinegunner
+/datum/job/escalation/bund/grenadier
+/datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/grunt
+@END@
+
+Gruppe #4:bund
+/datum/job/escalation/bund/squadleader
+/datum/job/escalation/bund/subsergeant
+/datum/job/escalation/bund/machinegunner
+/datum/job/escalation/bund/grenadier
+/datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/grunt
+@END@
+

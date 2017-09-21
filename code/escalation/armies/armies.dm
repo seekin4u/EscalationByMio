@@ -11,6 +11,8 @@ proc/init_factions()
 		else
 			qdel(faction)
 
+	setup_fireteams_from_config()
+
 	for(var/job_type in typesof(/datum/job/escalation))
 		var/datum/job/escalation/J = new job_type
 		if(J.enabled)
@@ -88,14 +90,14 @@ proc/show_statistic()
 		for(var/datum/fireteam/V in fireteams) //Cut any previously set up fireteam
 			qdel(V)
 
-	for(var/i = 1 to num_fireteams)
+/*	for(var/i = 1 to num_fireteams)
 		var/datum/fireteam/F = new /datum/fireteam(src) //Add instance of fireteam
 		F.num = i
 		if(fireteam_names.len && fireteam_names.len >= i)
 			F.name = fireteam_names[i]
 		else
 			F.name = "Fireteam [i]"
-		fireteams += F
+		fireteams += F*/
 
 /datum/army_faction/Destroy()
 	slots.Cut()
@@ -167,13 +169,13 @@ proc/show_statistic()
 
 //The way these are set up is pretty much ass for when we have like 30 armies and 300 jobs, but.. whatever. Fix later
 /datum/army_faction/proc/init_jobs()
+	for(var/datum/fireteam/F in fireteams)
+		F.init_special_jobs()
+
 	for(var/datum/job/escalation/J in all_army_jobs) //Add jobs to proper slots
 		if(J.faction_tag == faction_tag && J.enabled)
-			if(J.position == "fireteam")
-				for(var/datum/fireteam/T in fireteams)
-					for(var/count = 1 to J.amount)
-						T.slots += J
-			else if (J.position == "team")
+
+			if (J.position == "team")
 				for(var/count = 1 to J.amount)
 					slots += J
 
@@ -189,6 +191,7 @@ proc/show_statistic()
 	var/datum/army_faction/team = null
 	var/max_players = 6 //This can be expanded/reduced in gamemode settings
 	var/list/slots = list()
+	var/list/special_job_types = list()
 
 /datum/fireteam/New(var/datum/army_faction/faction)
 	..()
@@ -200,4 +203,73 @@ proc/show_statistic()
 	team = null
 	slots.Cut()
 	return ..()
+
+		// MAKE LOAD FROM CONFIG FILE IN FUTURE!
+/datum/fireteam/proc/init_special_jobs()
+	if(!special_job_types.len)
+		return 0
+
+	for(var/typespecjob in special_job_types)
+		var/datum/job/escalation/escjob = new typespecjob
+		slots += escjob
+
+	return 1
+
+/proc/setup_fireteams_from_config()
+	var/list/config_lines = file2list("config/fireteams.txt")
+	var/list/fireteam_names = list()
+	var/check_types = 0
+	var/datum/fireteam/FT = null
+	var/i = 1
+	var/list/typesoffireteams = list()
+	var/ready_for_end = 0
+	var/last_tag = null
+	for(var/line in config_lines)
+
+		if(ready_for_end)
+			for(var/typeofjob in typesoffireteams)
+				FT.special_job_types.Add(typeofjob)
+
+			FT = null
+
+			check_types = 0 // ?
+			ready_for_end = 0
+			fireteam_names.Cut()
+			typesoffireteams.Cut()
+
+		if(!length(line))			  	   continue
+		if(copytext(line,1,2) == "#") 	   continue
+
+		if(findtext(line, ":"))
+			var/list/fireteam_lists = splittext(line, ":")
+			if(!fireteam_lists.len)	  continue
+			var/facname = fireteam_lists[1]
+			var/factag = fireteam_lists[2]
+			fireteam_names[facname] = factag
+
+			var/datum/army_faction/AF
+			AF = get_army(factag)
+			FT = new /datum/fireteam(AF)
+			AF.fireteams += FT
+			FT.name = facname
+			if(factag != last_tag)
+				i = 1
+			FT.num = i
+			i++
+			check_types = 1
+			last_tag = factag
+			continue
+
+		if(check_types)
+
+			if(findtext(line, "@END@"))
+				check_types = 0
+				ready_for_end = 1
+				continue
+
+			else
+				typesoffireteams.Add(text2path(line))
+				continue
+
+
 
