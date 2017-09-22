@@ -54,7 +54,7 @@
 	body_parts_covered = HEAD
 	armor = list(melee = 35, bullet = 10, laser = 30,energy = 25, bomb = 20, bio = 0, rad = 0)
 
-/obj/item/clothing/head/helmet/escalation/ssh68berezka
+/obj/item/clothing/head/helmet/escalation/ssh68white
 	name = "SSh-68 Helmet"
 	desc = "A steel helmet, standard issue to SA. This one has a white helmet case."
 	icon_state = "ssh68white"

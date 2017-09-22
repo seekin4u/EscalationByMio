@@ -43,6 +43,17 @@
 	siemens_coefficient = 0.9
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
+/obj/item/clothing/under/escalation/berezka
+	name = "Berezka suit"
+	winter_name = "Berezka winter suit"
+	desc = "A classic soviet two-colored camouflage suit, worn over the standard uniform."
+	winter_desc = "Winter version of a classic soviet two-colored camouflage suit, worn over the standard uniform."
+	icon_state = "berezka"
+	winter_icon_state = "berezka"
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	siemens_coefficient = 0.9
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
 /obj/item/clothing/under/escalation/czech
 	name = "Czech field uniform" // change this
 	winter_name = "Czech winter field uniform"
