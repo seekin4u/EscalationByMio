@@ -95,11 +95,11 @@
 	icon_state = "bezerk"
 	item_state = "firstaid-advanced"
 	w_class = ITEM_SIZE_SMALL
+	max_storage_space = 2
 	startswith = list(
 		/obj/item/stack/medical/bruise_pack/wp,
 		/obj/item/weapon/reagent_containers/syringe/morphine,
 		)
-		max_storage_space = 2
 
 /obj/item/weapon/storage/firstaid/surgery
 	name = "surgery kit"
