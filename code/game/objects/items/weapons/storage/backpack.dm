@@ -372,7 +372,7 @@
 	icon_state = "sa_rpg2"
 	item_state = "sa_rpg"
 	storage_slots = 2
-	can_hold = /obj/item/ammo_casing/rocket
+	can_hold = list (/obj/item/ammo_casing/rocket)
 
 /obj/item/weapon/storage/backpack/rpgsa/assistant
 	name = "RPG rocket backpack"
@@ -380,7 +380,7 @@
 	icon_state = "sa_rpg3"
 	item_state = "sa_rpg"
 	storage_slots = 3
-	can_hold = /obj/item/ammo_casing/rocket
+	can_hold = list (/obj/item/ammo_casing/rocket)
 
 /obj/item/weapon/storage/backpack/rpgcsla
 	name = "RPG rocket backpack"
@@ -388,7 +388,7 @@
 	icon_state = "csla_rpg2"
 	item_state = "csla_rpg"
 	storage_slots = 2
-	can_hold = /obj/item/ammo_casing/rocket
+	can_hold = list (/obj/item/ammo_casing/rocket)
 
 /obj/item/weapon/storage/backpack/rpgcsla/assistant
 	name = "RPG rocket backpack"
@@ -396,7 +396,15 @@
 	icon_state = "csla_rpg3"
 	item_state = "csla_rpg"
 	storage_slots = 3
-	can_hold = /obj/item/ammo_casing/rocket
+	can_hold = list (/obj/item/ammo_casing/rocket)
+
+/obj/item/weapon/storage/backpack/smaw
+	name = "SMAW rocket backpack"
+	desc = "USMC backpack for SMAW shots."
+	icon_state = "smaw"
+	item_state = "duffle"
+	storage_slots = 3
+	can_hold = list (/obj/item/ammo_casing/rocket)
 
 /obj/item/weapon/storage/backpack/gl/usmc
 	name = "Grenade belt"

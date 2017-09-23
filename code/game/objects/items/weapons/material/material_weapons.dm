@@ -53,10 +53,10 @@
 	if(!material)
 		qdel(src)
 	else
-		name = "[material.display_name] [initial(name)]"
+		name = "[initial(name)]"
 		health = round(material.integrity/10)
 		if(applies_material_colour)
-			color = material.icon_colour
+			color = null
 		if(material.products_need_process())
 			processing_objects |= src
 		if(material.conductive)

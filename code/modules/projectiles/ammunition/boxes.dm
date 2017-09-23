@@ -270,6 +270,7 @@
 	name = "magazine box (7.62x51mm)"
 	icon_state = "7.62x51b"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "762x51"
 	ammo_type = /obj/item/ammo_casing/a762x51
 	max_ammo = 200
@@ -284,9 +285,20 @@
 	name = "magazine box (7.62x39mm)"
 	icon_state = "7.62x39b"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "762x39"
 	ammo_type = /obj/item/ammo_casing/a762x39
 	max_ammo = 200
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c762x51b/bdw
+	name = "magazine box (7.62x39mm)"
+	icon_state = "7.62x51b"
+	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
+	caliber = "762x39"
+	ammo_type = /obj/item/ammo_casing/a762x51
+	max_ammo = 100
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c762x39b/ap
@@ -345,6 +357,17 @@
 	name = "ammo box (7.62x54mm)"
 	icon_state = "7.62x39b"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
+	caliber = "762x54"
+	ammo_type = /obj/item/ammo_casing/a762x54
+	max_ammo = 200
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c762x54b/csla
+	name = "ammo box (7.62x54mm)"
+	icon_state = "7.62x39b"
+	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "762x54"
 	ammo_type = /obj/item/ammo_casing/a762x54
 	max_ammo = 200
@@ -445,6 +468,7 @@
 	name = "magazine box (12.7x99mm)"
 	icon_state = "7.62x39b"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "127x99mm"
 	ammo_type = /obj/item/ammo_casing/a127x99mm
 	max_ammo = 200
@@ -470,6 +494,7 @@
 	name = "magazine box (4mm)"
 	icon_state = "4mm"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "4mm"
 	ammo_type = /obj/item/ammo_casing/a4mm
 	max_ammo = 400
@@ -479,6 +504,7 @@
 	name = "magazine box (VOG 30x29mm)"
 	icon_state = "ags30x29mm"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "30x29mm"
 	ammo_type = /obj/item/ammo_casing/ags30x29mm
 	max_ammo = 30
@@ -488,6 +514,7 @@
 	name = "magazine (12.7x29mm)"
 	icon_state = "7.62x51b"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "127x99"
 	ammo_type = /obj/item/ammo_casing/a127x99mm
 	max_ammo = 200

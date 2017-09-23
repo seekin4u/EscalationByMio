@@ -49,6 +49,8 @@
  * Kitchen knives
  */
 /obj/item/weapon/material/knife
+	slot_flags = SLOT_ID
+	w_class = ITEM_SIZE_SMALL
 	name = "kitchen knife"
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "knife"
@@ -56,7 +58,8 @@
 	flags = CONDUCT
 	sharp = 1
 	edge = 1
-	force_divisor = 0.15 // 9 when wielded with hardness 60 (steel)
+	force_divisor = 0.5 // 9 when wielded with hardness 60 (steel)
+	thrown_force_divisor = 0.5
 	matter = list(DEFAULT_WALL_MATERIAL = 12000)
 	origin_tech = list(TECH_MATERIAL = 1)
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
@@ -86,15 +89,23 @@
 /obj/item/weapon/material/knife/sa
 	name = "6x4 bayonet"
 	desc = "An AK-series bayonet with two sharp edges near the point."
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "sa"
 
 /obj/item/weapon/material/knife/csla
 	name = "vz.58 bayonet"
 	desc = "A slim and sharp, but somewhat fragile czechoslovakian bayonet."
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "sa"
 
 /obj/item/weapon/material/knife/usmc
 	name = "m7 bayonet"
 	desc = "A 11.9 inches bayonet with carbon steel blade. This one was manufacured in West Germany."
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "usmc"
 
 /obj/item/weapon/material/knife/bdw
 	name = "kampfmesser M68"
 	desc = "Combat knife of bundeswehr forces. German quality."
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "usmc"

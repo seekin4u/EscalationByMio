@@ -430,6 +430,10 @@
 	desc = "A box full of headsets."
 	startswith = list(/obj/item/device/radio/headset = 7)
 
+
+// AMMOCANS //
+
+
 /obj/item/weapon/storage/box/ammocan/sa
 	name = "ammo can (5.45x39mm). Ne proeby tsink!"
 	icon_state = "sa"
@@ -462,12 +466,18 @@
 	startswith = list(/obj/item/ammo_magazine/ammobox/box762x51 = 20)
 	allow_quick_empty = 1
 
+
+// CARGO BOXES //
+
+
 /obj/item/weapon/storage/box/cargo
 	name = "kit box"
 	desc = "Box with standart kit."
 	w_class = ITEM_SIZE_LARGE
 	can_hold = list(/obj/structure/bed/roller)
 	foldable = /obj/item/stack/material/cardboard
+
+// SA //
 
 /obj/item/weapon/storage/box/cargo/sa
 	name = "SA kit."
@@ -529,7 +539,7 @@
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/material/knife/sa,
 		/obj/item/weapon/mine/soviet = 2,
-		/obj/item/device/binoculars
+		/obj/item/device/binoculars/wp
 		)
 
 /obj/item/weapon/storage/box/cargo/sa/machinegunner
@@ -538,7 +548,8 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x54b = 3,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/sa
+		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/storage/belt/suit/ammo/sa/lmg = 2
 		)
 
 /obj/item/weapon/storage/box/cargo/sa/sergeant
@@ -550,7 +561,7 @@
 		/obj/item/weapon/material/knife/sa,
 		/obj/item/weapon/grenade/frag,
 		/obj/item/weapon/grenade/frag/high_yield,
-		/obj/item/device/binoculars,
+		/obj/item/device/binoculars/wp,
 		/obj/item/ammo_magazine/a9x18 = 2
 		)
 
@@ -563,4 +574,299 @@
 		/obj/item/weapon/material/knife/sa,
 		/obj/item/weapon/grenade/frag/high_yield = 2,
 		/obj/item/weapon/storage/backpack/gl/sa
+		)
+
+// CSLA //
+
+/obj/item/weapon/storage/box/cargo/clsa
+	name = "CSLA kit."
+	desc = "Box with kit."
+	icon_state = "csla_cargo"
+
+/obj/item/weapon/storage/box/cargo/csla/standart
+	name = "CSLA strelec kit."
+	desc = "Box with standart kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/grenade/frag = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/csla/medic
+	name = "CSLA sanitar kit."
+	desc = "Box with medical kit."
+	startswith = list(
+		/obj/item/weapon/storage/firstaid/regular = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
+		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
+		/obj/item/ammo_magazine/c762x39m = 3,
+		/obj/structure/bed/roller,
+		/obj/item/weapon/material/knife/csla
+		)
+
+/obj/item/weapon/storage/box/cargo/csla/grenadier
+	name = "CSLA pancerovnik kit."
+	desc = "Box with rockets inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/rpgcsla,
+		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/weapon/material/knife/csla
+		)
+
+/obj/item/weapon/storage/box/cargo/csla/grenadier/assistant
+	name = "CSLA pomocnik panzerovnika kit."
+	desc = "Box with rockets inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/rpgcsla/assistant,
+		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/grenade/frag
+		)
+
+/obj/item/weapon/storage/box/cargo/csla/sniper
+	name = "CSLA nadstrelec kit."
+	desc = "Box with marksman kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x54s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/mine/soviet = 2,
+		/obj/item/device/binoculars/wp
+		)
+
+/obj/item/weapon/storage/box/cargo/csla/machinegunner
+	name = "CSLA delostrelec kit."
+	desc = "Box with machinegunner kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x54b/csla = 3,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/storage/belt/suit/ammo/csla/lmg = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/csla/sergeant
+	name = "CSLA chetar kit."
+	desc = "Box with squad leader kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x39m = 5,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/frag/high_yield,
+		/obj/item/device/binoculars/wp,
+		/obj/item/ammo_magazine/a9x18 = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/csla/advanced
+	name = "CSLA subchetar kit."
+	desc = "Box with grenades and ammo inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x39m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/grenade/frag/high_yield = 2,
+		/obj/item/weapon/storage/backpack/gl/csla
+		)
+
+// USMC //
+
+/obj/item/weapon/storage/box/cargo/usmc
+	name = "USMC kit."
+	desc = "Box with kit."
+	icon_state = "usmc_cargo"
+
+/obj/item/weapon/storage/box/cargo/usmc/standart
+	name = "USMC rifleman kit."
+	desc = "Box with standart kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c556x45m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/grenade/frag = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/usmc/medic
+	name = "USMC corpsman kit."
+	desc = "Box with medical kit."
+	startswith = list(
+		/obj/item/weapon/storage/firstaid/regular = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
+		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
+		/obj/item/ammo_magazine/c556x45m = 3,
+		/obj/structure/bed/roller,
+		/obj/item/weapon/material/knife/usmc
+		)
+
+/obj/item/weapon/storage/box/cargo/usmc/grenadier
+	name = "USMC grenadier kit."
+	desc = "Box with rockets inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c556x45m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/smaw,
+		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/weapon/material/knife/usmc
+		)
+
+/obj/item/weapon/storage/box/cargo/usmc/grenadier/assistant
+	name = "USMC grenadier assistant kit."
+	desc = "Box with rockets inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c556x45m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/smaw,
+		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/grenade/frag
+		)
+
+/obj/item/weapon/storage/box/cargo/usmc/sniper
+	name = "USMC designated marksman kit."
+	desc = "Box with marksman kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/mine/usmc = 2,
+		/obj/item/device/binoculars/nato
+		)
+
+/obj/item/weapon/storage/box/cargo/usmc/machinegunner
+	name = "USMC machinegunner kit."
+	desc = "Box with machinegunner kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51b = 3,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/storage/belt/suit/ammo/usmc/lmg = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/usmc/sergeant
+	name = "USMC sergeant kit."
+	desc = "Box with squad leader kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c556x45m = 5,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/frag/high_yield,
+		/obj/item/device/binoculars/nato,
+		/obj/item/ammo_magazine/c45m = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/usmc/advanced
+	name = "USMC corporal kit."
+	desc = "Box with fireteam leader kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c556x45m = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/grenade/frag/high_yield = 2,
+		/obj/item/weapon/storage/backpack/gl/usmc
+		)
+
+// BDW //
+
+/obj/item/weapon/storage/box/cargo/bdw
+	name = "BDW kit."
+	desc = "Box with kit."
+	icon_state = "bdw_cargo"
+
+/obj/item/weapon/storage/box/cargo/bdw/standart
+	name = "BDW schutze kit."
+	desc = "Box with standart kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/grenade/frag = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/bdw/medic
+	name = "BDW sanitater kit."
+	desc = "Box with medical kit."
+	startswith = list(
+		/obj/item/weapon/storage/firstaid/regular = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
+		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
+		/obj/item/ammo_magazine/c762x51s = 3,
+		/obj/structure/bed/roller,
+		/obj/item/weapon/material/knife/bdw
+		)
+
+/obj/item/weapon/storage/box/cargo/bdw/grenadier
+	name = "BDW grenadier kit."
+	desc = "Box with grenades inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/gl/bdw/big,
+		/obj/item/weapon/material/knife/bdw
+		)
+
+/obj/item/weapon/storage/box/cargo/bdw/grenadier/assistant
+	name = "BDW grenadier assistant kit."
+	desc = "Box with grenades inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/storage/backpack/gl/bdw/big,
+		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/grenade/frag
+		)
+
+/obj/item/weapon/storage/box/cargo/bdw/sniper
+	name = "BDW marksman kit."
+	desc = "Box with marksman kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/mine/usmc = 2,
+		/obj/item/device/binoculars/nato
+		)
+
+/obj/item/weapon/storage/box/cargo/bdw/machinegunner
+	name = "BDW maschinengewehrschutze kit."
+	desc = "Box with machinegunner kit inside."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51b/bdw = 5,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/storage/belt/suit/ammo/bdw/lmg = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/bdw/sergeant
+	name = "BDW gruppenfuhrer kit."
+	desc = "Box with squad leader kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51s = 5,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/frag/high_yield,
+		/obj/item/device/binoculars/nato,
+		/obj/item/ammo_magazine/a9x19 = 2
+		)
+
+/obj/item/weapon/storage/box/cargo/bdw/advanced
+	name = "BDW gruppenfuhrer stellvertreter kit."
+	desc = "Box with fireteam leader kit."
+	startswith = list(
+		/obj/item/ammo_magazine/c762x51s = 7,
+		/obj/item/weapon/storage/firstaid/combat,
+		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/grenade/frag/high_yield = 2,
+		/obj/item/weapon/storage/backpack/gl/bdw
 		)

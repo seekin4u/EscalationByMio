@@ -571,7 +571,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/pkm/update_icon()
 	if(istype(ammo_magazine, /obj/item/ammo_magazine/c762x54b))
-		icon_state = "pkm[cover_open ? "open" : "closed"]"
+		icon_state = "pkm[cover_open ? "open" : "closed"][round(ammo_magazine.stored_ammo.len, 200)]"
 	else
 		icon_state = "pkm[cover_open ? "open" : "closed"]-empty"
 	..()
@@ -663,7 +663,7 @@
 	ammo_type = /obj/item/ammo_casing/a762x51
 	load_method = MAGAZINE
 	magazine_type = null
-	allowed_magazines = /obj/item/ammo_magazine/c762x51b
+	allowed_magazines = /obj/item/ammo_magazine/c762x51b/bdw
 	one_hand_penalty = 9
 	wielded_item_state = "lmg-wielded" //change
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
@@ -799,7 +799,7 @@
 	caliber = "556x45"
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
-	allowed_magazines = /obj/item/ammo_magazine/c556x45s
+	allowed_magazines = /obj/item/ammo_magazine/c556x45m
 	magazine_type = null
 	one_hand_penalty = 4
 	accuracy = 3
@@ -833,7 +833,7 @@
 	caliber = "556x45"
 	slot_flags = SLOT_BACK_GUN
 	ammo_type = /obj/item/ammo_casing/a556x45
-	allowed_magazines = /obj/item/ammo_magazine/c556x45s
+	allowed_magazines = /obj/item/ammo_magazine/c556x45m
 	magazine_type = null
 	one_hand_penalty = 4
 	accuracy = 3
@@ -1061,3 +1061,74 @@
 		icon_state = "vz58gl"
 	else
 		icon_state = "vz58gl-empty"
+
+/obj/item/weapon/gun/projectile/automatic/vz59
+	name = "Vz. 59"
+	desc = "UK vz. 59 is a unified CSLA light machine gun."
+	icon_state = "vz59"
+	item_state = "lmg"
+	w_class = 5
+	force = 15
+	slot_flags = SLOT_BACK_GUN
+	max_shells = 200
+	caliber = "762x54"
+	ammo_type = /obj/item/ammo_casing/a762x54
+	load_method = MAGAZINE
+	magazine_type = null
+	allowed_magazines = /obj/item/ammo_magazine/c762x54b/csla
+	one_hand_penalty = 9
+	wielded_item_state = "lmg-wielded"
+	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
+	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
+	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
+
+	firemodes = list(
+		list(mode_name="short bursts",	burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		)
+
+	var/cover_open = 0
+
+
+/obj/item/weapon/gun/projectile/automatic/vz59/special_check(mob/user)
+	if(cover_open)
+		user << "<span class='warning'>[src]'s cover is open! Close it before firing!</span>"
+		return 0
+	return ..()
+
+/obj/item/weapon/gun/projectile/automatic/vz59/proc/toggle_cover(mob/user)
+	cover_open = !cover_open
+	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
+	update_icon()
+
+/obj/item/weapon/gun/projectile/automatic/vz59/attack_self(mob/user as mob)
+	if(cover_open)
+		toggle_cover(user) //close the cover
+		playsound(user, 'sound/weapons/gunporn/m249_close.ogg', 100, 1)
+	else
+		return ..() //once closed, behave like normal
+
+/obj/item/weapon/gun/projectile/automatic/vz59/attack_hand(mob/user as mob)
+	if(!cover_open && user.get_inactive_hand() == src)
+		toggle_cover(user) //open the cover
+		playsound(user, 'sound/weapons/gunporn/m249_open.ogg', 100, 1)
+	else
+		return ..() //once open, behave like normal
+
+/obj/item/weapon/gun/projectile/automatic/vz59/load_ammo(var/obj/item/A, mob/user)
+	if(!cover_open)
+		user << "<span class='warning'>You need to open the cover to load that into [src].</span>"
+		return
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/vz59/unload_ammo(mob/user, var/allow_dump=1)
+	if(!cover_open)
+		user << "<span class='warning'>You need to open the cover to unload [src].</span>"
+		return
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/vz59/update_icon()
+	if(istype(ammo_magazine, /obj/item/ammo_magazine/c762x54b))
+		icon_state = "vz59[cover_open ? "open" : "closed"][round(ammo_magazine.stored_ammo.len, 200)]"
+	else
+		icon_state = "vz59[cover_open ? "open" : "closed"]-empty"
