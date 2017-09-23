@@ -228,3 +228,14 @@
 		var/atom/A = sub_atom_type
 		.[initial(A.name)] = sub_atom_type
 	. = sortAssoc(.)
+
+/proc/list2text(var/list/L, var/delimiter=" ") // Thanks to github.com/BYOND/text-util/blob/master/text-util.dm
+	if(!L || !istype(L, /list) || L.len < 1)
+		return null
+
+	var/stringified = "[L[1]]"
+
+	for(var/i=2 to L.len)
+		stringified += "[delimiter][L[i]]"
+
+	return stringified

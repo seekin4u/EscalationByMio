@@ -20,4 +20,5 @@ __pycache__
 config/*
 !config/*/
 !config/fireteams.txt
+!config/whitelist_escalation.txt
 ESCALATION_TEMP_sprites_TEMP/Bund/BDW_Gear.dmi

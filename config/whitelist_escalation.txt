@@ -1,0 +1,12 @@
+# KEY = {
+# TITLE ROLE
+# TITLE ROLE
+# TITLE ROLE
+# }
+
+# EXAMPLE
+JamsMor = {
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Strelok
+}
