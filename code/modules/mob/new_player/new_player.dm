@@ -68,7 +68,7 @@
 	out += "<center>"
 
 	for(var/datum/army_faction/T in ticker.mode.teams)
-		if(!T.check_team_whitelist_for_player(src))
+		if(!T.check_whitelist_for_player(src))
 			out += "[T.name] (blocked for you)"
 
 		else if(team && team == T)
@@ -80,7 +80,7 @@
 	out += "<br/>"
 
 	for(var/datum/army_faction/N in ticker.mode.neutral_teams)
-		if(!N.check_team_whitelist_for_player(src))
+		if(!N.check_whitelist_for_player(src))
 			out += "[N.name] (blocked for you)"
 
 		else if(team && team == N)
