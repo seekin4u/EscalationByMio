@@ -210,7 +210,7 @@
 
 /obj/item/weapon/storage/belt/bdw
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_SMALL
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "BDW Field Pack"
 	desc = "Standart satchel of the Bundeswehr infantry."
 	icon_state = "bdw"
@@ -227,7 +227,7 @@
 
 /obj/item/weapon/storage/belt/usmc
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_SMALL
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "USMC Field Pack"
 	desc = "Standart satchel of the USMC infantry. Reffered to as Butt Pack."
 	icon_state = "usmc"
@@ -245,7 +245,7 @@
 
 /obj/item/weapon/storage/belt/sa
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_SMALL
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "SA Field Pack"
 	desc = "Standart satchel of the SA infantry."
 	icon_state = "sa"
@@ -263,7 +263,7 @@
 
 /obj/item/weapon/storage/belt/csla
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_SMALL
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "CSLA Field Pack"
 	desc = "Standart satchel of the CSLA infantry."
 	icon_state = "csla"

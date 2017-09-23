@@ -50,7 +50,7 @@
  */
 /obj/item/weapon/material/knife
 	slot_flags = SLOT_ID
-	w_class = ITEM_SIZE_SMALL
+	w_class = ITEM_SIZE_NORMAL
 	name = "kitchen knife"
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "knife"
