@@ -578,7 +578,7 @@
 
 // CSLA //
 
-/obj/item/weapon/storage/box/cargo/clsa
+/obj/item/weapon/storage/box/cargo/csla
 	name = "CSLA kit."
 	desc = "Box with kit."
 	icon_state = "csla_cargo"
