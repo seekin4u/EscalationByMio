@@ -136,6 +136,7 @@
 	// Create robolimbs for chargen.
 	populate_robolimb_list()
 	init_factions()
+	init_whitelist()
 
 	processScheduler = new
 	master_controller = new /datum/controller/game_controller()

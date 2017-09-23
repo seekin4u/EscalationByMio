@@ -4,9 +4,16 @@
 # TITLE ROLE
 # }
 
+# ALSO:
+# KEY = {
+# ::ALL::
+# }
 # EXAMPLE
 JamsMor = {
 CCCP Pomoshnik Granatometchika
 CCCP Pulemetchik
 CCCP Strelok
+}
+JohnTheBastard = {
+::ALL::
 }

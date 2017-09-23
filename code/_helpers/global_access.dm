@@ -209,6 +209,8 @@
 			return global.all_factions;
 		if("all_languages")
 			return global.all_languages;
+		if("whitelisted_escalation")
+			return global.whitelisted_escalation;
 		if("all_maps")
 			return global.all_maps;
 		if("all_money_accounts")
@@ -3025,6 +3027,7 @@
 	"all_army_jobs",
 	"all_factions",
 	"all_languages",
+	"whitelisted_escalation",
 	"all_maps",
 	"all_money_accounts",
 	"all_objectives",

@@ -68,10 +68,7 @@
 	out += "<center>"
 
 	for(var/datum/army_faction/T in ticker.mode.teams)
-		if(!T.check_whitelist_for_player(src))
-			out += "[T.name] (blocked for you)"
-
-		else if(team && team == T)
+		if(team && team == T)
 			out += "[T.name]  "
 
 		else
@@ -80,10 +77,8 @@
 	out += "<br/>"
 
 	for(var/datum/army_faction/N in ticker.mode.neutral_teams)
-		if(!N.check_whitelist_for_player(src))
-			out += "[N.name] (blocked for you)"
 
-		else if(team && team == N)
+		if(team && team == N)
 			out += "[N.name]  "
 
 		else
@@ -98,7 +93,10 @@
 			slot_index++
 			if(istype(J,/datum/job/escalation))
 				var/datum/job/escalation/A = J
-				out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
+				if(!check_player_in_whitelist(src.key, A.title))
+					out += "<P>[A.name] - [A.english_name] (NOT IN WHITELIST)</P>"
+				else
+					out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
 
 			else
 				if(!ismob(J))
@@ -132,7 +130,10 @@
 
 			if(istype(S, /datum/job/escalation))
 				var/datum/job/escalation/A = S
-				out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
+				if(!check_player_in_whitelist(src.key, A.title))
+					out += "<p>[A.name] - [A.english_name] (NOT IN WHITELIST)</p>"
+				else
+					out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
 
 			else
 				if(!ismob(S))
