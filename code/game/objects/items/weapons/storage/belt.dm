@@ -206,9 +206,11 @@
 	..()
 	slowdown_per_slot[slot_belt] = 3
 
+// SATCHELS //
+
 /obj/item/weapon/storage/belt/bdw
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_NORMAL
+	max_w_class = ITEM_SIZE_SMALL
 	name = "BDW Field Pack"
 	desc = "Standart satchel of the Bundeswehr infantry."
 	icon_state = "bdw"
@@ -217,6 +219,7 @@
 
 /obj/item/weapon/storage/belt/bdw/medical
 	name = "BDW Medical Satchel"
+	max_w_class = ITEM_SIZE_NORMAL
 	desc = "Standart satchel of the Bundeswehr medics."
 	icon_state = "bdw_med"
 	item_state = "bdw_med"
@@ -224,7 +227,7 @@
 
 /obj/item/weapon/storage/belt/usmc
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_NORMAL
+	max_w_class = ITEM_SIZE_SMALL
 	name = "USMC Field Pack"
 	desc = "Standart satchel of the USMC infantry. Reffered to as Butt Pack."
 	icon_state = "usmc"
@@ -242,7 +245,7 @@
 
 /obj/item/weapon/storage/belt/sa
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_NORMAL
+	max_w_class = ITEM_SIZE_SMALL
 	name = "SA Field Pack"
 	desc = "Standart satchel of the SA infantry."
 	icon_state = "sa"
@@ -260,7 +263,7 @@
 
 /obj/item/weapon/storage/belt/csla
 	w_class = ITEM_SIZE_HUGE
-	max_w_class = ITEM_SIZE_NORMAL
+	max_w_class = ITEM_SIZE_SMALL
 	name = "CSLA Field Pack"
 	desc = "Standart satchel of the CSLA infantry."
 	icon_state = "csla"
@@ -276,6 +279,8 @@
 	item_state = "csla_med"
 	storage_slots = 7
 
+// POUCHES //
+
 /obj/item/weapon/storage/belt/suit/ammo/bdw
 	w_class = ITEM_SIZE_HUGE
 	name = "BDW Ammo Pouch"
@@ -285,7 +290,18 @@
 	storage_slots = 4
 	slot_flags = SLOT_BELT
 	can_hold = list(
-		/obj/item/ammo_magazine
+		/obj/item/ammo_magazine/c762x51s,
+		/obj/item/ammo_magazine/a9x19
+		)
+
+/obj/item/weapon/storage/belt/suit/ammo/bdw/lmg
+	w_class = ITEM_SIZE_HUGE
+	name = "MG3 Ammo Pouch"
+	desc = "Have enough space to hold 2 boxes."
+	icon_state = "bdw_ammo_lmg"
+	storage_slots = 2
+	can_hold = list(
+		/obj/item/ammo_magazine/c762x51b/bdw
 		)
 
 /obj/item/weapon/storage/belt/suit/ammo/usmc
@@ -297,7 +313,19 @@
 	storage_slots = 4
 	slot_flags = SLOT_BELT
 	can_hold = list(
-		/obj/item/ammo_magazine
+		/obj/item/ammo_magazine/c556x45m,
+		/obj/item/ammo_magazine/c762x51s,
+		/obj/item/ammo_magazine/c45m
+		)
+
+/obj/item/weapon/storage/belt/suit/ammo/usmc/lmg
+	w_class = ITEM_SIZE_HUGE
+	name = "M60 Ammo Pouch"
+	desc = "Have enough space to hold one box."
+	icon_state = "usmc_ammo_lmg"
+	storage_slots = 1
+	can_hold = list(
+		/obj/item/ammo_magazine/c762x51b
 		)
 
 /obj/item/weapon/storage/belt/suit/ammo/sa
@@ -309,7 +337,20 @@
 	storage_slots = 4
 	slot_flags = SLOT_BELT
 	can_hold = list(
-		/obj/item/ammo_magazine
+		/obj/item/ammo_magazine/c545x39m,
+		/obj/item/ammo_magazine/c545x39b,
+		/obj/item/ammo_magazine/c762x54s,
+		/obj/item/ammo_magazine/a9x18
+		)
+
+/obj/item/weapon/storage/belt/suit/ammo/sa/lmg
+	w_class = ITEM_SIZE_HUGE
+	name = "PKM Ammo Pouch"
+	desc = "Have enough space to hold one box."
+	icon_state = "sa_ammo_lmg"
+	storage_slots = 1
+	can_hold = list(
+		/obj/item/ammo_magazine/c762x54b
 		)
 
 /obj/item/weapon/storage/belt/suit/ammo/csla
@@ -321,8 +362,21 @@
 	storage_slots = 4
 	slot_flags = SLOT_BELT
 	can_hold = list(
-		/obj/item/ammo_magazine
+		/obj/item/ammo_magazine/c762x39m,
+		/obj/item/ammo_magazine/c762x54s,
+		/obj/item/ammo_magazine/a9x18
 		)
+
+/obj/item/weapon/storage/belt/suit/ammo/csla/lmg
+	w_class = ITEM_SIZE_HUGE
+	name = "VZ.59 Ammo Pouch"
+	desc = "Have enough space to hold one box."
+	icon_state = "csla_ammo_lmg"
+	storage_slots = 1
+	can_hold = list(
+		/obj/item/ammo_magazine/c762x54b/csla
+		)
+
 
 /obj/item/weapon/storage/belt/suit/surgery
 	w_class = ITEM_SIZE_HUGE

@@ -16,3 +16,13 @@
 
 /obj/item/device/binoculars/attack_self(mob/user)
 	zoom(user)
+
+/obj/item/device/binoculars/wp
+	name = "binoculars"
+	desc = "A pair of binoculars."
+	icon_state = "wp"
+
+/obj/item/device/binoculars/nato
+	name = "binoculars"
+	desc = "A pair of binoculars."
+	icon_state = "nato"
