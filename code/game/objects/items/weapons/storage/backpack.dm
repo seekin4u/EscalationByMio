@@ -404,7 +404,7 @@
 	icon_state = "smaw"
 	item_state = "duffle"
 	storage_slots = 3
-	can_hold = list (/obj/item/ammo_casing/rocket)
+	can_hold = list (/obj/item/ammo_casing/rocket/smaw)
 
 /obj/item/weapon/storage/backpack/gl/usmc
 	name = "Grenade belt"
