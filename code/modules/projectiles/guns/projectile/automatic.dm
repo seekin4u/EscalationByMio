@@ -324,6 +324,7 @@
 /obj/item/weapon/gun/projectile/automatic/ak74/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -397,6 +398,7 @@
 /obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(launcher)
@@ -406,6 +408,7 @@
 /obj/item/weapon/gun/projectile/automatic/ak74gl/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -451,6 +454,7 @@
 /obj/item/weapon/gun/projectile/automatic/aks74/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -495,6 +499,7 @@
 /obj/item/weapon/gun/projectile/automatic/m16a2/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -560,10 +565,21 @@
 
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts",	burst=5, move_delay=8, one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),          dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=8, move_delay=10, one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3), dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
+		list(mode_name="semiauto",      burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),
+		list(mode_name="short bursts",  burst=5, move_delay=8, one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),          dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
+		list(mode_name="long bursts",   burst=8, move_delay=10, one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3), dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
 		)
+
+/obj/item/weapon/gun/projectile/automatic/rpk74/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/update_icon()
 	..()
@@ -648,6 +664,7 @@
 /obj/item/weapon/gun/projectile/automatic/pkm/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -732,6 +749,7 @@
 /obj/item/weapon/gun/projectile/automatic/m60/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -812,6 +830,7 @@
 /obj/item/weapon/gun/projectile/automatic/m14/scoped/verb/scope()
 	set name = "Use scope"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -857,6 +876,7 @@
 /obj/item/weapon/gun/projectile/automatic/m16a1/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -929,6 +949,7 @@
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -939,6 +960,7 @@
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(launcher)
@@ -983,6 +1005,7 @@
 /obj/item/weapon/gun/projectile/automatic/svd/verb/scope()
 	set name = "Use Scope"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -1027,6 +1050,7 @@
 /obj/item/weapon/gun/projectile/automatic/g3a3/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -1098,6 +1122,7 @@
 /obj/item/weapon/gun/projectile/automatic/g3tgs/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -1108,6 +1133,7 @@
 /obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(launcher)
@@ -1151,6 +1177,7 @@
 /obj/item/weapon/gun/projectile/automatic/g3tgs1/verb/scope()
 	set name = "Use scope"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -1197,6 +1224,7 @@
 /obj/item/weapon/gun/projectile/automatic/vz58/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))
@@ -1270,6 +1298,7 @@
 /obj/item/weapon/gun/projectile/automatic/vz58gl/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(launcher)
@@ -1279,6 +1308,7 @@
 /obj/item/weapon/gun/projectile/automatic/vz58gl/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(src.toggle_scope(usr))

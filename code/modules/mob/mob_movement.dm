@@ -220,12 +220,12 @@
 		if(L.incorporeal_move)//Move though walls
 			Process_Incorpmove(direct)
 			return
-		if(mob.client)
+/*		if(mob.client)
 			if(mob.client.view != world.view) // If mob moves while zoomed in with device, unzoom them.
 				for(var/obj/item/item in mob.contents)
 					if(item.zoom)//item's zoom
 						item.zoom(mob)
-						break
+						break*/
 
 	if(!mob.lastarea)
 		mob.lastarea = get_area(mob.loc)

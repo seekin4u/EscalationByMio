@@ -685,6 +685,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	return
 
 /obj/item/weapon/zoom(mob/living/user, forced_zoom, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
+
 	if(!user)
 		return
 
@@ -742,6 +743,8 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		user.client.pixel_y = 0
 		user.client.view = world.view
 		user.visible_message("[zoomdevicename ? "[user] looks up from \the [src.name]" : "[user] lowers \the [src.name]"].")
+
+	return
 
 /obj/item/proc/pwr_drain()
 	return 0 // Process Kill
