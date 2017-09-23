@@ -117,9 +117,11 @@ Please contact me on #coderbus IRC. ~Carn x
 #define SURGERY_LEVEL			3
 #define UNDERWEAR_LAYER         4
 
-#define UNIFORM_LAYER			5
+#define FACEMASK_LAYER			6
 
-#define ID_LAYER				6
+#define UNIFORM_LAYER			7
+
+#define ID_LAYER				8
 
 #define BELT_LAYER				9
 #define SUIT_LAYER				10
@@ -133,7 +135,6 @@ Please contact me on #coderbus IRC. ~Carn x
 
 #define HAIR_LAYER				17
 #define EARS_LAYER				18
-#define FACEMASK_LAYER			19
 
 #define HEAD_LAYER				20
 #define BACK_LAYER				21

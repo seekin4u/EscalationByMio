@@ -21,7 +21,7 @@
 /obj/item/clothing/head/helmet/escalation/vz53
 	name = "Vz. 53 Helmet"
 	desc = "A steel helmet, standard issue to CSLA. It reminds you of the old war."
-	icon_state = "csla"
+	icon_state = "vz53"
 	item_state = "csla"
 
 	body_parts_covered = HEAD
