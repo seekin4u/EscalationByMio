@@ -432,8 +432,6 @@
 		accuracy = scoped_accuracy + scoped_accuracy_mod
 		if(screen_shake)
 			screen_shake = round(screen_shake * (zoom_amount / 5))//5 or 3 is OK //screen shake is worse when looking through a scope
-	do_after(user, INFINITY)
-	zoom(user, FALSE)
 
 //make sure accuracy and screen_shake are reset regardless of how the item is unzoomed.
 /obj/item/weapon/gun/zoom()

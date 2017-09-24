@@ -610,8 +610,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		return 0
 	if(user.client.pixel_x | user.client.pixel_y) //Keep people from looking through two scopes at once
 		if(!silent)
-			user.visible_message("You are too distracted to look through \the [src].")
-			return 0
+			user.seek_and_unzoom()
+			//user.visible_message("You are too distracted to look through \the [src].")
+			//return 0
 		if(user.get_active_hand() != src)
 			if(!silent)
 				user.visible_message(" You are too distracted to look through \the [src].")
@@ -684,7 +685,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 	return
 
-/obj/item/weapon/zoom(mob/living/user, forced_zoom, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
+/obj/item/weapon/zoom(mob/living/user, forced_zoom/*true/false var*/, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
 
 	if(!user)
 		return

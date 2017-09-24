@@ -44,6 +44,9 @@
 	set invisibility = 0
 	set background = BACKGROUND_ENABLED
 
+	if(life_tick % 10)
+		handle_zoom_stuff()
+
 	if (transforming)
 		return
 
