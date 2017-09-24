@@ -30,3 +30,7 @@ AncientV25 = {
 P3N3B10L3NT0 = {
 ::ALL::
 }
+
+Lokiki = {
+::ALL::
+}
