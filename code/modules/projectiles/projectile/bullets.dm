@@ -338,20 +338,62 @@
 	damage = 40
 	armor_penetration = 15
 
-/obj/item/projectile/bullet/gyro/ags30x29mm
+/obj/item/projectile/bullet/ags30x29mm
 	name = "AGS' bullet"
 	icon_state = "vog"
-	damage = 60
-	agony = 20
-	embed = 0
-	edge = 1
+	damage = 90
+	step_delay = 1.2
+	impact_force = 1
+	kill_count = 30
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
-/obj/item/projectile/bullet/gyro/mk19_40x53mm
+//proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
+/obj/item/projectile/bullet/ags30x29mm/on_impact(var/atom/target, var/blocked = 0)
+	explosion(target, -1, 1, 3, 4)
+
+/obj/item/projectile/bullet/ags30x29mm/pow
+	damage = 110
+	agony = 20
+	armor_penetration = 100
+	step_delay = 1.2
+	penetrating = 0
+	kill_count = 35
+
+/obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
+	explosion(target, -1, 2, 3, 4)
+	if(prob(10))
+		target.ex_act(1)
+	..()
+
+/obj/item/projectile/bullet/mk19_40x53mm
 	name = "MK19' bullet"
 	icon_state = "vog" ////////fix
-	damage = 75
-	agony = 20
-	embed = 0
-	edge = 1
-	fire_sound = null//here we gonna use sound in MK and not in bullets
+	damage = 100
+	step_delay = 1.2
+	impact_force = 1
+	kill_count = 30
+
+/obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
+	explosion(target, -1,1,3,4)//a little bit explosive that 30x29
+	..()
+
+/obj/item/projectile/bullet/mk19_40x53mm/pow
+	damage = 120
+	armor_penetration = 100
+	step_delay = 1.2
+	impact_force = 1
+	penetrating = 5
+	kill_count = 35
+
+/obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
+	explosion(target, -1,1,4,5)
+	..()
+
+/obj/item/projectile/bullet/rgprocket
+	icon_state = "rocket1"
+	damage = 150
+	armor_penetration = 100
+	step_delay = 1.5
+
+/obj/item/projectile/bullet/newrocket/on_impact(var/atom/target, blocked = 0)
+	explosion(target, 1,2,4,5)

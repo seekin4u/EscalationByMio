@@ -298,7 +298,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
-	zoom_ammount = 15
+	zoom_ammount = 10
 	wielded_item_state = "ak74-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -309,7 +309,7 @@
 		list(mode_name="semiauto",     burst=1, fire_delay=1,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null,                          automatic = 0),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6),           automatic = 0),
 		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0,0.3, 0.6),            automatic = 0.7),
+		list(mode_name="automatic",    burst=1, fire_delay=0,    move_delay=3, one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0,0.3, 0.6),            automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/ak74/update_icon()
@@ -324,9 +324,10 @@
 /obj/item/weapon/gun/projectile/automatic/ak74/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
-	if(src.toggle_scope(usr, 10))
+	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
 	else
 		to_world("-ShitFuckIronsgs")
@@ -346,18 +347,46 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
+	zoom_ammount = 10
 	wielded_item_state = "ak74gl-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/ak74_cock.ogg'
 
+	var/use_launcher = FALSE
+	var/obj/item/weapon/gun/launcher/grenade/underslung/gp25/launcher
+
 	firemodes = list(
 		list(mode_name="semiauto",     burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
 		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.4),
+		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
 		)
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/New()
+	..()
+	launcher = new(src)
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/attackby(obj/item/I, mob/user)
+	if((istype(I, /obj/item/weapon/grenade)))//load check it for it's type
+		launcher.load(I, user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/attack_hand(mob/user)
+	if(user.get_inactive_hand() == src && use_launcher)
+		launcher.unload(user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
+	if(use_launcher)
+		launcher.Fire(target, user, params, pointblank, reflex)
+		if(!launcher.chambered)
+			switch_firemodes() //switch back automatically
+	else
+		..()
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl/update_icon()
 	..()
@@ -366,6 +395,26 @@
 	else
 		icon_state = "ak74gl-empty"
 
+/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp(mob/user)
+	set name = "Granade launcher"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(launcher)
+		use_launcher = !use_launcher
+		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+
+/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
@@ -382,6 +431,7 @@
 	one_hand_penalty = 2
 	accuracy = 1
 	fire_delay = 2
+	zoom_ammount = 10
 	wielded_item_state = "ak-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -401,6 +451,17 @@
 	else
 		icon_state = "aks74-empty"
 
+/obj/item/weapon/gun/projectile/automatic/aks74/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
+
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
 	desc = "Standard issue rifle of the USMC."
@@ -416,6 +477,7 @@
 	one_hand_penalty = 4
 	accuracy = 2
 	fire_delay = 3
+	zoom_ammount = 10
 	wielded_item_state = "m16-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg'
@@ -433,6 +495,17 @@
 		icon_state = "m16a2"
 	else
 		icon_state = "m16a2-empty"
+
+/obj/item/weapon/gun/projectile/automatic/m16a2/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/coltmodel733
 	name = "Colt Model 733"
@@ -492,10 +565,21 @@
 
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts",	burst=5, move_delay=8, one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),          dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=8, move_delay=10, one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3), dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
+		list(mode_name="semiauto",      burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),
+		list(mode_name="short bursts",  burst=5, move_delay=8, one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),          dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
+		list(mode_name="long bursts",   burst=8, move_delay=10, one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3), dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
 		)
+
+/obj/item/weapon/gun/projectile/automatic/rpk74/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/update_icon()
 	..()
@@ -519,28 +603,29 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x54b
 	one_hand_penalty = 9
+	zoom_ammount = 10
 	wielded_item_state = "lmg-wielded"
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="short bursts",	burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="short bursts",  burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",   burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
 		)
 
-	var/cover_open = 0
+	var/cover_open = FALSE
 
 
 /obj/item/weapon/gun/projectile/automatic/pkm/special_check(mob/user)
 	if(cover_open)
-		user << "<span class='warning'>[src]'s cover is open! Close it before firing!</span>"
-		return 0
+		to_chat(user, "<span class='warning'>[src]'s cover is open! Close it before firing!</span>")
+		return FALSE
 	return ..()
 
 /obj/item/weapon/gun/projectile/automatic/pkm/proc/toggle_cover(mob/user)
 	cover_open = !cover_open
-	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
+	to_chat(user, "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>")
 	update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/pkm/attack_self(mob/user as mob)
@@ -559,13 +644,13 @@
 
 /obj/item/weapon/gun/projectile/automatic/pkm/load_ammo(var/obj/item/A, mob/user)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to load that into [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to load that into [src].</span>")
 		return
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/pkm/unload_ammo(mob/user, var/allow_dump=1)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to unload [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to unload [src].</span>")
 		return
 	..()
 
@@ -576,6 +661,16 @@
 		icon_state = "pkm[cover_open ? "open" : "closed"]-empty"
 	..()
 
+/obj/item/weapon/gun/projectile/automatic/pkm/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/m60
 	name = "M60E1"
@@ -592,6 +687,7 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
+	zoom_ammount = 10
 	wielded_item_state = "lmg-wielded"
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
@@ -599,8 +695,8 @@
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="short bursts",	burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="short bursts",  burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",   burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
 		)
 
 	var/cover_open = 0
@@ -608,13 +704,13 @@
 
 /obj/item/weapon/gun/projectile/automatic/m60/special_check(mob/user)
 	if(cover_open)
-		user << "<span class='warning'>[src]'s cover is open! Close it before firing!</span>"
+		to_chat(user, "<span class='warning'>[src]'s cover is open! Close it before firing!</span>")
 		return 0
 	return ..()
 
 /obj/item/weapon/gun/projectile/automatic/m60/proc/toggle_cover(mob/user)
 	cover_open = !cover_open
-	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
+	to_chat(user,"<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>")
 	update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/m60/attack_self(mob/user as mob)
@@ -633,13 +729,13 @@
 
 /obj/item/weapon/gun/projectile/automatic/m60/load_ammo(var/obj/item/A, mob/user)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to load that into [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to load that into [src].</span>")
 		return
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/m60/unload_ammo(mob/user, var/allow_dump=1)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to unload [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to unload [src].</span>")
 		return
 	..()
 
@@ -649,6 +745,17 @@
 		icon_state = "m60"
 	else
 		icon_state = "m60-empty"
+
+/obj/item/weapon/gun/projectile/automatic/m60/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/mg3
 	name = "MG3"
@@ -670,6 +777,7 @@
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
+	zoom_ammount = 10
 
 	firemodes = list(
 		list(mode_name="short bursts",	burst=6, move_delay=9, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4)),
@@ -681,13 +789,13 @@
 
 /obj/item/weapon/gun/projectile/automatic/mg3/special_check(mob/user)
 	if(cover_open)
-		user << "<span class='warning'>[src]'s cover is open! Close it before firing!</span>"
+		to_chat(user, "<span class='warning'>[src]'s cover is open! Close it before firing!</span>")
 		return 0
 	return ..()
 
 /obj/item/weapon/gun/projectile/automatic/mg3/proc/toggle_cover(mob/user)
 	cover_open = !cover_open
-	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
+	to_chat(user, "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>")
 	update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/mg3/attack_self(mob/user as mob)
@@ -706,13 +814,13 @@
 
 /obj/item/weapon/gun/projectile/automatic/mg3/load_ammo(var/obj/item/A, mob/user)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to load that into [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to load that into [src].</span>")
 		return
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/mg3/unload_ammo(mob/user, var/allow_dump=1)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to unload [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to unload [src].</span>")
 		return
 	..()
 
@@ -722,6 +830,17 @@
 		icon_state = "MG3"
 	else
 		icon_state = "MG3_Empty"
+
+/obj/item/weapon/gun/projectile/automatic/mg3/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/m14
 	name = "M14"
@@ -740,6 +859,7 @@
 	one_hand_penalty = 4
 	accuracy = 3
 	fire_delay = 2
+	zoom_ammount = 10
 	fire_sound = 'sound/weapons/gunshot/m14.ogg'
 	wielded_item_state = "m14-wielded"
 	unload_sound = 'sound/weapons/gunporn/m14_magout.ogg'
@@ -747,9 +867,9 @@
 	cocked_sound = 'sound/weapons/gunporn/m14_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=3, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts",	burst=4, move_delay=8, one_hand_penalty=8, burst_accuracy = list(0,-1,-3,-5,-7),          dispersion = list(1.0, 1.3, 1.6, 2.0, 2.2)),
-		list(mode_name="long bursts",	burst=6, move_delay=10, one_hand_penalty=9, burst_accuracy = list(0,-1,-3,-5,-7), dispersion = list(1.0, 1.3, 1.6, 2.0, 2.4)),
+		list(mode_name="semiauto",      burst=1, fire_delay=0,  move_delay=null,    one_hand_penalty=3,                   burst_accuracy=null, dispersion=null),
+		list(mode_name="short bursts",  burst=4, move_delay=8,  one_hand_penalty=8, burst_accuracy = list(0,-1,-3,-5,-7), dispersion = list(1.0, 1.3, 1.6, 2.0, 2.2)),
+		list(mode_name="long bursts",   burst=6, move_delay=10, one_hand_penalty=9, burst_accuracy = list(0,-1,-3,-5,-7), dispersion = list(1.0, 1.3, 1.6, 2.0, 2.4)),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/m14/update_icon()
@@ -759,6 +879,15 @@
 	else
 		icon_state = "m14-empty"
 
+/obj/item/weapon/gun/projectile/automatic/m14/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/m14/scoped
 	name = "M21"
@@ -767,6 +896,7 @@
 	item_state = "m14"
 	accuracy = 5
 	fire_delay = 3
+	zoom_ammount = 15
 	wielded_item_state = "m14-wielded"
 
 	firemodes = list(
@@ -782,12 +912,16 @@
 	else
 		icon_state = "m14scoped-empty"
 
-/obj/item/weapon/gun/projectile/automatic/m14/verb/scope()
+/obj/item/weapon/gun/projectile/automatic/m14/scoped/verb/scope()
+	set name = "Use scope"
 	set category = "Object"
-	set name = "Use Scope"
+	set src in usr
 	set popup_menu = 1
 
-	toggle_scope(usr, 2.0)
+	if(src.toggle_scope(usr))
+		to_world("Success scope:15")
+	else
+		to_world("-ShitFuckScope")
 
 /obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
 	name = "M16A1"
@@ -804,6 +938,7 @@
 	one_hand_penalty = 4
 	accuracy = 3
 	fire_delay = 3
+	zoom_ammount = 10
 	wielded_item_state = "m16-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg'
@@ -823,6 +958,17 @@
 	else
 		icon_state = "m16a1-empty"
 
+/obj/item/weapon/gun/projectile/automatic/m16a1/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
+
 /obj/item/weapon/gun/projectile/automatic/m16a1gl
 	name = "M16A1"
 	desc = "An M16A1 with M203 grenade launcher."
@@ -838,17 +984,45 @@
 	one_hand_penalty = 4
 	accuracy = 3
 	fire_delay = 3
+	zoom_ammount = 10
 	wielded_item_state = "m16gl-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/m16_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m16_chargeback.ogg'
 
+	var/use_launcher = FALSE
+	var/obj/item/weapon/gun/launcher/grenade/underslung/m203/launcher
+
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),       dispersion=list(0.3, 0.3, 0.6)),
 		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5)),
 		)
+
+/obj/item/weapon/gun/projectile/automatic/m16a1gl/New()
+	..()
+	launcher = new(src)
+
+/obj/item/weapon/gun/projectile/automatic/m16a1gl/attackby(obj/item/I, mob/user)
+	if((istype(I, /obj/item/weapon/grenade)))//launcher.load check it for it's type and handles all another things so don't worry
+		launcher.load(I, user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/m16a1gl/attack_hand(mob/user)
+	if(user.get_inactive_hand() == src && use_launcher)
+		launcher.unload(user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/m16a1gl/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
+	if(use_launcher)
+		launcher.Fire(target, user, params, pointblank, reflex)
+		if(!launcher.chambered)
+			switch_firemodes() //do we need it? :wha:
+	else
+		..()
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/update_icon()
 	..()
@@ -857,6 +1031,26 @@
 	else
 		icon_state = "m16a1gl-empty"
 
+/obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
+
+/obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp(mob/user)
+	set name = "Granade launcher"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(launcher)
+		use_launcher = !use_launcher
+		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/svd
 	name = "SVD"
@@ -875,6 +1069,7 @@
 	one_hand_penalty = 4
 	accuracy = 5
 	fire_delay = 1
+	zoom_ammount = 15
 	fire_sound = 'sound/weapons/gunshot/svd.ogg'
 	wielded_item_state = "m14-wielded"
 	unload_sound = 'sound/weapons/gunporn/svd_magout.ogg'
@@ -892,6 +1087,16 @@
 	else
 		icon_state = "svd-empty"
 
+/obj/item/weapon/gun/projectile/automatic/svd/verb/scope()
+	set name = "Use Scope"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success scope:15")
+	else
+		to_world("-ShitFuckScope")
 
 /obj/item/weapon/gun/projectile/automatic/g3a3
 	name = "G3A3"
@@ -908,6 +1113,7 @@
 	one_hand_penalty = 5
 	accuracy = 4
 	fire_delay = 4
+	zoom_ammount = 10
 	wielded_item_state = "g3a3-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
@@ -926,6 +1132,17 @@
 	else
 		icon_state = "g3a3-empty"
 
+/obj/item/weapon/gun/projectile/automatic/g3a3/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
+
 /obj/item/weapon/gun/projectile/automatic/g3tgs
 	name = "G3TGS"
 	desc = "G3A3 with an HK79 underbarrel grenade launcher."
@@ -941,16 +1158,44 @@
 	one_hand_penalty = 5
 	accuracy = 4
 	fire_delay = 4
+	zoom_ammount = 10
 	wielded_item_state = "g3tgs-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
 	reload_sound = 'sound/weapons/gunporn/m16_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m16_chargeback.ogg'
 
+	var/use_launcher = FALSE
+	var/obj/item/weapon/gun/launcher/grenade/underslung/m203/launcher//m203 underslug uses 40mm shells  like hk69
+
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1),       dispersion=list(0.3, 0.6)),
+		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null),
+		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1), dispersion=list(0.3, 0.6)),
 		)
+
+/obj/item/weapon/gun/projectile/automatic/g3tgs/New()
+	..()
+	launcher = new(src)
+
+/obj/item/weapon/gun/projectile/automatic/g3tgs/attackby(obj/item/I, mob/user)
+	if((istype(I, /obj/item/weapon/grenade)))//launcher.load check it for it's type and handles all another things so don't worry
+		launcher.load(I, user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/g3tgs/attack_hand(mob/user)
+	if(user.get_inactive_hand() == src && use_launcher)
+		launcher.unload(user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/g3tgs/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
+	if(use_launcher)
+		launcher.Fire(target, user, params, pointblank, reflex)
+		if(!launcher.chambered)
+			switch_firemodes() //do we need it? :wha:
+	else
+		..()
 
 /obj/item/weapon/gun/projectile/automatic/g3tgs/update_icon()
 	..()
@@ -958,6 +1203,27 @@
 		icon_state = "g3tgs"
 	else
 		icon_state = "g3tgs-empty"
+
+/obj/item/weapon/gun/projectile/automatic/g3tgs/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
+
+/obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp(mob/user)
+	set name = "Granade launcher"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(launcher)
+		use_launcher = !use_launcher
+		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/g3sg1
 	name = "G3SG1"
@@ -974,6 +1240,7 @@
 	one_hand_penalty = 5
 	accuracy = 4
 	fire_delay = 4
+	zoom_ammount = 15
 	wielded_item_state = "g3sg1-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
@@ -981,8 +1248,8 @@
 	cocked_sound = 'sound/weapons/gunporn/m16_chargeback.ogg'
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1),       dispersion=list(0.3, 0.6)),
+		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null),
+		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1), dispersion=list(0.3, 0.6)),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/g3sg1/update_icon()
@@ -991,6 +1258,17 @@
 		icon_state = "g3sg1"
 	else
 		icon_state = "g3sg1-empty"
+
+/obj/item/weapon/gun/projectile/automatic/g3tgs1/verb/scope()
+	set name = "Use scope"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/vz58
 	name = "Vz.58"
@@ -1007,6 +1285,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
+	zoom_ammount = 10
 	wielded_item_state = "vz58-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -1027,6 +1306,17 @@
 	else
 		icon_state = "vz58-empty"
 
+/obj/item/weapon/gun/projectile/automatic/vz58/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
+
 /obj/item/weapon/gun/projectile/automatic/vz58gl
 	name = "Vz.58 with GP-25"
 	desc = "This Vz.58 modified with soviet 30 mm GP-25 underbarrel grenade laucher."
@@ -1042,11 +1332,15 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
+	zoom_ammount = 10
 	wielded_item_state = "vz58gl-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/ak74_cock.ogg'
+
+	var/use_launcher = FALSE
+	var/obj/item/weapon/gun/launcher/grenade/underslung/gp25/launcher//19.09.17 replace with so retarded gp-70
 
 	firemodes = list(
 		list(mode_name="semiauto",     burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
@@ -1055,12 +1349,57 @@
 		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.4),
 		)
 
+/obj/item/weapon/gun/projectile/automatic/vz58gl/New()
+	..()
+	launcher = new(src)
+
+/obj/item/weapon/gun/projectile/automatic/vz58gl/attackby(obj/item/I, mob/user)
+	if((istype(I, /obj/item/weapon/grenade)))//launcher.load check it for it's type and handles all another things so don't worry
+		launcher.load(I, user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/vz58gl/attack_hand(mob/user)
+	if(user.get_inactive_hand() == src && use_launcher)
+		launcher.unload(user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/vz58gl/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
+	if(use_launcher)
+		launcher.Fire(target, user, params, pointblank, reflex)
+		if(!launcher.chambered)
+			switch_firemodes() //do we need it? :wha:
+	else
+		..()
+
 /obj/item/weapon/gun/projectile/automatic/vz58gl/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "vz58gl"
 	else
 		icon_state = "vz58gl-empty"
+
+/obj/item/weapon/gun/projectile/automatic/vz58gl/verb/set_gp(mob/user)
+	set name = "Granade launcher"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(launcher)
+		use_launcher = !use_launcher
+		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+
+/obj/item/weapon/gun/projectile/automatic/vz58gl/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")
 
 /obj/item/weapon/gun/projectile/automatic/vz59
 	name = "Vz. 59"
@@ -1081,6 +1420,7 @@
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
+	zoom_ammount = 10
 
 	firemodes = list(
 		list(mode_name="short bursts",	burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
@@ -1092,13 +1432,13 @@
 
 /obj/item/weapon/gun/projectile/automatic/vz59/special_check(mob/user)
 	if(cover_open)
-		user << "<span class='warning'>[src]'s cover is open! Close it before firing!</span>"
+		to_chat(user, "<span class='warning'>[src]'s cover is open! Close it before firing!</span>")
 		return 0
 	return ..()
 
 /obj/item/weapon/gun/projectile/automatic/vz59/proc/toggle_cover(mob/user)
 	cover_open = !cover_open
-	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
+	to_chat(user, "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>")
 	update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/vz59/attack_self(mob/user as mob)
@@ -1117,13 +1457,13 @@
 
 /obj/item/weapon/gun/projectile/automatic/vz59/load_ammo(var/obj/item/A, mob/user)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to load that into [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to load that into [src].</span>")
 		return
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/vz59/unload_ammo(mob/user, var/allow_dump=1)
 	if(!cover_open)
-		user << "<span class='warning'>You need to open the cover to unload [src].</span>"
+		to_chat(user, "<span class='warning'>You need to open the cover to unload [src].</span>")
 		return
 	..()
 
@@ -1132,3 +1472,14 @@
 		icon_state = "vz59[cover_open ? "open" : "closed"][round(ammo_magazine.stored_ammo.len, 200)]"
 	else
 		icon_state = "vz59[cover_open ? "open" : "closed"]-empty"
+
+/obj/item/weapon/gun/projectile/automatic/vz59/verb/ironsights()
+	set name = "Use iron sights"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 1
+
+	if(src.toggle_scope(usr))
+		to_world("Success ironsgs")
+	else
+		to_world("-ShitFuckIronsgs")

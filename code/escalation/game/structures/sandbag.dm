@@ -6,7 +6,7 @@
 	throwpass = 1//we can throw grenades despite its density
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/basic_chance = 30
+	var/basic_chance = 60
 
 /obj/structure/sandbag/New()
 	..()
@@ -37,7 +37,6 @@
 			return 1
 
 		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-			to_world("You are located nearly one tile from sandbag.")
 			return 1
 
 		return check_cover(mover, target)
@@ -68,13 +67,11 @@
 	var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
 	if(M)
 		chance += 30
-		//to_world("Mob located!:[chance]")
 
 		if(M.lying)
 			chance += 20
 
 	if(get_dir(loc, from) == dir)
-		//to_world("You fire in front of sandbag:[chance]")
 		chance += 10
 
 	if(prob(chance))
@@ -119,7 +116,6 @@
 	var/sand_amount = 4
 
 /obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
-	to_world("Sandbag's check4sandbags")
 	var/i = 0
 
 	for(var/obj/structure/sandbag/baggy in user.loc.contents)
@@ -131,7 +127,6 @@
 	return 1
 
 /obj/item/weapon/sandbag/proc/check4struct(mob/user as mob)
-	to_world("Sandbag's check4struck")
 	if((locate(/obj/structure/chezh_hangehog) || \
 		locate(/obj/structure/sandbag/concrete_block) || \
 		locate(/obj/structure/brutswehr)) in user.loc.contents \
@@ -145,13 +140,12 @@
 		to_chat(user,  "\red You need more sand to make a wall.")
 		return
 	if(!isturf(user.loc))
-		to_chat(user, "\red Haha.")
+		to_chat(user, "\red Haha, not funny.")
 		return
 
 	if(!check4sandbags(user) || !check4struct(user))
 		return
 
-	to_world("OBJ_LAYER:[OBJ_LAYER]")
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
 	bag.set_dir(user.dir)
 	user.drop_item()

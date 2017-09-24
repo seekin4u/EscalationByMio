@@ -5,8 +5,6 @@
 	icon_state = "brutswer"
 	density = 1
 	throwpass = 1//we can throw grenades despite its density
-//	layer = ABOVE_WINDOW_LAYER + 0.2
-	//plane = ABOVE_HUMAN_PLANE
 	anchored = 1
 	flags = OBJ_CLIMBABLE
 	var/basic_chance = 20
@@ -31,7 +29,6 @@
 			return 1
 
 		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
-			to_world("You are located nearly one tile from brutswehr.")
 			return 1
 
 		return check_cover(mover, target)
@@ -48,13 +45,10 @@
 
 	for(var/mob/living/carbon/human/H in view(src, 2))//if there are mob somewhere near in range of 1 tile
 		chance = initial(chance) + 10
-		to_world("MOB DETECTED NEAR BRUTSWEHR")
 
 	if(prob(chance))
 		visible_message("<span class='warning'>[P] hits \the [src]!</span>")
 		return 0
-
-	to_world("BRUTSWEHR_PROB:[chance]")
 
 	return 1
 
@@ -85,7 +79,6 @@
 	return
 
 /obj/item/weapon/ore/glass/proc/check4struct(mob/user as mob)
-	to_world("Brut's check4struct")
 	if((locate(/obj/structure/chezh_hangehog) || \
 		locate(/obj/structure/brutswehr) || \
 		locate(/obj/structure/sandbag) || \

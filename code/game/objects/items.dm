@@ -610,8 +610,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		return 0
 	if(user.client.pixel_x | user.client.pixel_y) //Keep people from looking through two scopes at once
 		if(!silent)
-			user.visible_message("You are too distracted to look through \the [src].")
-			return 0
+			user.seek_and_unzoom()
+			//user.visible_message("You are too distracted to look through \the [src].")
+			//return 0
 		if(user.get_active_hand() != src)
 			if(!silent)
 				user.visible_message(" You are too distracted to look through \the [src].")
@@ -684,8 +685,8 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 	return
 
-//basically zoom to 5 tiles if not set zoom_ammount
-/obj/item/weapon/zoom(mob/living/user, forced_zoom, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
+/obj/item/weapon/zoom(mob/living/user, forced_zoom/*true/false var*/, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
+
 	if(!user)
 		return
 
@@ -726,9 +727,15 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 							_y += view_offset
 						if(WEST)
 							_x += view_offset
-					animate(user.client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, 4, 1)
+					animate(user.client, pixel_x = world.icon_size * _x, pixel_y = world.icon_size * _y, 4, 1)
+					animate(user.client, pixel_x = 0, pixel_y = 0)
+					user.client.pixel_x = world.icon_size * _x
+					user.client.pixel_y = world.icon_size * _y
 				else // Otherwise just slide the camera
-					animate(user.client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, 4, 1)
+					animate(user.client, pixel_x = world.icon_size * _x, pixel_y = world.icon_size * _y, 4, 1)
+					animate(user.client, pixel_x = 0, pixel_y = 0)
+					user.client.pixel_x = world.icon_size * _x
+					user.client.pixel_y = world.icon_size * _y
 				user.visible_message("[user] peers through the [zoomdevicename ? "[zoomdevicename] of \the [src.name]" : "[src.name]"].")
 			else
 				zoom = FALSE
@@ -737,6 +744,8 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		user.client.pixel_y = 0
 		user.client.view = world.view
 		user.visible_message("[zoomdevicename ? "[user] looks up from \the [src.name]" : "[user] lowers \the [src.name]"].")
+
+	return
 
 /obj/item/proc/pwr_drain()
 	return 0 // Process Kill
@@ -769,9 +778,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	var/mob_icon
 	if(icon_override)
 		mob_icon = icon_override
-		if(slot == 	slot_l_hand_str || slot == slot_l_ear_str)
+		if(slot == slot_l_hand_str || slot == slot_l_ear_str)
 			mob_state = "[mob_state]_l"
-		if(slot == 	slot_r_hand_str || slot == slot_r_ear_str)
+		if(slot == slot_r_hand_str || slot == slot_r_ear_str)
 			mob_state = "[mob_state]_r"
 	else if(use_spritesheet(bodytype, slot, mob_state))
 		if(slot == slot_l_ear)
