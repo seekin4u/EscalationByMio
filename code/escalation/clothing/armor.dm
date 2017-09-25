@@ -95,3 +95,15 @@
 	heat_protection = UPPER_TORSO
 	w_class = ITEM_SIZE_LARGE
 	allowed = list(/obj/item/weapon/storage/belt/suit)
+
+/obj/item/clothing/suit/storage/vest/escalation/trenchcoat
+	w_class = ITEM_SIZE_LARGE
+	name = "Old trenchcoat"
+	desc = "This trench coat saw the Second World War, now it warms the soldiers in a third one. Have a belt for pouches and some pockets."
+	icon_state = "trenchcoat"
+	armor = list(melee = 15, bullet = 10, laser = 20, energy = 20, bomb = 5, bio = 0, rad = 0) // Noone will know..reeeeee
+	siemens_coefficient = 0.9
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	cold_protection = UPPER_TORSO|LOWER_TORSO
+	heat_protection = UPPER_TORSO|LOWER_TORSO
+	allowed = list(/obj/item/weapon/storage/belt/suit)

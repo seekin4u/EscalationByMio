@@ -89,3 +89,10 @@
 	body_parts_covered = HEAD
 	armor = list(melee = 35, bullet = 10, laser = 50,energy = 25, bomb = 20, bio = 0, rad = 0)
 
+/obj/item/clothing/head/helmet/escalation/sa_cap
+	name = "Officer cap"
+	desc = "An uniform headdress of officers."
+	icon_state = "sa_commander"
+	body_parts_covered = HEAD
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+

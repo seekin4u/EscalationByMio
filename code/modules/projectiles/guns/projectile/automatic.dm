@@ -1405,7 +1405,7 @@
 	name = "Vz. 59"
 	desc = "UK vz. 59 is a unified CSLA light machine gun."
 	icon_state = "vz59"
-	item_state = "lmg"
+	item_state = "vz59"
 	w_class = 5
 	force = 15
 	slot_flags = SLOT_BACK_GUN
@@ -1416,15 +1416,16 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x54b/csla
 	one_hand_penalty = 9
-	wielded_item_state = "lmg-wielded"
+	wielded_item_state = "vz59-wielded"
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 	zoom_ammount = 10
 
 	firemodes = list(
-		list(mode_name="short bursts",	burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="short bursts", burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",  burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="automatic",    burst=1, fire_delay=0.4,  move_delay=3,    one_hand_penalty=14, burst_accuracy=list(1,-1,-2),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.6)
 		)
 
 	var/cover_open = 0
@@ -1468,7 +1469,7 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/vz59/update_icon()
-	if(istype(ammo_magazine, /obj/item/ammo_magazine/c762x54b))
+	if(istype(ammo_magazine, /obj/item/ammo_magazine/c762x54b/csla))
 		icon_state = "vz59[cover_open ? "open" : "closed"][round(ammo_magazine.stored_ammo.len, 200)]"
 	else
 		icon_state = "vz59[cover_open ? "open" : "closed"]-empty"
