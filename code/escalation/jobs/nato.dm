@@ -223,7 +223,7 @@
 	title = "US Radio Operator"
 	name = "Radio Operator"
 	english_name = "Lance-Corporal"
-	enabled = 1
+	enabled = 0
 	rank_prefix = "LCpl."
 	rank_number = 4
 	position = "fireteam"
@@ -320,5 +320,45 @@
 	enabled = 1
 	rank_prefix = "Pfc."
 	position = "team"
+	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/usmc/assaultcom
+	title = "US Assault Squad Commander"
+	name = "Assault Squad Commander"
+	english_name = "Cpl."
+	enabled = 1
+	rank_prefix = "Cpl."
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/usmc/assaultcom
+	title = "US Assault Squad Commander"
+	name = "Assault Squad Commander"
+	english_name = "Cpl."
+	enabled = 1
+	rank_prefix = "Cpl."
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/usmc/assaultgunner
+	title = "US Grenadier"
+	name = "Grenadier"
+	english_name = "PFC."
+	enabled = 1
+	rank_prefix = "PFC."
+	position = "fireteam"
+	amount = 2
+	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/usmc/assaultass
+	title = "US Grenadier Assistant"
+	name = "Grenadier Assistant"
+	english_name = "PFC."
+	enabled = 1
+	rank_prefix = "PFC."
+	position = "fireteam"
 	amount = 2
 	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
