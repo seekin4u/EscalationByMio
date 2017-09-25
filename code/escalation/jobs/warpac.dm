@@ -343,7 +343,7 @@
 	enabled = 1
 	rank_prefix = "Serzh."
 	rank_number = 5
-	position = "team"
+	position = "fireteam"
 	amount = 2
 	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
@@ -354,7 +354,7 @@
 	enabled = 1
 	rank_prefix = "Ryad."
 	rank_number = 7
-	position = "team"
+	position = "fireteam"
 	amount = 2
 	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
@@ -365,7 +365,7 @@
 	enabled = 1
 	rank_prefix = "Ryad."
 	rank_number = 7
-	position = "team"
+	position = "fireteam"
 	amount = 2
 	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
@@ -379,3 +379,58 @@
 	position = "team"
 	amount = 1
 	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
+
+/datum/job/escalation/cccp/reconcom
+	title = "CCCP Comandir Razvedotdeleniya"
+	name = "Comandir Razvedotdeleniya"
+	english_name = "Scout Team Commander"
+	enabled = 1
+	rank_prefix = "Serzh." //Ryadovoy
+	rank_number = 5
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 50, LANGUAGE_ENGLISH = 50, LANGUAGE_GERMAN = 50)
+
+/datum/job/escalation/cccp/reconcomdep
+	title = "CCCP Zamkomandira Razvedotdeleniya"
+	name = "Zamkomandira Razvedotdeleniya"
+	english_name = "Scout Team Deputy Commander"
+	enabled = 1
+	rank_prefix = "Yefr."
+	rank_number = 6
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 30, LANGUAGE_GERMAN = 30)
+
+/datum/job/escalation/cccp/reconradio
+	title = "CCCP Razvedchik-Radist"
+	name = "Razvedchik-Radist"
+	english_name = "Scout-Radiomen"
+	enabled = 1
+	rank_prefix = "Ryad."
+	rank_number = 7
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 50, LANGUAGE_ENGLISH = 50, LANGUAGE_GERMAN = 50)
+
+/datum/job/escalation/cccp/reconmarks
+	title = "CCCP Razvedchik-Snayper"
+	name = "Razvedchik-Snayper"
+	english_name = "Scout-Marksmen"
+	enabled = 1
+	rank_prefix = "Yefr."
+	rank_number = 6
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 30, LANGUAGE_GERMAN = 30)
+
+/datum/job/escalation/cccp/recon
+	title = "CCCP Razvedchik"
+	name = "Razvedchik"
+	english_name = "Scout"
+	enabled = 1
+	rank_prefix = "Ryad."
+	rank_number = 7
+	position = "fireteam"
+	amount = 1
+	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 30, LANGUAGE_GERMAN = 30)
