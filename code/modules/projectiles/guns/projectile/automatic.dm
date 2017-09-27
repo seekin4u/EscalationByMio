@@ -315,7 +315,7 @@
 		)
 
 /obj/item/weapon/gun/projectile/automatic/ak74/New()
-	src.verbs -= remove_bayonet()
+	src.verbs -= /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/ak74/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -329,7 +329,7 @@
 		src.force += W.force
 		to_world("[src.name].FORCE:[src.force]")
 		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
-		src.verbs += remove_bayonet()
+		src.verbs += /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 	..()
 
@@ -374,7 +374,7 @@
 		src.sharp = initial(sharp)
 		src.force = initial(force)
 		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
-		src.verbs -= remove_bayonet()
+		src.verbs -= /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl
