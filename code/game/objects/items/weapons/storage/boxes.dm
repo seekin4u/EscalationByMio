@@ -490,7 +490,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c545x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/weapon/grenade/frag = 2
 		)
 
@@ -505,7 +505,7 @@
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c545x39m = 3,
 		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/sa
+		/obj/item/weapon/material/knife/bayonet/sa
 		)
 
 /obj/item/weapon/storage/box/cargo/sa/grenadier
@@ -516,7 +516,7 @@
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/rpgsa,
 		/obj/item/ammo_casing/rocket = 3,
-		/obj/item/weapon/material/knife/sa
+		/obj/item/weapon/material/knife/bayonet/sa
 		)
 
 /obj/item/weapon/storage/box/cargo/sa/grenadier/assistant
@@ -527,7 +527,7 @@
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/rpgsa/assistant,
 		/obj/item/ammo_casing/rocket = 3,
-		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/weapon/grenade/frag
 		)
 
@@ -537,7 +537,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x54s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/weapon/mine/soviet = 2,
 		/obj/item/device/binoculars/wp
 		)
@@ -548,7 +548,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x54b = 3,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/weapon/storage/belt/suit/ammo/sa/lmg = 2
 		)
 
@@ -558,7 +558,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c545x39m = 5,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/weapon/grenade/frag,
 		/obj/item/weapon/grenade/frag/high_yield,
 		/obj/item/device/binoculars/wp,
@@ -571,7 +571,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c545x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/sa,
+		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/weapon/grenade/frag/high_yield = 2,
 		/obj/item/weapon/storage/backpack/gl/sa
 		)
@@ -589,7 +589,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/weapon/grenade/frag = 2
 		)
 
@@ -604,7 +604,7 @@
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c762x39m = 3,
 		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/csla
+		/obj/item/weapon/material/knife/bayonet/csla
 		)
 
 /obj/item/weapon/storage/box/cargo/csla/grenadier
@@ -615,7 +615,7 @@
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/rpgcsla,
 		/obj/item/ammo_casing/rocket = 3,
-		/obj/item/weapon/material/knife/csla
+		/obj/item/weapon/material/knife/bayonet/csla
 		)
 
 /obj/item/weapon/storage/box/cargo/csla/grenadier/assistant
@@ -626,7 +626,7 @@
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/rpgcsla/assistant,
 		/obj/item/ammo_casing/rocket = 3,
-		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/weapon/grenade/frag
 		)
 
@@ -636,7 +636,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x54s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/weapon/mine/soviet = 2,
 		/obj/item/device/binoculars/wp
 		)
@@ -647,7 +647,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x54b/csla = 3,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/weapon/storage/belt/suit/ammo/csla/lmg = 2
 		)
 
@@ -657,7 +657,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x39m = 5,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/weapon/grenade/frag,
 		/obj/item/weapon/grenade/frag/high_yield,
 		/obj/item/device/binoculars/wp,
@@ -670,7 +670,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/csla,
+		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/weapon/grenade/frag/high_yield = 2,
 		/obj/item/weapon/storage/backpack/gl/csla
 		)
@@ -688,7 +688,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c556x45m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/grenade/frag = 2
 		)
 
@@ -703,7 +703,7 @@
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c556x45m = 3,
 		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/usmc
+		/obj/item/weapon/material/knife/bayonet/usmc
 		)
 
 /obj/item/weapon/storage/box/cargo/usmc/grenadier
@@ -714,7 +714,7 @@
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/smaw,
 		/obj/item/ammo_casing/rocket = 3,
-		/obj/item/weapon/material/knife/usmc
+		/obj/item/weapon/material/knife/bayonet/usmc
 		)
 
 /obj/item/weapon/storage/box/cargo/usmc/grenadier/assistant
@@ -725,7 +725,7 @@
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/smaw,
 		/obj/item/ammo_casing/rocket = 3,
-		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/grenade/frag
 		)
 
@@ -735,7 +735,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x51s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/mine/usmc = 2,
 		/obj/item/device/binoculars/nato
 		)
@@ -746,7 +746,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x51b = 3,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/storage/belt/suit/ammo/usmc/lmg = 2
 		)
 
@@ -756,7 +756,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c556x45m = 5,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/grenade/frag,
 		/obj/item/weapon/grenade/frag/high_yield,
 		/obj/item/device/binoculars/nato,
@@ -769,7 +769,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c556x45m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/usmc,
+		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/grenade/frag/high_yield = 2,
 		/obj/item/weapon/storage/backpack/gl/usmc
 		)
@@ -787,7 +787,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x51s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/material/knife/bayonet/bdw,
 		/obj/item/weapon/grenade/frag = 2
 		)
 
@@ -802,7 +802,7 @@
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c762x51s = 3,
 		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/bdw
+		/obj/item/weapon/material/knife/bayonet/bdw
 		)
 
 /obj/item/weapon/storage/box/cargo/bdw/grenadier
@@ -812,7 +812,7 @@
 		/obj/item/ammo_magazine/c762x51s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/gl/bdw/big,
-		/obj/item/weapon/material/knife/bdw
+		/obj/item/weapon/material/knife/bayonet/bdw
 		)
 
 /obj/item/weapon/storage/box/cargo/bdw/grenadier/assistant
@@ -822,7 +822,7 @@
 		/obj/item/ammo_magazine/c762x51s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/gl/bdw/big,
-		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/material/knife/bayonet/bdw,
 		/obj/item/weapon/grenade/frag
 		)
 
@@ -832,7 +832,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x51s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/material/knife/bayonet/bdw,
 		/obj/item/weapon/mine/usmc = 2,
 		/obj/item/device/binoculars/nato
 		)
@@ -843,7 +843,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x51b/bdw = 5,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/material/knife/bayonet/bdw,
 		/obj/item/weapon/storage/belt/suit/ammo/bdw/lmg = 2
 		)
 
@@ -853,7 +853,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x51s = 5,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/material/knife/bayonet/bdw,
 		/obj/item/weapon/grenade/frag,
 		/obj/item/weapon/grenade/frag/high_yield,
 		/obj/item/device/binoculars/nato,
@@ -866,7 +866,7 @@
 	startswith = list(
 		/obj/item/ammo_magazine/c762x51s = 7,
 		/obj/item/weapon/storage/firstaid/combat,
-		/obj/item/weapon/material/knife/bdw,
+		/obj/item/weapon/material/knife/bayonet/bdw,
 		/obj/item/weapon/grenade/frag/high_yield = 2,
 		/obj/item/weapon/storage/backpack/gl/bdw
 		)
