@@ -100,8 +100,8 @@
 				droplimb(0, DROPLIMB_BURN)
 			else if(brute >= max_damage / DROPLIMB_THRESHOLD_DESTROY && prob(brute))
 				droplimb(0, DROPLIMB_BLUNT)
-			else if(brute >= max_damage / DROPLIMB_THRESHOLD_TEAROFF && prob(brute/3))
-				droplimb(0, DROPLIMB_EDGE)
+			//else if(brute >= max_damage / DROPLIMB_THRESHOLD_TEAROFF && prob(brute/3))
+			//	droplimb(0, DROPLIMB_EDGE)
 
 	if(owner && update_damstate())
 		owner.UpdateDamageIcon()
