@@ -305,6 +305,8 @@
 	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/ak74_cock.ogg'
 
+	var/obj/item/weapon/material/knife/bayonet/sa/knife = FALSE
+
 	firemodes = list(
 		list(mode_name="semiauto",     burst=1, fire_delay=1,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null,                          automatic = 0),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6),           automatic = 0),
@@ -312,8 +314,35 @@
 		list(mode_name="automatic",    burst=1, fire_delay=0,    move_delay=3, one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0,0.3, 0.6),            automatic = 0.7),
 		)
 
+/obj/item/weapon/gun/projectile/automatic/ak74/New()
+	src.verbs -= remove_bayonet()
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/ak74/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/weapon/material/knife/bayonet/sa))
+		knife = W
+		user.drop_item()
+		W.loc = src
+		src.attack_verb = W.attack_verb
+		src.sharp += W.sharp
+		to_world("[src.name].SHARP:[src.sharp]")
+		src.force += W.force
+		to_world("[src.name].FORCE:[src.force]")
+		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		src.verbs += remove_bayonet()
+		update_icon()
+	..()
+
 /obj/item/weapon/gun/projectile/automatic/ak74/update_icon()
 	..()
+	if(knife)
+		var/image/I = image('icons/escalation/obj/bayonets.dmi', src, "bayonet-sa")
+		I.pixel_x += 5
+		I.pixel_y += 5
+		overlays += I
+	else
+		overlays.Cut()
+
 	if(ammo_magazine)
 		icon_state = "ak74"
 		item_state = "ak74"
@@ -331,6 +360,22 @@
 		to_world("Success ironsgs")
 	else
 		to_world("-ShitFuckIronsgs")
+
+/obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet(mob/user)
+	set name = "Remove bayonet"
+	set category = "Object"
+	set popup_menu = 1
+
+	if(knife)
+		knife.loc = usr
+		usr.put_in_hands(knife)
+		knife = FALSE
+		src.attack_verb = initial(attack_verb)
+		src.sharp = initial(sharp)
+		src.force = initial(force)
+		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		src.verbs -= remove_bayonet()
+		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl
 	name = "AK-74"
