@@ -99,7 +99,7 @@
 			else if(burn >= max_damage / DROPLIMB_THRESHOLD_DESTROY && prob(burn/3))
 				droplimb(0, DROPLIMB_BURN)
 			else if(brute >= max_damage / DROPLIMB_THRESHOLD_DESTROY && prob(brute))
-				droplimb(0, DROPLIMB_BLUNT)
+				droplimb(0, DROPLIMB_EDGE)//Was DROPLIMB_BLUNT
 			//else if(brute >= max_damage / DROPLIMB_THRESHOLD_TEAROFF && prob(brute/3))
 			//	droplimb(0, DROPLIMB_EDGE)
 
