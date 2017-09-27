@@ -1,7 +1,7 @@
-/datum/category_item/player_setup_item/general/background
+/*/datum/category_item/player_setup_item/general/background
 	name = "Background"
 	sort_order = 5
-
+*/
 /datum/category_item/player_setup_item/general/background/load_character(var/savefile/S)
 	S["med_record"]				>> pref.med_record
 	S["sec_record"]				>> pref.sec_record
