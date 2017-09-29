@@ -179,13 +179,6 @@
 	departure_message = "URAL GO HOMEEEEEE."
 	..()
 
-/datum/shuttle/ferry/ural
-	name = "Ural1"
-	warmup_time = 1
-	docking_controller_tag = "ural_1"
-	area_offsite = /area/shuttle/truck/ural/start
-	area_station = /area/shuttle/truck/ural/finish
-
 /*datum/shuttle/multi_shuttle/skipjack
 	name = "Skipjack"
 	warmup_time = 0

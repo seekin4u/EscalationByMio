@@ -21,6 +21,7 @@
 	//#include "coldwar-2.dmm"
 	//#include "coldwar-2fortests.dmm"
 	#include "coldwar-4.dmm"//transition level
+	#include "sukablyat.dmm"
 	#include "main_bg.dmm"
 
 	//to add new sounds - go by this path and add new 'path' to list.
