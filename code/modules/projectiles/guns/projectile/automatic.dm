@@ -1371,6 +1371,7 @@
 
 	if(knife)
 		var/image/I = image('icons/escalation/obj/bayonets.dmi', src, "bayonet-bwd")
+		I.pixel_x += 6
 		I.pixel_y += 13
 		overlays += I
 	else
