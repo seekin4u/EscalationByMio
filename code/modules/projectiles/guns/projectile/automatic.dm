@@ -352,6 +352,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -450,6 +451,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -539,6 +541,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -611,6 +614,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -703,6 +707,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -795,6 +800,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -879,6 +885,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -963,12 +970,14 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
 	else
 		to_world("-ShitFuckIronsgs")
 
+//DO NOT USE
 /obj/item/weapon/gun/projectile/automatic/m14
 	name = "M14"
 	desc = "M14 Rifle, formerly standard issue battle rifle of the USMC."
@@ -1086,6 +1095,7 @@
 	set name = "Use scope"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success scope:15")
@@ -1159,6 +1169,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -1247,6 +1258,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -1301,6 +1313,7 @@
 	set name = "Use Scope"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success scope:15")
@@ -1358,8 +1371,7 @@
 
 	if(knife)
 		var/image/I = image('icons/escalation/obj/bayonets.dmi', src, "bayonet-bwd")
-		I.pixel_x += 5
-		I.pixel_y += 5
+		I.pixel_y += 13
 		overlays += I
 	else
 		overlays.Cut()
@@ -1373,6 +1385,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -1460,6 +1473,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -1470,6 +1484,7 @@
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(launcher)
 		use_launcher = !use_launcher
@@ -1513,6 +1528,7 @@
 	set name = "Use scope"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -1587,6 +1603,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -1676,6 +1693,7 @@
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(launcher)
 		use_launcher = !use_launcher
@@ -1685,6 +1703,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
@@ -1768,6 +1787,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 0
 
 	if(src.toggle_scope(usr))
 		to_world("Success ironsgs")
