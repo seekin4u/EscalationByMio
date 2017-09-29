@@ -19,10 +19,10 @@
 	parent_turf.overlays.Cut(border_start,borders+border_start)
 	border_start = parent_turf.overlays.len//store the position in the list
 	borders = 0
-	WARNING(WEST)
+	/*WARNING(WEST)
 	WARNING(SOUTH)
 	WARNING(NORTH)
-	WARNING(EAST)
+	WARNING(EAST)*/
 	for(var/i = 0, i <= 3, i++)
 		var/overlay_dir = 2 ** i
 		var/turf/target_turf = get_turf(get_step(src,overlay_dir))

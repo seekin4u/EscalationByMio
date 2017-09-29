@@ -4,7 +4,7 @@
 	var/cloaked = 1
 	var/at_origin = 1
 	var/returned_home = 0
-	var/move_time = 50//150 is ok
+	var/move_time = 10//150 is ok
 
 	var/cooldown = 5
 	var/last_move = 0   //the time at which we last moved
