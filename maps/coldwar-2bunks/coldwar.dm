@@ -18,9 +18,10 @@
 	#include "../shared/exodus_torch/_include.dm"
 
 	#include "coldwar-1.dmm"
-	#include "coldwar-2.dmm"
-	#include "coldwar-2fortests.dmm"
-	#include "coldwar-4.dmm"
+	//#include "coldwar-2.dmm"
+	//#include "coldwar-2fortests.dmm"
+	#include "coldwar-4.dmm"//transition level
+	#include "main_bg.dmm"
 
 	//to add new sounds - go by this path and add new 'path' to list.
 	#include "../../code/escalation/modules/lobby_music/random_lobby.dm"
