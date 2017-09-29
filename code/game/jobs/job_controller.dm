@@ -497,6 +497,9 @@ var/global/datum/controller/occupations/job_master
 				W.buckled_mob = H
 				W.add_fingerprint(H)
 
+		if(job.military_faction)//Assigns the military faction to the mob.
+			H.military_faction = job.military_faction
+
 		to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
 
 		if(job.supervisors)

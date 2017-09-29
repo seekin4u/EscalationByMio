@@ -31,6 +31,8 @@
 
 	var/announced						  //If their arrival is announced on radio
 
+	var/military_faction				  //Whether they are apart the NATO or WARPAC faction. Not really sure of a better way to do this right now.
+
 /datum/job/proc/equip(var/mob/living/carbon/human/H, var/alt_title, var/datum/mil_branch/branch)
 	var/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title, branch)
 	if(!outfit)

@@ -7,6 +7,7 @@
 	enabled = 0
 	faction_tag = "csla" //The tag of the faction this job is a part of ("bund", "csla"), for lookups
 	outfit_type = /decl/hierarchy/outfit/escalation/warpac/csla
+	military_faction = WARPAC
 
 /datum/job/escalation/csla/lieutenant
 	title = "CZ Poruchik"
@@ -155,6 +156,7 @@
 	enabled = 0
 	faction_tag = "cccp"
 	outfit_type = /decl/hierarchy/outfit/escalation/warpac/cccp
+	military_faction = WARPAC
 
 /datum/job/escalation/cccp/leader
 	title = "CCCP Komandir Vzvoda"

@@ -7,6 +7,7 @@
 	enabled = 0
 	faction_tag = "bund" //The tag of the faction this job is a part of, for lookups
 	outfit_type = /decl/hierarchy/outfit/escalation/nato/bundes
+	military_faction = NATO
 
 /datum/job/escalation/bund/platoonleader
 	title = "DE Zugfuhrer"
@@ -162,6 +163,7 @@
 	title = "US"
 	enabled = 0
 	faction_tag = "usmc"
+	military_faction = NATO
 
 /datum/job/escalation/usmc/lieu
 	title = "US Lieutenant"

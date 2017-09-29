@@ -172,3 +172,5 @@
 	var/datum/job/escalation/chosenSlot = null
 	var/datum/army_faction/team_picked = null
 	var/datum/fireteam/fireteam_picked = null
+
+	var/military_faction = 0

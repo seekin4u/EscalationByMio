@@ -47,7 +47,10 @@
 
 	if(istype(speaker, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = speaker
-		speaker_name = H.GetVoice()
+		if(H.military_faction != src.military_faction)//So if they're not apart of the same military faction as us, then we don't know their name.
+			speaker_name = "Unknown"
+		else
+			speaker_name = H.GetVoice()
 
 	if(italics)
 		message = "<i>[message]</i>"
@@ -125,7 +128,10 @@
 
 	if(istype(speaker, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = speaker
-		if(H.voice)
+		if(H.military_faction != src.military_faction)//So if they're not apart of the same military faction as us, then we don't know their name.
+			speaker_name = "Unknown"
+		
+		else if(H.voice)
 			speaker_name = H.voice
 
 	if(hard_to_hear)
