@@ -308,6 +308,8 @@ proc/age2agedescription(age)
 	return dead_mob_list_.Remove(src)
 
 /mob/living/carbon/human/proc/handle_zoom_stuff(var/ghosting = FALSE)
+	if(!client)
+		return
 	if (stat == UNCONSCIOUS || stat == DEAD || ghosting)
 		if(client.pixel_x || client.pixel_y) //Cancel currently scoped weapons
 			src.seek_and_unzoom()
