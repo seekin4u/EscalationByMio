@@ -177,7 +177,7 @@
 //they used f1 also as a offensive grenade
 
 /obj/item/weapon/grenade/frag/rg42
-	name = "RG-4 grenade"
+	name = "RG-42 grenade"
 	desc = "That's a defensive grenade used by Czech army."
 	icon_state = "rg42grenade"
 	throw_speed = 2

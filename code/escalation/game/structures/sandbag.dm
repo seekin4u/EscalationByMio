@@ -3,7 +3,8 @@
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "sandbag"
 	density = 1
-	throwpass = 1//we can throw grenades despite its density
+	//if(A.density && !A.throwpass) src.throw_impact(A,speed)
+	throwpass = 0//we can throw grenades despite its density
 	anchored = 1
 	flags = OBJ_CLIMBABLE
 	var/basic_chance = 60

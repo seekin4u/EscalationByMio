@@ -4,7 +4,7 @@
 	//icon = 'icons/obj/structures.dmi'
 	icon_state = "brutswer"
 	density = 1
-	throwpass = 1//we can throw grenades despite its density
+	throwpass = 0//we can throw grenades despite its density
 	anchored = 1
 	flags = OBJ_CLIMBABLE
 	var/basic_chance = 20

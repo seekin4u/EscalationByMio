@@ -5,7 +5,7 @@
 	icon_state = "tank_trap"
 	anchored = 0
 	density = 1
-	throwpass = 1
+	throwpass = 0
 	layer = OBJ_LAYER + 0.1
 	flags = OBJ_CLIMBABLE
 
