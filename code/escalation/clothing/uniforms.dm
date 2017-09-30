@@ -55,8 +55,8 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/escalation/czech
-	name = "Czech field uniform" // change this
-	winter_name = "Czech winter field uniform"
+	name = "Czechoslovak field uniform"
+	winter_name = "Czechoslovak winter field uniform"
 	desc = "Field uniform consisting of a long BDU jacket, large collar, and field trousers."
 	winter_desc = "An uniform with liners for additional warmth. Consists of a BDU jacket and trousers."
 	icon_state = "czech_winter"
@@ -66,8 +66,8 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/escalation/czech_officer
-	name = "Czech officer field uniform"
-	winter_name = "Czech officer winter field uniform"
+	name = "Czechoslovak officer field uniform"
+	winter_name = "Czechoslovak officer winter field uniform"
 	desc = "Field uniform consisting of a long BDU jacket, large collar, and field trousers."
 	winter_desc = "An uniform with liners for additional warmth. Consists of a BDU jacket and trousers. Has a natural fur on the collar."
 	icon_state = "czech_winter_officer"

@@ -434,5 +434,5 @@
 	rank_prefix = "Ryad."
 	rank_number = 7
 	position = "fireteam"
-	amount = 1
+	amount = 2
 	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 30, LANGUAGE_GERMAN = 30)
