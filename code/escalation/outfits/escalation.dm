@@ -58,6 +58,15 @@
 /decl/hierarchy/outfit/escalation/nato/usmc/hwsass
 	name = "USMC HWS Assistant"
 
+/datum/job/escalation/usmc/assaultcom
+	name = "USMC AS Commander"
+
+/datum/job/escalation/usmc/assaultgunner
+	name = "USMC Grenadier"
+
+/datum/job/escalation/usmc/assaultass
+	name = "USMC Grenadier Assistant"
+
 ///////////////////////BUNDESWEHR////////////////////////
 
 /decl/hierarchy/outfit/escalation/nato/bundes
@@ -181,6 +190,26 @@
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/hwsass
 	name = "Soviet HWS Assistant"
+
+/datum/job/escalation/cccp/reconcom
+	name = "Soviet Scout Commander"
+	uniform = /obj/item/clothing/under/escalation/berezka
+
+/datum/job/escalation/cccp/reconcomdep
+	name = "Soviet Scout Deputy Commander"
+	uniform = /obj/item/clothing/under/escalation/berezka
+
+/datum/job/escalation/cccp/reconradio
+	name = "Soviet Scout Radist"
+	uniform = /obj/item/clothing/under/escalation/berezka
+
+/datum/job/escalation/cccp/reconmarks
+	name = "Soviet Scout Marksmen"
+	uniform = /obj/item/clothing/under/escalation/berezka
+
+/datum/job/escalation/cccp/recon
+	name = "Soviet Scout"
+	uniform = /obj/item/clothing/under/escalation/berezka
 
 //////////////////////////CSLA/////////////////////////////////////////
 

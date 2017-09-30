@@ -335,16 +335,6 @@
 	amount = 1
 	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
-/datum/job/escalation/usmc/assaultcom
-	title = "US Assault Squad Commander"
-	name = "Assault Squad Commander"
-	english_name = "Cpl."
-	enabled = 1
-	rank_prefix = "Cpl."
-	position = "fireteam"
-	amount = 1
-	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
-
 /datum/job/escalation/usmc/assaultgunner
 	title = "US Grenadier"
 	name = "Grenadier"
