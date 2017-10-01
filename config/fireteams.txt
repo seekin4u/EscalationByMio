@@ -109,8 +109,12 @@ Razvedka:cccp
 1.Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
-/datum/job/escalation/usmc/squadradio
+/datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/grunt
+/datum/job/escalation/usmc/grunt
+/datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
@@ -119,8 +123,12 @@ Razvedka:cccp
 2.Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
-/datum/job/escalation/usmc/squadradio
+/datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/grunt
+/datum/job/escalation/usmc/grunt
+/datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
@@ -129,8 +137,12 @@ Razvedka:cccp
 3.Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
-/datum/job/escalation/usmc/squadradio
+/datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/machinegunner
+/datum/job/escalation/usmc/grunt
+/datum/job/escalation/usmc/grunt
+/datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
 /datum/job/escalation/usmc/grunt
@@ -142,7 +154,7 @@ Razvedka:cccp
 /datum/job/escalation/usmc/hwsass
 @END@
 
-2.hws:usmc
+2.HWS:usmc
 /datum/job/escalation/usmc/hwscom
 /datum/job/escalation/usmc/hwsgun
 /datum/job/escalation/usmc/hwsass
@@ -162,6 +174,8 @@ Assault:usmc
 /datum/job/escalation/bund/machinegunner
 /datum/job/escalation/bund/grenadier
 /datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/radio
+/datum/job/escalation/bund/sniper
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
@@ -173,6 +187,8 @@ Assault:usmc
 /datum/job/escalation/bund/machinegunner
 /datum/job/escalation/bund/grenadier
 /datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/radio
+/datum/job/escalation/bund/sniper
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
@@ -184,6 +200,8 @@ Assault:usmc
 /datum/job/escalation/bund/machinegunner
 /datum/job/escalation/bund/grenadier
 /datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/radio
+/datum/job/escalation/bund/sniper
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
@@ -195,6 +213,8 @@ Assault:usmc
 /datum/job/escalation/bund/machinegunner
 /datum/job/escalation/bund/grenadier
 /datum/job/escalation/bund/grenadierass
+/datum/job/escalation/bund/radio
+/datum/job/escalation/bund/sniper
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
 /datum/job/escalation/bund/grunt
