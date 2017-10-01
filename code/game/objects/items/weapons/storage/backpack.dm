@@ -412,6 +412,7 @@
 	icon_state = "usmc_ugl"
 	item_state = null
 	storage_slots = 6
+	can_hold = list (/obj/item/weapon/grenade/frag/shell40mm)
 
 /obj/item/weapon/storage/backpack/gl/bdw
 	name = "Grenade belt"
@@ -419,6 +420,7 @@
 	icon_state = "bdw_ugl"
 	item_state = null
 	storage_slots = 6
+	can_hold = list (/obj/item/weapon/grenade/frag/shell40mm)
 
 /obj/item/weapon/storage/backpack/gl/bdw/big
 	name = "Grenade belt"
@@ -426,15 +428,18 @@
 	icon_state = "bdw_hk69"
 	item_state = null
 	storage_slots = 12
+	can_hold = list (/obj/item/weapon/grenade/frag/shell40mm)
 
 /obj/item/weapon/storage/backpack/gl/sa
 	name = "Grenade satchel"
 	desc = "SA grenade satchel."
 	icon_state = "sa_ugl"
 	storage_slots = 6
+	can_hold = list (/obj/item/weapon/grenade/frag/vog25)
 
 /obj/item/weapon/storage/backpack/gl/csla
 	name = "Grenade satchel"
 	desc = "CSLA grenade satchel."
 	icon_state = "csla_ugl"
 	storage_slots = 6
+	can_hold = list (/obj/item/weapon/grenade/frag/vog25)
