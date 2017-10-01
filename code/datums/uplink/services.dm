@@ -164,8 +164,6 @@
 	service_label = "Radiation Storm Announcement"
 
 /obj/item/device/uplink_service/fake_rad_storm/enable(var/mob/user = usr)
-	var/datum/event_meta/EM = new(EVENT_LEVEL_MUNDANE, "Fake Radiation Storm", add_to_queue = 0)
-	new/datum/event/radiation_storm/syndicate(EM)
 	. = ..()
 
 /***************************

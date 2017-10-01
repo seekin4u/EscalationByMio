@@ -853,12 +853,6 @@
 			return global.meteors_catastrophic;
 		if("meteors_dust")
 			return global.meteors_dust;
-		if("meteors_major")
-			return global.meteors_major;
-		if("meteors_minor")
-			return global.meteors_minor;
-		if("meteors_moderate")
-			return global.meteors_moderate;
 		if("meteors_normal")
 			return global.meteors_normal;
 		if("meteors_threatening")
@@ -2312,12 +2306,6 @@
 			global.meteors_catastrophic=newval;
 		if("meteors_dust")
 			global.meteors_dust=newval;
-		if("meteors_major")
-			global.meteors_major=newval;
-		if("meteors_minor")
-			global.meteors_minor=newval;
-		if("meteors_moderate")
-			global.meteors_moderate=newval;
 		if("meteors_normal")
 			global.meteors_normal=newval;
 		if("meteors_threatening")

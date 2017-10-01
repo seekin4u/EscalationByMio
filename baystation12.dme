@@ -330,6 +330,7 @@
 #include "code\escalation\game\objects\ural.dm"
 #include "code\escalation\game\objects\items\devices\radio\radio.dm"
 #include "code\escalation\game\objects\items\weapons\mines.dm"
+#include "code\escalation\game\objects\weapons\handtools.dm"
 #include "code\escalation\game\structures\brutswehr.dm"
 #include "code\escalation\game\structures\concrete_block.dm"
 #include "code\escalation\game\structures\flora.dm"
