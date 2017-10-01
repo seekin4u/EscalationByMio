@@ -114,7 +114,7 @@
 	//icon = 'icons/obj/weapons.dmi'
 	icon_state = "sandbag_empty"
 	w_class = 1
-	var/sand_amount = 4
+	var/sand_amount = 0
 
 /obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
 	var/i = 0

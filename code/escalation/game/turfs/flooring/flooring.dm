@@ -20,33 +20,33 @@
 	icon_base = "decal_base"
 
 /decl/flooring/ural/basic/n5
-	name = "5 part"
+	name = "Ural"
 	icon_base = "5"
 
 /decl/flooring/ural/basic/n6
-	name = "6 part"
+	name = "Ural"
 	icon_base = "6"
 
 /decl/flooring/ural/basic/n7
-	name = "7 part"
+	name = "Ural"
 	icon_base = "7"
 
 /decl/flooring/ural/basic/n8
-	name = "8 part"
+	name = "Ural"
 	icon_base = "8"
 
 /decl/flooring/ural/basic/n14
-	name = "14 part"
+	name = "Ural"
 	icon_base = "14"
 
 /decl/flooring/ural/basic/n15
-	name = "15 part"
+	name = "Ural"
 	icon_base = "15"
 
 /decl/flooring/ural/basic/middle_l
-	name = "middle_l part"
+	name = "Ural"
 	icon_base = "middle_l"
 
 /decl/flooring/ural/basic/middle_r
-	name = "middle_r part"
+	name = "Ural"
 	icon_base = "middle_r"
