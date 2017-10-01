@@ -301,7 +301,7 @@
 	english_name = "HWS Commander"
 	enabled = 1
 	rank_prefix = "Sgt."
-	position = "team"
+	position = "fireteam"
 	amount = 2
 	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
@@ -311,7 +311,7 @@
 	english_name = "HWS Gunner"
 	enabled = 1
 	rank_prefix = "Pfc."
-	position = "team"
+	position = "fireteam"
 	amount = 2
 	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
@@ -321,7 +321,7 @@
 	english_name = "HWS Assistant"
 	enabled = 1
 	rank_prefix = "Pfc."
-	position = "team"
+	position = "fireteam"
 	amount = 2
 	also_known_languages = list(LANGUAGE_GERMAN = 30, LANGUAGE_RUSSIAN = 15, LANGUAGE_CZECH = 10)
 
