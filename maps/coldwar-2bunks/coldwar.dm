@@ -17,12 +17,11 @@
 
 	#include "../shared/exodus_torch/_include.dm"
 
-	#include "coldwar-1.dmm"
-	//#include "coldwar-2.dmm"
-	//#include "coldwar-2fortests.dmm"
+	#include "main_bg_under.dmm"//nato underground - 1
+	#include "main_bg.dmm"//nato base - 2
+	#include "sukablyat.dmm"//soviet base - 3
 	#include "coldwar-4.dmm"//transition level
-	#include "sukablyat.dmm"
-	#include "main_bg.dmm"
+	#include "coldwar-1.dmm"//tests
 
 	//to add new sounds - go by this path and add new 'path' to list.
 	#include "../../code/escalation/modules/lobby_music/random_lobby.dm"

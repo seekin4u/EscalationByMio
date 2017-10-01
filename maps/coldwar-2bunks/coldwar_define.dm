@@ -8,10 +8,10 @@
 
 	load_legacy_saves = TRUE
 
-	station_levels = list(1,2) //1, 2 - USMC and CA armies bunkers if gamemode isn't company
+	station_levels = list(1,2,3) //1, 2 - USMC and CA armies bunkers if gamemode isn't company
 	//admin_levels = list(3)
 	contact_levels = list(1,2,3) //the third level is main battleground| levels which can be reached for e.g. announsments
-	player_levels = list(1,2,3) //levels which character can reach
+	player_levels = list(1,2,3,4) //levels which character can reach
 	//sealed_levels = list(5) //don't ned this
 	empty_levels = list(5) //and this for some reason.
 	//accessible_z_levels = list("1" = 5, "2" = 5, "4" = 10, "5" = 15, "7" = 60) we don't need this
