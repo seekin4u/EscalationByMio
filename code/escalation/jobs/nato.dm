@@ -256,7 +256,7 @@
 
 //Not in squads - "attachments" in the marines
 /datum/job/escalation/usmc/medic
-	title = "US Corpsman"
+	title = "US Medic"
 	name = "Corpsman"
 	english_name = "Medic"
 	enabled = 1

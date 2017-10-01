@@ -35,7 +35,7 @@
 
 
 /datum/job/escalation/csla/platradio
-	title = "CZ Druzhstvo Radista"
+	title = "CZ Podporuchik1"
 	name = "Druzhstvo Radista"
 	english_name = "Platoon Radio"
 	enabled = 1
@@ -350,7 +350,7 @@
 	also_known_languages = list(LANGUAGE_CZECH = 30, LANGUAGE_ENGLISH = 20, LANGUAGE_GERMAN = 10)
 
 /datum/job/escalation/cccp/hwsgun
-	title = "CCCP HWS Leader"
+	title = "CCCP HWS Gunner"
 	name = "Strelok Rascheta"
 	english_name = "HWS Gunner"
 	enabled = 1
