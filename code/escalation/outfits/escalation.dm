@@ -27,12 +27,15 @@
 /decl/hierarchy/outfit/escalation/nato/usmc/squadleader
 	name = "USMC Squad Leader"
 	r_hand = /obj/item/weapon/gun/projectile/colt911
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/nato/usmc/fireteamleader
 	name = "USMC Fireteam Leader"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/nato/usmc/squadradio
 	name = "USMC Squad Radio"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/nato/usmc/machinegunner
 	name = "USMC MG"
@@ -87,6 +90,7 @@
 
 /decl/hierarchy/outfit/escalation/nato/bundes/platradio
 	name = "Bundeswehr Platoon Radio"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/nato/bundes/squadleader
 	name = "Bundeswehr Squad Leader"
@@ -111,6 +115,7 @@
 
 /decl/hierarchy/outfit/escalation/nato/bundes/radio
 	name = "Bundeswehr Squad Radiomen"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/nato/bundes/grenadier
 	name = "Bundeswehr Grenadier"
@@ -154,6 +159,7 @@
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/radiomaster
 	name = "Soviet Platoon Radiomen"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/vzmachinegunner
 	name = "Soviet Platoon MG"
@@ -163,6 +169,7 @@
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/squadradio
 	name = "Soviet Squad Radiomen"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/grenadier
 	name = "Soviet Grenadier"
@@ -202,6 +209,7 @@
 /decl/hierarchy/outfit/escalation/warpac/cccp/reconradio
 	name = "Soviet Scout Radist"
 	uniform = /obj/item/clothing/under/escalation/berezka
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/reconmarks
 	name = "Soviet Scout Marksmen"
@@ -236,6 +244,7 @@
 
 /decl/hierarchy/outfit/escalation/warpac/csla/platradio
 	name = "Czechoslovak Platoon Radiomen"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/warpac/csla/subsergeant
 	name = "Czechoslovak Squad Leader Deputy"
@@ -251,6 +260,7 @@
 
 /decl/hierarchy/outfit/escalation/warpac/csla/squadradio
 	name = "Czechoslovak Radiomen"
+	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/warpac/csla/rifleman
 	name = "Czechoslovak Squad Riflemen"
