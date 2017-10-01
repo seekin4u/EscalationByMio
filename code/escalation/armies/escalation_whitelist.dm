@@ -77,6 +77,8 @@
 	if(!ckey)
 		return 0
 
+	return 1// ~OFF FOR TESTS
+
 	var/list/aviable_roles = whitelisted_escalation[ckey]
 	if(!length(aviable_roles))
 		return 0

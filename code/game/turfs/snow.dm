@@ -15,20 +15,25 @@
 	icon_state = "snow[rand(0, 5)]"
 
 /turf/snow/Entered(atom/A)
-    if(ismob(A) && !isobserver(A))
-        var/mdir = "[A.dir]"
-        if(crossed_dirs[mdir])
-            crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
-        else
-            crossed_dirs[mdir] = 1
+	if(ismob(A) && !isobserver(A))
+		if(hasGround)
+			return
+		var/mdir = "[A.dir]"
+		if(crossed_dirs[mdir])
+			crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
+		else
+			crossed_dirs[mdir] = 1
 
-        update_icon()
+		update_icon()
 
-    . = ..()
+	. = ..()
 
 /turf/snow/attackby(obj/item/C as obj, mob/user as mob)
-	if (istype(C, /obj/item/weapon/shovel/))
+	if (istype(C, /obj/item/weapon/shovel))
 		if(hasGround)
+			if(do_after(user, 15, src) && in_range(user, src))
+				to_chat(user, "<span class='notice'>Digging ground...</span>")
+				new /obj/item/weapon/ore/glass(src.loc)
 			return
 		to_chat(user, "<span class='notice'>Digging snow ...</span>")
 	//  playsound(src, 'ADDSOMETHINGPLS', X, X)
