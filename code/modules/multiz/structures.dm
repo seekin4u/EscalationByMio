@@ -18,10 +18,11 @@
 	var/const/climb_time = 2 SECONDS
 
 /obj/structure/ladder/initialize()
+	. = ..()
 	// the upper will connect to the lower
 	if(allowed_directions & DOWN) //we only want to do the top one, as it will initialize the ones before it.
-		for(var/obj/structure/ladder/L in world)
-			if(L.allowed_directions & UP && L.id == id)
+		for(var/obj/structure/ladder/L in GetBelow(src))
+			if(L.allowed_directions & UP)
 				target_down = L
 				L.target_up = src
 				return
@@ -138,6 +139,8 @@
 				return qdel(src)
 			if(!istype(above))
 				above.ChangeTurf(/turf/simulated/open)
+
+		. = ..()
 
 	Uncross(atom/movable/A)
 		if(A.dir == dir)
