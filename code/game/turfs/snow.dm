@@ -29,7 +29,7 @@
 	. = ..()
 
 /turf/snow/attackby(obj/item/C as obj, mob/user as mob)
-	if (istype(C, /obj/item/weapon/shovel))
+	if (istype(C, /obj/item/weapon/saperka))
 		if(hasGround)
 			if(do_after(user, 15, src) && in_range(user, src))
 				to_chat(user, "<span class='notice'>Digging ground...</span>")
