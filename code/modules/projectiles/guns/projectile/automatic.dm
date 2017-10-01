@@ -727,7 +727,7 @@
 	name = "PKM"
 	desc = "PKM. Standard Soviet general purpose machine gun."
 	icon_state = "pkm"
-	item_state = "lmg"
+	item_state = "vz59"
 	w_class = 5
 	force = 15
 	slot_flags = SLOT_BACK_GUN
@@ -739,7 +739,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c762x54b
 	one_hand_penalty = 9
 	zoom_ammount = 10
-	wielded_item_state = "lmg-wielded"
+	wielded_item_state = "vz59-wielded"
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
@@ -811,7 +811,7 @@
 	name = "M60E1"
 	desc = "M60, lovingly dubbed 'the pig.' Standard issue LMG of the USMC."
 	icon_state = "m60"
-	item_state = "lmg"
+	item_state = "m60"
 	w_class = 5
 	force = 15
 	slot_flags = SLOT_BACK_GUN
@@ -823,7 +823,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
 	zoom_ammount = 10
-	wielded_item_state = "lmg-wielded"
+	wielded_item_state = "m60-wielded"
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
@@ -875,11 +875,11 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/m60/update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "m60"
+	if(istype(ammo_magazine, /obj/item/ammo_magazine/c762x51b))
+		icon_state = "m60[cover_opened ? "open" : "closed"][round(ammo_magazine.stored_ammo.len, 200)]"
 	else
-		icon_state = "m60-empty"
+		icon_state = "m60[cover_opened ? "open" : "closed"]-empty"
+	..()
 
 /obj/item/weapon/gun/projectile/automatic/m60/verb/ironsights()
 	set name = "Use iron sights"
@@ -896,7 +896,7 @@
 	name = "MG3"
 	desc = "MG3, a popular son of a famous MG-42. Main machinegun of the Bundeswehr."
 	icon_state = "MG3"
-	item_state = "lmg"
+	item_state = "m60"
 	w_class = 5
 	force = 15
 	slot_flags = SLOT_BACK_GUN
@@ -907,7 +907,7 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b/bdw
 	one_hand_penalty = 9
-	wielded_item_state = "lmg-wielded" //change
+	wielded_item_state = "m60-wielded" //change
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
@@ -960,11 +960,11 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/mg3/update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "MG3"
+	if(istype(ammo_magazine, /obj/item/ammo_magazine/c762x51b/bdw))
+		icon_state = "mg3[cover_opened ? "open" : "closed"][round(ammo_magazine.stored_ammo.len, 100)]"
 	else
-		icon_state = "MG3_Empty"
+		icon_state = "mg3[cover_opened ? "open" : "closed"]-empty"
+	..()
 
 /obj/item/weapon/gun/projectile/automatic/mg3/verb/ironsights()
 	set name = "Use iron sights"

@@ -96,19 +96,19 @@
 	icon_state = "sa"
 
 /obj/item/weapon/material/knife/bayonet/csla
-	name = "vz.58 bayonet"
+	name = "Vz.58 bayonet"
 	desc = "A slim and sharp, but somewhat fragile czechoslovakian bayonet."
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "sa"
+	icon_state = "csla"
 
 /obj/item/weapon/material/knife/bayonet/usmc
-	name = "m7 bayonet"
+	name = "M7 bayonet"
 	desc = "A 11.9 inches bayonet with carbon steel blade. This one was manufacured in West Germany."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "usmc"
 
 /obj/item/weapon/material/knife/bayonet/bdw
-	name = "kampfmesser M68"
+	name = "Kampfmesser M68"
 	desc = "Combat knife of bundeswehr forces. German quality."
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "usmc"
+	icon_state = "bdw"

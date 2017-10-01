@@ -37,3 +37,13 @@
 	sleep(80)
 	qdel(src)
 	return
+
+/obj/item/weapon/grenade/smokebomb/nato
+	desc = "It is set to detonate in 2 seconds."
+	name = "M18 smoke grenade"
+	icon_state = "m18"
+
+/obj/item/weapon/grenade/smokebomb/wp
+	desc = "It is set to detonate in 2 seconds."
+	name = "RGD2 smoke grenade"
+	icon_state = "rgd2"
