@@ -191,23 +191,23 @@
 /decl/hierarchy/outfit/escalation/warpac/cccp/hwsass
 	name = "Soviet HWS Assistant"
 
-/datum/job/escalation/cccp/reconcom
+/decl/hierarchy/outfit/escalation/warpac/cccp/reconcom
 	name = "Soviet Scout Commander"
 	uniform = /obj/item/clothing/under/escalation/berezka
 
-/datum/job/escalation/cccp/reconcomdep
+/decl/hierarchy/outfit/escalation/warpac/cccp/reconcomdep
 	name = "Soviet Scout Deputy Commander"
 	uniform = /obj/item/clothing/under/escalation/berezka
 
-/datum/job/escalation/cccp/reconradio
+/decl/hierarchy/outfit/escalation/warpac/cccp/reconradio
 	name = "Soviet Scout Radist"
 	uniform = /obj/item/clothing/under/escalation/berezka
 
-/datum/job/escalation/cccp/reconmarks
+/decl/hierarchy/outfit/escalation/warpac/cccp/reconmarks
 	name = "Soviet Scout Marksmen"
 	uniform = /obj/item/clothing/under/escalation/berezka
 
-/datum/job/escalation/cccp/recon
+/decl/hierarchy/outfit/escalation/warpac/cccp/recon
 	name = "Soviet Scout"
 	uniform = /obj/item/clothing/under/escalation/berezka
 
