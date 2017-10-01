@@ -354,10 +354,8 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
+
 
 /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -453,10 +451,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
@@ -544,10 +539,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
@@ -617,10 +609,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -711,10 +700,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/update_icon()
 	..()
@@ -804,10 +790,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m60
 	name = "M60E1"
@@ -889,10 +872,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/mg3
 	name = "MG3"
@@ -974,10 +954,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 //DO NOT USE
 /obj/item/weapon/gun/projectile/automatic/m14
@@ -1047,10 +1024,7 @@
 	set name = "Use iron sights"
 	set category = "Object"
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1095,10 +1069,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success scope:15")
-	else
-		to_world("-ShitFuckScope")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
 	name = "M16A1"
@@ -1170,10 +1141,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1260,10 +1228,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp(mob/user)
 	set name = "Granade launcher"
@@ -1315,10 +1280,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success scope:15")
-	else
-		to_world("-ShitFuckScope")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/g3a3
 	name = "G3A3"
@@ -1389,10 +1351,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1478,11 +1437,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
-
+	src.toggle_scope(usr)
 /obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
@@ -1532,10 +1487,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/vz58
 	name = "Vz.58"
@@ -1607,11 +1559,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
-
+	src.toggle_scope(usr)
 /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
 	set category = "Object"
@@ -1707,10 +1655,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/vz59
 	name = "Vz. 59"
@@ -1790,7 +1735,4 @@
 	set src in usr
 	set popup_menu = 0
 
-	if(src.toggle_scope(usr))
-		to_world("Success ironsgs")
-	else
-		to_world("-ShitFuckIronsgs")
+	src.toggle_scope(usr)
