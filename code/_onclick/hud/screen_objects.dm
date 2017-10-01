@@ -354,6 +354,13 @@
 				else
 					to_chat(R, "You haven't selected a module yet.")
 
+		if("fixeye")
+			usr.set_face_dir()
+			if(usr.facing_dir)
+				usr.fixeye.icon_state = "fixeye_on"
+			else
+				usr.fixeye.icon_state = "fixeye"
+
 		if("radio")
 			if(issilicon(usr))
 				usr:radio_menu()

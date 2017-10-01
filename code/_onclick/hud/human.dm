@@ -285,6 +285,13 @@
 
 	mymob.pain = new /obj/screen( null )
 
+	mymob.fixeye = new /obj/screen()
+	mymob.fixeye.icon = ui_style
+	mymob.fixeye.icon_state = "fixeye"
+	mymob.fixeye.name = "fixeye"
+	mymob.fixeye.screen_loc = ui_fixeye
+	hud_elements |= mymob.fixeye
+
 	mymob.zone_sel = new /obj/screen/zone_sel( null )
 	mymob.zone_sel.icon = ui_style
 	mymob.zone_sel.color = ui_color
@@ -314,6 +321,7 @@
 	mymob.radio_use_icon.icon = ui_style
 	mymob.radio_use_icon.color = ui_color
 	mymob.radio_use_icon.alpha = ui_alpha
+
 
 	mymob.fov = new /obj/screen/fov()
 	hud_elements |= mymob.fov
