@@ -33,7 +33,7 @@
 		if(hasGround)
 			if(do_after(user, 15, src) && in_range(user, src))
 				to_chat(user, "<span class='notice'>Digging ground...</span>")
-				new /obj/item/weapon/ore/glass(src.loc)
+				var/obj/item/weapon/ore/glass/G = new(user.loc)
 			return
 		to_chat(user, "<span class='notice'>Digging snow ...</span>")
 	//  playsound(src, 'ADDSOMETHINGPLS', X, X)
