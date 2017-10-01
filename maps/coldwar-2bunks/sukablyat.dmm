@@ -132,7 +132,6 @@
 "cB" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "cC" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "cD" = (/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,/turf/snow/gravsnow,/area/coldwar/outside)
-"cE" = (/obj/effect/landmark/map_data{height = 3},/turf/simulated/floor/pavement,/area/coldwar/outside)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -204,5 +203,5 @@ acacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac
 acacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac
 acacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac
 acacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac
-cEababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab
+abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab
 "}
