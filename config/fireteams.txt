@@ -10,7 +10,7 @@
 
 # WARPAC
 
-1Otdeleniye:cccp
+1.Otdeleniye:cccp
 /datum/job/escalation/cccp/squadleader
 /datum/job/escalation/cccp/squadvice
 /datum/job/escalation/cccp/squadradio
@@ -22,7 +22,7 @@
 /datum/job/escalation/cccp/rifleman
 @END@
 
-2Otdeleniye:cccp
+2.Otdeleniye:cccp
 /datum/job/escalation/cccp/squadleader
 /datum/job/escalation/cccp/squadvice
 /datum/job/escalation/cccp/squadradio
@@ -34,7 +34,7 @@
 /datum/job/escalation/cccp/rifleman
 @END@
 
-3Otdeleniye:cccp
+3.Otdeleniye:cccp
 /datum/job/escalation/cccp/squadleader
 /datum/job/escalation/cccp/squadvice
 /datum/job/escalation/cccp/squadradio
@@ -46,19 +46,19 @@
 /datum/job/escalation/cccp/rifleman
 @END@
 
-1Otv:cccp
+1.OTV:cccp
 /datum/job/escalation/cccp/hwscom
 /datum/job/escalation/cccp/hwsgun
 /datum/job/escalation/cccp/hwsass
 @END@
 
-2Otv:cccp
+2.OTV:cccp
 /datum/job/escalation/cccp/hwscom
 /datum/job/escalation/cccp/hwsgun
 /datum/job/escalation/cccp/hwsass
 @END@
 
-Radio:cccp
+Razvedka:cccp
 /datum/job/escalation/cccp/reconcom
 /datum/job/escalation/cccp/reconcomdep
 /datum/job/escalation/cccp/reconmarks
@@ -67,7 +67,7 @@ Radio:cccp
 /datum/job/escalation/cccp/recon
 @END@
 
-1Cheta:csla
+1.Cheta:csla
 /datum/job/escalation/csla/sergeant
 /datum/job/escalation/csla/subsergeant
 /datum/job/escalation/csla/gunner
@@ -79,7 +79,7 @@ Radio:cccp
 /datum/job/escalation/csla/rifleman
 @END@
 
-2Cheta:csla
+2.Cheta:csla
 /datum/job/escalation/csla/sergeant
 /datum/job/escalation/csla/subsergeant
 /datum/job/escalation/csla/gunner
@@ -91,7 +91,7 @@ Radio:cccp
 /datum/job/escalation/csla/rifleman
 @END@
 
-3Cheta:csla
+3.Cheta:csla
 /datum/job/escalation/csla/sergeant
 /datum/job/escalation/csla/subsergeant
 /datum/job/escalation/csla/gunner
@@ -106,7 +106,7 @@ Radio:cccp
 
 # NATO
 
-1Squad:usmc
+1.Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/squadradio
@@ -116,7 +116,7 @@ Radio:cccp
 /datum/job/escalation/usmc/grunt
 @END@
 
-2Squad:usmc
+2.Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/squadradio
@@ -126,7 +126,7 @@ Radio:cccp
 /datum/job/escalation/usmc/grunt
 @END@
 
-3Squad:usmc
+3.Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/squadradio
@@ -136,19 +136,19 @@ Radio:cccp
 /datum/job/escalation/usmc/grunt
 @END@
 
-1hws:usmc
+1.HWS:usmc
 /datum/job/escalation/usmc/hwscom
 /datum/job/escalation/usmc/hwsgun
 /datum/job/escalation/usmc/hwsass
 @END@
 
-2hws:usmc
+2.hws:usmc
 /datum/job/escalation/usmc/hwscom
 /datum/job/escalation/usmc/hwsgun
 /datum/job/escalation/usmc/hwsass
 @END@
 
-As:usmc
+Assault:usmc
 /datum/job/escalation/usmc/assaultcom
 /datum/job/escalation/usmc/assaultgunner
 /datum/job/escalation/usmc/assaultgunner
@@ -156,7 +156,7 @@ As:usmc
 /datum/job/escalation/usmc/assaultass
 @END@
 
-1Gruppe:bund
+1.Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
@@ -167,7 +167,7 @@ As:usmc
 /datum/job/escalation/bund/grunt
 @END@
 
-2Gruppe:bund
+2.Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
@@ -178,7 +178,7 @@ As:usmc
 /datum/job/escalation/bund/grunt
 @END@
 
-3Gruppe:bund
+3.Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
@@ -189,7 +189,7 @@ As:usmc
 /datum/job/escalation/bund/grunt
 @END@
 
-4Gruppe:bund
+4.Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
