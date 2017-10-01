@@ -163,6 +163,7 @@
 	title = "US"
 	enabled = 0
 	faction_tag = "usmc"
+	outfit_type = /decl/hierarchy/outfit/escalation/nato/usmc
 	military_faction = NATO
 
 /datum/job/escalation/usmc/lieu
