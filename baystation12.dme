@@ -2343,6 +2343,7 @@
 #include "interface\skin.dmf"
 #include "maps\coldwar-2bunks\coldwar.dm"
 #include "maps\coldwar-2bunks\coldwar_define.dm"
+#include "maps\coldwar-2bunks\AAAAAAA.dmm"
 #include "maps\example\example_define.dm"
 #include "maps\exodus\exodus_define.dm"
 #include "maps\overmap_example\overmap_example_define.dm"
