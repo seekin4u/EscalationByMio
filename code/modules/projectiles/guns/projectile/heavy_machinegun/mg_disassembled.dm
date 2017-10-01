@@ -31,10 +31,10 @@
 
 /obj/item/weapon/mg_disassembled/m2
 	name = "disassembled M2 Browning"
-	icon_state = "utes-disconnected" //  fix
+	icon_state = "m2-disconnected"
 	id_g = "mbr"
 
 /obj/item/weapon/mg_disassembled/mk19
 	name = "disassembled MK 19"
-	icon_state = "ags17-disconnected" // fix
+	icon_state = "mk19-disconnected"
 	id_g = "m19"

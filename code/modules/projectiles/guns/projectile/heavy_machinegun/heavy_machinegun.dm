@@ -294,6 +294,13 @@
 		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_delay = 1.2, burst_accuracy=list(0,-1, -1.5), dispersion=list(0.2, 0.5, 1.1))
 		)
 
+/obj/item/weapon/gun/projectile/heavy_mg/utes/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "utes"
+	else
+		icon_state = "utes-empty"
+
 ///////////////////////
 ////Stationary KORD////
 ///////////////////////
@@ -348,7 +355,12 @@
 		list(mode_name = "5-round bursts", burst = 5, burst_delay = 1.5, fire_delay = 1.6),
 		)
 
-
+/obj/item/weapon/gun/projectile/heavy_mg/ags_17/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "ags17"
+	else
+		icon_state = "ags17-empty"
 
 //////////////////////////////
 ////////////M2BROWNING/////////
@@ -357,7 +369,7 @@
 /obj/item/weapon/gun/projectile/heavy_mg/m2
 	name = "M2 Browning"
 	desc = "Heavy machinegun, standard-issued by USMC"
-	icon_state = "utes" //fix
+	icon_state = "m2"
 	load_method = MAGAZINE//we do not have ammo box for it
 	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
 	caliber = "127x99mm"//fix caliber
@@ -379,6 +391,13 @@
 		list(mode_name = "10-round bursts", burst = 10, burst_delay = 0.3, fire_delay = 1.2)
 		)
 
+/obj/item/weapon/gun/projectile/heavy_mg/m2/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "m2"
+	else
+		icon_state = "m2-empty"
+
 ///////////////////////////////////////
 ////////////MK19//////////////////////
 ///////////////////////////////////////
@@ -386,7 +405,7 @@
 /obj/item/weapon/gun/projectile/heavy_mg/mk19
 	name = "MK 19"
 	desc = "Automatic grenade launcher, standard-issued by USMC."
-	icon_state = "ags17" /////fix
+	icon_state = "mk19"
 	load_method = MAGAZINE
 	handle_casings = REMOVE_CASINGS//replace in EJECT later after tests and balancing
 	caliber = "40x53mm"
@@ -405,3 +424,10 @@
 		list(mode_name = "3-round bursts", burst = 3, burst_delay = 1.5, fire_delay = 1.0),
 		list(mode_name = "5-round bursts", burst = 5, burst_delay = 1.5, fire_delay = 1.6),
 		)
+
+/obj/item/weapon/gun/projectile/heavy_mg/mk19/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "mk19"
+	else
+		icon_state = "mk19-empty"
