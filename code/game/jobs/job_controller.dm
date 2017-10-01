@@ -343,7 +343,8 @@ var/global/datum/controller/occupations/job_master
 		return 1
 
 	proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
-		if(!H)	return null
+		if(!H)
+			return null
 
 		var/datum/job/job = GetJob(rank)
 		var/list/spawn_in_storage = list()
@@ -444,12 +445,6 @@ var/global/datum/controller/occupations/job_master
 		// If they're head, give them the account info for their department
 		if(H.mind && job.head_position)
 			var/remembered_info = ""
-			var/datum/money_account/department_account = department_accounts[job.department]
-
-			if(department_account)
-				remembered_info += "<b>Your department's account number is:</b> #[department_account.account_number]<br>"
-				remembered_info += "<b>Your department's account pin is:</b> [department_account.remote_access_pin]<br>"
-				remembered_info += "<b>Your department's account funds are:</b> T[department_account.money]<br>"
 
 			H.mind.store_memory(remembered_info)
 
@@ -457,15 +452,6 @@ var/global/datum/controller/occupations/job_master
 		if(H.mind)
 			H.mind.assigned_role = rank
 			alt_title = H.mind.role_alt_title
-
-			switch(rank)
-				if("Cyborg")
-					return H.Robotize()
-				if("AI")
-					return H
-				if("Captain")
-					var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP)? null : sound('sound/misc/boatswain.ogg', volume=20)
-					captain_announcement.Announce("All hands, Captain [H.real_name] on deck!", new_sound=announce_sound)
 
 			//Deferred item spawning.
 			for(var/thing in spawn_in_storage)
@@ -505,7 +491,7 @@ var/global/datum/controller/occupations/job_master
 		if(job.supervisors)
 			to_chat(H, "<b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
 
-		to_chat(H, "<b>To speak on your department's radio channel use :h. For the use of other channels, examine your headset.</b>")
+		to_chat(H, "<b>You have no radio on your back. Find it or stey near you squad's radioman.</b>")
 
 		if(job.req_admin_notify)
 			to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
