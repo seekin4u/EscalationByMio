@@ -10,7 +10,7 @@
 
 # WARPAC
 
-1.Otdeleniye:cccp
+1Otdeleniye:cccp
 /datum/job/escalation/cccp/squadleader
 /datum/job/escalation/cccp/squadvice
 /datum/job/escalation/cccp/squadradio
@@ -22,7 +22,7 @@
 /datum/job/escalation/cccp/rifleman
 @END@
 
-1.Otdeleniye:cccp
+2Otdeleniye:cccp
 /datum/job/escalation/cccp/squadleader
 /datum/job/escalation/cccp/squadvice
 /datum/job/escalation/cccp/squadradio
@@ -34,7 +34,7 @@
 /datum/job/escalation/cccp/rifleman
 @END@
 
-3.Otdeleniye:cccp
+3Otdeleniye:cccp
 /datum/job/escalation/cccp/squadleader
 /datum/job/escalation/cccp/squadvice
 /datum/job/escalation/cccp/squadradio
@@ -46,19 +46,19 @@
 /datum/job/escalation/cccp/rifleman
 @END@
 
-1.Otdeleniye_Tyazhelogo_Vooruzheniya:cccp
-/datum/job/escalation/warpac/cccp/hwscom
+1Otv:cccp
+/datum/job/escalation/cccp/hwscom
 /datum/job/escalation/cccp/hwsgun
 /datum/job/escalation/cccp/hwsass
 @END@
 
-2.Otdeleniye_Tyazhelogo_Vooruzheniya:cccp
-/datum/job/escalation/warpac/cccp/hwscom
+2Otv:cccp
+/datum/job/escalation/cccp/hwscom
 /datum/job/escalation/cccp/hwsgun
 /datum/job/escalation/cccp/hwsass
 @END@
 
-Otdeleniye_Razvedki:cccp
+Radio:cccp
 /datum/job/escalation/cccp/reconcom
 /datum/job/escalation/cccp/reconcomdep
 /datum/job/escalation/cccp/reconmarks
@@ -67,7 +67,7 @@ Otdeleniye_Razvedki:cccp
 /datum/job/escalation/cccp/recon
 @END@
 
-1.Cheta:csla
+1Cheta:csla
 /datum/job/escalation/csla/sergeant
 /datum/job/escalation/csla/subsergeant
 /datum/job/escalation/csla/gunner
@@ -79,7 +79,7 @@ Otdeleniye_Razvedki:cccp
 /datum/job/escalation/csla/rifleman
 @END@
 
-2.Cheta:csla
+2Cheta:csla
 /datum/job/escalation/csla/sergeant
 /datum/job/escalation/csla/subsergeant
 /datum/job/escalation/csla/gunner
@@ -91,7 +91,7 @@ Otdeleniye_Razvedki:cccp
 /datum/job/escalation/csla/rifleman
 @END@
 
-3.Cheta:csla
+3Cheta:csla
 /datum/job/escalation/csla/sergeant
 /datum/job/escalation/csla/subsergeant
 /datum/job/escalation/csla/gunner
@@ -106,7 +106,7 @@ Otdeleniye_Razvedki:cccp
 
 # NATO
 
-1st_Squad:usmc
+1Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/squadradio
@@ -116,7 +116,7 @@ Otdeleniye_Razvedki:cccp
 /datum/job/escalation/usmc/grunt
 @END@
 
-2nd_Squad:usmc
+2Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/squadradio
@@ -126,7 +126,7 @@ Otdeleniye_Razvedki:cccp
 /datum/job/escalation/usmc/grunt
 @END@
 
-3rd_Squad:usmc
+3Squad:usmc
 /datum/job/escalation/usmc/squadleader
 /datum/job/escalation/usmc/fireteamleader
 /datum/job/escalation/usmc/squadradio
@@ -136,19 +136,19 @@ Otdeleniye_Razvedki:cccp
 /datum/job/escalation/usmc/grunt
 @END@
 
-1st_Heavy_Weapons_Squad:usmc
+1hws:usmc
 /datum/job/escalation/usmc/hwscom
 /datum/job/escalation/usmc/hwsgun
 /datum/job/escalation/usmc/hwsass
 @END@
 
-2nd_Heavy_Weapons_Squad:usmc
+2hws:usmc
 /datum/job/escalation/usmc/hwscom
 /datum/job/escalation/usmc/hwsgun
 /datum/job/escalation/usmc/hwsass
 @END@
 
-Assault_Squad:usmc
+As:usmc
 /datum/job/escalation/usmc/assaultcom
 /datum/job/escalation/usmc/assaultgunner
 /datum/job/escalation/usmc/assaultgunner
@@ -156,7 +156,7 @@ Assault_Squad:usmc
 /datum/job/escalation/usmc/assaultass
 @END@
 
-1.Gruppe:bund
+1Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
@@ -167,7 +167,7 @@ Assault_Squad:usmc
 /datum/job/escalation/bund/grunt
 @END@
 
-2.Gruppe:bund
+2Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
@@ -178,7 +178,7 @@ Assault_Squad:usmc
 /datum/job/escalation/bund/grunt
 @END@
 
-3.Gruppe:bund
+3Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
@@ -189,7 +189,7 @@ Assault_Squad:usmc
 /datum/job/escalation/bund/grunt
 @END@
 
-4.Gruppe:bund
+4Gruppe:bund
 /datum/job/escalation/bund/squadleader
 /datum/job/escalation/bund/subsergeant
 /datum/job/escalation/bund/machinegunner
