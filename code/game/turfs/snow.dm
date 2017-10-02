@@ -2,14 +2,14 @@
 
 /turf/snow
 	name = "snow"
-	dynamic_lighting = 0
+	dynamic_lighting = FALSE
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snow0"
 	oxygen = MOLES_O2STANDARD * 1.15
 	nitrogen = MOLES_N2STANDARD * 1.15
 	temperature = T0C - 10 //not 2 cold
 	var/list/crossed_dirs = list()
-	var/hasGround = 0
+	var/hasGround = FALSE
 
 /turf/snow/initialize()
 	icon_state = "snow[rand(0, 5)]"
@@ -33,12 +33,12 @@
 		if(hasGround)
 			if(do_after(user, 15, src) && in_range(user, src))
 				to_chat(user, "<span class='notice'>Digging ground...</span>")
-				var/obj/item/weapon/ore/glass/G = new(user.loc)
+				var/obj/item/weapon/ore/glass = new(user.loc)
 			return
 		to_chat(user, "<span class='notice'>Digging snow ...</span>")
 	//  playsound(src, 'ADDSOMETHINGPLS', X, X)
 		if(do_after(user, 15, src) && in_range(user, src))
-			hasGround = 1
+			hasGround = TRUE
 			name = "ground"
 			crossed_dirs.Cut()
 			update_icon()
