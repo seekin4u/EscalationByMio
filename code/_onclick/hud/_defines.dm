@@ -20,17 +20,17 @@
 
 //Lower center, persistant menu
 #define ui_sstore1 "WEST+2:10,SOUTH:5"
-#define ui_id "WEST+3:12,SOUTH:5"
-#define ui_gun_slot "WEST+3:12, SOUTH+1:7"
-#define ui_belt "WEST+4:14,SOUTH:5"
-#define ui_back "CENTER-2:14,SOUTH:5"
-#define ui_rhand "CENTER-1:16,SOUTH:5"
-#define ui_lhand "CENTER:16,SOUTH:5"
-#define ui_equip "CENTER-1:16,SOUTH+1:5"
-#define ui_swaphand1 "CENTER-1:16,SOUTH+1:5"
-#define ui_swaphand2 "CENTER:16,SOUTH+1:5"
-#define ui_storage1 "CENTER+1:16,SOUTH:5"
-#define ui_storage2 "CENTER+2:16,SOUTH:5"
+#define ui_id "WEST+5:16,SOUTH:5"
+#define ui_gun_slot "CENTER:-14,SOUTH:5"
+#define ui_belt "WEST+3:12,SOUTH:5"
+#define ui_back "WEST+4:14,SOUTH:5"
+#define ui_rhand "CENTER+1:-12,SOUTH:5"
+#define ui_lhand "CENTER+2:-12,SOUTH:5"
+#define ui_equip "CENTER+1:-12,SOUTH+1:5"
+#define ui_swaphand1 "CENTER+1:-12,SOUTH+1:5"
+#define ui_swaphand2 "CENTER+2:-12,SOUTH+1:5"
+#define ui_storage1 "CENTER+2:22,SOUTH:5"
+#define ui_storage2 "CENTER+3:22,SOUTH:5"
 
 #define ui_alien_head "CENTER-3:12,SOUTH:5"		//aliens
 #define ui_alien_oclothing "CENTER-2:14,SOUTH:5"//aliens
@@ -57,7 +57,7 @@
 #define ui_movi "EAST-3:24,SOUTH:5"
 #define ui_zonesel "EAST-1:28,SOUTH:5"
 #define ui_acti_alt "EAST-1:28,SOUTH:5" //alternative intent switcher for when the interface is hidden (F12)
-#define ui_fixeye "CENTER+3:16,SOUTH:5"
+#define ui_fixeye "EAST:-3,SOUTH+3:5"
 
 #define ui_borg_pull "EAST-3:24,SOUTH+1:7"
 #define ui_borg_module "EAST-2:26,SOUTH+1:7"
