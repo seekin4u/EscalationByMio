@@ -724,6 +724,9 @@
 /mob/proc/facedir(var/ndir)
 	if(!canface() || client.moving || world.time < client.move_delay)
 		return 0
+	if(client.pixel_x || client.pixel_y)
+		return 0//means we are zoomed and just need to unzoom or make a step.0 can be replaced on src.seek_and_unzoom()
+
 	set_dir(ndir)
 	if(buckled && buckled.buckle_movable)
 		buckled.set_dir(ndir)
