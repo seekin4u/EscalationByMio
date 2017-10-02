@@ -224,6 +224,29 @@
 	icon_state = "bdw_med"
 	item_state = "bdw_med"
 	storage_slots = 7
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/dnainjector,
+		/obj/item/weapon/reagent_containers/dropper,
+		/obj/item/weapon/reagent_containers/glass/beaker,
+		/obj/item/weapon/reagent_containers/glass/bottle,
+		/obj/item/weapon/reagent_containers/pill,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/flame/lighter/zippo,
+		/obj/item/weapon/storage/fancy/cigarettes,
+		/obj/item/weapon/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/clothing/head/surgery,
+		/obj/item/clothing/gloves/latex,
+		/obj/item/weapon/reagent_containers/hypospray,
+		/obj/item/clothing/glasses/hud/health,
+		/obj/item/weapon/crowbar,
+		/obj/item/device/flashlight,
+		/obj/item/taperoll,
+		/obj/item/weapon/extinguisher/mini
+		)
 
 /obj/item/weapon/storage/belt/usmc
 	w_class = ITEM_SIZE_HUGE
@@ -242,6 +265,29 @@
 	icon_state = "usmc_med"
 	item_state = "usmc_med"
 	storage_slots = 7
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/dnainjector,
+		/obj/item/weapon/reagent_containers/dropper,
+		/obj/item/weapon/reagent_containers/glass/beaker,
+		/obj/item/weapon/reagent_containers/glass/bottle,
+		/obj/item/weapon/reagent_containers/pill,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/flame/lighter/zippo,
+		/obj/item/weapon/storage/fancy/cigarettes,
+		/obj/item/weapon/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/clothing/head/surgery,
+		/obj/item/clothing/gloves/latex,
+		/obj/item/weapon/reagent_containers/hypospray,
+		/obj/item/clothing/glasses/hud/health,
+		/obj/item/weapon/crowbar,
+		/obj/item/device/flashlight,
+		/obj/item/taperoll,
+		/obj/item/weapon/extinguisher/mini
+		)
 
 /obj/item/weapon/storage/belt/sa
 	w_class = ITEM_SIZE_HUGE
@@ -260,6 +306,29 @@
 	icon_state = "sa_med"
 	item_state = "sa_med"
 	storage_slots = 7
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/dnainjector,
+		/obj/item/weapon/reagent_containers/dropper,
+		/obj/item/weapon/reagent_containers/glass/beaker,
+		/obj/item/weapon/reagent_containers/glass/bottle,
+		/obj/item/weapon/reagent_containers/pill,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/flame/lighter/zippo,
+		/obj/item/weapon/storage/fancy/cigarettes,
+		/obj/item/weapon/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/clothing/head/surgery,
+		/obj/item/clothing/gloves/latex,
+		/obj/item/weapon/reagent_containers/hypospray,
+		/obj/item/clothing/glasses/hud/health,
+		/obj/item/weapon/crowbar,
+		/obj/item/device/flashlight,
+		/obj/item/taperoll,
+		/obj/item/weapon/extinguisher/mini
+		)
 
 /obj/item/weapon/storage/belt/csla
 	w_class = ITEM_SIZE_HUGE
@@ -278,6 +347,29 @@
 	icon_state = "csla_med"
 	item_state = "csla_med"
 	storage_slots = 7
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/weapon/dnainjector,
+		/obj/item/weapon/reagent_containers/dropper,
+		/obj/item/weapon/reagent_containers/glass/beaker,
+		/obj/item/weapon/reagent_containers/glass/bottle,
+		/obj/item/weapon/reagent_containers/pill,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/flame/lighter/zippo,
+		/obj/item/weapon/storage/fancy/cigarettes,
+		/obj/item/weapon/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/mask/surgical,
+		/obj/item/clothing/head/surgery,
+		/obj/item/clothing/gloves/latex,
+		/obj/item/weapon/reagent_containers/hypospray,
+		/obj/item/clothing/glasses/hud/health,
+		/obj/item/weapon/crowbar,
+		/obj/item/device/flashlight,
+		/obj/item/taperoll,
+		/obj/item/weapon/extinguisher/mini
+		)
 
 // POUCHES //
 

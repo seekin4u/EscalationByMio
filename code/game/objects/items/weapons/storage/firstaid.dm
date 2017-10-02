@@ -184,10 +184,10 @@
 	startswith = list(/obj/item/weapon/reagent_containers/pill/kelotane = 7)
 
 /obj/item/weapon/storage/pill_bottle/spaceacillin
-	name = "bottle of Spaceacillin pills"
-	desc = "A theta-lactam antibiotic. Effective against many diseases likely to be encountered in space."
+	name = "bottle of antibiotic pills"
+	desc = "Can stop infections from open wounds."
 
-	startswith = list(/obj/item/weapon/reagent_containers/pill/spaceacillin = 7)
+	startswith = list(/obj/item/weapon/reagent_containers/pill/spaceacillin = 14)
 
 /obj/item/weapon/storage/pill_bottle/tramadol
 	name = "bottle of Nurofene pills"

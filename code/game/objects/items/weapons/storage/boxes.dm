@@ -504,8 +504,10 @@
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c545x39m = 3,
-		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/bayonet/sa
+		/obj/item/roller,
+		/obj/item/weapon/material/knife/bayonet/sa,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/storage/pill_bottle/spaceacillin
 		)
 
 /obj/item/weapon/storage/box/cargo/sa/grenadier
@@ -603,8 +605,10 @@
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c762x39m = 3,
-		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/bayonet/csla
+		/obj/item/roller,
+		/obj/item/weapon/material/knife/bayonet/csla,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/storage/pill_bottle/spaceacillin
 		)
 
 /obj/item/weapon/storage/box/cargo/csla/grenadier
@@ -702,8 +706,10 @@
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c556x45m = 3,
-		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/bayonet/usmc
+		/obj/item/roller,
+		/obj/item/weapon/material/knife/bayonet/usmc,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/storage/pill_bottle/spaceacillin
 		)
 
 /obj/item/weapon/storage/box/cargo/usmc/grenadier
@@ -713,7 +719,7 @@
 		/obj/item/ammo_magazine/c556x45m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/smaw,
-		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/ammo_casing/rocket/smaw = 3,
 		/obj/item/weapon/material/knife/bayonet/usmc
 		)
 
@@ -724,7 +730,7 @@
 		/obj/item/ammo_magazine/c556x45m = 7,
 		/obj/item/weapon/storage/firstaid/combat,
 		/obj/item/weapon/storage/backpack/smaw,
-		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/ammo_casing/rocket/smaw = 3,
 		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/grenade/frag
 		)
@@ -801,8 +807,10 @@
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
 		/obj/item/ammo_magazine/c762x51s = 3,
-		/obj/structure/bed/roller,
-		/obj/item/weapon/material/knife/bayonet/bdw
+		/obj/item/roller,
+		/obj/item/weapon/material/knife/bayonet/bdw,
+		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/storage/pill_bottle/spaceacillin
 		)
 
 /obj/item/weapon/storage/box/cargo/bdw/grenadier

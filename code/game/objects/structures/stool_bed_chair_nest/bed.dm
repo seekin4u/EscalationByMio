@@ -169,6 +169,21 @@
 	name = "resting contraption"
 	desc = "This looks similar to contraptions from earth. Could aliens be stealing our technology?"
 
+/obj/structure/bed/wp
+	name = "army bed"
+	desc = "Don't look really comfy, but you don't have other choice, soldier."
+	icon_state = "bed-wp"
+
+/obj/structure/bed/nato
+	name = "army bed"
+	desc = "You see some strange spots here and there, you didn't rest well last night."
+	icon_state = "bed-nato"
+
+/obj/structure/bed/empty
+	name = "bed frame"
+	desc = "You better sleep on floor."
+	icon_state = "bed-empty"
+
 /obj/structure/bed/alien/New(var/newloc)
 	..(newloc,"resin")
 
@@ -205,7 +220,7 @@
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "folded"
 	item_state = "rbed"
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_ID
 	w_class = ITEM_SIZE_HUGE // Can't be put in backpacks. Oh well. For now.
 
 /obj/item/roller/attack_self(mob/user)

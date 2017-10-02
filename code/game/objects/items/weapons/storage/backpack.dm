@@ -443,3 +443,11 @@
 	icon_state = "csla_ugl"
 	storage_slots = 6
 	can_hold = list (/obj/item/weapon/grenade/frag/vog25)
+
+/obj/item/weapon/storage/backpack/medical
+	name = "Medical backpack"
+	desc = "Can hold full lifesaver set."
+	icon_state = "medical"
+	item_state = "medical"
+	storage_slots = 7
+	max_w_class = ITEM_SIZE_NORMAL
