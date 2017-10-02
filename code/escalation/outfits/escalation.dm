@@ -14,6 +14,7 @@
 	suit = /obj/item/clothing/suit/storage/vest/escalation/usmc_harness
 	uniform = /obj/item/clothing/under/escalation/usmc
 	head = /obj/item/clothing/head/helmet/escalation/usmc
+	belt = /obj/item/weapon/storage/belt/usmc
 
 /decl/hierarchy/outfit/escalation/nato/usmc/lieu
 	name = "USMC Leader"
@@ -45,12 +46,14 @@
 
 /decl/hierarchy/outfit/escalation/nato/usmc/medic
 	name = "USMC Medic"
+	belt = /obj/item/weapon/storage/belt/usmc/medical
 
 /decl/hierarchy/outfit/escalation/nato/usmc/marksman
 	name = "USMC Marksman"
 
 /decl/hierarchy/outfit/escalation/nato/usmc/headmedic
 	name = "USMC Head Medic"
+	belt = /obj/item/weapon/storage/belt/usmc/medical
 
 /decl/hierarchy/outfit/escalation/nato/usmc/hwscom
 	name = "USMC HWS Commander"
@@ -77,6 +80,7 @@
 	head = /obj/item/clothing/head/helmet/escalation/bund
 	gloves = /obj/item/clothing/gloves/escalation/bundesgloves
 	suit = /obj/item/clothing/suit/storage/vest/escalation/bdw_harness
+	belt = /obj/item/weapon/storage/belt/bdw
 
 /decl/hierarchy/outfit/escalation/nato/bundes/platoonleader
 	name = "Bundeswehr Leader"
@@ -106,9 +110,11 @@
 
 /decl/hierarchy/outfit/escalation/nato/bundes/fielddoctor
 	name = "Bundeswehr Head Medic"
+	belt = /obj/item/weapon/storage/belt/bdw/medical
 
 /decl/hierarchy/outfit/escalation/nato/bundes/fieldmedic
 	name = "Bundeswehr Medic"
+	belt = /obj/item/weapon/storage/belt/bdw/medical
 
 /decl/hierarchy/outfit/escalation/nato/bundes/sniper
 	name = "Bundeswehr Marksmen"
@@ -134,6 +140,7 @@
 	uniform = /obj/item/clothing/under/escalation/soviet
 	head = /obj/item/clothing/head/helmet/escalation/ssh68
 	suit = /obj/item/clothing/suit/storage/vest/escalation/sa_harness
+	belt = /obj/item/weapon/storage/belt/sa
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/leader
 	name = "Soviet Leader"
@@ -186,8 +193,13 @@
 /decl/hierarchy/outfit/escalation/warpac/cccp/marksman
 	name = "Soviet Marksmen"
 
+/decl/hierarchy/outfit/escalation/warpac/cccp/medic
+	name = "Soviet Medic"
+	belt = /obj/item/weapon/storage/belt/sa/medical
+
 /decl/hierarchy/outfit/escalation/warpac/cccp/headmedic
 	name = "Soviet Head Medic"
+	belt = /obj/item/weapon/storage/belt/sa/medical
 
 /decl/hierarchy/outfit/escalation/warpac/cccp/hwscom
 	name = "Soviet HWS Commander"
@@ -225,6 +237,7 @@
 	uniform = /obj/item/clothing/under/escalation/czech
 	head = /obj/item/clothing/head/helmet/escalation/vz53
 	suit = /obj/item/clothing/suit/storage/vest/escalation/csla_harness
+	belt = /obj/item/weapon/storage/belt/csla
 
 /decl/hierarchy/outfit/escalation/warpac/csla/lieutenant
 	name = "Czechoslovak Leader"
@@ -270,3 +283,4 @@
 
 /decl/hierarchy/outfit/escalation/warpac/csla/medic
 	name = "Czechoslovak Medic"
+	belt = /obj/item/weapon/storage/belt/csla/medical

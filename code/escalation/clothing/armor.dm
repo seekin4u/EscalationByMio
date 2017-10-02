@@ -9,7 +9,7 @@
 
 /obj/item/clothing/suit/armor/escalation/flakvest
 	name = "M69 Flak Vest"
-	desc = "A lightweight vest designed mostly to stop shrapnel. WONT BE USED INGAME MOST LIKELY DO NOT PLACE IT IN MAP"
+	desc = "A lightweight vest designed mostly to stop shrapnel. Has some pouches and straps on it."
 	icon_state = "usmc_flakvest"
 	w_class = ITEM_SIZE_LARGE
 //	allowed = list(/obj/item/weapon/gun/energy,/obj/item/device/radio,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs)
