@@ -15,6 +15,8 @@ CCCP Pulemetchik
 CCCP Strelok
 }
 
+# ADMINISTRATION
+
 JohnTheBastard = {
 ::ALL::
 }
@@ -33,4 +35,434 @@ P3N3B10L3NT0 = {
 
 Lokiki = {
 ::ALL::
+}
+
+# WHITELIST FOR SOVIET UNION
+
+Ka6a4ok = {
+CCCP Kapter
+}
+
+Surman = {
+CCCP Glavvrach
+}
+
+Vesthamer = {
+CCCP Sanitar
+}
+
+Alpha_lol = {
+CCCP Sanitar
+}
+
+AmbrosiaFumari = {
+CCCP Sanitar
+}
+
+# Vzvod 
+
+BigSancho = {
+CCCP Komandir Vzvoda
+}
+
+Evolet = {
+CCCP Zam Komandira
+}
+
+Logimy = {
+CCCP Vzvodny Pulemetchik
+}
+
+FiregunnZ = {
+CCCP Shtabnoy Radist
+}
+
+# PERVOE OTDELENIYE
+
+Masturbator = {
+CCCP Komandir Otdeleniya
+}
+
+Sakharov_da = {
+CCCP Starshiy Strelok
+}
+
+Hirton = {
+CCCP Radiotelefonist
+}
+
+Ghost_Stalin = {
+CCCP Pulemetchik
+}
+
+PRO__nik = {
+CCCP Granatometchik
+}
+
+Nicknam = {
+CCCP Pomoshnik Granatometchika
+}
+
+Den mag = {
+CCCP Strelok
+}
+
+Nocotov77 = {
+CCCP Strelok
+}
+
+XupyprKZ = {
+CCCP Strelok
+}
+
+# VTOROE OTDELENIYE
+
+DjSmail1 = {
+CCCP Komandir Otdeleniya
+}
+
+Selm_Nail = {
+CCCP Starshiy Strelok
+}
+
+Biniti7 = {
+CCCP Radiotelefonist
+}
+
+Corporal_Adrian = {
+CCCP Pulemetchik
+}
+
+JamsMor = {
+CCCP Granatometchik
+}
+
+Kordvik = {
+CCCP Pomoshnik Granatometchika
+}
+
+Podhad = {
+CCCP Strelok
+}
+
+Fistashka = {
+CCCP Strelok
+}
+
+MoXuT0 = {
+CCCP Starshiy Strelok
+CCCP Strelok
+}
+
+# TRETIE OTDELENIYE
+
+Doktor710 = {
+CCCP Komandir Otdeleniya
+}
+
+OberstCat = {
+CCCP Radiotelefonist
+}
+
+Moscowchief = {
+CCCP Pulemetchik
+}
+
+Osokorn = {
+CCCP Granatometchik
+}
+
+Robuster_1337 = {
+CCCP Pomoshnik Granatometchika
+}
+
+Vadimka655 = {
+CCCP Strelok
+}
+
+Yachuk = {
+CCCP Strelok
+}
+
+TheSadOnion = {
+CCCP Strelok
+}
+
+#snayperi
+
+Hypela42 = {
+CCCP Snayper
+}
+
+Course = {
+CCCP Snayper
+}
+
+# RESERVE.
+Istrel3itel = {
+CCCP Strelok
+}
+
+Kellber = {
+CCCP Strelok
+}
+
+Chrysolite_brooch = {
+CCCP Strelok
+}
+
+Westiko = {
+CCCP Strelok
+}
+
+GataTheEngi = {
+CCCP Strelok
+}
+
+Los Malos = {
+CCCP Strelok
+}
+
+Nazgil = {
+CCCP Strelok
+}
+
+da_kisele = {
+CCCP Strelok
+}
+
+EvilRaccoon = {
+CCCP Strelok
+}
+
+# PERVOE OTDELENIYE TV
+
+Interl0per = {
+CCCP HWS Leader
+}
+
+Forrya = {
+CCCP HWS Gunner
+}
+
+Areyouready_88 = {
+CCCP HWS Assistant
+}
+
+# VTOROE OTDELENIYE TV
+
+Valnaver = {
+CCCP HWS Leader
+}
+
+Terrible212 = {
+CCCP HWS Gunner
+}
+
+CaptainArsa = {
+CCCP HWS Assistant
+}
+
+# OTDELENIYE RAZVEDKI
+
+Sevagun = {
+CCCP Comandir Razvedotdeleniya
+}
+
+LEGION757 = {
+CCCP Zamkomandira Razvedotdeleniya
+}
+
+Miloshevich447 = {
+CCCP Razvedchik
+}
+
+SourcePony = {
+CCCP Razvedchik
+}
+
+TEXNAPb = {
+CCCP Razvedchik
+}
+
+SpellStaff = {
+CCCP Razvedchik-Snayper
+}
+
+# BUNDESWEHR
+
+AllahBoom = {                                                                       
+DE Zugfuhrer
+}
+
+Clockrigger = {
+DE Zugfuhrer Stellvertretende
+}
+
+ChemicalCooker = {
+DE Gruppenfuhrer
+}
+
+Venligen = {
+DE Gruppenfuhrer Stellvertretender
+}
+
+Looknius = {
+DE Grenadier
+}
+
+rzzone = {
+DE Grenadier Assistent
+}
+
+SuicideRey = {
+DE Scharfschutze
+}
+
+Blitz65 = {
+DE Maschinengewehrschutze
+}
+
+blackcat.ua3 = {
+DE Schutze
+}
+
+BornToKill946 = {
+DE Schutze
+}
+
+Navedan = {
+DE Funker
+}
+
+narcissf = {
+DE Gruppenfuhrer
+}
+
+Terror4000rus = {
+DE Gruppenfuhrer Stellvertretender
+}
+
+TheAtlasPlay = {
+DE Grenadier
+}
+
+megaomega005 = {
+DE Grenadier Assistent
+}
+
+Miael = {
+DE Maschinengewehrschutze
+}
+
+oldem2001 = {
+DE Scharfschutze
+}
+
+DctrMM = {
+DE Schutze
+}
+
+Animal.ridens = {
+DE Schutze
+}
+
+Phoenix_Vito = {
+DE Funker
+}
+
+DenGoHa = {
+DE Gruppenfuhrer
+}
+
+Vehast = {
+DE Gruppenfuhrer Stellvertretender
+}
+
+Voldirs = {
+DE Grenadier
+}
+
+Maksich99 = {
+DE Grenadier Assistent
+}
+
+BeerMyFriend = {
+DE Maschinengewehrschutze
+}
+
+Skyrull = {
+DE Scharfschutze
+}
+
+dvacher_oldfag = {
+DE Schutze
+}
+
+Shadence = {
+DE Schutze
+}
+
+Epic_Fail_Kid = {
+DE Funker
+}
+
+Silentum = {
+DE Gruppenfuhrer
+}
+
+Woona = {
+DE Gruppenfuhrer Stellvertretender
+}
+
+Felizio = {
+DE Grenadier
+}
+
+Rasl1410 = {
+DE Grenadier Assistent
+}
+
+The_Dead_Angel = {
+DE Maschinengewehrschutze
+}
+
+Evgen00751 = {
+DE Scharfschutze
+}
+
+Chikubi = {
+DE Schutze
+}
+
+Skatsanni = {
+DE Schutze
+}
+
+andreykey = {
+DE Funker
+}
+
+RiyaMakary = {
+DE Chef-Sanitater
+}
+
+Ted021 = {
+DE Sanitater
+}
+
+Talamus = {
+DE Sanitater
+}
+
+WinterSchock = {
+DE Sanitater
+}
+
+Kosuth_F_E = {
+DE Schutze
+}
+
+EdwardNashton = {
+DE Schutze
 }
