@@ -361,6 +361,7 @@
 	set name = "Remove bayonet"
 	set category = "Object"
 	set popup_menu = 1
+	set src in usr
 
 	if(knife)
 		knife.loc = usr
@@ -615,6 +616,7 @@
 	set name = "Remove bayonet"
 	set category = "Object"
 	set popup_menu = 1
+	set src in usr
 
 	if(knife)
 		knife.loc = usr
@@ -1023,12 +1025,14 @@
 /obj/item/weapon/gun/projectile/automatic/m14/verb/ironsights()
 	set name = "Use iron sights"
 	set category = "Object"
+	set src in usr
 
 	src.toggle_scope(usr)
 
 /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
 	set category = "Object"
+	set src in usr
 
 	if(knife)
 		knife.loc = usr
@@ -1146,6 +1150,7 @@
 /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(knife)
@@ -1234,6 +1239,7 @@
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
+	set popup_menu = 1
 
 	if(launcher)
 		use_launcher = !use_launcher
@@ -1356,6 +1362,7 @@
 /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(knife)
@@ -1563,6 +1570,7 @@
 /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
 	set category = "Object"
+	set src in usr
 	set popup_menu = 1
 
 	if(knife)
