@@ -333,12 +333,25 @@
 	plane = CLICKCATCHER_PLANE
 	mouse_opacity = 2
 	screen_loc = "CENTER-7,CENTER-7"
+	var/client/sourceclient = null
 
-/proc/create_click_catcher()
+/obj/screen/click_catcher/Destroy()
+	. = ..()
+	if(sourceclient)
+		if(sourceclient.void && src in sourceclient.void)
+			var/list/L = sourceclient.void
+			L.Remove(src)
+
+		sourceclient = null
+
+/proc/create_click_catcher(var/client/C)
 	. = list()
 	for(var/i = 0, i<15, i++)
 		for(var/j = 0, j<15, j++)
 			var/obj/screen/click_catcher/CC = new()
+			if(istype(C))
+				CC.sourceclient = C
+
 			CC.screen_loc = "NORTH-[i],EAST-[j]"
 			. += CC
 
