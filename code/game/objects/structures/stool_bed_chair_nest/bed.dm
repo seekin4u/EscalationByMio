@@ -173,16 +173,28 @@
 	name = "army bed"
 	desc = "Don't look really comfy, but you don't have other choice, soldier."
 	icon_state = "bed-wp"
+	base_icon = "bed-wp"
+
+/obj/structure/bed/nato/update_icon()
+	return
 
 /obj/structure/bed/nato
 	name = "army bed"
-	desc = "You see some strange spots here and there, you didn't rest well last night."
+	desc = "You can see some strange spots here and there, didn't rest that well last night."
 	icon_state = "bed-nato"
+	base_icon = "bed-nato"
+
+/obj/structure/bed/wp/update_icon()
+	return
 
 /obj/structure/bed/empty
 	name = "bed frame"
 	desc = "You better sleep on floor."
 	icon_state = "bed-empty"
+	base_icon = "bed-empty"
+
+/obj/structure/bed/empty/update_icon()
+	return
 
 /obj/structure/bed/alien/New(var/newloc)
 	..(newloc,"resin")
