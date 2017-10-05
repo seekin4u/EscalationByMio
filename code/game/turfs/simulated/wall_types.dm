@@ -90,6 +90,21 @@
 	color = null
 	..(newloc, "concrete")
 
+/turf/simulated/wall/concrete_black/New(var/newloc)
+	icon_state = null
+	color = null
+	..(newloc, "concreteblack")
+
+/turf/simulated/wall/concrete_black_r/New(var/newloc)
+	icon_state = null
+	color = null
+	..(newloc, "concreteblack", "concreteblack")
+
+/turf/simulated/wall/concrete_pink/New(var/newloc)
+	icon_state = null
+	color = null
+	..(newloc, "concretepink")
+
 /turf/simulated/wall/armedconcrete
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "concrete_preview"

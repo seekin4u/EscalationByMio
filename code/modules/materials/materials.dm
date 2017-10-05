@@ -358,6 +358,32 @@ var/list/name_to_material
 	stack_type = /obj/item/stack/material/concrete
 	hitsound = 'sound/weapons/smash.ogg'
 
+/material/concreteblack
+	name = "concreteblack"
+	icon_base = "concreteblack"
+	icon_reinf = "concreteblackr"
+	icon_colour = null
+	explosion_resistance = 50
+	brute_armor = 10
+	burn_armor = 15
+	hardness = 80
+	weight = 23
+	stack_type = /obj/item/stack/material/concrete
+	hitsound = 'sound/weapons/smash.ogg'
+
+/material/concretepink
+	name = "concretepink"
+	icon_base = "concretepink"
+	icon_reinf = "concreteblackr"
+	icon_colour = null
+	explosion_resistance = 50
+	brute_armor = 10
+	burn_armor = 15
+	hardness = 80
+	weight = 23
+	stack_type = /obj/item/stack/material/concrete
+	hitsound = 'sound/weapons/smash.ogg'
+
 /material/steel
 	name = DEFAULT_WALL_MATERIAL
 	stack_type = /obj/item/stack/material/steel
