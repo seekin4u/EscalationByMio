@@ -48,7 +48,7 @@
 		user.put_in_hands(BP)
 
 		update_icon()
-		to_chat(user, "<span class='notice'>You pickup hueta from hueta</span>") // FIX TEXT
+		to_chat(user, "<span class='notice'>You opened a pack and took a gauze from it.</span>") //same as below
 
 /obj/item/weapon/bandage/attackby(var/obj/item/A, var/mob/user)
 	if(!ishuman(user))
@@ -60,7 +60,7 @@
 		BP.forceMove(src)
 		bandages.Add(BP)
 		update_icon()
-		to_chat(user, "<span class='notice'>You suka hueta to hueta</span>") // FIX TEXT
+		to_chat(user, "<span class='notice'>You put a gauze back to opened pack.</span>") //maybe not correct but maybe yes
 
 /obj/item/weapon/bandage/nato
 	name = "Pack of gauze"
