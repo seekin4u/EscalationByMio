@@ -36,13 +36,7 @@
 	if(user.get_inactive_hand() != src)
 		return ..()
 
-	if(istype(user.get_active_hand(), /obj/item/stack/medical/bruise_pack) && length(bandages) < max_bandages)
-		var/obj/item/stack/medical/bruise_pack/BP = user.get_active_hand()
-		BP.forceMove(src)
-		bandages.Add(BP)
-		to_chat(user, "<span class='notice'>You suka hueta to hueta</span>") // FIX TEXT
-
-	else if(isnull(user.get_active_hand()) && length(bandages))
+	if(isnull(user.get_active_hand()) && length(bandages))
 		var/obj/item/stack/medical/bruise_pack/BP = bandages[length(bandages)]
 
 		BP.forceMove(user.loc)
