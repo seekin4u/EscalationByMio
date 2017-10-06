@@ -69,11 +69,11 @@
 		to_chat(user, "<span class='notice'>You suka hueta to hueta</span>") // FIX TEXT
 
 /obj/item/weapon/bandage/nato
-	name = "bandage nato" // FIX TEXT
-	desc = "sign something there" // FIX TEXT
+	name = "Pack of gauze"
+	desc = "Contains sterile gauze"
 	icon_state = "nato"
 
 /obj/item/weapon/bandage/warpac
-	name = "bandage warpac" // FIX TEXT
-	desc = "sign something there" // FIX TEXT
+	name = "Pack of gauze"
+	desc = "Contains sterile gauze"
 	icon_state = "warpac"
