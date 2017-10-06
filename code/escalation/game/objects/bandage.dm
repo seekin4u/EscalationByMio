@@ -56,7 +56,7 @@
 
 	if(istype(A, /obj/item/stack/medical/bruise_pack) && length(bandages) < max_bandages)
 		var/obj/item/stack/medical/bruise_pack/BP = A
-		user.drop_from_inventory(src)
+		user.drop_from_inventory(BP)
 		BP.forceMove(src)
 		bandages.Add(BP)
 		update_icon()
