@@ -15,7 +15,7 @@
 	set_dir(dir)
 
 /obj/structure/brutswehr/Destroy()
-	//chance = null
+	basic_chance = null
 	..()
 
 /obj/structure/brutswehr/set_dir(direction)
