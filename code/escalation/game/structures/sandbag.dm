@@ -16,6 +16,7 @@
 	//to_world(" New(). Dir:[dir]; Layer:[layer]; plane:[plane]")
 
 /obj/structure/sandbag/Destroy()
+	basic_chance = null
 	..()
 
 /obj/structure/sandbag/proc/update_layers()
@@ -83,12 +84,12 @@
 
 /obj/structure/sandbag/MouseDrop_T(obj/O as obj, mob/user as mob)
 	..()
-	if((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))
-		return
+	/*if((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))//ohhh yea useless shit hoorah like it <3
+		return*///potentially disassembling thro MouseDrop ~le-bastard
 	if(isrobot(user))
 		return
 	//user.drop_item()
-	if(O.loc != user.loc)
+	if(src.loc != user.loc)
 		to_chat(user, "you start climbing onto [O]...")
 		step(O, get_dir(O, src))
 	return
@@ -98,12 +99,12 @@
 		if(1.0)
 			new /obj/item/weapon/ore/glass(src.loc)
 			new /obj/item/weapon/ore/glass(src.loc)
-			new /obj/item/weapon/ore/glass(src.loc)
+			if(prob(50)) new /obj/item/weapon/ore/glass(src.loc)
 			qdel(src)
 			return
 		if(2.0)
 			new /obj/item/weapon/ore/glass(src)
-			new /obj/item/weapon/ore/glass(src)
+			if(prob(50)) new /obj/item/weapon/ore/glass(src)//ahhh yea, random
 			qdel(src)
 			return
 		else
@@ -114,37 +115,47 @@
 	//icon = 'icons/obj/weapons.dmi'
 	icon_state = "sandbag_empty"
 	w_class = 1
-	var/sand_amount = 0
+	var/sand_amount = 0//how much piles of dirt on item's spawn
 
+//if there are like 3-4 sandbags or they are placed in one directions and each of them will call CanPass for projectiles - very imbalanced
 /obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
 	var/i = 0
 
 	for(var/obj/structure/sandbag/baggy in user.loc.contents)
 		i++
 		if((baggy.dir == user.dir) || i > 4)
-			to_chat(user, "\red There is no more space.")
+			to_chat(user, "<span class='warning'>There is no more space.</span>")
 			return 0
-
+#if ESC_DEBUG
+	to_world("Check4sandbag!")
+#endif
 	return 1
 
+//or there are any shit on turf you want to place sandbag
 /obj/item/weapon/sandbag/proc/check4struct(mob/user as mob)
 	if((locate(/obj/structure/chezh_hangehog) || \
 		locate(/obj/structure/sandbag/concrete_block) || \
 		locate(/obj/structure/brutswehr)) in user.loc.contents \
 		)
-		to_chat(user, "\red There is no more space.")
+		to_chat(user, "<span class='warning'>There is no more space.</span>")
 		return 0
+#if ESC_DEBUG
+	to_world("Check4struct")
+#endif
 	return 1
 
 /obj/item/weapon/sandbag/attack_self(mob/user as mob)
 	if(sand_amount < 4)
-		to_chat(user,  "\red You need more sand to make a wall.")
+		to_chat(user,  "<span class='warning'>You need more sand to make a wall.</span>")
 		return
 	if(!isturf(user.loc))
-		to_chat(user, "\red Haha, not funny.")
+		to_chat(user, "<span class='warning'>Haha, not funny.</span>")
 		return
 
 	if(!check4sandbags(user) || !check4struct(user))
+#if ESC_DEBUG
+		to_world("checks for sandbags or structures returned 0")
+#endif
 		return
 
 	var/obj/structure/sandbag/bag = new(user.loc)//new (user.loc)
@@ -155,14 +166,15 @@
 /obj/item/weapon/sandbag/attackby(obj/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/weapon/ore/glass))
 		if(sand_amount >= 4)
-			to_chat(user, "\red [name] is full!")
+			to_chat(user, "<span class='warning'>[name] is full!</span>")
 			return
 		user.drop_item()
 		qdel(O)
 		sand_amount++
 		w_class++
 		update_icon()
-		to_chat(user, "You need [4 - sand_amount] more units.")
+		to_chat(user, "<span class='warning'>You need [4 - sand_amount] more piles.</span>")
+	return
 
 /obj/item/weapon/sandbag/update_icon()
 	if(sand_amount >= 4)
