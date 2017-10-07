@@ -17,11 +17,13 @@
 
 	#include "../shared/exodus_torch/_include.dm"
 
+/*На самом высоком по старшинству уровне поставить ландмарку с мап датой, и указать level = количество уровней. Тогда мультиз заработает. */
+//Подвал нато, сам фоб, база совков, интертим, тесты и тд
 //	#include "main_bg_under.dmm"//nato underground - 1
 //	#include "main_bg.dmm"//nato base - 2
 //	#include "sukablyat.dmm"//soviet base - 3
-//	#include "coldwar-4.dmm"//transition level
-//	#include "coldwar-1.dmm"//tests
+//	#include "coldwar-intertim.dmm"//transition level 4
+//	#include "coldwar-1.dmm"//tests 5
 	#include "poligon.dmm"
 
 	//to add new sounds - go by this path and add new 'path' to list.

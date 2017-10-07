@@ -11,6 +11,10 @@
 //	mouse_drag_pointer = MOUSE_ACTIVE_POINTER	//???
 	var/rigged = 0
 
+/obj/structure/closet/crate/Destroy()
+	for(var/obj/O in src.contents)//destroing all internal objects
+		O.Destroy()
+
 /obj/structure/closet/crate/can_open()
 	return 1
 
@@ -34,7 +38,7 @@
 					return 2
 
 	playsound(src.loc, 'sound/machines/click.ogg', 15, 1, -3)
-	for(var/obj/O in src)
+	for(var/obj/O in src.contents)//contents stores only internal objs list
 		O.forceMove(get_turf(src))
 	icon_state = icon_opened
 	src.opened = 1
@@ -99,17 +103,18 @@
 	switch(severity)
 		if(1.0)
 			for(var/obj/O in src.contents)
-				qdel(O)
+				O.forceMove(get_turf(src))
 			qdel(src)
 			return
 		if(2.0)
 			for(var/obj/O in src.contents)
-				if(prob(50))
-					qdel(O)
+				O.forceMove(get_turf(src))
 			qdel(src)
 			return
 		if(3.0)
 			if (prob(50))
+				for(var/obj/O in src.contents)
+					O.forceMove(get_turf(src))
 				qdel(src)
 			return
 		else
