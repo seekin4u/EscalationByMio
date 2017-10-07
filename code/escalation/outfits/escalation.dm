@@ -12,7 +12,7 @@
 
 /decl/hierarchy/outfit/escalation/nato/usmc
 	uniform = /obj/item/clothing/under/escalation/usmc
-	suit = /obj/item/clothing/suit/storage/vest/escalation/usmc_harness
+	suit = /obj/item/clothing/suit/armor/escalation/flakvest
 	head = /obj/item/clothing/head/helmet/escalation/usmc
 	belt = /obj/item/weapon/storage/belt/usmc
 
