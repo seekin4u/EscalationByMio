@@ -103,6 +103,9 @@
 	switch(severity)
 		if(1.0)
 			for(var/obj/O in src.contents)
+				if(prob(10))
+					qdel(O)
+					continue //~ le-bastard
 				O.forceMove(get_turf(src))
 			qdel(src)
 			return
@@ -117,7 +120,6 @@
 					O.forceMove(get_turf(src))
 				qdel(src)
 			return
-		else
 	return
 
 /obj/structure/closet/crate/secure
