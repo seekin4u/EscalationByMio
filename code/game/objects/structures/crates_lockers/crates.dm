@@ -13,7 +13,7 @@
 
 /obj/structure/closet/crate/Destroy()
 	for(var/obj/O in src.contents)//destroing all internal objects
-		O.Destroy()
+		qdel(O)
 
 /obj/structure/closet/crate/can_open()
 	return 1
