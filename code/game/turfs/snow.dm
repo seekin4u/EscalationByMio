@@ -33,7 +33,7 @@
 		if(hasGround)
 			if(do_after(user, 15, src) && in_range(user, src))
 				to_chat(user, "<span class='notice'>Digging ground...</span>")
-				var/obj/item/weapon/ore/glass = new(user.loc)
+				new/obj/item/weapon/ore/glass(user.loc)
 			return
 		to_chat(user, "<span class='notice'>Digging snow ...</span>")
 	//  playsound(src, 'ADDSOMETHINGPLS', X, X)
@@ -83,7 +83,9 @@
 
 /turf/snow/gravsnow/truck/road/snow_overlay/New()
 	..()
-	overlays += image(icon = src.icon, icon_state = "snow_overlay", layer = src.layer + 0.1)
+	overlays.Cut()
+	var/image/I = image(icon = src.icon, icon_state = "snow_overlay", layer = src.layer + 0.1)
+	overlays += I
 
 /turf/ground/plating
 	name = "snowy plating"
