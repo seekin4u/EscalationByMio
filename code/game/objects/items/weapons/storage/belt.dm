@@ -388,6 +388,7 @@
 
 /obj/item/weapon/storage/belt/suit/ammo/bdw/lmg
 	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "MG3 Ammo Pouch"
 	desc = "Have enough space to hold 2 boxes."
 	icon_state = "bdw_ammo_lmg"
@@ -412,6 +413,7 @@
 
 /obj/item/weapon/storage/belt/suit/ammo/usmc/lmg
 	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "M60 Ammo Pouch"
 	desc = "Have enough space to hold one box."
 	icon_state = "usmc_ammo_lmg"
@@ -437,6 +439,7 @@
 
 /obj/item/weapon/storage/belt/suit/ammo/sa/lmg
 	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "PKM Ammo Pouch"
 	desc = "Have enough space to hold one box."
 	icon_state = "sa_ammo_lmg"
@@ -461,6 +464,7 @@
 
 /obj/item/weapon/storage/belt/suit/ammo/csla/lmg
 	w_class = ITEM_SIZE_HUGE
+	max_w_class = ITEM_SIZE_NORMAL
 	name = "VZ.59 Ammo Pouch"
 	desc = "Have enough space to hold one box."
 	icon_state = "csla_ammo_lmg"

@@ -335,8 +335,8 @@
 	..()
 	if(knife)
 		var/image/I = image('icons/escalation/obj/bayonets.dmi', src, "bayonet-sa")
-		I.pixel_x += 5
-		I.pixel_y += 5
+		I.pixel_x += 10
+		I.pixel_y += 10
 		overlays += I
 	else
 		overlays.Cut()
@@ -1129,8 +1129,8 @@
 
 	if(knife)
 		var/image/I = image('icons/escalation/obj/bayonets.dmi', src, "bayonet-usmc")
-		I.pixel_x += 5
-		I.pixel_y += 5
+		I.pixel_x += 7
+		I.pixel_y += 9
 		overlays += I
 	else
 		overlays.Cut()
@@ -1561,9 +1561,9 @@
 	..()
 
 	if(knife)
-		var/image/I = image('icons/escalation/obj/bayonets.dmi', src, "bayonet-sa")
-		I.pixel_x += 5
-		I.pixel_y += 5
+		var/image/I = image('icons/escalation/obj/bayonets.dmi', src, "bayonet-csla")
+		I.pixel_x += 10
+		I.pixel_y += 8
 		overlays += I
 	else
 		overlays.Cut()
