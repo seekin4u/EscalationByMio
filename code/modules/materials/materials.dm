@@ -351,10 +351,11 @@ var/list/name_to_material
 	icon_reinf = "reinf_over_concrete"
 	icon_colour = "#898787"
 	explosion_resistance = 50
-	brute_armor = 10
+	brute_armor = 3
 	burn_armor = 15
 	hardness = 80
 	weight = 23
+	integrity = 4500
 	stack_type = /obj/item/stack/material/concrete
 	hitsound = 'sound/weapons/smash.ogg'
 
@@ -364,10 +365,11 @@ var/list/name_to_material
 	icon_reinf = "concreteblackr"
 	icon_colour = null
 	explosion_resistance = 50
-	brute_armor = 10
+	brute_armor = 3
 	burn_armor = 15
 	hardness = 80
 	weight = 23
+	integrity = 4500
 	stack_type = /obj/item/stack/material/concrete
 	hitsound = 'sound/weapons/smash.ogg'
 
@@ -377,10 +379,11 @@ var/list/name_to_material
 	icon_reinf = "concreteblackr"
 	icon_colour = null
 	explosion_resistance = 50
-	brute_armor = 10
+	brute_armor = 3
 	burn_armor = 15
 	hardness = 80
 	weight = 23
+	integrity = 4500
 	stack_type = /obj/item/stack/material/concrete
 	hitsound = 'sound/weapons/smash.ogg'
 
@@ -393,6 +396,11 @@ var/list/name_to_material
 	icon_reinf = "reinf_over"
 	icon_colour = "#666666"
 	hitsound = 'sound/weapons/smash.ogg'
+
+/material/steel/green
+	name = "green"
+	icon_base = "green"
+	icon_colour = null
 
 /material/diona
 	name = "biomass"
@@ -719,6 +727,16 @@ var/list/name_to_material
 	sheet_plural_name = "planks"
 	hitsound = 'sound/effects/woodhit.ogg'
 	conductive = 0
+
+/material/wood/army
+	name = "army"
+	icon_colour = null
+	icon_base = "army"
+
+/material/wood/fancy
+	name = "fancy"
+	icon_colour = null
+	icon_base = "fancy"
 
 /material/wood/holographic
 	name = "holowood"

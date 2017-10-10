@@ -51,3 +51,18 @@
 /obj/structure/table/holo_woodentable
 	icon_state = "holo_preview"
 	material = "holowood"
+
+/obj/structure/table/greenmetal
+	icon_state = "green_preview"
+	material = "green"
+	color = null
+
+/obj/structure/table/army
+	icon_state = "army_preview"
+	material = "army"
+	color = null
+
+/obj/structure/table/fancy
+	icon_state = "army_preview"
+	material = "army"
+	color = null

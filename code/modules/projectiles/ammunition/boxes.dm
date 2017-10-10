@@ -268,7 +268,7 @@
 
 /obj/item/ammo_magazine/c762x51b
 	name = "magazine box (7.62x51mm)"
-	icon_state = "7.62x51b"
+	icon_state = "m60"
 	mag_type = MAGAZINE
 	w_class = ITEM_SIZE_LARGE
 	caliber = "762x51"
@@ -283,7 +283,7 @@
 
 /obj/item/ammo_magazine/c762x39b
 	name = "magazine box (7.62x39mm)"
-	icon_state = "7.62x39b"
+	icon_state = "7.62x39mm"
 	mag_type = MAGAZINE
 	w_class = ITEM_SIZE_LARGE
 	caliber = "762x39"
@@ -292,13 +292,23 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c762x51b/bdw
-	name = "magazine box (7.62x39mm)"
-	icon_state = "7.62x51b"
+	name = "magazine box (7.62x51mm)"
+	icon_state = "mg3"
 	mag_type = MAGAZINE
 	w_class = ITEM_SIZE_LARGE
-	caliber = "762x39"
+	caliber = "762x51"
 	ammo_type = /obj/item/ammo_casing/a762x51
 	max_ammo = 100
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/c762x51b/bdw/drum
+	name = "magazine drum (7.62x51mm)"
+	icon_state = "mg3s"
+	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
+	caliber = "762x51"
+	ammo_type = /obj/item/ammo_casing/a762x51
+	max_ammo = 50
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c762x39b/ap
@@ -355,7 +365,7 @@
 
 /obj/item/ammo_magazine/c762x54b
 	name = "ammo box (7.62x54mm)"
-	icon_state = "7.62x39b"
+	icon_state = "pkm"
 	mag_type = MAGAZINE
 	w_class = ITEM_SIZE_LARGE
 	caliber = "762x54"

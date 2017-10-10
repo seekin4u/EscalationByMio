@@ -901,7 +901,8 @@
 	firemodes = list(
 		list(mode_name="short bursts",  burst=6,  move_delay=9,  one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4)),
 		list(mode_name="long bursts",   burst=12, move_delay=13, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.2, 1.2, 1.2, 1.2, 1.4)),
-		)
+		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=15, burst_accuracy=list(0,-2,-4),       dispersion=list(0.6, 0.9, 1.2), automatic = 0.2),
+	)
 
 	var/cover_opened = FALSE
 
@@ -1375,6 +1376,18 @@
 		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet
 		update_icon()
+
+/obj/item/weapon/gun/projectile/automatic/g3a3/old
+	desc = "G3A3 Battle Rifle. This one have wooden kit and seems a bit old and rusty."
+	icon_state = "g3a3-old"
+
+/obj/item/weapon/gun/projectile/automatic/g3a3/old/update_icon()
+	..()
+
+	if(ammo_magazine)
+		icon_state = "g3a3-old"
+	else
+		icon_state = "g3a3-old-empty"
 
 /obj/item/weapon/gun/projectile/automatic/g3tgs
 	name = "G3TGS"
