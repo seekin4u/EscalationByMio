@@ -53,7 +53,7 @@
 	name = "USMC Medic"
 	belt = /obj/item/weapon/storage/belt/usmc/medical
 	suit_store = /obj/item/weapon/storage/belt/suit/surgery
-
+	back = /obj/item/weapon/storage/backpack/medical
 /decl/hierarchy/outfit/escalation/nato/usmc/marksman
 	name = "USMC Marksman"
 
