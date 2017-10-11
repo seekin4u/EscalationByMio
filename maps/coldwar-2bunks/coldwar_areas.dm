@@ -1,9 +1,10 @@
 
 /area/coldwar
 	name = "area"
+	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "hallF"
 	requires_power = 0
-	lighting_use_dynamic = 0//Say NO to lighting! SNEAKY BITCH = BAY'S LIGHT
+	lighting_use_dynamic = 0//Say NO to lighting! SNEAKY BITCH
 	base_turf = /turf/simulated/floor/dirt
 
 /area/coldwar/outside
@@ -168,6 +169,28 @@
 //////////////////////////////////
 //////////////////////////////////
 //////////////////////////////////
+
+/area/coldwar/stuff
+	icon = 'icons/escalation/turf/area.dmi'
+	icon_state = "unknown"
+
+/area/coldwar/stuff/town
+	icon_state = "town"
+
+/area/coldwar/stuff/roads
+	icon_state = "roads"
+
+/area/coldwar/stuff/hospital
+	icon_state = "hospital"
+
+/area/coldwar/stuff/church
+	icon_state = "church"
+
+/area/coldwar/stuff/cantine
+	icon_state = "cantine"
+
+/area/coldwar/stuff/quarters
+	icon_state = "quarters"
 
 /area/coldwar/sa
 	icon = 'icons/escalation/turf/area.dmi'
