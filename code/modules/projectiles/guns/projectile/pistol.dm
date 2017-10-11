@@ -332,11 +332,11 @@
 
 /obj/item/weapon/gun/projectile/colt911
 	name = "Colt1911"
-	desc = "Solid classic. Uses 9x19 ammo."
+	desc = "Solid classic. Uses .45 ammo."
 	icon_state = "colt" //fix
 	item_state = "gun"
 	w_class = ITEM_SIZE_NORMAL
-	caliber = "9x19"
+	caliber = ".45"
 	fire_delay = 1
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/c45m

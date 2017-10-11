@@ -12,22 +12,26 @@
 
 /decl/hierarchy/outfit/escalation/nato/usmc
 	uniform = /obj/item/clothing/under/escalation/usmc
-	suit = /obj/item/clothing/suit/armor/escalation/flakvest
+	suit = /obj/item/clothing/suit/storage/vest/escalation/usmc_flakvest
 	head = /obj/item/clothing/head/helmet/escalation/usmc
 	belt = /obj/item/weapon/storage/belt/usmc
+	suit_store = /obj/item/weapon/storage/belt/suit/ammo/usmc
+	gloves = /obj/item/clothing/gloves/escalation/usmc
+	shoes = /obj/item/clothing/shoes/escalation/military/usmc
+	l_pocket = /obj/item/clothing/mask/usmc
 
 /decl/hierarchy/outfit/escalation/nato/usmc/lieu
 	name = "USMC Leader"
-	r_hand = /obj/item/weapon/gun/projectile/colt911
+	id = /obj/item/weapon/storage/belt/holster/usmc
 	id_pda_assignment = "Lieutenant"
 
 /decl/hierarchy/outfit/escalation/nato/usmc/lieu2
 	name = "USMC Leader Deputy"
-	r_hand = /obj/item/weapon/gun/projectile/colt911
+	id = /obj/item/weapon/storage/belt/holster/usmc
 
 /decl/hierarchy/outfit/escalation/nato/usmc/squadleader
 	name = "USMC Squad Leader"
-	r_hand = /obj/item/weapon/gun/projectile/colt911
+	id = /obj/item/weapon/storage/belt/holster/usmc
 	back = /obj/item/device/radio/command
 
 /decl/hierarchy/outfit/escalation/nato/usmc/fireteamleader
@@ -40,6 +44,7 @@
 
 /decl/hierarchy/outfit/escalation/nato/usmc/machinegunner
 	name = "USMC MG"
+	suit_store = /obj/item/weapon/storage/belt/suit/ammo/usmc/lmg
 
 /decl/hierarchy/outfit/escalation/nato/usmc/grunt
 	name = "USMC Riflemen"
@@ -47,6 +52,7 @@
 /decl/hierarchy/outfit/escalation/nato/usmc/medic
 	name = "USMC Medic"
 	belt = /obj/item/weapon/storage/belt/usmc/medical
+	suit_store = /obj/item/weapon/storage/belt/suit/surgery
 
 /decl/hierarchy/outfit/escalation/nato/usmc/marksman
 	name = "USMC Marksman"
@@ -54,6 +60,10 @@
 /decl/hierarchy/outfit/escalation/nato/usmc/headmedic
 	name = "USMC Head Medic"
 	belt = /obj/item/weapon/storage/belt/usmc/medical
+	suit = null
+	id = /obj/item/weapon/storage/belt/holster/usmc
+	head = null
+	suit_store = null
 
 /decl/hierarchy/outfit/escalation/nato/usmc/hwscom
 	name = "USMC HWS Commander"
