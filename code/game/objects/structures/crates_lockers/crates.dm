@@ -12,8 +12,12 @@
 	var/rigged = 0
 
 /obj/structure/closet/crate/Destroy()
-	for(var/obj/O in src.contents)//destroing all internal objects
-		qdel(O)
+	rigged = null
+	if(contents.len)
+		for(var/obj/O in src.contents)//destroing all internal objects
+			qdel(O)
+			sleep(1)
+	..()
 
 /obj/structure/closet/crate/can_open()
 	return 1
@@ -107,18 +111,18 @@
 					qdel(O)
 					continue //~ le-bastard
 				O.forceMove(get_turf(src))
-			qdel(src)
+			src.Destroy()
 			return
 		if(2.0)
 			for(var/obj/O in src.contents)
 				O.forceMove(get_turf(src))
-			qdel(src)
+			src.Destroy()
 			return
 		if(3.0)
 			if (prob(50))
 				for(var/obj/O in src.contents)
 					O.forceMove(get_turf(src))
-				qdel(src)
+				src.Destroy()
 			return
 	return
 
