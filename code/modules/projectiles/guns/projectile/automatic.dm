@@ -285,7 +285,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/ak74
 	name = "AK-74"
-	desc = "AK-74. Soviet standard issue combat rifle."
+	desc = "A standard-issue Soviet Army combat rifle."
 	icon_state = "ak74"
 	item_state = "ak74"
 	w_class = 5
@@ -326,7 +326,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 	..()
@@ -370,13 +370,13 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl
 	name = "AK-74"
-	desc = "Standard issue AK-74 with GP-25 grenade launcher."
+	desc = "A standard-issue Soviet Army combat rifle with a GP-25 launcher attached to it."
 	icon_state = "ak74gl"
 	item_state = "ak74gl"
 	w_class = 5
@@ -456,7 +456,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
-	desc = "A lighter variant of the AK-74. Standard issue to Soviet paratroopers."
+	desc = "A lighter version of the standard-issue Soviet Army combat rifle."
 	icon_state = "aks74"
 	item_state = "ak"
 	w_class = 4
@@ -497,7 +497,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet
 		update_icon()
 	..()
@@ -530,7 +530,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet
 		update_icon()
 
@@ -544,7 +544,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
-	desc = "Standard issue rifle of the USMC."
+	desc = "A standard-issue USMC combat rifle."
 	icon_state = "m16a2"
 	item_state = "m16"
 	w_class = 5
@@ -583,7 +583,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet
 		update_icon()
 	..()
@@ -625,13 +625,13 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You remove the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/coltmodel733
 	name = "Colt Model 733"
-	desc = "Standard issue carbine of the USMC."
+	desc = "A standard-issue USMC carbine."
 	icon_state = "coltmodel733"
 	item_state = "m16"
 	w_class = 4
@@ -667,7 +667,7 @@
 //have bipods on bayonet's slot
 /obj/item/weapon/gun/projectile/automatic/rpk74
 	name = "RPK-74"
-	desc = "RPK-74. Standard issue Soviet squad support weapon."
+	desc = "A standard-issue Soviet Army squad support weapon."
 	icon_state = "rpk"
 	item_state = "rpk"
 	slot_flags = SLOT_BACK_GUN
@@ -715,7 +715,7 @@
 //same with bayonet as RPK
 /obj/item/weapon/gun/projectile/automatic/pkm
 	name = "PKM"
-	desc = "PKM. Standard Soviet general purpose machine gun."
+	desc = "A standard-issue Soviet Army general purpose machine gun."
 	icon_state = "pkm"
 	item_state = "vz59"
 	w_class = 5
@@ -796,7 +796,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m60
 	name = "M60E1"
-	desc = "M60, lovingly dubbed 'the pig.' Standard issue LMG of the USMC."
+	desc = "A standard-issue USMC squad support weapon."
 	icon_state = "m60"
 	item_state = "m60"
 	w_class = 5
@@ -878,7 +878,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/mg3
 	name = "MG3"
-	desc = "MG3, a popular son of a famous MG-42. Main machinegun of the Bundeswehr."
+	desc = "A standard-issue Bundeswehr squad support weapon."
 	icon_state = "MG3"
 	item_state = "m60"
 	w_class = 5
@@ -962,7 +962,7 @@
 //DO NOT USE
 /obj/item/weapon/gun/projectile/automatic/m14
 	name = "M14"
-	desc = "M14 Rifle, formerly standard issue battle rifle of the USMC."
+	desc = "A former standard-issue USMC combat rifle."
 	icon_state = "m14"
 	item_state = "m14"
 	slot_flags = SLOT_BACK_GUN
@@ -1002,7 +1002,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet
 		update_icon()
 	..()
@@ -1042,14 +1042,14 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet
 		update_icon()
 
-//you are not so stupid to attach bayonet to marksman riffles, aren't you?
+//you are not so stupid to attach bayonet to marksman riffles, aren't you? -- close quarters sniping
 /obj/item/weapon/gun/projectile/automatic/m14/scoped
 	name = "M21"
-	desc = "M21 Marksman rifle. Modification of the M14 battle rifle."
+	desc = "A standard-issue USMC marksman rifle."
 	icon_state = "m14scoped"
 	item_state = "m14"
 	accuracy = 5
@@ -1078,7 +1078,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
 	name = "M16A1"
-	desc = "A standard-issued USMC automatic rifle"
+	desc = "A standard-issue USMC combat rifle."
 	icon_state = "m16a1"
 	item_state = "m16"
 	w_class = 5
@@ -1119,7 +1119,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet
 		update_icon()
 	..()
@@ -1161,13 +1161,13 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl
 	name = "M16A1"
-	desc = "An M16A1 with M203 grenade launcher."
+	desc = "A standard-issue USMC combat rifle with a M203 launcher attached to it."
 	icon_state = "m16a1gl"
 	item_state = "m16gl"
 	w_class = 5
@@ -1248,7 +1248,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/svd
 	name = "SVD"
-	desc = "That's the SVD, a standard-issue sniper rifle used by SA and CSLA."
+	desc = "A standard-issue Soviet Army and CSLA marksman rifle."
 	icon_state = "svd"
 	item_state = "m14"
 	slot_flags = SLOT_BACK_GUN
@@ -1291,7 +1291,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/g3a3
 	name = "G3A3"
-	desc = "G3A3 Battle Rifle. Standard issue to Bundeswehr riflemen."
+	desc = "A standard-issue Bundeswehr combat rifle."
 	icon_state = "g3a3"
 	item_state = "g3a3"
 	w_class = 5
@@ -1331,7 +1331,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet
 		update_icon()
 	..()
@@ -1373,12 +1373,12 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/old
-	desc = "G3A3 Battle Rifle. This one have wooden kit and seems a bit old and rusty."
+	desc = "G3A3 Battle Rifle. This one has a wooden kit and shows signs of extended use."
 	icon_state = "g3a3-old"
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/old/update_icon()
@@ -1391,7 +1391,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/g3tgs
 	name = "G3TGS"
-	desc = "G3A3 with an HK79 underbarrel grenade launcher."
+	desc = "A standard-issue Bundeswehr combat rifle with an HK79 launcher attached to it."
 	icon_state = "g3tgs"
 	item_state = "g3tgs"
 	w_class = 5
@@ -1511,7 +1511,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/vz58
 	name = "Vz.58"
-	desc = "The Sa vz.58 is a standard-issued automatic rifle of the CSLA."
+	desc = "A standard-issue CSLA combat rifle."
 	icon_state = "vz58"
 	item_state = "vz58"
 	w_class = 5
@@ -1552,7 +1552,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You add [knife.name] to \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet
 		update_icon()
 	..()
@@ -1593,13 +1593,13 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove bayonet from \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You deattach bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl
-	name = "Vz.58 with GP-25"
-	desc = "This Vz.58 modified with soviet 30 mm GP-25 underbarrel grenade laucher."
+	name = "Vz.58"
+	desc = "A standard-issue CSLA combat rifle with a GP-25 attached to it."
 	icon_state = "vz58gl"
 	item_state = "vz58gl"
 	w_class = 5
@@ -1680,7 +1680,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/vz59
 	name = "Vz. 59"
-	desc = "UK vz. 59 is a unified CSLA light machine gun."
+	desc = "A standard-issue CSLA squad support weapon."
 	icon_state = "vz59"
 	item_state = "vz59"
 	w_class = 5
