@@ -52,13 +52,7 @@
 /turf/simulated/floor/pavement
 	name = "pavement"
 	icon = 'icons/escalation/turf/road.dmi'
-	icon_state = "Pavement0"
-
-
-/turf/simulated/floor/pavement/New()
-	icon_state = "Pavement[rand(0,5)]"
-	if(prob(10))
-		new /obj/effect/border_effect/snow(src)
+	icon_state = "pavement"
 
 /turf/simulated/floor/pavement/corner/outer
 	icon_state = "Corner"
@@ -70,14 +64,8 @@
 /turf/simulated/floor/pavement/corner/inner
 	icon_state = "Inner_corner"
 
-/turf/simulated/floor/road/New()
-	if(prob(10))
-		new /obj/effect/border_effect/snow(src)
-
-
 /turf/snow/no_flora
 	//just for the flora code
-
 
 
 /turf/simulated/wall/concrete

@@ -458,7 +458,7 @@
 	name = "AKS-74"
 	desc = "A lighter version of the standard-issue Soviet Army combat rifle."
 	icon_state = "aks74"
-	item_state = "ak"
+	item_state = "aks"
 	w_class = 4
 	load_method = MAGAZINE
 	caliber = "545x39"
@@ -470,7 +470,7 @@
 	accuracy = 1
 	fire_delay = 2
 	zoom_ammount = 10
-	wielded_item_state = "ak-wielded"
+	wielded_item_state = "aks-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'

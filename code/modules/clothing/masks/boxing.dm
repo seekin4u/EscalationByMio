@@ -48,7 +48,7 @@
 	icon_state = "bdw"
 	item_state = "bdw"
 	flags_inv = BLOCKHAIR
-	body_parts_covered = HEAD|FACE
+	body_parts_covered = HEAD
 	w_class = ITEM_SIZE_SMALL
 
 /obj/item/clothing/mask/usmc
@@ -57,5 +57,5 @@
 	icon_state = "usmc"
 	item_state = "usmc"
 	flags_inv = BLOCKHAIR
-	body_parts_covered = HEAD|FACE
+	body_parts_covered = HEAD
 	w_class = ITEM_SIZE_SMALL
