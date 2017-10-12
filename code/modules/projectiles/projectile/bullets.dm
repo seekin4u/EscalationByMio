@@ -361,9 +361,6 @@
 
 /obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
 	explosion(target, -1, 2, 3, 4)
-	if(prob(10))
-		target.ex_act(1)
-	..()
 
 /obj/item/projectile/bullet/mk19_40x53mm
 	name = "MK19' bullet"
@@ -375,7 +372,7 @@
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
 	explosion(target, -1,1,3,4)//a little bit explosive that 30x29
-	..()
+
 
 /obj/item/projectile/bullet/mk19_40x53mm/pow
 	damage = 120
@@ -387,7 +384,7 @@
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
 	explosion(target, -1,1,4,5)
-	..()
+
 
 /obj/item/projectile/bullet/rgprocket
 	icon_state = "rocket1"
