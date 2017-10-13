@@ -374,6 +374,18 @@
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 
+/obj/item/weapon/gun/projectile/automatic/ak74/black
+	desc = "AK-74 with polymer kit and dim finish."
+	icon_state = "ak74black"
+
+/obj/item/weapon/gun/projectile/automatic/ak74/black/update_icon()
+	..()
+
+	if(ammo_magazine)
+		icon_state = "ak74black"
+	else
+		icon_state = "ak74black-empty"
+
 /obj/item/weapon/gun/projectile/automatic/ak74gl
 	name = "AK-74"
 	desc = "A standard-issue Soviet Army combat rifle with a GP-25 launcher attached to it."
@@ -1596,6 +1608,19 @@
 		to_chat(user, "<span class='notice'>You deattach bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet
 		update_icon()
+
+/obj/item/weapon/gun/projectile/automatic/vz58/black
+	desc = "Sa VZ.58 with black kit and folding stock."
+	icon_state = "vz_black_stock"
+
+/obj/item/weapon/gun/projectile/automatic/vz58/black/update_icon()
+	..()
+
+	if(ammo_magazine)
+		icon_state = "vz_black_stock"
+	else
+		icon_state = "vz_black_stock-empty"
+
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl
 	name = "Vz.58"

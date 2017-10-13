@@ -47,7 +47,7 @@
 	desc = "Black warm coif"
 	icon_state = "bdw"
 	item_state = "bdw"
-	flags_inv = BLOCKHAIR
+	flags_inv = HIDEFACE | BLOCKHAIR
 	body_parts_covered = HEAD
 	w_class = ITEM_SIZE_SMALL
 
@@ -56,6 +56,6 @@
 	desc = "Olive warm coif"
 	icon_state = "usmc"
 	item_state = "usmc"
-	flags_inv = BLOCKHAIR
+	flags_inv = HIDEFACE | BLOCKHAIR
 	body_parts_covered = HEAD
 	w_class = ITEM_SIZE_SMALL
