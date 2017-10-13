@@ -408,10 +408,14 @@ var/list/name_to_material
 	icon_colour = "#666666"
 	hitsound = 'sound/weapons/smash.ogg'
 
-/material/steel/green
-	name = "green"
-	icon_base = "green"
+/material/greenmetal
+	name = "greenmetal"
+	icon_base = "greenmetal"
 	icon_colour = null
+	stack_type = /obj/item/stack/material/steel
+	integrity = 150
+	brute_armor = 5
+	hitsound = 'sound/weapons/smash.ogg'
 
 /material/diona
 	name = "biomass"

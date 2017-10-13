@@ -53,19 +53,16 @@
 	material = "holowood"
 
 /obj/structure/table/greenmetal
-	icon_state = "green_preview"
-	material = "green"
+	icon_state = "greenmetal_preview"
+	material = "greenmetal"
 	color = null
-	material_alteration = MATERIAL_ALTERATION_NONE
 
 /obj/structure/table/army
 	icon_state = "army_preview"
 	material = "army"
 	color = null
-	material_alteration = MATERIAL_ALTERATION_NONE
 
 /obj/structure/table/fancy
 	icon_state = "army_preview"
 	material = "army"
 	color = null
-	material_alteration = MATERIAL_ALTERATION_NONE
