@@ -56,13 +56,16 @@
 	icon_state = "green_preview"
 	material = "green"
 	color = null
+	material_alteration = MATERIAL_ALTERATION_NONE
 
 /obj/structure/table/army
 	icon_state = "army_preview"
 	material = "army"
 	color = null
+	material_alteration = MATERIAL_ALTERATION_NONE
 
 /obj/structure/table/fancy
 	icon_state = "army_preview"
 	material = "army"
 	color = null
+	material_alteration = MATERIAL_ALTERATION_NONE
