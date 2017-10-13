@@ -743,15 +743,53 @@ var/list/name_to_material
 	hitsound = 'sound/effects/woodhit.ogg'
 	conductive = 0
 
-/material/wood/army
+/material/army
 	name = "army"
-	icon_colour = null
+	adjective_name = "army"
+	stack_type = /obj/item/stack/material/wood
+	icon_colour = "null"
+	integrity = 50
 	icon_base = "army"
+	explosion_resistance = 2
+	shard_type = SHARD_SPLINTER
+	shard_can_repair = 0 // you can't weld splinters back into planks
+	hardness = 15
+	brute_armor = 1
+	weight = 18
+	melting_point = T0C+300 //okay, not melting in this case, but hot enough to destroy wood
+	ignition_point = T0C+288
+	stack_origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
+	dooropen_noise = 'sound/effects/doorcreaky.ogg'
+	door_icon_base = "army"
+	destruction_desc = "splinters"
+	sheet_singular_name = "plank"
+	sheet_plural_name = "planks"
+	hitsound = 'sound/effects/woodhit.ogg'
+	conductive = 0
 
-/material/wood/fancy
+/material/fancy
 	name = "fancy"
-	icon_colour = null
+	adjective_name = "fancy"
+	stack_type = /obj/item/stack/material/wood
+	icon_colour = "null"
+	integrity = 50
 	icon_base = "fancy"
+	explosion_resistance = 2
+	shard_type = SHARD_SPLINTER
+	shard_can_repair = 0 // you can't weld splinters back into planks
+	hardness = 15
+	brute_armor = 1
+	weight = 18
+	melting_point = T0C+300 //okay, not melting in this case, but hot enough to destroy wood
+	ignition_point = T0C+288
+	stack_origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
+	dooropen_noise = 'sound/effects/doorcreaky.ogg'
+	door_icon_base = "fancy"
+	destruction_desc = "splinters"
+	sheet_singular_name = "plank"
+	sheet_plural_name = "planks"
+	hitsound = 'sound/effects/woodhit.ogg'
+	conductive = 0
 
 /material/wood/holographic
 	name = "holowood"

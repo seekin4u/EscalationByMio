@@ -63,6 +63,6 @@
 	color = null
 
 /obj/structure/table/fancy
-	icon_state = "army_preview"
-	material = "army"
+	icon_state = "fancy_preview"
+	material = "fancy"
 	color = null
