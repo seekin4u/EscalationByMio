@@ -612,3 +612,292 @@
 
 	if(alien != IS_DIONA)
 		M.make_jittery(-50)
+
+
+//coldwar chemistry
+
+
+/datum/reagent/sydnocarbum
+	name = "Sydnocarbum"
+	id = "sydnocarbum"
+	description = "Powerful military-grade psychostimulant."
+	reagent_state = LIQUID
+	color = "#FF80BF"
+	metabolism = 0.15
+	data = 0
+	overdose = 10
+
+/datum/reagent/sydnocarbum/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	if(prob(5))
+		M.emote(pick("twitch", "blink_r", "shiver"))
+	M.add_chemical_effect(CE_SPEEDBOOST, 0.5)
+	M.add_chemical_effect(CE_PULSE, 2)
+	if(volume <= 0.1 && dose >= 0.5 && world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+		data = world.time
+		M << "<span class='warning'>Something is must be wrong	...</span>"
+	else
+		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+			M << "<span class='notice'>You feel yourself much safer.</span>"
+
+/datum/reagent/sydnocarbum/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.hallucination = max(M.hallucination, 2)
+	M.make_dizzy(5)
+	M.make_jittery(5)
+	M.confused += 2
+	M.drowsyness += 2
+
+/datum/reagent/phenazepam
+	name = "Phenazepam"
+	id = "phenazepam"
+	description = "That's the powerful tranquilizer."
+	reagent_state = LIQUID
+	color = "#FF80BF"
+	metabolism = 0.1
+	data = 0
+	overdose = 16
+
+/datum/reagent/phenazepam/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+
+	if(dose < 3)
+		if(dose == metabolism * 2 || prob(5))
+			M.emote("yawn")
+			M.add_chemical_effect(CE_PAINKILLER, 25)
+	else if(dose < 6)
+		M.eye_blurry = max(M.eye_blurry, 10)
+		M.add_chemical_effect(CE_PAINKILLER, 60)
+	else if(dose < 9)
+		if(prob(50))
+			M.Weaken(2)
+		M.drowsyness = max(M.drowsyness, 20)
+	else
+		M.sleeping = max(M.sleeping, 20)
+		M.drowsyness = max(M.drowsyness, 60)
+	M.add_chemical_effect(CE_PULSE, -1)
+
+
+/datum/reagent/phenazepam/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.hallucination = max(M.hallucination, 2)
+	M.emote(pick("twitch", "drool", "moan", "gasp"))
+	M.adjustToxLoss(3)
+
+/datum/reagent/doxycicline
+	name = "Doxycicline"
+	id = "doxycicline"
+	description = "A broad-spectrum antibiotic."
+	taste_description = "bitterness"
+	reagent_state = LIQUID
+	color = "#C1C1C1"
+	metabolism = 0.1
+	overdose = REAGENTS_OVERDOSE
+	scannable = 1
+
+/datum/reagent/amidopyrinum
+	name = "Amidopyrinum"
+	id = "amidopyrinum"
+	description = "An effective and very addictive painkiller."
+	taste_description = "bitterness"
+	reagent_state = LIQUID
+	color = "#800080"
+	overdose = 7
+	metabolism = 0.20
+	flags = IGNORE_MOB_SIZE
+
+/datum/reagent/amidopyrinum/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	M.add_chemical_effect(CE_PAINKILLER, 90)
+
+/datum/reagent/amidopyrinum/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.druggy = max(M.druggy, 10)
+	M.hallucination = max(M.hallucination, 5)
+
+/datum/reagent/morphine
+	name = "Morphine"
+	id = "morphine"
+	description = "Morphine is the powerful and very addictive painkiller."
+	taste_description = "bitterness"
+	taste_mult = 0.1
+	reagent_state = LIQUID
+	color = "#800080"
+	flags = IGNORE_MOB_SIZE
+	overdose = 10
+	metabolism = 0.15
+
+/datum/reagent/morphine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_DIONA)
+		M.add_chemical_effect(CE_PAINKILLER, 150)
+	M.add_chemical_effect(CE_PULSE, 1)
+	if(prob(5))
+		M.emote(pick("twitch", "blink_r", "shiver"))
+
+/datum/reagent/morphine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.hallucination = max(M.hallucination, 50)
+	M.make_dizzy(10)
+	M.make_jittery(10)
+	if(M.losebreath < 2)
+		M.losebreath++
+
+/datum/reagent/naloxone
+	name = "Naloxone"
+	id = "naloxone"
+	description = "A morphine-based drug used to neutralize the morphine."
+	reagent_state = LIQUID
+	color = "#605048"
+	overdose = REAGENTS_OVERDOSE
+	metabolism = 0.15
+
+/datum/reagent/naloxone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	M.dizziness = 0
+	M.drowsyness = 0
+	M.stuttering = 0
+	M.confused = 0
+	if(M.ingested)
+		for(var/datum/reagent/R in M.ingested.reagent_list)
+			if(istype(R, /datum/reagent/morphine))
+				R.dose = max(R.dose - removed * 5, 0)
+
+
+/datum/reagent/epinephrine
+	name = "Epinephrine"
+	id = "epinephrine"
+	description = "Epinephrine is a powerful adrenaline-based used to treat cardiac arrest and other cardiac dysrhythmias resulting in diminished or absent cardiac output."
+	taste_description = "bitterness"
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose = 6
+	metabolism = 0.3
+
+/datum/reagent/epinephrine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	M.SetParalysis(0)
+	M.SetWeakened(0)
+	M.add_chemical_effect(CE_PAINKILLER, 300)
+	M.adjustToxLoss(rand(2))
+	M.add_chemical_effect(CE_STABLE)
+
+/datum/reagent/epinephrine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(H.stat != 1)
+			if(H.losebreath >= 10)
+				H.losebreath = max(10, H.losebreath - 10)
+			H.adjustOxyLoss(2)
+			H.Weaken(10)
+		M.add_chemical_effect(CE_NOPULSE, 1)
+
+
+/datum/reagent/promethazine
+	name = "Promethazine"
+	id = "promethazine"
+	description = "That's the powerful neuroleptic."
+	reagent_state = LIQUID
+	color = "#FF80BF"
+	metabolism = 0.12
+	data = 0
+	overdose = 16
+
+/datum/reagent/promethazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(dose < 3)
+		if(dose == metabolism * 2 || prob(5))
+			M.add_chemical_effect(CE_PAINKILLER, 30)
+	else if(dose < 6)
+		M.eye_blurry = max(M.eye_blurry, 20)
+		M.add_chemical_effect(CE_PAINKILLER, 80)
+	else if(dose < 9)
+		if(prob(50))
+			M.Weaken(4)
+		M.drowsyness = max(M.drowsyness, 30)
+	else
+		M.sleeping = max(M.sleeping, 30)
+		M.drowsyness = max(M.drowsyness, 60)
+	M.add_chemical_effect(CE_PULSE, -2)
+
+
+/datum/reagent/promethazine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.hallucination = max(M.hallucination, 2)
+	M.make_dizzy(5)
+	M.make_jittery(5)
+	M.drowsyness += 2
+	M.emote(pick("twitch", "drool", "moan", "gasp"))
+	M.adjustToxLoss(4)
+
+/datum/reagent/ethaperazine
+	name = "Ethaperazine"
+	id = "ethaperazine"
+	description = "That's the low-powerful neuroleptic. Also used as anti-vomit drug."
+	taste_description = "sourness"
+	reagent_state = LIQUID
+	color = "#BF80BF"
+	metabolism = 0.15
+	data = 0
+	overdose = 18
+
+/datum/reagent/ethaperazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	if(dose < 3)
+		if(dose == metabolism * 2 || prob(5))
+			M.add_chemical_effect(CE_PAINKILLER, 5)
+			M.adjustToxLoss(-1 * removed)
+	else if(dose < 6)
+		M.eye_blurry = max(M.eye_blurry, 20)
+		M.add_chemical_effect(CE_PAINKILLER, 10)
+		M.adjustToxLoss(-2 * removed)
+	else if(dose < 9)
+		if(prob(50))
+			M.Weaken(4)
+		M.drowsyness = max(M.drowsyness, 30)
+		M.adjustToxLoss(-3 * removed)
+	else
+		M.sleeping = max(M.sleeping, 30)
+		M.drowsyness = max(M.drowsyness, 60)
+		M.adjustToxLoss(-3 * removed)
+	M.add_chemical_effect(CE_PULSE, -1)
+
+/datum/reagent/salbutamol
+	name = "Salbutamol"
+	id = "salbutamol"
+	description = "Salbutamol is used in the treatment of oxygen deprivation."
+	taste_description = "bitterness"
+	reagent_state = LIQUID
+	color = "#0040FF"
+	overdose = REAGENTS_OVERDOSE * 0.5
+	scannable = 1
+	flags = IGNORE_MOB_SIZE
+
+/datum/reagent/salbutamol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_VOX)
+		M.adjustToxLoss(removed * 9)
+	else if(alien != IS_DIONA)
+		M.adjustOxyLoss(-15 * removed)
+
+/datum/reagent/aminocap
+	name = "Aminocaproic acid"
+	id = "aminocap"
+	description = "Aminocaproic acid is an analgesic medication and can be used to treat blunt trauma."
+	taste_description = "bitterness"
+	taste_mult = 3
+	reagent_state = LIQUID
+	color = "#BF0000"
+	overdose = REAGENTS_OVERDOSE
+	scannable = 1
+	flags = IGNORE_MOB_SIZE
+	overdose = 20
+	metabolism = 0.15
+
+/datum/reagent/aminocap/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_DIONA)
+		M.heal_organ_damage(15 / (sqrt(M.getBruteLoss()) +  1) * removed, 0)
+		apply_fatigue_effect(M, removed, 0, 10, 10, 10, 5)
+		M.add_chemical_effect(CE_PULSE, -1)

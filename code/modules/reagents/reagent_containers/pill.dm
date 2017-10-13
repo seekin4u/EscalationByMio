@@ -270,3 +270,71 @@ obj/item/weapon/reagent_containers/pill/noexcutite/New()
 /obj/item/weapon/reagent_containers/pill/paroxetine/New()
 		..()
 		reagents.add_reagent("paroxetine", 10)
+
+//coldwar pills
+
+/obj/item/weapon/reagent_containers/pill/amidopyrinum
+	name = "amidopyrinum pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("amidopyrinum", 5)
+
+/obj/item/weapon/reagent_containers/pill/doxycicline
+	name = "doxycicline pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("doxycicline", 5)
+
+
+/obj/item/weapon/reagent_containers/pill/phenazepam
+	name = "phenazepam pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("phenazepam", 5)
+
+/obj/item/weapon/reagent_containers/pill/sydnocarbum
+	name = "sydnocarbum pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("sydnocarbum", 5)
+
+/obj/item/weapon/reagent_containers/pill/morphine
+	name = "morphine pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("morphine", 5)
+
+
+/obj/item/weapon/reagent_containers/pill/naloxone
+	name = "Naloxone pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("naloxone", 5)
+
+/obj/item/weapon/reagent_containers/pill/promethazine
+	name = "promethazine pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("promethazine", 5)
+
+/obj/item/weapon/reagent_containers/pill/ethaperazine
+	name = "ethaperazine pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("ethaperazine", 5)
