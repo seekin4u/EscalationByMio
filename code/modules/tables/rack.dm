@@ -1,6 +1,6 @@
 /obj/structure/table/rack
 	name = "rack"
-	desc = "Different from the Middle Ages version."
+	desc = "This is a rack."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "rack"
 	can_plate = 0
