@@ -899,5 +899,5 @@
 /datum/reagent/aminocap/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(15 / (sqrt(M.getBruteLoss()) +  1) * removed, 0)
-		apply_fatigue_effect(M, removed, 0, 10, 10, 10, 5)
+// fix this sometime 		apply_fatigue_effect(M, removed, 0, 10, 10, 10, 5)
 		M.add_chemical_effect(CE_PULSE, -1)
