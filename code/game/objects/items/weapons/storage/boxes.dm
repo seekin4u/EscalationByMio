@@ -499,7 +499,7 @@
 	desc = "Box with medical kit."
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
-		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/escalation/morphine = 2,
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
@@ -600,7 +600,7 @@
 	desc = "Box with medical kit."
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
-		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/escalation/morphine = 2,
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
@@ -701,7 +701,7 @@
 	desc = "Box with medical kit."
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
-		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/escalation/morphine = 2,
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,
@@ -802,7 +802,7 @@
 	desc = "Box with medical kit."
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
-		/obj/item/weapon/reagent_containers/glass/bottle/morphine = 2,
+		/obj/item/weapon/reagent_containers/glass/bottle/escalation/morphine = 2,
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/storage/pill_bottle/tramadol = 2,
 		/obj/item/weapon/storage/pill_bottle/dylovene = 1,

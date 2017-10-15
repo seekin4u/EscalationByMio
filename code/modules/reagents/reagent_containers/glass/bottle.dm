@@ -251,13 +251,79 @@
 	reagents.add_reagent("frostoil", 60)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/bottle/morphine
+
+// ESCALATION BOTTLES
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation
+	name = "drug bottle"
+	desc = "A small bottle. Contains someting without lable."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "morphine"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/update_icon()
+	if(reagents.total_volume > 0)
+		icon_state = "[initial(icon_state)]1"
+	else
+		icon_state = "[initial(icon_state)]0"
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/morphine
 	name = "moprhine bottle"
 	desc = "A small bottle. Contains morphine - effective and very addictive painkiller."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "morphine"
 
-/obj/item/weapon/reagent_containers/glass/bottle/morphine/New()
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/morphine/New()
 	..()
-	reagents.add_reagent("oxycodone", 60)
+	reagents.add_reagent("morphine", 60)
 	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/naloxone
+	name = "naloxone bottle"
+	desc = "A small bottle. Contains naloxone - drug used to neutralize the morphine."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "naloxone"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/naloxone/New()
+	..()
+	reagents.add_reagent("naloxone", 60)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/aminocap
+	name = "aminocap bottle"
+	desc = "A small bottle. Contains aminocap - analgesic medication that can be used to treat blunt trauma."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "aminocap"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/aminocap/New()
+	..()
+	reagents.add_reagent("aminocap", 60)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/salbutamol
+	name = "salbutamol bottle"
+	desc = "A small bottle. Contains salbutamol - medication used in the treatment of oxygen deprivation."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "salbutamol"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/salbutamol/New()
+	..()
+	reagents.add_reagent("salbutamol", 60)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/ethaperazine
+	name = "ethaperazine bottle"
+	desc = "A small bottle. Contains ethaperazine - low-powerful neuroleptic. Also used as anti-vomit drug."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "ethaperazine"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/ethaperazine/New()
+	..()
+	reagents.add_reagent("ethaperazine", 60)
+	update_icon()
+
+// promethazine epinephrine amidopyrinum phenazepam sydnocarbum TODO
