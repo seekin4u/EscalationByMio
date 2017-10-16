@@ -435,7 +435,7 @@
 
 
 /obj/item/weapon/storage/box/ammocan/sa
-	name = "ammo can (5.45x39mm). Ne proeby tsink!"
+	name = "ammo can (5.45x39mm)"
 	icon_state = "sa"
 	w_class = ITEM_SIZE_LARGE
 	can_hold = list(/obj/item/ammo_magazine/ammobox/box545x39)
@@ -477,7 +477,7 @@
 	can_hold = list(/obj/structure/bed/roller)
 	foldable = /obj/item/stack/material/cardboard
 
-/obj/item/weapon/storage/box/chem
+/obj/item/weapon/storage/box/cargo/chem
 	name = "kit box"
 	desc = "Box with medical supplies."
 	icon_state = "med_cargo"
