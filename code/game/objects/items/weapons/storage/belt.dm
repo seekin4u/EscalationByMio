@@ -223,7 +223,7 @@
 	desc = "Standart satchel of the Bundeswehr medics."
 	icon_state = "bdw_med"
 	item_state = "bdw_med"
-	storage_slots = 7
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/dnainjector,
@@ -264,7 +264,7 @@
 	desc = "Standart satchel of the USMC medics."
 	icon_state = "usmc_med"
 	item_state = "usmc_med"
-	storage_slots = 7
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/dnainjector,
@@ -305,7 +305,7 @@
 	desc = "Standart satchel of the SA medics."
 	icon_state = "sa_med"
 	item_state = "sa_med"
-	storage_slots = 7
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/dnainjector,
@@ -346,7 +346,7 @@
 	desc = "Standart satchel of the CSLA medics."
 	icon_state = "csla_med"
 	item_state = "csla_med"
-	storage_slots = 7
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/dnainjector,

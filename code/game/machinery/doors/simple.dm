@@ -30,7 +30,7 @@
 		icon_base = material.door_icon_base
 	hitsound = material.hitsound
 	name = "[material.display_name] door"
-	color = material.icon_colour
+	color = null
 	if(initial_lock_value)
 		locked = initial_lock_value
 	if(locked)
@@ -218,7 +218,7 @@
 
 /obj/machinery/door/unpowered/simple/wood
 	icon_state = "wood"
-	color = "#824B28"
+	color = null
 
 /obj/machinery/door/unpowered/simple/wood/New(var/newloc,var/material_name,var/complexity)
 	..(newloc, "wood", complexity)

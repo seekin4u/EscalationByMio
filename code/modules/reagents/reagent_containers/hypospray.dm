@@ -89,3 +89,19 @@
 		to_chat(user, "<span class='notice'>It is currently loaded.</span>")
 	else
 		to_chat(user, "<span class='notice'>It is spent.</span>")
+
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/red
+	name = "autoinjector (epinephrine)"
+	desc = "A rapid and safe way to administer small amounts of drugs by untrained personnel.This one contains drugs to quickly stabilize injured."
+	icon_state = "injector_red"
+	item_state = "autoinjector"
+	amount_per_transfer_from_this = 15
+	volume = 15
+
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/red/New()
+	..()
+	reagents.add_reagent("epinephrine", 5)
+	reagents.add_reagent("salbutamol", 5)
+	reagents.add_reagent("ethaperazine", 5)
+	update_icon()
+	return

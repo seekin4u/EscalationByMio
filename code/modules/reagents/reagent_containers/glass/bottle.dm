@@ -13,7 +13,7 @@
 	possible_transfer_amounts = "5;10;15;25;30;60"
 	w_class = ITEM_SIZE_SMALL
 	flags = 0
-	volume = 60
+	volume = 90
 
 	on_reagent_change()
 		update_icon()
@@ -57,6 +57,12 @@
 		if (!is_open_container())
 			var/image/lid = image(icon, src, "lid_bottle")
 			overlays += lid
+
+		if(reagents.total_volume > 0)
+			icon_state = "[initial(icon_state)]1"
+		else
+			icon_state = "[initial(icon_state)]0"
+
 
 
 /obj/item/weapon/reagent_containers/glass/bottle/inaprovaline
@@ -260,13 +266,6 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "morphine"
 
-/obj/item/weapon/reagent_containers/glass/bottle/escalation/update_icon()
-	if(reagents.total_volume > 0)
-		icon_state = "[initial(icon_state)]1"
-	else
-		icon_state = "[initial(icon_state)]0"
-
-
 /obj/item/weapon/reagent_containers/glass/bottle/escalation/morphine
 	name = "moprhine bottle"
 	desc = "A small bottle. Contains morphine - effective and very addictive painkiller."
@@ -299,7 +298,7 @@
 
 /obj/item/weapon/reagent_containers/glass/bottle/escalation/aminocap/New()
 	..()
-	reagents.add_reagent("aminocap", 60)
+	reagents.add_reagent("aminocap", 90)
 	update_icon()
 
 
@@ -311,7 +310,7 @@
 
 /obj/item/weapon/reagent_containers/glass/bottle/escalation/salbutamol/New()
 	..()
-	reagents.add_reagent("salbutamol", 60)
+	reagents.add_reagent("salbutamol", 90)
 	update_icon()
 
 
@@ -323,7 +322,77 @@
 
 /obj/item/weapon/reagent_containers/glass/bottle/escalation/ethaperazine/New()
 	..()
-	reagents.add_reagent("ethaperazine", 60)
+	reagents.add_reagent("ethaperazine", 90)
 	update_icon()
 
-// promethazine epinephrine amidopyrinum phenazepam sydnocarbum TODO
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/promethazine
+	name = "promethazine bottle"
+	desc = "A small bottle. Contains promethazine - powerful neuroleptic."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "promethazine"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/promethazine/New()
+	..()
+	reagents.add_reagent("promethazine", 90)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/phenazepam
+	name = "phenazepam bottle"
+	desc = "A small bottle. Contains phenazepam - powerful tranquilizer."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "ethaperazine"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/phenazepam/New()
+	..()
+	reagents.add_reagent("phenazepam", 90)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/amidopyrinum
+	name = "amidopyrinum bottle"
+	desc = "A small bottle. Contains amidopyrinum - effective and very addictive painkiller."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "amidopyrinum"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/amidopyrinum/New()
+	..()
+	reagents.add_reagent("amidopyrinum", 90)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/sydnocarbum
+	name = "sydnocarbum bottle"
+	desc = "A small bottle. Contains sydnocarbum - powerful military-grade psychostimulant."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "sydnocarbum"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/sydnocarbum/New()
+	..()
+	reagents.add_reagent("sydnocarbum", 90)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/doxycicline
+	name = "doxycicline bottle"
+	desc = "A small bottle. Contains doxycicline - broad-spectrum antibiotic."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "doxycicline"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/doxycicline/New()
+	..()
+	reagents.add_reagent("doxycicline", 90)
+	update_icon()
+
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/epinephrine
+	name = "epinephrine bottle"
+	desc = "A small bottle. Contains epinephrine - powerful adrenaline-based drug."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "epinephrine"
+
+/obj/item/weapon/reagent_containers/glass/bottle/escalation/epinephrine/New()
+	..()
+	reagents.add_reagent("epinephrine", 90)
+	update_icon()

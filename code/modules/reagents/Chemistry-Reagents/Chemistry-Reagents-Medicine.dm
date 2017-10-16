@@ -768,7 +768,7 @@
 /datum/reagent/epinephrine
 	name = "Epinephrine"
 	id = "epinephrine"
-	description = "Epinephrine is a powerful adrenaline-based used to treat cardiac arrest and other cardiac dysrhythmias resulting in diminished or absent cardiac output."
+	description = "Epinephrine is a powerful adrenaline-based drug used to treat cardiac arrest and other cardiac dysrhythmias resulting in diminished or absent cardiac output."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#C8A5DC"
@@ -898,6 +898,6 @@
 
 /datum/reagent/aminocap/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(15 / (sqrt(M.getBruteLoss()) +  1) * removed, 0)
+		M.heal_organ_damage(25 / (sqrt(M.getBruteLoss()) +  1) * removed, 0)
 // fix this sometime 		apply_fatigue_effect(M, removed, 0, 10, 10, 10, 5)
 		M.add_chemical_effect(CE_PULSE, -1)

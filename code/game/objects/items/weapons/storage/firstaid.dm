@@ -43,8 +43,7 @@
 	startswith = list(
 		/obj/item/stack/medical/advanced/bruise_pack = 4,
 		/obj/item/stack/medical/advanced/ointment = 1,
-		/obj/item/weapon/storage/pill_bottle/bicaridine,
-		/obj/item/stack/medical/splint
+		/obj/item/stack/medical/splint = 2
 		)
 
 /obj/item/weapon/storage/firstaid/toxin
@@ -89,7 +88,7 @@
 		/obj/item/stack/medical/splint,
 		)
 
-/obj/item/weapon/storage/firstaid/combat
+/obj/item/weapon/storage/firstaid/combat/wp
 	name = "combat medical kit"
 	desc = "Individual medical kit."
 	icon_state = "bezerk"
@@ -98,7 +97,19 @@
 	max_storage_space = 2
 	startswith = list(
 		/obj/item/stack/medical/bruise_pack/wp,
-		/obj/item/weapon/reagent_containers/syringe/morphine,
+		/obj/item/weapon/reagent_containers/hypospray/autoinjector/red,
+		)
+
+/obj/item/weapon/storage/firstaid/combat/nato
+	name = "combat medical kit"
+	desc = "Individual medical kit."
+	icon_state = "bezerk"
+	item_state = "firstaid-advanced"
+	w_class = ITEM_SIZE_SMALL
+	max_storage_space = 2
+	startswith = list(
+		/obj/item/stack/medical/bruise_pack/nato,
+		/obj/item/weapon/reagent_containers/hypospray/autoinjector/red,
 		)
 
 /obj/item/weapon/storage/firstaid/surgery
