@@ -3,7 +3,7 @@
 	desc = "An obstacle defense made of metal angle beams."
 	icon = 'icons/escalation/obj/structures.dmi'
 	icon_state = "tank_trap"
-	anchored = 0
+	anchored = 1
 	density = 1
 	throwpass = 0
 	layer = OBJ_LAYER + 0.1
