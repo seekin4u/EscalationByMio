@@ -11,7 +11,7 @@
 
 
 
-/turf/simulated/rock
+/turf/unsimulated/rock
 	name = "Mountain"
 	icon = 'icons/escalation/turf/Rock.dmi'
 	icon_state = "Rock"
@@ -19,7 +19,7 @@
 	density = 1
 	opacity = 1
 
-/turf/simulated/rock/edge
+/turf/unsimulated/rock/edge
 	icon_state = "Rock_outline"
 
 /obj/effect/decal/warning_stripes/bunker
