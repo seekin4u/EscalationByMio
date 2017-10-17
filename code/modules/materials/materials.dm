@@ -360,7 +360,7 @@ var/list/name_to_material
 	hitsound = 'sound/weapons/smash.ogg'
 
 /material/concretecolor
-	name = "concrete"
+	name = "concreteblack"
 	icon_base = "concreteblack"
 	icon_reinf = "concreteblackr"
 	icon_colour = null
@@ -374,27 +374,27 @@ var/list/name_to_material
 	hitsound = 'sound/weapons/smash.ogg'
 
 /material/concretecolor/black
-	name = "concrete"
+	name = "concreteblack"
 	icon_base = "concreteblack"
 	icon_reinf = "concreteblackr"
 
 /material/concretecolor/pink
-	name = "concrete"
+	name = "concretepink"
 	icon_base = "concretepink"
 	icon_reinf = "concreteblackr"
 
 /material/concretecolor/cian
-	name = "concrete"
+	name = "concretecian"
 	icon_base = "concretecian"
 	icon_reinf = "concreteblackr"
 
 /material/concretecolor/grey
-	name = "concrete"
+	name = "concretegrey"
 	icon_base = "concretegrey"
 	icon_reinf = "concreteblackr"
 
 /material/concretecolor/red
-	name = "concrete"
+	name = "concretered"
 	icon_base = "concretered"
 	icon_reinf = "concreteblackr"
 
