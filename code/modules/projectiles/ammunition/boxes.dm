@@ -375,7 +375,7 @@
 
 /obj/item/ammo_magazine/c762x54b/csla
 	name = "ammo box (7.62x54mm)"
-	icon_state = "7.62x39b"
+	icon_state = "vz59"
 	mag_type = MAGAZINE
 	w_class = ITEM_SIZE_LARGE
 	caliber = "762x54"
