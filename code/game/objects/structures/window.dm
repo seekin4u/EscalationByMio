@@ -144,7 +144,7 @@
 		return 1
 	if(get_dir(O.loc, target) == dir)
 		return 0
-	return 1 
+	return 1
 
 
 /obj/structure/window/hitby(AM as mob|obj)
@@ -484,6 +484,10 @@
 /obj/structure/window/initialize()
 	..()
 	layer = is_full_window() ? FULL_WINDOW_LAYER : SIDE_WINDOW_LAYER
+
+/obj/structure/window/full
+    dir = 5
+    icon_state = "window"
 
 /obj/structure/window/reinforced/full
     dir = 5
