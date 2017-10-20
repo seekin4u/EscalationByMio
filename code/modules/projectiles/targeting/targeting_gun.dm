@@ -2,13 +2,15 @@
 /obj/item/weapon/gun/dropped(var/mob/living/user)
 	if(istype(user))
 		user.stop_aiming(src)
-	if(zoom)
-		src.zoom(user, FALSE)//may be source of problem, as do_after in gun.dm already doind unzoom
+	if(user.client.pixel_x || user.client.pixel_y) //means "if zoomed". But maybe zoom() already change zoom var, but idn, pixel_x/y is safer.
+		user.seek_and_unzoom()
 	return ..()
 
 /obj/item/weapon/gun/equipped(var/mob/living/user, var/slot)
 	if(istype(user) && (slot != slot_l_hand && slot != slot_r_hand))
 		user.stop_aiming(src)
+	if(user.client.pixel_x || user.client.pixel_y) //Cancel currently scoped weapons
+		user.seek_and_unzoom()
 	return ..()
 
 //Compute how to fire.....
