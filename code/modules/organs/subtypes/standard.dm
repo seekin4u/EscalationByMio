@@ -150,6 +150,7 @@
 
 /obj/item/organ/external/hand/removed()
 	owner.drop_from_inventory(owner.gloves)
+	owner.drop_from_inventory(owner.l_hand)
 	..()
 
 /obj/item/organ/external/hand/right
@@ -160,6 +161,12 @@
 	parent_organ = BP_R_ARM
 	joint = "right wrist"
 	amputation_point = "right wrist"
+
+/obj/item/organ/external/hand/right/removed()
+	owner.drop_from_inventory(owner.gloves)
+	owner.drop_from_inventory(owner.r_hand)
+	..()
+
 
 /obj/item/organ/external/head
 	organ_tag = BP_HEAD

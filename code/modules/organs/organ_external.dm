@@ -1045,6 +1045,15 @@ Note that amputating the affected organ does in fact remove the infection from t
 		H.drop_from_inventory(W)
 	W.loc = owner
 
+/obj/item/organ/external
+	var/list/drop_on_remove = list(slot_glasses, slot_head, slot_l_ear, slot_r_ear, slot_wear_mask, \
+								   slot_l_hand, slot_r_hand, slot_gloves, slot_shoes, slot_handcuffed, slot_legcuffed \
+								   )
+
+/obj/item/organ/external/proc/drop_items()
+	//todo - copy this system from Eris or OldBlue
+	return
+
 /obj/item/organ/external/removed(var/mob/living/user, var/ignore_children = 0)
 
 	if(!owner)
@@ -1055,6 +1064,8 @@ Note that amputating the affected organ does in fact remove the infection from t
 	..()
 
 	victim.bad_external_organs -= src
+
+	drop_items()
 
 	remove_splint()
 	for(var/atom/movable/implant in implants)
