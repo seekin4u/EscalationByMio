@@ -265,13 +265,6 @@
 		else
 			return if_no_id
 
-//returns job's name like /datum/job/escalation/cccp/medic.name = "Sanitar"
-/mob/living/carbon/human/proc/get_assigned_army_rank()
-	if(!chosenSlot)
-		return
-	else
-		return "[chosenSlot]"
-
 //gets name from ID or ID inside PDA or PDA itself
 //Useful when player do something with computers
 /mob/living/carbon/human/proc/get_authentification_name(var/if_no_id = "Unknown")
@@ -288,16 +281,115 @@
 		else
 			return if_no_id
 
+var/list/ranks_prefixes = list(\
+	"Poruchik" = "Por.", \
+	"Podporuchik" = "Podp.", \
+	"Druzhstvo Radista" = "Rd. Rad.", \
+	"Chetar" = "Chetar", \
+	"Subchetar" = "Subchet.", \
+	"Delostrelec" = "Delostr.", \
+	"Pancerovnik" = "Panc.", \
+	"Pomocnik pancerovnika" = "Pom. panc.", \
+	"Radista" = "Rad.", \
+	"Strelec" = "Strelec", \
+	"Nadstrelec" = "Nadstr.", \
+	"Sanitar" = "Sanitar", \
+
+
+	"Komandir Vzvoda" = "Kom. vzvoda", \
+	"Zamkomvzvoda" = "Zamkom.", \
+	"Kapter" = "Kapter", \
+	"Zampolit" = "Zampol.", \
+	"Pomoshnik Kaptera" = "Pom. kaptera", \
+	"Vzvodny Radist" = "Vzvod. rad.", \
+	"Komandir Otdeleniya" = "Kom. otd.", \
+	"Starshiy Strelok" = "St. strel.", \
+	"Radiotelefonist" = "Rad. telef.", \
+	"Granatometchik" = "Gran.", \
+	"Pomoshnik granatometchika" = "Pom. gran.", \
+	"Pulemetchik" = "Pul.", \
+	"Strelok" = "Str.", \
+	"Snayper" = "Sn.", \
+	"Glavvrach" = "Glavvrach", \
+
+	"Komandir rascheta" = "Kom. rasch.", \
+	"Strelok Rascheta" = "Strel. rasch.", \
+	"Assistent Rascheta" = "Assist. rasch.", \
+	"Vzvodny Pulemetchik" = "Vzv. pul.", \
+	"Comandir Razvedotdeleniya" = "Kom. razvedki", \
+	"Zamkomandira Razvedotdeleniya" = "Zamkom. razvedki", \
+	"Razvedchik-Radist" = "Razved. radist", \
+	"Razvedchik-Snayper" = "Razved. snaiper", \
+	"Razvedchik" = "Razv.", \
+
+
+	"Zugfuhrer" = "Zugf.", \
+	"Zugfuhrer Stellvertretender" = "Zugf. stell.", \
+	"Zug Funker" = "Z. funk.", \
+	"Gruppenfuhrer" = "Gr. fuh.", \
+	"Gruppenfuhrer Stellvertretender" = "Gr. stell.", \
+	"Maschinengewehrschutze" = "Mach. scht.", \
+	"Grenadier" = "Gren.", \
+	"Grenadier Assistent" = "Gren. assist.", \
+	"Schutze" = "Schutze", \
+	"Chef-Sanitater" = "Chef sanit.", \
+	"Sanitater" = "Sanit.", \
+	"Scharfschutze" = "Scharf scht.", \
+	"Funker" = "Funk.", \
+
+
+	"Platoon Leader" = "Pl. lead.", \
+	"Platoon Leader's Deputy" = "Pl. lead dep.", \
+	"Radio Telegraph Operator" = "Rad. rel. operator", \
+	"Squad Leader" = "Sq. lead.", \
+	"Fireteam Leader" = "Fireteam lead.", \
+	"Radio Operator" = "Rad.", \
+	"Machinegunner" = "Machgun.", \
+	"Rifleman" = "Rifleman", \
+	"Corpsman" = "Corp.", \
+	"Designated Marksman" = "Des. mark.", \
+	"Surgeon" = "Surgeon", \
+	"Head Medic" = "Head med.", \
+	"HWS Commander" = "HWS lead.", \
+	"HWS Gunner" = "HWS gun.", \
+	"HWS Assistant" = "HWS assist.", \
+	"Assault Squad Commander" = "As. squad lead.", \
+	"Grenadier Assistant" = "Gren. assist.", \
+
+)
+
+//returns job's name like /datum/job/escalation/cccp/medic.name = "Sanitar"
+/mob/living/carbon/human/proc/get_assigned_army_rank()
+	if(!chosenSlot)
+		return
+	else
+		return "[chosenSlot.name]"//like "Sanitar" ot schutze idn
+
+/mob/living/carbon/human/proc/add_rank_prefix(var/name)
+	if(get_mob_rank())
+		name = get_mob_rank() + " " + name//space between this two
+	return name
+
+/mob/living/carbon/human/proc/get_mob_rank()
+	var/mob_rank
+	if(src.chosenSlot)
+		mob_rank = src.chosenSlot.name
+	if(ranks_prefixes[mob_rank])
+		return ranks_prefixes[mob_rank]
+	return null
+
 //repurposed proc. Now it combines get_id_name() and get_face_name() to determine a mob's name variable. Made into a seperate proc as it'll be useful elsewhere
 /mob/living/carbon/human/proc/get_visible_name()
-	if( wear_mask && (wear_mask.flags_inv&HIDEFACE) )	//Wearing a mask which hides our face, use id-name if possible
-		return get_id_name("Unknown")
-	if( head && (head.flags_inv&HIDEFACE) )
-		return get_id_name("Unknown")		//Likewise for hats
+	if((wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE)))
+		return add_rank_prefix(get_id_name())
+
 	var/face_name = get_face_name()
 	var/id_name = get_id_name("")
-	if(id_name && (id_name != face_name))
-		return "[face_name] (as [id_name])"
+	if(id_name)
+		if(id_name != face_name)
+			return "[face_name] (as [add_rank_prefix(id_name)])"
+	else
+		return add_rank_prefix(face_name)
 	return face_name
 
 //Returns "Unknown" if facially disfigured and real_name if not. Useful for setting name when polyacided or when updating a human's name variable
@@ -319,6 +411,9 @@
 		if(I)
 			return I.registered_name
 	return
+
+/*get_assigned_army_rank() returned: "Strelok"
+get_mob_rank() returned: "Str."*/
 
 //gets ID card object from special clothes slot or null.
 /mob/living/carbon/human/proc/get_idcard()

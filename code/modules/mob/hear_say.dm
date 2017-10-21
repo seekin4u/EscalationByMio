@@ -45,6 +45,8 @@
 	if(speaker)
 		speaker_name = speaker.name
 
+
+	//
 	if(istype(speaker, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = speaker
 		if(H.military_faction != src.military_faction)//So if they're not apart of the same military faction as us, then we don't know their name.
@@ -130,7 +132,7 @@
 		var/mob/living/carbon/human/H = speaker
 		if(H.military_faction != src.military_faction)//So if they're not apart of the same military faction as us, then we don't know their name.
 			speaker_name = "Unknown"
-		
+
 		else if(H.voice)
 			speaker_name = H.voice
 
