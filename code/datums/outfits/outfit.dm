@@ -40,6 +40,7 @@ var/list/outfits_decls_by_type_
 	var/r_hand = null
 	var/l_hand = null
 	var/list/backpack_contents = list() // In the list(path=count,otherpath=count) format
+	var/back_gun = null
 
 	var/id_type
 	var/id_desc
@@ -167,6 +168,9 @@ var/list/outfits_decls_by_type_
 		H.equip_to_slot_or_del(new r_pocket(H),slot_r_store)
 	if(suit_store)
 		H.equip_to_slot_or_del(new suit_store(H),slot_s_store)
+//		"gun" = list("loc" = ui_gun_slot,"name" = "Gun","slot" = slot_add_gun,"state" = "wear_gun"),
+	if(back_gun)
+		H.equip_to_slot_or_del(new back_gun(H),slot_add_gun)
 
 	if(l_hand)
 		H.put_in_l_hand(new l_hand(H))
