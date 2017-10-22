@@ -1,7 +1,7 @@
 /mob/living/carbon/human/say(var/message)
 	var/alt_name = ""
-	if(name != GetVoice())
-		alt_name = ""
+	if(name != add_rank_prefix(GetVoice()))
+		alt_name = null
 
 	message = sanitize(message)
 	..(message, alt_name = alt_name)
