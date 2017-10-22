@@ -24,6 +24,9 @@
 		locate(/obj/structure/sandbag/concrete_block)) in src.loc.contents \
 		)
 		to_chat(user, "\red There is no more space.")
+#if ESC_DEBUG
+		to_world("check4struck [src.name]")
+#endif
 		return 0
 	return 1
 
@@ -34,13 +37,13 @@
 			to_chat(user, "<span class='notice'>You start wrenching the [src].</span>")
 			if(do_after(user, 20, src))
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-				anchored = 1
+				anchored = TRUE
 				to_chat(user, "<span class='notice'>You wrenched the [src].</span>")
 		else
 			to_chat(user, "<span class='notice'>You start unwrenching the [src].</span>")
 			if(do_after(user, 20, src))
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-				anchored = 0
+				anchored = FALSE
 				to_chat(user, "<span class='notice'>You unwrenched the [src].</span>")
 
 /obj/structure/chezh_hangehog/ex_act(severity)

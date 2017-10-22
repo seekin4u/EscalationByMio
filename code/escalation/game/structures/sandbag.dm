@@ -7,7 +7,7 @@
 	throwpass = 0//we can throw grenades despite its density
 	anchored = 1
 	flags = OBJ_CLIMBABLE
-	var/basic_chance = 60
+	var/basic_chance = 50
 
 /obj/structure/sandbag/New()
 	..()
@@ -66,8 +66,11 @@
 	if(!cover)
 		return 1
 
-	var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
+	var/mob/living/carbon/human/M = locate(src.loc)
 	if(M)
+#if ESC_DEBUG
+		to_world("M located in [src.name]")
+#endif
 		chance += 30
 
 		if(M.lying)
@@ -99,12 +102,14 @@
 		if(1.0)
 			new /obj/item/weapon/ore/glass(src.loc)
 			new /obj/item/weapon/ore/glass(src.loc)
-			if(prob(50)) new /obj/item/weapon/ore/glass(src.loc)
+			if(prob(50))
+				new /obj/item/weapon/ore/glass(src.loc)
 			qdel(src)
 			return
 		if(2.0)
 			new /obj/item/weapon/ore/glass(src)
-			if(prob(50)) new /obj/item/weapon/ore/glass(src)//ahhh yea, random
+			if(prob(50))
+				new /obj/item/weapon/ore/glass(src)//ahhh yea, random
 			qdel(src)
 			return
 		else
@@ -115,21 +120,22 @@
 	//icon = 'icons/obj/weapons.dmi'
 	icon_state = "sandbag_empty"
 	w_class = 1
-	var/sand_amount = 0//how much piles of dirt on item's spawn
+	var/sand_amount = 4//how much piles of dirt on item's spawn
 
+//семантика ебанутая
 //if there are like 3-4 sandbags or they are placed in one directions and each of them will call CanPass for projectiles - very imbalanced
 /obj/item/weapon/sandbag/proc/check4sandbags(mob/user as mob)
 	var/i = 0
 
 	for(var/obj/structure/sandbag/baggy in user.loc.contents)
-		i++
-		if((baggy.dir == user.dir) || i > 4)
+		++i
+		if((baggy.dir == user.dir) || i > 2)
 			to_chat(user, "<span class='warning'>There is no more space.</span>")
-			return 0
 #if ESC_DEBUG
-	to_world("Check4sandbag!")
+			to_world("Check4sandbag! I = [i]")
 #endif
-	return 1
+			return 1
+	return 0
 
 //or there are any shit on turf you want to place sandbag
 /obj/item/weapon/sandbag/proc/check4struct(mob/user as mob)
@@ -138,11 +144,11 @@
 		locate(/obj/structure/brutswehr)) in user.loc.contents \
 		)
 		to_chat(user, "<span class='warning'>There is no more space.</span>")
-		return 0
 #if ESC_DEBUG
-	to_world("Check4struct")
+		to_world("Check4struct")
 #endif
-	return 1
+		return 1
+	return 0
 
 /obj/item/weapon/sandbag/attack_self(mob/user as mob)
 	if(sand_amount < 4)
@@ -152,7 +158,7 @@
 		to_chat(user, "<span class='warning'>Haha, not funny.</span>")
 		return
 
-	if(!check4sandbags(user) || !check4struct(user))
+	if(check4sandbags(user) || check4struct(user))// 0 || 0
 #if ESC_DEBUG
 		to_world("checks for sandbags or structures returned 0")
 #endif
