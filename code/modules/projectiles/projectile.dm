@@ -270,6 +270,7 @@
 
 	//stop flying
 	on_impact(A)
+	to_world("ProjectileBump : on_impact have to worked!")
 
 	set_density(0)
 	invisibility = 101
@@ -380,6 +381,7 @@
 				P.activate()
 
 /obj/item/projectile/proc/impact_effect(var/matrix/M)
+	to_world("---Entered impact_effect")
 	if(ispath(impact_type))
 		var/obj/effect/projectile/P = new impact_type(location.loc)
 

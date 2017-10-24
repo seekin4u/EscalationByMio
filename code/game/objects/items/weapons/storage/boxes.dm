@@ -98,11 +98,6 @@
 	icon_state = "syringe"
 	startswith = list(/obj/item/weapon/reagent_containers/syringe = 7)
 
-/obj/item/weapon/storage/box/syringegun
-	name = "box of syringe gun cartridges"
-	desc = "A box full of compressed gas cartridges."
-	icon_state = "syringe"
-	startswith = list(/obj/item/weapon/syringe_cartridge = 7)
 
 
 /obj/item/weapon/storage/box/beakers

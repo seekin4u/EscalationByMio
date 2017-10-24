@@ -388,9 +388,10 @@
 
 /obj/item/projectile/bullet/rgprocket
 	icon_state = "rocket1"
-	damage = 150
+	damage = 200
 	armor_penetration = 100
 	step_delay = 1.5
 
-/obj/item/projectile/bullet/newrocket/on_impact(var/atom/target, blocked = 0)
+/obj/item/projectile/bullet/rpgrocket/on_impact(var/atom/target, blocked = 0)
+	to_world("--[src.name]:on_impact!")
 	explosion(target, 1,2,4,5)

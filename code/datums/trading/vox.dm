@@ -43,20 +43,10 @@
 				"insult_bad1"        = "If you say all this at home, you be dead!",
 				)
 
-	possible_wanted_items = list(/obj/item/weapon/                  = TRADER_SUBTYPES_ONLY,
-								/obj/item/stack/material            = TRADER_SUBTYPES_ONLY,
-								/obj/item/stack/material/cyborg     = TRADER_BLACKLIST_ALL,
-								/obj/item/organ                     = TRADER_SUBTYPES_ONLY,
+	possible_wanted_items = list(
 								)
 
-	possible_trading_items = list(/obj/item/weapon/gun/projectile/dartgun/vox           = TRADER_SUBTYPES_ONLY,
-								/obj/item/mecha_parts/mecha_equipment/tool/             = TRADER_SUBTYPES_ONLY,
-								/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/ = TRADER_SUBTYPES_ONLY,
-								/obj/item/trash                                         = TRADER_SUBTYPES_ONLY,
-								/obj/item/remains                                       = TRADER_ALL,
-								/obj/item/clothing/accessory                            = TRADER_ALL,
-								/obj/item/robot_parts                                   = TRADER_SUBTYPES_ONLY,
-								/obj/item/robot_parts/robot_component                   = TRADER_BLACKLIST
+	possible_trading_items = list(
 								)
 
 	mob_transfer_message = "<span class='danger'>You are transported to the ORIGIN, when the transportation dizziness wears off, you find you are surrounded by cackling Vox...</span>"

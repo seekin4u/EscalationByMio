@@ -322,3 +322,9 @@
 
 /obj/item/ammo_casing/mk19_40x53mm/shrapnel
 	projectile_type = /obj/item/projectile/bullet/mk19_40x53mm/pow
+
+/obj/item/ammo_casing/rpg_missile
+	desc = "A regular morkovka for rpg"
+	caliber = "7p16"
+	icon_state = "rpgshell"
+	projectile_type = /obj/item/projectile/bullet/rgprocket
