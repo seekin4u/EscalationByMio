@@ -25,5 +25,5 @@
 	suit = /obj/item/clothing/suit/hgpirate
 
 	id_slot = slot_wear_id
-	id_type = /obj/item/weapon/card/id/centcom/station
+	id_type = /obj/item/weapon/card/id
 	id_pda_assignment = "Admiral"

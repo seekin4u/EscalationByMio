@@ -19,7 +19,7 @@
 
 	minimal_player_age = 14
 	ideal_character_age = 50
-	outfit_type = /decl/hierarchy/outfit/job/medical/cmo
+	outfit_type = /decl/hierarchy/outfit/job
 	announced = 1
 
 /datum/job/doctor
@@ -36,11 +36,11 @@
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_virology)
 	alt_titles = list(
-		"Surgeon" = /decl/hierarchy/outfit/job/medical/doctor/surgeon,
-		"Emergency Physician" = /decl/hierarchy/outfit/job/medical/doctor/emergency_physician,
-		"Nurse" = /decl/hierarchy/outfit/job/medical/doctor/nurse,
-		"Virologist" = /decl/hierarchy/outfit/job/medical/doctor/virologist)
-	outfit_type = /decl/hierarchy/outfit/job/medical/doctor
+		"Surgeon" = /decl/hierarchy/outfit/job,
+		"Emergency Physician" = /decl/hierarchy/outfit/job,
+		"Nurse" = /decl/hierarchy/outfit/job,
+		"Virologist" = /decl/hierarchy/outfit/job)
+	outfit_type = /decl/hierarchy/outfit/job
 
 //Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro
 /datum/job/chemist
@@ -57,7 +57,7 @@
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
 	minimal_access = list(access_medical, access_medical_equip, access_chemistry)
 	alt_titles = list("Pharmacist")
-	outfit_type = /decl/hierarchy/outfit/job/medical/chemist
+	outfit_type = /decl/hierarchy/outfit/job
 
 /datum/job/geneticist
 	title = "Geneticist"
@@ -72,7 +72,7 @@
 	economic_modifier = 7
 	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_research)
 	minimal_access = list(access_medical, access_morgue, access_genetics, access_research)
-	outfit_type = /decl/hierarchy/outfit/job/medical/geneticist
+	outfit_type = /decl/hierarchy/outfit/job
 
 /datum/job/psychiatrist
 	title = "Psychiatrist"
@@ -87,8 +87,8 @@
 	selection_color = "#013d3b"
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_psychiatrist)
 	minimal_access = list(access_medical, access_medical_equip, access_psychiatrist)
-	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist)
-	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
+	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job)
+	outfit_type = /decl/hierarchy/outfit/job
 
 /datum/job/Paramedic
 	title = "Paramedic"
@@ -103,5 +103,5 @@
 	minimal_player_age = 7
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_eva, access_maint_tunnels, access_external_airlocks, access_psychiatrist)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks)
-	alt_titles = list("Emergency Medical Technician" = /decl/hierarchy/outfit/job/medical/paramedic/emt)
-	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
+	alt_titles = list("Emergency Medical Technician" = /decl/hierarchy/outfit/job)
+	outfit_type = /decl/hierarchy/outfit/job

@@ -28,33 +28,4 @@ var/datum/antagonist/actor/actor
 	player.current.show_message("Entertain the crew! Try not to disrupt them from their work too much and remind them how great [using_map.company_name] is!")
 
 /datum/antagonist/actor/equip(var/mob/living/carbon/human/player)
-	player.equip_to_slot_or_del(new /obj/item/clothing/under/chameleon(src), slot_w_uniform)
-	player.equip_to_slot_or_del(new /obj/item/clothing/shoes/chameleon(src), slot_shoes)
-	player.equip_to_slot_or_del(new /obj/item/device/radio/headset/entertainment(src), slot_l_ear)
-	var/obj/item/weapon/card/id/centcom/ERT/C = new(player.loc)
-	C.assignment = "Actor"
-	player.set_id_info(C)
-	player.equip_to_slot_or_del(C,slot_wear_id)
-
 	return 1
-
-/client/verb/join_as_actor()
-	set category = "IC"
-	set name = "Join as Actor"
-	set desc = "Join as an Actor to entertain the crew through television!"
-
-	if(!MayRespawn(1))
-		return
-
-	var/choice = alert("Are you sure you'd like to join as an actor?", "Confirmation","Yes", "No")
-	if(choice != "Yes")
-		return
-
-	if(isghostmind(usr.mind) || isnewplayer(usr))
-		if(actor.current_antagonists.len >= actor.hard_cap)
-			to_chat(usr, "No more actors may spawn at the current time.")
-			return
-		actor.create_default(usr)
-		return
-
-	to_chat(usr, "You must be observing or be a new player to spawn as an actor.")

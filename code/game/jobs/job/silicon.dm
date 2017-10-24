@@ -10,7 +10,7 @@
 	minimal_player_age = 14
 	account_allowed = 0
 	economic_modifier = 0
-	outfit_type = /decl/hierarchy/outfit/job/silicon/ai
+	outfit_type = /decl/hierarchy/outfit/job
 	announced = 1
 
 /datum/job/ai/equip(var/mob/living/carbon/human/H)
@@ -32,8 +32,7 @@
 	alt_titles = list("Android", "Robot")
 	account_allowed = 0
 	economic_modifier = 0
-	outfit_type = /decl/hierarchy/outfit/job/silicon/cyborg
+	outfit_type = /decl/hierarchy/outfit/job
 
 /datum/job/cyborg/equip(var/mob/living/carbon/human/H)
-	if(!H)	return 0
-	return 1
+	return 0
