@@ -111,7 +111,7 @@
 /obj/item/weapon/grenade/frag/f1
 	name = "F1 frag grenade"
 	desc = "That's an old but reliable Soviet fragmentation grenade used for eliminating manpower."
-	icon_state = "f1"
+	icon_state = "f1grenade"
 	throw_speed = 3
 	throw_range = 12
 	fragment_type = /obj/item/projectile/bullet/pellet/fragment/offensive
