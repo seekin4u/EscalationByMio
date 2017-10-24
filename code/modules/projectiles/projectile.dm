@@ -382,13 +382,15 @@
 
 /obj/item/projectile/proc/impact_effect(var/matrix/M)
 	to_world("---Entered impact_effect")
+	if(ispath(impact_type))
+		var/obj/effect/projectile/P = new impact_type(location.loc)
 
-	var/obj/effect/projectile/P = new impact_type(location.loc)
-	if(istype(P))
-		P.set_transform(M)
-		P.pixel_x = location.pixel_x
-		P.pixel_y = location.pixel_y
-		P.activate()
+		if(istype(P))
+			P.set_transform(M)
+			P.pixel_x = location.pixel_x
+			P.pixel_y = location.pixel_y
+			P.activate()
+			to_world("---ispath([impact_effect]:istype(P[P]))")
 
 //"Tracing" projectile
 /obj/item/projectile/test //Used to see if you can hit them.

@@ -349,6 +349,7 @@
 
 //proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
 /obj/item/projectile/bullet/ags30x29mm/on_impact(var/atom/target, var/blocked = 0)
+	to_world("--[src.name]:on_impact!")
 	explosion(target, -1, 1, 3, 4)
 
 /obj/item/projectile/bullet/ags30x29mm/pow
@@ -360,6 +361,7 @@
 	kill_count = 35
 
 /obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
+	to_world("--[src.name]:on_impact!")
 	explosion(target, -1, 2, 3, 4)
 
 /obj/item/projectile/bullet/mk19_40x53mm
