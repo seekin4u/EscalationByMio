@@ -2,6 +2,8 @@
 	name = "plating"
 	icon = 'icons/turf/flooring/plating.dmi'
 	icon_state = "plating"
+	blend_with_neighbors = 3
+	temperature = T0C + 6//6 degrees
 
 	// Damage to flooring.
 	var/broken

@@ -8,6 +8,7 @@
 	oxygen = MOLES_O2STANDARD * 1.15
 	nitrogen = MOLES_N2STANDARD * 1.15
 	temperature = T0C - 10 //not 2 cold
+	blend\_with_neighbors = 5
 	var/list/crossed_dirs = list()
 	var/hasGround = FALSE
 
@@ -54,6 +55,9 @@
 
 		for(var/i in 1 to amt)
 			overlays += icon(icon, "footprint[i]", text2num(d))
+
+/turf/snow/no_flora
+	//just for the flora code
 
 /turf/snow/snow2 // delete this
 	name = "snow"
