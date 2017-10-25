@@ -46,10 +46,10 @@
 	turfs |= src
 
 	if(blend_with_neighbors)
-		initialize()/*if(ticker && ticker.current_state >= GAME_STATE_PLAYING)
+		if(ticker && ticker.current_state >= GAME_STATE_PLAYING)
 			initialize()
 		else
-			return*/
+			return
 
 	if(dynamic_lighting)
 		luminosity = 0
@@ -60,7 +60,6 @@
 	update_icon(1)
 
 /turf/proc/update_icon(var/update_neighbors, var/list/previously_added = list())
-	to_world("Turf.UpdateIcon")
 	var/list/overlays_to_add = previously_added
 	if(blend_with_neighbors)
 		for(var/checkdir in cardinal)
@@ -77,8 +76,6 @@
 			var/turf/T = get_step(src, check_dir)
 			if(istype(T))
 				T.update_icon()
-
-	to_world("Update_icon ended")
 
 /turf/Destroy()
 	turfs -= src
