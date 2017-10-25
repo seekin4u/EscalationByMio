@@ -129,3 +129,9 @@
 //----------------------------
 /obj/effect/projectile/bullet/muzzle
 	icon_state = "muzzle_bullet"
+
+//----------------------------
+//Rocket
+//----------------------------
+/obj/effect/projectile/rocket/rpg
+	icon_state = "muzzle_rocket"

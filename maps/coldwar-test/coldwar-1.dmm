@@ -70,7 +70,7 @@
 "br" = (/obj/item/weapon/gun/launcher/m72,/turf/snow/gravsnow,/area/coldwar)
 "bs" = (/obj/item/weapon/gun/launcher/rpg18,/turf/snow/gravsnow,/area/coldwar)
 "bt" = (/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/turf/snow/gravsnow,/area/coldwar)
-"bu" = (/obj/item/ammo_casing/a50,/obj/item/ammo_casing/a50,/obj/item/ammo_casing/a50,/obj/item/ammo_casing/a50,/obj/item/ammo_casing/a50,/obj/item/ammo_casing/a50,/turf/snow/gravsnow,/area/coldwar)
+"bu" = (/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/turf/snow/gravsnow,/area/coldwar)
 "bv" = (/obj/item/ammo_casing/rocket,/obj/item/ammo_casing/rocket,/turf/snow/gravsnow,/area/coldwar)
 "bw" = (/obj/item/ammo_casing/rocket/smaw,/obj/item/ammo_casing/rocket/smaw,/turf/snow/gravsnow,/area/coldwar)
 "bx" = (/obj/item/ammo_casing/rocket/smaw,/turf/snow/gravsnow,/area/coldwar)
