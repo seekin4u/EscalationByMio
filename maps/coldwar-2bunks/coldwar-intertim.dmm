@@ -1,12 +1,12 @@
 "a" = (/turf/unsimulated/wall,/area/space)
-"b" = (/turf/snow/gravsnow,/area/coldwar/trucks/lost)
-"c" = (/turf/snow/gravsnow,/area/space)
-"d" = (/turf/snow/gravsnow/truck/snow,/area/coldwar/trucks/lost)
-"e" = (/turf/snow/gravsnow/truck/road/snow_overlay,/area/coldwar/trucks/lost)
-"f" = (/turf/snow/gravsnow,/area/coldwar/trucks/m35)
-"g" = (/turf/snow/gravsnow/truck/road,/area/coldwar/trucks/lost)
-"h" = (/obj/effect/step_trigger/teleporter/random/trucks_ural,/turf/snow/gravsnow/truck/road,/area/coldwar/trucks/lost)
-"i" = (/turf/snow/gravsnow/truck/road,/area/shuttle/truck/ural/intertim)
+"b" = (/turf/ground/gravsnow,/area/coldwar/trucks/lost)
+"c" = (/turf/ground/gravsnow,/area/space)
+"d" = (/turf/ground/gravsnow/truck/snow,/area/coldwar/trucks/lost)
+"e" = (/turf/ground/gravsnow/truck/road/snow_overlay,/area/coldwar/trucks/lost)
+"f" = (/turf/ground/gravsnow,/area/coldwar/trucks/m35)
+"g" = (/turf/ground/gravsnow/truck/road,/area/coldwar/trucks/lost)
+"h" = (/obj/effect/step_trigger/teleporter/random/trucks_ural,/turf/ground/gravsnow/truck/road,/area/coldwar/trucks/lost)
+"i" = (/turf/ground/gravsnow/truck/road,/area/shuttle/truck/ural/intertim)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

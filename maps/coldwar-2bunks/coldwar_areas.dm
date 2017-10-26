@@ -146,7 +146,7 @@
 	name = "\improper URAL BASE AREA"
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "ural1"
-	base_turf = /turf/snow/gravsnow
+	base_turf = /turf/ground/gravsnow
 	lighting_use_dynamic = 0
 
 /area/shuttle/truck/ural/intertim

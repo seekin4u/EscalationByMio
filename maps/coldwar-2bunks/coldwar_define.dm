@@ -15,7 +15,7 @@
 	//sealed_levels = list(5) //don't ned this
 	//empty_levels = list(5) //and this for some reason.
 	//accessible_z_levels = list("1" = 5, "2" = 5, "4" = 10, "5" = 15, "7" = 60) we don't need this
-	//base_turf_by_z = list("6" = /turf/snow/gravsnow) // and this
+	//base_turf_by_z = list("6" = /turf/ground/gravsnow) // and this
 
 	station_name  = "NSS Exodus Coldwar1"
 	station_short = "Exodus Coldwar2"
