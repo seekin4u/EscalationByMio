@@ -79,7 +79,7 @@
 		icon_state = "dirt"
 		blend_with_neighbors = 4
 
-	update_icon()
+	update_icon(TRUE)
 	return
 
 /turf/ground/no_flora
