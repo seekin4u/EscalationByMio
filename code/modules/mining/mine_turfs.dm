@@ -434,6 +434,7 @@ var/list/mining_floors = list()
 	base_desc = "Gritty and unpleasant."
 	base_icon = 'icons/turf/flooring/asteroid.dmi'
 	base_icon_state = "asteroid"
+	blend_with_neighbors = 5
 
 	initial_flooring = null
 	oxygen = 0

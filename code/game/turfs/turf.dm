@@ -60,6 +60,7 @@
 	update_icon(1)
 
 /turf/proc/update_icon(var/update_neighbors, var/list/previously_added = list())
+	if(ticker && ticker.current_state >= GAME_STATE_PLAYING) world << "-Turf/update"
 	var/list/overlays_to_add = previously_added
 	if(blend_with_neighbors)
 		for(var/checkdir in cardinal)
@@ -68,9 +69,10 @@
 				var/cache_key = "[T.icon_state]-[checkdir]"
 				if(!turf_edge_cache[cache_key])
 					turf_edge_cache[cache_key] = image(icon = 'icons/turf/blending_overlays.dmi', icon_state = "[T.icon_state]-edge", dir = checkdir)
+				world << "UpdateNeigh - icon_state:[T.icon_state]-edge"
 				overlays_to_add += turf_edge_cache[cache_key]
 
-	overlays = overlays_to_add
+	overlays += overlays_to_add
 	if(update_neighbors)
 		for(var/check_dir in alldirs)
 			var/turf/T = get_step(src, check_dir)

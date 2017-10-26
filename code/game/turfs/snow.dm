@@ -56,6 +56,9 @@
 		for(var/i in 1 to amt)
 			overlays += icon(icon, "footprint[i]", text2num(d))
 
+	world << "Snow UpdateIcon"
+	..()
+
 /turf/snow/no_flora
 	//just for the flora code
 
