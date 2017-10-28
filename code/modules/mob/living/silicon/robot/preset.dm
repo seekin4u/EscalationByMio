@@ -23,5 +23,5 @@
 
 /mob/living/silicon/robot/combat/nt
 	laws = /datum/ai_laws/nanotrasen_aggressive
-	idcard = /obj/item/weapon/card/id/centcom/ERT
+	idcard = /obj/item/weapon/card/id
 	radio_key_type = /obj/item/device/encryptionkey/ert

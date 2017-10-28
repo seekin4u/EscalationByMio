@@ -33,4 +33,5 @@ var/datum/antagonist/mercenary/mercs
 /datum/antagonist/mercenary/equip(var/mob/living/carbon/human/player)
 	if(!..())
 		return 0
+
 	return 1

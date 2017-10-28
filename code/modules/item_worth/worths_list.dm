@@ -219,7 +219,6 @@ var/list/worths = list(
 					/obj/item/weapon/card/emag = 300,
 					/obj/item/weapon/card/id/silver = 200,
 					/obj/item/weapon/card/id/gold = 300,
-					/obj/item/weapon/card/id/captains_spare = 300,
 					/obj/item/weapon/card/id = 30,
 					/obj/item/weapon/flame/match = 1,
 					/obj/item/weapon/flame/lighter/zippo = 10,

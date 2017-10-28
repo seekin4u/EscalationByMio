@@ -40,7 +40,8 @@ var/list/outfits_decls_by_type_
 	var/r_hand = null
 	var/l_hand = null
 	var/list/backpack_contents = list() // In the list(path=count,otherpath=count) format
-	var/back_gun = null
+
+	var/back_gun
 
 	var/id_type
 	var/id_desc
@@ -178,7 +179,6 @@ var/list/outfits_decls_by_type_
 		H.put_in_r_hand(new r_hand(H))
 	if(H.species)
 		H.species.equip_survival_gear(H, flags&OUTFIT_EXTENDED_SURVIVAL)
-	check_and_try_equip_xeno(H)
 
 /decl/hierarchy/outfit/proc/equip_id(mob/living/carbon/human/H, rank, assignment)
 	if(!id_slot)
@@ -195,12 +195,7 @@ var/list/outfits_decls_by_type_
 		return W
 
 /decl/hierarchy/outfit/proc/equip_pda(mob/living/carbon/human/H, rank, assignment)
-	if(!pda_slot)
-		return
-	var/obj/item/device/pda/heads/pda = new pda_type(H)
-	pda.set_owner_rank_job(H.real_name, rank, assignment)
-	if(H.equip_to_slot_or_del(pda, pda_slot))
-		return pda
+	return
 
 /decl/hierarchy/outfit/dd_SortValue()
 	return name

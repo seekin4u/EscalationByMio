@@ -238,7 +238,7 @@
 
 /datum/follow_holder/captains_spare
 	sort_order = 13
-	followed_type = /obj/item/weapon/card/id/captains_spare
+	followed_type = /obj/item/weapon/card/id
 
 /datum/follow_holder/stack
 	sort_order = 14
