@@ -47,6 +47,10 @@
 	..()
 	if(direction)
 		set_dir(direction)
+	if(!tripod)
+		tripod = new/obj/item/weapon/mg_tripod
+	if(!disassembled)
+		disassembled = new/obj/item/weapon/mg_disassembled
 
 	update_layer()
 

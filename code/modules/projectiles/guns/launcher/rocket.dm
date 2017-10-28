@@ -15,29 +15,31 @@
 	release_force = 15
 	throw_distance = 30
 	var/max_rockets = 1
+	var/is_used = FALSE
 	var/list/rockets = new/list()
 
 /obj/item/weapon/gun/launcher/rocket/examine(mob/user)
 	if(!..(user, 2))
 		return
-	user << "\blue [rockets.len] / [max_rockets] rockets."
+	to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
 
 /obj/item/weapon/gun/launcher/rocket/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/ammo_casing/rocket))
+	if(istype(I, /obj/item/ammo_casing/rpg_missile))
 		if(rockets.len < max_rockets)
 			user.drop_item()
 			I.loc = src
 			rockets += I
-			user << "\blue You put the rocket in [src]."
-			user << "\blue [rockets.len] / [max_rockets] rockets."
+			to_chat(user, "\blue You put the rocket in [src].")
+			to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
 		else
-			usr << "\red [src] cannot hold more rockets."
+			to_chat(user, "\red [src] cannot hold more rockets.")
+
 
 /obj/item/weapon/gun/launcher/rocket/consume_next_projectile()
 	if(rockets.len)
-		var/obj/item/ammo_casing/rocket/I = rockets[1]
-		var/obj/item/missile/M = new (src)
-		M.primed = 1
+		var/obj/item/ammo_casing/rpg_missile/I = rockets[1]
+		var/obj/item/projectile/bullet/rgprocket/M = new (src)
+		//M.primed = TRUE
 		rockets -= I
 		return M
 	return null
@@ -64,36 +66,38 @@
 	release_force = 40
 	throw_distance = 30
 	var/max_rockets = 1
-	var/list/rockets = new/list()
+	var/is_used = FALSE
+	var/list/rockets = new/list(/obj/item/ammo_casing/rpg_missile)
 
-/obj/item/weapon/gun/launcher/rocket/examine(mob/user)
+/obj/item/weapon/gun/launcher/rpg7/examine(mob/user)
 	if(!..(user, 2))
 		return
-	user << "\blue [rockets.len] / [max_rockets] rockets."
+	to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
 
-/obj/item/weapon/gun/launcher/rocket/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/ammo_casing/rocket))
+/obj/item/weapon/gun/launcher/rpg7/attackby(obj/item/I as obj, mob/user as mob)
+	if(istype(I, /obj/item/ammo_casing/rpg_missile))
 		if(rockets.len < max_rockets)
 			user.drop_item()
 			I.loc = src
 			rockets += I
-			user << "\blue You put the rocket in [src]."
-			user << "\blue [rockets.len] / [max_rockets] rockets."
+			to_chat(user, "\blue You put the rocket in [src].")
+			to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
 		else
-			usr << "\red [src] cannot hold more rockets."
+			to_chat(user, "\red [src] cannot hold more rockets.")
 
-/obj/item/weapon/gun/launcher/rocket/consume_next_projectile()
+
+/obj/item/weapon/gun/launcher/rpg7/consume_next_projectile()
 	if(rockets.len)
-		var/obj/item/ammo_casing/rocket/I = rockets[1]
-		var/obj/item/missile/M = new (src)
-		M.primed = 1
+		var/obj/item/ammo_casing/rpg_missile/I = rockets[1]
+		var/obj/item/projectile/bullet/rgprocket/M = new (src)
+		//M.primed = TRUE
 		rockets -= I
 		return M
 	return null
 
-/obj/item/weapon/gun/launcher/rocket/handle_post_fire(mob/user, atom/target)
-	message_admins("[key_name_admin(user)] fired a rocket from an RPG ([src.name]) at [target].")
-	log_game("[key_name_admin(user)] used an RPG ([src.name]) at [target].")
+/obj/item/weapon/gun/launcher/rpg7/handle_post_fire(mob/user, atom/target)
+	message_admins("[key_name_admin(user)] fired a rocket from an RPG7 ([src.name]) at [target].")
+	log_game("[key_name_admin(user)] used an RPG7 ([src.name]) at [target].")
 	..()
 
 ///////////////////Not ours///////////////////////////////////////////////
@@ -111,36 +115,45 @@
 	slot_flags = 0
 	fire_sound = 'sound/weapons/gunshot/rocketfire1.ogg'
 	slot_flags = SLOT_BACK
-
-	New()
-		..()
-		rockets += new /obj/item/ammo_casing/rocket(src)
-
 	release_force = 25
 	throw_distance = 40
 	var/max_rockets = 1
-	var/list/rockets = new/list(/obj/item/ammo_casing/rocket)
+	var/is_used = FALSE
+	var/list/rockets = new/list(/obj/item/ammo_casing/rpg_missile)
+
+/obj/item/weapon/gun/launcher/rpg18/New()
+	..()
+	rockets += new /obj/item/ammo_casing/rpg_missile(src)
 
 /obj/item/weapon/gun/launcher/rpg18/handle_post_fire(mob/user, atom/target)
 	..()
 	name += " (Used)"
+	is_used = TRUE
+
+/obj/item/weapon/gun/launcher/rpg18/examine(mob/user)
+	if(!..(user, 2))
+		return
+	to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
 
 /obj/item/weapon/gun/launcher/rpg18/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/ammo_casing/rocket))
-		if(rockets.len < max_rockets)
-			user.drop_item()
-			I.loc = src
-			rockets += I
-			user << "\blue You put the rocket in [src]."
-			user << "\blue [rockets.len] / [max_rockets] rockets."
+	if(istype(I, /obj/item/ammo_casing/rpg_missile))
+		if(!is_used)
+			if(rockets.len < max_rockets)
+				user.drop_item()
+				I.loc = src
+				rockets += I
+				to_chat(user, "\blue You put the rocket in [src].")
+				to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
+			else
+				to_chat(user, "\red [src] cannot hold more rockets.")
 		else
-			usr << "\red [src] cannot hold more rockets."
+			to_chat(user, "\red This thing is one-use! It's already fired.")
 
 /obj/item/weapon/gun/launcher/rpg18/consume_next_projectile()
 	if(rockets.len)
-		var/obj/item/ammo_casing/rocket/I = rockets[1]
-		var/obj/item/missile/M = new (src)
-		M.primed = 1
+		var/obj/item/ammo_casing/rpg_missile/I = rockets[1]
+		var/obj/item/projectile/bullet/rgprocket/M = new (src)
+		//M.primed = TRUE
 		rockets -= I
 		return M
 	return null
@@ -168,37 +181,40 @@
 	slot_flags = 0
 	fire_sound = 'sound/weapons/gunshot/rocketfire1.ogg'
 	slot_flags = SLOT_BACK
-
-	New()
-		..()
-		rockets += new /obj/item/ammo_casing/rocket(src)
-
 	release_force = 25
 	throw_distance = 40
 	var/max_rockets = 1
-	var/list/rockets = new/list(/obj/item/ammo_casing/rocket)
+	var/is_used = FALSE
+	var/list/rockets = new/list(/obj/item/ammo_casing/rpg_missile)
 
+/obj/item/weapon/gun/launcher/m72/New()
+	..()
+	rockets += new /obj/item/ammo_casing/rpg_missile(src)
 
 /obj/item/weapon/gun/launcher/m72/handle_post_fire(mob/user, atom/target)
 	..()
 	name += " (Used)"
+	is_used = TRUE
 
 /obj/item/weapon/gun/launcher/m72/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/ammo_casing/rocket))
-		if(rockets.len < max_rockets)
-			user.drop_item()
-			I.loc = src
-			rockets += I
-			user << "\blue You put the rocket in [src]."
-			user << "\blue [rockets.len] / [max_rockets] rockets."
+	if(istype(I, /obj/item/ammo_casing/rpg_missile))
+		if(!is_used)
+			if(rockets.len < max_rockets)
+				user.drop_item()
+				I.loc = src
+				rockets += I
+				to_chat(user, "\blue You put the rocket in [src].")
+				to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
+			else
+				to_chat(user, "\red [src] cannot hold more rockets.")
 		else
-			usr << "\red [src] cannot hold more rockets."
+			to_chat(user, "This thing is one-use! It's already fired.")
 
 /obj/item/weapon/gun/launcher/m72/consume_next_projectile()
 	if(rockets.len)
-		var/obj/item/ammo_casing/rocket/I = rockets[1]
-		var/obj/item/missile/M = new (src)
-		M.primed = 1
+		var/obj/item/ammo_casing/rpg_missile/I = rockets[1]
+		var/obj/item/projectile/bullet/rgprocket/M = new (src)
+		//M.primed = TRUE
 		rockets -= I
 		return M
 	return null
@@ -209,5 +225,5 @@
 
 /obj/item/weapon/gun/launcher/m72/handle_post_fire(mob/user, atom/target)
 	message_admins("[key_name_admin(user)] fired a rocket from a rocket launcher ([src.name]) at [target].")
-	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
+	log_game("[key_name_admin(user)] used an M72 ([src.name]) at [target].")
 	..()

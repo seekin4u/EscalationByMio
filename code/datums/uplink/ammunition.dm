@@ -19,7 +19,6 @@
 
 /datum/uplink_item/item/ammo/darts
 	name = "Darts"
-	path = /obj/item/ammo_magazine/chemdart
 
 /datum/uplink_item/item/ammo/a357
 	name = ".357"

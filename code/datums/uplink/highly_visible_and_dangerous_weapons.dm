@@ -4,11 +4,6 @@
 /datum/uplink_item/item/visible_weapons
 	category = /datum/uplink_category/visible_weapons
 
-/datum/uplink_item/item/visible_weapons/dartgun
-	name = "Dart Gun"
-	item_cost = 20
-	path = /obj/item/weapon/gun/projectile/dartgun
-
 /datum/uplink_item/item/visible_weapons/crossbow
 	name = "Energy Crossbow"
 	item_cost = 24

@@ -233,8 +233,10 @@
 	if(chambered)
 		to_chat(user, "<span class='warning'>\The [src] is already loaded.</span>")
 		return
+
 	user.drop_from_inventory(G, src)
 	chambered = G
+	to_world("CHambered:[chambered]:[chambered.name]")
 	user.visible_message("\The [user] load \a [G] into \the [src].", "<span class='notice'>You load \a [G] into \the [src].</span>")
 	update_icon()
 

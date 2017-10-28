@@ -314,24 +314,29 @@
 /obj/item/projectile/bullet/rifle/a9x19
 	damage = 15
 	fire_sound = 'sound/weapons/gunshot/m9.ogg'
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a9x19/ap
 	damage = 15
 	armor_penetration = 15
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a9x18
 	damage = 15
 	fire_sound = 'sound/weapons/gunshot/makarov.ogg'
+	kill_count = 30
 
 
 /obj/item/projectile/bullet/rifle/a9x18/ap
 	damage = 15
 	armor_penetration = 15
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a4mm
 	fire_sound = 'sound/weapons/minigun_1sec.ogg'
 	damage = 15
 	armor_penetration = 15
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a127x99mm
 	fire_sound = 'sound/weapons/gunshot/heavy_mg/kord1.ogg'
@@ -344,7 +349,7 @@
 	damage = 90
 	step_delay = 1.2
 	impact_force = 1
-	kill_count = 30
+	kill_count = 35
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
 //proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
@@ -357,7 +362,7 @@
 	armor_penetration = 100
 	step_delay = 1.2
 	penetrating = 0
-	kill_count = 35
+	kill_count = 40
 
 /obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
 	explosion(target, -1, 2, 3, 4)
@@ -368,10 +373,10 @@
 	damage = 100
 	step_delay = 1.2
 	impact_force = 1
-	kill_count = 30
+	kill_count = 35
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
-	explosion(target, -1,1,3,4)//a little bit explosive that 30x29
+	explosion(target, -1, 1, 3, 4)//a little bit explosive that 30x29
 
 
 /obj/item/projectile/bullet/mk19_40x53mm/pow
@@ -380,17 +385,44 @@
 	step_delay = 1.2
 	impact_force = 1
 	penetrating = 5
-	kill_count = 35
+	kill_count = 40
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
-	explosion(target, -1,1,4,5)
-
+	explosion(target, -1, 1, 4, 5)
 
 /obj/item/projectile/bullet/rgprocket
+	name = "rpg shell"
 	icon_state = "rocket1"
-	damage = 150
-	armor_penetration = 100
-	step_delay = 1.5
+	damage = 200
+	step_delay = 1.8
+	impact_force = 1
+	kill_count = 45
+	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
-/obj/item/projectile/bullet/newrocket/on_impact(var/atom/target, blocked = 0)
-	explosion(target, 1,2,4,5)
+	muzzle_type = /obj/effect/projectile/rocket/rpg
+	breech_type = /obj/effect/projectile/rocket/rpg/breech
+
+/obj/item/projectile/bullet/rpgrocket/muzzle_effect(var/matrix/T)
+	if(silenced)
+		return
+
+	if(ispath(muzzle_type))
+		var/obj/effect/projectile/M = new muzzle_type(get_turf(src))
+
+		if(istype(M))
+			M.set_transform(T)
+			M.pixel_x = location.pixel_x
+			M.pixel_y = location.pixel_y
+			M.activate()
+
+	if(ispath(breech_type))
+		var/obj/effect/projectile/M1 = new breech_type(get_turf(src))
+
+		if(istype(M1))
+			M1.set_transform(T)
+			M1.pixel_x = -location.pixel_x
+			M1.pixel_y = -location.pixel_y
+			M1.activate()
+
+/obj/item/projectile/bullet/rgprocket/on_impact(var/atom/target, var/blocked = 0)
+	explosion(target, 1, 3, 5, 6)

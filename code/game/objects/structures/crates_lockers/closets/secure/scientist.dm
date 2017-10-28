@@ -87,13 +87,5 @@
 /obj/structure/closet/secure_closet/animal/New()
 	..()
 	new /obj/item/device/assembly/signaler(src)
-	new /obj/item/device/radio/electropack(src)
-	new /obj/item/device/radio/electropack(src)
-	new /obj/item/device/radio/electropack(src)
-	new /obj/item/weapon/gun/launcher/syringe/rapid(src)
-	new /obj/item/weapon/storage/box/syringegun(src)
-	new /obj/item/weapon/storage/box/syringes(src)
-	new /obj/item/weapon/reagent_containers/glass/bottle/chloralhydrate(src)
-	new /obj/item/weapon/reagent_containers/glass/bottle/stoxin(src)
 	return
 

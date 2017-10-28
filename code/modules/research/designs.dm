@@ -604,7 +604,7 @@ other types of metals and chemistry for reagents).
 	id = "rapidsyringe"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_BIO = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 1000)
-	build_path = /obj/item/weapon/gun/launcher/syringe/rapid
+	build_path = /obj/item/weapon/gun/launcher
 	sort_string = "TABAB"
 
 /datum/design/item/weapon/temp_gun

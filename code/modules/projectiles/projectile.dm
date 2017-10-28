@@ -53,6 +53,7 @@
 	var/muzzle_type
 	var/tracer_type
 	var/impact_type
+	var/breech_type//ONLY FOR RPG AND ANOTHER REACTIVE SHIT
 
 	var/fire_sound
 
@@ -270,6 +271,7 @@
 
 	//stop flying
 	on_impact(A)
+	to_world("ProjectileBump : on_impact have to worked!")
 
 	set_density(0)
 	invisibility = 101
@@ -380,7 +382,9 @@
 				P.activate()
 
 /obj/item/projectile/proc/impact_effect(var/matrix/M)
+	//to_world("---Entered impact_effect")
 	if(ispath(impact_type))
+		//to_world("----impact_effect - ispath entered!")
 		var/obj/effect/projectile/P = new impact_type(location.loc)
 
 		if(istype(P))
@@ -388,6 +392,7 @@
 			P.pixel_x = location.pixel_x
 			P.pixel_y = location.pixel_y
 			P.activate()
+			//to_world("---ispath([impact_type]:istype(P[P]))")
 
 //"Tracing" projectile
 /obj/item/projectile/test //Used to see if you can hit them.

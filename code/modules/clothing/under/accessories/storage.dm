@@ -123,21 +123,5 @@
 
 /obj/item/clothing/accessory/storage/bandolier/New()
 	..()
-	hold.can_hold = list(
-		/obj/item/ammo_casing,
-		/obj/item/weapon/grenade,
-		/obj/item/weapon/material/hatchet/tacknife,
-		/obj/item/weapon/material/kitchen/utensil/knife,
-		/obj/item/weapon/material/knife,
-		/obj/item/weapon/material/star,
-		/obj/item/weapon/rcd_ammo,
-		/obj/item/weapon/reagent_containers/syringe,
-		/obj/item/weapon/reagent_containers/hypospray,
-		/obj/item/weapon/reagent_containers/hypospray/autoinjector,
-		/obj/item/weapon/syringe_cartridge,
-		/obj/item/weapon/plastique,
-		/obj/item/clothing/mask/smokable,
-		/obj/item/weapon/screwdriver,
-		/obj/item/device/multitool
-	)
+	hold.can_hold = list()
 
