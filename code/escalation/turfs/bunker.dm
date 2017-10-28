@@ -64,9 +64,6 @@
 /turf/simulated/floor/pavement/corner/inner
 	icon_state = "Inner_corner"
 
-/turf/snow/no_flora
-	//just for the flora code
-
 
 /turf/simulated/wall/concrete
 	name = "bunker wall"

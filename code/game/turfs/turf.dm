@@ -31,7 +31,8 @@
 
 	var/interior = 1
 	var/blend_with_neighbors = 0
-	var/can_bullets = 0 //Can bullet holes spawn on it?
+	var/can_bullets = 0 //Can bullet holes be spawned on it?
+	var/list/turf_edge_cache = list()
 
 
 	var/bullet_holes = 0 //How many bullets already there?
@@ -44,16 +45,44 @@
 			return
 	turfs |= src
 
+	if(blend_with_neighbors)
+		if(ticker && ticker.current_state >= GAME_STATE_PLAYING)
+			initialize()
+		else
+			return
+
 	if(dynamic_lighting)
 		luminosity = 0
 	else
 		luminosity = 1
 
 /turf/proc/initialize()
-	return
+	update_icon(1)
 
-/turf/proc/update_icon()
-	return
+/turf/proc/update_icon(var/update_neighbors, var/list/previously_added = list())
+	var/list/overlays_to_add = previously_added
+
+	if(blend_with_neighbors)
+
+		for(var/checkdir in cardinal)
+			var/turf/T = get_step(src, checkdir)
+			if(istype(T) && T.blend_with_neighbors && blend_with_neighbors < T.blend_with_neighbors && icon_state != T.icon_state)
+
+				var/cache_key = "[T.icon_state]-[checkdir]"
+				if(!turf_edge_cache[cache_key])
+					turf_edge_cache[cache_key] = image(icon = 'icons/turf/blending_overlays.dmi', icon_state = "[T.icon_state]-edge", dir = checkdir)
+
+				overlays_to_add += turf_edge_cache[cache_key]
+
+	overlays += overlays_to_add
+
+	if(update_neighbors)
+
+		for(var/check_dir in alldirs)
+			var/turf/T = get_step(src, check_dir)
+
+			if(istype(T))
+				T.update_icon()
 
 /turf/Destroy()
 	turfs -= src

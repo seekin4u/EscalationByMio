@@ -34,10 +34,4 @@ var/datum/antagonist/mercenary/mercs
 	if(!..())
 		return 0
 
-	var/decl/hierarchy/outfit/mercenary = outfit_by_type(/decl/hierarchy/outfit/job)
-	mercenary.equip(player)
-
-	var/obj/item/device/radio/uplink/U = new(get_turf(player), player.mind, DEFAULT_TELECRYSTAL_AMOUNT)
-	player.put_in_hands(U)
-
 	return 1

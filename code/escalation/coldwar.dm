@@ -28,7 +28,7 @@ var/wlg_selected_deadtree = 0
 		for(var/turf/T in world)
 			if(T.z != 1)
 				continue
-			if(!istype(T, /turf/snow) || !istype(T, /turf/snow/no_flora))
+			if(!istype(T, /turf/ground) || !istype(T, /turf/ground/no_flora))
 				continue
 
 			wlg_total++
