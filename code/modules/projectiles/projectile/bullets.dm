@@ -314,24 +314,29 @@
 /obj/item/projectile/bullet/rifle/a9x19
 	damage = 15
 	fire_sound = 'sound/weapons/gunshot/m9.ogg'
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a9x19/ap
 	damage = 15
 	armor_penetration = 15
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a9x18
 	damage = 15
 	fire_sound = 'sound/weapons/gunshot/makarov.ogg'
+	kill_count = 30
 
 
 /obj/item/projectile/bullet/rifle/a9x18/ap
 	damage = 15
 	armor_penetration = 15
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a4mm
 	fire_sound = 'sound/weapons/minigun_1sec.ogg'
 	damage = 15
 	armor_penetration = 15
+	kill_count = 30
 
 /obj/item/projectile/bullet/rifle/a127x99mm
 	fire_sound = 'sound/weapons/gunshot/heavy_mg/kord1.ogg'
