@@ -53,6 +53,7 @@
 	var/muzzle_type
 	var/tracer_type
 	var/impact_type
+	var/breech_type//ONLY FOR RPG AND ANOTHER REACTIVE SHIT
 
 	var/fire_sound
 

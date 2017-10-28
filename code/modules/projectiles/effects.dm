@@ -135,3 +135,6 @@
 //----------------------------
 /obj/effect/projectile/rocket/rpg
 	icon_state = "muzzle_rocket"
+
+/obj/effect/projectile/rocket/rpg/breech
+	icon_state = "breech_rocket"

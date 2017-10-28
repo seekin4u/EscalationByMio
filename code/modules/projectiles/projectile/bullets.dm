@@ -390,7 +390,6 @@
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
 	explosion(target, -1, 1, 4, 5)
 
-
 /obj/item/projectile/bullet/rgprocket
 	name = "rpg shell"
 	icon_state = "rocket1"
@@ -401,6 +400,29 @@
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
 	muzzle_type = /obj/effect/projectile/rocket/rpg
+	breech_type = /obj/effect/projectile/rocket/rpg/breech
+
+/obj/item/projectile/bullet/rpgrocket/muzzle_effect(var/matrix/T)
+	if(silenced)
+		return
+
+	if(ispath(muzzle_type))
+		var/obj/effect/projectile/M = new muzzle_type(get_turf(src))
+
+		if(istype(M))
+			M.set_transform(T)
+			M.pixel_x = location.pixel_x
+			M.pixel_y = location.pixel_y
+			M.activate()
+
+	if(ispath(breech_type))
+		var/obj/effect/projectile/M1 = new breech_type(get_turf(src))
+
+		if(istype(M1))
+			M1.set_transform(T)
+			M1.pixel_x = -location.pixel_x
+			M1.pixel_y = -location.pixel_y
+			M1.activate()
 
 /obj/item/projectile/bullet/rgprocket/on_impact(var/atom/target, var/blocked = 0)
 	explosion(target, 1, 3, 5, 6)
