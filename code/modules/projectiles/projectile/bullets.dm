@@ -344,7 +344,7 @@
 	damage = 90
 	step_delay = 1.2
 	impact_force = 1
-	kill_count = 30
+	kill_count = 35
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
 //proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
@@ -357,7 +357,7 @@
 	armor_penetration = 100
 	step_delay = 1.2
 	penetrating = 0
-	kill_count = 35
+	kill_count = 40
 
 /obj/item/projectile/bullet/ags30x29mm/pow/on_impact(var/atom/target, var/blocked = 0)
 	explosion(target, -1, 2, 3, 4)
@@ -368,7 +368,7 @@
 	damage = 100
 	step_delay = 1.2
 	impact_force = 1
-	kill_count = 30
+	kill_count = 35
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
 	explosion(target, -1, 1, 3, 4)//a little bit explosive that 30x29
@@ -380,7 +380,7 @@
 	step_delay = 1.2
 	impact_force = 1
 	penetrating = 5
-	kill_count = 35
+	kill_count = 40
 
 /obj/item/projectile/bullet/mk19_40x53mm/on_impact(var/atom/target, blocked = 0)
 	explosion(target, -1, 1, 4, 5)
@@ -392,11 +392,10 @@
 	damage = 200
 	step_delay = 1.8
 	impact_force = 1
-	kill_count = 30
+	kill_count = 45
 	fire_sound = null//here we gonna use sound in AGS and not in bullets
 
 	muzzle_type = /obj/effect/projectile/rocket/rpg
 
 /obj/item/projectile/bullet/rgprocket/on_impact(var/atom/target, var/blocked = 0)
-	to_world("--[src.name]:on_impact!")
 	explosion(target, 1, 3, 5, 6)
