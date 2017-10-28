@@ -271,7 +271,7 @@
 
 	//stop flying
 	on_impact(A)
-	to_world("ProjectileBump : on_impact have to worked!")
+	//to_world("ProjectileBump : on_impact have to worked!")
 
 	set_density(0)
 	invisibility = 101

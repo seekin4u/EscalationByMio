@@ -120,7 +120,7 @@
 	//icon = 'icons/obj/weapons.dmi'
 	icon_state = "sandbag_empty"
 	w_class = 1
-	var/sand_amount = 4//how much piles of dirt on item's spawn
+	var/sand_amount = 0//how much piles of dirt on item's spawn
 
 //семантика ебанутая
 //if there are like 3-4 sandbags or they are placed in one directions and each of them will call CanPass for projectiles - very imbalanced
@@ -129,7 +129,7 @@
 
 	for(var/obj/structure/sandbag/baggy in user.loc.contents)
 		++i
-		if((baggy.dir == user.dir) || i > 2)
+		if((baggy.dir == user.dir) || i > 1)
 			to_chat(user, "<span class='warning'>There is no more space.</span>")
 #if ESC_DEBUG
 			to_world("Check4sandbag! I = [i]")
