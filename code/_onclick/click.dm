@@ -326,7 +326,7 @@
 		if(facing_dir)
 			facing_dir = direction
 		facedir(direction)
-
+/*
 /obj/screen/click_catcher
 	icon = 'icons/mob/screen_gen.dmi'
 	icon_state = "click_catcher"
@@ -365,7 +365,7 @@
 		if(T)
 			T.Click(location, control, params)
 	. = 1
-
+*/
 /*
 	Custom click handling
 */
@@ -510,6 +510,3 @@ var/const/CLICK_HANDLER_ALL                  = (~0)
 
 /obj/screen/IsAutoclickable()
 	. = 0
-
-/obj/screen/click_catcher/IsAutoclickable()
-	. = 1
