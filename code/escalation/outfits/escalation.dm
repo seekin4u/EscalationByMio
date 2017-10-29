@@ -96,7 +96,7 @@
 	name = "Bundeswehr Leader"
 	r_hand = /obj/item/weapon/gun/projectile/walther
 	id_pda_assignment = "Zugfuhrer"
-	back_gun = /obj/item/weapon/gun/projectile/automatic/ak74
+	//back_gun = /obj/item/weapon/gun/projectile/automatic/ak74
 
 /decl/hierarchy/outfit/escalation/nato/bundes/subleader
 	name = "Bundeswehr Leader Deputy"
