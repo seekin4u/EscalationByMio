@@ -589,8 +589,8 @@ obj/machinery/light/proc/burn_out()
 	var/rigged = 0		// true if rigged to explode
 	var/broken_chance = 2
 
-	var/brightness_range = 2 //how much light it gives off
-	var/brightness_power = 1
+	var/brightness_range = 8 //how much light it gives off
+	var/brightness_power = 3
 	var/brightness_color = "#FFFFFF"
 	var/list/lighting_modes = list()
 
@@ -602,8 +602,8 @@ obj/machinery/light/proc/burn_out()
 	item_state = "c_tube"
 	matter = list("glass" = 100)
 
-	brightness_range = 8	// luminosity when on, also used in power calculation
-	brightness_power = 3
+	brightness_range = 12	// luminosity when on, also used in power calculation
+	brightness_power = 4
 	brightness_color = "#FFFFFF"
 	lighting_modes = list(
 		"emergency_lighting" = list(l_range = 5, l_power = 1, l_color = "#da0205"),
@@ -612,8 +612,8 @@ obj/machinery/light/proc/burn_out()
 /obj/item/weapon/light/tube/large
 	w_class = ITEM_SIZE_SMALL
 	name = "large light tube"
-	brightness_range = 12
-	brightness_power = 4
+	brightness_range = 15
+	brightness_power = 5
 
 /obj/item/weapon/light/bulb
 	name = "light bulb"
@@ -624,8 +624,8 @@ obj/machinery/light/proc/burn_out()
 	broken_chance = 5
 	matter = list("glass" = 100)
 
-	brightness_range = 4
-	brightness_power = 2
+	brightness_range = 9
+	brightness_power = 3
 	brightness_color = "#a0a080"
 	lighting_modes = list(
 		"emergency_lighting" = list(l_range = 4, l_power = 1, l_color = "#da0205"),

@@ -98,9 +98,6 @@ obj/machinery/recharger/process()
 		else if(istype(charging, /obj/item/weapon/computer_hardware/battery_module))
 			var/obj/item/weapon/computer_hardware/battery_module/BM = charging
 			cell = BM.battery
-		else if(istype(charging, /obj/item/weapon/shield_diffuser))
-			var/obj/item/weapon/shield_diffuser/SD = charging
-			cell = SD.cell
 
 		if(istype(cell, /obj/item/weapon/cell))
 			var/obj/item/weapon/cell/C = cell

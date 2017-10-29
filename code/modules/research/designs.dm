@@ -1556,21 +1556,7 @@ CIRCUITS BELOW
 	build_path = /obj/item/weapon/circuitboard/telecomms/receiver
 	sort_string = "PAAAG"
 
-/datum/design/circuit/shield_generator
-	name = "Shield Generator"
-	desc = "Allows for the construction of a shield generator circuit board."
-	id = "shield_generator"
-	req_tech = list(TECH_MAGNET = 3, TECH_POWER = 4)
-	build_path = /obj/item/weapon/circuitboard/shield_generator
-	sort_string = "VAAAC"
 
-/datum/design/circuit/shield_diffuser
-	name = "Shield Diffuser"
-	desc = "Allows for the construction of a shield generator circuit board."
-	id = "shield_diffuser"
-	req_tech = list(TECH_MAGNET = 3, TECH_POWER = 4)
-	build_path = /obj/item/weapon/circuitboard/shield_diffuser
-	sort_string = "VAAAB"
 
 /datum/design/circuit/ntnet_relay
 	name = "NTNet Quantum Relay"

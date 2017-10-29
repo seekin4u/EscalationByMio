@@ -212,16 +212,4 @@
 	A.launch(target, def_zone)
 
 /mob/living/simple_animal/hostile/proc/DestroySurroundings()
-	if(prob(break_stuff_probability))
-		for(var/dir in cardinal) // North, South, East, West
-			var/obj/effect/shield/S = locate(/obj/effect/shield, get_step(src, dir))
-			if(S && S.gen && S.gen.check_flag(MODEFLAG_NONHUMANS))
-				S.attack_generic(src,rand(melee_damage_lower,melee_damage_upper),attacktext)
-				return
-			for(var/obj/structure/window/obstacle in get_step(src, dir))
-				if(obstacle.dir == reverse_dir[dir]) // So that windows get smashed in the right order
-					obstacle.attack_generic(src,rand(melee_damage_lower,melee_damage_upper),attacktext)
-					return
-			var/obj/structure/obstacle = locate(/obj/structure, get_step(src, dir))
-			if(istype(obstacle, /obj/structure/window) || istype(obstacle, /obj/structure/closet) || istype(obstacle, /obj/structure/table) || istype(obstacle, /obj/structure/grille))
-				obstacle.attack_generic(src,rand(melee_damage_lower,melee_damage_upper),attacktext)
+	return

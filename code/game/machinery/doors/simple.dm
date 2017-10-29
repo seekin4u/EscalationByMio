@@ -197,6 +197,10 @@
 /obj/machinery/door/unpowered/simple/Destroy()
 	qdel(lock)
 	lock = null
+	qdel(material)
+	material = null
+	icon_base = null
+	initial_lock_value = null
 	..()
 
 /obj/machinery/door/unpowered/simple/iron/New(var/newloc,var/material_name,var/complexity)

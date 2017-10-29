@@ -48,11 +48,13 @@
 	name = "road"
 	icon = 'icons/escalation/turf/road.dmi'
 	icon_state = "Road_grey"
+	blend_with_neighbors = 7
 
 /turf/simulated/floor/pavement
 	name = "pavement"
 	icon = 'icons/escalation/turf/road.dmi'
 	icon_state = "pavement"
+	blend_with_neighbors = 1
 
 /turf/simulated/floor/pavement/corner/outer
 	icon_state = "Corner"

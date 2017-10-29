@@ -464,7 +464,6 @@
 
 // CARGO BOXES //
 
-
 /obj/item/weapon/storage/box/cargo
 	name = "kit box"
 	desc = "Box with standart kit."
@@ -529,7 +528,7 @@
 		/obj/item/ammo_magazine/c545x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat/wp,
 		/obj/item/weapon/storage/backpack/rpgsa,
-		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/ammo_casing/rpg_missile = 3,
 		/obj/item/weapon/material/knife/bayonet/sa
 		)
 
@@ -540,7 +539,7 @@
 		/obj/item/ammo_magazine/c545x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat/wp,
 		/obj/item/weapon/storage/backpack/rpgsa/assistant,
-		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/ammo_casing/rpg_missile = 3,
 		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/weapon/grenade/frag
 		)
@@ -626,7 +625,7 @@
 		/obj/item/ammo_magazine/c762x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat/wp,
 		/obj/item/weapon/storage/backpack/rpgcsla,
-		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/ammo_casing/rpg_missile = 3,
 		/obj/item/weapon/material/knife/bayonet/csla
 		)
 
@@ -637,7 +636,7 @@
 		/obj/item/ammo_magazine/c762x39m = 7,
 		/obj/item/weapon/storage/firstaid/combat/wp,
 		/obj/item/weapon/storage/backpack/rpgcsla/assistant,
-		/obj/item/ammo_casing/rocket = 3,
+		/obj/item/ammo_casing/rpg_missile = 3,
 		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/weapon/grenade/frag
 		)
@@ -723,7 +722,7 @@
 		/obj/item/ammo_magazine/c556x45m = 7,
 		/obj/item/weapon/storage/firstaid/combat/nato,
 		/obj/item/weapon/storage/backpack/smaw,
-		/obj/item/ammo_casing/rocket/smaw = 3,
+		/obj/item/ammo_casing/rpg_missile = 3,
 		/obj/item/weapon/material/knife/bayonet/usmc
 		)
 
@@ -734,7 +733,7 @@
 		/obj/item/ammo_magazine/c556x45m = 7,
 		/obj/item/weapon/storage/firstaid/combat/nato,
 		/obj/item/weapon/storage/backpack/smaw,
-		/obj/item/ammo_casing/rocket/smaw = 3,
+		/obj/item/ammo_casing/rpg_missile = 3,
 		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/weapon/grenade/frag
 		)

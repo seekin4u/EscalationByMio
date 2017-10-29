@@ -36,6 +36,15 @@
 	body_parts_covered = HEAD
 	armor = list(melee = 35, bullet = 5, laser = 30,energy = 25, bomb = 15, bio = 0, rad = 0)
 
+/obj/item/clothing/head/helmet/escalation/ssh60
+	name = "SSh-60 Helmet"
+	desc = "A steel helmet, was a standard issue to SA."
+	icon_state = "sa"
+	item_state = "sa"
+
+	body_parts_covered = HEAD
+	armor = list(melee = 30, bullet = 8, laser = 30,energy = 25, bomb = 20, bio = 0, rad = 0)
+
 /obj/item/clothing/head/helmet/escalation/ssh68
 	name = "SSh-68 Helmet"
 	desc = "A steel helmet, standard issue to SA. I bet that even our grandsons will wear it."

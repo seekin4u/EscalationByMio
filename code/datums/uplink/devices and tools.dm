@@ -35,10 +35,7 @@
 	item_cost = 16
 	path = /obj/item/device/encryptionkey/syndicate
 
-/datum/uplink_item/item/tools/shield_diffuser
-	name = "Handheld Shield Diffuser"
-	item_cost = 16
-	path = /obj/item/weapon/shield_diffuser
+
 
 /datum/uplink_item/item/tools/flashdark
 	name = "Flashdark"

@@ -1368,9 +1368,6 @@
 		if("transfer_controller")
 			return global.transfer_controller;
 		if("turbolift_controller")
-			return global.turbolift_controller;
-		if("turbolifts")
-			return global.turbolifts;
 		if("turf_changed_event")
 			return global.turf_changed_event;
 		if("turfs")
@@ -2820,10 +2817,6 @@
 			global.traitors=newval;
 		if("transfer_controller")
 			global.transfer_controller=newval;
-		if("turbolift_controller")
-			global.turbolift_controller=newval;
-		if("turbolifts")
-			global.turbolifts=newval;
 		if("turf_changed_event")
 			global.turf_changed_event=newval;
 		if("turfs")

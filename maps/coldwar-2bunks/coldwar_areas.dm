@@ -173,6 +173,7 @@
 /area/coldwar/stuff
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "unknown"
+	requires_power = 0
 
 /area/coldwar/stuff/use_lights
 	lighting_use_dynamic = 1
@@ -185,6 +186,7 @@
 
 /area/coldwar/stuff/hospital
 	icon_state = "hospital"
+	lighting_use_dynamic = 1
 
 /area/coldwar/stuff/church
 	icon_state = "church"
@@ -194,10 +196,12 @@
 
 /area/coldwar/stuff/quarters
 	icon_state = "quarters"
+	//lighting_use_dynamic = 1
 
 /area/coldwar/sa
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "sa"
+	requires_power = 0
 
 /area/coldwar/sa/sa_fob
 	name = "SA fob"
@@ -238,6 +242,7 @@
 /area/coldwar/usmc
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "usmc"
+	requires_power = 0
 
 //TODO - sprites for it and replace another spsrites from icons/turf/area.dmi
 /area/coldwar/usmc/usmc_fob
@@ -247,6 +252,7 @@
 /area/coldwar/usmc/usmc_bace
 	name = "USMC bace"
 	icon_state = "usmc_bace"
+	lighting_use_dynamic = 1
 
 /*
 /area/coldwar/usmc/usmc_tents
