@@ -2327,6 +2327,7 @@
 #include "maps\coldwar-2bunks\coldwar.dm"
 #include "maps\coldwar-2bunks\coldwar_define.dm"
 #include "maps\coldwar-test\coldwar_define.dm"
+#include "maps\coldwar-test-nomachinery\coldwar_define.dm"
 #include "maps\~mapsystem\map_preferences.dm"
 #include "maps\~mapsystem\maps.dm"
 #include "maps\~mapsystem\maps_areas.dm"
