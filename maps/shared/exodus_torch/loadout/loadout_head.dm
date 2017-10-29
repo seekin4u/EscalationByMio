@@ -92,25 +92,6 @@
 	pins["yellow pin"] = /obj/item/clothing/head/hairflower/yellow
 	gear_tweaks += new/datum/gear_tweak/path(pins)
 
-/datum/gear/head/hijab
-	display_name = "hijab"
-	path = /obj/item/clothing/head/hijab
-	flags = GEAR_HAS_COLOR_SELECTION
-
-/datum/gear/head/kippa
-	display_name = "kippa"
-	path = /obj/item/clothing/head/kippa
-	flags = GEAR_HAS_COLOR_SELECTION
-
-/datum/gear/head/turban
-	display_name = "turban"
-	path = /obj/item/clothing/head/turban
-	flags = GEAR_HAS_COLOR_SELECTION
-
-/datum/gear/head/welding
-	display_name = "welding mask selection"
-	path = /obj/item/clothing/head/welding
-
 /datum/gear/head/welding/New()
 	..()
 	var/welding_masks = list()

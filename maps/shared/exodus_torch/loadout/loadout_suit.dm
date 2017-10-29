@@ -1,7 +1,3 @@
-/datum/gear/suit/hazard
-	display_name = "hazard vests"
-	path = /obj/item/clothing/suit/storage/hazardvest
-
 /datum/gear/suit/hazard/New()
 	..()
 	gear_tweaks += new/datum/gear_tweak/path(/obj/item/clothing/suit/storage/hazardvest)
@@ -56,26 +52,6 @@
 /datum/gear/suit/suit_jacket
 	display_name = "suit jackets"
 	path = /obj/item/clothing/suit/storage/toggle/lawyer/bluejacket
-
-/datum/gear/suit/roles/poncho/security
-	display_name = "poncho, security"
-	path = /obj/item/clothing/suit/poncho/roles/security
-
-/datum/gear/suit/roles/poncho/medical
-	display_name = "poncho, medical"
-	path = /obj/item/clothing/suit/poncho/roles/medical
-
-/datum/gear/suit/roles/poncho/engineering
-	display_name = "poncho, engineering"
-	path = /obj/item/clothing/suit/poncho/roles/engineering
-
-/datum/gear/suit/roles/poncho/science
-	display_name = "poncho, science"
-	path = /obj/item/clothing/suit/poncho/roles/science
-
-/datum/gear/suit/roles/poncho/cargo
-	display_name = "poncho, supply"
-	path = /obj/item/clothing/suit/poncho/roles/cargo
 
 /datum/gear/suit/suit_jacket/New()
 	..()

@@ -54,7 +54,7 @@
 
 /turf/ground/Entered(atom/A)
 	if(ismob(A) && !isobserver(A))
-		if(hasSnow)
+		if(!hasSnow)
 			return
 		var/mdir = "[A.dir]"
 		if(crossed_dirs[mdir])

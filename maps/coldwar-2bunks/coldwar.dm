@@ -15,7 +15,7 @@
 	#include "loadout/loadout_uniform.dm"
 	#include "loadout/loadout_xeno.dm"*/
 
-	#include "../shared/exodus_torch/_include.dm"
+	//#include "../shared/exodus_torch/_include.dm"
 
 /*На самом высоком по старшинству уровне поставить ландмарку с мап датой, и указать level = количество уровней. Тогда мультиз заработает. */
 //Подвал нато, сам фоб, база совков, интертим, тесты и тд
