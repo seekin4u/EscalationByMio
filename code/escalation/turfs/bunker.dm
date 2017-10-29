@@ -57,10 +57,6 @@
 /turf/simulated/floor/pavement/corner/outer
 	icon_state = "Corner"
 
-/turf/simulated/floor/pavement/corner/New()
-	if(prob(10))
-		new /obj/effect/border_effect/snow(src)
-
 /turf/simulated/floor/pavement/corner/inner
 	icon_state = "Inner_corner"
 

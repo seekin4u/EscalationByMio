@@ -174,6 +174,9 @@
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "unknown"
 
+/area/coldwar/stuff/use_lights
+	lighting_use_dynamic = 1
+
 /area/coldwar/stuff/town
 	icon_state = "town"
 
