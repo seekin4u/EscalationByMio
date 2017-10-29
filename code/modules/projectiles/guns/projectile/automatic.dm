@@ -1301,6 +1301,50 @@
 
 	src.toggle_scope(usr)
 
+/obj/item/weapon/gun/projectile/automatic/wa2000
+	name = "WA2000"
+	desc = "Rare german sniper rifle."
+	icon_state = "svd" //fix
+	item_state = "m14"
+	slot_flags = SLOT_BACK_GUN
+	w_class = 5
+	force = 10
+	max_shells = 6
+	caliber = "762x54" //fix
+	ammo_type = /obj/item/ammo_casing/a762x54 //fix
+	load_method = MAGAZINE
+	magazine_type = null
+	allowed_magazines = /obj/item/ammo_magazine/c762x54s //fix
+	one_hand_penalty = 10
+	accuracy = 5
+	fire_delay = 3
+	zoom_ammount = 15
+	fire_sound = 'sound/weapons/gunshot/svd.ogg'
+	wielded_item_state = "m14-wielded" //fix
+	unload_sound = 'sound/weapons/gunporn/svd_magout.ogg'
+	reload_sound = 'sound/weapons/gunporn/svd_magin.ogg'
+	cocked_sound = 'sound/weapons/gunporn/svd_boltback.ogg'
+
+	firemodes = list(
+		list(mode_name="semiauto", burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=10, burst_accuracy=null, dispersion=null),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/wa2000/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "svd" //fix
+	else
+		icon_state = "svd-empty" //fix
+
+/obj/item/weapon/gun/projectile/automatic/wa2000/verb/scope()
+	set name = "Use Scope"
+	set category = "Object"
+	set src in usr
+	set popup_menu = 0
+
+	src.toggle_scope(usr)
+
+
 /obj/item/weapon/gun/projectile/automatic/g3a3
 	name = "G3A3"
 	desc = "A standard-issue Bundeswehr combat rifle."
