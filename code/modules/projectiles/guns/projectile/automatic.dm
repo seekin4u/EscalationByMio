@@ -298,7 +298,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 2
-	zoom_ammount = 10
+
 	wielded_item_state = "ak74-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -354,7 +354,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2.0)
 
 
 /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet(mob/user)
@@ -401,7 +401,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 2
-	zoom_ammount = 10
+
 	wielded_item_state = "ak74gl-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -464,7 +464,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2.0)
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
@@ -481,7 +481,7 @@
 	one_hand_penalty = 2
 	accuracy = 1
 	fire_delay = 2
-	zoom_ammount = 10
+
 	wielded_item_state = "aks-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -552,7 +552,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
@@ -569,7 +569,7 @@
 	one_hand_penalty = 4
 	accuracy = 2
 	fire_delay = 3
-	zoom_ammount = 10
+
 	wielded_item_state = "m16-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg'
@@ -622,7 +622,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -694,7 +694,7 @@
 	one_hand_penalty = 6
 	accuracy = 3
 	wielded_item_state = "rpk-wielded"
-	zoom_ammount = 10
+
 	fire_sound = 'sound/weapons/gunshot/rpk47.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/ak74_magin.ogg'
@@ -714,7 +714,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/update_icon()
 	..()
@@ -740,7 +740,7 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x54b
 	one_hand_penalty = 9
-	zoom_ammount = 10
+
 	wielded_item_state = "vz59-wielded"
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
@@ -804,7 +804,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/m60
 	name = "M60E1"
@@ -821,7 +821,7 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
-	zoom_ammount = 10
+
 	wielded_item_state = "m60-wielded"
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
@@ -886,7 +886,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/mg3
 	name = "MG3"
@@ -908,7 +908,6 @@
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
-	zoom_ammount = 10
 
 	firemodes = list(
 		list(mode_name="short bursts",  burst=6,  move_delay=9,  one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4)),
@@ -969,7 +968,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 //DO NOT USE
 /obj/item/weapon/gun/projectile/automatic/m14
@@ -989,7 +988,7 @@
 	one_hand_penalty = 4
 	accuracy = 3
 	fire_delay = 2
-	zoom_ammount = 10
+
 	fire_sound = 'sound/weapons/gunshot/m14.ogg'
 	wielded_item_state = "m14-wielded"
 	unload_sound = 'sound/weapons/gunporn/m14_magout.ogg'
@@ -1040,7 +1039,7 @@
 	set category = "Object"
 	set src in usr
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1066,7 +1065,6 @@
 	item_state = "m14"
 	accuracy = 5
 	fire_delay = 3
-	zoom_ammount = 15
 	wielded_item_state = "m14-wielded"
 
 	firemodes = list(
@@ -1086,7 +1084,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 3)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
 	name = "M16A1"
@@ -1103,7 +1101,7 @@
 	one_hand_penalty = 4
 	accuracy = 2
 	fire_delay = 1.7
-	zoom_ammount = 10
+
 	wielded_item_state = "m16-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg'
@@ -1158,7 +1156,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1192,7 +1190,7 @@
 	one_hand_penalty = 4
 	accuracy = 2
 	fire_delay = 1.7
-	zoom_ammount = 10
+
 	wielded_item_state = "m16gl-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg'
@@ -1246,7 +1244,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp(mob/user)
 	set name = "Granade launcher"
@@ -1275,7 +1273,6 @@
 	one_hand_penalty = 10
 	accuracy = 5
 	fire_delay = 3
-	zoom_ammount = 15
 	fire_sound = 'sound/weapons/gunshot/svd.ogg'
 	wielded_item_state = "m14-wielded"
 	unload_sound = 'sound/weapons/gunporn/svd_magout.ogg'
@@ -1299,7 +1296,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2.8)
 
 /obj/item/weapon/gun/projectile/automatic/wa2000
 	name = "WA2000"
@@ -1318,7 +1315,6 @@
 	one_hand_penalty = 10
 	accuracy = 5
 	fire_delay = 3
-	zoom_ammount = 15
 	fire_sound = 'sound/weapons/gunshot/svd.ogg'
 	wielded_item_state = "m14-wielded" //fix
 	unload_sound = 'sound/weapons/gunporn/svd_magout.ogg'
@@ -1342,7 +1338,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2.8)
 
 
 /obj/item/weapon/gun/projectile/automatic/g3a3
@@ -1360,7 +1356,7 @@
 	one_hand_penalty = 5
 	accuracy = 3
 	fire_delay = 4
-	zoom_ammount = 10
+
 	wielded_item_state = "g3a3-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
@@ -1414,7 +1410,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1460,7 +1456,7 @@
 	one_hand_penalty = 5
 	accuracy = 3
 	fire_delay = 4
-	zoom_ammount = 10
+
 	wielded_item_state = "g3tgs-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
@@ -1513,7 +1509,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 /obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
@@ -1539,7 +1535,6 @@
 	one_hand_penalty = 5
 	accuracy = 6
 	fire_delay = 5
-	zoom_ammount = 15
 	wielded_item_state = "g3sg1-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
@@ -1563,7 +1558,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 3)
 
 /obj/item/weapon/gun/projectile/automatic/vz58
 	name = "Vz.58"
@@ -1580,7 +1575,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
-	zoom_ammount = 10
+
 	wielded_item_state = "vz58-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -1635,7 +1630,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
 	set category = "Object"
@@ -1681,7 +1676,7 @@
 	one_hand_penalty = 3
 	accuracy = 2
 	fire_delay = 3
-	zoom_ammount = 10
+
 	wielded_item_state = "vz58gl-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 	unload_sound = 'sound/weapons/gunporn/ak74_magout.ogg'
@@ -1745,7 +1740,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/vz59
 	name = "Vz. 59"
@@ -1766,7 +1761,6 @@
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
-	zoom_ammount = 10
 
 	firemodes = list(
 		list(mode_name="short bursts", burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
@@ -1825,4 +1819,4 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr)
+	src.toggle_scope(usr, 2)

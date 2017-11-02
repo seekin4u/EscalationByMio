@@ -604,9 +604,18 @@ modules/mob/mob_movement.dm if you move you will be zoomed out
 modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 */
 /obj/item/proc/can_zoom(mob/living/user, var/silent = 0)
+#if ESC_DEBUG_SCOPES
+	to_world(" [src.name]'s can_zoom")
+#endif
+	var/devicename
+	if(zoomdevicename)
+		devicename = zoomdevicename
+	else
+		devicename = src.name
+
 	if(user.stat || !ishuman(user))
 		if(!silent)
-			user.visible_message("You are unable to focus through \the [src].")
+			user.visible_message("You are unable to focus through \the [devicename].")
 		return 0
 	if(user.client.pixel_x | user.client.pixel_y) //Keep people from looking through two scopes at once
 		if(!silent)
@@ -615,38 +624,28 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 			//return 0
 		if(user.get_active_hand() != src)
 			if(!silent)
-				user.visible_message(" You are too distracted to look through \the [src].")
+				user.visible_message(" You are too distracted to look through \the [devicename].")
 			return 0
 	else if(user.get_active_hand() != src)
-		if(!silent) user.visible_message("  You are too distracted to look through \the [src].")
+		if(!silent) user.visible_message("  You are too distracted to look through \the [devicename].")
 		return 0
+#if ESC_DEBUG_SCOPES
+	to_world(" End of can_zoom")
+#endif
 	return 1
 
 //Looking through a scope or binoculars should /not/ improve your periphereal vision. Still, increase viewsize a tiny bit so that sniping isn't as restricted to NSEW
 /obj/item/proc/zoom(mob/user, var/tileoffset = 14,var/viewsize = 9) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
-	if(!user || !user.client)
+#if ESC_DEBUG_SCOPES
+	to_world("[src.name]'s ZOOM!")
+#endif
+	if(!user.client)
 		return
 
-	var/devicename
-	if(zoomdevicename)
-		devicename = zoomdevicename
-	else
-		devicename = src.name
-
-	var/cannotzoom
-
-	var/mob/living/carbon/human/H = user
-	if(user.incapacitated(INCAPACITATION_DISABLED))
-		to_chat(user, "<span class='warning'>You are unable to focus through the [devicename].</span>")
-		cannotzoom = 1
-	else if(!zoom && istype(H) && H.equipment_tint_total >= TINT_MODERATE)
-		to_chat(user, "<span class='warning'>Your visor gets in the way of looking through the [devicename].</span>")
-		cannotzoom = 1
-	else if(!zoom && usr.get_active_hand() != src)
-		to_chat(user, "<span class='warning'>You are too distracted to look through the [devicename], perhaps if it was in your active hand this might work better.</span>")
-		cannotzoom = 1
-
-	if(!zoom && !cannotzoom)
+	if(!zoom && can_zoom(user))
+#if ESC_DEBUG_SCOPES
+		to_world(" !zoom && !can_zoom(user) ENTERED")
+#endif
 		if(user.hud_used.hud_shown)
 			user.toggle_zoom_hud()	// If the user has already limited their HUD this avoids them having a HUD when they zoom in
 		user.client.view = viewsize
@@ -680,12 +679,12 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 
-		if(!cannotzoom)
-			user.visible_message("[zoomdevicename ? "\The [user] looks up from [src]" : "\The [user] lowers [src]"].")
+/*		if(!cannotzoom)
+			user.visible_message("[zoomdevicename ? "\The [user] looks up from [src]" : "\The [user] lowers [src]"].")*/
 
 	return
 
-/obj/item/weapon/zoom(mob/living/user, forced_zoom/*true/false var*/, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
+/*/obj/item/weapon/zoom(mob/living/user, forced_zoom/*true/false var*/, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
 
 	if(!user)
 		return
@@ -745,7 +744,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		user.client.view = world.view
 		user.visible_message("[zoomdevicename ? "[user] looks up from \the [src.name]" : "[user] lowers \the [src.name]"].")
 
-	return
+	return*/
 
 /obj/item/proc/pwr_drain()
 	return 0 // Process Kill

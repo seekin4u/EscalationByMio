@@ -421,16 +421,21 @@
 		mouthshoot = 0
 		return
 
-/obj/item/weapon/gun/proc/toggle_scope(mob/user, var/zoom_amount=5)
+/obj/item/weapon/gun/proc/toggle_scope(mob/user, var/zoom_amount=5.0)
 	//looking through a scope limits your periphereal vision
 	//still, increase the view size by a tiny amount so that sniping isn't too restricted to NSEW
 	var/zoom_offset = round(world.view * zoom_amount)
+	var/view_size = round(world.view + zoom_amount)
 	var/scoped_accuracy_mod = zoom_offset
 
-	zoom(user, TRUE)
+#if ESC_DEBUG
+	to_world("Before gun's zoom!")
+#endif
+	zoom(user, zoom_offset, view_size)
 	if(zoom)
 		accuracy = scoped_accuracy + scoped_accuracy_mod
 		if(screen_shake)
+		//	screen_shake = round(screen_shake*zoom_amount+1) //screen shake is worse when looking through a scope
 			screen_shake = round(screen_shake * (zoom_amount / 5))//5 or 3 is OK //screen shake is worse when looking through a scope
 
 //make sure accuracy and screen_shake are reset regardless of how the item is unzoomed.

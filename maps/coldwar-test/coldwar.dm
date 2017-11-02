@@ -4,8 +4,6 @@
 	#include "../coldwar-2bunks/coldwar_effects.dm"
 	#include "../coldwar-2bunks/coldwar_shuttles.dm"
 
-	#include "../shared/exodus_torch/_include.dm"
-
 	#include "coldwar-1.dmm"
 
 	#include "../../code/escalation/modules/lobby_music/random_lobby.dm"
