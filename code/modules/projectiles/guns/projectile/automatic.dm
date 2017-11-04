@@ -449,7 +449,7 @@
 	else
 		icon_state = "ak74gl-empty"
 
-/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp(mob/user)
+/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp()
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
@@ -693,6 +693,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	one_hand_penalty = 6
 	accuracy = 3
+	automatic = 0
 	wielded_item_state = "rpk-wielded"
 
 	fire_sound = 'sound/weapons/gunshot/rpk47.ogg'
