@@ -109,12 +109,12 @@
 
 /obj/item/weapon/mg_tripod/m2
 	name = "M2 Browning tripod"
-	icon_state = "nato-tripod" //  fix
+	icon_state = "nato-tripod" //  fix //FIX! ~JTB
 	id_g = "mbr"
 	need_type = /obj/item/weapon/gun/projectile/heavy_mg/m2
 
 /obj/item/weapon/mg_tripod/mk19
 	name = "MK 19 tripod"
-	icon_state = "nato-tripod" // fix
+	icon_state = "nato-tripod" // fix //FIXXXXX ~~~JTB
 	id_g = "m19"
 	need_type = /obj/item/weapon/gun/projectile/heavy_mg/mk19
