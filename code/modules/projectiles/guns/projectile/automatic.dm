@@ -449,7 +449,7 @@
 	else
 		icon_state = "ak74gl-empty"
 
-/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp()
+/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
@@ -693,7 +693,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	one_hand_penalty = 6
 	accuracy = 3
-	automatic = 0
+	automatic
 	wielded_item_state = "rpk-wielded"
 
 	fire_sound = 'sound/weapons/gunshot/rpk47.ogg'
@@ -703,7 +703,7 @@
 
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=2,   move_delay=null,    one_hand_penalty=2, burst_accuracy=null,        dispersion=null, ,automatic = 0),
+		list(mode_name="semiauto",      burst=1, fire_delay=2,   move_delay=null,    one_hand_penalty=2, burst_accuracy=null,        dispersion=null, automatic = 0),
 		list(mode_name="short bursts",  burst=5, move_delay=8,   one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),               dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
 		list(mode_name="long bursts",   burst=8, move_delay=10,  one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3),      dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
 		list(mode_name="automatic",     burst=1, fire_delay=0.7, move_delay=3,       one_hand_penalty=5, burst_accuracy=list(1,1,0), dispersion=list(0.0, 0.3, 0.6),             automatic = 0.7),
@@ -1102,6 +1102,7 @@
 	one_hand_penalty = 4
 	accuracy = 2
 	fire_delay = 1.7
+	automatic = 0
 
 	wielded_item_state = "m16-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
@@ -1357,6 +1358,7 @@
 	one_hand_penalty = 5
 	accuracy = 3
 	fire_delay = 4
+	automatic = 0
 
 	wielded_item_state = "g3a3-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
@@ -1553,7 +1555,7 @@
 	else
 		icon_state = "g3sg1-empty"
 
-/obj/item/weapon/gun/projectile/automatic/g3tgs1/verb/scope()
+/obj/item/weapon/gun/projectile/automatic/g3gs1/verb/scope()
 	set name = "Use scope"
 	set category = "Object"
 	set src in usr
