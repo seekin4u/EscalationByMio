@@ -354,7 +354,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2.0)
+	src.toggle_scope(usr, 1.2)
 
 
 /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet(mob/user)
@@ -464,7 +464,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2.0)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
@@ -491,10 +491,10 @@
 	var/obj/item/weapon/material/knife/bayonet/sa/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=2, burst_accuracy=null,              dispersion=null),
-		list(mode_name="short bursts",  burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,0,-1),      dispersion=list(0.3, 0.6, 0.6)),
-		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,0,0,-1,-2), dispersion=list(0.3, 0.6, 0.6, 1.2, 1.5)),
-		list(mode_name="automatic",    burst=1, fire_delay=0.7,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
+		list(mode_name="semiauto",      burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=2, burst_accuracy=null,              dispersion=null,                          automatic = 0),
+		list(mode_name="short bursts",  burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,0,-1),      dispersion=list(0.3, 0.6, 0.6) ,          automatic = 0),
+		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,0,0,-1,-2), dispersion=list(0.3, 0.6, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",     burst=1, fire_delay=0.7,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6),           automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/ak74/New()
@@ -552,7 +552,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
@@ -579,8 +579,8 @@
 	var/obj/item/weapon/material/knife/bayonet/usmc/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(2,1,1),       dispersion=list(0.0, 0.3, 0.3)),
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(2,1,1),dispersion=list(0.0, 0.3, 0.3)),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2/New()
@@ -622,7 +622,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -702,10 +702,10 @@
 
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts",  burst=5, move_delay=8, one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),          dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
-		list(mode_name="long bursts",   burst=8, move_delay=10, one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3), dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2)),
-		list(mode_name="automatic",    burst=1, fire_delay=0.7,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
+		list(mode_name="semiauto",      burst=1, fire_delay=2,   move_delay=null,    one_hand_penalty=2, burst_accuracy=null,        dispersion=null, ,automatic = 0),
+		list(mode_name="short bursts",  burst=5, move_delay=8,   one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),               dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
+		list(mode_name="long bursts",   burst=8, move_delay=10,  one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3),      dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
+		list(mode_name="automatic",     burst=1, fire_delay=0.7, move_delay=3,       one_hand_penalty=5, burst_accuracy=list(1,1,0), dispersion=list(0.0, 0.3, 0.6),             automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/verb/ironsights()
@@ -714,7 +714,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/update_icon()
 	..()
@@ -804,7 +804,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m60
 	name = "M60E1"
@@ -886,7 +886,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/mg3
 	name = "MG3"
@@ -910,9 +910,9 @@
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="short bursts",  burst=6,  move_delay=9,  one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4)),
-		list(mode_name="long bursts",   burst=12, move_delay=13, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.2, 1.2, 1.2, 1.2, 1.4)),
-		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=15, burst_accuracy=list(0,-2,-4),       dispersion=list(0.6, 0.9, 1.2), automatic = 0.2),
+		list(mode_name="short bursts",  burst=6,  move_delay=9,  one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4), automatic = 0),
+		list(mode_name="long bursts",   burst=12, move_delay=13, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.2, 1.2, 1.2, 1.2, 1.4), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=15, burst_accuracy=list(0,-2,-4),       dispersion=list(0.6, 0.9, 1.2),      automatic = 0.2),
 	)
 
 	var/cover_opened = FALSE
@@ -968,7 +968,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 //DO NOT USE
 /obj/item/weapon/gun/projectile/automatic/m14
@@ -998,7 +998,7 @@
 	var/obj/item/weapon/material/knife/bayonet/usmc/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=2,  move_delay=null,    one_hand_penalty=3,                   burst_accuracy=null, dispersion=null),
+		list(mode_name="semiauto", burst=1, fire_delay=2, move_delay=null, one_hand_penalty=3, burst_accuracy=null, dispersion=null),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/m14/New()
@@ -1039,7 +1039,7 @@
 	set category = "Object"
 	set src in usr
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1084,7 +1084,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 3)
+	src.toggle_scope(usr, 2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
 	name = "M16A1"
@@ -1111,10 +1111,10 @@
 	var/obj/item/weapon/material/knife/bayonet/usmc/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=1.7,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),      dispersion=list(0.3, 0.3, 0.6)),
-		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5)),
-		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.5),
+		list(mode_name="semiauto",     burst=1, fire_delay=1.7,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,             dispersion=null,automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),      dispersion=list(0.3, 0.3, 0.6),automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5),automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1/New()
@@ -1156,7 +1156,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1201,10 +1201,10 @@
 	var/obj/item/weapon/gun/launcher/grenade/underslung/m203/launcher
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=1.7,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),       dispersion=list(0.3, 0.3, 0.6)),
-		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5)),
-		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.5),
+		list(mode_name="semiauto",       burst=1, fire_delay=1.7,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null,automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),       dispersion=list(0.3, 0.3, 0.6),automatic = 0),
+		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5),automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/New()
@@ -1244,7 +1244,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp(mob/user)
 	set name = "Granade launcher"
@@ -1296,7 +1296,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2.8)
+	src.toggle_scope(usr, 1.9)
 
 /obj/item/weapon/gun/projectile/automatic/wa2000
 	name = "WA2000"
@@ -1338,7 +1338,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2.8)
+	src.toggle_scope(usr, 1.9)
 
 
 /obj/item/weapon/gun/projectile/automatic/g3a3
@@ -1366,8 +1366,8 @@
 	var/obj/item/weapon/material/knife/bayonet/bdw/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null),
-		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=6, burst_accuracy=list(1,0), dispersion=list(0.3, 0.6)),
+		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null,automatic = 0),
+		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=6, burst_accuracy=list(1,0), dispersion=list(0.3, 0.6),automatic = 0),
 		list(mode_name="automatic",    burst=1, fire_delay=0.4,  move_delay=3,    one_hand_penalty=8, burst_accuracy=list(0,-1,-2),       dispersion=list(0.3, 0.6, 0.9), automatic = 0.4),
 		)
 
@@ -1410,7 +1410,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
@@ -1467,8 +1467,8 @@
 	var/obj/item/weapon/gun/launcher/grenade/underslung/m203/launcher//m203 underslug uses 40mm shells  like hk69
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null),
-		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1), dispersion=list(0.3, 0.6)),
+		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null,automatic = 0),
+		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1), dispersion=list(0.3, 0.6),automatic = 0),
 		list(mode_name="automatic",    burst=1, fire_delay=0.4,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(0,-1,-2),       dispersion=list(0.3, 0.6, 0.9), automatic = 0.4),
 		)
 
@@ -1509,7 +1509,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 /obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp(mob/user)
 	set name = "Granade launcher"
 	set category = "Object"
@@ -1558,7 +1558,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 3)
+	src.toggle_scope(usr, 1.9)
 
 /obj/item/weapon/gun/projectile/automatic/vz58
 	name = "Vz.58"
@@ -1588,7 +1588,7 @@
 		list(mode_name="semiauto",     burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
 		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=1,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 1),
+		list(mode_name="automatic",    burst=1, fire_delay=null,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0,7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/vz58/New()
@@ -1630,7 +1630,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet(mob/user)
 	set name = "Remove bayonet"
 	set category = "Object"
@@ -1690,7 +1690,7 @@
 		list(mode_name="semiauto",     burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
 		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=1,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 1),
+		list(mode_name="automatic",    burst=1, fire_delay=1,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl/New()
@@ -1740,7 +1740,7 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/vz59
 	name = "Vz. 59"
@@ -1819,4 +1819,4 @@
 	set src in usr
 	set popup_menu = 0
 
-	src.toggle_scope(usr, 2)
+	src.toggle_scope(usr, 1.2)

@@ -417,17 +417,18 @@
 
 	burst = 1
 	burst_delay = 1.5
-	fire_delay = 0.4
+	fire_delay = 0.6
 
 	fire_sound = 'sound/weapons/gunshot/ags_17_1_shot_real.ogg'
 	//fixfixfix
 
 	firemodes = list(
-		list(mode_name = "semiauto", burst = 1, burst_delay = 1.5, fire_delay = 0.4),
-		list(mode_name = "2-round bursts", burst = 2, burst_delay = 1.5, fire_delay = 0.7),
-		list(mode_name = "3-round bursts", burst = 3, burst_delay = 1.5, fire_delay = 1.0),
-		list(mode_name = "5-round bursts", burst = 5, burst_delay = 1.5, fire_delay = 1.6),
+		list(mode_name = "semiauto", burst = 1, burst_delay = 1.5, fire_delay = 0.6),
+		list(mode_name = "2-round bursts", burst = 2, burst_delay = 1.5, fire_delay = 0.9),
+		list(mode_name = "3-round bursts", burst = 3, burst_delay = 1.5, fire_delay = 1.2),
+		list(mode_name = "5-round bursts", burst = 5, burst_delay = 1.5, fire_delay = 2.0),
 		)
+
 
 /obj/item/weapon/gun/projectile/heavy_mg/mk19/update_icon()
 	..()
