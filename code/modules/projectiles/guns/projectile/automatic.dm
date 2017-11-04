@@ -1555,7 +1555,7 @@
 	else
 		icon_state = "g3sg1-empty"
 
-/obj/item/weapon/gun/projectile/automatic/g3gs1/verb/scope()
+/obj/item/weapon/gun/projectile/automatic/g3sg1/verb/scope()
 	set name = "Use scope"
 	set category = "Object"
 	set src in usr
