@@ -522,7 +522,7 @@
 
 /obj/item/ammo_magazine/mk19_40x53mm
 	name = "magazine box (MK19 40x53mm)"
-	icon_state = "ags30x29mm"
+	icon_state = "mk19ammo"
 	mag_type = MAGAZINE
 	caliber = "40x53mm"
 	ammo_type = /obj/item/ammo_casing/mk19_40x53mm/shrapnel
