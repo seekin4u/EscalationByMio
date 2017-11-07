@@ -73,7 +73,7 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 								ai_found = 1
 							msg += "<b><font color='black'>[original_word] (<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>)</font></b> "
 							continue
-			msg += "[original_word] "
+		msg += "[original_word] "
 
 	if(!mob) //this doesn't happen
 		return
