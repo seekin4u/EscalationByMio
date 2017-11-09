@@ -428,7 +428,7 @@
 	var/view_size = round(world.view + zoom_amount)
 	var/scoped_accuracy_mod = zoom_offset
 
-#if ESC_DEBUG
+#if ESC_DEBUG_SCOPES
 	to_world("Before gun's zoom!")
 #endif
 	zoom(user, zoom_offset, view_size)
