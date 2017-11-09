@@ -84,6 +84,7 @@
 	else
 		icon_state = "rpg-empty"
 		item_state = "rpg1-empty"
+	update_held_icon()
 
 /obj/item/weapon/gun/launcher/rpg7/examine(mob/user)
 	if(!..(user, 2))
