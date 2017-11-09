@@ -326,5 +326,12 @@
 /obj/item/ammo_casing/rpg_missile
 	desc = "A regular morkovka for rpg"
 	caliber = "7p16"
-	icon_state = "rpgshell"
+	icon_state = "rg-7"
 	projectile_type = /obj/item/projectile/bullet/rgprocket
+
+/obj/item/ammo_casing/rpg_missile/rg7
+	desc = "RG-7 missile. Fucking deadly, don't shoout yourself, Abu Hajaar!"
+
+/obj/item/ammo_casing/rpg_missile/og7
+	desc = "OG-7"
+	icon_state = "og-7"

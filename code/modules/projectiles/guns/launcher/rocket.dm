@@ -49,11 +49,14 @@
 	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
 	..()
 
+///////////////////////////////////////////////////////////////////////////////////
+//////////////////
+//////////////////////////////////////////////////////////////////////////////////
 /obj/item/weapon/gun/launcher/rpg7
 	name = "RPG7"
 	desc = "A grenade launcher, standard-issued by soviet and czech army."
-	icon_state = "rocket" ///change
-	item_state = "rocket" ///change
+	icon_state = "rpg" ///change
+	item_state = "rpg1" ///change
 	w_class = 5
 	throw_speed = 3
 	throw_range = 40
@@ -69,6 +72,19 @@
 	var/is_used = FALSE
 	var/list/rockets = new/list(/obj/item/ammo_casing/rpg_missile)
 
+/obj/item/weapon/gun/launcher/rpg7/New()
+	..()
+	update_icon()
+
+/obj/item/weapon/gun/launcher/rpg7/update_icon()
+	..()
+	if(rockets.len)
+		icon_state = "rpg"
+		item_state = "rpg1"
+	else
+		icon_state = "rpg-empty"
+		item_state = "rpg1-empty"
+
 /obj/item/weapon/gun/launcher/rpg7/examine(mob/user)
 	if(!..(user, 2))
 		return
@@ -82,8 +98,10 @@
 			rockets += I
 			to_chat(user, "\blue You put the rocket in [src].")
 			to_chat(user, "\blue [rockets.len] / [max_rockets] rockets.")
+			update_icon()
 		else
 			to_chat(user, "\red [src] cannot hold more rockets.")
+			update_icon()
 
 
 /obj/item/weapon/gun/launcher/rpg7/consume_next_projectile()
@@ -98,6 +116,7 @@
 /obj/item/weapon/gun/launcher/rpg7/handle_post_fire(mob/user, atom/target)
 	message_admins("[key_name_admin(user)] fired a rocket from an RPG7 ([src.name]) at [target].")
 	log_game("[key_name_admin(user)] used an RPG7 ([src.name]) at [target].")
+	update_icon()
 	..()
 
 ///////////////////Not ours///////////////////////////////////////////////
@@ -208,7 +227,7 @@
 			else
 				to_chat(user, "\red [src] cannot hold more rockets.")
 		else
-			to_chat(user, "This thing is one-use! It's already fired.")
+			to_chat(user, "This one is already used. Now it's useless if you are not lonely gay")
 
 /obj/item/weapon/gun/launcher/m72/consume_next_projectile()
 	if(rockets.len)

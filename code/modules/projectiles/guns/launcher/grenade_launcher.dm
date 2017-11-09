@@ -24,6 +24,16 @@
 
 	matter = list(DEFAULT_WALL_MATERIAL = 2000)
 
+obj/item/weapon/gun/launcher/grenade/process_projectile(obj/item/projectile, mob/user, atom/target, var/target_zone, var/params=null, var/pointblank=0, var/reflex=0)
+	update_release_force(projectile)
+	projectile.loc = get_turf(user)
+	projectile.throw_at(target, throw_distance, release_force, user)
+	play_fire_sound(user,projectile)
+#if ESC_DEBUG_PROJECTILES
+	to_world("Proj/launcher/granade process_projectile")
+#endif
+	return 1
+
 //revolves the magazine, allowing players to choose between multiple grenade types
 /obj/item/weapon/gun/launcher/grenade/proc/pump(mob/M as mob)
 	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
@@ -208,7 +218,7 @@
 	screen_shake = 1
 	release_force = 2
 	throw_distance = 40
-	slot_flags = SLOT_BELT | SLOT_BACK_GUN
+	slot_flags = SLOT_BELT | SLOT_BACK_GUN | SLOT_BACK
 	var/cover_opened = FALSE
 
 
@@ -217,8 +227,11 @@
 	update_icon()
 
 /obj/item/weapon/gun/launcher/grenade/hk69/attackby(obj/item/I, mob/user)//redeterm to use cover_opened
-	if((istype(I, /obj/item/weapon/grenade)))
-		load(I, user)
+	if(istype(I, /obj/item/weapon/grenade))
+		if(cover_opened)
+			load(I, user)
+		else
+			to_chat(user, "<span class='warning'>[src]'s cover is closed! Open it first </span>")
 	else
 		..()
 
