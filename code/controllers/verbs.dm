@@ -10,11 +10,8 @@
 
 	usr = null
 	src = null
-	switch(controller)
-		if("Supply")
-			supply_controller.process()
-			feedback_add_details("admin_verb","RSupply")
-	message_admins("Admin [key_name_admin(usr)] has restarted the [controller] controller.")
+
+	message_admins("Bastard is the best")
 	return
 
 /client/proc/debug_antagonist_template(antag_type as null|anything in all_antag_types())
@@ -60,9 +57,6 @@
 		if("Radio")
 			debug_variables(radio_controller)
 			feedback_add_details("admin_verb","DRadio")
-		if("Supply")
-			debug_variables(supply_controller)
-			feedback_add_details("admin_verb","DSupply")
 		if("Shuttles")
 			debug_variables(shuttle_controller)
 			feedback_add_details("admin_verb","DShuttles")

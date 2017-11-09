@@ -340,71 +340,6 @@
 
 		values["beepsky"] = beepskyData
 
-
-	/*		MULEBOT Control	(Mode: 48)		*/
-
-	if(mode==48)
-		var/mulebotsData[0]
-		var/count = 0
-
-		for(var/mob/living/bot/mulebot/M in living_mob_list_)
-			if(!M.on)
-				continue
-			++count
-			var/muleData[0]
-			muleData["name"] = M.suffix
-			muleData["location"] = get_area(M)
-			muleData["paused"] = M.paused
-			muleData["home"] = M.homeName
-			muleData["target"] = M.targetName
-			muleData["ref"] = "\ref[M]"
-			muleData["load"] = M.load ? M.load.name : "Nothing"
-
-			mulebotsData[++mulebotsData.len] = muleData.Copy()
-
-		values["mulebotcount"] = count
-		values["mulebots"] = mulebotsData
-
-
-
-	/*	Supply Shuttle Requests Menu (Mode: 47)		*/
-
-	if(mode==47)
-		var/supplyData[0]
-		var/datum/shuttle/ferry/supply/shuttle = supply_controller.shuttle
-		if (shuttle)
-			supplyData["shuttle_moving"] = shuttle.has_arrive_time()
-			supplyData["shuttle_eta"] = shuttle.eta_minutes()
-			supplyData["shuttle_loc"] = shuttle.at_station() ? "Station" : "Dock"
-		var/supplyOrderCount = 0
-		var/supplyOrderData[0]
-		for(var/S in supply_controller.shoppinglist)
-			var/datum/supply_order/SO = S
-
-			supplyOrderData[++supplyOrderData.len] = list("Number" = SO.ordernum, "Name" = html_encode(SO.object.name), "ApprovedBy" = SO.orderedby, "Comment" = html_encode(SO.comment))
-		if(!supplyOrderData.len)
-			supplyOrderData[++supplyOrderData.len] = list("Number" = null, "Name" = null, "OrderedBy"=null)
-
-		supplyData["approved"] = supplyOrderData
-		supplyData["approved_count"] = supplyOrderCount
-
-		var/requestCount = 0
-		var/requestData[0]
-		for(var/S in supply_controller.requestlist)
-			var/datum/supply_order/SO = S
-			requestCount++
-			requestData[++requestData.len] = list("Number" = SO.ordernum, "Name" = html_encode(SO.object.name), "OrderedBy" = SO.orderedby, "Comment" = html_encode(SO.comment))
-		if(!requestData.len)
-			requestData[++requestData.len] = list("Number" = null, "Name" = null, "orderedBy" = null, "Comment" = null)
-
-		supplyData["requests"] = requestData
-		supplyData["requests_count"] = requestCount
-
-
-		values["supply"] = supplyData
-
-
-
 	/* 	Janitor Supplies Locator  (Mode: 49)      */
 	if(mode==49)
 		var/JaniData[0]
@@ -553,11 +488,5 @@
 			selected_sensor = null
 			loc:mode = 43
 			mode = 43
-
-		if("MULEbot")
-			var/mob/living/bot/mulebot/M = locate(href_list["ref"])
-			if(istype(M))
-				M.obeyCommand(href_list["command"])
-
 
 	return 1

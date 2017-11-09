@@ -237,8 +237,6 @@
 			return global.allfaxes;
 		if("alphabet_uppercase")
 			return global.alphabet_uppercase;
-		if("announced_news_types")
-			return global.announced_news_types;
 		if("antag_add_finished")
 			return global.antag_add_finished;
 		if("antag_names_to_ids_")
@@ -769,8 +767,6 @@
 			return global.lighting_update_overlays;
 		if("limb_icon_cache")
 			return global.limb_icon_cache;
-		if("list_of_ais")
-			return global.list_of_ais;
 		if("listening_objects")
 			return global.listening_objects;
 		if("living_mob_list_")
@@ -831,8 +827,6 @@
 			return global.maze_cell_count;
 		if("mechas_list")
 			return global.mechas_list;
-		if("mechtoys")
-			return global.mechtoys;
 		if("med_hud_users")
 			return global.med_hud_users;
 		if("medical_positions")
@@ -903,8 +897,6 @@
 			return global.newplayer_start;
 		if("news_network")
 			return global.news_network;
-		if("newscaster_standard_feeds")
-			return global.newscaster_standard_feeds;
 		if("next_account_number")
 			return global.next_account_number;
 		if("next_duration_update")
@@ -985,8 +977,6 @@
 			return global.playable_species;
 		if("player_list")
 			return global.player_list;
-		if("point_source_descriptions")
-			return global.point_source_descriptions;
 		if("possible_cable_coil_colours")
 			return global.possible_cable_coil_colours;
 		if("possible_changeling_IDs")
@@ -1241,10 +1231,6 @@
 			return global.string_part_flags;
 		if("string_slot_flags")
 			return global.string_slot_flags;
-		if("sun")
-			return global.sun;
-		if("supply_controller")
-			return global.supply_controller;
 		if("supply_drop")
 			return global.supply_drop;
 		if("supply_methods_")
@@ -1687,8 +1673,6 @@
 			global.allfaxes=newval;
 		if("alphabet_uppercase")
 			global.alphabet_uppercase=newval;
-		if("announced_news_types")
-			global.announced_news_types=newval;
 		if("antag_add_finished")
 			global.antag_add_finished=newval;
 		if("antag_names_to_ids_")
@@ -2219,8 +2203,6 @@
 			global.lighting_update_overlays=newval;
 		if("limb_icon_cache")
 			global.limb_icon_cache=newval;
-		if("list_of_ais")
-			global.list_of_ais=newval;
 		if("listening_objects")
 			global.listening_objects=newval;
 		if("living_mob_list_")
@@ -2281,8 +2263,6 @@
 			global.maze_cell_count=newval;
 		if("mechas_list")
 			global.mechas_list=newval;
-		if("mechtoys")
-			global.mechtoys=newval;
 		if("med_hud_users")
 			global.med_hud_users=newval;
 		if("medical_positions")
@@ -2353,8 +2333,6 @@
 			global.newplayer_start=newval;
 		if("news_network")
 			global.news_network=newval;
-		if("newscaster_standard_feeds")
-			global.newscaster_standard_feeds=newval;
 		if("next_account_number")
 			global.next_account_number=newval;
 		if("next_duration_update")
@@ -2436,8 +2414,6 @@
 		if("player_list")
 			global.player_list=newval;
 		if("point_source_descriptions")
-			global.point_source_descriptions=newval;
-		if("possible_cable_coil_colours")
 			global.possible_cable_coil_colours=newval;
 		if("possible_changeling_IDs")
 			global.possible_changeling_IDs=newval;
@@ -2691,10 +2667,6 @@
 			global.string_part_flags=newval;
 		if("string_slot_flags")
 			global.string_slot_flags=newval;
-		if("sun")
-			global.sun=newval;
-		if("supply_controller")
-			global.supply_controller=newval;
 		if("supply_drop")
 			global.supply_drop=newval;
 		if("supply_methods_")

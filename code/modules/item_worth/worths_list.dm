@@ -571,7 +571,6 @@ var/list/worths = list(
 					/obj/structure/disposaloutlet = 65,
 					/obj/structure/boulder = 0, //just a dumb boulder,
 					/obj/structure/shuttle = 150,
-					/obj/structure/plasticflaps = 15,
 					/obj/structure/cult/pylon = 700,
 					/obj/structure/cult = 160,
 					/obj/structure/cryofeed = 450,

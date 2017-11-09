@@ -527,7 +527,7 @@ var/global/list/additional_antag_types = list()
 
 /datum/game_mode/proc/create_antagonists()
 
-	if(!config.traitor_scaling)
+	/*if(!config.traitor_scaling)
 		antag_scaling_coeff = 0
 
 	var/list/all_antag_types = all_antag_types()
@@ -547,7 +547,7 @@ var/global/list/additional_antag_types = list()
 				antag_templates |= antag
 
 	shuffle(antag_templates) //In the case of multiple antag types
-	newscaster_announcements = pick(newscaster_standard_feeds)
+	newscaster_announcements = pick(newscaster_standard_feeds)*/
 
 /datum/game_mode/proc/check_victory()
 	return

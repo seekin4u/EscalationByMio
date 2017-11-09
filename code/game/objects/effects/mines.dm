@@ -8,7 +8,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "uglymine"
 	var/triggerproc = "explode" //name of the proc thats called when the mine is triggered
-	var/triggere = FALSE
+	var/triggered = FALSE
 
 /obj/effect/mine/New()
 	icon_state = "uglyminearmed"
