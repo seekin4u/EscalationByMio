@@ -357,7 +357,7 @@
 	src.toggle_scope(usr, 1.2)
 
 
-/obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet(mob/user)
+/obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet()
 	set name = "Remove bayonet"
 	set category = "Object"
 	set popup_menu = 1
@@ -370,7 +370,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 
@@ -449,14 +449,14 @@
 	else
 		icon_state = "ak74gl-empty"
 
-/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp(mob/user)
+/obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp()
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl/verb/ironsights()
 	set name = "Use iron sights"
@@ -530,7 +530,7 @@
 	else
 		icon_state = "aks74-empty"
 
-/obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet(mob/user)
+/obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet()
 	set name = "Remove bayonet"
 	set category = "Object"
 	set popup_menu = 1
@@ -542,7 +542,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet
 		update_icon()
 
@@ -624,7 +624,7 @@
 
 	src.toggle_scope(usr, 1.2)
 
-/obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet(mob/user)
+/obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet()
 	set name = "Remove bayonet"
 	set category = "Object"
 	set popup_menu = 1
@@ -637,7 +637,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You remove the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You remove the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet
 		update_icon()
 
@@ -1042,7 +1042,7 @@
 
 	src.toggle_scope(usr, 1.2)
 
-/obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet(mob/user)
+/obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet()
 	set name = "Remove bayonet"
 	set category = "Object"
 	set src in usr
@@ -1054,7 +1054,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet
 		update_icon()
 
@@ -1160,7 +1160,7 @@
 
 	src.toggle_scope(usr, 1.2)
 
-/obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet(mob/user)
+/obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet()
 	set name = "Remove bayonet"
 	set category = "Object"
 	set src in usr
@@ -1173,7 +1173,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet
 		update_icon()
 
@@ -1248,7 +1248,7 @@
 
 	src.toggle_scope(usr, 1.2)
 
-/obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp(mob/user)
+/obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp()
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
@@ -1256,7 +1256,7 @@
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/svd
 	name = "SVD"
@@ -1415,7 +1415,7 @@
 
 	src.toggle_scope(usr, 1.2)
 
-/obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet(mob/user)
+/obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet()
 	set name = "Remove bayonet"
 	set category = "Object"
 	set src in usr
@@ -1428,7 +1428,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet
 		update_icon()
 
@@ -1513,7 +1513,7 @@
 	set popup_menu = 0
 
 	src.toggle_scope(usr, 1.2)
-/obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp(mob/user)
+/obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp()
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
@@ -1521,7 +1521,7 @@
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/g3sg1
 	name = "G3SG1"
@@ -1634,7 +1634,7 @@
 	set popup_menu = 0
 
 	src.toggle_scope(usr, 1.2)
-/obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet(mob/user)
+/obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet()
 	set name = "Remove bayonet"
 	set category = "Object"
 	set src in usr
@@ -1647,7 +1647,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(user, "<span class='notice'>You deattach bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You deattach bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet
 		update_icon()
 
@@ -1693,7 +1693,7 @@
 		list(mode_name="semiauto",     burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
 		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=1,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
+		list(mode_name="automatic",    burst=1, fire_delay=1,    move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl/New()
@@ -1727,7 +1727,7 @@
 	else
 		icon_state = "vz58gl-empty"
 
-/obj/item/weapon/gun/projectile/automatic/vz58gl/verb/set_gp(mob/user)
+/obj/item/weapon/gun/projectile/automatic/vz58gl/verb/set_gp()
 	set name = "Granade launcher"
 	set category = "Object"
 	set src in usr
@@ -1735,7 +1735,7 @@
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(user, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl/verb/ironsights()
 	set name = "Use iron sights"
@@ -1766,7 +1766,7 @@
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="short bursts", burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="short bursts", burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.4, 0.8, 0.8, 0.8, 1.0)),
 		list(mode_name="long bursts",  burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
 		)
 

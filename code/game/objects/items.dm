@@ -649,10 +649,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		if(user.hud_used.hud_shown)
 			user.toggle_zoom_hud()	// If the user has already limited their HUD this avoids them having a HUD when they zoom in
 		user.client.view = viewsize
-#if ESC_DEBUG_SCOPES
-		to_world("HIDE-CONE!")
-#endif
-		user.hide_cone()
+
 		zoom = 1
 
 		var/tilesize = 32
@@ -673,15 +670,16 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 				user.client.pixel_y = 0
 
 		user.visible_message("\The [user] peers through the [zoomdevicename ? "[zoomdevicename] of [src]" : "[src]"].")
-
+#if ESC_DEBUG_SCOPES
+		to_world("SetFov(0)!")
+#endif
+		if(ishuman(user))
+			var/mob/living/carbon/human/HM = user
+			HM.SetFov(0)
 	else
 		user.client.view = world.view
 		if(!user.hud_used.hud_shown)
 			user.toggle_zoom_hud()
-#if ESC_DEBUG_SCOPES
-		to_world("SHOW-CONE!")
-#endif
-		user.show_cone()
 		zoom = 0
 
 		user.client.pixel_x = 0
@@ -689,7 +687,13 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /*		if(!cannotzoom)
 			user.visible_message("[zoomdevicename ? "\The [user] looks up from [src]" : "\The [user] lowers [src]"].")*/
+#if ESC_DEBUG_SCOPES
+		to_world("SetFov(1)!")
+#endif
 
+		if(ishuman(user))
+			var/mob/living/carbon/human/HM = user
+			HM.SetFov(1)
 	return
 
 /*/obj/item/weapon/zoom(mob/living/user, forced_zoom/*true/false var*/, var/bypass_can_zoom = 0)//escalation stuff, I know it shouldnt be here but whatevarrrr
