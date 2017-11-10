@@ -18,8 +18,9 @@
 
 /mob/living/carbon/human/Move()//Resets zoom on movement
 	..()
-	if(client.pixel_x || client.pixel_y) //Cancel currently scoped weapons
-		src.seek_and_unzoom()
+	if(client)
+		if(client.pixel_x || client.pixel_y) //Cancel currently scoped weapons
+			src.seek_and_unzoom()
 
 //search in _helpers/mobs.dm
 // called from Life()
