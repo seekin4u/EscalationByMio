@@ -522,14 +522,15 @@
 
 /obj/item/ammo_magazine/mk19_40x53mm
 	name = "magazine box (MK19 40x53mm)"
+	desc = "This is full ammo box for MK19. D E S T R O Y  T H E M !"
 	icon_state = "mk19ammo"
 	mag_type = MAGAZINE
 	caliber = "40x53mm"
 	ammo_type = /obj/item/ammo_casing/mk19_40x53mm/shrapnel
 	max_ammo = 32//32 in one box.
-	//multiple_sprites = 1
+	multiple_sprites = 1
 
-	/obj/item/ammo_magazine/c127x29b //thing for UTES, check and fix
+/obj/item/ammo_magazine/c127x29b //thing for UTES, check and fix
 	name = "magazine (12.7x29mm)"
 	icon_state = "7.62x51b"
 	mag_type = MAGAZINE
