@@ -1071,19 +1071,11 @@ FIRE ALARM
 /obj/machinery/firealarm/proc/reset()
 	if (!( src.working ))
 		return
-	var/area/area = get_area(src)
-	for(var/obj/machinery/firealarm/FA in area)
-		fire_alarm.clearAlarm(loc, FA)
-	update_icon()
 	return
 
 /obj/machinery/firealarm/proc/alarm(var/duration = 0)
 	if (!( src.working))
 		return
-	var/area/area = get_area(src)
-	for(var/obj/machinery/firealarm/FA in area)
-		fire_alarm.triggerAlarm(loc, FA, duration)
-	update_icon()
 	//playsound(src.loc, 'sound/ambience/signal.ogg', 75, 0)
 	return
 

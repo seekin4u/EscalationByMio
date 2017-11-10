@@ -99,48 +99,13 @@ var/list/solars_list = list()
 
 //calculates the fraction of the sunlight that the panel recieves
 /obj/machinery/power/solar/proc/update_solar_exposure()
-	if(!sun)
-		return
-	if(obscured)
-		sunfrac = 0
-		return
-
-	//find the smaller angle between the direction the panel is facing and the direction of the sun (the sign is not important here)
-	var/p_angle = min(abs(adir - sun.angle), 360 - abs(adir - sun.angle))
-
-	if(p_angle > 90)			// if facing more than 90deg from sun, zero output
-		sunfrac = 0
-		return
-
-	sunfrac = cos(p_angle) ** 2
-	//isn't the power recieved from the incoming light proportionnal to cos(p_angle) (Lambert's cosine law) rather than cos(p_angle)^2 ?
+	return 1
 
 /obj/machinery/power/solar/process()//TODO: remove/add this from machines to save on processing as needed ~Carn PRIORITY
-	if(stat & BROKEN)
-		return
-	if(!sun || !control) //if there's no sun or the panel is not linked to a solar control computer, no need to proceed
-		return
-
-	if(powernet)
-		if(powernet == control.powernet)//check if the panel is still connected to the computer
-			if(obscured) //get no light from the sun, so don't generate power
-				return
-			var/sgen = solar_gen_rate * sunfrac
-			add_avail(sgen)
-			control.gen += sgen
-		else //if we're no longer on the same powernet, remove from control computer
-			unset_control()
+		return 1
 
 /obj/machinery/power/solar/proc/broken()
-	stat |= BROKEN
-	health = 0
-	new /obj/item/weapon/material/shard(src.loc)
-	new /obj/item/weapon/material/shard(src.loc)
-	var/obj/item/solar_assembly/S = locate() in src
-	S.glass_type = null
-	unset_control()
-	update_icon()
-
+	return 1
 
 /obj/machinery/power/solar/ex_act(severity)
 	switch(severity)
@@ -174,31 +139,7 @@ var/list/solars_list = list()
 
 //trace towards sun to see if we're in shadow
 /obj/machinery/power/solar/proc/occlusion()
-
-	var/ax = x		// start at the solar panel
-	var/ay = y
-	var/turf/T = null
-
-	for(var/i = 1 to 20)		// 20 steps is enough
-		ax += sun.dx	// do step
-		ay += sun.dy
-
-		T = locate( round(ax,0.5),round(ay,0.5),z)
-
-		if(!T || T.x == 1 || T.x==world.maxx || T.y==1 || T.y==world.maxy)		// not obscured if we reach the edge
-			break
-
-		if(T.opacity)			// if we hit a solid turf, panel is obscured
-			obscured = 1
-			return
-
-	obscured = 0		// if hit the edge or stepped 20 times, not obscured
-	update_solar_exposure()
-
-
-//
-// Solar Assembly - For construction of solar arrays.
-//
+	return 1//
 
 /obj/item/solar_assembly
 	name = "solar panel assembly"
@@ -336,18 +277,6 @@ var/list/solars_list = list()
 	if(stat & (NOPOWER | BROKEN))
 		return
 
-	switch(track)
-		if(1)
-			if(trackrate) //we're manual tracking. If we set a rotation speed...
-				cdir = targetdir //...the current direction is the targetted one (and rotates panels to it)
-		if(2) // auto-tracking
-			if(connected_tracker)
-				connected_tracker.set_angle(sun.angle)
-
-	set_panels(cdir)
-	updateDialog()
-
-
 /obj/machinery/power/solar_control/initialize()
 	..()
 	if(!connect_to_network()) return
@@ -373,34 +302,7 @@ var/list/solars_list = list()
 		interact(user)
 
 /obj/machinery/power/solar_control/interact(mob/user)
-
-	var/t = "<B><span class='highlight'>Generated power</span></B> : [round(lastgen)] W<BR>"
-	t += "<B><span class='highlight'>Star Orientation</span></B>: [sun.angle]&deg ([angle2text(sun.angle)])<BR>"
-	t += "<B><span class='highlight'>Array Orientation</span></B>: [rate_control(src,"cdir","[cdir]&deg",1,15)] ([angle2text(cdir)])<BR>"
-	t += "<B><span class='highlight'>Tracking:</span></B><div class='statusDisplay'>"
-	switch(track)
-		if(0)
-			t += "<span class='linkOn'>Off</span> <A href='?src=\ref[src];track=1'>Timed</A> <A href='?src=\ref[src];track=2'>Auto</A><BR>"
-		if(1)
-			t += "<A href='?src=\ref[src];track=0'>Off</A> <span class='linkOn'>Timed</span> <A href='?src=\ref[src];track=2'>Auto</A><BR>"
-		if(2)
-			t += "<A href='?src=\ref[src];track=0'>Off</A> <A href='?src=\ref[src];track=1'>Timed</A> <span class='linkOn'>Auto</span><BR>"
-
-	t += "Tracking Rate: [rate_control(src,"tdir","[trackrate] deg/h ([trackrate<0 ? "CCW" : "CW"])",1,30,180)]</div><BR>"
-
-	t += "<B><span class='highlight'>Connected devices:</span></B><div class='statusDisplay'>"
-
-	t += "<A href='?src=\ref[src];search_connected=1'>Search for devices</A><BR>"
-	t += "Solar panels : [connected_panels.len] connected<BR>"
-	t += "Solar tracker : [connected_tracker ? "<span class='good'>Found</span>" : "<span class='bad'>Not found</span>"]</div><BR>"
-
-	t += "<A href='?src=\ref[src];close=1'>Close</A>"
-
-	var/datum/browser/popup = new(user, "solar", name)
-	popup.set_content(t)
-	popup.open()
-
-	return
+	return 1
 
 /obj/machinery/power/solar_control/attackby(I as obj, user as mob)
 	if(istype(I, /obj/item/weapon/screwdriver))
@@ -473,21 +375,8 @@ var/list/solars_list = list()
 			src.trackrate = dd_range(-7200,7200,src.trackrate+text2num(href_list["tdir"]))
 			if(src.trackrate) nexttime = world.time + 36000/abs(trackrate)
 
-	if(href_list["track"])
-		track = text2num(href_list["track"])
-		if(track == 2)
-			if(connected_tracker)
-				connected_tracker.set_angle(sun.angle)
-				set_panels(cdir)
-		else if (track == 1) //begin manual tracking
-			src.targetdir = src.cdir
-			if(src.trackrate) nexttime = world.time + 36000/abs(trackrate)
-			set_panels(targetdir)
-
 	if(href_list["search_connected"])
 		src.search_for_connected()
-		if(connected_tracker && track == 2)
-			connected_tracker.set_angle(sun.angle)
 		src.set_panels(cdir)
 
 	interact(usr)
@@ -528,11 +417,7 @@ var/list/solars_list = list()
 	track = 2 // Auto tracking mode
 
 /obj/machinery/power/solar_control/autostart/initialize()
-	search_for_connected()
-	if(connected_tracker && track == 2)
-		connected_tracker.set_angle(sun.angle)
-		set_panels(cdir)
-//
+	..()
 // MISC
 //
 

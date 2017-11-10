@@ -51,13 +51,6 @@
 		var/real_rank = make_list_rank(t.fields["real_rank"])
 		mil_ranks[name] = ""
 
-		if(using_map.flags & MAP_HAS_RANK)
-			var/datum/mil_branch/branch_obj = mil_branches.get_branch(t.fields["mil_branch"])
-			var/datum/mil_rank/rank_obj = mil_branches.get_rank(t.fields["mil_branch"], t.fields["mil_rank"])
-
-			if(branch_obj && rank_obj)
-				mil_ranks[name] = "<abbr title=\"[rank_obj.name], [branch_obj.name]\">[rank_obj.name_short]</abbr> "
-
 		if(OOC)
 			var/active = 0
 			for(var/mob/M in player_list)
@@ -102,18 +95,6 @@
 			department = 1
 		if(!department && !(name in heads))
 			misc[name] = rank
-
-	// Synthetics don't have actual records, so we will pull them from here.
-	for(var/mob/living/silicon/ai/ai in mob_list)
-		bot[ai.name] = "Artificial Intelligence"
-
-	for(var/mob/living/silicon/robot/robot in mob_list)
-		// No combat/syndicate cyborgs, no drones.
-		if(robot.module && robot.module.hide_on_manifest)
-			continue
-
-		bot[robot.name] = "[robot.modtype] [robot.braintype]"
-
 
 	if(heads.len > 0)
 		dat += "<tr><th colspan=3>Heads of Staff</th></tr>"

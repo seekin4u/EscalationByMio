@@ -39,19 +39,9 @@
 		cancelAlarm()
 
 /obj/machinery/camera/proc/cancelAlarm()
-	if (!status || (stat & NOPOWER))
-		return 0
-	if (detectTime == -1)
-		motion_alarm.clearAlarm(loc, src)
-	detectTime = 0
 	return 1
 
 /obj/machinery/camera/proc/triggerAlarm()
-	if (!status || (stat & NOPOWER))
-		return 0
-	if (!detectTime) return 0
-	motion_alarm.triggerAlarm(loc, src)
-	detectTime = -1
 	return 1
 
 /obj/machinery/camera/HasProximity(atom/movable/AM as mob|obj)

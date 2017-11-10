@@ -192,7 +192,6 @@
 		if("air_processing_killed")
 			return global.air_processing_killed;
 		if("alarm_manager")
-			return global.alarm_manager;
 		if("alien_whitelist")
 			return global.alien_whitelist;
 		if("allCasters")
@@ -269,8 +268,6 @@
 			return global.assigned_blocks;
 		if("assistant_occupations")
 			return global.assistant_occupations;
-		if("atmosphere_alarm")
-			return global.atmosphere_alarm;
 		if("attack_log_repository")
 			return global.attack_log_repository;
 		if("autolathe_categories")
@@ -305,8 +302,6 @@
 			return global.cached_icons;
 		if("cached_space")
 			return global.cached_space;
-		if("camera_alarm")
-			return global.camera_alarm;
 		if("camera_range_display_status")
 			return global.camera_range_display_status;
 		if("camera_repository")
@@ -547,8 +542,7 @@
 			return global.fileaccess_timer;
 		if("finds_as_strings")
 			return global.finds_as_strings;
-		if("fire_alarm")
-			return global.fire_alarm;
+
 		if("first_names_female")
 			return global.first_names_female;
 		if("first_names_male")
@@ -873,8 +867,6 @@
 			return global.mob_unequipped_event;
 		if("monkeystart")
 			return global.monkeystart;
-		if("motion_alarm")
-			return global.motion_alarm;
 		if("moved_event")
 			return global.moved_event;
 		if("moving_levels")
@@ -983,8 +975,6 @@
 			return global.possible_changeling_IDs;
 		if("poster_designs")
 			return global.poster_designs;
-		if("power_alarm")
-			return global.power_alarm;
 		if("powerinstances")
 			return global.powerinstances;
 		if("powernets")
@@ -1633,8 +1623,7 @@
 			global.air_master=newval;
 		if("air_processing_killed")
 			global.air_processing_killed=newval;
-		if("alarm_manager")
-			global.alarm_manager=newval;
+
 		if("alien_whitelist")
 			global.alien_whitelist=newval;
 		if("allCasters")
@@ -1705,8 +1694,7 @@
 			global.assigned_blocks=newval;
 		if("assistant_occupations")
 			global.assistant_occupations=newval;
-		if("atmosphere_alarm")
-			global.atmosphere_alarm=newval;
+
 		if("attack_log_repository")
 			global.attack_log_repository=newval;
 		if("autolathe_categories")
@@ -1741,8 +1729,6 @@
 			global.cached_icons=newval;
 		if("cached_space")
 			global.cached_space=newval;
-		if("camera_alarm")
-			global.camera_alarm=newval;
 		if("camera_range_display_status")
 			global.camera_range_display_status=newval;
 		if("camera_repository")
@@ -1983,8 +1969,6 @@
 			global.fileaccess_timer=newval;
 		if("finds_as_strings")
 			global.finds_as_strings=newval;
-		if("fire_alarm")
-			global.fire_alarm=newval;
 		if("first_names_female")
 			global.first_names_female=newval;
 		if("first_names_male")
@@ -2309,8 +2293,6 @@
 			global.mob_unequipped_event=newval;
 		if("monkeystart")
 			global.monkeystart=newval;
-		if("motion_alarm")
-			global.motion_alarm=newval;
 		if("moved_event")
 			global.moved_event=newval;
 		if("moving_levels")
@@ -2419,8 +2401,6 @@
 			global.possible_changeling_IDs=newval;
 		if("poster_designs")
 			global.poster_designs=newval;
-		if("power_alarm")
-			global.power_alarm=newval;
 		if("powerinstances")
 			global.powerinstances=newval;
 		if("powernets")
