@@ -7,6 +7,10 @@
 	lighting_use_dynamic = 0//Say NO to lighting! SNEAKY BITCH
 	base_turf = /turf/simulated/floor/dirt
 
+/area/coldwar/darkness
+	name = "darkness without lighting"
+	lighting_use_dynamic = 1
+
 /area/coldwar/outside
 	name = "outside"
 	icon_state = "outside"
