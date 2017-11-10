@@ -1,3 +1,4 @@
+//than higher blend
 /turf/unsimulated/escalation
 	name = "escalation_unsimulated"
 	dynamic_lighting = FALSE
@@ -23,3 +24,11 @@
 /*turf/unsimulated/escalation/pavement/New()
 	if(prob(5))
 		icon_state += "_rand"*/
+/turf/unsimulated/escalation/rock
+	name = "Mountain"
+	icon = 'icons/escalation/turf/rock.dmi'
+	icon_state = "esc_rock"
+	blocks_air = 1
+	density = 1
+	opacity = 1
+	blend_with_neighbors = 9
