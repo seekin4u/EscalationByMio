@@ -13,14 +13,12 @@
 
 /turf/unsimulated/rock
 	name = "Mountain"
-	icon = 'icons/escalation/turf/Rock.dmi'
-	icon_state = "Rock"
+	icon = 'icons/escalation/turf/rock.dmi'
+	icon_state = "esc_rock"
 	blocks_air = 1
 	density = 1
 	opacity = 1
-
-/turf/unsimulated/rock/edge
-	icon_state = "Rock_outline"
+	blend_with_neighbors = 9
 
 /obj/effect/decal/warning_stripes/bunker
 	icon = 'icons/escalation/turf/concrete_floor.dmi'
