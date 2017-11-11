@@ -48,11 +48,12 @@ var/global/list/nato_internal_channels_protected = list(
 
 /obj/item/device/radio/escalation/New()
 	..()
-	name = "regular radio which have regular frequencies of both sides"
+	desc = "regular radio which have regular frequencies of both sides"
 	internal_channels = army_internal_channels.Copy()
 
 /obj/item/device/radio/escalation/warpac
-	name = "warpac radio"
+	name = "radio"
+	desc = "warpac radio"
 	icon_state = "warpac_radio_item"
 	item_state = "warpac_radio_item"
 
@@ -61,7 +62,8 @@ var/global/list/nato_internal_channels_protected = list(
 	internal_channels = warpac_internal_channels.Copy()
 
 /obj/item/device/radio/escalation/nato
-	name = "nato radio"
+	name = "radio"
+	desc = "nato radio"
 	icon_state = "nato_radio_item"
 	item_state = "nato_radio_item"
 
@@ -70,7 +72,8 @@ var/global/list/nato_internal_channels_protected = list(
 	internal_channels = nato_internal_channels.Copy()
 
 /obj/item/device/radio/escalation/command/warpac
-	name = "warpac comand radio"
+	name = "radio"
+	desc = "warpac comand radio"
 
 /obj/item/device/radio/escalation/command/warpac/New()
 	..()
@@ -78,7 +81,8 @@ var/global/list/nato_internal_channels_protected = list(
 
 
 /obj/item/device/radio/escalation/command/nato
-	name = "nato comand radio"
+	name = "radio"
+	desc = "nato comand radio"
 	icon_state = "nato_radio_item"
 	item_state = "nato_radio_item"
 
