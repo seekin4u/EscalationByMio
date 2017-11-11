@@ -5,124 +5,128 @@
 "ae" = (/turf/simulated/wall/armedconcrete,/area/coldwar)
 "af" = (/obj/structure/sandbag/concrete_block,/turf/ground/gravsnow,/area/coldwar)
 "ag" = (/obj/structure/sandbag,/turf/ground/gravsnow,/area/coldwar)
-"ah" = (/turf/simulated/wall/titanium,/area/coldwar)
-"ai" = (/turf/simulated/wall,/area/coldwar)
-"aj" = (/turf/simulated/floor/tiled/dark,/area/coldwar)
-"ak" = (/obj/structure/truck/ural/basic_wall/n1,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"al" = (/obj/structure/truck/ural/basic_wall/n2,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"am" = (/obj/structure/truck/ural/basic_wall/n3,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"an" = (/obj/structure/truck/ural/basic_wall/n4,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"ao" = (/obj/item/ammo_magazine/ags30x29mm,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"ap" = (/obj/structure/truck/ural/basic_floor/n5,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aq" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/multi/ural,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"ar" = (/obj/structure/truck/ural/basic_floor/n7,/obj/structure/bed/chair/office{buckle_pixel_shift = "x=0;y=-5"; pixel_y = -5},/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"as" = (/obj/structure/truck/ural/basic_floor/n8,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"at" = (/obj/item/weapon/gun/projectile/heavy_mg/ags_17,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"au" = (/obj/item/weapon/gun/projectile/automatic/ak74,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"av" = (/obj/item/weapon/gun/projectile/automatic/vz58,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"aw" = (/obj/structure/truck/ural/basic_wall/n9,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"ax" = (/obj/structure/truck/ural/basic_wall/n10,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"ay" = (/obj/structure/truck/ural/basic_wall/n11,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"az" = (/obj/structure/truck/ural/basic_wall/n12,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aA" = (/obj/item/ammo_magazine/c545x39b,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"aB" = (/obj/structure/truck/ural/basic_wall/n13,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aC" = (/obj/structure/truck/ural/basic_floor/n14,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aD" = (/obj/structure/truck/ural/basic_floor/n15,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aE" = (/obj/structure/truck/ural/basic_wall/n16,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aF" = (/turf/simulated/wall/r_wall,/area/coldwar)
-"aG" = (/obj/structure/truck/ural/basic_wall/n18,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aH" = (/obj/structure/truck/ural/basic_floor/middle_l,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aI" = (/obj/structure/truck/ural/basic_floor/middle_r,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aJ" = (/obj/structure/truck/ural/basic_wall/n17,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"aK" = (/obj/item/weapon/mg_disassembled/ags_17,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"aL" = (/obj/item/weapon/mg_disassembled/mk19,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"aM" = (/obj/item/weapon/mg_tripod/ags_17,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"aN" = (/obj/item/weapon/mg_tripod/mk19,/turf/simulated/floor/tiled/dark,/area/coldwar)
-"aO" = (/obj/item/ammo_magazine/ags30x29mm,/turf/ground/gravsnow,/area/coldwar)
-"aP" = (/obj/item/ammo_magazine/mk19_40x53mm,/turf/ground/gravsnow,/area/coldwar)
-"aQ" = (/obj/item/weapon/grenade/frag/dm51,/turf/ground/gravsnow,/area/coldwar)
-"aR" = (/obj/item/weapon/grenade/frag/m26,/turf/ground/gravsnow,/area/coldwar)
-"aS" = (/obj/item/weapon/grenade/frag/rg42,/turf/ground/gravsnow,/area/coldwar)
-"aT" = (/obj/item/weapon/grenade/frag/f1,/turf/ground/gravsnow,/area/coldwar)
-"aU" = (/obj/item/weapon/grenade/frag/m67,/turf/ground/gravsnow,/area/coldwar)
-"aV" = (/obj/item/weapon/grenade/frag/rgd5,/turf/ground/gravsnow,/area/coldwar)
-"aW" = (/obj/effect/floor_decal/snow,/turf/ground/gravsnow,/area/coldwar)
-"aX" = (/obj/item/ammo_magazine/c545x39b,/turf/ground/gravsnow,/area/coldwar)
-"aY" = (/obj/item/ammo_magazine/c762x39b,/turf/ground/gravsnow,/area/coldwar)
-"aZ" = (/obj/item/ammo_magazine/c762x51m,/turf/ground/gravsnow,/area/coldwar)
-"ba" = (/obj/item/ammo_magazine/c762x54b,/turf/ground/gravsnow,/area/coldwar)
-"bb" = (/obj/item/ammo_magazine/c762x54b/csla,/turf/ground/gravsnow,/area/coldwar)
-"bc" = (/obj/item/weapon/gun/projectile/automatic/pkm,/turf/ground/gravsnow,/area/coldwar)
-"bd" = (/obj/item/weapon/gun/projectile/automatic/rpk74,/turf/ground/gravsnow,/area/coldwar)
-"be" = (/obj/item/weapon/gun/projectile/automatic/svd,/turf/ground/gravsnow,/area/coldwar)
-"bf" = (/obj/item/weapon/gun/projectile/automatic/m60,/turf/ground/gravsnow,/area/coldwar)
-"bg" = (/obj/item/weapon/gun/projectile/automatic/vz58,/turf/ground/gravsnow,/area/coldwar)
-"bh" = (/obj/item/weapon/gun/projectile/colt911,/turf/ground/gravsnow,/area/coldwar)
-"bi" = (/obj/item/weapon/gun/projectile/automatic/g3a3,/turf/ground/gravsnow,/area/coldwar)
-"bj" = (/obj/item/weapon/gun/projectile/automatic/g3sg1,/turf/ground/gravsnow,/area/coldwar)
-"bk" = (/obj/item/weapon/gun/projectile/automatic/m16a1,/turf/ground/gravsnow,/area/coldwar)
-"bl" = (/turf/unsimulated/escalation/pavement,/area/coldwar)
-"bm" = (/turf/ground,/area/coldwar)
-"bn" = (/turf/unsimulated/escalation/road,/area/coldwar)
-"bo" = (/obj/item/weapon/gun/projectile/walther,/turf/ground/gravsnow,/area/coldwar)
-"bp" = (/obj/item/weapon/gun/projectile/cz82,/turf/ground/gravsnow,/area/coldwar)
-"bq" = (/obj/item/weapon/gun/projectile/automatic/g3tgs,/turf/ground/gravsnow,/area/coldwar)
-"br" = (/obj/item/weapon/gun/projectile/automatic/ak74,/turf/ground/gravsnow,/area/coldwar)
-"bs" = (/obj/item/weapon/gun/launcher/grenade/hk69,/turf/ground/gravsnow,/area/coldwar)
-"bt" = (/obj/item/weapon/gun/projectile/makarov,/turf/ground/gravsnow,/area/coldwar)
-"bu" = (/obj/item/weapon/gun/launcher/rpg7,/turf/ground/gravsnow,/area/coldwar)
-"bv" = (/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/turf/ground/gravsnow,/area/coldwar)
-"bw" = (/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/turf/ground/gravsnow,/area/coldwar)
-"bx" = (/obj/item/weapon/gun/launcher/m72,/turf/ground/gravsnow,/area/coldwar)
-"by" = (/obj/item/weapon/gun/launcher/rpg18,/turf/ground/gravsnow,/area/coldwar)
-"bz" = (/turf/simulated/floor/asteroid,/area/coldwar)
-"bA" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/asteroid,/area/coldwar)
-"bB" = (/turf/simulated/floor/carpet,/area/coldwar)
-"bC" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/carpet,/area/coldwar)
-"bD" = (/turf/simulated/floor/grass,/area/coldwar)
-"bE" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/grass,/area/coldwar)
-"bF" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/asteroid,/area/coldwar)
-"bG" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/asteroid,/area/coldwar)
-"bH" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/carpet,/area/coldwar)
-"bI" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/carpet,/area/coldwar)
-"bJ" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/grass,/area/coldwar)
-"bK" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/grass,/area/coldwar)
-"bL" = (/obj/item/ammo_casing/rpg_missile,/turf/ground/gravsnow,/area/coldwar)
-"bM" = (/obj/structure/sandbag,/turf/simulated/floor/asteroid,/area/coldwar)
-"bN" = (/obj/structure/sandbag,/turf/simulated/floor/carpet,/area/coldwar)
-"bO" = (/obj/structure/sandbag,/turf/simulated/floor/grass,/area/coldwar)
-"bP" = (/obj/item/ammo_casing/rpg_missile/og7,/turf/ground/gravsnow,/area/coldwar)
-"bQ" = (/turf/simulated/floor/road,/area/coldwar)
-"bR" = (/obj/item/weapon/sandbag,/obj/item/weapon/sandbag,/turf/ground/gravsnow,/area/coldwar)
-"bS" = (/obj/item/weapon/sandbag,/turf/ground/gravsnow,/area/coldwar)
-"bT" = (/turf/simulated/floor,/area/coldwar)
-"bU" = (/obj/effect/landmark{name = "JoinLate"},/turf/ground/gravsnow,/area/coldwar)
-"bV" = (/obj/effect/landmark/start,/turf/ground/gravsnow,/area/coldwar)
-"bW" = (/obj/effect/landmark{name = "Observer-Start"},/turf/ground/gravsnow,/area/coldwar)
-"bX" = (/obj/item/ammo_magazine/c127x99b,/turf/ground/gravsnow,/area/coldwar)
-"bY" = (/obj/item/weapon/gun/projectile/heavy_mg/utes,/turf/ground/gravsnow,/area/coldwar)
-"bZ" = (/turf/simulated/floor/pavement,/area/coldwar)
-"ca" = (/obj/item/weapon/saperka/lopata/nato,/turf/ground/gravsnow,/area/coldwar)
-"cb" = (/obj/item/weapon/saperka/lopata/warpact,/turf/ground/gravsnow,/area/coldwar)
-"cc" = (/obj/item/weapon/setofplates,/turf/ground/gravsnow,/area/coldwar)
-"cd" = (/turf/simulated/floor/wood,/area/coldwar)
-"ce" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/wood,/area/coldwar)
-"cf" = (/turf/simulated/floor/tiled/white,/area/coldwar)
-"cg" = (/turf/simulated/floor/lino,/area/coldwar)
-"ch" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/lino,/area/coldwar)
-"ci" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/wood,/area/coldwar)
-"cj" = (/mob/living/carbon/human,/turf/simulated/floor/wood,/area/coldwar)
-"ck" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/wood,/area/coldwar)
-"cl" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/tiled/white,/area/coldwar)
-"cm" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/tiled/white,/area/coldwar)
-"cn" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/lino,/area/coldwar)
-"co" = (/mob/living/carbon/human,/turf/simulated/floor/lino,/area/coldwar)
-"cp" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/lino,/area/coldwar)
-"cq" = (/obj/structure/sandbag,/turf/simulated/floor/wood,/area/coldwar)
-"cr" = (/obj/structure/sandbag,/turf/simulated/floor/tiled/white,/area/coldwar)
-"cs" = (/obj/structure/sandbag,/turf/simulated/floor/lino,/area/coldwar)
-"ct" = (/turf/ground/no_flora,/area/coldwar)
-"cu" = (/turf/ground/snow2,/area/coldwar)
+"ah" = (/turf/unsimulated/wall,/area/coldwar)
+"ai" = (/turf/simulated/wall/titanium,/area/coldwar)
+"aj" = (/turf/simulated/wall,/area/coldwar)
+"ak" = (/turf/simulated/floor/tiled/dark,/area/coldwar)
+"al" = (/obj/structure/truck/ural/basic_wall/n1,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"am" = (/obj/structure/truck/ural/basic_wall/n2,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"an" = (/obj/structure/truck/ural/basic_wall/n3,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"ao" = (/obj/structure/truck/ural/basic_wall/n4,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"ap" = (/obj/item/ammo_magazine/ags30x29mm,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"aq" = (/obj/structure/truck/ural/basic_floor/n5,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"ar" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/multi/ural,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"as" = (/obj/structure/truck/ural/basic_floor/n7,/obj/structure/bed/chair/office{buckle_pixel_shift = "x=0;y=-5"; pixel_y = -5},/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"at" = (/obj/structure/truck/ural/basic_floor/n8,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"au" = (/obj/item/weapon/gun/projectile/heavy_mg/ags_17,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"av" = (/obj/item/weapon/gun/projectile/automatic/ak74,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"aw" = (/obj/item/weapon/gun/projectile/automatic/vz58,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"ax" = (/obj/structure/truck/ural/basic_wall/n9,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"ay" = (/obj/structure/truck/ural/basic_wall/n10,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"az" = (/obj/structure/truck/ural/basic_wall/n11,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aA" = (/obj/structure/truck/ural/basic_wall/n12,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aB" = (/obj/item/ammo_magazine/c545x39b,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"aC" = (/obj/structure/truck/ural/basic_wall/n13,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aD" = (/obj/structure/truck/ural/basic_floor/n14,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aE" = (/obj/structure/truck/ural/basic_floor/n15,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aF" = (/obj/structure/truck/ural/basic_wall/n16,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aG" = (/turf/simulated/wall/r_wall,/area/coldwar)
+"aH" = (/obj/structure/truck/ural/basic_wall/n18,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aI" = (/obj/structure/truck/ural/basic_floor/middle_l,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aJ" = (/obj/structure/truck/ural/basic_floor/middle_r,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aK" = (/obj/structure/truck/ural/basic_wall/n17,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"aL" = (/obj/item/weapon/mg_disassembled/ags_17,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"aM" = (/obj/item/weapon/mg_disassembled/mk19,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"aN" = (/obj/item/weapon/mg_tripod/ags_17,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"aO" = (/obj/item/weapon/mg_tripod/mk19,/turf/simulated/floor/tiled/dark,/area/coldwar)
+"aP" = (/obj/item/ammo_magazine/ags30x29mm,/turf/ground/gravsnow,/area/coldwar)
+"aQ" = (/obj/item/ammo_magazine/mk19_40x53mm,/turf/ground/gravsnow,/area/coldwar)
+"aR" = (/obj/item/weapon/grenade/frag/dm51,/turf/ground/gravsnow,/area/coldwar)
+"aS" = (/obj/item/weapon/grenade/frag/m26,/turf/ground/gravsnow,/area/coldwar)
+"aT" = (/obj/item/weapon/grenade/frag/rg42,/turf/ground/gravsnow,/area/coldwar)
+"aU" = (/obj/item/weapon/grenade/frag/f1,/turf/ground/gravsnow,/area/coldwar)
+"aV" = (/obj/item/weapon/grenade/frag/m67,/turf/ground/gravsnow,/area/coldwar)
+"aW" = (/obj/item/weapon/grenade/frag/rgd5,/turf/ground/gravsnow,/area/coldwar)
+"aX" = (/obj/effect/floor_decal/snow,/turf/ground/gravsnow,/area/coldwar)
+"aY" = (/obj/item/ammo_magazine/c545x39b,/turf/ground/gravsnow,/area/coldwar)
+"aZ" = (/obj/item/ammo_magazine/c762x39b,/turf/ground/gravsnow,/area/coldwar)
+"ba" = (/obj/item/ammo_magazine/c762x51m,/turf/ground/gravsnow,/area/coldwar)
+"bb" = (/obj/item/ammo_magazine/c762x54b,/turf/ground/gravsnow,/area/coldwar)
+"bc" = (/obj/item/ammo_magazine/c762x54b/csla,/turf/ground/gravsnow,/area/coldwar)
+"bd" = (/obj/item/weapon/gun/projectile/automatic/pkm,/turf/ground/gravsnow,/area/coldwar)
+"be" = (/obj/item/weapon/gun/projectile/automatic/rpk74,/turf/ground/gravsnow,/area/coldwar)
+"bf" = (/obj/item/weapon/gun/projectile/automatic/svd,/turf/ground/gravsnow,/area/coldwar)
+"bg" = (/obj/item/weapon/gun/projectile/automatic/m60,/turf/ground/gravsnow,/area/coldwar)
+"bh" = (/obj/item/weapon/gun/projectile/automatic/vz58,/turf/ground/gravsnow,/area/coldwar)
+"bi" = (/obj/item/weapon/gun/projectile/colt911,/turf/ground/gravsnow,/area/coldwar)
+"bj" = (/obj/item/weapon/gun/projectile/automatic/g3a3,/turf/ground/gravsnow,/area/coldwar)
+"bk" = (/obj/item/weapon/gun/projectile/automatic/g3sg1,/turf/ground/gravsnow,/area/coldwar)
+"bl" = (/obj/item/weapon/gun/projectile/automatic/m16a1,/turf/ground/gravsnow,/area/coldwar)
+"bm" = (/turf/unsimulated/escalation/pavement,/area/coldwar)
+"bn" = (/turf/ground,/area/coldwar)
+"bo" = (/turf/unsimulated/escalation/road,/area/coldwar)
+"bp" = (/obj/item/weapon/gun/projectile/walther,/turf/ground/gravsnow,/area/coldwar)
+"bq" = (/obj/item/weapon/gun/projectile/cz82,/turf/ground/gravsnow,/area/coldwar)
+"br" = (/obj/item/weapon/gun/projectile/automatic/g3tgs,/turf/ground/gravsnow,/area/coldwar)
+"bs" = (/obj/item/weapon/gun/projectile/automatic/ak74,/turf/ground/gravsnow,/area/coldwar)
+"bt" = (/obj/item/weapon/gun/launcher/grenade/hk69,/turf/ground/gravsnow,/area/coldwar)
+"bu" = (/obj/item/weapon/gun/projectile/automatic/m16a1gl,/turf/ground/gravsnow,/area/coldwar)
+"bv" = (/obj/item/weapon/gun/projectile/automatic/ak74gl,/turf/ground/gravsnow,/area/coldwar)
+"bw" = (/obj/item/weapon/gun/projectile/automatic/vz58gl,/turf/ground/gravsnow,/area/coldwar)
+"bx" = (/obj/item/weapon/gun/projectile/makarov,/turf/ground/gravsnow,/area/coldwar)
+"by" = (/obj/item/weapon/gun/launcher/rpg7,/turf/ground/gravsnow,/area/coldwar)
+"bz" = (/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/obj/item/weapon/grenade/frag/shell40mm,/turf/ground/gravsnow,/area/coldwar)
+"bA" = (/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/turf/ground/gravsnow,/area/coldwar)
+"bB" = (/obj/item/weapon/gun/launcher/m72,/turf/ground/gravsnow,/area/coldwar)
+"bC" = (/obj/item/weapon/gun/launcher/rpg18,/turf/ground/gravsnow,/area/coldwar)
+"bD" = (/turf/simulated/floor/asteroid,/area/coldwar)
+"bE" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/asteroid,/area/coldwar)
+"bF" = (/turf/simulated/floor/carpet,/area/coldwar)
+"bG" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/carpet,/area/coldwar)
+"bH" = (/turf/simulated/floor/grass,/area/coldwar)
+"bI" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/grass,/area/coldwar)
+"bJ" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/asteroid,/area/coldwar)
+"bK" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/asteroid,/area/coldwar)
+"bL" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/carpet,/area/coldwar)
+"bM" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/carpet,/area/coldwar)
+"bN" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/grass,/area/coldwar)
+"bO" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/grass,/area/coldwar)
+"bP" = (/obj/item/ammo_casing/rpg_missile,/turf/ground/gravsnow,/area/coldwar)
+"bQ" = (/obj/structure/sandbag,/turf/simulated/floor/asteroid,/area/coldwar)
+"bR" = (/obj/structure/sandbag,/turf/simulated/floor/carpet,/area/coldwar)
+"bS" = (/obj/structure/sandbag,/turf/simulated/floor/grass,/area/coldwar)
+"bT" = (/obj/item/ammo_casing/rpg_missile/og7,/turf/ground/gravsnow,/area/coldwar)
+"bU" = (/turf/simulated/floor/road,/area/coldwar)
+"bV" = (/obj/item/weapon/sandbag,/obj/item/weapon/sandbag,/turf/ground/gravsnow,/area/coldwar)
+"bW" = (/obj/item/weapon/sandbag,/turf/ground/gravsnow,/area/coldwar)
+"bX" = (/turf/simulated/floor,/area/coldwar)
+"bY" = (/obj/effect/landmark{name = "JoinLate"},/turf/ground/gravsnow,/area/coldwar)
+"bZ" = (/obj/effect/landmark/start,/turf/ground/gravsnow,/area/coldwar)
+"ca" = (/obj/effect/landmark{name = "Observer-Start"},/turf/ground/gravsnow,/area/coldwar)
+"cb" = (/obj/item/ammo_magazine/c127x99b,/turf/ground/gravsnow,/area/coldwar)
+"cc" = (/obj/item/weapon/gun/projectile/heavy_mg/utes,/turf/ground/gravsnow,/area/coldwar)
+"cd" = (/turf/simulated/floor/pavement,/area/coldwar)
+"ce" = (/obj/item/weapon/saperka/lopata/nato,/turf/ground/gravsnow,/area/coldwar)
+"cf" = (/obj/item/weapon/saperka/lopata/warpact,/turf/ground/gravsnow,/area/coldwar)
+"cg" = (/obj/item/weapon/setofplates,/turf/ground/gravsnow,/area/coldwar)
+"ch" = (/turf/simulated/floor/wood,/area/coldwar)
+"ci" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/wood,/area/coldwar)
+"cj" = (/turf/simulated/floor/tiled/white,/area/coldwar)
+"ck" = (/turf/simulated/floor/lino,/area/coldwar)
+"cl" = (/obj/structure/sandbag{dir = 1},/turf/simulated/floor/lino,/area/coldwar)
+"cm" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/wood,/area/coldwar)
+"cn" = (/mob/living/carbon/human,/turf/simulated/floor/wood,/area/coldwar)
+"co" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/wood,/area/coldwar)
+"cp" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/tiled/white,/area/coldwar)
+"cq" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/tiled/white,/area/coldwar)
+"cr" = (/obj/structure/sandbag{dir = 8},/turf/simulated/floor/lino,/area/coldwar)
+"cs" = (/mob/living/carbon/human,/turf/simulated/floor/lino,/area/coldwar)
+"ct" = (/obj/structure/sandbag{dir = 4},/turf/simulated/floor/lino,/area/coldwar)
+"cu" = (/obj/structure/sandbag,/turf/simulated/floor/wood,/area/coldwar)
+"cv" = (/obj/structure/sandbag,/turf/simulated/floor/tiled/white,/area/coldwar)
+"cw" = (/obj/structure/sandbag,/turf/simulated/floor/lino,/area/coldwar)
+"cx" = (/turf/ground/no_flora,/area/coldwar)
+"cy" = (/turf/ground/snow2,/area/coldwar)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -337,47 +341,47 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abacacacacacacacacadadaeaeaeaeaeaeaeaeaeadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abacacacacacacacacadadaeaeaeaeaeaeaeaeaeadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadafafafagagagadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abahahadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abahahadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaiaiadadadadajajajajajajajajajajajajajadadakalamanadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaiaiadadadadajajaoajajajajajajajajajajadadapaqarasadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaiaiadadadadajaoataoajauauavavajajajajadadawaxayazadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaiaiadadadadajaoajaoajaAaAaAaAajajajajadadaBaCaDaEadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaFaFadadadadajajajajajajajajajajajajajadadaGaHaIaJadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaFaFadadadadajajajajajajajajajajajajajadadaGaHaIaJadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaFaFadadadadajajajajajajajajajajajajajadadaGaHaIaJadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abaFaFadadadadajajajajajajajajajajajajajadadaGaHaIaJadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abacacacacacacacacadadaeaeaeaeaeaeaeaeaeaeaeadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abacacacacacacacacadadaeaeaeaeaeaeaeaeaeaeaeadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadafafafagagagadadadadadahadadadadadaeaeadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abaiaiadadadadadadadadadadadadahadadadadaeaeadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abaiaiadadadadadadadadadadadadadahadadadaeaeadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abajajadadadadakakakakakakakakakakahakakaeaealamanaoadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abajajadadadadakakapakakakakakakakakahakaeaeaqarasatadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abajajadadadadakapauapakavavawawakakakahaeaeaxayazaAadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abajajadadadadakapakapakaBaBaBaBakakakakadadaCaDaEaFadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abaGaGadadadadakakakakakakakakakakakakakadadaHaIaJaKadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abaGaGadadadadakakakakakakakakakakakakakadadaHaIaJaKadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abaGaGadadadadakakakakakakakakakakakakakadadaHaIaJaKadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abaGaGadadadadakakakakakakakakakakakakakadadaHaIaJaKadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 abadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abajajajajajajajajajadajajaKaLajajajajajajadajajajajajajajajajajajadajajajajajajajajajajajajajadajajadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abajajajajajajajajajadajajaMaNajajajajajajadajajajajajajajajajajajadajajajajajajajajajajajajajadajajadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadadadaOaPadadadaQaQaQaRaRaRaSaSaSadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadadadadadadadadaTaTaTaUaUaUaVaVaVadadadadadadadadadadadadadadadadadadaWaWaWaWadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadadadadadadadaXaYaZbabbadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadbcbdadbeadbfadadaXaYaZbabbadadadajajajajajajajajajajajajajajajajajajadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadbgadbgadbhadbibjadbkadaXaYaZbabbadadadajblblblbmbnbnbnbmbmbmbmbmbmbmbmbmajadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadboboadbpadbqadbradaXaYaZbabbadadadajblbmblbmbnbmbnbmblblblbmbnbnbnbmajadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadbpadbhadadadadbsadadadadadadadadadadajblblblbmbnbmbnbmblbmblbmbnbmbnbmajadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadbtbtadbuadadbsadbvbwadadadadadadajblbmblbmbnbmbnbmblblblbmbnbnbnbmajadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadbuadadadadadadadbxbybuadadadajblblblbmbnbnbnbmbmbmbmbmbmbmbmbmajadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadbzbAbzadbBbCbBadbDbEbDadbxbybuadadadajajajajajajajajajajajajajajajajajajadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadbFbzbGadbHbBbIadbJbDbKadbLbLbLadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadbzbMbzadbBbNbBadbDbObDadbPbPbPadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadbzbzbzadbBbBbBadbDbDbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadbzbzbzadbBbBbBadbDbDbDadadadadadadadadadbQbQbQadbQbQbQadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadbRbSbSadadadadadadadadadadadadadadbQbzbQadbQbTbQadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadbUadbSbVbSadbWadadbXadadbXbYadbZbZbZadbQbQbQadbQbQbQadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadbSbSbScacbccadadadadadadadbZbzbZadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadcdcecdadcfcfcfadcgchcgadadadadadbZbZbZadbzbzbzbzbzbzbzbzbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadcicjckadclcfcmadcncocpadadadadadbQbQbQadbzbTbTbTbzbZbzbQbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadcdcqcdadcfcrcfadcgcscgadadadadadbmbmbmadbzbTbzbTbzbzbzbzbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadcdcdcdadcfcfcfadcgcgcgadadadadadadadadadbzbTbTbTbzbmbzbmbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadcdcdcdadcfcfcfadcgcgcgadadadadadctctctadbzbzbzbzbzbzbzbzbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadadadadadadadadadadadadadcucucucubzcubzcubzadbzadbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadadadadadadadadadadadadadcdcdcdadbzbzbzbzbzbzbzbzbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadadadadadadadadadadadadadadadadadbzcdbzcdbzbzbzbzbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-abadadadadadadadadadadadadadadadadadadadadadadadadadadbzbzbzbzbzbzbzbzbzadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abakakakakakakakakakadakakaLaMakakakakakakadakakakakakakakakakakakadakakakakakakakakakakakakakadakakadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abakakakakakakakakakadakakaNaOakakakakakakadakakakakakakakakakakakadakakakakakakakakakakakakakadakakadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadadadaPaQadadadaRaRaRaSaSaSaTaTaTadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadadadadadadadadaUaUaUaVaVaVaWaWaWadadadadadadadadadadadadadadadadadadaXaXaXaXadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadadadadadadadaYaZbabbbcadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadbdbeadbfadbgadadaYaZbabbbcadadadakakakakakakakakakakakakakakakakakakadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadbhadbhadbiadbjbkadbladaYaZbabbbcadadadakbmbmbmbnbobobobnbnbnbnbnbnbnbnbnakadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadbpbpadbqadbradbsadaYaZbabbbcadadadakbmbnbmbnbobnbobnbmbmbmbnbobobobnakadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadbqadbiadadadadbtadbrbubvbvbwbkadadadakbmbmbmbnbobnbobnbmbnbmbnbobnbobnakadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadbxbxadbyadadbtadbzbAadadbfadadadakbmbnbmbnbobnbobnbmbmbmbnbobobobnakadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadbyadadadadadadadbBbCbyadadadakbmbmbmbnbobobobnbnbnbnbnbnbnbnbnakadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadbDbEbDadbFbGbFadbHbIbHadbBbCbyadadadakakakakakakakakakakakakakakakakakakadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadbJbDbKadbLbFbMadbNbHbOadbPbPbPadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadbDbQbDadbFbRbFadbHbSbHadbTbTbTadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadbDbDbDadbFbFbFadbHbHbHadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadbDbDbDadbFbFbFadbHbHbHadadadadadadadadadbUbUbUadbUbUbUadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadbVbWbWadadadadadadadadadadadadadadbUbDbUadbUbXbUadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadbYadbWbZbWadcaadadcbadadcbccadcdcdcdadbUbUbUadbUbUbUadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadbWbWbWcecfcgadadadadadadadcdbDcdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadchcichadcjcjcjadckclckadadadadadcdcdcdadbDbDbDbDbDbDbDbDbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadcmcncoadcpcjcqadcrcsctadadadadadbUbUbUadbDbXbXbXbDcdbDbUbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadchcuchadcjcvcjadckcwckadadadadadbnbnbnadbDbXbDbXbDbDbDbDbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadchchchadcjcjcjadckckckadadadadadadadadadbDbXbXbXbDbnbDbnbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadchchchadcjcjcjadckckckadadadadadcxcxcxadbDbDbDbDbDbDbDbDbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadadadadadadadadadadadadadcycycycybDcybDcybDadbDadbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadadadadadadadadadadadadadchchchadbDbDbDbDbDbDbDbDbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadadadadadadadadadadadadadadadadadbDchbDchbDbDbDbDbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abadadadadadadadadadadadadadadadadadadadadadadadadadadbDbDbDbDbDbDbDbDbDadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}

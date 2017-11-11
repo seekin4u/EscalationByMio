@@ -24,6 +24,7 @@
 //	#include "sukablyat.dmm"//soviet base - 3
 //	#include "coldwar-intertim.dmm"//transition level 4
 //	#include "coldwar-1.dmm"//tests 5
+	#include "forest.dmm"
 	#include "poligon.dmm"
 
 	//to add new sounds - go by this path and add new 'path' to list.
