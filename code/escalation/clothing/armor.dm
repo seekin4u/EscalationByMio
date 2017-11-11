@@ -37,6 +37,10 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 30, bullet = 35, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
 
+/obj/item/clothing/suit/storage/vest/escalation/New()
+	..()
+	pockets = new/obj/item/weapon/storage/internal/pockets(src, slots = 4, slot_size = 3)
+
 /obj/item/clothing/suit/storage/vest/escalation/soviet_heavy
 	name = "6B3 Heavy Armor Vest"
 	desc = "Heavy armored vest with several pouches. Good for keeping your organs inside."
