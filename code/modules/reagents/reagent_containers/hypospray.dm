@@ -100,8 +100,8 @@
 
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/red/New()
 	..()
-	reagents.add_reagent("epinephrine", 5)
-	reagents.add_reagent("salbutamol", 5)
-	reagents.add_reagent("ethaperazine", 5)
+	reagents.add_reagent("epinephrine", 10)
+	reagents.add_reagent("salbutamol", 8)
+	reagents.add_reagent("ethaperazine", 8)
 	update_icon()
 	return

@@ -725,12 +725,13 @@
 	reagent_state = LIQUID
 	color = "#800080"
 	flags = IGNORE_MOB_SIZE
-	overdose = 10
+	overdose = 25
 	metabolism = 0.15
 
 /datum/reagent/morphine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_PAINKILLER, 150)
+	M.SetWeakened(0)
 	M.add_chemical_effect(CE_PULSE, 1)
 	if(prob(5))
 		M.emote(pick("twitch", "blink_r", "shiver"))
@@ -772,14 +773,14 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose = 6
+	overdose = 21
 	metabolism = 0.3
 
 /datum/reagent/epinephrine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
 	M.SetParalysis(0)
-	M.SetWeakened(0)
+//	M.SetWeakened(0)
 	M.add_chemical_effect(CE_PAINKILLER, 300)
 	M.adjustToxLoss(rand(2))
 	M.add_chemical_effect(CE_STABLE)
@@ -854,7 +855,7 @@
 		M.eye_blurry = max(M.eye_blurry, 20)
 		M.add_chemical_effect(CE_PAINKILLER, 10)
 		M.adjustToxLoss(-2 * removed)
-	else if(dose < 9)
+	else if(dose <= 10)//so 2/3 of syringe is still working
 		if(prob(50))
 			M.Weaken(4)
 		M.drowsyness = max(M.drowsyness, 30)
@@ -899,5 +900,4 @@
 /datum/reagent/aminocap/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(25 / (sqrt(M.getBruteLoss()) +  1) * removed, 0)
-// fix this sometime 		apply_fatigue_effect(M, removed, 0, 10, 10, 10, 5)
 		M.add_chemical_effect(CE_PULSE, -1)
