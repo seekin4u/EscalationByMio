@@ -88,6 +88,8 @@
 	attack_verb = list("cleaved", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 
 ////base bayonet type for changes in future!
+/obj/item/weapon/material/knife/bayonet
+	w_class = ITEM_SIZE_LARGE
 
 /obj/item/weapon/material/knife/bayonet/sa
 	name = "6x4 bayonet"
