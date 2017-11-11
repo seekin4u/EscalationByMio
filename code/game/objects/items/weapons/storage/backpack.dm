@@ -412,7 +412,7 @@
 	icon_state = "usmc_ugl"
 	item_state = null
 	storage_slots = 6
-	can_hold = list (/obj/item/weapon/grenade/frag/shell40mm)
+	can_hold = list (/obj/item/weapon/grenade/frag/*shell40mm*/)
 
 /obj/item/weapon/storage/backpack/gl/bdw
 	name = "Grenade belt"
