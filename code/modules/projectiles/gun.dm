@@ -70,6 +70,7 @@
 	var/safety = 1 //Whether or not the safety is on.
 
 	var/automatic = 0  //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
+	var/obj/item/ammo_magazine/ammo_magazine = null
 
 	var/next_fire_time = 0
 
@@ -109,11 +110,32 @@
 		var/mob/living/M = loc
 		if(istype(M))
 			if(M.can_wield_item(src) && src.is_held_twohanded(M))
-				item_state_slots[slot_l_hand_str] = wielded_item_state
-				item_state_slots[slot_r_hand_str] = wielded_item_state
+#if ESC_DEBUG_GUNS
+				to_world("gun/update_icon/is_held && can_wield")
+#endif
+				if(ammo_magazine)
+#if ESC_DEBUG_GUNS
+					to_world("with ammo_magazine")
+#endif
+					item_state_slots[slot_l_hand_str] = wielded_item_state
+					item_state_slots[slot_r_hand_str] = wielded_item_state
+				else
+#if ESC_DEBUG_GUNS
+					to_world("without ammo_magazine")
+#endif
+					item_state_slots[slot_l_hand_str] = wielded_item_state + "-empty"
+					item_state_slots[slot_r_hand_str] = wielded_item_state + "-empty"
 			else
-				item_state_slots[slot_l_hand_str] = initial(item_state)
-				item_state_slots[slot_r_hand_str] = initial(item_state)
+#if ESC_DEBUG_GUNS
+				to_world("  Cannot wield and not is_held!")
+#endif
+				if(ammo_magazine)
+					item_state_slots[slot_l_hand_str] = initial(item_state)
+					item_state_slots[slot_r_hand_str] = initial(item_state)
+				else
+					item_state_slots[slot_l_hand_str] = initial(item_state) + "-empty"
+					item_state_slots[slot_r_hand_str] = initial(item_state) + "-empty"
+		update_held_icon()
 
 //Checks whether a given mob can use the gun
 //Any checks that shouldn't result in handle_click_empty() being called if they fail should go here.

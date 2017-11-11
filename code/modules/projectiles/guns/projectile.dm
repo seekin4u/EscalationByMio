@@ -27,7 +27,7 @@
 
 	//For MAGAZINE guns
 	var/magazine_type = null	//the type of magazine that the gun comes preloaded with
-	var/obj/item/ammo_magazine/ammo_magazine = null //stored magazine
+	//var/obj/item/ammo_magazine/ammo_magazine = null //stored magazine
 	var/allowed_magazines		//magazine types that may be loaded. Can be a list or single path
 	var/auto_eject = 0			//if the magazine should automatically eject itself when empty.
 	var/auto_eject_sound = null
