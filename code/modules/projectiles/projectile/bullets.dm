@@ -46,7 +46,10 @@
 		return 1
 
 	var/chance = damage
-	if(istype(A, /turf/simulated/wall))
+
+	if(istype(A, /turf/unsimulated))
+		return 0//NO PENETRATING UNSIMULATED WALLS!
+	else if(istype(A, /turf/simulated/wall))
 		var/turf/simulated/wall/W = A
 		chance = round(damage/W.material.integrity*180)
 	else if(istype(A, /obj/machinery/door))
@@ -54,7 +57,7 @@
 		chance = round(damage/D.maxhealth*180)
 		if(D.glass) chance *= 2
 	else if(istype(A, /obj/structure/girder))
-		chance = 100
+		chance = 40
 
 	if(prob(chance))
 		if(A.opacity)
