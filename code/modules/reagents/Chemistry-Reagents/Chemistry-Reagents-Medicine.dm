@@ -782,7 +782,7 @@
 	M.SetParalysis(0)
 //	M.SetWeakened(0)
 	M.add_chemical_effect(CE_PAINKILLER, 300)
-	M.adjustToxLoss(rand(2))
+	M.adjustToxLoss(0.5)
 	M.add_chemical_effect(CE_STABLE)
 
 /datum/reagent/epinephrine/overdose(var/mob/living/carbon/M, var/alien)
@@ -792,7 +792,7 @@
 		if(H.stat != 1)
 			if(H.losebreath >= 10)
 				H.losebreath = max(10, H.losebreath - 10)
-			H.adjustOxyLoss(2)
+			H.adjustOxyLoss(1)
 			H.Weaken(10)
 		M.add_chemical_effect(CE_NOPULSE, 1)
 
