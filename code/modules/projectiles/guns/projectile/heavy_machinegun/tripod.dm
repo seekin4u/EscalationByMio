@@ -22,14 +22,14 @@
 	if(isturf(A) && ismob(user))
 		var/turf/T = A
 		var/mob/M = user
-		if(do_after(user, 20, src) && in_range(src.loc, user))
+		if(in_range(T, user) && do_after(user, 20, src))
 			attach_to_turf(T, M, 1)
 
 /obj/item/weapon/mg_tripod/MouseDrop(over_object, src_location, over_location)
 	..()
 
 	if(over_object == usr)
-		if(do_after(usr, 20, src) && in_range(src.loc, usr))
+		if(in_range(src.loc, usr) && do_after(usr, 20, src))
 			detach_from_turf(usr, 1)
 
 		return
@@ -53,6 +53,7 @@
 	if(show_message)
 		M.visible_message("<span class='notice'>[M.name] attached to ground \the tripod.</span>", \
 						  "<span class='notice'>You attached to ground \the tripod.</span>")
+
 
 /obj/item/weapon/mg_tripod/proc/detach_from_turf(var/mob/M, var/show_message = 0)
 	if(!ismob(M))
