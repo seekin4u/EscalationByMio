@@ -12,7 +12,7 @@
 
 /mob/proc/seek_and_unzoom()
 	var/mob/living/M = src
-	for(var/obj/item/weapon/W in M.contents)
+	for(var/obj/item/W in M.contents)
 		if(W.zoom)
 			W.zoom(M, FALSE)//unzoom if there are
 
