@@ -808,6 +808,11 @@
 					fireteam_picked.slots[i] = new_character
 					break
 
+		var/datum/army_faction/AF = get_army(chosenSlot)
+
+		if(istype(AF))
+			AF.players += new_character
+
 	if(client.prefs.disabilities)
 		// Set defer to 1 if you add more crap here so it only recalculates struc_enzymes once. - N3X
 		new_character.dna.SetSEState(GLASSESBLOCK,1,0)
