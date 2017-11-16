@@ -45,17 +45,90 @@ proc/show_statistic()
 	if(!all_factions.len)
 		dat = "No factions in game!"
 		return dat
-	for(var/datum/army_faction/F in all_factions)
-		var/live = 0
-		var/dead = 0
-		var/mortality_rate = 0
+	for(var/datum/army_faction/F in ticker.mode.teams)
+		var/live = 1
+		var/dead = 1
+		var/mortality_rate = 1
 		for(var/mob/living/carbon/human/H in F.players)
-			if(H.stat == 2)
+			if(H.stat == DEAD)
 				dead++
 			else
 				live++
-		mortality_rate = round(100 * (dead / live))
-		dat += "[F.name]: [live] alive, [dead] KIA. Mortality rate: [mortality_rate]% <br>"
+		mortality_rate = round(100 * (dead / live))//div by 0
+		dat += "[F.name] : [live - 1] alive, [dead - 1] KIA. Mortality rate : [mortality_rate - 1]% <br>"
+	return dat
+
+proc/show_armies()
+		//fraction live kill in action mortality rate
+	if(!ticker.mode.wargames)
+		return
+
+	var/dat = ""
+	if(!all_factions.len)
+		dat = "No factions in game!Show_armyes() fucked up!"
+		return dat
+	for(var/datum/army_faction/F in ticker.mode.teams)
+		to_world("Army : [F.faction_tag]")
+
+
+//bund, usmc, csla, cccp
+//охх сука отрубите мне руки за этот говнокод ~Бастард
+proc/show_statistic_by_faction()
+	//fraction live kill in action mortality rate
+	if(!ticker.mode.wargames)
+		return
+	var/dat = ""
+	if(!all_factions.len)
+		dat = "No factions in game! HAHA SUKA BLYAD"
+		return dat
+
+	var/bund_live = 0
+	var/usmc_live = 0
+	var/csla_live = 0
+	var/cccp_live = 0
+
+	var/bund_dead = 0
+	var/usmc_dead = 0
+	var/csla_dead = 0
+	var/cccp_dead = 0
+
+	for(var/datum/army_faction/F in ticker.mode.teams)
+
+		for(var/mob/living/carbon/human/H in F.players)
+			switch(F.faction_tag)
+				if("bund")
+					if(H.stat == DEAD)
+						bund_dead++
+					else
+						bund_live++
+				if("usmc")
+					if(H.stat == DEAD)
+						usmc_dead++
+					else
+						usmc_live++
+				if("csla")
+					if(H.stat == DEAD)
+						csla_dead++
+					else
+						csla_live++
+				if("cccp")
+					if(H.stat == DEAD)
+						cccp_dead++
+					else
+						cccp_live++
+
+	if(usmc_live || usmc_dead)
+		dat += "USMC : [usmc_live > 0 ? usmc_live : "no"] alive, [usmc_dead > 0 ? usmc_dead : "no"] dead.<br>"
+
+	if(cccp_live || cccp_dead)
+		dat += "CCCP : [cccp_live > 0 ? cccp_live : "no"] alive, [cccp_dead > 0 ? cccp_dead : "no"] dead.<br>"
+
+	if(bund_live || bund_dead)
+		dat += "BUND : [bund_live > 0 ? bund_live : "no"] alive, [bund_dead > 0 ? bund_dead : "no"] dead.<br>"
+
+	if(csla_live || csla_dead)
+		dat += "CSLA : [csla_live > 0 ? csla_live : "no"] alive, [csla_dead > 0 ? csla_dead : "no"] dead.<br>"
+
 	return dat
 
 //Faction parent. 'army_faction' to differentiate it from the actual basic faction code for antags
