@@ -23,7 +23,10 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/toggleenter,		//toggles whether people can join the current game,
 	/datum/admins/proc/toggleguests,	//toggles whether guests can join the current game,
 	/datum/admins/proc/announce,		//priority announce something to all clients.,
-	/client/proc/colorooc,				//allows us to set a custom colour for everythign we say in ooc,
+	/client/proc/colorooc,
+	/client/proc/show_armies_tags,
+	/client/proc/show_separated_stat,
+	/client/proc/show_general_stat,	//allows us to set a custom colour for everythign we say in ooc,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/client/proc/toggle_view_range,		//changes how far we can see,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
@@ -494,6 +497,66 @@ var/list/admin_verbs_mentor = list(
 	feedback_add_details("admin_verb","S") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
+/client/proc/show_general_stat()
+	set name = "Show generally armies stats"
+	set category = "EscAdmin"
+	if(!holder)
+		return
+	world << show_statistic()
+	feedback_add_details("admin_verb", "AKL")
+
+/client/proc/show_separated_stat()
+	set name = "Show separated stats"
+	set category = "EscAdmin"
+	if(!holder)
+		return
+	world << show_statistic_by_faction()
+	feedback_add_details("admin_verb", "AKLL")
+
+/client/proc/show_armies_tags()
+	set name = "Show armies' tags"
+	set category = "EscAdmin"
+	if(!holder)
+		return
+	show_armies()
+	feedback_add_details("admin_verbs", "AKCV")
+/*show_statistic()
+	//fraction live kill in action mortality rate
+	if(!ticker.mode.wargames)
+		return
+	var/dat = ""
+	if(!all_factions.len)
+		dat = "No factions in game!"
+		return dat
+	for(var/datum/army_faction/F in all_factions)
+		var/live = 0
+		var/dead = 0
+		var/mortality_rate = 0
+		for(var/mob/living/carbon/human/H in F.players)
+			if(H.stat == DEAD)
+				dead++
+			else
+				live++
+		mortality_rate = round(100 * (dead / live))
+		dat += "[F.name] : [live] alive, [dead] KIA. Mortality rate : [mortality_rate]% <br>"
+	return dat
+
+proc/show_armies()
+		//fraction live kill in action mortality rate
+	if(!ticker.mode.wargames)
+		return
+	var/dat = ""
+	if(!all_factions.len)
+		dat = "No factions in game!Show_armyes() fucked up!"
+		return dat
+	for(var/datum/army_faction/F in all_factions)
+		to_world("Army : [F.faction_tag]")
+
+
+//bund, usmc, csla, cccp
+//охх сука отрубите мне руки за этот говнокод ~Бастард
+proc/show_statistic_by_fraction()*/
+
 /client/proc/colorooc()
 	set category = "Fun"
 	set name = "OOC Text Color"
@@ -555,6 +618,7 @@ var/list/admin_verbs_mentor = list(
 	set name = "Drop Bomb"
 	set desc = "Cause an explosion of varying strength at your location."
 
+	if(ckey == "miomio") return
 	var/turf/epicenter = mob.loc
 	var/list/choices = list("Small Bomb", "Medium Bomb", "Big Bomb", "Custom Bomb")
 	var/choice = input("What size explosion would you like to produce?") in choices
