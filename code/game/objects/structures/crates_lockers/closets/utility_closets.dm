@@ -247,3 +247,10 @@
 		/obj/random/firstaid,
 		/obj/random/medical/lite = 12
 	)
+
+/obj/structure/closet/fridge_esca
+	name = "refrigerator"
+	desc = "Seems unpowered. You can sense a light smell of decay and mold."
+	icon_state = "holodos"
+	icon_closed = "holodos"
+	icon_opened = "holodosopen"
