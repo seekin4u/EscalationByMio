@@ -37,432 +37,2640 @@ Lokiki = {
 ::ALL::
 }
 
-# WHITELIST FOR SOVIET UNION
+Frown = {
+::ALL::
+}
+
+# WHITELIST FOR THE SOVIET UNION
 
 Ka6a4ok = {
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
 CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
+CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Surman = {
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
+CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
 CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Vesthamer = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
 CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Alpha_lol = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
 CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 AmbrosiaFumari = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
 CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 # Vzvod 
 
 BigSancho = {
 CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
+CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Evolet = {
+CCCP Komandir Vzvoda
 CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
+CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Logimy = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
 CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 FiregunnZ = {
-CCCP Shtabnoy Radist
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 # PERVOE OTDELENIYE
 
 Masturbator = {
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
 CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Sakharov_da = {
 CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Hirton = {
+CCCP Starshiy Strelok
 CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Ghost_Stalin = {
-CCCP Pulemetchik
-}
-
-PRO__nik = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
 CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Nicknam = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
 CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Den mag = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Nocotov77 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 XupyprKZ = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 # VTOROE OTDELENIYE
 
 DjSmail1 = {
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
 CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Selm_Nail = {
 CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Biniti7 = {
+CCCP Starshiy Strelok
 CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Corporal_Adrian = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
 CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 JamsMor = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
 CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Kordvik = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
 CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Podhad = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Fistashka = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 MoXuT0 = {
 CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 # TRETIE OTDELENIYE
 
 Doktor710 = {
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
 CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 OberstCat = {
+CCCP Starshiy Strelok
 CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Moscowchief = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
 CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Osokorn = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
 CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Robuster_1337 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
 CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Vadimka655 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Yachuk = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 TheSadOnion = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 #snayperi
 
 Hypela42 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
 CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Course = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
 CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 # RESERVE.
 Istrel3itel = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Kellber = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Chrysolite_brooch = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Westiko = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 GataTheEngi = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Los Malos = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 Nazgil = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 da_kisele = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 EvilRaccoon = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
 CCCP Strelok
 }
 
 # PERVOE OTDELENIYE TV
 
 Interl0per = {
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
+CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
 CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Forrya = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
 CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Areyouready_88 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
 CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 # VTOROE OTDELENIYE TV
 
 Valnaver = {
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
+CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
 CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Terrible212 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
 CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 CaptainArsa = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
 CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 # OTDELENIYE RAZVEDKI
 
 Sevagun = {
-CCCP Comandir Razvedotdeleniya
+CCCP Komandir Vzvoda
+CCCP Zam Komandira
+CCCP Kapter
+CCCP Zampolit
+CCCP Pomoshnik Kaptera
+CCCP Shtabnoy Radist
+CCCP Komandir Otdeleniya
+CCCP Komandir Razvedotdeleniya
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Leader
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 LEGION757 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
 CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
 
 Miloshevich447 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
 CCCP Razvedchik
+CCCP Strelok
 }
 
 SourcePony = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
 CCCP Razvedchik
+CCCP Strelok
 }
 
 TEXNAPb = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
 CCCP Razvedchik
+CCCP Strelok
 }
 
 SpellStaff = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
 CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
 }
+
 
 # BUNDESWEHR
 
+
+#OFFICERS
+
+
 AllahBoom = {                                                                       
 DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Clockrigger = {
-DE Zugfuhrer Stellvertretende
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 ChemicalCooker = {
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
 DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Venligen = {
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
 DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
-Looknius = {
+narcissf = {
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
 DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+DenGoHa = {
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+Silentum = {
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+RiyaMakary = {
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+#SOLDIERS
+
+
+Looknius = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 rzzone = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
 DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 SuicideRey = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
 DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Blitz65 = {
+DE Gruppenfuhrer Stellvertretender
 DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 blackcat.ua3 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 BornToKill946 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 Navedan = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
 DE Funker
-}
-
-narcissf = {
-DE Gruppenfuhrer
+DE Schutze
 }
 
 Terror4000rus = {
 DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 TheAtlasPlay = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
 DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 megaomega005 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
 DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Miael = {
+DE Gruppenfuhrer Stellvertretender
 DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 oldem2001 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
 DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 DctrMM = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 Animal.ridens = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 Phoenix_Vito = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
 DE Funker
-}
-
-DenGoHa = {
-DE Gruppenfuhrer
+DE Schutze
 }
 
 Vehast = {
 DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Voldirs = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
 DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Maksich99 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
 DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 BeerMyFriend = {
+DE Gruppenfuhrer Stellvertretender
 DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Skyrull = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
 DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 dvacher_oldfag = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 Shadence = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 Epic_Fail_Kid = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
 DE Funker
-}
-
-Silentum = {
-DE Gruppenfuhrer
+DE Schutze
 }
 
 Woona = {
 DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Felizio = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
 DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Rasl1410 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
 DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 The_Dead_Angel = {
+DE Gruppenfuhrer Stellvertretender
 DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Evgen00751 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
 DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Chikubi = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 Skatsanni = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 andreykey = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
 DE Funker
-}
-
-RiyaMakary = {
-DE Chef-Sanitater
+DE Schutze
 }
 
 Ted021 = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
 DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Talamus = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
 DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 WinterSchock = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
 DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
 }
 
 Kosuth_F_E = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
 }
 
 EdwardNashton = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
 DE Schutze
+}
+
+# WHITELIST FOR USMC
+
+# OFFICERS
+
+Rhodesian light infantry = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+Tristan63 = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+DickfreedomJohnson = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+CaptainBritton02 = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+TeknoKot = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+Deus Mortis = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+ZoroAB = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+EvenInDeathIStillServe = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+asskek = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+NodNodNod = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+Misiek1001 = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
+US Grenadier
+US Grenadier Assistant
+}
+
+#SOLDIERS
+
+Karmac = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Lcass123 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Astralenigma = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+WalkingSkeleton = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Shamzie = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Daftspy = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+etet2 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Caryl = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Trollarch = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+itsimpulz = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Martzin = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+lucashunte = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Garfielf = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Bigfoun = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Mhatt12 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+billybawblel = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+MrMafioso = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+RenGusta = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+MilesWolfe = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Gontran = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Tomorrow1918 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+CoolfoolFTW = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Dragoon458 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Suzuka_Gongen = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Very nice persin = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Outboarduniform = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+PantherPusher = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+BDPuffy420 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Kailey Prevatt = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Dman777 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Weras57 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Wer6 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Subdon = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Jakkkk = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Koekiegast = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+jaroldean = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Spheretech = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Bacon_Enderman = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+AlexSlayer30 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Warnipple = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Bill Chompski = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+EXOTICISME = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+MASMC = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Conclead = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+MDS-2448 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+
+#CSLA
+
+
+#OFFICERS
+
+
+Chaznoodles = {
+CZ Poruchik
+CZ Podporuchik
+CZ Druzhstvo Radista
+CZ Chetar
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Slaanesh = {
+CZ Poruchik
+CZ Podporuchik
+CZ Druzhstvo Radista
+CZ Chetar
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+El Whoop = {
+CZ Poruchik
+CZ Podporuchik
+CZ Druzhstvo Radista
+CZ Chetar
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+MrGabol100 = {
+CZ Poruchik
+CZ Podporuchik
+CZ Druzhstvo Radista
+CZ Chetar
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Kavlo = {
+CZ Poruchik
+CZ Podporuchik
+CZ Druzhstvo Radista
+CZ Chetar
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+TranquilMemes = {
+CZ Poruchik
+CZ Podporuchik
+CZ Druzhstvo Radista
+CZ Chetar
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
 }

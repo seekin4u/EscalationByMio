@@ -35,7 +35,7 @@
 
 
 /datum/job/escalation/csla/platradio
-	title = "CZ Podporuchik1"
+	title = "CZ Druzhstvo Radista"
 	name = "Druzhstvo Radista"
 	english_name = "Platoon Radio"
 	enabled = 1
@@ -384,7 +384,7 @@
 
 /datum/job/escalation/cccp/reconcom
 	title = "CCCP Comandir Razvedotdeleniya"
-	name = "Comandir Razvedotdeleniya"
+	name = "Komandir Razvedotdeleniya"
 	english_name = "Scout Team Commander"
 	enabled = 1
 	rank_prefix = "Serzh." //Ryadovoy
