@@ -215,13 +215,23 @@
 	nutriment_factor = 2
 	color = "#899613"
 
-/datum/reagent/nutriment/sprinkles
-	name = "Sprinkles"
-	id = "sprinkles"
-	description = "Multi-colored little bits of sugar, commonly found on donuts. Loved by cops."
-	taste_description = "childhood whimsy"
-	nutriment_factor = 1
-	color = "#FF00FF"
+/datum/reagent/nutriment/buckwheat
+	name = "Buckwheat"
+	id = "buckwheat"
+	description = "That's the food loved  by the all Soviet Union. Because they didn't got anything else."
+	taste_description = "buckwheat"
+	taste_mult = 2
+	nutriment_factor = 0.8
+	color = "#302000"
+
+/datum/reagent/nutriment/pearlbarley
+	name = "Pearl barley"
+	id = "pearlbarley"
+	description = "Worse than the buckwheat."
+	taste_description = "ground"
+	taste_mult = 2
+	nutriment_factor = 0.6
+	color = "#302000"
 
 /datum/reagent/nutriment/mint
 	name = "Mint"

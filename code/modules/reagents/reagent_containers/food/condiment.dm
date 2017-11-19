@@ -163,3 +163,32 @@
 	New()
 		..()
 		reagents.add_reagent("flour", 30)
+
+
+/obj/item/weapon/reagent_containers/food/condiment/sovietsugar
+	name = "'Aeroflot' sugar pack"
+	desc = "That's the sugar! Has a picture of the airplane on it"
+	icon_state = "aeroflotsugar"
+	icon = 'icons/obj/food.dmi'
+	item_state = null
+	possible_transfer_amounts = "1;5"
+	amount_per_transfer_from_this = 1
+	volume = 5
+	New()
+		..()
+		reagents.add_reagent("sugar", 5)
+
+/obj/item/weapon/reagent_containers/food/condiment/sovietsugar/zheldor
+	name = "'Zheleznaya doroga' sugar pack"
+	desc = "That's the sugar! Has a picture of the railway station on it"
+	icon_state = "zheldorsugar"
+
+/obj/item/weapon/reagent_containers/food/condiment/sovietsugar/morflot
+	name = "'Morflot' sugar pack"
+	desc = "That's the sugar! Has a picture of the sun and a seagull on it"
+	icon_state = "morflotsugar"
+
+/obj/item/weapon/reagent_containers/food/condiment/sovietsugar/tsukor
+	name = "'Tsukor'"
+	desc = "That's the sugar! But you are not sure."
+	icon_state = "tsukor"
