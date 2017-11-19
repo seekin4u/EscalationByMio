@@ -125,7 +125,7 @@
 		..() // -> item/attackby()
 		return
 
-	if(istype(W, /obj/item/weapon/material/knife/bayonet))
+	if(istype(W, /obj/item/weapon/material/knife))
 		if(!opened)
 			opened = 1
 			to_chat(user, "You opened a [src] with your knife")
