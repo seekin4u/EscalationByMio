@@ -3035,6 +3035,8 @@
 	pizza = new /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza(src)
 	boxtag = "Meatlover's Supreme"
 
+
+
 /obj/item/weapon/reagent_containers/food/snacks/dionaroast
 	name = "roast diona"
 	desc = "It's like an enormous, leathery carrot. With an eye."
@@ -3307,13 +3309,12 @@
 	icon = 'icons/obj/food.dmi'
 	filling_color = "#A66829"
 	center_of_mass = list("x"=15, "y"=12)
-	closed = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/condensedmilk
 	name = "condensed milk"
 	desc = "Tasty tasty sguschenka!"
 	icon_state = "condencedmilk"
-	trash = /obj/item/trash/tincan/condensedmilk
+//	trash = /obj/item/trash/tincan/condensedmilk
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/condensedmilk/New()
 	..()
@@ -3325,7 +3326,7 @@
 	name = "stew"
 	desc = "That's the so-called 'tushenka'."
 	icon_state = "wpstew2"
-	trash = /obj/item/trash/wpstew2_trash
+//	trash = /obj/item/trash/wpstew2_trash
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/stew/New()
 	..()
@@ -3337,7 +3338,7 @@
 	name = "stew with pearl barley"
 	desc = "Now with 'perlovka'!."
 	icon_state = "wpstew1"
-	trash = /obj/item/trash/tincan/wpstew1_trash
+//	trash = /obj/item/trash/tincan/wpstew1_trash
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/stewpearlbarley/New()
 	..()
@@ -3349,7 +3350,7 @@
 	name = "stew with buckwheat"
 	desc = "That's the 'grechka'. Still better than 'perlovka'!"
 	icon_state = "wpstew3"
-	trash = /obj/item/trash/tincan/wpstew3_trash
+//	trash = /obj/item/trash/tincan/wpstew3_trash
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/stewbuckwheat/New()
 	..()
@@ -3361,9 +3362,8 @@
 	name = "galetes"
 	desc = "That's the pack of soviet galettes. Use this instead of bread, comrade"
 	icon_state = "galets"
-	trash = /obj/item/trash/cookie_trash
+//	trash = /obj/item/trash/cookie_trash
 	w_class = 1
-	wrapped = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/crackers_sov/New()
 	..()
@@ -3378,9 +3378,9 @@
 	name = "main dish"
 	desc = "That's the main dish of the MRE. Contains some sort of grain with the some sort of meat"
 	icon_state = "maindish"
-	trash = /obj/item/trash/frp
+//	trash = /obj/item/trash/frp
 	filling_color = "#A66829"
-	wrapped = 1
+//	wrapped = 1
 	center_of_mass = list("x"=15, "y"=12)
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/New()
@@ -3431,9 +3431,9 @@
 	name = "milk chocolate bar"
 	desc = "That's the bar of tasty chocolate"
 	icon_state = "chocolatebarpack"
-	trash = /obj/item/trash/chocolate
+//	trash = /obj/item/trash/chocolate
 	w_class = 1
-	wrapped = 1
+//	wrapped = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/armychocolate/New()
 	..()
@@ -3445,9 +3445,9 @@
 	name = "burrito"
 	desc = "That's the packaged mexican food."
 	icon_state = "chocolatebarpack"
-	trash = /obj/item/trash/plasticpack
+//	trash = /obj/item/trash/plasticpack
 	w_class = 1
-	wrapped = 1
+//	wrapped = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/burrito/New()
 	..()
@@ -3459,9 +3459,9 @@
 	name = "hotdog"
 	desc = "Bark!"
 	icon_state = "hot_dogs"
-	trash = /obj/item/trash/plasticpack
+//	trash = /obj/item/trash/plasticpack
 	w_class = 1
-	wrapped = 1
+//	wrapped = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/hotdog/New()
 	..()
@@ -3473,9 +3473,9 @@
 	name = "potato patty"
 	desc = "That's the packaged potato patty."
 	icon_state = "potatopatty"
-	trash = /obj/item/trash/plasticpack
+//	trash = /obj/item/trash/plasticpack
 	w_class = 1
-	wrapped = 1
+//	wrapped = 1
 	nutriment_desc = list("raw potato" = 3)
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/potatopatty/New()
@@ -3487,9 +3487,9 @@
 	name = "frankfurters"
 	desc = "That's the packaged traditional German dish."
 	icon_state = "frankfurters"
-	trash = /obj/item/trash/plasticpack
+//	trash = /obj/item/trash/plasticpack
 	w_class = 1
-	wrapped = 1
+//	wrapped = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/frankfurters/New()
 	..()
@@ -3501,9 +3501,9 @@
 	name = "beef patty"
 	desc = "That's the packaged patty. Contains beef!"
 	icon_state = "beefpatty"
-	trash = /obj/item/trash/plasticpack
+//	trash = /obj/item/trash/plasticpack
 	w_class = 1
-	wrapped = 1
+//	wrapped = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/meatpatty/New()
 	..()
@@ -3515,9 +3515,9 @@
 	name = "crackers"
 	desc = "That's the pack of american crackers. Use this instead of bread."
 	icon_state = "galets"
-	trash = /obj/item/trash/chocolate
+//	trash = /obj/item/trash/chocolate
 	w_class = 1
-	wrapped = 1
+//	wrapped = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/crackers/New()
 	..()
