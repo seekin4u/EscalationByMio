@@ -13,6 +13,7 @@
 	var/dry = 0
 	var/nutriment_amt = 0
 	var/list/nutriment_desc = list("food" = 1)
+	var/opened = 0
 	center_of_mass = "x=16;y=16"
 	w_class = ITEM_SIZE_SMALL
 
@@ -40,6 +41,10 @@
 	return
 
 /obj/item/weapon/reagent_containers/food/snacks/attack(mob/M as mob, mob/user as mob, def_zone)
+	if(!opened)
+		to_chat(user, "You can't eat [src], dummy, it's closed!")
+		return
+
 	if(!reagents.total_volume)
 		to_chat(user, "<span class='danger'>None of [src] left!</span>")
 		user.drop_from_inventory(src)
@@ -120,8 +125,18 @@
 		..() // -> item/attackby()
 		return
 
+	if(istype(W, /obj/item/weapon/material/knife/bayonet))
+		if(!opened)
+			opened = 1
+			to_chat(user, "You opened a [src] with your knife")
+			return
+
 	// Eating with forks
 	if(istype(W,/obj/item/weapon/material/kitchen/utensil))
+		if(!opened)
+			to_chat(user, "You can't eat [src], dummy, it's closed!")
+			return
+
 		var/obj/item/weapon/material/kitchen/utensil/U = W
 		if(U.scoop_food)
 			if(!U.reagents)
@@ -158,6 +173,10 @@
 			if (W.w_class >= src.w_class || is_robot_module(W))
 				return
 
+			if(!opened)
+				to_chat(user, "You can't eat [src], dummy, it's closed!")
+				return
+
 			to_chat(user, "<span class='warning'>You slip \the [W] inside \the [src].</span>")
 			user.drop_from_inventory(W, src)
 			add_fingerprint(user)
@@ -165,6 +184,9 @@
 			return
 
 		if (has_edge(W))
+			if(!opened)
+				to_chat(user, "You can't eat [src], dummy, it's closed!")
+				return
 			if (!can_slice_here)
 				to_chat(user, "<span class='warning'>You cannot slice \the [src] here! You need a table or at least a tray to do it.</span>")
 				return
