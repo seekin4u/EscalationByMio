@@ -1233,6 +1233,121 @@ CCCP Razvedchik
 CCCP Strelok
 }
 
+Crab 2.0 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+qwaszx000 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+Coltrane97 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+Cherniks = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+Xodok_96 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+GospodinPeysman = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+
 
 # BUNDESWEHR
 
@@ -1767,6 +1882,40 @@ DE Funker
 DE Schutze
 }
 
+Henryh Necromancer = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+Walfanger = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+SecureContainProtect-SCP = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+  
 # WHITELIST FOR USMC
 
 # OFFICERS
@@ -2578,6 +2727,84 @@ US Grenadier
 US Grenadier Assistant
 }
 
+Unemployed nibber = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Anchvs = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Mertyr = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Economicairborn = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+thereptilewithin = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+desolane900 = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
 
 #CSLA
 
@@ -2674,3 +2901,450 @@ CZ Nadstrelec
 CZ Sanitar
 CZ Strelec
 }
+
+
+#SOLDIERS
+
+Sully_the_Sailor = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+FalloutDud3 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Keyword22 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Foxeye = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+InvalidPoint = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Fonzie = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+AyBOss = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Anibalvianaregojunior = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Benblu = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+UnarmedBastard = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+TheDonkified = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Kiroking = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Jack354yo = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Mook476 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Ghostdex = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Scivir = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Poik12 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Squinteth = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Casany = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Imperator_Titan = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+complicatedguy = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+IzayaChan = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Flerpin = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Amaxin = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+RoboticPotato = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Nope22 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Jay Burns = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+The Yoker = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+LemonBird = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+ChurchGrimm = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Jam2010 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Aredal = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Dawidoe = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Vuoristo = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Sp00n_exe = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+KillingSpree13 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+}
+
+Laughing Rabbit = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+} 
