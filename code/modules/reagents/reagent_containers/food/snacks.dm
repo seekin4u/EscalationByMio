@@ -3377,7 +3377,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish
 	name = "main dish"
 	desc = "That's the main dish of the MRE. Contains some sort of grain with the some sort of meat"
-	icon_state = "maindish"
+	icon_state = "mre3"
 //	trash = /obj/item/trash/frp
 	filling_color = "#A66829"
 //	wrapped = 1
@@ -3391,7 +3391,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/beef
 	desc = "That's the main dish of the MRE. Contains beef"
-	icon_state = "maindish-beef"
+	icon_state = "mre3"
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/beef/New()
 	..()
@@ -3401,7 +3401,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/vegan
 	desc = "That's the main dish of the MRE. Contains vegetables, jeez!"
-	icon_state = "maindish-salad"
+	icon_state = "mre1"
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/vegan/New()
 	..()
@@ -3410,7 +3410,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/lasagna
 	desc = "That's the main dish of the MRE. Contains lasagna"
-	icon_state = "maindish-lasagna"
+	icon_state = "mre3"
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/lasagna/New()
 	..()
@@ -3420,7 +3420,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/breads
 	desc = "That's the main dish of the MRE. Contains nutrious breads"
-	icon_state = "maindish-bread"
+	icon_state = "mre2"
 
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/breads/New()
 	..()
@@ -3430,7 +3430,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/armychocolate
 	name = "milk chocolate bar"
 	desc = "That's the bar of tasty chocolate"
-	icon_state = "chocolatebarpack"
+	icon_state = "mre2"
 //	trash = /obj/item/trash/chocolate
 	w_class = 1
 //	wrapped = 1
@@ -3444,7 +3444,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/burrito
 	name = "burrito"
 	desc = "That's the packaged mexican food."
-	icon_state = "chocolatebarpack"
+	icon_state = "mre2"
 //	trash = /obj/item/trash/plasticpack
 	w_class = 1
 //	wrapped = 1
@@ -3458,7 +3458,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/hotdog
 	name = "hotdog"
 	desc = "Bark!"
-	icon_state = "hot_dogs"
+	icon_state = "mre2"
 //	trash = /obj/item/trash/plasticpack
 	w_class = 1
 //	wrapped = 1
@@ -3472,7 +3472,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/potatopatty
 	name = "potato patty"
 	desc = "That's the packaged potato patty."
-	icon_state = "potatopatty"
+	icon_state = "mre2"
 //	trash = /obj/item/trash/plasticpack
 	w_class = 1
 //	wrapped = 1
@@ -3486,7 +3486,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/frankfurters
 	name = "frankfurters"
 	desc = "That's the packaged traditional German dish."
-	icon_state = "frankfurters"
+	icon_state = "mre1"
 //	trash = /obj/item/trash/plasticpack
 	w_class = 1
 //	wrapped = 1
@@ -3500,7 +3500,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/armymaindish/meatpatty
 	name = "beef patty"
 	desc = "That's the packaged patty. Contains beef!"
-	icon_state = "beefpatty"
+	icon_state = "mre1"
 //	trash = /obj/item/trash/plasticpack
 	w_class = 1
 //	wrapped = 1
