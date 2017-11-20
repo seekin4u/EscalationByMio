@@ -99,25 +99,6 @@ CCCP Razvedchik
 CCCP Strelok
 }
 
-Vesthamer = {
-CCCP Starshiy Strelok
-CCCP Radiotelefonist
-CCCP Granatometchik
-CCCP Pomoshnik Granatometchika
-CCCP Pulemetchik
-CCCP Snayper
-CCCP Sanitar
-CCCP Glavvrach
-CCCP HWS Gunner
-CCCP HWS Assistant
-CCCP Vzvodny Pulemetchik
-CCCP Zamkomandira Razvedotdeleniya
-CCCP Razvedchik-Radist
-CCCP Razvedchik-Snayper
-CCCP Razvedchik
-CCCP Strelok
-}
-
 Alpha_lol = {
 CCCP Starshiy Strelok
 CCCP Radiotelefonist
@@ -801,6 +782,7 @@ CCCP Strelok
 }
 
 # RESERVE.
+
 Istrel3itel = {
 CCCP Starshiy Strelok
 CCCP Radiotelefonist
@@ -1347,6 +1329,63 @@ CCCP Razvedchik
 CCCP Strelok
 }
 
+
+Pliiz = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+AlienLifeForm = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+Fert = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
 
 
 # BUNDESWEHR
@@ -1905,6 +1944,28 @@ DE Schutze
 }
 
 SecureContainProtect-SCP = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+Vesthamer = {
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+Ziz11 = {
 DE Gruppenfuhrer Stellvertretender
 DE Maschinengewehrschutze
 DE Grenadier
@@ -2805,6 +2866,19 @@ US Grenadier
 US Grenadier Assistant
 }
 
+WilcoDoe = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
 
 #CSLA
 
@@ -3338,6 +3412,18 @@ CZ Strelec
 }
 
 Laughing Rabbit = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+} 
+
+Yacobpo157Laughing Rabbit = {
 CZ Druzhstvo Radista
 CZ Subchetar
 CZ Delostrelec
