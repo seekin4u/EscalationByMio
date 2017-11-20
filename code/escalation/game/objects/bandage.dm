@@ -60,7 +60,7 @@
 		BP.forceMove(src)
 		bandages.Add(BP)
 		update_icon()
-		to_chat(user, "<span class='notice'>You put a gauze back to opened pack.</span>") //maybe not correct but maybe yes
+		to_chat(user, "<span class='notice'>You put a gauze back to the opened pack.</span>") //maybe not correct but maybe yes
 
 /obj/item/weapon/bandage/nato
 	name = "Pack of gauze"

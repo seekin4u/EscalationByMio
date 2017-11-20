@@ -212,6 +212,37 @@
 	key_type = /obj/item/clothing/mask/smokable/cigarette/menthol
 	startswith = list(/obj/item/clothing/mask/smokable/cigarette/menthol = 6)
 
+/obj/item/weapon/storage/fancy/cigarettes/luckystrikegreen
+	name = "pack of Lucky Strike Green"
+	desc = "That's the mentol Lucky Strike's."
+	icon_state = "lsgreen"
+	item_state = "Dpacket"
+
+	key_type = /obj/item/clothing/mask/smokable/cigarette/menthol
+	startswith = list(/obj/item/clothing/mask/smokable/cigarette/menthol = 6)
+
+/obj/item/weapon/storage/fancy/cigarettes/luckystrikered
+	name = "pack of Lucky Strike Red"
+	desc = "That's the red Lucky Strike's."
+	icon_state = "lspacket"
+	item_state = "Dpacket"
+
+/obj/item/weapon/storage/fancy/cigarettes/yava
+	name = "pack of Yava"
+	desc = "That's the Yava."
+	icon_state = "yava"
+	item_state = "Dpacket"
+
+/obj/item/weapon/storage/fancy/cigarettes/prima
+	name = "pack of Prima"
+	desc = "Horrible and without filter. But they're cheap, by the way!"
+	icon_state = "prima"
+	item_state = "Dpacket"
+
+/obj/item/weapon/storage/fancy/cigarettes/prima/New()
+	..()
+	fill_cigarre_package(src,list("fuel" = 2))
+
 /obj/item/weapon/storage/fancy/cigarettes/carcinomas
 	name = "pack of Carcinoma Angels"
 	desc = "This unknown brand was slated for the chopping block, until they were publicly endorsed by an old Earthling gonzo journalist. The rest is history. They sell a variety for cats, too. Yes, actual cats."
