@@ -27,11 +27,11 @@
 	body_parts_covered = HEAD
 	armor = list(melee = 35, bullet = 5, laser = 30,energy = 25, bomb = 15, bio = 0, rad = 0)
 
-/obj/item/clothing/head/helmet/escalation/csla/ush
-	name = "Ushanka"
-	desc = "Keeps your brain warm."
+/obj/item/clothing/head/helmet/escalation/sa/ushofficer
+	name = "Czechoslovak ushanka"
+	desc = "Keeps your brain warm, tovarish officer, and makes you feel special. Made of natural fur."
 	icon_state = "sa-ush-officer"
-	item_state = "csla-ush"
+	item_state = "sa-ush-officer-up"
 
 	body_parts_covered = HEAD
 	armor = list(melee = 35, bullet = 5, laser = 30,energy = 25, bomb = 15, bio = 0, rad = 0)
@@ -43,7 +43,7 @@
 	item_state = "sa"
 
 	body_parts_covered = HEAD
-	armor = list(melee = 30, bullet = 8, laser = 30,energy = 25, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 30, bullet = 5, laser = 30,energy = 25, bomb = 15, bio = 0, rad = 0)
 
 /obj/item/clothing/head/helmet/escalation/ssh68
 	name = "SSh-68 Helmet"
@@ -82,10 +82,10 @@
 	armor = list(melee = 35, bullet = 10, laser = 30,energy = 25, bomb = 20, bio = 0, rad = 0)
 
 /obj/item/clothing/head/helmet/escalation/sa/ush
-	name = "Ushanka"
-	desc = "Keeps your brain warm, tovarish."
+	name = "Soviet ushanka"
+	desc = "Keeps your brain warm, tovarish. Made of syntetic fur."
 	icon_state = "sa-ush"
-	item_state = "sa-ush"
+	item_state = "sa-ush-up"
 
 	body_parts_covered = HEAD
 	armor = list(melee = 35, bullet = 5, laser = 30,energy = 25, bomb = 15, bio = 0, rad = 0)

@@ -324,14 +324,17 @@
 	projectile_type = /obj/item/projectile/bullet/mk19_40x53mm/pow
 
 /obj/item/ammo_casing/rpg_missile
+	name = "RG-7"
 	desc = "A regular morkovka for rpg"
 	caliber = "7p16"
 	icon_state = "rg-7"
 	projectile_type = /obj/item/projectile/bullet/rgprocket
 
 /obj/item/ammo_casing/rpg_missile/rg7
+	name = "RG-7"
 	desc = "RG-7 missile. Fucking deadly, don't shoout yourself, Abu Hajaar!"
 
 /obj/item/ammo_casing/rpg_missile/og7
+	name = "OG-7"
 	desc = "OG-7"
 	icon_state = "og-7"
