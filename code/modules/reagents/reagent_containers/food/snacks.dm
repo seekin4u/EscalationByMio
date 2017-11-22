@@ -1,3 +1,4 @@
+
 //Food items that are eaten normally and don't leave anything behind.
 /obj/item/weapon/reagent_containers/food/snacks
 	name = "snack"
@@ -21,6 +22,26 @@
 	..()
 	if(nutriment_amt)
 		reagents.add_reagent("nutriment",nutriment_amt,nutriment_desc)
+
+/obj/item/weapon/reagent_containers/food/snacks/update_icon()
+	..()
+	if(!opened)
+		icon_state = "[initial(icon_state)]_closed"
+
+	else
+		icon_state = initial(icon_state)
+
+	// make normal shit in future
+
+/obj/item/weapon/reagent_containers/food/snacks/proc/OpenFood()
+	opened = TRUE
+	update_icon()
+	return TRUE
+
+/obj/item/weapon/reagent_containers/food/snacks/proc/CloseFood()
+	opened = FALSE
+	update_icon()
+	return TRUE
 
 	//Placeholder for effect that trigger on eating that aren't tied to reagents.
 /obj/item/weapon/reagent_containers/food/snacks/proc/On_Consume(var/mob/M)
@@ -127,7 +148,7 @@
 
 	if(istype(W, /obj/item/weapon/material/knife))
 		if(!opened)
-			opened = 1
+			OpenFood()
 			to_chat(user, "You opened a [src] with your knife")
 			return
 
