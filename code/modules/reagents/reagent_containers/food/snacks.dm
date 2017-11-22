@@ -13,7 +13,7 @@
 	var/dry = 0
 	var/nutriment_amt = 0
 	var/list/nutriment_desc = list("food" = 1)
-	var/opened = 0
+	var/opened = 1
 	center_of_mass = "x=16;y=16"
 	w_class = ITEM_SIZE_SMALL
 
@@ -3307,6 +3307,7 @@
 	name = "tin can"
 	desc = "That's should now be here!"
 	icon = 'icons/obj/food.dmi'
+	opened = 0
 	filling_color = "#A66829"
 	center_of_mass = list("x"=15, "y"=12)
 
@@ -3314,6 +3315,7 @@
 	name = "condensed milk"
 	desc = "Tasty tasty sguschenka!"
 	icon_state = "condencedmilk"
+	opened = 0
 //	trash = /obj/item/trash/tincan/condensedmilk
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/condensedmilk/New()
@@ -3326,6 +3328,7 @@
 	name = "stew"
 	desc = "That's the so-called 'tushenka'."
 	icon_state = "wpstew2"
+	opened = 0
 //	trash = /obj/item/trash/wpstew2_trash
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/stew/New()
@@ -3338,6 +3341,7 @@
 	name = "stew with pearl barley"
 	desc = "Now with 'perlovka'!."
 	icon_state = "wpstew1"
+	opened = 0
 //	trash = /obj/item/trash/tincan/wpstew1_trash
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/stewpearlbarley/New()
@@ -3350,6 +3354,7 @@
 	name = "stew with buckwheat"
 	desc = "That's the 'grechka'. Still better than 'perlovka'!"
 	icon_state = "wpstew3"
+	opened = 0
 //	trash = /obj/item/trash/tincan/wpstew3_trash
 
 /obj/item/weapon/reagent_containers/food/snacks/tincan/stewbuckwheat/New()
