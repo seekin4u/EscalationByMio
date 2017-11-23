@@ -18,7 +18,8 @@ CCCP Strelok
 # ADMINISTRATION
 
 JohnTheBastard = {
-::ALL::
+CCCP Pulemetchik
+CCCP Pomoshnik Granatometchika
 }
 
 Miomio = {

@@ -86,3 +86,12 @@
 
 	if(rank in aviable_roles)
 		return 1
+
+//see professions titles like CCCP Strelok etc
+//replace and make a var in armies datum like isWhitelisted and then just seek thro all job datums and this var
+var/global/list/protected_from_whitelist = list(
+	"CCCP Strelok",\
+	"CZ Strelec", \
+	"USMC Rifleman", \
+	"DE Schutze"
+	)

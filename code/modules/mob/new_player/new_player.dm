@@ -93,7 +93,7 @@
 			slot_index++
 			if(istype(J,/datum/job/escalation))
 				var/datum/job/escalation/A = J
-				if(!check_player_in_whitelist(src.key, A.title))
+				if(!check_player_in_whitelist(src.key, A.title) && !(A.title in protected_from_whitelist/*see escalation_whitelist.dm*/))
 					out += "<P>[A.name] - [A.english_name] (NOT IN WHITELIST)</P>"
 				else
 					out += "<P><a href='byond://?src=\ref[src];set_team_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</A></P>"
@@ -130,7 +130,7 @@
 
 			if(istype(S, /datum/job/escalation))
 				var/datum/job/escalation/A = S
-				if(!check_player_in_whitelist(src.key, A.title))
+				if(!check_player_in_whitelist(src.key, A.title)  && !(A.title in protected_from_whitelist/*see escalation_whitelist.dm*/))
 					out += "<p>[A.name] - [A.english_name] (NOT IN WHITELIST)</p>"
 				else
 					out += "<p><a href='byond://?src=\ref[src];set_fireteam_job=[slot_index]'>[A.name] - [A.english_name] (OPEN)</a></p>"
