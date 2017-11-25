@@ -192,7 +192,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c545x39m
 	magazine_type = /obj/item/ammo_magazine/c545x39m
 	one_hand_penalty = 2
-	accuracy = 1
+	accuracy = 2
 	fire_delay = 2
 
 	wielded_item_state = "aks-wielded"
@@ -280,7 +280,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c556x45m
 	magazine_type = null
 	one_hand_penalty = 4
-	accuracy = 2
+	accuracy = 3
 	fire_delay = 3
 
 	wielded_item_state = "m16-wielded"
@@ -779,7 +779,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c556x45m
 	magazine_type = null
 	one_hand_penalty = 4
-	accuracy = 2
+	accuracy = 3
 	fire_delay = 1.7
 	automatic = 0
 
@@ -869,7 +869,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c556x45m
 	magazine_type = null
 	one_hand_penalty = 4
-	accuracy = 2
+	accuracy = 3
 	fire_delay = 1.7
 
 	wielded_item_state = "m16gl-wielded"
@@ -1217,7 +1217,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
 	magazine_type = null
 	one_hand_penalty = 5
-	accuracy = 6
+	accuracy = 3
 	fire_delay = 5
 	wielded_item_state = "g3sg1-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
