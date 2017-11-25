@@ -23,6 +23,8 @@
 	if(nutriment_amt)
 		reagents.add_reagent("nutriment",nutriment_amt,nutriment_desc)
 
+	update_icon()
+
 /obj/item/weapon/reagent_containers/food/snacks/update_icon()
 	..()
 	if(!opened)
