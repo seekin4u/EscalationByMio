@@ -313,21 +313,21 @@ var/list/ranks_prefixes = list(\
 
 
 	"Zugfuhrer" = "Haupt.", \
-	"Zugfuhrer Stellvertretender" = "Oberleyt.", \
+	"Zugfuhrer Stellvertretender" = "Oberleut.", \
 	"Zug Funker" = "Stabsgef.", \
 	"Gruppenfuhrer" = "Hauptf.", \
 	"Gruppenfuhrer Stellvertretender" = "Unter.", \
 	"Maschinengewehrschutze" = "Obstabsgef.", \
 	"Grenadier" = "Stabsgef.", \
-	"Grenadier Assistent" = "Sold.", \
-	"Schutze" = "Sold.", \
+	"Grenadier Assistent" = "Scht.", \
+	"Schutze" = "Scht.", \
 	"Chef-Sanitater" = "Feldw.", \
 	"Sanitater" = "Stabsgef.", \
 	"Scharfschutze" = "Gefr.", \
 	"Funker" = "Gefr.", \
 
 
-	"Platoon Leader" = "LT.", \
+	"Platoon Leader" = "2Lt.", \
 	"Platoon Leader's Deputy" = "SSgt.", \
 	"Radio Telegraph Operator" = "Cpl.", \
 	"Squad Leader" = "Sgt.", \
@@ -336,7 +336,7 @@ var/list/ranks_prefixes = list(\
 	"Machinegunner" = "PFC.", \
 	"Rifleman" = "PFC.", \
 	"Corpsman" = "PFC.", \
-	"Designated Marksman" = "PFC.", \
+	"Designated Marksman" = "LCpl.", \
 	"Surgeon" = "LT.", \
 	"Head Medic" = "2ndLT.", \
 	"HWS Commander" = "Sgt.", \

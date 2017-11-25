@@ -111,6 +111,7 @@
 	else
 		if(ending == "!")
 			verb=pick("exclaims","shouts","yells")
+			{font-weight: bold;}
 		else if(ending == "?")
 			verb="asks"
 
