@@ -75,10 +75,9 @@
 	var/gibbed_anim = "gibbed-h"
 	var/dusted_anim = "dust-h"
 	var/death_sound
-	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
-	var/knockout_message = "has been knocked unconscious!"
-	var/halloss_message = "slumps to the ground, too weak to continue fighting."
-	var/halloss_message_self = "You're in too much pain to keep going..."
+	var/knockout_message = "falls over."
+	var/halloss_message = "falls over."
+	var/halloss_message_self = "You struggle with the horrible pain."
 
 	var/spawns_with_stack = 0
 	// Environment tolerance/life processes vars.
@@ -255,8 +254,8 @@
 		if(FEMALE)
 			t_him = "her"
 
-	H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
-					"<span class='notice'>You hug [target] to make [t_him] feel better!</span>")
+	H.visible_message("<span class='notice'>[H] hugs [target].</span>", \
+					"<span class='notice'>You hug [target].</span>")
 
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)

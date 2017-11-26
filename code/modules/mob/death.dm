@@ -47,7 +47,7 @@
 		if(src)			qdel(src)
 
 
-/mob/proc/death(gibbed,deathmessage="seizes up and falls limp...")
+/mob/proc/death(gibbed,deathmessage="blasts into a shower of gore.")
 
 	if(stat == DEAD)
 		return 0
@@ -89,5 +89,5 @@
 
 	if(ticker && ticker.mode)
 		ticker.mode.check_win()
-	to_chat(src,"<span class='deadsay'>You are dead.</span>")
+	to_chat(src,"<span class='deadsay'>You've died.</span>")
 	return 1
