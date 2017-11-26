@@ -75,6 +75,7 @@
 	var/gibbed_anim = "gibbed-h"
 	var/dusted_anim = "dust-h"
 	var/death_sound
+	var/death_message = "makes a disgusting sound."
 	var/knockout_message = "falls over."
 	var/halloss_message = "falls over."
 	var/halloss_message_self = "You struggle with the horrible pain."
