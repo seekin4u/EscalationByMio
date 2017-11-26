@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/projectile/automatic/ak74
 	name = "AK-74"
-	desc = "A standard-issue Soviet Army combat rifle."
+	desc = "A standard-issue Soviet Army combat rifle. Chambers 5.45x39 rounds."
 	icon_state = "ak74"
 	item_state = "ak74"
 	w_class = 5
@@ -41,7 +41,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 	..()
@@ -62,7 +62,7 @@
 		icon_state = "ak74-empty"
 
 /obj/item/weapon/gun/projectile/automatic/ak74/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -71,7 +71,7 @@
 
 
 /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet()
-	set name = "Remove bayonet"
+	set name = "Detach Bayonet"
 	set category = "Object"
 	set popup_menu = 1
 	set src in usr
@@ -83,12 +83,12 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You detach the bayonet from the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/ak74/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/ak74/black
-	desc = "AK-74 with polymer kit and dim finish."
+	desc = "AK-74 with polymer kit and dim finish. Chambers 5.45x39 rounds."
 	icon_state = "ak74black"
 
 /obj/item/weapon/gun/projectile/automatic/ak74/black/update_icon()
@@ -101,7 +101,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl
 	name = "AK-74"
-	desc = "A standard-issue Soviet Army combat rifle with a GP-25 launcher attached to it."
+	desc = "A standard-issue Soviet Army combat rifle with a GP-25 launcher attached. Chambers 5.45x39 rounds."
 	icon_state = "ak74gl"
 	item_state = "ak74gl"
 	w_class = 5
@@ -163,16 +163,16 @@
 		icon_state = "ak74gl-empty"
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl/verb/set_gp()
-	set name = "Granade launcher"
+	set name = "Grenade Launcher"
 	set category = "Object"
 	set src in usr
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare the [launcher.name]." : " take your gun back."]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -181,7 +181,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/aks74
 	name = "AKS-74"
-	desc = "A lighter version of the standard-issue Soviet Army combat rifle."
+	desc = "A lighter version of the standard-issue Soviet Army combat rifle. Chambers 5.45x39 rounds."
 	icon_state = "aks74"
 	item_state = "aks"
 	w_class = 4
@@ -222,7 +222,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet
 		update_icon()
 	..()
@@ -244,7 +244,7 @@
 		icon_state = "aks74-empty"
 
 /obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet()
-	set name = "Remove bayonet"
+	set name = "Detach Bayonet"
 	set category = "Object"
 	set popup_menu = 1
 
@@ -255,12 +255,12 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You detach the bayonet from \the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/aks74/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/aks74/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -269,7 +269,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a2
 	name = "M16A2"
-	desc = "A standard-issue USMC combat rifle."
+	desc = "A standard-issue USMC combat rifle. Chambers 5.56x39 rounds."
 	icon_state = "m16a2"
 	item_state = "m16"
 	w_class = 5
@@ -308,7 +308,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet
 		update_icon()
 	..()
@@ -330,7 +330,7 @@
 		icon_state = "m16a2-empty"
 
 /obj/item/weapon/gun/projectile/automatic/m16a2/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -338,7 +338,7 @@
 	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet()
-	set name = "Remove bayonet"
+	set name = "Detach Bayonet"
 	set category = "Object"
 	set popup_menu = 1
 	set src in usr
@@ -350,7 +350,7 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(usr, "<span class='notice'>You remove the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You detach the bayonet from the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m16a2/verb/remove_bayonet
 		update_icon()
 
@@ -358,7 +358,7 @@
 //have bipods on bayonet's slot
 /obj/item/weapon/gun/projectile/automatic/rpk74
 	name = "RPK-74"
-	desc = "A standard-issue Soviet Army squad support weapon."
+	desc = "A standard-issue Soviet Army squad support weapon. Chambers 5.45x39 rounds."
 	icon_state = "rpk"
 	item_state = "rpk"
 	slot_flags = SLOT_BACK_GUN
@@ -389,7 +389,7 @@
 		)
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -407,7 +407,7 @@
 //same with bayonet as RPK
 /obj/item/weapon/gun/projectile/automatic/pkm
 	name = "PKM"
-	desc = "A standard-issue Soviet Army general purpose machine gun."
+	desc = "A standard-issue Soviet Army general purpose machine gun. Chambers 7.62x54 rounds."
 	icon_state = "pkm"
 	item_state = "vz59"
 	w_class = 5
@@ -479,7 +479,7 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/pkm/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -488,7 +488,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m60
 	name = "M60E1"
-	desc = "A standard-issue USMC squad support weapon."
+	desc = "A standard-issue USMC squad support weapon. Chambers 7.62x51 rounds."
 	icon_state = "m60"
 	item_state = "m60"
 	w_class = 5
@@ -561,7 +561,7 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/m60/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -570,7 +570,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/mg3
 	name = "MG3"
-	desc = "A standard-issue Bundeswehr squad support weapon."
+	desc = "A standard-issue Bundeswehr squad support weapon. Chambers 7.62x51 rounds."
 	icon_state = "MG3"
 	item_state = "m60"
 	w_class = 5
@@ -643,7 +643,7 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/mg3/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -653,7 +653,7 @@
 //DO NOT USE
 /obj/item/weapon/gun/projectile/automatic/m14
 	name = "M14"
-	desc = "A former standard-issue USMC combat rifle."
+	desc = "A former standard-issue USMC combat rifle. Chambers 7.62x51 rounds."
 	icon_state = "m14"
 	item_state = "m14"
 	slot_flags = SLOT_BACK_GUN
@@ -693,7 +693,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet
 		update_icon()
 	..()
@@ -715,14 +715,14 @@
 		icon_state = "m14-empty"
 
 /obj/item/weapon/gun/projectile/automatic/m14/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 
 	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet()
-	set name = "Remove bayonet"
+	set name = "Detach Bayonet"
 	set category = "Object"
 	set src in usr
 
@@ -733,14 +733,14 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You detach the bayonet from the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m14/verb/remove_bayonet
 		update_icon()
 
 //you are not so stupid to attach bayonet to marksman riffles, aren't you? -- close quarters sniping
 /obj/item/weapon/gun/projectile/automatic/m14/scoped
 	name = "M21"
-	desc = "A standard-issue USMC marksman rifle."
+	desc = "A standard-issue USMC marksman rifle. "
 	icon_state = "m14scoped"
 	item_state = "m14"
 	accuracy = 5
@@ -759,7 +759,7 @@
 		icon_state = "m14scoped-empty"
 
 /obj/item/weapon/gun/projectile/automatic/m14/scoped/verb/scope()
-	set name = "Use scope"
+	set name = "Use Scope"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -768,7 +768,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
 	name = "M16A1"
-	desc = "A standard-issue USMC combat rifle."
+	desc = "A standard-issue USMC combat rifle. Chambers 5.56x45 rounds."
 	icon_state = "m16a1"
 	item_state = "m16"
 	w_class = 5
@@ -810,7 +810,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet
 		update_icon()
 	..()
@@ -832,7 +832,7 @@
 		icon_state = "m16a1-empty"
 
 /obj/item/weapon/gun/projectile/automatic/m16a1/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -840,7 +840,7 @@
 	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet()
-	set name = "Remove bayonet"
+	set name = "Detach Bayonet"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 1
@@ -852,13 +852,13 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You detach the bayonet from the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/m16a1/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl
 	name = "M16A1"
-	desc = "A standard-issue USMC combat rifle with a M203 launcher attached to it."
+	desc = "A standard-issue USMC combat rifle with a M203 launcher attached. Chambers 5.56x45 rounds."
 	icon_state = "m16a1gl"
 	item_state = "m16gl"
 	w_class = 5
@@ -920,7 +920,7 @@
 		icon_state = "m16a1gl-empty"
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -928,18 +928,18 @@
 	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/verb/set_gp()
-	set name = "Granade launcher"
+	set name = "Grenade Launcher"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 1
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare the [launcher.name]." : " take your gun back."]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/svd
 	name = "SVD"
-	desc = "A standard-issue Soviet Army and CSLA marksman rifle."
+	desc = "A standard-issue Soviet Army and CSLA marksman rifle. Chambers 7.62x54 rounds."
 	icon_state = "svd"
 	item_state = "m14"
 	slot_flags = SLOT_BACK_GUN
@@ -981,7 +981,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/wa2000
 	name = "WA2000"
-	desc = "Rare german sniper rifle."
+	desc = "A specialized Bundeswehr sniper rifle. Chambers 7.62x54 rounds."
 	icon_state = "svd" //fix
 	item_state = "m14"
 	slot_flags = SLOT_BACK_GUN
@@ -1024,7 +1024,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/g3a3
 	name = "G3A3"
-	desc = "A standard-issue Bundeswehr combat rifle."
+	desc = "A standard-issue Bundeswehr combat rifle. Chambers 7.62x51 rounds."
 	icon_state = "g3a3"
 	item_state = "g3a3"
 	w_class = 5
@@ -1065,7 +1065,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet
 		update_icon()
 	..()
@@ -1089,7 +1089,7 @@
 		item_state = "g3a3-empty"
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -1097,7 +1097,7 @@
 	src.toggle_scope(usr, 1.2)
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet()
-	set name = "Remove bayonet"
+	set name = "Detach Bayonet"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 1
@@ -1109,12 +1109,12 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(usr, "<span class='notice'>You deattach the bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You detach the bayonet from the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/g3a3/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/old
-	desc = "G3A3 Battle Rifle. This one has a wooden kit and shows signs of extended use."
+	desc = "G3A3 Battle Rifle. This one has a wooden kit and shows signs of extended use. Chambers 7.62x51 rounds."
 	icon_state = "g3a3-old"
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/old/update_icon()
@@ -1127,7 +1127,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/g3tgs
 	name = "G3TGS"
-	desc = "A standard-issue Bundeswehr combat rifle with an HK79 launcher attached to it."
+	desc = "A standard-issue Bundeswehr combat rifle with an HK79 launcher attached. Chambers 7.62x51 rounds."
 	icon_state = "g3tgs"
 	item_state = "g3tgs"
 	w_class = 5
@@ -1188,25 +1188,25 @@
 		icon_state = "g3tgs-empty"
 
 /obj/item/weapon/gun/projectile/automatic/g3tgs/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
 
 	src.toggle_scope(usr, 1.2)
 /obj/item/weapon/gun/projectile/automatic/g3tgs/verb/set_gp()
-	set name = "Granade launcher"
+	set name = "Grenade Launcher"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare the [launcher.name]." : " take your gun back."]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/g3sg1
 	name = "G3SG1"
-	desc = "Marksman variant of the G3A3."
+	desc = "A scoped Bundeswehr combat rifle. Chambers 7.62x51 rounds."
 	icon_state = "g3sg1"
 	item_state = "g3sg1"
 	w_class = 5
@@ -1237,7 +1237,7 @@
 		icon_state = "g3sg1-empty"
 
 /obj/item/weapon/gun/projectile/automatic/g3sg1/verb/scope()
-	set name = "Use scope"
+	set name = "Use Scope"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -1246,7 +1246,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/vz58
 	name = "Vz.58"
-	desc = "A standard-issue CSLA combat rifle."
+	desc = "A standard-issue CSLA combat rifle. Chambers 7.62x39 rounds."
 	icon_state = "vz58"
 	item_state = "vz58"
 	w_class = 5
@@ -1287,7 +1287,7 @@
 		src.attack_verb = W.attack_verb
 		src.sharp += W.sharp
 		src.force += W.force
-		to_chat(user, "<span class='notice'>You attach [knife.name] to \the [src].</span>")
+		to_chat(user, "<span class='notice'>You attach [knife.name] to the [src].</span>")
 		src.verbs += /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet
 		update_icon()
 	..()
@@ -1309,14 +1309,14 @@
 		icon_state = "vz58-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
 
 	src.toggle_scope(usr, 1.2)
 /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet()
-	set name = "Remove bayonet"
+	set name = "Detach Bayonet"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 1
@@ -1328,12 +1328,12 @@
 		src.attack_verb = initial(attack_verb)
 		src.sharp = initial(sharp)
 		src.force = initial(force)
-		to_chat(usr, "<span class='notice'>You deattach bayonet from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>You detach bayonet from the [src].</span>")
 		src.verbs -= /obj/item/weapon/gun/projectile/automatic/vz58/verb/remove_bayonet
 		update_icon()
 
 /obj/item/weapon/gun/projectile/automatic/vz58/black
-	desc = "Sa VZ.58 with black kit and folding stock."
+	desc = "A standard-issue CSLA combat rifle with a black kit and folding stock. Chambers 7.62x39"
 	icon_state = "vz_black_stock"
 
 /obj/item/weapon/gun/projectile/automatic/vz58/black/update_icon()
@@ -1347,7 +1347,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl
 	name = "Vz.58"
-	desc = "A standard-issue CSLA combat rifle with a GP-25 attached to it."
+	desc = "A standard-issue CSLA combat rifle with a GP-25 attached."
 	icon_state = "vz58gl"
 	item_state = "vz58gl"
 	w_class = 5
@@ -1416,10 +1416,10 @@
 
 	if(launcher)
 		use_launcher = !use_launcher
-		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare [launcher.name] to fire." : " take your gun back"]</span>")
+		to_chat(usr, "<span class='notice'>You [use_launcher ? "prepare the [launcher.name]." : " take your gun back."]</span>")
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
@@ -1428,7 +1428,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/vz59
 	name = "Vz. 59"
-	desc = "A standard-issue CSLA squad support weapon."
+	desc = "A standard-issue CSLA squad support weapon. Chambers 7.62x54 rounds."
 	icon_state = "vz59"
 	item_state = "vz59"
 	w_class = 5
@@ -1498,7 +1498,7 @@
 		icon_state = "vz59[cover_opened ? "open" : "closed"]-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz59/verb/ironsights()
-	set name = "Use iron sights"
+	set name = "Use Iron Sights"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0
