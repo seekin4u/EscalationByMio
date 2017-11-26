@@ -2,7 +2,7 @@
 /obj/item/clothing/under/escalation/bundes
 	name = "Kampfanzug Uniform"
 	winter_name = "Kampfanzug Winter Uniform"
-	desc = "A green field uniform with a white parka over it."
+	desc = "A green field uniform with a white poncho over it."
 	winter_desc = "A green and white field uniform for winter use."
 	icon_state = "bundes_winter"
 	winter_icon_state = "bundes_winter"
@@ -33,8 +33,8 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/escalation/soviet_officer
-	name = "Afghanka Field Uniform"
-	winter_name = "Afghanka Winter Field Uniform"
+	name = "Officer's Afghanka Field Uniform"
+	winter_name = "Officer's Afghanka Winter Field Uniform"
 	desc = "Field uniform consisting of a long BDU jacket, large collar, and field trousers."
 	winter_desc = "A heavy uniform with liners for additional warmth. Consists of a BDU jacket and trousers. Has a natural fur on the collar."
 	icon_state = "afghanka_winter_officer"
@@ -45,7 +45,7 @@
 
 /obj/item/clothing/under/escalation/berezka
 	name = "Berezka Suit"
-	winter_name = "Berezka winter suit"
+	winter_name = "Berezka Winter Suit"
 	desc = "A classic soviet two-colored camouflage suit, worn over the standard uniform."
 	winter_desc = "Winter version of a classic soviet two-colored camouflage suit, worn over the standard uniform."
 	icon_state = "berezka"
@@ -66,7 +66,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/escalation/czech_officer
-	name = "Czechoslovak Field Uniform"
+	name = "Officer's Czechoslovak Field Uniform"
 	winter_name = "Czechoslovak Winter Field Uniform"
 	desc = "Field uniform consisting of a long BDU jacket, large collar, and field trousers."
 	winter_desc = "An uniform with liners for additional warmth. Consists of a BDU jacket and trousers. Has a natural fur on the collar."
