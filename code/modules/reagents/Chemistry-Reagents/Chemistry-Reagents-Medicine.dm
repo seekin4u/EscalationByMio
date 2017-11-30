@@ -626,6 +626,7 @@
 	metabolism = 0.15
 	data = 0
 	overdose = 10
+	scannable = 0
 
 /datum/reagent/sydnocarbum/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -658,6 +659,7 @@
 	metabolism = 0.1
 	data = 0
 	overdose = 16
+	scannable = 0
 
 /datum/reagent/phenazepam/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -695,7 +697,7 @@
 	color = "#C1C1C1"
 	metabolism = 0.1
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = 0
 
 /datum/reagent/amidopyrinum
 	name = "Amidopyrinum"
@@ -704,9 +706,10 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#800080"
-	overdose = 7
+	overdose = 20
 	metabolism = 0.20
 	flags = IGNORE_MOB_SIZE
+	scannable = 0
 
 /datum/reagent/amidopyrinum/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, 90)
@@ -725,8 +728,9 @@
 	reagent_state = LIQUID
 	color = "#800080"
 	flags = IGNORE_MOB_SIZE
-	overdose = 25
+	overdose = 10
 	metabolism = 0.15
+	scannable = 0
 
 /datum/reagent/morphine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -751,7 +755,8 @@
 	reagent_state = LIQUID
 	color = "#605048"
 	overdose = REAGENTS_OVERDOSE
-	metabolism = 0.15
+	metabolism = 0.05
+	scannable = 0
 
 /datum/reagent/naloxone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -760,6 +765,7 @@
 	M.drowsyness = 0
 	M.stuttering = 0
 	M.confused = 0
+	M.sleeping = 0
 	if(M.ingested)
 		for(var/datum/reagent/R in M.ingested.reagent_list)
 			if(istype(R, /datum/reagent/morphine))
@@ -773,14 +779,16 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose = 21
-	metabolism = 0.3
+	overdose = 11
+	metabolism = 0.2
+	scannable = 0
 
 /datum/reagent/epinephrine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
 	M.SetParalysis(0)
 //	M.SetWeakened(0)
+	M.sleeping = 0
 	M.add_chemical_effect(CE_PAINKILLER, 300)
 	M.adjustToxLoss(0.5)
 	M.add_chemical_effect(CE_STABLE)
@@ -806,6 +814,7 @@
 	metabolism = 0.12
 	data = 0
 	overdose = 16
+	scannable = 0
 
 /datum/reagent/promethazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(dose < 3)
@@ -843,6 +852,7 @@
 	metabolism = 0.15
 	data = 0
 	overdose = 18
+	scannable = 0
 
 /datum/reagent/ethaperazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -874,7 +884,7 @@
 	reagent_state = LIQUID
 	color = "#0040FF"
 	overdose = REAGENTS_OVERDOSE * 0.5
-	scannable = 1
+	scannable = 0
 	flags = IGNORE_MOB_SIZE
 
 /datum/reagent/salbutamol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -892,12 +902,12 @@
 	reagent_state = LIQUID
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = 0
 	flags = IGNORE_MOB_SIZE
 	overdose = 20
 	metabolism = 0.15
 
 /datum/reagent/aminocap/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(25 / (sqrt(M.getBruteLoss()) +  1) * removed, 0)
+		M.heal_organ_damage(5 * removed, 0)
 		M.add_chemical_effect(CE_PULSE, -1)

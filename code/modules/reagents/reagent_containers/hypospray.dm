@@ -64,12 +64,6 @@
 	amount_per_transfer_from_this = 5
 	volume = 5
 
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/New()
-	..()
-	reagents.add_reagent("inaprovaline", 5)
-	update_icon()
-	return
-
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/attack(mob/M as mob, mob/user as mob)
 	..()
 	if(reagents.total_volume <= 0) //Prevents autoinjectors to be refilled.
@@ -95,13 +89,13 @@
 	desc = "A rapid and safe way to administer small amounts of drugs by untrained personnel.This one contains drugs to quickly stabilize injured."
 	icon_state = "injector_red"
 	item_state = "autoinjector"
-	amount_per_transfer_from_this = 15
-	volume = 15
+	amount_per_transfer_from_this = 30
+	volume = 30
 
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/red/New()
 	..()
 	reagents.add_reagent("epinephrine", 10)
-	reagents.add_reagent("salbutamol", 8)
-	reagents.add_reagent("ethaperazine", 8)
+	reagents.add_reagent("salbutamol", 10)
+	reagents.add_reagent("ethaperazine", 10)
 	update_icon()
 	return
