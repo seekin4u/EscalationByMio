@@ -10,7 +10,9 @@
 	oxygen = MOLES_O2STANDARD * 1.15
 	nitrogen = MOLES_N2STANDARD * 1.15
 	temperature = T0C - 10 //not 2 cold
-	blend_with_neighbors = 4
+	blend_with_neighbors = 10
+
+
 
 	var/list/crossed_dirs = list()
 	var/hasSnow = FALSE
