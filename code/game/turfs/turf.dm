@@ -34,6 +34,7 @@
 	var/can_bullets = 0 //Can bullet holes be spawned on it?
 	var/list/turf_edge_cache = list()
 	var/path_to_smoothing = 'icons/turf/blending_overlays.dmi'
+	var/list/multiple_smooth
 
 
 	var/bullet_holes = 0 //How many bullets already there?
@@ -67,12 +68,12 @@
 
 		for(var/checkdir in cardinal)
 			var/turf/T = get_step(src, checkdir)
-			if(istype(T) && T.blend_with_neighbors && blend_with_neighbors < T.blend_with_neighbors && icon_state != T.icon_state)
+			if(istype(T) && (blend_with_neighbors > T.blend_with_neighbors) && icon_state != T.icon_state)
 
 				var/cache_key = "[T.icon_state]-[checkdir]"
-				var/new_icon_state
+				var/new_icon_state = "[T.icon_state]-edge"
 				if(!turf_edge_cache[cache_key])
-					turf_edge_cache[cache_key] = image(icon = path_to_smoothing, icon_state = "[T.icon_state]-edge", dir = checkdir)
+					turf_edge_cache[cache_key] = image(icon = path_to_smoothing, icon_state = new_icon_state, dir = checkdir)
 
 				overlays_to_add += turf_edge_cache[cache_key]
 

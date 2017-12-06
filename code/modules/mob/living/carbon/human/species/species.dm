@@ -248,12 +248,12 @@
 
 /datum/species/proc/hug(var/mob/living/carbon/human/H,var/mob/living/target)
 
-	var/t_him = "them"
+	/*var/t_him = "them"
 	switch(target.gender)
 		if(MALE)
 			t_him = "him"
 		if(FEMALE)
-			t_him = "her"
+			t_him = "her"*/
 
 	H.visible_message("<span class='notice'>[H] hugs [target].</span>", \
 					"<span class='notice'>You hug [target].</span>")
