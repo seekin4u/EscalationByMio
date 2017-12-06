@@ -12,7 +12,8 @@
 	temperature = T0C - 10 //not 2 cold
 	blend_with_neighbors = 2
 
-
+	path_to_smoothing = 'icons/escalation/turf/smoothing/snow.dmi'
+	multiple_smooth_states = list(1, 2, 3, 4, 5)
 
 	var/list/crossed_dirs = list()
 	var/hasSnow = FALSE

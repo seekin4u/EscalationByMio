@@ -34,7 +34,10 @@
 	var/can_bullets = 0 //Can bullet holes be spawned on it?
 	var/list/turf_edge_cache = list()
 	var/path_to_smoothing = 'icons/turf/blending_overlays.dmi'
-	var/list/multiple_smooth
+	var/list/multiple_smooth_states = list()
+	var/general_sprite_name
+
+	var/list_of_states
 
 
 	var/bullet_holes = 0 //How many bullets already there?
@@ -71,9 +74,14 @@
 			if(istype(T) && (blend_with_neighbors > T.blend_with_neighbors) && icon_state != T.icon_state)
 
 				var/cache_key = "[T.icon_state]-[checkdir]"
+
 				var/new_icon_state = "[T.icon_state]-edge"
+				if(T.multiple_smooth_states.len)
+					new_icon_state += "[pick(T.multiple_smooth_states)]"
+				list_of_states += "\n"+new_icon_state
+
 				if(!turf_edge_cache[cache_key])
-					turf_edge_cache[cache_key] = image(icon = path_to_smoothing, icon_state = new_icon_state, dir = checkdir)
+					turf_edge_cache[cache_key] = image(icon = T.path_to_smoothing, icon_state = new_icon_state, dir = checkdir)
 
 				overlays_to_add += turf_edge_cache[cache_key]
 
