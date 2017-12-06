@@ -31,4 +31,4 @@
 	blocks_air = 1
 	density = 1
 	opacity = 1
-	blend_with_neighbors = 9
+	blend_with_neighbors = 1
