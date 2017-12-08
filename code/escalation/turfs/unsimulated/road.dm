@@ -6,24 +6,20 @@
 	icon_state = "dirt"
 	oxygen = MOLES_O2STANDARD * 1.15
 	nitrogen = MOLES_N2STANDARD * 1.15
-	temperature = T0C - 10 //not 2 cold
-	blend_with_neighbors = 4
+	temperature = T0C - 10
+	path_to_smoothing = 'icons/turf/escalation/smoothing/new_blandings.dmi'
 
 /turf/unsimulated/escalation/road
 	name = "road"
-	//icon = 'icons/escalation/turf/road.dmi'
 	icon_state = "greyroad"
-	blend_with_neighbors = 6
+	blend_with_neighbors = 7
 
 /turf/unsimulated/escalation/pavement
 	name = "pavement"
-	//icon = 'icons/escalation/turf/road.dmi'
 	icon_state = "pavement"
-	blend_with_neighbors = 7
+	blend_with_neighbors = 6
+	multiple_smooth_states = list(1, 2, 3, 4, 5)
 
-/*turf/unsimulated/escalation/pavement/New()
-	if(prob(5))
-		icon_state += "_rand"*/
 /turf/unsimulated/escalation/rock
 	name = "Mountain"
 	icon = 'icons/escalation/turf/rock.dmi'
