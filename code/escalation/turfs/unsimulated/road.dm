@@ -7,7 +7,7 @@
 	oxygen = MOLES_O2STANDARD * 1.15
 	nitrogen = MOLES_N2STANDARD * 1.15
 	temperature = T0C - 10
-	path_to_smoothing = 'icons/turf/escalation/smoothing/new_blandings.dmi'
+	path_to_smoothing = 'icons/escalation/turf/smoothing/new_blandings.dmi'
 
 /turf/unsimulated/escalation/road
 	name = "road"
