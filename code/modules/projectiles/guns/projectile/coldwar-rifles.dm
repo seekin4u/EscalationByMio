@@ -23,10 +23,10 @@
 	var/obj/item/weapon/material/knife/bayonet/sa/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null,                          automatic = 0),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6),           automatic = 0),
-		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.7,    move_delay=3, one_hand_penalty=10, burst_accuracy=list(1,1,0),       dispersion=list(0.0,0.3, 0.6),            automatic = 0.7),
+		list(mode_name="semiauto",     burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=2, burst_accuracy=null,              dispersion=null,                          automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=4, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6),           automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=5, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=null, one_hand_penalty=2, burst_accuracy=null,              dispersion=list(0.2),                     automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/ak74/New()
@@ -125,10 +125,10 @@
 	var/obj/item/weapon/gun/launcher/grenade/underslung/gp25/launcher
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
-		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.7,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
+		list(mode_name="semiauto",     burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=2, burst_accuracy=null,              dispersion=null,                          automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=4, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6),           automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=5, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=null, one_hand_penalty=2, burst_accuracy=null,              dispersion=list(0.2),                     automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/ak74gl/New()
@@ -207,7 +207,7 @@
 		list(mode_name="semiauto",      burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=2, burst_accuracy=null,              dispersion=null,                          automatic = 0),
 		list(mode_name="short bursts",  burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,0,-1),      dispersion=list(0.3, 0.6, 0.6) ,          automatic = 0),
 		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,0,0,-1,-2), dispersion=list(0.3, 0.6, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",     burst=1, fire_delay=0.7,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6),           automatic = 0.7),
+		list(mode_name="automatic",     burst=1, fire_delay=0.7,  move_delay=1,    one_hand_penalty=2, burst_accuracy=null,              dispersion=list(0.1),                     automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/ak74/New()
@@ -382,10 +382,10 @@
 
 
 	firemodes = list(
-		list(mode_name="semiauto",      burst=1, fire_delay=2,   move_delay=null,    one_hand_penalty=2, burst_accuracy=null,        dispersion=null, automatic = 0),
-		list(mode_name="short bursts",  burst=5, move_delay=8,   one_hand_penalty=8, burst_accuracy = list(3,2,2,1,0),               dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
-		list(mode_name="long bursts",   burst=8, move_delay=10,  one_hand_penalty=9, burst_accuracy = list(2,2,2,1,0,-1,-2,-3),      dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
-		list(mode_name="automatic",     burst=1, fire_delay=0.7, move_delay=3,       one_hand_penalty=5, burst_accuracy=list(1,1,0), dispersion=list(0.0, 0.3, 0.6),             automatic = 0.7),
+		list(mode_name="semiauto",      burst=1, fire_delay=2,   move_delay=null,    one_hand_penalty=2, burst_accuracy=null,   dispersion=null,                            automatic = 0),
+		list(mode_name="short bursts",  burst=5, move_delay=8,   one_hand_penalty=8, burst_accuracy = list(2,2,1,1,0),          dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
+		list(mode_name="long bursts",   burst=8, move_delay=10,  one_hand_penalty=9, burst_accuracy = list(2,1,1,0,0,-1,-1,-2), dispersion = list(0.3, 0.3, 0.6, 1.0, 1.2), automatic = 0),
+		list(mode_name="automatic",     burst=1, fire_delay=0.5, move_delay=3,       one_hand_penalty=5, burst_accuracy=null,   dispersion=list(0.5, 0.8),                  automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/rpk74/verb/ironsights()
@@ -420,6 +420,7 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x54b
 	one_hand_penalty = 9
+	automatic = FALSE
 
 	wielded_item_state = "vz59-wielded"
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
@@ -427,8 +428,9 @@
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="short bursts",  burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",   burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="short bursts",  burst=5, move_delay=6,   one_hand_penalty=8, burst_accuracy = list(0, 0,-1,-1,-2),        dispersion = list(0.5, 0.7, 0.8, 1.0, 1.2), automatic = 0),
+		list(mode_name="long bursts",   burst=8, move_delay=8,   one_hand_penalty=9, burst_accuracy = list(0, 0,-1,-1,-2,-2,-3),  dispersion = list(0.6, 0.8, 1.0, 1.0, 1.2), automatic = 0),
+		list(mode_name="automatic",     burst=1, fire_delay=0.5, move_delay=3,       one_hand_penalty = 8, burst_accuracy=null,   dispersion=list(0.5, 0.8),                  automatic = 0.7),
 		)
 
 	var/cover_opened = FALSE
@@ -501,6 +503,7 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
+	automatic = 0
 
 	wielded_item_state = "m60-wielded"
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
@@ -509,8 +512,9 @@
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="short bursts",  burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",   burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="short bursts",  burst=5, move_delay=12,  one_hand_penalty=8, burst_accuracy = list(0, 0,-1,-1,-2),      dispersion = list(0.5, 0.7, 0.8, 1.0, 1.2), automatic = 0),
+		list(mode_name="long bursts",   burst=8, move_delay=15,  one_hand_penalty=9, burst_accuracy = list(0, 0,-1,-1,-2,-3),   dispersion = list(0.7, 0.8, 1.0, 1.0, 1.2), automatic = 0),
+		list(mode_name="automatic",     burst=1, fire_delay=0.5, move_delay=3,       one_hand_penalty = 8, burst_accuracy=null, dispersion=list(0.5, 0.8),                  automatic = 0.7),
 		)
 
 	var/cover_opened = FALSE
@@ -590,9 +594,9 @@
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
 
 	firemodes = list(
-		list(mode_name="short bursts",  burst=6,  move_delay=9,  one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4), automatic = 0),
-		list(mode_name="long bursts",   burst=12, move_delay=13, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.2, 1.2, 1.2, 1.2, 1.4), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.2,  move_delay=3,    one_hand_penalty=15, burst_accuracy=list(0,-2,-4),       dispersion=list(0.6, 0.9, 1.2),      automatic = 0.2),
+		list(mode_name="short bursts",  burst=6,  move_delay=9,   one_hand_penalty=8, burst_accuracy = list(1,1,1,0,-1),          dispersion = list(0.8, 1.2, 1.2, 1.2, 1.4), automatic = 0),
+		list(mode_name="long bursts",   burst=12, move_delay=13,  one_hand_penalty=9, burst_accuracy = list(1,1,0,0,-1,-2,-3),    dispersion = list(1.2, 1.2, 1.2, 1.2, 1.4), automatic = 0),
+		list(mode_name="automatic",     burst=1,  fire_delay=0.2, move_delay=3,       one_hand_penalty=9, burst_accuracy = null,  dispersion=list(0.5, 0.8),                  automatic = 0.2),
 	)
 
 	var/cover_opened = FALSE
@@ -792,10 +796,10 @@
 	var/obj/item/weapon/material/knife/bayonet/usmc/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=1.7,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,             dispersion=null,automatic = 0),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),      dispersion=list(0.3, 0.3, 0.6),automatic = 0),
-		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5),automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
+		list(mode_name="semiauto",     burst=1, fire_delay=1.7,  move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null,                          automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),      dispersion=list(0.3, 0.3, 0.6),           automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=1,    one_hand_penalty=3, burst_accuracy = null,            dispersion=list(0.3, 0.5),                automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1/New()
@@ -882,10 +886,10 @@
 	var/obj/item/weapon/gun/launcher/grenade/underslung/m203/launcher
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=1.7,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null,automatic = 0),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),       dispersion=list(0.3, 0.3, 0.6),automatic = 0),
-		list(mode_name="long bursts",   burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5),automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
+		list(mode_name="semiauto",     burst=1, fire_delay=1.7,  move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null,                          automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,1,-1),      dispersion=list(0.3, 0.3, 0.6),           automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=2,    one_hand_penalty=4, burst_accuracy=list(1,1,0,-1,-1), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.5,  move_delay=1,    one_hand_penalty=3, burst_accuracy = null,            dispersion=list(0.3, 0.5),                automatic = 0.7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/m16a1gl/New()
@@ -961,7 +965,7 @@
 	cocked_sound = 'sound/weapons/gunporn/svd_boltback.ogg'
 
 	firemodes = list(
-		list(mode_name="semiauto", burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=10, burst_accuracy=null, dispersion=null),
+		list(mode_name="semiauto", burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=10, burst_accuracy=null, dispersion=null),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/svd/update_icon()
@@ -995,7 +999,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c762x54s //fix
 	one_hand_penalty = 10
 	accuracy = 5
-	fire_delay = 3
+	fire_delay = 2
 	fire_sound = 'sound/weapons/gunshot/svd.ogg'
 	wielded_item_state = "m14-wielded" //fix
 	unload_sound = 'sound/weapons/gunporn/svd_magout.ogg'
@@ -1003,7 +1007,7 @@
 	cocked_sound = 'sound/weapons/gunporn/svd_boltback.ogg'
 
 	firemodes = list(
-		list(mode_name="semiauto", burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=10, burst_accuracy=null, dispersion=null),
+		list(mode_name="semiauto", burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=10, burst_accuracy=null, dispersion=null),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/wa2000/update_icon()
@@ -1048,9 +1052,9 @@
 	var/obj/item/weapon/material/knife/bayonet/bdw/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null,automatic = 0),
-		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=6, burst_accuracy=list(1,0), dispersion=list(0.3, 0.6),automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.4,  move_delay=3,    one_hand_penalty=8, burst_accuracy=list(0,-1,-2),       dispersion=list(0.3, 0.6, 0.9), automatic = 0.4),
+		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,          dispersion=null,           automatic = 0),
+		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=6, burst_accuracy=list(1,0),     dispersion=list(0.3, 0.6), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.4,  move_delay=3,    one_hand_penalty=8, burst_accuracy=null, dispersion=list(0.3, 0.6 ),         automatic = 0.4)
 		)
 
 /obj/item/weapon/gun/projectile/automatic/g3a3/New()
@@ -1153,7 +1157,7 @@
 	firemodes = list(
 		list(mode_name="semiauto",     burst=1, fire_delay=4,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null,automatic = 0),
 		list(mode_name="short bursts", burst=2, fire_delay=null, move_delay=1,    one_hand_penalty=3, burst_accuracy=list(1,-1), dispersion=list(0.3, 0.6),automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=0.4,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(0,-1,-2),       dispersion=list(0.3, 0.6, 0.9), automatic = 0.4),
+		list(mode_name="automatic",    burst=1, fire_delay=0.4,  move_delay=3,    one_hand_penalty=5, burst_accuracy=null,       dispersion=list(0.3, 0.6, 0.9), automatic = 0.4),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/g3tgs/New()
@@ -1226,7 +1230,7 @@
 	cocked_sound = 'sound/weapons/gunporn/m16_chargeback.ogg'
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=5,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,       dispersion=null),
+		list(mode_name="semiauto",     burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=4, burst_accuracy=null, dispersion=null),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/g3sg1/update_icon()
@@ -1269,10 +1273,10 @@
 	var/obj/item/weapon/material/knife/bayonet/csla/knife = FALSE
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
-		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=null,  move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0,7),
+		list(mode_name="semiauto",     burst=1, fire_delay=1, move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=4, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=5, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=1, move_delay=1,   one_hand_penalty=3,  burst_accuracy=null,              dispersion=list(0.3, 0.6), automatic = 0,7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/vz58/New()
@@ -1371,10 +1375,10 @@
 	var/obj/item/weapon/gun/launcher/grenade/underslung/gp25/launcher//19.09.17 replace with so retarded gp-70
 
 	firemodes = list(
-		list(mode_name="semiauto",     burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
-		list(mode_name="long bursts",  burst=5, fire_delay=null, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
-		list(mode_name="automatic",    burst=1, fire_delay=1,    move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0.7),
+		list(mode_name="semiauto",     burst=1, fire_delay=1, move_delay=null, one_hand_penalty=4, burst_accuracy=null,              dispersion=null, automatic = 0),
+		list(mode_name="short bursts", burst=3, fire_delay=4, move_delay=3,    one_hand_penalty=5, burst_accuracy=list(1,1,0),       dispersion=list(0.0, 0.3, 0.6), automatic = 0),
+		list(mode_name="long bursts",  burst=5, fire_delay=5, move_delay=4,    one_hand_penalty=6, burst_accuracy=list(1,1,0,-1,-2), dispersion=list(0.3, 0.3, 0.6, 1.2, 1.5), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=1, move_delay=1,   one_hand_penalty=3,  burst_accuracy=null,              dispersion=list(0.3, 0.6), automatic = 0,7),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl/New()
@@ -1445,10 +1449,12 @@
 	unload_sound = 'sound/weapons/gunporn/m249_boxremove.ogg'
 	reload_sound = 'sound/weapons/gunporn/m249_boxinsert.ogg'
 	cocked_sound = 'sound/weapons/gunporn/m249_charge.ogg'
+	automatic = 0
 
 	firemodes = list(
-		list(mode_name="short bursts", burst=5, move_delay=12, one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.4, 0.8, 0.8, 0.8, 1.0)),
-		list(mode_name="long bursts",  burst=8, move_delay=15, one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="short bursts", burst=5, move_delay=12,  one_hand_penalty=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.4, 0.8, 0.8, 0.8, 1.0), automatic = 0),
+		list(mode_name="long bursts",  burst=8, move_delay=15,  one_hand_penalty=9, burst_accuracy = list(0,-1,-1,-2,-2,-2,-3,-3), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.2), automatic = 0),
+		list(mode_name="automatic",    burst=1, fire_delay=0.5, move_delay=3,       one_hand_penalty = 8, burst_accuracy=null,     dispersion=list(0.5, 0.8),                  automatic = 0.7),
 		)
 
 	var/cover_opened = FALSE
