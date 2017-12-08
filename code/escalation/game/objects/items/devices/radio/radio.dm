@@ -52,7 +52,7 @@ var/global/list/nato_internal_channels_protected = list(
 	internal_channels = army_internal_channels.Copy()
 
 /obj/item/device/radio/escalation/warpac
-	name = "radio"
+	name = "radio (WARPAC)"
 	desc = "warpac radio"
 	icon_state = "warpac_radio_item"
 	item_state = "warpac_radio_item"
@@ -62,7 +62,7 @@ var/global/list/nato_internal_channels_protected = list(
 	internal_channels = warpac_internal_channels.Copy()
 
 /obj/item/device/radio/escalation/nato
-	name = "radio"
+	name = "radio (NATO)"
 	desc = "nato radio"
 	icon_state = "nato_radio_item"
 	item_state = "nato_radio_item"
@@ -72,7 +72,7 @@ var/global/list/nato_internal_channels_protected = list(
 	internal_channels = nato_internal_channels.Copy()
 
 /obj/item/device/radio/escalation/command/warpac
-	name = "radio"
+	name = "radio (COMM. WAPRPAC)"
 	desc = "warpac comand radio"
 
 /obj/item/device/radio/escalation/command/warpac/New()
@@ -81,7 +81,7 @@ var/global/list/nato_internal_channels_protected = list(
 
 
 /obj/item/device/radio/escalation/command/nato
-	name = "radio"
+	name = "radio (COMM. NATO)"
 	desc = "nato comand radio"
 	icon_state = "nato_radio_item"
 	item_state = "nato_radio_item"
