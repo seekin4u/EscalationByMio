@@ -30,6 +30,9 @@
 		return 0
 	return 1
 
+/obj/structure/chezh_hangehog/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
+	return 1
+
 /obj/structure/chezh_hangehog/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/wrench))
 		check4struct(user)
