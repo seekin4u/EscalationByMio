@@ -95,6 +95,10 @@
 /turf/ground/gravsnow
 	name = "frozen ground"
 	icon_state = "ground_frozen"
+	blend_with_neighbors = null
+
+/turf/ground/gravsnow/update_icon()
+	return
 
 /turf/ground/gravsnow/truck //basetype
 	icon = 'icons/escalation/turf/road.dmi'
@@ -107,16 +111,22 @@
 	name = "snow"
 	icon_state = "snow"
 
+/turf/ground/gravsnow/truck/snow/update_icon()
+	return
+
 /turf/ground/gravsnow/truck/road
 	name = "road"
 	icon_state = "road"
+
+/turf/ground/gravsnow/truck/road/update_icon()
+	return
 
 /turf/ground/gravsnow/truck/road/snow_overlay
 
 /turf/ground/gravsnow/truck/road/snow_overlay/New()
 	..()
 	overlays.Cut()
-	var/image/I = image(icon = src.icon, icon_state = "snow_overlay", layer = src.layer + 0.1)
+	var/image/I = image(icon = src.icon, icon_state = "snow_overlay", layer = src.layer)
 	overlays += I
 
 /turf/ground/plating
