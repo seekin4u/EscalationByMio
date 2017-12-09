@@ -153,8 +153,13 @@ nz########zz;`                                  i+            *i     ,+.        
                                        `+*,````````.*#+n*+*+++z*     :z+++*++z#++:.```````,:z,
                                        `izzzzzzzzzzzz,.;;;;;;;;.     `:;;;;;:;,.*z#nznnzzzzz+.
 
-2)Мими - просто хороший и ленивый человек, лидер сервера и ру-аудитории
-	//место под биографию
+2)Миомио - просто хороший и ленивый человек, лидер сервера и ру-аудитории. Хвастается всем подряд о том, что владеет сервером.
+	Здесь нечего особо рассказывать. Был тут с самого начала, активил, потом в июле 2017 русские объединились под  ним и взяли власть. Делает всякие мелочи типа маппинга, принимает решения после тысячи лет откладывания их.
+	А ещё он собирает все донаты и почти не делится, потому что никто не хочет. Все слишком добрые.
+	_________
+Miomio - good and lazy man, server leader and russian community.
+	Not much to talk about. Was here from the very beginning, in July 2017 Russians united under him and took the power. Does small things like mapping, makes decisions after loooooooooooong hesitating.
+	Also he grabs all donations and almost doesn't share them, because nobody wants to have them. Everyone are too generous.
 3)ДжамсМурМур - второй основной и самый умный кодер проджекта. Студент. Птушник. Ленивая задница.
 	<3 место для биографии <3
 4)Lokiki - Человек, хороший спрайтер, немного кодер (до вступления в проджект не имел понятия о том какое же говно этот ваш код сски.). Поддерживал мораль состава, когда жтб и мурмур уходили в запой. А еще он партизан.
@@ -162,7 +167,7 @@ nz########zz;`                                  i+            *i     ,+.        
 	трапы они везде (с)
 6)Тодд Говард - местный талисман, it just works, меет на територии конфы эскалации свое wedding agency, сделал АДЫН!!!1 коммит в репозиторий, из-за чего считает себя крутым кодером. Что ж, без Тодда ничего бы не работало.
 	//paste your biography here, Todd
-7)Lanius aka Frown - leader of english community. Man who always breaks code by his commits and just a good dude. Местный аналог пыни.
+7)Lanius aka Frown - leader of english community. Man who always breaks code by his commits and just a good dude. Местный аналог пыни (уже нет, потому что не имеет власти).
 8)Ancient aka Ancient - man who are officially community manager. Дописать что-от еще.
 
 */
