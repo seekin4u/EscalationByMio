@@ -31,7 +31,18 @@
 	return 1
 
 /obj/structure/chezh_hangehog/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
-	return 1
+	if(istype(mover, /obj/item/projectile))
+		var/obj/item/projectile/proj = mover
+
+		if(proj.firer && Adjacent(proj.firer))
+			return 1
+
+		if (get_dist(proj.starting, loc) <= 1)//allows to fire from 1 tile away of sandbag
+			return 1
+
+		return 1
+
+	return 0
 
 /obj/structure/chezh_hangehog/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/wrench))
