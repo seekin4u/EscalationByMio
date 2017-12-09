@@ -624,10 +624,6 @@ BLIND     // can't see anything
 	..()
 	update_rolldown_status()
 	update_rollsleeves_status()
-	if(rolled_down == -1)
-		verbs -= /obj/item/clothing/under/verb/rollsuit
-	if(rolled_sleeves == -1)
-		verbs -= /obj/item/clothing/under/verb/rollsleeves
 
 /obj/item/clothing/under/get_mob_overlay(mob/user_mob, slot)
 	var/image/ret = ..()
@@ -775,62 +771,6 @@ BLIND     // can't see anything
 
 	sensor_mode = new_mode
 
-/obj/item/clothing/under/verb/toggle()
-	set name = "Toggle Suit Sensors"
-	set category = "Object"
-	set src in usr
-	set_sensors(usr)
-	..()
-
-/obj/item/clothing/under/verb/rollsuit()
-	set name = "Roll Down Jumpsuit"
-	set category = "Object"
-	set src in usr
-	if(!istype(usr, /mob/living)) return
-	if(usr.stat) return
-
-	update_rolldown_status()
-	if(rolled_down == -1)
-		to_chat(usr, "<span class='notice'>You cannot roll down [src]!</span>")
-	if((rolled_sleeves == 1) && !(rolled_down))
-		rolled_sleeves = 0
-		return
-
-	rolled_down = !rolled_down
-	if(rolled_down)
-		body_parts_covered &= LOWER_TORSO|LEGS|FEET
-		item_state_slots[slot_w_uniform_str] = "[worn_state]_d"
-	else
-		body_parts_covered = initial(body_parts_covered)
-		item_state_slots[slot_w_uniform_str] = "[worn_state]"
-	update_clothing_icon()
-
-/obj/item/clothing/under/verb/rollsleeves()
-	set name = "Roll Up Sleeves"
-	set category = "Object"
-	set src in usr
-	if(!istype(usr, /mob/living)) return
-	if(usr.stat) return
-
-	update_rollsleeves_status()
-	if(rolled_sleeves == -1)
-		to_chat(usr, "<span class='notice'>You cannot roll up your [src]'s sleeves!</span>")
-		return
-	if(rolled_down == 1)
-		to_chat(usr, "<span class='notice'>You must roll up your [src] first!</span>")
-		return
-
-	rolled_sleeves = !rolled_sleeves
-	if(rolled_sleeves)
-		body_parts_covered &= ~(ARMS|HANDS)
-		item_state_slots[slot_w_uniform_str] = "[worn_state]_r"
-		to_chat(usr, "<span class='notice'>You roll up your [src]'s sleeves.</span>")
-	else
-		body_parts_covered = initial(body_parts_covered)
-		item_state_slots[slot_w_uniform_str] = "[worn_state]"
-		to_chat(usr, "<span class='notice'>You roll down your [src]'s sleeves.</span>")
-	update_clothing_icon()
-
 /obj/item/clothing/under/rank/New()
-	sensor_mode = pick(0,1,2,3)
+	sensor_mode = 0
 	..()
