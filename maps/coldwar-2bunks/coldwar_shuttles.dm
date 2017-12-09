@@ -163,7 +163,7 @@
 		)
 	announcer = "NDV Icarus"*/
 
-/datum/shuttle/multi_shuttle/truck/ural
+/*datum/shuttle/multi_shuttle/truck/ural
 	name = "Ural"
 	warmup_time = 1
 	origin = /area/shuttle/truck/ural/start
@@ -177,6 +177,54 @@
 /datum/shuttle/multi_shuttle/truck/ural/New()
 	arrival_message = "URALLL IS COMUNG TO FOB!."
 	departure_message = "URAL GO HOMEEEEEE."
+	..()*/
+
+/datum/shuttle/multi_shuttle/truck/ural
+	name = "Ural1"
+	warmup_time = 1
+	origin = /area/shuttle/truck/ural/start
+	interim = /area/shuttle/truck/ural/intertim
+	destinations = list(
+		"FOB" = /area/shuttle/truck/ural/finish
+		)
+	docking_controller_tag = "ural_1"
+
+
+/datum/shuttle/multi_shuttle/truck/ural/New()
+	arrival_message = "URALLL IS COMUNG TO FOB1!."
+	departure_message = "URAL GO HOMEEEEEE.1"
+	..()
+
+/datum/shuttle/multi_shuttle/truck/ural2
+	name = "Ural2"
+	warmup_time = 1
+	origin = /area/shuttle/truck/ural/start2
+	interim = /area/shuttle/truck/ural/intertim2
+	destinations = list(
+		"FOB" = /area/shuttle/truck/ural/finish2
+		)
+	docking_controller_tag = "ural_2"
+
+
+/datum/shuttle/multi_shuttle/truck/ural2/New()
+	arrival_message = "URALLL IS COMUNG TO FOB2!."
+	departure_message = "URAL GO HOMEEEEEE.2"
+	..()
+
+/datum/shuttle/multi_shuttle/truck/ural3
+	name = "Ural3"
+	warmup_time = 1
+	origin = /area/shuttle/truck/ural/start3
+	interim = /area/shuttle/truck/ural/intertim3
+	destinations = list(
+		"FOB" = /area/shuttle/truck/ural/finish3
+		)
+	docking_controller_tag = "ural_3"
+
+
+/datum/shuttle/multi_shuttle/truck/ural3/New()
+	arrival_message = "URALLL IS COMUNG TO FOB3!."
+	departure_message = "URAL GO HOMEEEEEE.3"
 	..()
 
 /*datum/shuttle/multi_shuttle/skipjack

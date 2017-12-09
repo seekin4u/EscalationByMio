@@ -163,8 +163,3 @@
 /obj/item/weapon/circuitboard/account_database
 	name = T_BOARD("accounts uplink terminal")
 	build_path = /obj/machinery/computer/account_database
-
-/obj/item/weapon/circuitboard/ural_shuttle
-	name = T_BOARD("ural shuttle console")
-	build_path = /obj/machinery/computer/shuttle_control/ural
-	origin_tech = list(TECH_DATA = 2)

@@ -1,0 +1,278 @@
+"aa" = (/turf/ground/gravsnow,/area/coldwar/outside)
+"ab" = (/turf/simulated/floor/pavement,/area/coldwar/stuff/roads)
+"ac" = (/turf/ground/gravsnow,/area/coldwar/stuff/roads)
+"ad" = (/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"ae" = (/obj/structure/chezh_hangehog,/turf/ground/gravsnow,/area/coldwar/outside)
+"af" = (/turf/simulated/wall/brck,/area/coldwar/sa/sa_fob)
+"ag" = (/obj/structure/window/reinforced/full,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"ah" = (/obj/structure/closet/cabinet,/obj/item/weapon/gun/projectile/makarov,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/weapon/storage/belt/holster/sa,/obj/item/weapon/storage/briefcase,/obj/effect/decal/cleanable/cobweb,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"ai" = (/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"aj" = (/obj/structure/table/woodentable,/obj/item/weapon/storage/fancy/cigarettes/professionals,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"ak" = (/turf/simulated/wall/brck,/area/coldwar/sa/sa_bunk)
+"al" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"am" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"an" = (/obj/structure/filingcabinet,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"ao" = (/obj/structure/filingcabinet,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"ap" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"aq" = (/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"ar" = (/obj/structure/closet/cabinet,/obj/item/weapon/gun/projectile/cz82,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/weapon/storage/belt/holster/csla,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"as" = (/obj/structure/table/woodentable,/obj/item/weapon/storage/fancy/cigarettes/killthroat,/obj/effect/decal/cleanable/cobweb2,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"at" = (/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar/sa/spawn_area/sa_officers)
+"au" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"av" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"aw" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"ax" = (/obj/structure/truck/ural/basic_wall/n1,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"ay" = (/obj/structure/truck/ural/basic_wall/n2,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"az" = (/obj/structure/truck/ural/basic_wall/n3,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aA" = (/obj/structure/truck/ural/basic_wall/n4,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aB" = (/obj/structure/chezh_hangehog,/turf/simulated/floor/pavement,/area/coldwar/stuff/roads)
+"aC" = (/obj/structure/window/fence,/turf/ground/gravsnow,/area/coldwar/outside)
+"aD" = (/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/sa_officers)
+"aE" = (/turf/simulated/floor/wood{tag = "icon-wood_broken4"; icon_state = "wood_broken4"},/area/coldwar/sa/spawn_area/cz_officers)
+"aF" = (/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/spawn_area/cz_officers)
+"aG" = (/obj/structure/truck/ural/basic_floor/n5,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aH" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/escalation/ural/ural1,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aI" = (/obj/structure/truck/ural/basic_floor/n7,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aJ" = (/obj/structure/truck/ural/basic_floor/n8,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aK" = (/obj/structure/window/fence{dir = 8},/turf/ground/gravsnow,/area/coldwar/outside)
+"aL" = (/turf/simulated/wall/wood,/area/coldwar/sa/sa_fob)
+"aM" = (/obj/structure/window/fence{dir = 4},/turf/ground/gravsnow,/area/coldwar/outside)
+"aN" = (/obj/machinery/door/unpowered/simple/wood/saloon,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"aO" = (/obj/structure/truck/ural/basic_wall/n9,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aP" = (/obj/structure/truck/ural/basic_wall/n10,/obj/structure/bed/chair/ural_pilot{buckle_pixel_shift = "x=0;y=21"; dir = 1; pixel_y = 21},/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aQ" = (/obj/structure/truck/ural/basic_wall/n11,/obj/structure/bed/chair/ural_pilot{buckle_pixel_shift = "x=0;y=21"; dir = 1; pixel_y = 21},/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aR" = (/obj/structure/truck/ural/basic_wall/n12,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"aS" = (/turf/simulated/floor/wood,/area/coldwar/house1)
+"aT" = (/turf/simulated/wall/wood,/area/coldwar/house1)
+"aU" = (/obj/item/weapon/stool,/turf/simulated/floor/wood,/area/coldwar/house1)
+"aV" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/house1)
+"aW" = (/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"aX" = (/turf/simulated/floor/wood{tag = "icon-wood_broken4"; icon_state = "wood_broken4"},/area/coldwar/sa/sa_bunk)
+"aY" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"aZ" = (/obj/structure/truck/ural/basic_wall/n13,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"ba" = (/obj/structure/truck/ural/basic_floor/n14,/obj/structure/bed/chair/ural_seat{dir = 8},/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bb" = (/obj/structure/truck/ural/basic_floor/n15,/obj/structure/truck/ural/basic_floor/n15,/obj/structure/bed/chair/ural_seat{dir = 4},/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bc" = (/obj/structure/truck/ural/basic_wall/n16,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bd" = (/obj/structure/table/woodentable,/obj/random/smokes,/turf/simulated/floor/wood,/area/coldwar/house1)
+"be" = (/obj/structure/truck/ural/basic_wall/n18,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bf" = (/obj/structure/truck/ural/basic_floor/middle_l,/obj/structure/bed/chair/ural_seat{dir = 8},/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bg" = (/obj/structure/truck/ural/basic_floor/middle_r,/obj/structure/bed/chair/ural_seat{dir = 4},/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bh" = (/obj/structure/truck/ural/basic_wall/n17,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bi" = (/obj/structure/closet/crate,/obj/item/weapon/gun/launcher/rpg18,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bj" = (/turf/simulated/floor/wood{tag = "icon-wood_broken0"; icon_state = "wood_broken0"},/area/coldwar/sa/sa_kapter)
+"bk" = (/obj/structure/closet/crate,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bl" = (/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bm" = (/obj/structure/closet/crate,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bn" = (/obj/structure/closet/crate,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/obj/item/ammo_magazine/c545x39m,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bo" = (/obj/structure/closet/crate,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/obj/item/ammo_magazine/ags30x29mm,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bp" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/obj/item/weapon/grenade/smokebomb,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bq" = (/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/structure/closet/crate,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"br" = (/obj/structure/closet/crate,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bs" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bt" = (/obj/structure/closet/crate,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/obj/item/ammo_magazine/c127x99b,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bu" = (/turf/simulated/floor/wood{tag = "icon-wood_broken4"; icon_state = "wood_broken4"},/area/coldwar/sa/sa_kapter)
+"bv" = (/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/item/ammo_magazine/c762x39m,/obj/structure/closet/crate,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bw" = (/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar/sa/sa_kapter)
+"bx" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"by" = (/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"bz" = (/turf/simulated/wall/wood,/area/coldwar/stuff/quarters)
+"bA" = (/obj/structure/bed/padded,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"bB" = (/obj/structure/toilet,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"bC" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"bD" = (/obj/machinery/shower,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"bE" = (/obj/structure/closet/crate,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/obj/item/weapon/gun/projectile/automatic/ak74,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bF" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bG" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bH" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/obj/item/weapon/grenade/frag/vog25,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bI" = (/obj/structure/closet/crate,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bJ" = (/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"bK" = (/obj/structure/closet/crate,/obj/item/weapon/gun/projectile/automatic/rpk74,/obj/item/weapon/gun/projectile/automatic/rpk74,/obj/item/weapon/gun/projectile/automatic/rpk74,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bL" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/obj/item/weapon/grenade/frag/rgd5,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bM" = (/turf/simulated/floor/wood{tag = "icon-wood_broken3"; icon_state = "wood_broken3"},/area/coldwar/sa/sa_kapter)
+"bN" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/obj/item/weapon/grenade/frag/rg42,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bO" = (/obj/structure/closet/crate,/obj/item/weapon/gun/projectile/cz82,/obj/item/weapon/gun/projectile/cz82,/obj/item/weapon/gun/projectile/cz82,/obj/item/weapon/gun/projectile/cz82,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bP" = (/obj/structure/truck/ural/basic_floor/middle_l,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bQ" = (/obj/structure/truck/ural/basic_floor/middle_r,/turf/simulated/floor/road,/area/coldwar/trucks/ural/ural_home)
+"bR" = (/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"bS" = (/obj/structure/closet/crate,/obj/item/weapon/gun/projectile/makarov,/obj/item/weapon/gun/projectile/makarov,/obj/item/weapon/gun/projectile/makarov,/obj/item/weapon/gun/projectile/makarov,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bT" = (/obj/structure/closet/crate,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/obj/item/weapon/grenade/frag/f1,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bU" = (/obj/structure/closet/crate,/obj/item/weapon/gun/projectile/automatic/vz58,/obj/item/weapon/gun/projectile/automatic/vz58,/obj/item/weapon/gun/projectile/automatic/vz58,/obj/item/weapon/gun/projectile/automatic/vz58,/obj/item/weapon/gun/projectile/automatic/vz58,/obj/item/weapon/gun/projectile/automatic/vz58,/obj/item/weapon/gun/projectile/automatic/vz58,/obj/item/weapon/gun/projectile/automatic/vz58,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bV" = (/obj/structure/sandbag,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bW" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bX" = (/obj/structure/table/woodentable,/obj/item/weapon/storage/bible,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bY" = (/obj/structure/table/woodentable,/obj/item/weapon/flame/candle,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
+"bZ" = (/obj/structure/truck/ural/basic_wall/n1,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"ca" = (/obj/structure/truck/ural/basic_wall/n2,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cb" = (/obj/structure/truck/ural/basic_wall/n3,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cc" = (/obj/structure/truck/ural/basic_wall/n4,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cd" = (/obj/structure/bed/chair/comfy,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"ce" = (/turf/simulated/floor/wood{tag = "icon-wood_broken0"; icon_state = "wood_broken0"},/area/coldwar/sa/sa_bunk)
+"cf" = (/turf/simulated/floor/wood,/turf/simulated/floor/carpet{tag = "icon-carpet_edges (EAST)"; icon_state = "carpet_edges"; dir = 4},/area/coldwar/sa/sa_bunk)
+"cg" = (/turf/simulated/floor/carpet,/area/coldwar/sa/sa_bunk)
+"ch" = (/turf/simulated/floor/wood,/turf/simulated/floor/carpet{tag = "icon-carpet_edges (WEST)"; icon_state = "carpet_edges"; dir = 8},/area/coldwar/sa/sa_bunk)
+"ci" = (/obj/structure/truck/ural/basic_floor/n5,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cj" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/escalation/ural/ural2,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"ck" = (/obj/structure/truck/ural/basic_floor/n7,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cl" = (/obj/structure/truck/ural/basic_floor/n8,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cm" = (/obj/structure/bed/chair/comfy{dir = 4},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"cn" = (/obj/structure/table/woodentable,/obj/random/smokes,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"co" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"cp" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"cq" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"cr" = (/turf/simulated/floor/carpet{tag = "icon-carpet_broken"; icon_state = "carpet_broken"},/area/coldwar/sa/sa_bunk)
+"cs" = (/obj/structure/truck/ural/basic_wall/n9,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"ct" = (/obj/structure/truck/ural/basic_wall/n10,/obj/structure/bed/chair/ural_pilot{buckle_pixel_shift = "x=0;y=21"; dir = 1; pixel_y = 21},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cu" = (/obj/structure/truck/ural/basic_wall/n11,/obj/structure/bed/chair/ural_pilot{buckle_pixel_shift = "x=0;y=21"; dir = 1; pixel_y = 21},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cv" = (/obj/structure/truck/ural/basic_wall/n12,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cw" = (/obj/structure/bed/chair/comfy{dir = 1},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"cx" = (/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar/sa/sa_bunk)
+"cy" = (/obj/structure/truck/ural/basic_wall/n13,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cz" = (/obj/structure/truck/ural/basic_floor/n14,/obj/structure/bed/chair/ural_seat{dir = 8},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cA" = (/obj/structure/truck/ural/basic_floor/n15,/obj/structure/truck/ural/basic_floor/n15,/obj/structure/bed/chair/ural_seat{dir = 4},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cB" = (/obj/structure/truck/ural/basic_wall/n16,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cC" = (/obj/structure/truck/ural/basic_wall/n18,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cD" = (/obj/structure/truck/ural/basic_floor/middle_l,/obj/structure/bed/chair/ural_seat{dir = 8},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cE" = (/obj/structure/truck/ural/basic_floor/middle_r,/obj/structure/bed/chair/ural_seat{dir = 4},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cF" = (/obj/structure/truck/ural/basic_wall/n17,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cG" = (/turf/simulated/floor/wood{tag = "icon-wood_broken3"; icon_state = "wood_broken3"},/area/coldwar/sa/sa_bunk)
+"cH" = (/obj/structure/window/fence{dir = 1},/turf/ground/gravsnow,/area/coldwar/outside)
+"cI" = (/obj/structure/bookcase,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"cJ" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood{tag = "icon-wood_broken4"; icon_state = "wood_broken4"},/area/coldwar/sa/sa_bunk)
+"cK" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/carpet{tag = "icon-carpet_broken"; icon_state = "carpet_broken"},/area/coldwar/sa/sa_bunk)
+"cL" = (/obj/structure/truck/ural/basic_floor/middle_l,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cM" = (/obj/structure/truck/ural/basic_floor/middle_r,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"cN" = (/obj/random/smokes,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"cO" = (/obj/structure/table/woodentable,/obj/effect/decal/cleanable/cobweb,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"cP" = (/obj/structure/noticeboard{pixel_y = 30},/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"cQ" = (/turf/ground/gravsnow,/area/coldwar/sa/sa_fob)
+"cR" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"cS" = (/obj/structure/bed,/obj/item/weapon/bedsheet/blue,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"cT" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"cU" = (/obj/structure/table/standard,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"cV" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"cW" = (/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"cX" = (/obj/structure/closet/cabinet,/obj/item/weapon/gun/projectile/cz82,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/weapon/storage/belt/holster/csla,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"cY" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/carpet,/area/coldwar/sa/sa_bunk)
+"cZ" = (/obj/structure/table/woodentable,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"da" = (/obj/item/weapon/stool,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"db" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/escalation/ural/ural3,/turf/simulated/floor/road,/area/coldwar/stuff/roads)
+"dc" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"dd" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"de" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"df" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"dg" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"dh" = (/obj/structure/table/woodentable,/obj/item/weapon/reagent_containers/food/drinks/glass2/shot,/obj/item/weapon/reagent_containers/food/drinks/glass2/shot,/obj/item/weapon/reagent_containers/food/drinks/glass2/shot,/obj/item/weapon/reagent_containers/food/drinks/glass2/shot,/obj/item/weapon/reagent_containers/food/drinks/glass2/shot,/obj/item/weapon/reagent_containers/food/drinks/glass2/shot,/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"di" = (/obj/structure/closet/cabinet,/obj/item/weapon/gun/projectile/makarov,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/weapon/storage/belt/holster/sa,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"dj" = (/obj/structure/table/woodentable,/obj/item/weapon/storage/fancy/cigarettes/professionals,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
+"dk" = (/turf/simulated/wall/wood,/area/coldwar/sa/sa_med)
+"dl" = (/turf/simulated/floor/pavement,/area/coldwar/sa)
+"dm" = (/obj/structure/chezh_hangehog,/turf/simulated/floor/pavement,/area/coldwar/sa)
+"dn" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"do" = (/obj/structure/table/standard,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dp" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dq" = (/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dr" = (/obj/item/weapon/bedsheet,/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"ds" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dt" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"du" = (/obj/machinery/door/unpowered/simple/wood/saloon,/turf/simulated/floor/carpet,/area/coldwar/sa/sa_fob)
+"dv" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dw" = (/obj/structure/sandbag/concrete_block{tag = "icon-concrete_block (WEST)"; icon_state = "concrete_block"; dir = 8},/turf/simulated/floor/pavement,/area/coldwar/sa)
+"dx" = (/obj/structure/sandbag/concrete_block{tag = "icon-concrete_block (EAST)"; icon_state = "concrete_block"; dir = 4},/turf/simulated/floor/pavement,/area/coldwar/sa)
+"dy" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dz" = (/obj/structure/barricade,/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dA" = (/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/sa_soldiers)
+"dB" = (/obj/structure/sandbag/concrete_block{tag = "icon-concrete_block (NORTH)"; icon_state = "concrete_block"; dir = 1},/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/sa_soldiers)
+"dC" = (/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
+"dD" = (/obj/structure/sandbag/concrete_block{tag = "icon-concrete_block (NORTH)"; icon_state = "concrete_block"; dir = 1},/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
+"dE" = (/turf/simulated/floor/pavement,/area/coldwar/outside)
+"dF" = (/obj/structure/chezh_hangehog,/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
+"dG" = (/obj/structure/chezh_hangehog,/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/sa_soldiers)
+"dH" = (/obj/structure/sandbag/concrete_block{tag = "icon-concrete_block (WEST)"; icon_state = "concrete_block"; dir = 8},/turf/simulated/floor/pavement,/area/coldwar/stuff/roads)
+"dI" = (/obj/structure/sandbag/concrete_block{tag = "icon-concrete_block (EAST)"; icon_state = "concrete_block"; dir = 4},/turf/simulated/floor/pavement,/area/coldwar/stuff/roads)
+"dJ" = (/obj/structure/sink/kitchen{pixel_y = 30},/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dK" = (/obj/machinery/optable,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dL" = (/obj/structure/table/steel,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dM" = (/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dN" = (/obj/structure/curtain,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dO" = (/obj/structure/bed/roller,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dP" = (/obj/item/weapon/stool,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dQ" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dR" = (/obj/structure/table/steel,/obj/random/smokes,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dS" = (/obj/structure/table/rack,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"dT" = (/obj/structure/toilet{dir = 1},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"dU" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dV" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"dW" = (/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,/turf/ground/gravsnow,/area/coldwar/outside)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadabaeafafagafafafafagafafafagafafafagafafaaabadadadadabaaaaaaaaaaaaaaaeaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeabadadadabaaafahaiajakalaiamanakaoapaqakaraqasafaaabadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadabaaafaiaiaiakatauauauakavavaqakaqawaqafaaabaxayazaAaBaaaaaaaaaaaaaaaaaaaaaaaeaaaaaaaaaaaaaaaa
+aaaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCaCabadadadabaaafaDaiaiakaiaiaiaiakaqawaqakaqaEaFafaaaBaGaHaIaJabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKaLaLaLaLaLagaLaLagaLaLagaLaLaLaaaMabadadadabaaafakakaNakaNakakakakakakaNakaNakakafaaabaOaPaQaRabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKaLaSaSaTaUaVaUaUaVaUaUaVaUaSaLaaaMabadadadabaaafaWaWaWaXaYaWaWaWakaWaWaWaWaWaWaWafaaabaZbabbbcabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaaaaaaaa
+aaaKaLaSaSaTaUaVaUaUaVaUaUbdaUaSagaaaMabadadadabaaafakakakakakakakaNakakaNakakakakakafaaabbebfbgbhabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKaLaSaSaTaUaVaUaUaVaUaUaVaUaSaLaaaMabadadadabaaafbibjbkblbmbnblblboblblbpbjbqblbqafaaabbebfbgbhabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaKaLaSaSaTaUbdaUaUaVaUaUaVaUaSaLaaaMabadadadabaaafbrblbsblbtbnbublbrblblblblbvbwbvafaaabbebfbgbhabaabxbybybzbAbAbAbAbAbzbBbCbDaLaaaaaaaaaa
+aaaKaLaSaSaTaUaVaUaUaVaUaUaVaUaSagaaaMabadadadabaaagbEbFbGblbtbnblbFblblbjblblbHblbIagaaabbebfbgbhabaaaLbybybybybybybybybzbJbJbJaLaaaaaaaaaa
+aaaKaLaSaUaVaSaSaSaSaSaSaSaSaSaSaLaaaMabadadadabaaafbKbwbLblbnbnblblbMblblblbFbNblbOafaaabbebPbQbhabaaaLbzbybzbzbzbzbzbzbzbybzbzaLaaaaaaaaaa
+aaaKaLaSaVaVaSaSaSaSaSaSaSaSaSaSbRabababadadadabaaagbSblblblblblbFblblblblblblbTblbUagaaabadadadadabaaaLbAbybybAbzbAbAbAbzbybybAaLaaaaaaaaaa
+aaaKaLaSaSaSaSaSaSaSaSaSaSaSaSaSbRabababadadadabaaafbpblblblblblblblblblblblblblblblafaaabadadadadabaaaLbAbybybAbzbybybybzbybybAaLaaaaaaaaaa
+aaaKaLaUbdaUaUaVaUaUbdaUaUaVaUaSaLaaaMabadadadabaaagbVblbWbWbVbVbVbXbYbWbVbVbVbVbWbVagaaabbZcacbccabaaaLbycdbybybybybybybybybybAaLaaaaaaaaaa
+aaaKaLaUaVaUaUaVaUaUaVaUaUaVaUaSagaaaMabadadadabaaafaWaWaWaWaWaWcecfcgchaWaWaWaWaWaWafaaabcicjckclabaaaLcmcnbybAbzcocpcqbzbAbybAaLaaaaaaaaaa
+aaaKaLaUaVaUaUaVaUaUaVaUaUaVaUaSaLaaaMabadadadabaaagaWaWaWaWaWaWaWcfcrchaWaWaWaWaYaWagaaabcsctcucvabaaaLbycwbybAbzcocpcqbzbAbybAaLaaaaaaaaaa
+aaaKaLaUaVaUaUbdaUaUaVaUaUbdaUaSaLaaaMabadadadabaaafaWaYaWcxaWaWaWcfcgchaWaWaXaWaWaWafaaabcyczcAcBabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaKaLaUaVaUaUaVaUaUaVaUaUaVaUaSagaaaMabadadadabaaagaWaWaWaYaWaWaWcfcgchaWaWaWaWaWaWagaaabcCcDcEcFabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKaLaLagaLaLagaLaLagaLaLagaLaLaLaaaMabadadadabaaafaWcGaWaWaWaWaWcfcgchaWaYaWaWcGaWafaaabcCcDcEcFabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaMabadadadabaaagaWaWaWaWaWaWaWcfcrchaWaWaWaWaWaWagaaabcCcDcEcFabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aacHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHabadadadabaaafcIcIaWaWcJaWaWcfcKchceaWaWaWcIcIafaaabcCcDcEcFabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaMabadadadabaaafakakakakakaNakcfcgchakaNakakakakafaaabcCcLcMcFabaaaLbAbAbAbAbAbAbAbAbzbBcNbDaLaaaaaaaaaa
+aaaKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaMabadadadabaaafcOaWaWaWaNaWakcfcrchakaWaWcGaWcPafaaabadadadadabaaaLbybybybybybybybybzbJbJbJaLaaaaaaaaaa
+aaaKcQcQcQcQaLaLaLaLaLaLaLaLaLaLaLaaaMabadadadabaaagaWaWaWaWakaWakcfcgchakaWaWaWaWaWafaaabbZcacbccabaaaLbzcRbzbzbzbzbzbzbzbzbzcRaLaaaaaaaaaa
+aaaKaLcQcQbRaLcScScSaLcTcUcVbRbRaLaaaMabadadadabaaafcWcxaWcXakaWakcfcYchakaWaWcZdaaWafaaabcidbckclabaaaLbAbybAbAbzbAbAbAbzbAbybyaLaaaaaaaaaa
+aaaKaLbRbRbRaLbRbRbRbRbRdcbRbRbRaLaaaMabadadadabaaafakakakakakaWakcfcgchakaWdddedaaWafaaabcsctcucvabaabxbybybybybzbybybybzbAbybyaLaaaaaaaaaa
+aaaKaLbRdfbRaLcScScSaLbRbRbRbRbRbRabababadadadabaaafdeaWaWaWaNcGakcfcrchakaWdadedgaWafaaabcyczcAcBabaaaLbycdbybybybybybybybybybAaLaaaaaaaaaa
+aaaKaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaMabadadadabaaagaWaWaWaWakaWakcfcgchakcxdadhaWaWafaaabcCcDcEcFabaaaLcmcpbybAbzbAcpbAbzbAbybAaLaaaaaaaaaa
+aaaKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaMabadadadabaaafcWaWaWdiakaWakcfcgchakaWdddjdgaWafaaabcCcDcEcFabaaaLbycwbybAbzbAcpcqbzbAbybAaLaaaaaaaaaa
+aaaCcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHabadadadabaaafafafafafafafafcfcgchafafafafafafafaaabcCcDcEcFabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaKdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkaaaMabadadadabaadldldldldldldlafcfcgchafdldldldmdldlaaabcCcDcEcFabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKdkdndodpdqdrdsdtdkdrdrdrdrdqdkaaaMabadadadabaaaaaeaaaadldldlafafduafafdldldlaaaaaaaaabcCcLcMcFabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKdkdqdvdqdqdqdqdqdqdqdqdqdqdqdkaaaMabadadadabaaaaaaaaaadwdldldldldldldldldldxaaaaaaaaabadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaKdkdqdqdqdqdrdtdtdrdrdrdrdqdqdyaaaMabadadadabaaaeaaaaaadwdldldldldldldldldldxaaaaaaaaabadadadadabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaKdkdkdzdkdkdkdkdkdkdkdkdkdkdkdkaaaMabadadadabaaaaaaaaaadwdldldldldldldldldldxaaaaaaaeabadadadadabaaaLbybybzbAbAbAbAbAbzbBbJbDaLaaaaaaaaaa
+aaaKdkdqdqdqdqdkdrdsdtdkdrdrdrdrdkaaaMabadadadabdAdAdAdAdAdBdBdBdAdAdAdAdCdDdDdDdCdCdCdCabadadadadabdEbxbybybybybybybybybzbJbJbJaLaaaaaaaaaa
+aaaKdkdqdqdqdqdkdqdqdqdqdqdqdqdqdkabababadadadabdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdFdCdCdCdCabadadadadabaaaLbzcRbzbzbzbzbzbzbzbzcRbzaLaaaaaaaaaa
+aaaKaaaadqdqdqdkdrdtdtdrdrdrdrdqdyabababadadadabdAdAdAdAdAdGdAdAdAdAdAdAdCdCdCdCdCdCdCdCabadadadadabaaaLbAbybAbAbzbAbAbAbzbAbybAaLaaaaaaaaaa
+aaaKaaaaaadkdkdkdkdkdkdkdkdkdkdkdkabababadadadabdAdAdAdAdAdAdAdAdAdBdBdBdCdCdCdCdCdCdCdCabadadadadabaaaLbAbybybybzbybybybzbAbybAaLaaaaaaaaaa
+aacHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHcHabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLbycdbybybybybybybybybybAaLaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLcmcnbybAbzbAcpbAbzbAbybAaLaaaaaaaaaa
+aaaadkdkdkdkdkdkdkdkdkdkdkdkdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLbAbAbybAbzcocpcqbzbAbybAaLaaaaaaaaaa
+aaaadkdJdKdLdkdJdKdLdkdJdKdLdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaadkdMdMdMdkdMdMdMdkdMdMdMdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaadkdMdMdLdkdMdMdLdkdMdMdLdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaadkdNdNdNdkdNdNdNdkdNdNdNdkaaaaaaaaabadadadabdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCabadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaadkdMdMdMdMdMdMdMdMdMdMdMdkaaaaaaaaabadadadabdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCabadadadadabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaadkdOdMdOdMdMdMdPdMdPdMdPdkaaaaaaaaabadadadabdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCabadadadadabaaaLbybybzbAbAbAbAbAbzbAbybAaLaaaaaaaaaa
+aaaadkdOdMdOdMdMdQdPdMdPdMdPdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabdEbxbybybybybybybybybzbAbybyaLaaaaaaaaaa
+aaaadkdOdMdOdMdMdMdPdMdPdMdPdkabababababadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLbzbybzbzbzbzbzbzbzbzbzbyaLaaaaaaaaaa
+aaaadkdOdMdOdMdMdMdMdMdMdMdMdyabababababadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLbAbybAbAbzbAbAbAbzbAbybyaLaaaaaaaaaa
+aaaadkdkdkdkdydkdkdkdydkdkdkdkabababababadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLbAbybybybzbybybybybybybyaLaaaaaaaaaa
+aaaadkdndRdpdqdkdSdSdMdSdSdSdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLbycdbybybybybybybzbzcRbzaLaaaaaaaaaa
+aaaadkdndRdpdqdydMdMdMdMdMdMdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLcmcpbybybzbAbycpbzbJbJbJaLaaaaaeaaaa
+aaaadkdqdqdqdqdkdSdSdMdSdSdSdkaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaLbycwbAbAbzbAbycnbzdTbJbJaLaaaaaaaaaa
+aaaadkdUdUdVdVdkdOdOdMdOdOdOdkaaaaaaaaabadadadabdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCabadadadadabaaaLaLaLaLaLaLaLaLaLaLaLaLaLaLaaaaaaaaaa
+aaaadkdkdkdkdkdkdkdkdkdkdkdkdkaaaaaaaaabadadadabdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCabadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadabdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCabadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaaaaaaaa
+aaaaaaaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaeaaaaaaaadWaaaaaaaaaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaeaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadaddHdAdAdAdAdAdAdAdAdAdAdAdAdCdCdCdCdCdCdCdCdIadadadadabaaaaaaaaaaaaaaaaaaaeaaaaaaaaaaaaaaaaaaaa
+abababababababaBababababababababababababadadaddHababababababababababababababababababababdIadadadadabababababaBababababababababababababababab
+adadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadad
+adadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadad
+adadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadad
+adadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadad
+abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab
+"}

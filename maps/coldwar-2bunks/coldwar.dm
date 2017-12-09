@@ -4,30 +4,11 @@
 	#include "coldwar_effects.dm"
 	#include "coldwar_shuttles.dm"
 
-	//#include "coldwar_unit_testing.dm"
-	//#include "coldwar_zas_tests.dm"
+	#include "soviet_fob.dmm"
+	#include "main_bg_under.dmm"
+	#include "main_bg.dmm"
+	#include "coldwar-intertim.dmm"
 
-	/*#include "loadout/loadout_accessories.dm"
-	#include "loadout/loadout_eyes.dm"
-	#include "loadout/loadout_head.dm"
-	#include "loadout/loadout_shoes.dm"
-	#include "loadout/loadout_suit.dm"
-	#include "loadout/loadout_uniform.dm"
-	#include "loadout/loadout_xeno.dm"*/
-
-	//#include "../shared/exodus_torch/_include.dm"
-
-/*На самом высоком по старшинству уровне поставить ландмарку с мап датой, и указать level = количество уровней. Тогда мультиз заработает. */
-//Подвал нато, сам фоб, база совков, интертим, тесты и тд
-//	#include "main_bg_under.dmm"//nato underground - 1
-//	#include "main_bg.dmm"//nato base - 2
-//	#include "sukablyat.dmm"//soviet base - 3
-//	#include "coldwar-intertim.dmm"//transition level 4
-//	#include "coldwar-1.dmm"//tests 5
-	#include "forest.dmm"
-	#include "poligon.dmm"
-
-	//to add new sounds - go by this path and add new 'path' to list.
 	#include "../../code/escalation/modules/lobby_music/random_lobby.dm"
 
 	#define USING_MAP_DATUM /datum/map/coldwar

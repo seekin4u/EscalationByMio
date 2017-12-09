@@ -103,38 +103,9 @@
 	else
 		dat += "<font color='green'>Engines ready.</font><br>"
 
-	//dat += "<br><b><A href='?src=\ref[src];toggle_cloak=[1]'>Toggle cloaking field</A></b><br>"
 	dat += "<b><A href='?src=\ref[src];move_multi=[1]'>Move truck</A></b><br>"
 	dat += "<b><A href='?src=\ref[src];start=[1]'>Return to base</A></b></center>"
 
-	/*/Docking
-	dat += "<center><br><br>"
-	if(MS.skip_docking_checks())
-		dat += "Docking Status: <font color='grey'>Not in use.</font>"
-	else
-		var/override_en = MS.docking_controller.override_enabled
-		var/docking_status = MS.docking_controller.get_docking_status()
-
-		dat += "Docking Status: "
-		switch(docking_status)
-			if("undocked")
-				dat += "<font color='[override_en? "red" : "grey"]'>Undocked</font>"
-			if("docking")
-				dat += "<font color='[override_en? "red" : "yellow"]'>Docking</font>"
-			if("undocking")
-				dat += "<font color='[override_en? "red" : "yellow"]'>Undocking</font>"
-			if("docked")
-				dat += "<font color='[override_en? "red" : "green"]'>Docked</font>"
-
-		if(override_en) dat += " <font color='red'>(Override Enabled)</font>"
-
-		dat += ". <A href='?src=\ref[src];refresh=[1]'>\[Refresh\]</A><br><br>"
-
-		switch(docking_status)
-			if("undocked")
-				dat += "<b><A href='?src=\ref[src];dock_command=[1]'>Dock</A></b>"
-			if("docked")
-				dat += "<b><A href='?src=\ref[src];undock_command=[1]'>Undock</A></b>"*/
 	dat += "</center>"
 
 	user << browse("[dat]", "window=[shuttle_tag]shuttlecontrol;size=300x600")

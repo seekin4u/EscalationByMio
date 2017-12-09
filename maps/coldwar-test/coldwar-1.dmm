@@ -15,7 +15,7 @@
 "ao" = (/obj/structure/truck/ural/basic_wall/n4,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
 "ap" = (/obj/item/ammo_magazine/ags30x29mm,/turf/simulated/floor/tiled/dark,/area/coldwar)
 "aq" = (/obj/structure/truck/ural/basic_floor/n5,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
-"ar" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/multi/ural,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
+"ar" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/multi/escalation/ural,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
 "as" = (/obj/structure/truck/ural/basic_floor/n7,/obj/structure/bed/chair/office{buckle_pixel_shift = "x=0;y=-5"; pixel_y = -5},/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
 "at" = (/obj/structure/truck/ural/basic_floor/n8,/turf/ground/gravsnow,/area/shuttle/truck/ural/start)
 "au" = (/obj/item/weapon/gun/projectile/heavy_mg/ags_17,/turf/simulated/floor/tiled/dark,/area/coldwar)

@@ -165,6 +165,30 @@
 	name = "\improper URAL's finish ares"
 	icon_state = "ural_finish"
 
+/area/shuttle/truck/ural/intertim2
+	name = "\improper URAL intertim"
+	icon_state = "ural_intertim"
+
+/area/shuttle/truck/ural/start2
+	name = "\improper URAL's start area"
+	icon_state = "ural_start"
+
+/area/shuttle/truck/ural/finish2
+	name = "\improper URAL's finish ares"
+	icon_state = "ural_finish"
+
+/area/shuttle/truck/ural/intertim3
+	name = "\improper URAL intertim"
+	icon_state = "ural_intertim"
+
+/area/shuttle/truck/ural/start3
+	name = "\improper URAL's start area"
+	icon_state = "ural_start"
+
+/area/shuttle/truck/ural/finish3
+	name = "\improper URAL's finish ares"
+	icon_state = "ural_finish"
+
 /*
 	requires_power = 0
 	sound_env = SMALL_ENCLOSED
@@ -286,6 +310,23 @@
 
 /area/coldwar/trucks/ural/ural_fob
 	name = "ural_fob"
+	icon_state = "ural_finish"
+
+/area/coldwar/trucks/ural/ural_home2
+	name = "ural_home2"
+	icon_state = "ural_start"
+
+/area/coldwar/trucks/ural/ural_fob2
+	name = "ural_fob2"
+	icon_state = "ural_finish"
+
+
+/area/coldwar/trucks/ural/ural_home3
+	name = "ural_home3"
+	icon_state = "ural_start"
+
+/area/coldwar/trucks/ural/ural_fob3
+	name = "ural_fob3"
 	icon_state = "ural_finish"
 
 /area/coldwar/trucks/m35

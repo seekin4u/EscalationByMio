@@ -473,7 +473,7 @@ var/const/CLICK_HANDLER_ALL                  = (~0)
 		selected_target[1] = object
 		selected_target[2] = params
 		while(selected_target[1])
-			dispersion_modifyer += 0.05
+			dispersion_modifyer += 0.04
 			Click(selected_target[1], location, control, selected_target[2])
 			sleep(delay)
 		dispersion_modifyer = 0
