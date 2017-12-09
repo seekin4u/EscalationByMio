@@ -1511,7 +1511,7 @@ DE Funker
 DE Schutze
 }
 
-Silentum = {
+Silentium = {
 DE Zugfuhrer
 DE Zugfuhrer Stellvertretender
 DE Zug Funker
@@ -1528,6 +1528,22 @@ DE Schutze
 }
 
 RiyaMakary = {
+DE Zugfuhrer
+DE Zugfuhrer Stellvertretender
+DE Zug Funker
+DE Gruppenfuhrer
+DE Gruppenfuhrer Stellvertretender
+DE Maschinengewehrschutze
+DE Grenadier
+DE Grenadier Assistent
+DE Chef-Sanitater
+DE Sanitater
+DE Scharfschutze
+DE Funker
+DE Schutze
+}
+
+icecactus = {
 DE Zugfuhrer
 DE Zugfuhrer Stellvertretender
 DE Zug Funker
@@ -2900,6 +2916,31 @@ US Grenadier
 US Grenadier Assistant
 }
 
+PinxePuto = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Very nise persin = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
 
 #CSLA
 
