@@ -25,7 +25,7 @@
 
 /obj/item/ammo_magazine/c45m
 	name = "magazine (.45)"
-	icon_state = "45"
+	icon_state = "45-1"
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/c45
 	matter = list(DEFAULT_WALL_MATERIAL = 525) //metal costs are very roughly based around 1 .45 casing = 75 metal

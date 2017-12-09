@@ -45,5 +45,5 @@
 
 /obj/item/weapon/grenade/smokebomb/wp
 	desc = "It is set to detonate in 2 seconds."
-	name = "RGD2 smoke grenade"
-	icon_state = "rgd2"
+	name = "RDG2 smoke grenade"
+	icon_state = "rdg2"
