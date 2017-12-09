@@ -259,6 +259,15 @@
 	max_ammo = 20
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/wa2000_762x51s
+	name = "WA2000 magazine (7.62x51mm)"
+	icon_state = "wa2000mag"
+	mag_type = MAGAZINE
+	caliber = "762x51"
+	ammo_type = /obj/item/ammo_casing/a762x51
+	max_ammo = 6
+	multiple_sprites = 1
+
 /obj/item/ammo_magazine/c762x51s/ap
 	name = "AP magazine (7.62x51mm)"
 	ammo_type = /obj/item/ammo_casing/a762x51/ap

@@ -945,7 +945,7 @@
 	name = "SVD"
 	desc = "A standard-issue Soviet Army and CSLA marksman rifle. Chambers 7.62x54 rounds."
 	icon_state = "svd"
-	item_state = "m14"
+	item_state = "svd"
 	slot_flags = SLOT_BACK_GUN
 	w_class = 5
 	force = 10
@@ -986,17 +986,17 @@
 /obj/item/weapon/gun/projectile/automatic/wa2000
 	name = "WA2000"
 	desc = "A specialized Bundeswehr sniper rifle. Chambers 7.62x54 rounds."
-	icon_state = "svd" //fix
+	icon_state = "wa2000" //fix
 	item_state = "m14"
 	slot_flags = SLOT_BACK_GUN
 	w_class = 5
 	force = 10
 	max_shells = 6
-	caliber = "762x54" //fix
-	ammo_type = /obj/item/ammo_casing/a762x54 //fix
+	caliber = "762x51"
+	ammo_type = /obj/item/ammo_casing/a762x51
 	load_method = MAGAZINE
 	magazine_type = null
-	allowed_magazines = /obj/item/ammo_magazine/c762x54s //fix
+	allowed_magazines = /obj/item/ammo_magazine/wa2000_762x51s
 	one_hand_penalty = 10
 	accuracy = 5
 	fire_delay = 2
