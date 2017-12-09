@@ -959,7 +959,7 @@
 	accuracy = 5
 	fire_delay = 3
 	fire_sound = 'sound/weapons/gunshot/svd.ogg'
-	wielded_item_state = "m14-wielded"
+	wielded_item_state = "svd-wielded"
 	unload_sound = 'sound/weapons/gunporn/svd_magout.ogg'
 	reload_sound = 'sound/weapons/gunporn/svd_magin.ogg'
 	cocked_sound = 'sound/weapons/gunporn/svd_boltback.ogg'
