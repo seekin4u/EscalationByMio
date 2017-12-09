@@ -298,6 +298,7 @@
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "default"
 	requires_power = 0
+	lighting_use_dynamic = 0
 
 
 /area/coldwar/trucks/ural

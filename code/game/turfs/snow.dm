@@ -100,8 +100,8 @@
 	icon = 'icons/escalation/turf/road.dmi'
 	icon_state = "1"
 
-/turf/ground/gravsnow/truck/initialize()
-	return
+/*turf/ground/gravsnow/truck/initialize()
+	return*/
 
 /turf/ground/gravsnow/truck/snow
 	name = "snow"
