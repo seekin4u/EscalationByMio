@@ -1407,7 +1407,43 @@ CCCP Razvedchik
 CCCP Strelok
 }
 
+Nicknam = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
 
+z135367 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
 
 # BUNDESWEHR
 
@@ -2238,9 +2274,8 @@ US Grenadier
 US Grenadier Assistant
 }
 
-#SOLDIERS
 
-Karmac = {
+Subdon = {
 US Corporal
 US Radio Operator
 US Machinegunner
@@ -2249,6 +2284,28 @@ US Medic
 US Designated Marksman
 US HWS Gunner
 US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+#SOLDIERS
+
+Karmac = {
+US Lieutenant
+US Staff Sergeant
+US Radio Telegraph Operator
+US Sergeant
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US Head Medic
+US HWS Commander
+US HWS Gunner
+US HWS Assistant
+US Assault Squad Commander
 US Grenadier
 US Grenadier Assistant
 }
@@ -2656,19 +2713,6 @@ US Grenadier
 US Grenadier Assistant
 }
 
-Subdon = {
-US Corporal
-US Radio Operator
-US Machinegunner
-US Rifleman
-US Medic
-US Designated Marksman
-US HWS Gunner
-US HWS Assistant
-US Grenadier
-US Grenadier Assistant
-}
-
 Jakkkk = {
 US Corporal
 US Radio Operator
@@ -2930,6 +2974,32 @@ US Grenadier Assistant
 }
 
 Very nise persin = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Wilchen = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+Vivalas = {
 US Corporal
 US Radio Operator
 US Machinegunner
