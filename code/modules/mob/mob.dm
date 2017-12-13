@@ -628,12 +628,12 @@
 		if(client.holder)
 			stat("CPU:","[world.cpu]")
 			stat("Instances:","[world.contents.len]")
-
+/*
 	if(client.holder && statpanel("Processes"))
 		if(processScheduler)
 			processScheduler.statProcesses()
 		sleep(1 SECOND)
-
+*/
 	if(listed_turf && client)
 		if(!TurfAdjacent(listed_turf))
 			listed_turf = null
