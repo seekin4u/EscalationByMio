@@ -1,4 +1,5 @@
 /proc/init_whitelist()
+	whitelisted_escalation.Cut()
 	var/list/whitelist_file = file2list("config/whitelist_escalation.txt")
 	var/check_roles = 0
 	var/checked_key = null

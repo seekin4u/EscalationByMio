@@ -27,6 +27,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/show_armies_tags,
 	/client/proc/show_separated_stat,
 	/client/proc/show_general_stat,	//allows us to set a custom colour for everythign we say in ooc,
+	/client/proc/add_to_esc_whitelist,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/client/proc/toggle_view_range,		//changes how far we can see,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
@@ -512,6 +513,22 @@ var/list/admin_verbs_mentor = list(
 		return
 	world << show_statistic_by_faction()
 	feedback_add_details("admin_verb", "AKLL")
+
+/client/proc/add_to_esc_whitelist()
+	set name = "Add to WL"
+	set category = "EscAdmin"
+
+	if(!holder)
+		return
+
+	var/WL_playerkey  = input("CKEY:", "Escalation whitelist")
+	var/WL_playerrank = input("RANK:", "Escalation whitelist")
+
+	if(WL_playerkey && WL_playerrank)
+		add_player_to_escalation_whitelist(WL_playerkey, WL_playerrank)
+		init_whitelist()
+
+	feedback_add_details("admin_verb", "ESCW")
 
 /client/proc/show_armies_tags()
 	set name = "Show armies' tags"
