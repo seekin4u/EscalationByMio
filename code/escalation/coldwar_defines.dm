@@ -1,8 +1,0 @@
-#define ESC_DEBUG 0//set to 0 to disable any logs
-#define ESC_DEBUG_GUNS ESC_DEBUG && 1
-#define ESC_DEBUG_SCOPES ESC_DEBUG && 1
-#define ESC_DEBUG_PROJECTILES ESC_DEBUG && 1
-
-//FOR ASSIGNING MILITARY FACTIONS TO JOBS
-#define NATO 	  1
-#define WARPAC 	  2

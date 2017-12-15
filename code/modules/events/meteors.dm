@@ -1,1 +1,0 @@
-/datum/event/meteor_wave

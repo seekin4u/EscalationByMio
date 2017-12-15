@@ -1,2 +1,0 @@
-/datum/event/sensor_suit_jamming
-	var/suit_sensor_jammer_method/jamming_method

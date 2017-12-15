@@ -1,1 +1,0 @@
-/datum/event/electrical_storm
