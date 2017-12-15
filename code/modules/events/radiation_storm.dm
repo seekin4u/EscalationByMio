@@ -1,1 +1,0 @@
-/datum/event/radiation_storm
