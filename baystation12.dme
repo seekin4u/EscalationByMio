@@ -292,7 +292,6 @@
 #include "code\escalation\coldwar_defines.dm"
 #include "code\escalation\coldwar_language.dm"
 #include "code\escalation\armies\armies.dm"
-#include "code\escalation\armies\civilian.dm"
 #include "code\escalation\armies\escalation_whitelist.dm"
 #include "code\escalation\armies\nato.dm"
 #include "code\escalation\armies\warpac.dm"
