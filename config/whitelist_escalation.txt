@@ -8,18 +8,15 @@
 # KEY = {
 # ::ALL::
 # }
-# EXAMPLE
-JamsMor = {
-CCCP Pomoshnik Granatometchika
-CCCP Pulemetchik
-CCCP Strelok
-}
+# EXAMPLE:
+# JamsMor = {
+# CCCP Retard
+# }
 
 # ADMINISTRATION
 
 JohnTheBastard = {
-CCCP Pulemetchik
-CCCP Pomoshnik Granatometchika
+::ALL::
 }
 
 Miomio = {
@@ -39,6 +36,11 @@ Lokiki = {
 }
 
 Frown = {
+::ALL::
+}
+
+
+JamsMor = {
 ::ALL::
 }
 
@@ -466,25 +468,6 @@ CCCP Strelok
 }
 
 Corporal_Adrian = {
-CCCP Starshiy Strelok
-CCCP Radiotelefonist
-CCCP Granatometchik
-CCCP Pomoshnik Granatometchika
-CCCP Pulemetchik
-CCCP Snayper
-CCCP Sanitar
-CCCP Glavvrach
-CCCP HWS Gunner
-CCCP HWS Assistant
-CCCP Vzvodny Pulemetchik
-CCCP Zamkomandira Razvedotdeleniya
-CCCP Razvedchik-Radist
-CCCP Razvedchik-Snayper
-CCCP Razvedchik
-CCCP Strelok
-}
-
-JamsMor = {
 CCCP Starshiy Strelok
 CCCP Radiotelefonist
 CCCP Granatometchik

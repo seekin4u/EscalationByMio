@@ -498,7 +498,7 @@ var/list/admin_verbs_mentor = list(
 	feedback_add_details("admin_verb","S") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
-/client/proc/show_general_stat()
+/*/client/proc/show_general_stat()
 	set name = "Show generally armies stats"
 	set category = "EscAdmin"
 	if(!holder)
@@ -513,7 +513,7 @@ var/list/admin_verbs_mentor = list(
 		return
 	world << show_statistic_by_faction()
 	feedback_add_details("admin_verb", "AKLL")
-
+*/
 /client/proc/add_to_esc_whitelist()
 	set name = "Add to WL"
 	set category = "EscAdmin"
@@ -530,7 +530,7 @@ var/list/admin_verbs_mentor = list(
 		update_escpanels_for_all()
 
 	feedback_add_details("admin_verb", "ESCW")
-
+/*
 /client/proc/show_armies_tags()
 	set name = "Show armies' tags"
 	set category = "EscAdmin"
@@ -538,6 +538,7 @@ var/list/admin_verbs_mentor = list(
 		return
 	show_armies()
 	feedback_add_details("admin_verbs", "AKCV")
+*/
 /*show_statistic()
 	//fraction live kill in action mortality rate
 	if(!ticker.mode.wargames)

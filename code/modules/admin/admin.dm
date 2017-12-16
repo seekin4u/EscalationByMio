@@ -1230,61 +1230,6 @@ var/global/floorIsLava = 0
 	usr << browse(out, "window=edit_mode[src]")
 	feedback_add_details("admin_verb","SGM")
 
-
-/datum/admins/proc/show_army_edit(var/datum/army_faction/F = null)
-	set category = "Admin"
-	set desc = "Edit an army."
-	set name = "Edit Army"
-
-	if(!all_factions.len)
-		to_chat(usr,"The factions didn't initialize!")
-		return
-
-	if(!F || isnull(F))
-		var/list/available_teams = list_armies_by_name()
-		var/choice = input("Choose a faction to edit") as null|anything in available_teams
-		if(!choice)
-			return
-
-		F = get_army(choice)
-		if(!F || !istype(F))
-			to_chat(usr,"Something fucked up!")
-			return //Didn't retrieve the army, weird
-
-	var/out = "<font size=3><b>Editing Army: [F.name] </b> <a href='?src=\ref[F];set=name'>(Change Name)</a></font><br/>"
-	out += "<hr>"
-	out += "<br/>"
-	if(F.enabled)
-		out += "<a href='?src=\ref[F];toggle=enabled'>Army is Enabled</a><br/>"
-	else
-		out += "<a href='?src=\ref[F];toggle=enabled'>Army is Disabled</a><br/>"
-	if(F.latejoin)
-		out += "<a href='?src=\ref[F];toggle=latejoin'>Army can be Latejoined</a><br/>"
-	else
-		out += "<a href='?src=\ref[F];toggle=latejoin'>Army cannot be Latejoined</a><br/>"
-	if(F.is_neutral)
-		out += "<a href='?src=\ref[F];toggle=neutral'>Army must be Neutral</a><br/>"
-	else
-		out += "<a href='?src=\ref[F];toggle=neutral'>Army can be Neutral or Non-Neutral</a><br/>"
-	out += "<B>Flag Icon State:</b> <a href='?src=\ref[F];set=flag'>[F.flag_state]</a><br/>"
-	out += "<B>Number of Fireteams:</b> <a href='?src=\ref[F];set=fireteams'>[F.num_fireteams]</a><br/>"
-	out += "<B>Current Win Points:</b> <a href='?src=\ref[F];set=win'>[F.win_points]</a><br/>"
-	out += "<B>Current Munitions:</b> <a href='?src=\ref[F];set=mun'>[F.munition_points]</a><br/>"
-	out += "<B>Current Reserves:</b> <a href='?src=\ref[F];set=res'>[F.reserve_points]</a><br/>"
-	out += "<B>Current Fuel:</b> <a href='?src=\ref[F];set=fuel'>[F.fuel_points]</a><br/><br/>"
-	out += "<br/><a href='?src=\ref[F];toggle=finish_up'>Save and Close</a><br/><br>"
-
-	out += "<BR/><a href='?src=\ref[F];toggle=job_editor'>Edit Jobs</a><br/>"
-	for(var/datum/job/escalation/J in all_army_jobs)
-		if(J.faction_tag == F.faction_tag)
-			if(J.position == "fireteam")
-				out += "[J.name] ([J.english_name]) - [J.rank_prefix] x[J.amount] per fireteam<br/>"
-			else if(J.position == "team")
-				out += "[J.name] ([J.english_name]) - [J.rank_prefix] x[J.amount]<br/>"
-
-	usr << browse(out, "window=edit_army[src];size=500x400")
-	feedback_add_details("admin_verb","SAE")
-
 /datum/admins/proc/toggletintedweldhelmets()
 	set category = "Debug"
 	set desc="Reduces view range when wearing welding helmets"
