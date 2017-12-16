@@ -97,9 +97,12 @@ var/global/list/string_slot_flags = list(
 	"uniform" = SLOT_TIE,
 )
 
-var/global/list/all_factions = list()
-var/global/list/all_army_jobs = list()
+//////////////////////////
+////////Escalation////////
+//////////////////////////
 
+var/global/list/all_factions           = list()
+var/global/list/all_army_jobs          = list()
 var/global/list/whitelisted_escalation = list()
 
 //////////////////////////

@@ -17,17 +17,14 @@ var/list/admin_verbs_admin = list(
 	/client/proc/invisimin,				//allows our mob to go invisible/visible,
 //	/datum/admins/proc/show_traitor_panel,	//interface which shows a mob's mind, -Removed due to rare practical use. Moved to debug verbs ~Errorage,
 	/datum/admins/proc/show_game_mode,  //Configuration window for the current game mode.,
-	/datum/admins/proc/show_army_edit,
 	/datum/admins/proc/force_mode_latespawn, //Force the mode to try a latespawn proc,
 	/datum/admins/proc/force_antag_latespawn, //Force a specific template to try a latespawn proc,
 	/datum/admins/proc/toggleenter,		//toggles whether people can join the current game,
 	/datum/admins/proc/toggleguests,	//toggles whether guests can join the current game,
 	/datum/admins/proc/announce,		//priority announce something to all clients.,
-	/client/proc/colorooc,
-	/client/proc/show_armies_tags,
-	/client/proc/show_separated_stat,
-	/client/proc/show_general_stat,	//allows us to set a custom colour for everythign we say in ooc,
+	/client/proc/colorooc,              //allows us to set a custom colour for everythign we say in ooc,
 	/client/proc/add_to_esc_whitelist,
+	/client/proc/show_escalation_statistic,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/client/proc/toggle_view_range,		//changes how far we can see,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
@@ -498,25 +495,9 @@ var/list/admin_verbs_mentor = list(
 	feedback_add_details("admin_verb","S") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
-/*/client/proc/show_general_stat()
-	set name = "Show generally armies stats"
-	set category = "EscAdmin"
-	if(!holder)
-		return
-	world << show_statistic()
-	feedback_add_details("admin_verb", "AKL")
-
-/client/proc/show_separated_stat()
-	set name = "Show separated stats"
-	set category = "EscAdmin"
-	if(!holder)
-		return
-	world << show_statistic_by_faction()
-	feedback_add_details("admin_verb", "AKLL")
-*/
 /client/proc/add_to_esc_whitelist()
 	set name = "Add to WL"
-	set category = "EscAdmin"
+	set category = "Escalation"
 
 	if(!holder)
 		return
@@ -530,51 +511,16 @@ var/list/admin_verbs_mentor = list(
 		update_escpanels_for_all()
 
 	feedback_add_details("admin_verb", "ESCW")
-/*
-/client/proc/show_armies_tags()
-	set name = "Show armies' tags"
-	set category = "EscAdmin"
+
+/client/proc/show_escalation_statistic()
+	set name = "Show statistic"
+	set category = "Escalation"
+
 	if(!holder)
 		return
-	show_armies()
-	feedback_add_details("admin_verbs", "AKCV")
-*/
-/*show_statistic()
-	//fraction live kill in action mortality rate
-	if(!ticker.mode.wargames)
-		return
-	var/dat = ""
-	if(!all_factions.len)
-		dat = "No factions in game!"
-		return dat
-	for(var/datum/army_faction/F in all_factions)
-		var/live = 0
-		var/dead = 0
-		var/mortality_rate = 0
-		for(var/mob/living/carbon/human/H in F.players)
-			if(H.stat == DEAD)
-				dead++
-			else
-				live++
-		mortality_rate = round(100 * (dead / live))
-		dat += "[F.name] : [live] alive, [dead] KIA. Mortality rate : [mortality_rate]% <br>"
-	return dat
 
-proc/show_armies()
-		//fraction live kill in action mortality rate
-	if(!ticker.mode.wargames)
-		return
-	var/dat = ""
-	if(!all_factions.len)
-		dat = "No factions in game!Show_armyes() fucked up!"
-		return dat
-	for(var/datum/army_faction/F in all_factions)
-		to_world("Army : [F.faction_tag]")
-
-
-//bund, usmc, csla, cccp
-//охх сука отрубите мне руки за этот говнокод ~Бастард
-proc/show_statistic_by_fraction()*/
+	to_world(show_statistic())
+	feedback_add_details("admin_verb", "ESCS")
 
 /client/proc/colorooc()
 	set category = "Fun"

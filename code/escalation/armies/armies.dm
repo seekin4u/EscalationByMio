@@ -62,20 +62,7 @@ proc/show_statistic()
 		mortality_rate = (dead / total) * 100
 		dat += "[F.name] : [live] alive, [dead ? dead : "nobody"] KIA. Mortality rate: [round(mortality_rate)]% <br>"
 
-	to_world(dat)
-	return
-
-proc/show_armies()
-	// Are we need this?? ~JamsMor
-
-	if(!length(all_factions))
-		to_world("No factions in game!")
-		return
-
-	for(var/datum/army_faction/F in all_factions)
-		to_world("Army : [F.faction_tag]")
-
-	return
+	return dat
 
 //Faction parent. 'army_faction' to differentiate it from the actual basic faction code for antags
 /datum/army_faction
@@ -171,8 +158,7 @@ proc/show_armies()
 
 		if(making_fireteam)
 			var/esc_Type = text2path(line)
-
-			if(istype(esc_Type))
+			if(esc_Type)
 				fireteam_slots.Add(locate(esc_Type) in all_army_jobs)
 
 			continue
