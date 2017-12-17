@@ -18,8 +18,7 @@ CCCP Strelok
 # ADMINISTRATION
 
 JohnTheBastard = {
-CCCP Pulemetchik
-CCCP Pomoshnik Granatometchika
+::ALL::
 }
 
 Miomio = {
@@ -1444,6 +1443,45 @@ CCCP Razvedchik-Snayper
 CCCP Razvedchik
 CCCP Strelok
 }
+
+Alex971 = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
+Andy_Sok = {
+CCCP Starshiy Strelok
+CCCP Radiotelefonist
+CCCP Granatometchik
+CCCP Pomoshnik Granatometchika
+CCCP Pulemetchik
+CCCP Snayper
+CCCP Sanitar
+CCCP Glavvrach
+CCCP HWS Gunner
+CCCP HWS Assistant
+CCCP Vzvodny Pulemetchik
+CCCP Zamkomandira Razvedotdeleniya
+CCCP Razvedchik-Radist
+CCCP Razvedchik-Snayper
+CCCP Razvedchik
+CCCP Strelok
+}
+
 
 # BUNDESWEHR
 
@@ -3012,6 +3050,32 @@ US Grenadier
 US Grenadier Assistant
 }
 
+Chargonian = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+}
+
+TheHeir = {
+US Corporal
+US Radio Operator
+US Machinegunner
+US Rifleman
+US Medic
+US Designated Marksman
+US HWS Gunner
+US HWS Assistant
+US Grenadier
+US Grenadier Assistant
+} 
+
 #CSLA
 
 
@@ -3555,7 +3619,19 @@ CZ Sanitar
 CZ Strelec
 } 
 
-Yacobpo157Laughing Rabbit = {
+Yacobpo157 = {
+CZ Druzhstvo Radista
+CZ Subchetar
+CZ Delostrelec
+CZ Pancerovnik
+CZ Pomocnik Pancerovnika
+CZ Radista
+CZ Nadstrelec
+CZ Sanitar
+CZ Strelec
+} 
+
+Molecricket = {
 CZ Druzhstvo Radista
 CZ Subchetar
 CZ Delostrelec
