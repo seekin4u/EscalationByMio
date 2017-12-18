@@ -80,8 +80,8 @@ proc/show_statistic()
 //This also initializes fireteams
 /datum/army_faction/New()
 	. = ..()
-
-	fireteams = setup_fireteams_for_faction(src)
+	if(enabled)
+		fireteams = setup_fireteams_for_faction(src)
 
 /datum/army_faction/Destroy()
 	slots.Cut()
@@ -143,7 +143,7 @@ proc/show_statistic()
 
 			fireteam_name = ""
 			fireteam_slots.Cut()
-			ready_to_create = TRUE
+			ready_to_create = FALSE
 
 		if(!length(line))
 			continue
@@ -167,6 +167,9 @@ proc/show_statistic()
 			fireteam_name = copytext(line, 6)
 			making_fireteam = TRUE
 			continue
+
+	for(var/datum/fireteam/FT in ready_fireteams)
+		to_world("name: [FT.name], num: [FT.num]")
 
 	return ready_fireteams
 

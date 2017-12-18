@@ -204,6 +204,8 @@
 			return global.all_antag_types_;
 		if("all_army_jobs")
 			return global.all_army_jobs;
+		if("all_army_in_game")
+			return global.all_army_in_game;
 		if("all_factions")
 			return global.all_factions;
 		if("whitelisted_escalation")

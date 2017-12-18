@@ -103,6 +103,7 @@ var/global/list/string_slot_flags = list(
 
 var/global/list/all_factions           = list()
 var/global/list/all_army_jobs          = list()
+var/global/list/all_army_in_game       = list()
 var/global/list/whitelisted_escalation = list()
 
 //////////////////////////

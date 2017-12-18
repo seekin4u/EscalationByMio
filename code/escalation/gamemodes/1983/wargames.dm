@@ -17,10 +17,8 @@
 	return
 
 /datum/game_mode/wargames/startRequirements()
-	if(teams.len < minimum_teams)
+	if(all_army_in_game.len < minimum_teams)
 		return "Not enough fighting teams have been selected! Required teams - [minimum_teams]."
-	if(neutral_teams.len < minimum_neutrals)
-		return "Not enough neutral teams have been selected! Required teams - [minimum_teams]."
 
 	//Add # of players joined requirements here
 

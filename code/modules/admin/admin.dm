@@ -1153,18 +1153,14 @@ var/global/floorIsLava = 0
 		out += "<br/><br/>"
 		out += "<a href='?src=\ref[ticker.mode];toggle=edit_teams'>Faction Editor</a><br/>"
 		out += "<b>Fighting Teams: </b> <a href='?src=\ref[ticker.mode];toggle=clear_teams'>(Clear)</a><br/>"
-		for(var/datum/army_faction/F in ticker.mode.teams)
+		for(var/datum/army_faction/F in all_army_in_game)
 			out += "[F.name] <br/>"
 
 		out += "<a href='?src=\ref[ticker.mode];set=add_army'>(Add)</a><br/>"
 
-		out += "<br/><b>Neutral Teams:</b> <a href='?src=\ref[ticker.mode];toggle=clear_neutrals'>(Clear)</a><br/>"
-		for(var/datum/army_faction/N in ticker.mode.neutral_teams)
-			out += "[N.name] <br/>"
-
 		out += "<a href='?src=\ref[ticker.mode];set=add_neutral_army'>(Add)</a><br/>"
 
-		if(ticker.mode.teams.len < ticker.mode.minimum_teams || ticker.mode.neutral_teams.len < ticker.mode.minimum_neutrals)
+		if(all_army_in_game.len < ticker.mode.minimum_teams)
 			out += "<br/>FINISH AND START (not enough teams)<BR/>"
 		else
 			out += "<br/><a href='?src=\ref[ticker.mode];toggle=finish_up'>FINISH</a><br/>"

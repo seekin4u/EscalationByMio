@@ -1,6 +1,11 @@
 # FIRETEAM_FACTION:FIRETEAM_NAME
-# TYPE_OF_JOB, TYPE_OF_JOB, ETC...
+# TYPE_OF_JOB
+# TYPE_OF_JOB
+# TYPE_OF_JOB
+# @END@
+
 # Faction Tags: bund, cccp, csla, usmc
+
 # Example:
 # cccp:Motostrelki
 # /datum/job/escalation/cccp/rifleman
