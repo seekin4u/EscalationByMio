@@ -91,10 +91,10 @@
 "bM" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
 "bN" = (/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "bO" = (/turf/simulated/wall/wood,/area/coldwar/stuff/quarters)
-"bP" = (/obj/structure/bed/padded,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"bQ" = (/obj/structure/toilet,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
-"bR" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
-"bS" = (/obj/machinery/shower,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"bP" = (/obj/item/device/flashlight/lantern,/obj/structure/table/army,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"bQ" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"bR" = (/obj/structure/bed/wp,/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"bS" = (/obj/structure/table/army,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "bT" = (/obj/structure/table/fancy,/obj/item/weapon/storage/box/irp/var2,/turf/simulated/floor/wood,/area/coldwar/house1)
 "bU" = (/obj/structure/table/rack,/obj/item/weapon/gun/projectile/automatic/svd,/obj/item/weapon/gun/projectile/automatic/svd,/obj/item/weapon/gun/projectile/automatic/svd,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
 "bV" = (/obj/structure/table/rack,/obj/item/weapon/gun/projectile/automatic/rpk74,/obj/item/weapon/gun/projectile/automatic/rpk74,/obj/item/weapon/gun/projectile/automatic/rpk74,/obj/item/weapon/gun/projectile/automatic/rpk74,/obj/item/weapon/gun/projectile/automatic/rpk74,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
@@ -118,7 +118,7 @@
 "cn" = (/obj/structure/table/rack,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/obj/item/clothing/head/helmet/escalation/vz53,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
 "co" = (/obj/structure/truck/ural/basic_floor/middle_l,/turf/simulated/floor/road,/area/shuttle/truck/ural/start)
 "cp" = (/obj/structure/truck/ural/basic_floor/middle_r,/turf/simulated/floor/road,/area/shuttle/truck/ural/start)
-"cq" = (/obj/structure/table/fancy,/turf/simulated/floor/wood,/area/coldwar/house1)
+"cq" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "cr" = (/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
 "cs" = (/obj/structure/table/rack,/obj/item/clothing/suit/armor/escalation/soviet,/obj/item/clothing/suit/armor/escalation/soviet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
 "ct" = (/obj/structure/table/rack,/obj/item/weapon/gun/projectile/automatic/aks74,/obj/item/weapon/gun/projectile/automatic/aks74,/obj/item/weapon/gun/projectile/automatic/aks74,/obj/item/weapon/gun/projectile/automatic/aks74,/obj/item/weapon/gun/projectile/automatic/aks74,/obj/item/weapon/gun/projectile/automatic/aks74,/turf/simulated/floor/wood,/area/coldwar/sa/sa_kapter)
@@ -135,7 +135,7 @@
 "cE" = (/obj/structure/truck/ural/basic_wall/n2,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
 "cF" = (/obj/structure/truck/ural/basic_wall/n3,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
 "cG" = (/obj/structure/truck/ural/basic_wall/n4,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
-"cH" = (/obj/structure/bed/chair/comfy,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"cH" = (/obj/effect/landmark/start{name = "CCCP Strelok"},/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar/stuff/quarters)
 "cI" = (/obj/structure/table/fancy,/obj/item/weapon/storage/fancy/cigarettes/yava,/turf/simulated/floor/wood,/area/coldwar/house1)
 "cJ" = (/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/item/weapon/material/knife/bayonet/sa,/obj/structure/table/fancy,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
 "cK" = (/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/item/weapon/saperka/lopata/warpact,/obj/structure/table/fancy,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
@@ -154,10 +154,10 @@
 "cX" = (/obj/structure/truck/ural/basic_floor/n6,/obj/machinery/computer/shuttle_control/multi/escalation/ural/ural2,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
 "cY" = (/obj/structure/truck/ural/basic_floor/n7,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
 "cZ" = (/obj/structure/truck/ural/basic_floor/n8,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
-"da" = (/obj/structure/bed/chair/comfy{dir = 4},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"db" = (/obj/structure/table/fancy,/obj/item/weapon/storage/fancy/cigarettes/prima,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"da" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"db" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/obj/effect/decal/cleanable/cobweb,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "dc" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"dd" = (/obj/structure/table/fancy,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"dd" = (/obj/structure/curtain/open/shower,/obj/machinery/shower{dir = 4; pixel_x = 5},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
 "de" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "df" = (/obj/structure/table/fancy,/obj/item/weapon/storage/box/irp/var2,/obj/item/weapon/storage/box/irp/var2,/obj/item/weapon/storage/box/irp/var2,/turf/simulated/floor/wood,/area/coldwar/house1)
 "dg" = (/obj/structure/table/fancy,/obj/item/weapon/storage/fancy/cigarettes/professionals,/turf/simulated/floor/wood,/area/coldwar/house1)
@@ -169,7 +169,7 @@
 "dm" = (/obj/structure/truck/ural/basic_wall/n10,/obj/structure/bed/chair/ural_pilot{buckle_pixel_shift = "x=0;y=21"; dir = 1; pixel_y = 21},/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
 "dn" = (/obj/structure/truck/ural/basic_wall/n11,/obj/structure/bed/chair/ural_pilot{buckle_pixel_shift = "x=0;y=21"; dir = 1; pixel_y = 21},/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
 "do" = (/obj/structure/truck/ural/basic_wall/n12,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
-"dp" = (/obj/structure/bed/chair/comfy{dir = 1},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"dp" = (/obj/structure/toilet{dir = 8},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
 "dq" = (/obj/structure/closet/crate,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/obj/item/weapon/storage/firstaid/combat/wp,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
 "dr" = (/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar/sa/sa_bunk)
 "ds" = (/turf/simulated/floor/carpet,/area/coldwar/sa/sa_bunk)
@@ -193,7 +193,7 @@
 "dK" = (/turf/simulated/floor/wood{tag = "icon-wood_broken0"; icon_state = "wood_broken0"},/area/coldwar/sa/sa_bunk)
 "dL" = (/obj/structure/truck/ural/basic_floor/middle_l,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
 "dM" = (/obj/structure/truck/ural/basic_floor/middle_r,/turf/simulated/floor/road,/area/shuttle/truck/ural/start2)
-"dN" = (/obj/random/smokes,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"dN" = (/obj/effect/decal/cleanable/dirt,/obj/effect/landmark/start{name = "CZ Pomocnik Pancerovnika"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "dO" = (/obj/structure/table/fancy,/obj/effect/decal/cleanable/cobweb,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
 "dP" = (/obj/structure/noticeboard{pixel_y = 30},/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
 "dQ" = (/obj/effect/landmark/start{name = "CZ Delostrelec"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
@@ -204,9 +204,9 @@
 "dV" = (/obj/structure/truck/ural/basic_wall/n3,/turf/simulated/floor/road,/area/shuttle/truck/ural/start3)
 "dW" = (/obj/structure/truck/ural/basic_wall/n4,/turf/simulated/floor/road,/area/shuttle/truck/ural/start3)
 "dX" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"dY" = (/obj/structure/bed,/obj/item/weapon/bedsheet/blue,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"dY" = (/obj/item/weapon/soap,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
 "dZ" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
-"ea" = (/obj/structure/table/standard,/obj/item/weapon/storage/fancy/cigarettes/professionals,/obj/item/device/flashlight/lantern,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"ea" = (/obj/structure/sink{dir = 4; pixel_x = 12},/obj/structure/mirror{pixel_x = 28},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
 "eb" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
 "ec" = (/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
 "ed" = (/obj/structure/closet/cabinet,/obj/item/weapon/gun/projectile/cz82,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/weapon/storage/belt/holster/csla,/obj/item/clothing/suit/armor/escalation/soviet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
@@ -239,8 +239,8 @@
 "eE" = (/obj/structure/truck/ural/basic_floor/middle_l,/obj/structure/bed/chair/ural_seat{dir = 8},/turf/simulated/floor/road,/area/shuttle/truck/ural/start3)
 "eF" = (/obj/structure/truck/ural/basic_floor/middle_r,/obj/structure/bed/chair/ural_seat{dir = 4},/turf/simulated/floor/road,/area/shuttle/truck/ural/start3)
 "eG" = (/obj/structure/truck/ural/basic_wall/n17,/turf/simulated/floor/road,/area/shuttle/truck/ural/start3)
-"eH" = (/obj/structure/table/fancy,/obj/item/weapon/storage/fancy/cigarettes/prima,/obj/item/device/flashlight/lantern,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"eI" = (/obj/structure/table/fancy,/obj/item/device/flashlight/lantern,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"eH" = (/obj/structure/sink{dir = 4; pixel_x = 12},/obj/structure/mirror{pixel_x = 28},/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"eI" = (/turf/simulated/wall/wood,/area/coldwar/outside)
 "eJ" = (/obj/structure/closet/cabinet,/obj/item/weapon/gun/projectile/makarov,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/ammo_magazine/a9x18,/obj/item/weapon/storage/belt/holster/sa,/obj/item/clothing/suit/armor/escalation/soviet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
 "eK" = (/obj/structure/table/fancy,/obj/item/weapon/storage/fancy/cigarettes/professionals,/turf/simulated/floor/wood,/area/coldwar/sa/sa_bunk)
 "eL" = (/turf/simulated/wall/wood,/area/coldwar/sa/sa_med)
@@ -248,12 +248,12 @@
 "eN" = (/obj/structure/chezh_hangehog,/turf/simulated/floor/pavement,/area/coldwar/sa)
 "eO" = (/obj/effect/landmark/start{name = "CZ Delostrelec"},/turf/simulated/floor/pavement,/area/coldwar/stuff/roads)
 "eP" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"eQ" = (/obj/structure/table/standard,/obj/item/device/flashlight/lantern,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"eQ" = (/obj/machinery/shower{dir = 4; pixel_x = 5},/obj/structure/curtain/open/shower,/turf/simulated/floor/tiled/white,/area/coldwar/outside)
 "eR" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "eS" = (/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"eT" = (/obj/item/weapon/bedsheet,/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"eU" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/obj/structure/bed,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"eV" = (/obj/structure/bed,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"eT" = (/obj/structure/toilet{dir = 8},/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
+"eU" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"eV" = (/obj/structure/table/army,/obj/item/device/flashlight/lantern,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "eW" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/carpet,/area/coldwar/sa/sa_fob)
 "eX" = (/obj/structure/truck/ural/basic_floor/middle_l,/turf/simulated/floor/road,/area/shuttle/truck/ural/start3)
 "eY" = (/obj/structure/truck/ural/basic_floor/middle_r,/turf/simulated/floor/road,/area/shuttle/truck/ural/start3)
@@ -262,7 +262,7 @@
 "fb" = (/obj/effect/landmark/start{name = "CZ Strelec"},/turf/simulated/floor/pavement,/area/coldwar/sa)
 "fc" = (/obj/structure/sandbag/concrete_block{tag = "icon-concrete_block (EAST)"; icon_state = "concrete_block"; dir = 4},/turf/simulated/floor/pavement,/area/coldwar/sa)
 "fd" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"fe" = (/obj/structure/barricade,/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"fe" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "ff" = (/obj/effect/landmark/start{name = "CCCP Strelok"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "fg" = (/obj/effect/landmark/start{name = "CZ Subchetar"},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
 "fh" = (/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/sa_soldiers)
@@ -274,7 +274,7 @@
 "fn" = (/turf/simulated/floor/pavement,/area/coldwar/outside)
 "fo" = (/obj/effect/landmark/start{name = "CCCP HWS Gunner"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "fp" = (/obj/effect/landmark/start{name = "CZ Pomocnik Pancerovnika"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"fq" = (/obj/effect/landmark/start{name = "CZ Pomocnik Pancerovnika"},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"fq" = (/obj/structure/table/army,/obj/structure/bedsheetbin,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "fr" = (/obj/effect/landmark/start{name = "CZ Subchetar"},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "fs" = (/obj/effect/landmark/start{name = "CZ Strelec"},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "ft" = (/obj/structure/chezh_hangehog,/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
@@ -312,25 +312,25 @@
 "fZ" = (/obj/effect/landmark/start{name = "CCCP Starshiy Strelok"},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
 "ga" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gb" = (/obj/effect/landmark/start{name = "CCCP Radiotelefonist"},/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
-"gc" = (/obj/effect/landmark/start{name = "CCCP Radiotelefonist"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"gd" = (/obj/effect/landmark/start{name = "CCCP Razvedchik"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"gc" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/obj/effect/decal/cleanable/cobweb2,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"gd" = (/turf/simulated/floor/wood{tag = "icon-wood_broken0"; icon_state = "wood_broken0"},/area/coldwar/stuff/quarters)
 "ge" = (/obj/effect/landmark/start{name = "CZ Strelec"},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
 "gf" = (/obj/effect/landmark/start{name = "CCCP Pulemetchik"},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
-"gg" = (/obj/effect/landmark/start{name = "CCCP Razvedchik-Radist"},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
-"gh" = (/obj/structure/table/steel,/obj/item/weapon/storage/fancy/cigarettes/luckystrikered,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"gg" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"gh" = (/obj/effect/decal/cleanable/cobweb2,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "gi" = (/obj/structure/table/rack,/obj/item/weapon/storage/box/cargo/csla/medic,/obj/item/weapon/storage/box/cargo/csla/medic,/obj/item/weapon/storage/box/cargo/csla/medic,/obj/item/weapon/storage/box/cargo/csla/medic,/obj/item/weapon/storage/box/cargo/csla/medic,/obj/item/weapon/storage/box/cargo/csla/medic,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gj" = (/obj/structure/table/rack,/obj/item/weapon/storage/box/cargo/sa/medic,/obj/item/weapon/storage/box/cargo/sa/medic,/obj/item/weapon/storage/box/cargo/sa/medic,/obj/item/weapon/storage/box/cargo/sa/medic,/obj/item/weapon/storage/box/cargo/sa/medic,/obj/item/weapon/storage/box/cargo/sa/medic,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gk" = (/obj/structure/table/rack,/obj/item/weapon/storage/backpack/medical,/obj/item/weapon/storage/backpack/medical,/obj/item/weapon/storage/backpack/medical,/obj/item/weapon/storage/backpack/medical,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gl" = (/obj/structure/table/rack,/obj/item/weapon/storage/belt/suit/surgery,/obj/item/weapon/storage/belt/suit/surgery,/obj/item/weapon/storage/belt/suit/surgery,/obj/item/weapon/storage/belt/suit/surgery,/obj/item/weapon/storage/belt/suit/surgery,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gm" = (/obj/structure/table/rack,/obj/item/weapon/storage/belt/suit/surgery,/obj/item/weapon/storage/belt/suit/surgery,/obj/item/weapon/storage/belt/suit/surgery,/obj/item/weapon/storage/belt/suit/surgery,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gn" = (/obj/effect/landmark/start{name = "CCCP Glavvrach"},/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
-"go" = (/obj/effect/landmark/start{name = "CCCP Razvedchik-Snayper"},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"go" = (/obj/item/weapon/storage/fancy/cigarettes/prima,/obj/structure/table/army,/obj/item/weapon/storage/box/matches,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 "gp" = (/obj/structure/table/rack,/obj/item/weapon/storage/belt/csla/medical,/obj/item/weapon/storage/belt/csla/medical,/obj/item/weapon/storage/belt/csla/medical,/obj/item/weapon/storage/belt/csla/medical,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gq" = (/obj/structure/table/rack,/obj/item/weapon/reagent_containers/blood/AMinus,/obj/item/weapon/reagent_containers/blood/AMinus,/obj/item/weapon/reagent_containers/blood/APlus,/obj/item/weapon/reagent_containers/blood/APlus,/obj/item/weapon/reagent_containers/blood/BMinus,/obj/item/weapon/reagent_containers/blood/BMinus,/obj/item/weapon/reagent_containers/blood/BPlus,/obj/item/weapon/reagent_containers/blood/BPlus,/obj/item/weapon/reagent_containers/blood/OMinus,/obj/item/weapon/reagent_containers/blood/OMinus,/obj/item/weapon/reagent_containers/blood/OPlus,/obj/item/weapon/reagent_containers/blood/OPlus,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gr" = (/obj/structure/table/rack,/obj/item/weapon/storage/belt/sa/medical,/obj/item/weapon/storage/belt/sa/medical,/obj/item/weapon/storage/belt/sa/medical,/obj/item/weapon/storage/belt/sa/medical,/turf/simulated/floor/tiled/white,/area/coldwar/sa/sa_med)
 "gs" = (/obj/effect/landmark/start{name = "CCCP Snayper"},/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
-"gt" = (/obj/structure/toilet{dir = 1},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
-"gu" = (/obj/effect/landmark/start{name = "CCCP Razvedchik"},/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"gt" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar/stuff/quarters)
+"gu" = (/turf/simulated/floor/wood{tag = "icon-wood_broken4"; icon_state = "wood_broken4"},/area/coldwar/stuff/quarters)
 "gv" = (/obj/structure/table/fancy,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "gw" = (/obj/structure/table/fancy,/obj/item/device/flashlight/lantern,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
 "gx" = (/obj/structure/closet/cabinet,/obj/item/weapon/gun/projectile/cz82,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/ammo_magazine/cz9x18,/obj/item/weapon/storage/belt/holster/csla,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
@@ -338,8 +338,58 @@
 "gz" = (/obj/effect/landmark/start{name = "CCCP Pomoshnik Granatometchika"},/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
 "gA" = (/obj/effect/landmark/start{name = "CCCP Pomoshnik Granatometchika"},/turf/simulated/floor/road,/area/coldwar/stuff/roads)
 "gB" = (/obj/effect/landmark/start{name = "CZ Strelec"},/turf/simulated/floor/pavement,/area/coldwar/sa/spawn_area/cz_soldiers)
-"gC" = (/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,/turf/ground/gravsnow,/area/coldwar/outside)
+"gC" = (/obj/machinery/shower{dir = 4; pixel_x = 5},/obj/structure/curtain/open/shower,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
 "gD" = (/obj/effect/landmark/start{name = "CCCP Strelok"},/turf/simulated/floor/pavement,/area/coldwar/stuff/roads)
+"gE" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"gF" = (/obj/structure/table/fancy,/obj/item/weapon/flame/lighter,/turf/simulated/floor/wood,/area/coldwar/house1)
+"gG" = (/obj/structure/table/fancy,/obj/item/weapon/storage/box/matches,/turf/simulated/floor/wood,/area/coldwar/house1)
+"gH" = (/obj/structure/table/army,/obj/item/weapon/storage/fancy/cigarettes/professionals,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"gI" = (/turf/simulated/wall/wood,/area/coldwar)
+"gJ" = (/obj/structure/table/army,/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"gK" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood{tag = "icon-wood_broken0"; icon_state = "wood_broken0"},/area/coldwar/stuff/quarters)
+"gL" = (/turf/simulated/floor/wood,/area/coldwar)
+"gM" = (/turf/simulated/floor/wood{tag = "icon-wood_broken4"; icon_state = "wood_broken4"},/area/coldwar)
+"gN" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar)
+"gO" = (/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar/stuff/quarters)
+"gP" = (/turf/simulated/floor/tiled/white,/area/coldwar)
+"gQ" = (/obj/structure/curtain/open/shower,/obj/machinery/shower{dir = 4; pixel_x = 5},/turf/simulated/floor/tiled/white,/area/coldwar)
+"gR" = (/obj/structure/toilet{dir = 8},/turf/simulated/floor/tiled/white,/area/coldwar)
+"gS" = (/obj/effect/landmark/start{name = "CCCP Starshiy Strelok"},/turf/simulated/floor/wood,/area/coldwar)
+"gT" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/coldwar)
+"gU" = (/obj/effect/landmark/start{name = "CCCP Radiotelefonist"},/turf/simulated/floor/wood,/area/coldwar)
+"gV" = (/turf/simulated/floor/wood{tag = "icon-wood_broken6"; icon_state = "wood_broken6"},/area/coldwar)
+"gW" = (/obj/effect/decal/cleanable/generic,/turf/simulated/floor/tiled/white,/area/coldwar)
+"gX" = (/obj/structure/sink{dir = 4; pixel_x = 12},/obj/structure/mirror{pixel_x = 28},/turf/simulated/floor/tiled/white,/area/coldwar)
+"gY" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/coldwar)
+"gZ" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar)
+"ha" = (/obj/structure/table/army,/obj/item/weapon/storage/fancy/cigarettes/yava,/obj/item/weapon/flame/lighter/random,/turf/simulated/floor/wood,/area/coldwar)
+"hb" = (/obj/structure/table/army,/obj/structure/bedsheetbin,/turf/simulated/floor/wood,/area/coldwar)
+"hc" = (/obj/effect/landmark/start{name = "CCCP Razvedchik-Radist"},/turf/simulated/floor/wood,/area/coldwar)
+"hd" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/obj/effect/decal/cleanable/cobweb,/turf/simulated/floor/wood,/area/coldwar)
+"he" = (/obj/effect/landmark/start{name = "CCCP Razvedchik"},/turf/simulated/floor/wood,/area/coldwar)
+"hf" = (/obj/effect/landmark/start{name = "CCCP Razvedchik"},/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar)
+"hg" = (/obj/effect/landmark/start{name = "CCCP Pulemetchik"},/turf/simulated/floor/wood,/area/coldwar)
+"hh" = (/obj/item/weapon/storage/fancy/cigarettes/luckystrikegreen,/obj/structure/table/fancy,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"hi" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/wood,/area/coldwar)
+"hj" = (/obj/effect/landmark/start{name = "CCCP Razvedchik-Radist"},/turf/simulated/floor/wood{tag = "icon-wood_broken0"; icon_state = "wood_broken0"},/area/coldwar)
+"hk" = (/obj/item/weapon/storage/fancy/cigarettes/luckystrikered,/obj/structure/table/fancy,/turf/simulated/floor/wood,/area/coldwar/sa/sa_med)
+"hl" = (/obj/effect/decal/cleanable/cobweb,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"hm" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/coldwar)
+"hn" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/coldwar)
+"ho" = (/obj/structure/table/army,/obj/item/device/flashlight/lantern,/turf/simulated/floor/wood,/area/coldwar)
+"hp" = (/obj/effect/landmark/start{name = "CCCP Razvedchik-Snayper"},/turf/simulated/floor/wood,/area/coldwar)
+"hq" = (/obj/effect/landmark/start{name = "CCCP Razvedchik-Snayper"},/obj/structure/bed/wp,/obj/item/weapon/bedsheet,/turf/simulated/floor/wood,/area/coldwar)
+"hr" = (/obj/structure/toilet{dir = 8},/obj/effect/decal/cleanable/vomit,/turf/simulated/floor/tiled/white,/area/coldwar/stuff/quarters)
+"hs" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/wood,/area/coldwar)
+"ht" = (/obj/effect/decal/cleanable/dirt,/obj/effect/landmark/start{name = "CCCP Razvedchik-Radist"},/turf/simulated/floor/wood,/area/coldwar)
+"hu" = (/obj/structure/bed/wp,/obj/item/weapon/bedsheet/blue,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"hv" = (/obj/item/weapon/storage/fancy/cigarettes/professionals,/obj/item/device/flashlight/lantern,/obj/structure/table/army,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"hw" = (/obj/structure/closet/cabinet,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"hx" = (/obj/structure/table/army,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/storage/box/matches,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"hy" = (/obj/structure/bedsheetbin,/obj/structure/table/army,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
+"hz" = (/obj/machinery/door/unpowered/simple/wood,/obj/structure/barricade,/turf/simulated/floor/wood,/area/coldwar/sa/sa_fob)
+"hA" = (/turf/simulated/floor/wood{tag = "icon-wood_broken3"; icon_state = "wood_broken3"},/area/coldwar/stuff/quarters)
+"hB" = (/obj/item/device/flashlight/lantern,/obj/structure/table/army,/turf/simulated/floor/wood,/area/coldwar/stuff/quarters)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -351,60 +401,60 @@ aaaQaRaRaRaRaRahaRaRahaRaRahaRaRaRacaSadaeaeaeadacagalalaTalaTalalalalalalaTalaT
 aaaQaRaYaYaZbabbbababbbababbbaaYaRacaSadaeaeaeadacagbcbcbcbdbebebebealbebcbcbfbgbfbfagacadbhbibjbkadacacacacacacacacacacacacacacacafacacacaa
 aaaQaRaYaYaZbabbbababbbababbbaaYahacaSadaeaeaeadacagalalalalalalalaTalalblalalalalalagacadbmbnbobpadacacacacacacacacacacacacacacacacacacacaa
 aaaQaRaYaYaZbabbbababqbababbbaaYaRacaSadaeaeaeadacagbrbsbtbubvbwbxbtbybxbtbzbAbtbtbBagacadbmbnbobpadacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
-aaaQaRaYaYaZbabqbababbbababbbaaYaRacaSadaeaeaeadacagbCbtbtbDbEbFbFbtbGbHbIbHbJbtbKbLagacadbmbnbobpadacbMbNbNbObPbPbPbPbPbObQbRbSaRacacacacaa
-aaaQaRaYaYaZbabTbababbbababbbaaYahacaSadaeaeaeadacahbUbtbtbVbtbWbWbXbYbZcabZcbbtbtccahacadbmbnbobpadacaRbNbNbNbNbNbNbNbNbOcdcdcdaRacacacacaa
-aaaQaRaYbaceaYaYaYaYaYaYaYaYaYaYaRacaSadaeaeaeadacagcfbKbtcgbtchcibtcjckbIclcmbtbtcnagacadbmcocpbpadacaRbObNbObObObObObObObNbObOaRacacacacaa
-aaaQaRaYcqcqaYaYaYaYaYaYaYaYaYaYcradadadaeaeaeadacahcsbtbtctbtcucvbtcwckbtcxcwbtbtbUahacadaeaeaeaeadacaRbPbNbNbPbObPbPbPbObNbNbPaRacacacacaa
-aaaQaRaYaYaYaYaYaYaYaYaYaYaYaYaYcradadadaeaeaeadacagcybtbtbtbtbtbtbtbtczczczczbtbtcAagacadaeaeaeaeadacaRbPbNbNbPbObNbNbNbObNbNbPaRacacacacaa
-aaaQaRbabTbabacBbabacBbabacBbaaYaRacaSadaeaeaeadacahbtbtbtbtbtbtbtbtbtbtbtbtbtbtbtcCahacadcDcEcFcGadacaRbNcHbNbNbNbNbNbNbNbNbNbPaRacacacacaa
-aaaQaRbacIbabacBbabacBbabacBbaaYahacaSadaeaeaeadacagcJcJbgcKcLcMcNcOcPcQcRcScTbgcUcVagacadcWcXcYcZadacaRdadbbNbPbOdcdddebObPbNbPaRacacacacaa
-aaaQaRbadfbabacBbabadgbabacBbaaYaRacaSadaeaeaeadacahbgbgbgbgbgbgbgdhdidjbgbgbgbgdkbgahacaddldmdndoadacaRbNdpbNbPbOdcdddebObPbNbPaRacacacacaa
+aaaQaRaYaYaZbabqbababbbababbbaaYaRacaSadaeaeaeadacagbCbtbtbDbEbFbFbtbGbHbIbHbJbtbKbLagacadbmbnbobpadacaRbNghbOdadagtdadabOgCcddpaRacacacacaa
+aaaQaRaYaYaZbabTbababbbababbbaaYahacaSadaeaeaeadacahbUbtbtbVbtbWbWbXbYbZcabZcbbtbtccahacadbmbnbobpadacbMbNbNdXfebNbNbNbNbOcdcdeaaRacacacacaa
+aaaQaRaYbaceaYaYaYaYaYaYaYaYaYaYaRacaSadaeaeaeadacagcfbKbtcgbtchcibtcjckbIclcmbtbtcnagacadbmcocpbpadacaRbObNbObObObObObObObOdXbOaRacacacacaa
+aaaQaRaYgFgGaYaYaYaYaYaYaYaYaYaYcradadadaeaeaeadacahcsbtbtctbtcucvbtcwckbtcxcwbtbtbUahacadaeaeaeaeadacaReUbNgHfqbOdabNdabOdabNdaaRacacacacaa
+aaaQaRaYaYaYaYaYaYaYaYaYaYaYaYaYcradadadaeaeaeadacagcybtbtbtbtbtbtbtbtczczczczbtbtcAagacadaeaeaeaeadacaRfebNbNbNbOdafedabOdagudaaRacacacacaa
+aaaQaRbabTbabacBbabacBbabacBbaaYaRacaSadaeaeaeadacahbtbtbtbtbtbtbtbtbtbtbtbtbtbtbtcCahacadcDcEcFcGadacaRbNggbNbNdXbNbNbNbNbNbNdaaRacacacacaa
+aaaQaRbacIbabacBbabacBbabacBbaaYahacaSadaeaeaeadacagcJcJbgcKcLcMcNcOcPcQcRcScTbgcUcVagacadcWcXcYcZadacaRdcgJdebNbOgKbNdabOdabNdaaRacacacacaa
+aaaQaRbadfbabacBbabadgbabacBbaaYaRacaSadaeaeaeadacahbgbgbgbgbgbgbgdhdidjbgbgbgbgdkbgahacaddldmdndoadacaRbNgEbNgObOdabNdabOdabNdaaRacacacacaa
 aaaQaRbadfbabacBbabacBbababqbaaYaRacaSadaeaeaeadacagdqdkbgdrbgbgbgdhdsdjbgbgdtbgbgduagacaddvdwdxdyadacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
 aaaQaRbadfbababqbabacBbabacBbaaYahacaSadaeaeaeadacahdzbgbgdkbgbgbgdhdsdjbgbgbgbgbgdAahacaddBdCdDdEadacacacacacacacacacacacacacacacacacacacaa
 aaaQaRaRahaRaRahaRaRahaRaRahaRaRaRacaSadaeaeaeadacagdzdFbgbgbgbgbgdhdsdjbgdkbgbgdFdzagacaddBdCdDdEadacacacacacacacacacacacacacacacacacacacaa
 aaaQacacacacacacacacacacacacacacacacaSadaeaeaeadacahbgbgbgbgbgbgbgdhdidjbgbgbgbgbgbgahacaddBdCdDdEadacacacacacacacacacacacacacacacacacacacaa
 aadGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGadaeaeaeadacagdHdHbgbgdIbgbgdhdJdjdKbgbgbgdHdHagacaddBdCdDdEadacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
-aaaQacacacacacacacacacacacacacacacacaSadaeaeaeadacagalalalalalaTaldhdsdjalaTalalalalagacaddBdLdMdEadacaRbPbPbPbPbPbPbPbPbObQdNbSaRacacacacaa
-aaaQacacacacacacacacacacacacacacacacaSadaeaeaeadacagdObgbgbgaTbgaldhdidjalbgbgdFbgdPagacadaeaeaeaeadacaRbNdQdQdQdQdRdRdRbOcdcdcdaRacacacacaa
-aaaQdSdSdSdSaRaRaRaRaRaRaRaRaRaRaRacaSadaeaeaeadacahbgbgbgbgalbgaldhdsdjalbgbgbgbgbgagacaddTdUdVdWadacaRbOdXbObObObObObObObObOdXaRacacacacaa
-aaaQaRdSdScraRdYdYdYaRdZeaebcrcraRacaSadaeaeaeadacagecdrbgedalbgaldheedjalbgbgefegbgagacadeheiejekadacaRbPbNbPbPbObPbPbPbObPbNbNaRacacacacaa
-aaaQaRcrcrcraRcrcrcrcrcrelcrcrcraRacaSadaeaeaeadacagalalalalalbgaldhdsdjalbgemenegbgagacadeoepeqeradacbMbNbNesbNbObNbNbNbObPbNbNaRacacacacaa
-aaaQaRcretcraRdYdYdYaRcreueueueucradadadaeaeaeadacagenbgbgbgaTdFaldhdidjalbgegenevbgagacadewexeyezadacaRbNcHesbNbNbNbNbNbNbNbNbPaRacacacacaa
-aaaQaRaRaRaRaRaRaRaRaRaRaRaRaRaRaRacaSadeAaeeBadacahbgbgbgbgalbgaldhdsdjaldregeCbgbgagacadeDeEeFeGadacaRdaeHbNbPbObPeIbPbObPbNbPaRacacacacaa
-aaaQacacacacacacacacacacacacacacacacaSadeAaeaeadacagecbgbgeJalbgaldhdsdjalbgemeKevbgagacadeDeEeFeGadacaRbNdpbNbPbObPdddebObPbNbPaRacacacacaa
+aaaQacacacacacacacacacacacacacacacacaSadaeaeaeadacagalalalalalaTaldhdsdjalaTalalalalagacaddBdLdMdEadacaRhldQbOdadadadadabOddcdhraRacacacacaa
+aaaQacacacacacacacacacacacacacacacacaSadaeaeaeadacagdObgbgbgaTbgaldhdidjalbgbgdFbgdPagacadaeaeaeaeadacbMbNdQdXdQdQdRdRdRbOcdcdeaaRacacacacaa
+aaaQdSdSdSaRaRaRaRaRaRaRaRaRaRaRaRacaSadaeaeaeadacahbgbgbgbgalbgaldhdsdjalbgbgbgbgbgagacaddTdUdVdWadacaRbObNbObObObObObObObOdXbOaRacacacacaa
+aaaQdScrcraRhuhuhuhuaRdZhvebcrhwaRacaSadaeaeaeadacagecdrbgedalbgaldheedjalbgbgefegbgagacadeheiejekadacaReUgOhxhybOdabNdabOdagudaaRacacacacaa
+aaaQdScrcrhzcrcrcrcrcrcrelcrcrcraRacaSadaeaeaeadacagalalalalalbgaldhdsdjalbgemenegbgagacadeoepeqeradacaRbNbNesfebOdabNdabOdabNdaaRacacacacaa
+aaaQaRcretaRhuhuhuhuaRcreueueueubMadadadaeaeaeadacagenbgbgbgaTdFaldhdidjalbgegenevbgagacadewexeyezadacaRfeggesbNdXhAbNbNfebNbNdaaRacacacacaa
+aaaQaRaRaRaRaRaRaRaRaRaRaRaRaRaRaRacaSadeAaeeBadacahbgbgbgbgalbgaldhdsdjaldregeCbgbgagacadeDeEeFeGadacaRdchBdebNbOdabNdabOdabNdaaRacacacacaa
+aaaQacacacacacacacacacacacacacacacacaSadeAaeaeadacagecbgbgeJalbgaldhdsdjalbgemeKevbgagacadeDeEeFeGadacaRbNgEbNbNbOdabNdabOdabNdaaRacacacacaa
 aaaFdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGadeAeAaeadacagagagagagagagagdhdsdjagagagagagagagacadeDeEeFeGadacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
 aaaQeLeLeLeLeLeLeLeLeLeLeLeLeLeLeLacaSadaeeAaeadaceMeMeMeMeMeMeMagdhdsdjageMeMeMeNeMeMacadeDeEeFeGeOacacacacacacacacacacacacacacacacacacacaa
-aaaQeLePeQeReSeTeUeVeLeTeTeTeTeSeLacaSadaeeAaeadacacafacaceMeMeMagageWagageMeMeMacacacacadeDeXeYeGeOacacacacacacacacacacacacacacacacacacacaa
+aaaQeLePbPeReSbQbQbQeLbQbQbQbQbQeLacaSadaeeAaeadacacafacaceMeMeMagageWagageMeMeMacacacacadeDeXeYeGeOacacacacacacacacacacacacacacacacacacacaa
 aaaQeLeSeZeSeSeSeSeSeSeSeSeSeSeSeLacaSadaeaeaeadacacacacacfaeMeMeMeMeMeMeMfbeMfcacacacacadeBaeaeaeeOacacacacacacacacacacacacacacacacacacacaa
-aaaQeLeSeSeSeSeTeVeVeTeTeTeTeSeSfdacaSadaeaeaeadacafacacacfaeMeMeMeMeMeMeMeMeMfcacacacacadaeaeeBaeeOacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
-aaaQeLeLfeeLeLeLeLeLeLeLeLeLeLeLeLacaSadaeaeaeadacacacacacfaeMeMeMeMeMeMeMeMeMfcacacacafadaeaeaeaeadacaRffbNbObPbPbPbPbPbObQcdbSaRacacacacaa
-aaaQeLeSeSeSeSeLeTeUeVeLeTeTeTeTeLacaSadfgaeaeadfhfhfhfhfhfifififhfjfhfhfkflflflfkfkfkfkadaeaefmfmeOfnbMbNfofofobNbNfpfpbOfqcdcdaRacacacacaa
-aaaQeLeSeSeSeSeLfrfrfrfrfreSeSfseLadadadfgaeaeadfjfhfhfhfhfhfhfhfhfhfhfhfkfkfkftfkfkfkfkadeBaeaeaeadacaRbOdXbObObObObObObObOdXbOaRacacacacaa
-aaaQacaceSeSeSeLeTeVeVeTeTeTeTeSfdadadadfgaeaeadfhfhfhfhfhfufhfvfhfjfhfhfkfkfkfkfkfwfwfkadaeaeaeaeadacaRbPbNbPbPbObPbPbPbObPbNbPaRacacacacaa
-aaaQacacaceLeLeLeLeLeLeLeLeLeLeLeLadadadfgaefgadfhfhfhfhfhfhfhfhfhfifififkfkfxfkfwfwfkfxadaefyaefyadacaRbPfzbNfAbObNbNbNbObPbNbPaRacacacacaa
-aadGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGadaeaefgfBfhfhfhfhfvfhfhfhfhfhfhfhfkfkfkfkfkfkfkfkfCaeaefyaeadacaRffcHfAfAbNfDbNfDbNbNbNbPaRacacacacaa
-aaacacacacacacacacacacacacacacacacacacadaeaefgfBfhfhfhfhfvfhfvfhfjfhfhfhfxfxfkfkfkfEfkfkfCaefyaefyadacaRdaeHesbPbObPeIbPbObPbNbPaRacacacacaa
-aaaceLeLeLeLeLeLeLeLeLeLeLeLeLacacacacadaefgfgfBfhfhfhfhfvfhfhfhfhfhfhfhfxfkfkfkfkfEfkfkfCaeaeaeaeadacaRbPbPbNbPbOdcdddebObPbNbPaRacacacacaa
+aaaQeLeSeSeSeSbQbQbQbQbQbQbReSeSfdacaSadaeaeaeadacafacacacfaeMeMeMeMeMeMeMeMeMfcacacacacadaeaeeBaeeOacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
+aaaQeLbSeScqeLeLeLeLeLeLeLeLeLeLeLacaSadaeaeaeadacacacacacfaeMeMeMeMeMeMeMeMeMfcacacacafadaeaeaeaeadacaRcHbNbOdbdadadadabOddcddpaRacacacacaa
+aaaQeLeLfdeLeLbQbQbQbQeLbQbQbQbQeLacaSadfgaeaeadfhfhfhfhfhfifififhfjfhfhfkflflflfkfkfkfkadaeaefmfmeOfnbMbNfodXfofodNfpfpbOdYcdeaaRacacacacaa
+aaaQeLfJfJeHeLeSfrfrfrfrfreSeSfseLadadadfgaeaeadfjfhfhfhfhfhfhfhfhfhfhfhfkfkfkftfkfkfkfkadeBaeaeaeadacaRbObNbObObObObObObObOdXbOaRacacacacaa
+aaaQeIeQfJeTeLbQbQbQbQbQbQbQeSeSfdadadadfgaeaeadfhfhfhfhfhfufhfvfhfjfhfhfkfkfkfkfkfwfwfkadaeaeaeaeadacaReUfeeVfqbOdabNdabOdabNgcaRacacacacaa
+aaaQeIeIeIeLeLeLeLeLeLeLeLeLeLeLeLadadadfgaefgadfhfhfhfhfhfhfhfhfhfifififkfkfxfkfwfwfkfxadaefyaefyadacaResfzfAfAbOdabNdabOdafedaaRacacacacaa
+aadGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGdGadaeaefgfBfhfhfhfhfvfhfhfhfhfhfhfhfkfkfkfkfkfkfkfkfCaeaefyaeadacaRffgggdfAdXfDbNfDbNbNbNdaaRacacacacaa
+aaacacacacacacacacacacacacacacacacacacadaeaefgfBfhfhfhfhfvfhfvfhfjfhfhfhfxfxfkfkfkfEfkfkfCaefyaefyadacaRdcgodebNbOdabNdabOdagudaaRacacacacaa
+aaaceLeLeLeLeLeLeLeLeLeLeLeLeLacacacacadaefgfgfBfhfhfhfhfvfhfhfhfhfhfhfhfxfkfkfkfkfEfkfkfCaeaeaeaeadacaRbNgEbNbNbOdabNdabOdabNdaaRacacacacaa
 aaaceLfFfGfHeLfFfGfHeLfFfGfHeLacacacacadaeaeaefBfhfhfjfhfvfhfvfvfvfhfhfhfxfkfkfkfkfEfkfxfCaeaefIaeadacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
 aaaceLfJfJfJeLfJfJfJeLfJfJfJeLacacacacadaeaeaefBfhfhfhfhfhfhfhfhfhfhfhfhfxfkfkfKfkfEfkfkfCaefIaeaeadacacacacacacacacacacacacacacacacacacacaa
 aaaceLfLfJfMeLfLfJfMeLfLfJfMeLacacacacadaeaeaefBfhfhfhfhfhfhfNfOfhfhfhfhfxfkfkfkfkfEfkfkfCaefIfIaeadacacacacacacacacacacacacacacacacacacacaa
 aaaceLfPfPfPeLfPfPfPeLfPfPfPeLacacacacadaeaeaeadfQfhfhfhfhfhfhfOfhfhfhfhfxfkfkfkfkfEfkfkadaeaefIaeadacacacacacacacacacacacacacacacacacacacaa
-aaaceLfJfJfJfRfSfSfSfSfSfSfSeLacacacacadaeaeaeadfQfhfhfhfhfhfhfOfhfTfhfhfxfkfKfkfkfkfkfUfVfWfWaeaeadacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
-aaaceLfXfJfXfRfJfJfYfJfYfJfYeLacacacacadaeaeaeadfQfhfhfhfhfhfhfOfhfhfhfjfkfkfkfkfkfkfkfkadaefWaefZadacaRbNbNbObPbPbPbPbPbObPbNbPaRacacacacaa
-aaaceLfXfJfXfRfJgafYfJfYfJfYeLacacacacadaeaeaefBfhfQfhfhfhfhfhfOfhfhfhfhfkfkfkfkfkgbfkfkfCaefWaefZadfnbMesesbNbNbNgcgcbNbObPbNbNaRacacacacaa
-aaaceLfXfJfXfRfJfJfYfJfYfJfYeLadadadadadaeaeaefBfhfQfhfhfhfhfhfhfhfhfhfhfkfxfkgbgbgbfkfkfCfWfWaefZadacaRbObNbObObObObObObObObOgdaRacacacacaa
-aaaceLfXfJfXfRfRfRfJfJfJfJfJfdadadadadadaeaeaefBfhfQfhfhfhfhfNfhfhfhfhfhfkfkfkfkfkfkfkfkfCaefWaeaeadacaRbPbNbPbPbObPbPbPbObPbNgdaRacacacacaa
-aaaceLeLeLeLfdeLeLeLfdeLeLeLeLadadadadadaegeaefBfhfQfhfhfhfNfNfhfhfNfhfhfkfkfUfkfkfkfkfxfCaefWgfaeadacaRbPbNfzbNbOggggggggbNbNgdaRacacacacaa
-aaaceLePgheReSeLgigjfJgkglgmeLacacacacadaegeaefBfhfQfhfhfhfNfhfhfhfhfhfOfkfUfUfkfkfkfkfxfCaefWgfaeadacaRbNcHfzfzbNbNggggbObOdXbOaRacacacacaa
-aaaceLePgheRgnfdfJfJfJfJfJfJeLacacacacadaegeaefBfhfQfhfhfNfNfNfNfhfhfhfOfkfUfkfkfkfkfkfxfCaefWgfaeadacaRdaddbNbNbObPggdbbOgogogoaRacacafacaa
-aaaceLeSeSgngneLgpgpfJgqgrgreLacacacacadgegeaefBfhfhfhfNfNfhfhfhfhfhfhfOfkfkfkfkgsgsfkfxfCaefWgfaeadacaRbNdpbPbPbObPbNddbOgtguguaRacacacacaa
-aaaceLgvgwgxgyeLfXfXfXfXfXfXeLacacacacadgeaeaeadfhfhfhfNfNfNfhfhfhfhfvfhfkfkfkfkfkfkfkfxadaeaegfaeadacaRaRaRaRaRaRaRaRaRaRaRaRaRaRacacacacaa
+aaaceLfJfJfJfRfSfSfSfSfSfSfSeLacacacacadaeaeaeadfQfhfhfhfhfhfhfOfhfTfhfhfxfkfKfkfkfkfkfUfVfWfWaeaeadacgIgIgIgIgIgIgIgIgIgIgIgIgIgIacacacacaa
+aaaceLfXfJfXfRfJfJfYfJfYfJfYeLacacacacadaeaeaeadfQfhfhfhfhfhfhfOfhfhfhfjfkfkfkfkfkfkfkfkadaefWaefZadacgIgLgMgIgNgNgNgNgNgIgQgPgRgIacacacacaa
+aaaceLfXfJfXfRfJgafYfJfYfJfYeLacacacacadaeaeaefBfhfQfhfhfhfhfhfOfhfhfhfhfkfkfkfkfkgbfkfkfCaefWaefZadfngTgSgSgTgLgLgUgUgVgIgPgWgXgIacacacacaa
+aaaceLfXfJfXfRfJfJfYfJfYfJfYeLadadadadadaeaeaefBfhfQfhfhfhfhfhfhfhfhfhfhfkfxfkgbgbgbfkfkfCfWfWaefZadacgIgIgYgIgIgIgIgIgIgIgIgTgIgIacacacacaa
+aaaceLfXfJfXfRfRfRfJfJfJfJfJfdadadadadadaeaeaefBfhfQfhfhfhfhfNfhfhfhfhfhfkfkfkfkfkfkfkfkfCaefWaeaeadacgIgZgLhahbgIhdhcgNgIgNhehfgIacacacacaa
+aaaceLeLeLeLfdeLeLeLfdeLeLeLeLadadadadadaegeaefBfhfQfhfhfhfNfNfhfhfNfhfhfkfkfUfkfkfkfkfxfCaefWgfaeadacgIgLgLhggLgIgNhcgNgIgNgLhfgIacacacacaa
+aaaceLePhheReSeLgigjfJgkglgmeLacacacacadaegeaefBfhfQfhfhfhfNfhfhfhfhfhfOfkfUfUfkfkfkfkfxfCaefWgfaeadacgIgLhihghggTgLhchchjgLgLgNgIacacacacaa
+aaaceLePhkeRgnfdfJfJfJfJfJfJeLacacacacadaegeaefBfhfQfhfhfNfNfNfNfhfhfhfOfkfUfkfkfkfkfkfxfCaefWgfaeadacgIhmhohngLgIgNhcgNgIhqhphqgIacacafacaa
+aaaceLeSeSgngneLgpgpfJgqgrgreLacacacacadgegeaefBfhfhfhfNfNfhfhfhfhfhfhfOfkfkfkfkgsgsfkfxfCaefWgfaeadacgIgLhsgYgLgIgNhtgNgIgNhehfgIacacacacaa
+aaaceLgvgwgxgyeLfXfXfJfXfXfXeLacacacacadgeaeaeadfhfhfhfNfNfNfhfhfhfhfvfhfkfkfkfkfkfkfkfxadaeaegfaeadacgIgIgIgIgIgIgIgIgIgIgIgIgIgIacacacacaa
 aaaceLeLeLeLeLeLeLeLeLeLeLeLeLacacacacadgeaeaeadfhfhfhfhfhfhfhfhfhfhfvfhfkfkgzfkfkfkfkfxadaeaeaeaeadacacacacacacacacacacacacacacacacacacacaa
 aaacacacacacacacacacacacacacacacacacacadgeaeaeadfhfhfhfhfhfhfhfjfhfhfvfhfkfkgzfkfkfkfkfxadaeaegAaeadacacacacacacacacacacacacacacacacacacacaa
 aaafacacacacacacacacacacacacacacacacacadgeaeaefBfhfhfhfhfhfvfhfhfhfhfvfhgBfkgzfkfkfkfkfxfCaeaegAaeadacacacacacacacacacacacacacacacacacacacaa
 aaacacacacacacacacacacacacacacacacacacadgeaeaefBfhfhfhfvfhfvfvfhfhfhfvfhgBfkgzfkfkfkfkfkfCaeaegAaeadacacacacacacacacacacacacacacacafacacacaa
 aaacacafacacacacacacacacacacacacacacacadgeaeaefBfhfhfhfvfhfhfvfvfvfvfvfhgBgBfkfkfkfkfkfkfCaeaegAaeadacacacacacacacacacacacacacacacacacacacaa
-aaacacacacafacacacacgCacacacacacacacacadaeaeaefBfhfhfhfvfhfhfhfhfhfvfhfhfkgBfxfkfkfkfkfkfCaeaeaeaeadacacacacacacacacacacacacafacacacacacacaa
+aaacacacacafacacacacacacacacacacacacacadaeaeaefBfhfhfhfvfhfhfhfhfhfvfhfhfkgBfxfkfkfkfkfkfCaeaeaeaeadacacacacacacacacacacacacafacacacacacacaa
 aaacacacacacacacacacacacacacacacacacacadaeaeaefBfhfhfvfhfhfhfhfjfhfhfvfhfkfkfkfkfkfkfkfkfCaeaeaeaeadacacacacacacacacacafacacacacacacacacacaa
 abadadadadadadaEadadadadadadadadadadadadaeaeaefBadadadadadadadgDadadadadadadadadadadadadfCaeaeaeaeadadadadadaEadadadadadadadadadadadadadadab
 abaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaegeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeab
@@ -413,3 +463,4 @@ abaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeeBaeaeaeaeaeaeae
 abaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeab
 abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab
 "}
+
