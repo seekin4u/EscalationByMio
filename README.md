@@ -1,5 +1,9 @@
 # baystation12
 
+/esc/алация. 
+
+
+
 [Website](http://baystation12.net/) - [Code](http://github.com/Baystation12/Baystation12/) - [IRC](irc://irc.sorcery.net/#codershuttle)
 
 ---
