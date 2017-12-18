@@ -801,7 +801,7 @@
 		/obj/item/weapon/storage/firstaid/regular = 2,
 		/obj/item/device/healthanalyzer,
 		/obj/item/roller,
-		/obj/item/weapon/storage/box/syringes,
+		/obj/item/weapon/storage/box/syringes
 		)
 
 /obj/item/weapon/storage/box/cargo/bdw/grenadier
