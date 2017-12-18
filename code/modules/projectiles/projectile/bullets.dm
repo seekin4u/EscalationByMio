@@ -269,12 +269,12 @@
 	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a762x51
-	damage = 35
+	damage = 30
 	agony = 10
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
 
 /obj/item/projectile/bullet/rifle/a762x51/ap
-	damage = 25
+	damage = 20
 	agony = 10
 	armor_penetration = 10
 	sharp = 0
@@ -285,29 +285,29 @@
 	fire_sound = 'sound/weapons/gunshot/svd.ogg'
 
 /obj/item/projectile/bullet/rifle/a762x54/ap
-	damage = 25
+	damage = 30
 	agony = 10
 	armor_penetration = 25
 	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a545x39
-	damage = 25
+	damage = 20
 	agony = 20
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
 
 /obj/item/projectile/bullet/rifle/a545x39/ap
-	damage = 20
+	damage = 15
 	agony = 10
 	armor_penetration = 20
 	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a556x45
-	damage = 25
+	damage = 20
 	agony = 20
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 
 /obj/item/projectile/bullet/rifle/a556x45/ap
-	damage = 20
+	damage = 15
 	agony = 10
 	armor_penetration = 20
 	sharp = 0
