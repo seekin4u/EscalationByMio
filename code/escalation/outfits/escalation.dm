@@ -31,6 +31,11 @@
 	id = /obj/item/weapon/storage/belt/holster/usmc
 	l_hand = /obj/item/weapon/gun/projectile/automatic/m16a1
 
+/decl/hierarchy/outfit/escalation/nato/usmc/capter
+	name = "USMC QM"
+	id = /obj/item/weapon/storage/belt/holster/usmc
+	l_hand = /obj/item/weapon/gun/projectile/automatic/m16a1
+
 /decl/hierarchy/outfit/escalation/nato/usmc/squadleader
 	name = "USMC Squad Leader"
 	id = /obj/item/weapon/storage/belt/holster/usmc
