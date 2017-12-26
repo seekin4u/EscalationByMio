@@ -747,7 +747,7 @@
 	item_state = "m14"
 	accuracy = 5
 	fire_delay = 3
-	wielded_item_state = "m14-wielded"
+	wielded_item_state = "m21-wielded"
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=3, burst_accuracy=null, dispersion=null),
@@ -1010,9 +1010,9 @@
 /obj/item/weapon/gun/projectile/automatic/wa2000/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "svd" //fix
+		icon_state = "m14" //fix
 	else
-		icon_state = "svd-empty" //fix
+		icon_state = "m14-empty" //fix
 
 /obj/item/weapon/gun/projectile/automatic/wa2000/verb/scope()
 	set name = "Use Scope"
