@@ -1409,7 +1409,7 @@
 		icon_state = "vz58gl-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl/verb/set_gp()
-	set name = "Granade launcher"
+	set name = "Grenade launcher"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0

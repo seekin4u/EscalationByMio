@@ -1,9 +1,10 @@
 /obj/structure/bed/chair/ural_pilot
 	name = "pilot's seat"
-	icon = 'icons/escalation/turf/ural.dmi'
-	icon_state = "chair"
+	base_icon = "escchair"
+	icon_state = "escchair"
 
 /obj/structure/bed/chair/ural_seat
 	name = "regular seat"
 	icon = 'icons/escalation/turf/ural.dmi'
-	icon_state = "bench"
+	base_icon = "escchair"
+	icon_state = "escchair"
