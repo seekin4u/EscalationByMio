@@ -17,6 +17,7 @@
 
 	var/list/crossed_dirs = list()
 	var/hasSnow = FALSE
+	var/wasDug = FALSE
 	var/default_hasSnow = TRUE
 
 /turf/ground/New()
@@ -25,7 +26,7 @@
 		change_turf_to(SNOW)
 
 /turf/ground/attackby(obj/item/C as obj, mob/user as mob)
-	if (istype(C, /obj/item/weapon/saperka))
+	if (istype(C, /obj/item/weapon/saperka) || istype(C, /obj/item/weapon/shovel))
 
 		to_chat(user, "<span class='notice'>Digging [name]...</span>")
 
@@ -35,6 +36,8 @@
 
 			else
 				new /obj/item/weapon/ore/glass(user.loc)
+				wasDug = TRUE
+				update_icon()
 			/*
 			else
 				new snowtypeherepls(user.loc)
@@ -47,11 +50,17 @@
 /turf/ground/update_icon()
 	overlays.Cut()
 
-	for(var/d in crossed_dirs)
-		var/amt = crossed_dirs[d]
+	if(hasSnow)
+		for(var/d in crossed_dirs)
+			var/amt = crossed_dirs[d]
 
-		for(var/i in 1 to amt)
-			overlays += icon(icon, "footprint[i]", text2num(d))
+			for(var/i in 1 to amt)
+				overlays += icon(icon, "footprint[i]", text2num(d))
+
+	if(wasDug)
+			overlays.Cut()
+			var/image/I = icon(icon = 'icons/escalation/effects/effect.dmi', icon_state = "dug")
+			overlays += I
 
 	..()
 
@@ -111,15 +120,9 @@
 	name = "snow"
 	icon_state = "snow"
 
-/turf/ground/gravsnow/truck/snow/update_icon()
-	return
-
 /turf/ground/gravsnow/truck/road
 	name = "road"
 	icon_state = "road"
-
-/turf/ground/gravsnow/truck/road/update_icon()
-	return
 
 /turf/ground/gravsnow/truck/road/snow_overlay
 
