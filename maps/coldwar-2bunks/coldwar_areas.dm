@@ -9,7 +9,7 @@
 
 /area/coldwar/light/lightness
 	name = "lightness area"
-	lighting_use_dinamic = 0//ye, i know, but just to stay safe
+	lighting_use_dynamic = 0//ye, i know, but just to stay safe
 
 /area/coldwar/light/darkness
 	name = "darkness without lighting"
@@ -302,7 +302,7 @@
 	icon = 'icons/escalation/turf/area.dmi'
 	icon_state = "default"
 	requires_power = 0
-	lighting_use_dynamic = 0
+	lighting_use_dynamic = 0//so this is always lighted
 
 
 /area/coldwar/trucks/ural
