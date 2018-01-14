@@ -58,9 +58,9 @@
 				overlays += icon(icon, "footprint[i]", text2num(d))
 
 	if(wasDug)
-			overlays.Cut()
-			var/image/I = icon(icon = 'icons/escalation/effects/effect.dmi', icon_state = "dug")
-			overlays += I
+		overlays.Cut()
+		var/image/I = image(icon = 'icons/escalation/effects/effect.dmi', icon_state = "dug", layer = src.layer)
+		overlays += I
 
 	..()
 
