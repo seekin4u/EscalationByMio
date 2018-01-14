@@ -1,3 +1,5 @@
+/obj/effect/decl/escalation/light
+	icon = 'icons/escalation/effects/effect.dmi'
 
 /obj/effect/decl/escalation/light/smallest_light_source
 	name = "very small light source"
