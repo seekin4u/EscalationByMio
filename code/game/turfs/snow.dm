@@ -17,7 +17,10 @@
 
 	var/list/crossed_dirs = list()
 	var/hasSnow = FALSE
+
 	var/wasDug = FALSE
+	var/dugIcon = 'icons/escalation/effects/effect.dmi'
+
 	var/default_hasSnow = TRUE
 
 /turf/ground/New()
@@ -27,16 +30,20 @@
 
 /turf/ground/attackby(obj/item/C as obj, mob/user as mob)
 	if (istype(C, /obj/item/weapon/saperka) || istype(C, /obj/item/weapon/shovel))
+		to_world("attackby")
 
 		to_chat(user, "<span class='notice'>Digging [name]...</span>")
 
 		if(do_after(user, 15, src) && in_range(user, src))
 			if(hasSnow)
 				change_turf_to(GROUND)
+				to_world("change_turf_to")
 
 			else
 				new /obj/item/weapon/ore/glass(user.loc)
-				wasDug = TRUE
+				if(!wasDug)
+					wasDug = TRUE
+				to_world("update_icon")
 				update_icon()
 			/*
 			else
@@ -47,8 +54,13 @@
 
 	return
 
-/turf/ground/update_icon()
+/turf/ground/proc/add_hole_overlay()
 	overlays.Cut()
+	var/image/I = image(icon = src.icon, icon_state = "dug", layer = src.layer)
+	overlays += I
+
+/turf/ground/update_icon()
+	overlays.Cut()//this is shit, make this proc work without it
 
 	if(hasSnow)
 		for(var/d in crossed_dirs)
@@ -58,9 +70,7 @@
 				overlays += icon(icon, "footprint[i]", text2num(d))
 
 	if(wasDug)
-		overlays.Cut()
-		var/image/I = image(icon = 'icons/escalation/effects/effect.dmi', icon_state = "dug", layer = src.layer)
-		overlays += I
+		add_hole_overlay()
 
 	..()
 
@@ -74,7 +84,7 @@
 		else
 			crossed_dirs[mdir] = 1
 
-		update_icon()
+		update_icon(TRUE)
 
 	. = ..()
 
@@ -91,7 +101,7 @@
 		icon_state = "dirt"
 		blend_with_neighbors = 4
 
-	update_icon(TRUE)
+	update_icon()
 	return
 
 /turf/ground/no_flora
@@ -125,11 +135,12 @@
 	icon_state = "road"
 
 /turf/ground/gravsnow/truck/road/snow_overlay
+	var/snow_overlay_state = "snow_overlay"
 
 /turf/ground/gravsnow/truck/road/snow_overlay/New()
 	..()
 	overlays.Cut()
-	var/image/I = image(icon = src.icon, icon_state = "snow_overlay", layer = src.layer)
+	var/image/I = image(icon = src.icon, icon_state = snow_overlay_state, layer = src.layer)
 	overlays += I
 
 /turf/ground/plating
