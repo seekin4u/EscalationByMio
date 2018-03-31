@@ -14,24 +14,11 @@
 
 /datum/game_mode/wargames/announce()
 	to_world("<B>The current game mode is [capitalize(name)]!</B> [round_description]")
-	if(teams.len)
-		to_world("The teams fighting are: ")
-		for(var/datum/army_faction/T in teams)
-			if(T.group_name)
-				to_world("[T.group_name] - <B>[T.name]</b>")
-			else
-				to_world("<B>[T.name]</b>")
-	if(neutral_teams.len)
-		to_world("The neutral teams are: ")
-		for(var/datum/army_faction/N in neutral_teams)
-			if(N) to_world("<B>[N.name]</b>")
 	return
 
 /datum/game_mode/wargames/startRequirements()
-	if(teams.len < minimum_teams)
+	if(all_army_in_game.len < minimum_teams)
 		return "Not enough fighting teams have been selected! Required teams - [minimum_teams]."
-	if(neutral_teams.len < minimum_neutrals)
-		return "Not enough neutral teams have been selected! Required teams - [minimum_teams]."
 
 	//Add # of players joined requirements here
 

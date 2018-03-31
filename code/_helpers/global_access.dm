@@ -204,12 +204,14 @@
 			return global.all_antag_types_;
 		if("all_army_jobs")
 			return global.all_army_jobs;
+		if("all_army_in_game")
+			return global.all_army_in_game;
 		if("all_factions")
 			return global.all_factions;
-		if("all_languages")
-			return global.all_languages;
 		if("whitelisted_escalation")
 			return global.whitelisted_escalation;
+		if("all_languages")
+			return global.all_languages;
 		if("all_maps")
 			return global.all_maps;
 		if("all_money_accounts")

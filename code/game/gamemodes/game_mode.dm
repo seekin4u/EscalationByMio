@@ -41,8 +41,6 @@ var/global/list/additional_antag_types = list()
 //1983 stuff
 	var/minimum_teams = 2
 	var/minimum_neutrals = 0
-	var/list/datum/army_faction/teams = list()	//A list of the teams fighting
-	var/list/datum/army_faction/neutral_teams = list() //A list of the neutral teams in the game
 	var/admin_ended_round = 0
 	var/admin_enabled_joining = 1
 	var/allow_latejoins = 1
@@ -83,14 +81,9 @@ var/global/list/additional_antag_types = list()
 			if("autobalance")
 				autobalance = !autobalance
 			if("clear_teams")
-				teams.Cut()
-			if("clear_neutrals")
-				neutral_teams.Cut()
-			if("edit_teams")
-				if(usr.client.holder)
-					usr.client.holder.show_army_edit()
+				all_army_in_game.Cut()
 			if("finish_up")
-				if(teams.len >= minimum_teams && neutral_teams.len >= minimum_neutrals)
+				if(all_army_in_game.len >= minimum_teams)
 					admin_enabled_joining = !admin_enabled_joining
 					if(admin_enabled_joining)
 						for(var/mob/new_player/mob in world)
@@ -159,7 +152,7 @@ var/global/list/additional_antag_types = list()
 			if("add_army")
 				var/list/available_teams = list()
 				for(var/datum/army_faction/A in all_factions)
-					if(!(A in teams) && !(A in neutral_teams) && A.enabled == 1)  //Don't add disabled armies
+					if(!(A in all_army_in_game) && A.enabled == 1)  //Don't add disabled armies
 						available_teams += A.name
 				choice = input("Choose a team to add to the fighting teams.") as null|anything in available_teams
 				if(!choice)
@@ -170,24 +163,7 @@ var/global/list/additional_antag_types = list()
 						army_found = B
 						break
 				if(army_found)
-					teams += army_found
-
-			if("add_neutral_army")
-				var/list/available_n_teams = list()
-				for(var/datum/army_faction/C in all_factions)
-					if(!(C in teams) && !(C in neutral_teams) && C.enabled == 1)
-						available_n_teams += C.name
-
-				choice = input("Choose a team to add to the neutral teams.") as null|anything in available_n_teams
-				if(!choice)
-					return
-				var/datum/army_faction/n_army_found
-				for(var/datum/army_faction/D in all_factions)
-					if(D.name == choice)
-						n_army_found = D
-						break
-				if(n_army_found)
-					neutral_teams += n_army_found
+					all_army_in_game += army_found
 
 		message_admins("Admin [key_name_admin(usr)] set game mode option '[href_list["set"]]' to [choice].")
 

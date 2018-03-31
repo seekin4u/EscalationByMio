@@ -110,7 +110,7 @@
 
 				out += "<p>[(M.client && M.client.prefs) ? M.client.prefs.real_name : M.name] - [M.chosenSlot.name] ([M.chosenSlot.english_name]) [admin_text]</p>"
 
-		if(team.num_fireteams > 0)
+		if(length(team.fireteams))
 			out += "<hr><p>"
 			for(var/datum/fireteam/F in team.fireteams)
 				if(fireteam_view == F.num)
@@ -327,7 +327,7 @@
 					NP.chosenSlot.remove_mob(NP.fireteam_picked, NP.team_picked, NP)
 					to_chat(NP, "<span class='warning'>You has been removed from your slot.</span>")
 
-			if(AF.num_fireteams > 0)
+			if(length(AF.fireteams))
 				for(var/datum/fireteam/FT in AF.fireteams)
 					for(var/mob/new_player/NP in FT.slots)
 						if(NP.chosenSlot)
