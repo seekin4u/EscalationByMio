@@ -126,7 +126,7 @@
 	name = "RPG-18"
 	desc = "Also known as 'Mukha'."
 	icon_state = "rpg18"
-	item_state = "rpg"
+	item_state = "smaw-wielded"
 	w_class = 4
 	throw_speed = 2
 	throw_range = 10
@@ -192,7 +192,7 @@
 	name = "M72 LAW"
 	desc = "That's the one-use RPG used by US army."
 	icon_state = "m72law"
-	item_state = "rpg"
+	item_state = "smaw-wielded"
 	w_class = 4
 	throw_speed = 2
 	throw_range = 10

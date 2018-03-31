@@ -514,8 +514,6 @@
 	desc = "Box with medical kit."
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
-		/obj/item/ammo_magazine/c545x39m = 3,
-		/obj/item/weapon/material/knife/bayonet/sa,
 		/obj/item/device/healthanalyzer,
 		/obj/item/roller,
 		/obj/item/weapon/storage/box/syringes
@@ -611,8 +609,6 @@
 	desc = "Box with medical kit."
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
-		/obj/item/ammo_magazine/c762x39m = 3,
-		/obj/item/weapon/material/knife/bayonet/csla,
 		/obj/item/device/healthanalyzer,
 		/obj/item/roller,
 		/obj/item/weapon/storage/box/syringes
@@ -708,8 +704,6 @@
 	desc = "Box with medical kit."
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
-		/obj/item/ammo_magazine/c556x45m = 3,
-		/obj/item/weapon/material/knife/bayonet/usmc,
 		/obj/item/device/healthanalyzer,
 		/obj/item/roller,
 		/obj/item/weapon/storage/box/syringes
@@ -806,10 +800,8 @@
 	startswith = list(
 		/obj/item/weapon/storage/firstaid/regular = 2,
 		/obj/item/device/healthanalyzer,
-		/obj/item/ammo_magazine/c762x51s = 3,
 		/obj/item/roller,
-		/obj/item/weapon/storage/box/syringes,
-		/obj/item/weapon/material/knife/bayonet/bdw
+		/obj/item/weapon/storage/box/syringes
 		)
 
 /obj/item/weapon/storage/box/cargo/bdw/grenadier

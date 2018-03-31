@@ -11,7 +11,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = null
 	one_hand_penalty = 3
-	accuracy = 2
+	accuracy = 2.5
 	fire_delay = 2
 
 	wielded_item_state = "ak74-wielded"
@@ -112,7 +112,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/c545x39m, /obj/item/ammo_magazine/c545x39b)
 	magazine_type = null
 	one_hand_penalty = 3
-	accuracy = 2
+	accuracy = 2.5
 	fire_delay = 2
 
 	wielded_item_state = "ak74gl-wielded"
@@ -192,7 +192,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c545x39m
 	magazine_type = /obj/item/ammo_magazine/c545x39m
 	one_hand_penalty = 2
-	accuracy = 2
+	accuracy = 2.5
 	fire_delay = 2
 
 	wielded_item_state = "aks-wielded"
@@ -267,7 +267,7 @@
 
 	src.toggle_scope(usr, 1.2)
 
-/obj/item/weapon/gun/projectile/automatic/m16a2
+/obj/item/weapon/gun/projectile/automatic/m16a2 //DO NOT USE FOR NOW
 	name = "M16A2"
 	desc = "A standard-issue USMC combat rifle. Chambers 5.56x39 rounds."
 	icon_state = "m16a2"
@@ -503,7 +503,6 @@
 	magazine_type = null
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	one_hand_penalty = 9
-	automatic = 0
 
 	wielded_item_state = "m60-wielded"
 	fire_sound = 'sound/weapons/gunshot/m60.ogg'
@@ -654,8 +653,7 @@
 
 	src.toggle_scope(usr, 1.2)
 
-//DO NOT USE
-/obj/item/weapon/gun/projectile/automatic/m14
+/obj/item/weapon/gun/projectile/automatic/m14 //do not use
 	name = "M14"
 	desc = "A former standard-issue USMC combat rifle. Chambers 7.62x51 rounds."
 	icon_state = "m14"
@@ -749,7 +747,7 @@
 	item_state = "m14"
 	accuracy = 5
 	fire_delay = 3
-	wielded_item_state = "m14-wielded"
+	wielded_item_state = "m21-wielded"
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=3, burst_accuracy=null, dispersion=null),
@@ -770,7 +768,7 @@
 
 	src.toggle_scope(usr, 2)
 
-/obj/item/weapon/gun/projectile/automatic/m16a1 // Delete this later
+/obj/item/weapon/gun/projectile/automatic/m16a1
 	name = "M16A1"
 	desc = "A standard-issue USMC combat rifle. Chambers 5.56x45 rounds."
 	icon_state = "m16a1"
@@ -785,7 +783,6 @@
 	one_hand_penalty = 4
 	accuracy = 3
 	fire_delay = 1.7
-	automatic = 0
 
 	wielded_item_state = "m16-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
@@ -999,7 +996,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/wa2000_762x51s
 	one_hand_penalty = 10
 	accuracy = 5
-	fire_delay = 2
+	fire_delay = 2.5
 	fire_sound = 'sound/weapons/gunshot/svd.ogg'
 	wielded_item_state = "m14-wielded" //fix
 	unload_sound = 'sound/weapons/gunporn/svd_magout.ogg'
@@ -1013,9 +1010,9 @@
 /obj/item/weapon/gun/projectile/automatic/wa2000/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "svd" //fix
+		icon_state = "m14" //fix
 	else
-		icon_state = "svd-empty" //fix
+		icon_state = "m14-empty" //fix
 
 /obj/item/weapon/gun/projectile/automatic/wa2000/verb/scope()
 	set name = "Use Scope"
@@ -1040,8 +1037,7 @@
 	magazine_type = null
 	one_hand_penalty = 5
 	accuracy = 3
-	fire_delay = 4
-	automatic = 0
+	fire_delay = 2.5
 
 	wielded_item_state = "g3a3-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
@@ -1143,7 +1139,7 @@
 	magazine_type = null
 	one_hand_penalty = 5
 	accuracy = 3
-	fire_delay = 4
+	fire_delay = 2.5
 
 	wielded_item_state = "g3tgs-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
@@ -1221,8 +1217,8 @@
 	allowed_magazines = /obj/item/ammo_magazine/c762x51s
 	magazine_type = null
 	one_hand_penalty = 5
-	accuracy = 3
-	fire_delay = 5
+	accuracy = 3.5
+	fire_delay = 2.5
 	wielded_item_state = "g3sg1-wielded"
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
 	unload_sound = 'sound/weapons/gunporn/m16_magout.ogg' // NEED TO CHANGE SOUNDS
@@ -1262,7 +1258,7 @@
 	magazine_type = null
 	one_hand_penalty = 3
 	accuracy = 2
-	fire_delay = 3
+	fire_delay = 1.7
 
 	wielded_item_state = "vz58-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
@@ -1363,7 +1359,7 @@
 	magazine_type = null
 	one_hand_penalty = 3
 	accuracy = 2
-	fire_delay = 3
+	fire_delay = 1.7
 
 	wielded_item_state = "vz58gl-wielded"
 	fire_sound = 'sound/weapons/gunshot/ak74.ogg'
@@ -1413,7 +1409,7 @@
 		icon_state = "vz58gl-empty"
 
 /obj/item/weapon/gun/projectile/automatic/vz58gl/verb/set_gp()
-	set name = "Granade launcher"
+	set name = "Grenade launcher"
 	set category = "Object"
 	set src in usr
 	set popup_menu = 0

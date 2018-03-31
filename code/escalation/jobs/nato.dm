@@ -183,10 +183,20 @@
 	name = "Platoon Leader's Deputy"
 	english_name = "Staff Sergeant"
 	rank_prefix = "SSgt."
-	rank_number = 1 //Second in command
+	rank_number = 1
 	position = "team"
 	amount = 1
 	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 40, LANGUAGE_CZECH = 10)
+
+/datum/job/escalation/usmc/capter
+	title = "US Quartermaster"
+	name = "Quartermaster"
+	english_name = "Warrant Officer"
+	rank_prefix = "WO."
+	rank_number = 2
+	position = "team"
+	amount = 1
+	also_known_languages = list(LANGUAGE_GERMAN = 100, LANGUAGE_RUSSIAN = 20, LANGUAGE_CZECH = 10)
 
 /datum/job/escalation/usmc/radioman
 	title = "US Radio Telegraph Operator"

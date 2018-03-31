@@ -13,6 +13,21 @@
 /obj/structure/truck/ural/basic_floor/n5
 	name = "URAL's tile n5"
 	icon_state = "5"
+	density = TRUE
+	var/closed_door = FALSE
+
+/obj/structure/truck/ural/basic_floor/n5/attack_hand(mob/user as mob)
+	// maybe sound to user?
+
+	if(!closed_door)
+		density = FALSE
+		closed_door = !closed_door
+		icon_state = "left_door"
+
+	else
+		density = TRUE
+		closed_door = !closed_door
+		icon_state = "5"
 
 /obj/structure/truck/ural/basic_floor/n6
 	name = "URAL's tile n6"
@@ -25,6 +40,21 @@
 /obj/structure/truck/ural/basic_floor/n8
 	name = "URAL's tile n8"
 	icon_state = "8"
+	density = TRUE
+	var/closed_door = FALSE
+
+/obj/structure/truck/ural/basic_floor/n8/attack_hand(mob/user as mob)
+	// maybe sound to user?
+
+	if(!closed_door)
+		density = FALSE
+		closed_door = !closed_door
+		icon_state = "right_door"
+
+	else
+		density = TRUE
+		closed_door = !closed_door
+		icon_state = "8"
 
 /obj/structure/truck/ural/basic_floor/n14
 	name = "URAL's tile n14"
